@@ -1,0 +1,87 @@
+.eblFrame {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background-color: #dddddd;
+}
+
+
+.exampleContainer {
+    display: flex;
+    flex-direction: column;
+    flex: 0 1 800px;
+    min-width: 500px;
+    margin: 5px;
+}
+
+.exampleHeader {
+    align-self: center;
+    width: 80%;
+    padding: 10px;
+    margin-bottom: 20px;
+    background-color: #bbbbbb;
+}
+
+.examples {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.singleExample {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 0 1 40%;
+    margin: 10px;
+    padding: 10px;
+    background-color: #bbbbbb;
+}
+
+.question {
+    font-style: italic;
+    margin-top: 3px;
+    color: #000099;
+}
+
+.solution {
+    display: flex;
+    margin-top: 5px;
+    font-size: 120%;
+    color: darkred;
+}
+
+.exampleCount {
+    font-weight: bold;
+}
+
+.explanations {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: stretch;
+    flex: 0 1 350px;
+    min-width: 250px;
+    margin: 5px;
+    background-color: #bbbbbb;
+}
+
+.singleExplanation {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid blue;
+}
+
+.explanationHeader {
+    font-style: italic;
+    color: #000099;
+}
+
+.editable {
+    margin: 10px;
+}

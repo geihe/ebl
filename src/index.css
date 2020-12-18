@@ -1,0 +1,95 @@
+@import url("../node_modules/@blueprintjs/core/lib/css/blueprint.css");
+@import url("../node_modules/@blueprintjs/icons/lib/css/blueprint-icons.css");
+
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+div#root {
+    height: 100vh;
+    width: 100vw;
+}
+
+div#root, article {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+header {
+    width: 100%;
+    position: relative;
+
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+    width: 100%;
+    position: relative;
+
+}
+
+article {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+footer {
+    width: 100%;
+    height: 60px;
+    background-color: #dddddd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+    background-color: #ddd;
+    border: 1px solid #aaf;
+    border-radius: 5px;
+    width: 70%;
+    position: relative;
+
+
+}
+
+.bp3-form-group {
+    margin-bottom: 20px !important;
+    min-width: 250px;
+}
+
+.bp3-label, .bp3-control input {
+    color: #222;
+    font-size: 110%;
+}
+
+.bp3-html-select, .bp3-input-group {
+    width: 300px;
+}
+
+.error label {
+    color: red !important;
+}

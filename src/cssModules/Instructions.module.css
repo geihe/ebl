@@ -1,0 +1,42 @@
+.zone {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #cccccc;
+    width: 800px;
+    padding: 10px;
+    border: 1px solid #888888;
+}
+
+.continue {
+    color: darkblue;
+    bottom: 10%;
+    font-size: 18px;
+    text-align: center;
+}
+
+.content {
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    top: 10%;
+    bottom: 30%;
+    font-size: 16px;
+    line-height: 150%;
+}
+
+.content strong{
+    color: darkblue;
+}
+
+.content h1 {
+    font-size: 18px;
+}
+.content h2 {
+    font-size: 16px;
+}
+
+.content svg {
+    color:darkblue;
+}

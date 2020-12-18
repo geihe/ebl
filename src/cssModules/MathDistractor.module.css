@@ -1,0 +1,14 @@
+.problem {
+    font-size: 40px;
+    color: blue;
+}
+
+.right {
+    font-size: 40px;
+    color: green;
+}
+
+.wrong {
+    font-size: 40px;
+    color: darkred;
+}

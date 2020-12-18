@@ -1,0 +1,25 @@
+.container {
+    display: flex;
+    max-width: 600px;
+    padding: 50px;
+}
+
+.column {
+    flex-direction: column;
+}
+
+.header {
+
+}
+
+.stimulus {
+    background-color: #e6eff8;
+    padding: 5px;
+    margin-bottom: 20px;
+}
+
+.question {
+    font-style: italic;
+    margin-top: 6px;
+    color: #000099;
+}
