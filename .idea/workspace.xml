@@ -1,105 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c0a8d840-d2a4-41a1-9e79-f574c09cafbd" name="Default Changelist" comment="Initial commit">
-      <change afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/ebl.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/favicon.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/logo192.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/logo512.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/manifest.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/robots.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/App.test.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Components/Demographics.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Components/Likert.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Components/MathDistractor.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Components/MathDistractorContinous.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Forms/Form.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Forms/MyInput.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Forms/MyNumInput.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Forms/MyRadioGroup.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Forms/MySelect.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Forms/MyTextArea.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Frames/DelayedSpaceFrame.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Frames/EBL/EblFrame.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Frames/EBL/ElementsKeyFrame.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Frames/FixationCrossFrame.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Frames/ImiFrame.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Frames/MathDistractorFrame.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Frames/StimulusResponseFrame.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Hooks/useKeyListenerOnce.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Hooks/useStateDelayed.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Hooks/useTimeout.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/MicroComponents/AdvancedInput.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/MicroComponents/Countdown.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/MicroComponents/FeedbackCorrect.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/MicroComponents/FeedbackWrong.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/MicroComponents/FlexZone.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/MicroComponents/Html.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/MicroComponents/ResponseInput.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/MicroComponents/ResponseRadioButtons.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/MicroComponents/ResponseTextArea.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/MicroComponents/TimeView.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/MicroComponents/Zone.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Test/Test1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Test/Test2.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Test/Test3.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Test/TestTimeline.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/EBL_01/EBL01Builder.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/EBL_01/EBL01_ExampleManager.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/EBL_01/EBL01_Introduction.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/EBL_01/EBL01_RessourcePrePostTestManager.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/EBL_01/config.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/EBL_01/examples/edelgase.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/EBL_01/examples/explanations.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/EBL_01/examples/fahrradhelm.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/EBL_01/examples/kekse.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/EBL_01/examples/skispringen.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/EBL_01/postConcept.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/EBL_01/postFT2step.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/EBL_01/postMC.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/EBL_01/postNT.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/EBL_01/postOpen.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/EBL_01/pre1step.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/EBL_01/preMulti.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/FET/persons.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/FET/prep.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/FET/ressourcePreP.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/ressourceIMI.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/ressourceLanguage.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/cssModules/App.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/cssModules/EBL/EblFrame.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/cssModules/Form.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/cssModules/Instructions.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/cssModules/Likert.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/cssModules/MathDistractor.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/cssModules/StimulusResponseFrame.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/cssModules/TextFrame.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/cssModules/shortResponse.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/documentation.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/helper/AndValidator.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/helper/DistanceValidator.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/helper/MathTestManager.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/helper/Shuffle.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/helper/TimelineManager.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/helper/i18n.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/logo.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/reportWebVitals.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/serviceWorker.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/setupTests.js" afterDir="false" />
+    <list default="true" id="c0a8d840-d2a4-41a1-9e79-f574c09cafbd" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -129,7 +32,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../infotag" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -162,8 +65,19 @@
       <workItem from="1607849960904" duration="158000" />
       <workItem from="1608305525447" duration="75000" />
       <workItem from="1608312364847" duration="590000" />
-      <workItem from="1608319021229" duration="1113000" />
+      <workItem from="1608319021229" duration="3482000" />
+      <workItem from="1608323177399" duration="645000" />
+      <workItem from="1608364612595" duration="140000" />
+      <workItem from="1608575212191" duration="1577000" />
     </task>
+    <task id="LOCAL-00001" summary="Initial commit">
+      <created>1608320225945</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1608320225945</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -173,6 +87,7 @@
     <option name="UPDATE_COPYRIGHT" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <MESSAGE value="Initial commit" />
     <option name="LAST_COMMIT_MESSAGE" value="Initial commit" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />

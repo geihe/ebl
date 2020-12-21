@@ -68,7 +68,7 @@ export function Instruction04a(props) {
   return (
     <div>
       <h2>2. Wahrscheinlichkeit eines Ergebnisses bei einem einstufigen Experiment</h2>
-      <p>Nehmen wir an, dass in einem Experiment die einzelnen Ereignisse alle gleich „wahrscheinlich“ sind, also die
+      <p>Nehmen wir an, dass in einem Experiment die einzelnen Ergebnisse alle gleich „wahrscheinlich“ sind, also die
         gleiche Chance haben einzutreten.</p>
       <p>Für die <strong>Wahrscheinlichkeit p eines Ergebnisses gilt:</strong></p>
       <MathComponent tex={String.raw`p(Ergebnis) = {1 \over Anzahl\ aller\ Ergebnisse}`} display={true}/>
