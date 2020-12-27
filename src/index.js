@@ -16,7 +16,7 @@ import {config} from "./assets/EBL_01/config";
 ReactDOM.render(lngChooser, document.getElementById('root'));*/
 // test();
 
-test();
+testGet();
 
 function start() {
   FocusStyleManager.onlyShowFocusOnTabs();
@@ -35,14 +35,24 @@ function start() {
   );
 }
 
-async function test() {
+function testGet() {
+  const url=new URL(window.location);
+  const params = new URLSearchParams(url.search);
+  console.log(params.get('user_id'));
+  console.log(params.get('group_id'));
+  console.log(params.get('session'));
+}
+
+async function testNew() {
   const response = await fetch("https://psychologie.geihe.net/rest/EBL/new01.php");
   console.log(await response.json());
-/*
-finished: false
-group_id: 2
-language: "de"
-user_id: "EBL015fe8888a81f018.75435398"*/
+/* {
+    finished: false
+    group_id: 2
+    language: "de"
+    user_id: "EBL015fe8888a81f018.75435398"
+}
+*/
 }
 
 // If you want your app to work offline and load faster, you can change
