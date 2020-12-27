@@ -2,7 +2,7 @@ import React, {useRef, useState} from "react";
 import {Zone} from "./MicroComponents/Zone";
 
 
-export function App(props) {
+export function Session(props) {
   const {timeline} = props;
   const packageJson = require('../package.json');
   const [index, setIndex] = useState(0);
@@ -59,11 +59,11 @@ export function App(props) {
     <progress id="progress-bar" value={el.cumEffort} max="100" style={{width: '90%'}}/>;
 
   return <>
-    <header></header>
+    <header/>
     <main>
-      <aside id="left-aside"></aside>
+      <aside id="left-aside"/>
       <article>{content}</article>
-      <aside id="right-aside"></aside>
+      <aside id="right-aside"/>
     </main>
     <footer>
       <Zone style={{width: '50%'}}>
