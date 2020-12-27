@@ -7,8 +7,6 @@ import {EBL01Builder} from "./assets/EBL_01/EBL01Builder";
 import {LngContext, translate} from "./helper/i18n";
 import {FocusStyleManager} from "@blueprintjs/core";
 import {config} from "./assets/EBL_01/config";
-import {TestTimeline} from "./Test/TestTimeline";
-import {TimelineManager} from "./helper/TimelineManager";
 /*const lngChooser = (
   <>
     <button onClick={()=>start('de')}>Deutsch</button>
@@ -18,7 +16,7 @@ import {TimelineManager} from "./helper/TimelineManager";
 ReactDOM.render(lngChooser, document.getElementById('root'));*/
 // test();
 
-start();
+test();
 
 function start() {
   FocusStyleManager.onlyShowFocusOnTabs();
@@ -37,18 +35,14 @@ function start() {
   );
 }
 
-function test() {
-  const t = (ressource, param) =>
-    translate(config.language, ressource, param);
-  const tlm=new TimelineManager(TestTimeline());
-  ReactDOM.render(
-    (
-      <LngContext.Provider value={t}>
-        <App timeline={tlm.getFlatTimeline()}/>
-      </LngContext.Provider>
-    ),
-    document.getElementById('root')
-  );
+async function test() {
+  const response = await fetch("https://psychologie.geihe.net/rest/EBL/new01.php");
+  console.log(await response.json());
+/*
+finished: false
+group_id: 2
+language: "de"
+user_id: "EBL015fe8888a81f018.75435398"*/
 }
 
 // If you want your app to work offline and load faster, you can change
