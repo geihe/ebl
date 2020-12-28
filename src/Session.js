@@ -13,7 +13,6 @@ export function Session(props) {
   }
 
   const storageIndex = +localStorage.getItem('index');
-  console.log(storageIndex);
   if (storageIndex > index) {
     setIndex(storageIndex);
     data.current = JSON.parse(localStorage.getItem('data'));
@@ -22,7 +21,7 @@ export function Session(props) {
   let el = timeline[index];
   let tempIndex = index;
 
-  while (el.type !== 'frame') { //TODO Ist das sicher, wenn die Timeline nicht mit einem Frame endet?
+  while (el && el.type !== 'frame') { //TODO Ist das sicher, wenn die Timeline nicht mit einem Frame endet?
     switch (el.type) {
       case 'jump':
         tempIndex += el.jumpRel;
@@ -40,6 +39,14 @@ export function Session(props) {
         localStorage.setItem('data', JSON.stringify(data.current));
         localStorage.setItem('index', '' + tempIndex);
         break;
+      case 'nextSession':
+        tempIndex=Number.MAX_VALUE;
+        data.current[0].finished = true;
+        data.current[0].nextSessionStart = el.start;
+        console.log(data.current);
+        localStorage.setItem('data', JSON.stringify(data.current));
+        localStorage.setItem('index', '' + Number.MAX_VALUE);
+        break;
       default:
         console.log('Error in App.js, Element.type not found.');
     }
@@ -49,6 +56,9 @@ export function Session(props) {
   const startTime = new Date().toLocaleString('de');
 
   el = timeline[tempIndex];
+  if (!el) {
+    return finish();
+  }
   const content = React.cloneElement(
     el.frame,
     {

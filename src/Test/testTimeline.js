@@ -15,6 +15,11 @@ export function testTimeline() {
         milestone:true
       },
       <Test1 nr={'E'}/>,
+      {
+        nextSession: true, //beendet Session und wartet auf die nächste
+        start: new Date(Date.now()+1000*3600),
+      },
+      <Test1 nr={'Z'}/>,
     ]
   )
 }

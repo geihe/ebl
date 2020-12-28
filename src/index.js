@@ -56,6 +56,7 @@ function getInitialData() {
     finished: false,
     language: config.language,
     session: 1,
+    nextSessionStart: null,
     user_id: null,
     group_id: null,
   }
