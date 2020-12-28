@@ -20,18 +20,17 @@ start();
 
 function start() {
   FocusStyleManager.onlyShowFocusOnTabs();
-
-
+  const initialData = getInitialData();
 
   const t = (ressource, param) =>
-    translate(config.language, ressource, param);
+    translate(initialData.language, ressource, param);
   const tb = new EBL01Builder(t);
   tb.build();
 
   ReactDOM.render(
     (
       <LngContext.Provider value={t}>
-        <Session timeline={tb.getTimeline()} initialData={getInitialData()}/>
+        <Session timeline={tb.getTimeline()} initialData={initialData}/>
       </LngContext.Provider>
     ),
     document.getElementById('root')
@@ -55,7 +54,7 @@ function getInitialData() {
   const initialData = {
     version: packageJson.version,
     finished: false,
-    language: 'de',
+    language: config.language,
     session: 1,
     user_id: null,
     group_id: null,
