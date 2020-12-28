@@ -1,5 +1,6 @@
 import React, {useRef, useState} from "react";
 import {Zone} from "./MicroComponents/Zone";
+import {ExperimentFinished} from "./MicroComponents/ExperimentFinished";
 
 
 export function Session(props) {
@@ -100,7 +101,6 @@ export function Session(props) {
   function finish() {
     data.current[0].finished = true;
     console.log("data:", data.current);
-    return <div>Ende</div> //Ende der Timeline
+    return <ExperimentFinished/> //Ende der Timeline
   }
 }
-
