@@ -5,6 +5,7 @@ import {EBL01_RessourcePrePostTestManager} from "./EBL01_RessourcePrePostTestMan
 import {EblFrame} from "../../Frames/EBL/EblFrame";
 import {EBL01_Introduction} from "./EBL01_Introduction";
 import {config} from "./config";
+import {testTimeline} from "../../Test/testTimeline";
 
 //TODO Konfiguration (z. B. Feedback) hier zentral steuern
 export class EBL01Builder {
@@ -31,7 +32,8 @@ export class EBL01Builder {
     const postFrames = postTestItems
       .map(s => this.rpptm.getStimulusResponseElement(s, postTestConfig));
 
-    this.tlManager.add([postFrames, exampleFrames, instructionFrames, preFrames]);
+    // this.tlManager.add([postFrames, exampleFrames, instructionFrames, preFrames]);
+    this.tlManager.add([testTimeline()]);
 
   }
 

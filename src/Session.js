@@ -3,16 +3,17 @@ import {Zone} from "./MicroComponents/Zone";
 
 
 export function Session(props) {
-  const {timeline} = props;
-  const packageJson = require('../package.json');
+  const {timeline, initialData} = props;
+
   const [index, setIndex] = useState(0);
-  const data = useRef([{version: packageJson.version}]);
-  const storageIndex = +localStorage.getItem('index');
+  const data = useRef([initialData]);
 
   if (index >= timeline.length) {
     return finish();
   }
 
+  const storageIndex = +localStorage.getItem('index');
+  console.log(storageIndex);
   if (storageIndex > index) {
     setIndex(storageIndex);
     data.current = JSON.parse(localStorage.getItem('data'));
@@ -87,6 +88,7 @@ export function Session(props) {
   }
 
   function finish() {
+    data.current[0].finished = true;
     console.log("data:", data.current);
     return <div>Ende</div> //Ende der Timeline
   }
