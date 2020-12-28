@@ -1,5 +1,6 @@
 import React from 'react';
 import {Test1} from "./Test1";
+import {config} from "../assets/EBL_01/config";
 
 export function testTimeline() {
   return (
@@ -17,7 +18,7 @@ export function testTimeline() {
       <Test1 nr={'E'}/>,
       {
         nextSession: true, //beendet Session und wartet auf die nächste
-        start: new Date(Date.now()+1000*3600),
+        start: new Date(Date.now()+1000*config.timeBetweenSessionsInSeconds),
       },
       <Test1 nr={'Z'}/>,
     ]

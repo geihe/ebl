@@ -128,5 +128,7 @@ export const config = {
       'postConceptNew_3',
       'postConceptNew_4',
     ],
-  }
+  },
+
+  timeBetweenSessionsInSeconds: 5*60,
 }

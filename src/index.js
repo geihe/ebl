@@ -50,6 +50,7 @@ async function testNew() {
 }
 
 function getInitialData() {
+//TODO URLParams und localData vergleichen
   const packageJson = require('../package.json');
   const initialData = {
     version: packageJson.version,
@@ -70,7 +71,6 @@ function getInitialData() {
   }
   const localData = localStorage.getItem('data');
   const localParams = localData && localData[0];
-//TODO URLParams und localData vergleichen
   return initialData;
 }
 

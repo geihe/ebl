@@ -11,8 +11,8 @@ export const phrase = {
   },
   continueText: {en: 'Please press SPACE to continue...', de: 'Weiter mit der Leertaste ...'},
   experimentFinished: {
-    en: 'Thank you very much for participating in our study. The experminet is finished.',
-    de: 'Das Experiment ist beendet. Vielen Dank, dass Sie an der Studie teilgenommen haben.',
+    en: 'Thank you very much for participating in our study. The experiment is finished. Please close the window.',
+    de: 'Das Experiment ist beendet. Vielen Dank, dass Sie an der Studie teilgenommen haben. Sie können das Fenster jetzt schließen.',
   },
   pending: {
     en: 'The next phase of the experiment has not been activated yet.',
