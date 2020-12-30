@@ -18,7 +18,10 @@ import {
 
 export const config = {
   develop: true,
+
   language: 'de',
+  numberOfSessions: 2,
+  timeBetweenSessionsInSeconds: 5*60,
 
   introduction: {
     delay: 1000,
@@ -129,6 +132,4 @@ export const config = {
       'postConceptNew_4',
     ],
   },
-
-  timeBetweenSessionsInSeconds: 5*60,
 }

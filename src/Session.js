@@ -1,15 +1,14 @@
 import React, {useRef, useState} from "react";
 import {Zone} from "./MicroComponents/Zone";
-import {ExperimentFinished} from "./MicroComponents/ExperimentFinished";
 
 
 export function Session(props) {
   const {timeline, initialData} = props;
 
   const [index, setIndex] = useState(0);
-  const data = useRef([initialData]);
+  const data = useRef(initialData);
 
-  if (index >= timeline.length) {
+  if (index >= timeline.length || data.current[0].finished) {
     return finish();
   }
 
@@ -43,7 +42,7 @@ export function Session(props) {
       case 'nextSession':
         tempIndex=Number.MAX_VALUE;
         data.current[0].finished = true;
-        data.current[0].nextSessionStart = el.start;
+        data.current[0].nextSessionStart = new Date(Date.now() + 1000*el.timeBetweenSessionsInSeconds);
         console.log(data.current);
         localStorage.setItem('data', JSON.stringify(data.current));
         localStorage.setItem('index', '' + Number.MAX_VALUE);
@@ -60,6 +59,7 @@ export function Session(props) {
   if (!el) {
     return finish();
   }
+
   const content = React.cloneElement(
     el.frame,
     {
@@ -98,9 +98,9 @@ export function Session(props) {
     setIndex(newIndex);
   }
 
-  function finish() {
+  function finish() {//Ende der Timeline
     data.current[0].finished = true;
-    console.log("data:", data.current);
-    return <ExperimentFinished/> //Ende der Timeline
+    props.finished(data.current);
+    return null;
   }
 }

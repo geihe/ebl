@@ -9,14 +9,37 @@ import {testTimeline} from "../../Test/testTimeline";
 
 //TODO Konfiguration (z. B. Feedback) hier zentral steuern
 export class EBL01Builder {
+
   constructor(t) {
     this.t = t;
     this.tlManager = new TimelineManager();
     this.rem = new EBL01_ExampleManager();
     this.rpptm = new EBL01_RessourcePrePostTestManager();
+    this.session = 1;
+    this.group = 0;
+  }
+
+  setSession(session) {
+    this.session = session;
+  }
+  setGroup(group) {
+    this.group = group;
   }
 
   build() {
+    switch (this.session) {
+      case 1:
+        this.buildSession1();
+        break;
+      case 2:
+        this.buildSession2();
+        break;
+      default:
+        console.log("Fehler in EBL01Builder: Session-Nr. nicht gefunden.");
+    }
+  }
+
+  buildSession3() { //zu Testzwecken Session 1 und 2 vertauscht
     const instructionFrames =
       EBL01_Introduction(config.introduction.items);
 
@@ -32,12 +55,17 @@ export class EBL01Builder {
     const postFrames = postTestItems
       .map(s => this.rpptm.getStimulusResponseElement(s, postTestConfig));
 
-    // this.tlManager.add([postFrames, exampleFrames, instructionFrames, preFrames]);
-    this.tlManager.add([testTimeline()]);
-
+    this.tlManager.add([postFrames, exampleFrames, instructionFrames, preFrames]);
   }
 
-  getTimeline() {
+  buildSession2() {
+    this.tlManager.add([testTimeline(2)]);
+  }
+  buildSession1() {
+    this.tlManager.add([testTimeline(1)]);
+  }
+
+  getTimeline(session = 1) {
     return this.tlManager.getFlatTimeline();
   }
 }

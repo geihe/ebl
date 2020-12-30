@@ -241,12 +241,12 @@ class TLNextSession extends TimelineElement {
   constructor(frameSource) {
     super(frameSource);
     this.type = 'nextSession';
-    this.start = frameSource.start;
+    this.timeBetweenSessionsInSeconds = frameSource.timeBetweenSessionsInSeconds;
     this.effort = 0;
   }
 
   flat() {
-    return {type: 'nextSession', start: this.start};
+    return {type: 'nextSession', timeBetweenSessionsInSeconds: this.timeBetweenSessionsInSeconds};
   }
 
   setCumEffort(start) {
