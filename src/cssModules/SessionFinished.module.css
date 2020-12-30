@@ -1,41 +1,20 @@
-.likertwrapper {
-    flex-direction: row;
-}
 
-.likertbox {
-    background-color: #9babc1;
-    border: 1px solid #5388c3;
-    width: 50px;
-    height: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 3px;
-}
-
-.likertbox:hover, .checked{
-    background-color: #888888;
-    box-shadow: 5px 5px 5px #999999;
-}
-
-
-.mintext, .maxtext {
-    margin: 2px 20px;
-    font-size: 90%;
-}
-
-.titel {
-    font-size: 25px;
-    margin-bottom: 50px;
-}
-
-.likert {
-    background-color: #ccc;
-    font-size: 125%;
+.zone {
+    background-color: #cccccc;
+    width: 800px;
     padding: 10px;
+    border: 1px solid #888888;
     display: flex;
+    flex-direction: column;
 }
-.itemtext {
-    font-size: 30px;
-    margin-bottom: 30px;
+
+p {
+    font-size: 26px;
+    color: #3333f5;
+    margin: 10px;
+    line-height: 150%;
+}
+
+.time {
+    color: darkred;
 }

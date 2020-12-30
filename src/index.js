@@ -8,16 +8,11 @@ import {LngContext, translate} from "./helper/i18n";
 import {FocusStyleManager} from "@blueprintjs/core";
 import {config} from "./assets/EBL_01/config";
 import {SessionFinished} from "./MicroComponents/SessionFinished";
-/*const lngChooser = (
-  <>
-    <button onClick={()=>start('de')}>Deutsch</button>
-    <button onClick={()=>start('en')}>Englisch</button>
-  </>
-)
-ReactDOM.render(lngChooser, document.getElementById('root'));*/
-// test();
+import {Server} from "./helper/Server";
 
 FocusStyleManager.onlyShowFocusOnTabs();
+const server = new Server();
+
 let t;
 getElementInfo().then((info) => {
   t = (ressource, param) =>
@@ -34,9 +29,9 @@ getElementInfo().then((info) => {
     default: //Session
       const initData = info.initialData[0];
       const tb = new EBL01Builder(t);
-      tb.setSession(initData.session);
-      tb.setGroup(initData.groupId);
-      tb.build();
+      tb.setSession(initData.session)
+        .setGroup(initData.groupId)
+        .build();
       element =
         <Session timeline={tb.getTimeline()} initialData={info.initialData} finished={(data) => finished(data)}/>
   }
@@ -87,9 +82,10 @@ async function getElementInfo() {
   const dataItemsJSON = localStorage.getItem('data');
 
   if (!dataItemsJSON) { //neues Experiment
-    const response = await fetch('https://psychologie.geihe.net/rest/EBL/new01.php');
-    const serverData= await response.json();
-    console.log(serverData);
+    // const response = await fetch('https://psychologie.geihe.net/rest/EBL/new01.php');
+    // const serverData= await response.json();
+    const serverData = await server.getNewData();
+
     initialData.session = serverData.session;
     initialData.language = serverData.language;
     initialData.userId = serverData.user_id;

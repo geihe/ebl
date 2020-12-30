@@ -19,9 +19,11 @@ export class EBL01Builder {
 
   setSession(session) {
     this.session = session;
+    return this;
   }
   setGroup(group) {
     this.group = group;
+    return this;
   }
 
   build() {

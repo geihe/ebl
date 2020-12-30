@@ -4,12 +4,14 @@
     <option name="SCOPE_TYPE" value="3" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c0a8d840-d2a4-41a1-9e79-f574c09cafbd" name="Default Changelist" comment="Session-Verwaltung mit local-Storage erstellt">
-      <change afterPath="$PROJECT_DIR$/src/cssModules/SessionFinished.module.css" afterDir="false" />
+    <list default="true" id="c0a8d840-d2a4-41a1-9e79-f574c09cafbd" name="Default Changelist" comment="Bei neuem Experiment:&#10;holt session, userId, groupId vom Server">
+      <change afterPath="$PROJECT_DIR$/src/helper/Server.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Session.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Session.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MicroComponents/SessionFinished.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/MicroComponents/SessionFinished.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/assets/EBL_01/EBL01Builder.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/EBL_01/EBL01Builder.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cssModules/SessionFinished.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/cssModules/SessionFinished.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cssModules/TextFrame.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/cssModules/TextFrame.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -67,6 +69,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="G:\OneDrive_Marienschule\Marienschule Krefeld\Programmprojekte - Dokumente\react\bipsy\ebl\src\cssModules" />
       <recent name="G:\OneDrive_Marienschule\Marienschule Krefeld\Programmprojekte - Dokumente\react\bipsy\ebl\src\MicroComponents" />
       <recent name="G:\OneDrive_Marienschule\Marienschule Krefeld\Programmprojekte - Dokumente\react\bipsy\ebl\src\helper\pushNotification" />
     </key>
@@ -107,7 +110,7 @@
       <workItem from="1609258110664" duration="5414000" />
       <workItem from="1609266573731" duration="1553000" />
       <workItem from="1609312119912" duration="7917000" />
-      <workItem from="1609341670586" duration="1996000" />
+      <workItem from="1609341670586" duration="5429000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1608320225945</created>
@@ -186,7 +189,14 @@
       <option name="project" value="LOCAL" />
       <updated>1609320785685</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Bei neuem Experiment:&#10;holt session, userId, groupId vom Server">
+      <created>1609343718300</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1609343718300</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -232,7 +242,8 @@
     <MESSAGE value="Elemente &#10;&lt;ElementFinished&gt; und&#10;&lt;Pending&gt; erstellt" />
     <MESSAGE value="timeBetweenSessionsInSeconds &#10;in config-File ergänzt" />
     <MESSAGE value="Session-Verwaltung mit local-Storage erstellt" />
-    <option name="LAST_COMMIT_MESSAGE" value="Session-Verwaltung mit local-Storage erstellt" />
+    <MESSAGE value="Bei neuem Experiment:&#10;holt session, userId, groupId vom Server" />
+    <option name="LAST_COMMIT_MESSAGE" value="Bei neuem Experiment:&#10;holt session, userId, groupId vom Server" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
 </project>
