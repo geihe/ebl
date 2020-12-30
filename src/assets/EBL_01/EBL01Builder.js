@@ -7,9 +7,7 @@ import {EBL01_Introduction} from "./EBL01_Introduction";
 import {config} from "./config";
 import {testTimeline} from "../../Test/testTimeline";
 
-//TODO Konfiguration (z. B. Feedback) hier zentral steuern
 export class EBL01Builder {
-
   constructor(t) {
     this.t = t;
     this.tlManager = new TimelineManager();

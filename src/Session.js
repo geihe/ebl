@@ -21,7 +21,7 @@ export function Session(props) {
   let el = timeline[index];
   let tempIndex = index;
 
-  while (el && el.type !== 'frame') { //TODO Ist das sicher, wenn die Timeline nicht mit einem Frame endet?
+  while (el && el.type !== 'frame') {
     switch (el.type) {
       case 'jump':
         tempIndex += el.jumpRel;

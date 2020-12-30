@@ -18,29 +18,32 @@ ReactDOM.render(lngChooser, document.getElementById('root'));*/
 // test();
 
 FocusStyleManager.onlyShowFocusOnTabs();
+let t;
+getElementInfo().then((info) => {
+  t = (ressource, param) =>
+    translate(info.language, ressource, param);
 
-const info = getElementInfo();
-const t = (ressource, param) =>
-  translate(info.language, ressource, param);
+  let element;
+  switch (info.type) {
+    case "finished":
+      element = <SessionFinished/>;
+      break;
+    case "pending":
+      element = <SessionFinished nextSessionStart={info.nextSessionStart}/>;
+      break;
+    default: //Session
+      const initData = info.initialData[0];
+      const tb = new EBL01Builder(t);
+      tb.setSession(initData.session);
+      tb.setGroup(initData.groupId);
+      tb.build();
+      element =
+        <Session timeline={tb.getTimeline()} initialData={info.initialData} finished={(data) => finished(data)}/>
+  }
 
-let element;
-switch (info.type) {
-  case "finished":
-    element = <SessionFinished/>;
-    break;
-  case "pending":
-    element = <SessionFinished nextSessionStart={info.nextSessionStart}/>;
-    break;
-  default: //Session
-    const initData = info.initialData[0];
-    const tb = new EBL01Builder(t);
-    tb.setSession(initData.session);
-    tb.setGroup(initData.groupId);
-    tb.build();
-    element = <Session timeline={tb.getTimeline()} initialData={info.initialData} finished={(data) => finished(data)}/>
-}
+  render(element);
+});
 
-render(element);
 
 function render(element) {
   ReactDOM.render(
@@ -59,20 +62,7 @@ function finished(data) {
   console.log(data);
 }
 
-async function testNew() {
-  const response = await fetch("https://psychologie.geihe.net/rest/EBL/new01.php");
-  console.log(await response.json());
-  /* {
-      finished: false
-      groupId: 2
-      language: "de"
-      userId: "EBL015fe8888a81f018.75435398"
-      session: 1
-  }
-  */
-}
-
-function getElementInfo() {
+async function getElementInfo() {
 //TODO URLParams und localData vergleichen
   const packageJson = require('../package.json');
   const initialData = {
@@ -97,8 +87,14 @@ function getElementInfo() {
   const dataItemsJSON = localStorage.getItem('data');
 
   if (!dataItemsJSON) { //neues Experiment
-    //TODO hole user_id und group_id vom Server
-    console.log("keine lokalen Daten, neues Experiment?");
+    const response = await fetch('https://psychologie.geihe.net/rest/EBL/new01.php');
+    const serverData= await response.json();
+    console.log(serverData);
+    initialData.session = serverData.session;
+    initialData.language = serverData.language;
+    initialData.userId = serverData.user_id;
+    initialData.groupId = serverData.group_id;
+    console.log(initialData);
     return {type: 'session', initialData: [initialData]};
   }
 
