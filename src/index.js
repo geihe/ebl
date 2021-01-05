@@ -52,9 +52,10 @@ function render(element) {
 }
 
 function finished(data) {
-  //TODO Daten auf Server laden
-  render(<SessionFinished nextSessionStart={data[0].nextSessionStart}/>);
-  console.log(data);
+  const {userId, session, groupId, mailId} = data[0];
+
+  server.postData(userId, session, groupId, data, mailId )
+    .then( () => render(<SessionFinished nextSessionStart={data[0].nextSessionStart}/>));
 }
 
 async function getElementInfo() {

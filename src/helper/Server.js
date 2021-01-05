@@ -8,4 +8,21 @@ export class Server {
   getNewData() {
     return fetch(this.newURL).then(response => response.json());
   }
+
+  postData(userId, session, groupId, data, mailId) {
+    return fetch(this.saveURL, {
+      method: 'post',
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        user_id: userId,
+        session,
+        group_id: groupId,
+        data,
+        mail_id: mailId || ''
+      })
+    })
+  }
 }
