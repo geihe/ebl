@@ -4,14 +4,12 @@
     <option name="SCOPE_TYPE" value="3" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c0a8d840-d2a4-41a1-9e79-f574c09cafbd" name="Default Changelist" comment="save data to server after session">
-      <change afterPath="$PROJECT_DIR$/src/MicroComponents/Video.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/mal10.mp4" afterDir="false" />
+    <list default="true" id="c0a8d840-d2a4-41a1-9e79-f574c09cafbd" name="Default Changelist" comment="added Minicomponent">
+      <change afterPath="$PROJECT_DIR$/src/Frames/EBL/EBL01Videos.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Test/testTimeline.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Test/testTimeline.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/helper/Server.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/helper/Server.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/mal10.mp4" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/introduction.mp4" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,7 +60,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="js.last.introduce.type" value="CONST" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/assets" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/Frames" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -76,12 +74,14 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="G:\OneDrive_Marienschule\Marienschule Krefeld\Programmprojekte - Dokumente\react\bipsy\ebl\src\Frames" />
       <recent name="G:\OneDrive_Marienschule\Marienschule Krefeld\Programmprojekte - Dokumente\react\bipsy\ebl\src\assets" />
       <recent name="G:\OneDrive_Marienschule\Marienschule Krefeld\Programmprojekte - Dokumente\react\bipsy\ebl\src\MicroComponents" />
       <recent name="G:\OneDrive_Marienschule\Marienschule Krefeld\Programmprojekte - Dokumente\react\bipsy\ebl\src\cssModules" />
       <recent name="G:\OneDrive_Marienschule\Marienschule Krefeld\Programmprojekte - Dokumente\react\bipsy\ebl\src\helper\pushNotification" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="G:\OneDrive_Marienschule\Marienschule Krefeld\Programmprojekte - Dokumente\react\bipsy\ebl\src\Frames\EBL" />
       <recent name="G:\OneDrive_Marienschule\Marienschule Krefeld\Programmprojekte - Dokumente\react\bipsy\ebl\src" />
       <recent name="G:\OneDrive_Marienschule\Marienschule Krefeld\Programmprojekte - Dokumente\react\bipsy\ebl\src\assets\EBL_01\examples" />
     </key>
@@ -188,7 +188,7 @@
       <workItem from="1609705733924" duration="2211000" />
       <workItem from="1609790019028" duration="1935000" />
       <workItem from="1609831458891" duration="1846000" />
-      <workItem from="1609953612301" duration="6548000" />
+      <workItem from="1609953612301" duration="9271000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1608320225945</created>
@@ -288,7 +288,14 @@
       <option name="project" value="LOCAL" />
       <updated>1609834575091</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="added Minicomponent">
+      <created>1609964724752</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1609964724752</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -336,7 +343,8 @@
     <MESSAGE value="Session-Verwaltung mit local-Storage erstellt" />
     <MESSAGE value="Bei neuem Experiment:&#10;holt session, userId, groupId vom Server" />
     <MESSAGE value="save data to server after session" />
-    <option name="LAST_COMMIT_MESSAGE" value="save data to server after session" />
+    <MESSAGE value="added Minicomponent" />
+    <option name="LAST_COMMIT_MESSAGE" value="added Minicomponent" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
 </project>
