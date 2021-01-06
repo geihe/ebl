@@ -39,7 +39,7 @@ export class EBL01Builder {
     }
   }
 
-  buildSession3() { //zu Testzwecken Session 1 und 2 vertauscht
+  buildSession1() { //zu Testzwecken Session 1 und 2 vertauscht
     const instructionFrames =
       EBL01_Introduction(config.introduction.items);
 
@@ -55,13 +55,13 @@ export class EBL01Builder {
     const postFrames = postTestItems
       .map(s => this.rpptm.getStimulusResponseElement(s, postTestConfig));
 
-    this.tlManager.add([postFrames, exampleFrames, instructionFrames, preFrames]);
+    this.tlManager.add([exampleFrames, postFrames, instructionFrames, preFrames]);
   }
 
   buildSession2() {
     this.tlManager.add([testTimeline(2)]);
   }
-  buildSession1() {
+  buildSession3() {
     this.tlManager.add([testTimeline(1)]);
   }
 

@@ -4,12 +4,10 @@
     <option name="SCOPE_TYPE" value="3" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c0a8d840-d2a4-41a1-9e79-f574c09cafbd" name="Default Changelist" comment="added Minicomponent">
-      <change afterPath="$PROJECT_DIR$/src/Frames/EBL/EBL01Videos.js" afterDir="false" />
+    <list default="true" id="c0a8d840-d2a4-41a1-9e79-f574c09cafbd" name="Default Changelist" comment="added Frame EBL01Video">
       <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Test/testTimeline.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Test/testTimeline.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/mal10.mp4" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/introduction.mp4" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/EBL_01/EBL01Builder.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/EBL_01/EBL01Builder.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -188,7 +186,8 @@
       <workItem from="1609705733924" duration="2211000" />
       <workItem from="1609790019028" duration="1935000" />
       <workItem from="1609831458891" duration="1846000" />
-      <workItem from="1609953612301" duration="9271000" />
+      <workItem from="1609953612301" duration="9630000" />
+      <workItem from="1609967557339" duration="689000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1608320225945</created>
@@ -295,7 +294,14 @@
       <option name="project" value="LOCAL" />
       <updated>1609964724752</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="added Frame EBL01Video">
+      <created>1609967288051</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1609967288051</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -344,7 +350,8 @@
     <MESSAGE value="Bei neuem Experiment:&#10;holt session, userId, groupId vom Server" />
     <MESSAGE value="save data to server after session" />
     <MESSAGE value="added Minicomponent" />
-    <option name="LAST_COMMIT_MESSAGE" value="added Minicomponent" />
+    <MESSAGE value="added Frame EBL01Video" />
+    <option name="LAST_COMMIT_MESSAGE" value="added Frame EBL01Video" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
 </project>

@@ -105,6 +105,7 @@ function SingleExplanation(props) {
         multiline={true}
         placeholder={t(phrase.editablePlaceholder)}
         minLines={3}
+        maxLines={4}
         isEditing={active}
         disabled={!active}
         onChange={setText}
