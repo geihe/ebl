@@ -10,19 +10,21 @@ export class Server {
   }
 
   postData(userId, session, groupId, data, mailId) {
+    const body = {
+      user_id: userId,
+      session,
+      group_id: groupId,
+      data,
+      mail_id: mailId || ''
+    };
+    console.log(body);
     return fetch(this.saveURL, {
       method: 'post',
       headers: {
         'Accept': 'application/json',
         'Content-Type': 'application/json'
       },
-      body: JSON.stringify({
-        user_id: userId,
-        session,
-        group_id: groupId,
-        data,
-        mail_id: mailId || ''
-      })
+      body: JSON.stringify(body)
     })
   }
 }

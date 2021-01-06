@@ -15,6 +15,7 @@ const server = new Server();
 
 let t;
 getElementInfo().then((info) => {
+  console.log(info);
   t = (ressource, param) =>
     translate(info.language, ressource, param);
 
@@ -92,7 +93,7 @@ async function getElementInfo() {
     initialData.userId = serverData.user_id;
     initialData.groupId = serverData.group_id;
     console.log(initialData);
-    return {type: 'session', initialData: [initialData]};
+    return {type: 'session', language: initialData.language, initialData: [initialData]};
   }
 
   const dataItems = JSON.parse(dataItemsJSON);
@@ -100,7 +101,7 @@ async function getElementInfo() {
 
   if (!localData.finished) { //milestone
     console.log("milestone");
-    return {type: 'session', initialData: dataItems};
+    return {type: 'session', language: initialData.language, initialData: dataItems};
   }
 
   if (!localData.nextSessionStart) { //Experiment beendet
@@ -121,7 +122,7 @@ async function getElementInfo() {
     initialData.nextSessionStart = null;
     initialData.finished = false;
     localStorage.setItem('index', '0');
-    return {type: 'session', initialData: [initialData]};
+    return {type: 'session', language: initialData.language, initialData: [initialData]};
   }
   console.log("pending");
 

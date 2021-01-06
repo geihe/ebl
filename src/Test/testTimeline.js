@@ -1,11 +1,14 @@
 import React from 'react';
 import {Test1} from "./Test1";
+import {Video} from "../MicroComponents/Video";
+import video from "../assets/mal10.mp4"
 
 export function testTimeline(session) {
   if (session === 1) {
     return (
       [
         <Test1 nr={'A'}/>,
+        <Video url={video} />,
         <Test1 nr={'B'}/>,
         // {
         //   milestone: true
