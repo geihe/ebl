@@ -13,10 +13,9 @@ export function ImiFrame(props) {//TODO Umbenennen in LikertFrame
   const {min = 1, max = 7, step = 1, minText = '', maxText = '', title = '', item} = props;
   const [rating, setRating] = useStateDelayed(-Infinity);
 
-  function callback(index) {
-
-    setRating(() => props.finish(index), 500);
-    setRating(index);
+  function callback(rating) {//TODO get delay from config
+    setRating(() => props.finish(rating), 500);
+    setRating(rating);
   }
 
   const options = getArray(min, max, step);
