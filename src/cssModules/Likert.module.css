@@ -13,15 +13,30 @@
     margin: 3px;
 }
 
-.likertbox:hover, .checked{
+.likertbox:hover {
     background-color: #888888;
-    box-shadow: 5px 5px 5px #999999;
+    box-shadow: 4px 4px 4px #999999;
+}
+
+.likertbox:hover .checked, .likertbox.checked {
+    background-color: #c35380;
 }
 
 
 .mintext, .maxtext {
     margin: 2px 20px;
     font-size: 90%;
+}
+
+.mintext {
+    color: darkred;
+    text-align: right;
+}
+
+.maxtext {
+    color: darkred;
+    text-align: left;
+
 }
 
 .titel {
@@ -35,7 +50,9 @@
     padding: 10px;
     display: flex;
 }
+
 .itemtext {
     font-size: 30px;
     margin-bottom: 30px;
+    text-align: center;
 }

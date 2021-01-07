@@ -92,7 +92,6 @@ async function getElementInfo() {
     initialData.language = serverData.language;
     initialData.userId = serverData.user_id;
     initialData.groupId = serverData.group_id;
-    console.log(initialData);
     return {type: 'session', language: initialData.language, initialData: [initialData]};
   }
 

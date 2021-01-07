@@ -6,6 +6,10 @@ import {EblFrame} from "../../Frames/EBL/EblFrame";
 import {EBL01_Introduction} from "./EBL01_Introduction";
 import {config} from "./config";
 import {testTimeline} from "../../Test/testTimeline";
+import {fssItems} from "./fssItems";
+import {ImiFrame} from "../../Frames/ImiFrame";
+import {FixationCrossFrame} from "../../Frames/FixationCrossFrame";
+
 
 export class EBL01Builder {
   constructor(t) {
@@ -29,7 +33,7 @@ export class EBL01Builder {
   build() {
     switch (this.session) {
       case 1:
-        this.buildSession1();
+        this.buildSession3();
         break;
       case 2:
         this.buildSession2();
@@ -62,11 +66,46 @@ export class EBL01Builder {
     this.tlManager.add([testTimeline(2)]);
   }
   buildSession3() {
-    this.tlManager.add([testTimeline(1)]);
+    this.tlManager.add(this.buildProcessMeasures());
   }
 
   getTimeline(session = 1) {
     return this.tlManager.getFlatTimeline();
+  }
+
+  buildRheinbergFss(numbers) {//TODO minText und maxText auch aus Datei holen
+    return numbers.map(nr=>
+      [<ImiFrame
+        minText={{de: 'Trifft nicht zu', en: 'not at all'}}
+        maxText={{de: 'Trifft zu', en: 'very much'}}
+        item={fssItems[nr-1].text}
+        key={nr}
+      />,
+        <FixationCrossFrame /> ]
+    )
+  }
+
+  buildProcessMeasures() {
+    return  [1,2,3,4,5,6,7,8,9,10]
+      .map(nr=>
+        [<ImiFrame
+          minText={{de: 'Trifft nicht zu', en: 'not at all'}}
+          maxText={{de: 'Trifft zu', en: 'very much'}}
+          item={fssItems[nr-1].text}
+          key={nr}
+        />,
+          <FixationCrossFrame duration={200}/> ]
+      ).concat([<ImiFrame
+        minText={{de: 'sehr wenig angestrengt', en: 'very little effort'}}
+        maxText={{de: 'sehr stark angestrengt', en: 'very high effort'}}
+        max={9}
+        item={{
+          de: 'Wie stark haben Sie sich bei den letzten vier Beispielen angestrengt, um sie zu verstehen?',
+          en: 'How much effort did you invest to understand the last four worked examples?'
+        }}
+        key={'cognitive load'}
+      />]
+    )
   }
 }
 
