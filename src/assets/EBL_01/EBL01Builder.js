@@ -94,7 +94,7 @@ export class EBL01Builder {
           item={fssItems[nr-1].text}
           key={nr}
         />,
-          <FixationCrossFrame duration={200}/> ]
+          <FixationCrossFrame nocross duration={200}/> ]
       ).concat([<ImiFrame
         minText={{de: 'sehr wenig angestrengt', en: 'very little effort'}}
         maxText={{de: 'sehr stark angestrengt', en: 'very high effort'}}
@@ -108,4 +108,3 @@ export class EBL01Builder {
     )
   }
 }
-

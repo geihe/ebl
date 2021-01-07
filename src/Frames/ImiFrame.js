@@ -14,11 +14,11 @@ export function ImiFrame(props) {//TODO Umbenennen in LikertFrame
   const [rating, setRating] = useStateDelayed(-Infinity);
 
   function callback(index) {
-    setRating(props.finish, 500);
+
+    setRating(() => props.finish(index), 500);
     setRating(index);
   }
 
-  console.log(props);
   const options = getArray(min, max, step);
   return (//TODO überall Klassen verwenden
     <FlexZone column style={{height: '500px', width: '800px'}}>

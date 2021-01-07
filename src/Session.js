@@ -85,6 +85,7 @@ export function Session(props) {
   </>;
 
   function next(newIndex, logData) {
+    console.log(logData);
     data.current.push(
       {
         index: index,
