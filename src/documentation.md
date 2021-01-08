@@ -10,8 +10,11 @@ Es können folgende Elemente enthalten sein:
 * ein Effort-Frame (Frame mit Aufwand-Angabe anders als 1 für progress bar)
 > {  
 >frame: Frame  
+>id  
 >effort: number //1 - default  
 >noProgress: //false - default    
+>nolog: //false - default
+>
 >}
 * ein Array von TimelineRec-Elementen, insbesondere auch ein Array von Frames
 * ein IfElse-Element:  

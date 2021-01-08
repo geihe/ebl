@@ -27,7 +27,7 @@ export function Session(props) {
         tempIndex += el.jumpRel;
         break;
       case 'jumpif':
-        const last = data.current[data.current.length-1];
+        const last = data.current[data.current.length - 1];
         if (el.jumpif(last.log, data.current)) {
           tempIndex += el.jumpRel;
         } else {
@@ -40,9 +40,9 @@ export function Session(props) {
         localStorage.setItem('index', '' + tempIndex);
         break;
       case 'nextSession':
-        tempIndex=Number.MAX_VALUE;
+        tempIndex = Number.MAX_VALUE;
         data.current[0].finished = true;
-        data.current[0].nextSessionStart = new Date(Date.now() + 1000*el.timeBetweenSessionsInSeconds);
+        data.current[0].nextSessionStart = new Date(Date.now() + 1000 * el.timeBetweenSessionsInSeconds);
         console.log(data.current);
         localStorage.setItem('data', JSON.stringify(data.current));
         localStorage.setItem('index', '' + Number.MAX_VALUE);
@@ -85,17 +85,17 @@ export function Session(props) {
   </>;
 
   function next(newIndex, logData) {
-    console.log(logData);
-    data.current.push(
-      {
-        index: index,
-        component: el.frame.type.name,
-        id: el.id,
-        startTime: startTime,
-        endTime: new Date().toLocaleString('de'),
-        log: logData,
-      });
-
+    if (!el.noLog) {
+      data.current.push(
+        {
+          index: index,
+          component: el.frame.type.name,
+          id: el.id,
+          startTime: startTime,
+          endTime: new Date().toLocaleString('de'),
+          log: logData,
+        });
+    }
     setIndex(newIndex);
   }
 

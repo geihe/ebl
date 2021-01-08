@@ -25,6 +25,7 @@ export class EBL01Builder {
     this.session = session;
     return this;
   }
+
   setGroup(group) {
     this.group = group;
     return this;
@@ -33,7 +34,7 @@ export class EBL01Builder {
   build() {
     switch (this.session) {
       case 1:
-        this.buildSession3();
+        this.buildSession1();
         break;
       case 2:
         this.buildSession2();
@@ -51,9 +52,14 @@ export class EBL01Builder {
     const preFrames = preTestItems
       .map(s => this.rpptm.getStimulusResponseElement(s, preTestConfig));
 
-    const {items: exampleItems, ...exampleConfig} = config.examples;
-    const exampleFrames = exampleItems
-      .map(s => <EblFrame config={exampleConfig} content={this.rem.string2html(s)}/>);
+    const {groups: exampleGroups, ...exampleConfig} = config.examples;
+    const {items: exampleItems, id} = exampleGroups[this.group];
+    console.log(exampleItems);
+    const exampleFrames = exampleItems.map(itemGroup =>
+      itemGroup.map(s =>
+        <EblFrame config={exampleConfig} content={this.rem.string2html(s)}/>)
+        .concat(this.getProcessMeasures())
+    )
 
     const {items: postTestItems, ...postTestConfig} = config.postTest;
     const postFrames = postTestItems
@@ -65,46 +71,44 @@ export class EBL01Builder {
   buildSession2() {
     this.tlManager.add([testTimeline(2)]);
   }
+
   buildSession3() {
-    this.tlManager.add(this.buildProcessMeasures());
+    this.tlManager.add(this.getProcessMeasures());
   }
 
   getTimeline(session = 1) {
     return this.tlManager.getFlatTimeline();
   }
 
-  buildRheinbergFss(numbers) {//TODO minText und maxText auch aus Datei holen
-    return numbers.map(nr=>
-      [<ImiFrame
-        minText={{de: 'Trifft nicht zu', en: 'not at all'}}
-        maxText={{de: 'Trifft zu', en: 'very much'}}
-        item={fssItems[nr-1].text}
-        key={nr}
-      />,
-        <FixationCrossFrame /> ]
-    )
+  getProcessMeasures() {
+    return [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+      .map(nr =>
+        [wrap(fssItems[nr - 1].id,
+          <ImiFrame
+            minText={{de: 'Trifft nicht zu', en: 'not at all'}}
+            maxText={{de: 'Trifft zu', en: 'very much'}}
+            item={fssItems[nr - 1].text}
+            key={nr}
+          />),
+          {frame: <FixationCrossFrame nocross duration={200}/>, nolog: true}
+        ]
+      ).concat([wrap('cognitive effort', <ImiFrame
+          minText={{de: 'sehr wenig angestrengt', en: 'very little effort'}}
+          maxText={{de: 'sehr stark angestrengt', en: 'very high effort'}}
+          max={9}
+          item={{
+            de: 'Wie stark haben Sie sich bei den letzten vier Beispielen angestrengt, um sie zu verstehen?',
+            en: 'How much effort did you invest to understand the last four worked examples?'
+          }}
+          key={'cognitive load'}
+        />)]
+      )
   }
+}
 
-  buildProcessMeasures() {
-    return  [1,2,3,4,5,6,7,8,9,10]
-      .map(nr=>
-        [<ImiFrame
-          minText={{de: 'Trifft nicht zu', en: 'not at all'}}
-          maxText={{de: 'Trifft zu', en: 'very much'}}
-          item={fssItems[nr-1].text}
-          key={nr}
-        />,
-          <FixationCrossFrame nocross duration={200}/> ]
-      ).concat([<ImiFrame
-        minText={{de: 'sehr wenig angestrengt', en: 'very little effort'}}
-        maxText={{de: 'sehr stark angestrengt', en: 'very high effort'}}
-        max={9}
-        item={{
-          de: 'Wie stark haben Sie sich bei den letzten vier Beispielen angestrengt, um sie zu verstehen?',
-          en: 'How much effort did you invest to understand the last four worked examples?'
-        }}
-        key={'cognitive load'}
-      />]
-    )
+function wrap(id, el) {
+  return {
+    frame: el,
+    id: id
   }
 }

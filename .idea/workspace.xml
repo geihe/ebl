@@ -1,10 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AnalysisUIOptions">
+    <option name="SCOPE_TYPE" value="3" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="c0a8d840-d2a4-41a1-9e79-f574c09cafbd" name="Default Changelist" comment="variable production:boolean in config.js">
+    <list default="true" id="c0a8d840-d2a4-41a1-9e79-f574c09cafbd" name="Default Changelist" comment="changed color of checked likert item to blue">
       <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Frames/ImiFrame.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frames/ImiFrame.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Frames/FixationCrossFrame.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frames/FixationCrossFrame.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Session.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Session.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/EBL_01/EBL01Builder.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/EBL_01/EBL01Builder.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/EBL_01/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/EBL_01/config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cssModules/Instructions.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/cssModules/Instructions.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cssModules/Likert.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/cssModules/Likert.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/documentation.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/documentation.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/helper/TimelineManager.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/helper/TimelineManager.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,18 +26,37 @@
       <option value="directory" />
     </option>
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="PREVIOUS_COMMIT_AUTHORS">
       <list>
         <option value="Michael Geihe" />
       </list>
     </option>
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="ProjectId" id="1lHBEw4qTgEqqRyFWtItUiObnSr" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
-    <option name="autoscrollFromSource" value="true" />
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
@@ -35,7 +64,8 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../infotag" />
+    <property name="js.last.introduce.type" value="CONST" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/Frames/RheinbergFss" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -43,13 +73,90 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2019.3.1\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="G:\OneDrive_Marienschule\Marienschule Krefeld\Programmprojekte - Dokumente\react\bipsy\ebl\src\Frames\RheinbergFss" />
+      <recent name="G:\OneDrive_Marienschule\Marienschule Krefeld\Programmprojekte - Dokumente\react\bipsy\ebl\src\Frames" />
+      <recent name="G:\OneDrive_Marienschule\Marienschule Krefeld\Programmprojekte - Dokumente\react\bipsy\ebl\src\assets" />
+      <recent name="G:\OneDrive_Marienschule\Marienschule Krefeld\Programmprojekte - Dokumente\react\bipsy\ebl\src\MicroComponents" />
+      <recent name="G:\OneDrive_Marienschule\Marienschule Krefeld\Programmprojekte - Dokumente\react\bipsy\ebl\src\cssModules" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="G:\OneDrive_Marienschule\Marienschule Krefeld\Programmprojekte - Dokumente\react\bipsy\ebl\src\assets\EBL_01" />
+      <recent name="G:\OneDrive_Marienschule\Marienschule Krefeld\Programmprojekte - Dokumente\react\bipsy\ebl\src\Frames\RheinbergFss" />
+      <recent name="G:\OneDrive_Marienschule\Marienschule Krefeld\Programmprojekte - Dokumente\react\bipsy\ebl\src\Frames\EBL" />
+      <recent name="G:\OneDrive_Marienschule\Marienschule Krefeld\Programmprojekte - Dokumente\react\bipsy\ebl\src" />
       <recent name="G:\OneDrive_Marienschule\Marienschule Krefeld\Programmprojekte - Dokumente\react\bipsy\ebl\src\assets\EBL_01\examples" />
     </key>
+  </component>
+  <component name="RestClientSettings">
+    <option name="REQUEST_HISTORY">
+      <list>
+        <RestClientRequest>
+          <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="https://psychologie.geihe.net/rest/EBL/reminder.php" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Content-Type" />
+                <option name="value" value="application/x-www-form-urlencoded" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="haveTextToSend" value="true" />
+          <option name="textToSend" value="mailto=michael@geihe.net" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="https://psychologie.geihe.net/rest/EBL/reminder.php" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Content-Type" />
+                <option name="value" value="application/x-www-form-urlencoded" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="haveTextToSend" value="true" />
+          <option name="textToSend" value="mailto=abc" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="https://psychologie.geihe.net/rest/EBL/reminder.php" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Content-Type" />
+                <option name="value" value="application/x-www-form-urlencoded" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="haveTextToSend" value="true" />
+          <option name="textToSend" value="id=99&amp;content=new-element" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="rest-api#1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$APPLICATION_CONFIG_DIR$/scratches/rest-api.http" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="HTTP Request.rest-api#1" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -72,6 +179,29 @@
       <workItem from="1608323177399" duration="645000" />
       <workItem from="1608364612595" duration="140000" />
       <workItem from="1608575212191" duration="1577000" />
+      <workItem from="1608586345863" duration="252000" />
+      <workItem from="1608796488330" duration="4198000" />
+      <workItem from="1608885793594" duration="639000" />
+      <workItem from="1609073194530" duration="7170000" />
+      <workItem from="1609144835672" duration="2137000" />
+      <workItem from="1609147023065" duration="5128000" />
+      <workItem from="1609168577858" duration="10052000" />
+      <workItem from="1609226769409" duration="8340000" />
+      <workItem from="1609258110664" duration="5414000" />
+      <workItem from="1609266573731" duration="1553000" />
+      <workItem from="1609312119912" duration="7917000" />
+      <workItem from="1609341670586" duration="5429000" />
+      <workItem from="1609411920972" duration="933000" />
+      <workItem from="1609699626530" duration="262000" />
+      <workItem from="1609705733924" duration="2211000" />
+      <workItem from="1609790019028" duration="1935000" />
+      <workItem from="1609831458891" duration="1846000" />
+      <workItem from="1609953612301" duration="9630000" />
+      <workItem from="1609967557339" duration="991000" />
+      <workItem from="1610006724380" duration="10278000" />
+      <workItem from="1610045684891" duration="6308000" />
+      <workItem from="1610099931086" duration="1193000" />
+      <workItem from="1610124923341" duration="2783000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1608320225945</created>
@@ -80,7 +210,133 @@
       <option name="project" value="LOCAL" />
       <updated>1608320225945</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Bugfix: Ereignisse-&gt;Ergebnisse bei Instruction4a">
+      <created>1608586452654</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1608586452654</updated>
+    </task>
+    <task id="LOCAL-00003" summary="fetch-test">
+      <created>1609075060128</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1609075060128</updated>
+    </task>
+    <task id="LOCAL-00004" summary="get URL-Parameters">
+      <created>1609090303015</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1609090303015</updated>
+    </task>
+    <task id="LOCAL-00005" summary="rename App to Sesion">
+      <created>1609090871127</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1609090871127</updated>
+    </task>
+    <task id="LOCAL-00006" summary="data[0]:&#10;{&#10;    version: &#10;    finished: &#10;    language: &#10;    session: &#10;    user_id: &#10;    group_id: &#10;  }">
+      <created>1609147285863</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1609147285863</updated>
+    </task>
+    <task id="LOCAL-00007" summary="use initalData.language&#10;possibility to send language from server">
+      <created>1609147560285</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1609147560285</updated>
+    </task>
+    <task id="LOCAL-00008" summary="nextSession als Frame-element angefügt">
+      <created>1609158243408</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1609158243408</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Elemente &#10;&lt;ElementFinished&gt; und&#10;&lt;Pending&gt; erstellt">
+      <created>1609170751557</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1609170751557</updated>
+    </task>
+    <task id="LOCAL-00010" summary="timeBetweenSessionsInSeconds &#10;in config-File ergänzt">
+      <created>1609171711047</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1609171711047</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Session-Verwaltung mit local-Storage erstellt">
+      <created>1609320785685</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1609320785685</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Bei neuem Experiment:&#10;holt session, userId, groupId vom Server">
+      <created>1609343718300</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1609343718300</updated>
+    </task>
+    <task id="LOCAL-00013" summary="save data to server after session">
+      <created>1609834363924</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1609834363924</updated>
+    </task>
+    <task id="LOCAL-00014" summary="save data to server after session">
+      <created>1609834575091</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1609834575091</updated>
+    </task>
+    <task id="LOCAL-00015" summary="added Minicomponent">
+      <created>1609964724752</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1609964724752</updated>
+    </task>
+    <task id="LOCAL-00016" summary="added Frame EBL01Video">
+      <created>1609967288051</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1609967288051</updated>
+    </task>
+    <task id="LOCAL-00017" summary="bugfix&#10;added maxLines={4} to EditableText">
+      <created>1609968429772</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1609968429772</updated>
+    </task>
+    <task id="LOCAL-00018" summary="process measures added&#10;EBL01Builder.buildProcessMeasures">
+      <created>1610019414166</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1610019414166</updated>
+    </task>
+    <task id="LOCAL-00019" summary="changed color of checked likert item to blue">
+      <created>1610019602625</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1610019602625</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -100,7 +356,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="HEAD" />
+                        <option value="notification" />
                       </list>
                     </value>
                   </entry>
@@ -116,8 +372,24 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <MESSAGE value="Initial commit" />
-    <MESSAGE value="workspace.xml excluded" />
-    <option name="LAST_COMMIT_MESSAGE" value="workspace.xml excluded" />
+    <MESSAGE value="Bugfix: Ereignisse-&gt;Ergebnisse bei Instruction4a" />
+    <MESSAGE value="fetch-test" />
+    <MESSAGE value="get URL-Parameters" />
+    <MESSAGE value="rename App to Sesion" />
+    <MESSAGE value="data[0]:&#10;{&#10;    version: &#10;    finished: &#10;    language: &#10;    session: &#10;    user_id: &#10;    group_id: &#10;  }" />
+    <MESSAGE value="use initalData.language&#10;possibility to send language from server" />
+    <MESSAGE value="nextSession als Frame-element angefügt" />
+    <MESSAGE value="Elemente &#10;&lt;ElementFinished&gt; und&#10;&lt;Pending&gt; erstellt" />
+    <MESSAGE value="timeBetweenSessionsInSeconds &#10;in config-File ergänzt" />
+    <MESSAGE value="Session-Verwaltung mit local-Storage erstellt" />
+    <MESSAGE value="Bei neuem Experiment:&#10;holt session, userId, groupId vom Server" />
+    <MESSAGE value="save data to server after session" />
+    <MESSAGE value="added Minicomponent" />
+    <MESSAGE value="added Frame EBL01Video" />
+    <MESSAGE value="bugfix&#10;added maxLines={4} to EditableText" />
+    <MESSAGE value="process measures added&#10;EBL01Builder.buildProcessMeasures" />
+    <MESSAGE value="changed color of checked likert item to blue" />
+    <option name="LAST_COMMIT_MESSAGE" value="changed color of checked likert item to blue" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
 </project>

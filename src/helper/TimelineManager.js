@@ -69,10 +69,12 @@ class TLFrame extends TimelineElement {
   constructor(frameSource) {
     super(frameSource);
     this.type = 'frame';
-    if (frameSource.hasOwnProperty('effort')) {
-      this.effort = frameSource.effort;
+    if (frameSource.hasOwnProperty('frame')) {
       this.frame = frameSource.frame;
+      this.effort = frameSource.effort || 1;
       this.noProgress = frameSource.noProgress;
+      this.id = frameSource.id;
+      this.noLog = frameSource.nolog;
     } else {
       this.effort = 1;
       this.frame = frameSource;
@@ -237,6 +239,7 @@ class TLMilestone extends TimelineElement {
     this.cumEffort = this.cumEffort * 100 / total;
   }
 }
+
 class TLNextSession extends TimelineElement {
   constructor(frameSource) {
     super(frameSource);
