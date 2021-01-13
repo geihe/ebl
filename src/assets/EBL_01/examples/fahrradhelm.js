@@ -46,8 +46,8 @@ export const fahrradhelm = {
     {
       principle: 4,
       problem: {
-        de: `Wie hoch ist die Wahrscheinlichkeit, dass Du und Dein Freund am ersten Kurstag den roten und den gelben Helm bekommen (es ist egal, wer welche Farbe bekommt)?  2* (1/5 * 1/4) = 2/20`,
-        en: `What is the probability that you and your friend will get the red helmet and yellow helmet on the first day of the course (it doesn't matter who gets which color)?  2* (1/5 * 1/4) = 2/20`,
+        de: `Wie hoch ist die Wahrscheinlichkeit, dass Du und Dein Freund am ersten Kurstag den roten und den gelben Helm bekommen (es ist egal, wer welche Farbe bekommt)?`,
+        en: `What is the probability that you and your friend will get the red helmet and yellow helmet on the first day of the course (it doesn't matter who gets which color)?`,
       },
       solution:
         <MathComponent tex={String.raw` 2 \cdot ( {1 \over 5} \cdot {1 \over 4})={2 \over 20}`} display={false}/>

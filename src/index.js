@@ -33,6 +33,7 @@ getElementInfo().then((info) => {
       tb.setSession(initData.session)
         .setGroup(initData.groupId)
         .build();
+      console.log(tb.getTimeline());
       element =
         <Session timeline={tb.getTimeline()} initialData={info.initialData} finished={(data) => finished(data)}/>
   }

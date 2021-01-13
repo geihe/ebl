@@ -4,17 +4,16 @@
     <option name="SCOPE_TYPE" value="3" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c0a8d840-d2a4-41a1-9e79-f574c09cafbd" name="Default Changelist" comment="changed color of checked likert item to blue">
+    <list default="true" id="c0a8d840-d2a4-41a1-9e79-f574c09cafbd" name="Default Changelist" comment="items analog zu Schalck erstellt&#10;fss-Skala Abfrage nach je 4 Beispielen">
+      <change afterPath="$PROJECT_DIR$/src/Frames/ToDoFrame.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Frames/FixationCrossFrame.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frames/FixationCrossFrame.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Session.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Session.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Frames/EBL/EblFrame.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frames/EBL/EblFrame.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MicroComponents/SessionFinished.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/MicroComponents/SessionFinished.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/assets/EBL_01/EBL01Builder.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/EBL_01/EBL01Builder.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/EBL_01/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/EBL_01/config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cssModules/Instructions.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/cssModules/Instructions.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cssModules/Likert.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/cssModules/Likert.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/documentation.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/documentation.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/helper/TimelineManager.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/helper/TimelineManager.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/EBL_01/examples/fahrradhelm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/EBL_01/examples/fahrradhelm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cssModules/TextFrame.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/cssModules/TextFrame.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,7 +64,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="js.last.introduce.type" value="CONST" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/Frames/RheinbergFss" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/Frames" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -80,8 +79,8 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="G:\OneDrive_Marienschule\Marienschule Krefeld\Programmprojekte - Dokumente\react\bipsy\ebl\src\Frames\RheinbergFss" />
       <recent name="G:\OneDrive_Marienschule\Marienschule Krefeld\Programmprojekte - Dokumente\react\bipsy\ebl\src\Frames" />
+      <recent name="G:\OneDrive_Marienschule\Marienschule Krefeld\Programmprojekte - Dokumente\react\bipsy\ebl\src\Frames\RheinbergFss" />
       <recent name="G:\OneDrive_Marienschule\Marienschule Krefeld\Programmprojekte - Dokumente\react\bipsy\ebl\src\assets" />
       <recent name="G:\OneDrive_Marienschule\Marienschule Krefeld\Programmprojekte - Dokumente\react\bipsy\ebl\src\MicroComponents" />
       <recent name="G:\OneDrive_Marienschule\Marienschule Krefeld\Programmprojekte - Dokumente\react\bipsy\ebl\src\cssModules" />
@@ -201,7 +200,10 @@
       <workItem from="1610006724380" duration="10278000" />
       <workItem from="1610045684891" duration="6308000" />
       <workItem from="1610099931086" duration="1193000" />
-      <workItem from="1610124923341" duration="2783000" />
+      <workItem from="1610124923341" duration="5279000" />
+      <workItem from="1610131409307" duration="550000" />
+      <workItem from="1610306968423" duration="1353000" />
+      <workItem from="1610564979587" duration="4837000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1608320225945</created>
@@ -336,7 +338,14 @@
       <option name="project" value="LOCAL" />
       <updated>1610019602625</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="items analog zu Schalck erstellt&#10;fss-Skala Abfrage nach je 4 Beispielen">
+      <created>1610128318428</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1610128318428</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -389,7 +398,8 @@
     <MESSAGE value="bugfix&#10;added maxLines={4} to EditableText" />
     <MESSAGE value="process measures added&#10;EBL01Builder.buildProcessMeasures" />
     <MESSAGE value="changed color of checked likert item to blue" />
-    <option name="LAST_COMMIT_MESSAGE" value="changed color of checked likert item to blue" />
+    <MESSAGE value="items analog zu Schalck erstellt&#10;fss-Skala Abfrage nach je 4 Beispielen" />
+    <option name="LAST_COMMIT_MESSAGE" value="items analog zu Schalck erstellt&#10;fss-Skala Abfrage nach je 4 Beispielen" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
 </project>

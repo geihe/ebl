@@ -9,6 +9,8 @@ import {testTimeline} from "../../Test/testTimeline";
 import {fssItems} from "./fssItems";
 import {ImiFrame} from "../../Frames/ImiFrame";
 import {FixationCrossFrame} from "../../Frames/FixationCrossFrame";
+import {EBL01Video} from "../../Frames/EBL/EBL01Video";
+import {ToDoFrame} from "../../Frames/ToDoFrame";
 
 
 export class EBL01Builder {
@@ -44,8 +46,8 @@ export class EBL01Builder {
     }
   }
 
-  buildSession1() { //zu Testzwecken Session 1 und 2 vertauscht
-    const instructionFrames =
+  buildSession1() {
+    const introductionFrames =
       EBL01_Introduction(config.introduction.items);
 
     const {items: preTestItems, ...preTestConfig} = config.preTest;
@@ -54,7 +56,6 @@ export class EBL01Builder {
 
     const {groups: exampleGroups, ...exampleConfig} = config.examples;
     const {items: exampleItems, id} = exampleGroups[this.group];
-    console.log(exampleItems);
     const exampleFrames = exampleItems.map(itemGroup =>
       itemGroup.map(s =>
         <EblFrame config={exampleConfig} content={this.rem.string2html(s)}/>)
@@ -65,7 +66,13 @@ export class EBL01Builder {
     const postFrames = postTestItems
       .map(s => this.rpptm.getStimulusResponseElement(s, postTestConfig));
 
-    this.tlManager.add([exampleFrames, postFrames, instructionFrames, preFrames]);
+    this.tlManager.add([
+      <EBL01Video videoID={'introduction'}/>,
+      <ToDoFrame text={'Begrüßungsseite'}/>,
+      introductionFrames,
+      preFrames,
+      exampleFrames,
+      postFrames]);
   }
 
   buildSession2() {

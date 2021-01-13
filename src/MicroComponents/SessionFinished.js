@@ -1,8 +1,8 @@
 import React, {useContext} from 'react';
 import {LngContext} from "../helper/i18n";
 import {phrase} from "../assets/ressourceLanguage";
-import styles from "../cssModules/SessionFinished.module.css";
-
+// import styles from "../cssModules/SessionFinished.module.css";
+//TODO import wegen merkwürdiger Seiteneffekte auf instructions deaktiviert
 export function SessionFinished(props) {
   const {nextSessionStart} = props;
   const t = useContext(LngContext);
@@ -11,6 +11,8 @@ export function SessionFinished(props) {
       <div> {t(phrase.experimentFinished)} </div>
     );
   }
+  return null;
+/*
   return (
     <div class={styles.zone}>
       <p> {t(phrase.sessionFinished)} </p>
@@ -22,6 +24,7 @@ export function SessionFinished(props) {
       </p>
     </div>
   );
+*/
 }
 
 function timeString(timeInSeconds) {

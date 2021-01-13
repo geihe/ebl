@@ -19,6 +19,7 @@
 }
 
 .continue {
+    position: absolute;
     color: darkblue;
     bottom: 15%;
     font-weight: bold;
