@@ -24,7 +24,7 @@ export const config = {
   timeBetweenSessionsInSeconds: 5*60,
 
   introduction: {
-    delay: 1000,
+    delay: 1000, //TODO 3000
     animation: '',
     items: [
       <Instruction01/>,
@@ -177,6 +177,22 @@ export const config = {
       'postConceptNew_2',
       'postConceptNew_3',
       'postConceptNew_4',
+      'pz-rvt1',
+      'pz-rvt2',
+      'pz-rvt3',
+      'pz-rvt4',
+      'pz-rvt5',
+      'pz-rvt6',
+      'pz-rvt7',
+      'pz-rvt8',
+      'lw-rvt1',
+      'lw-rvt2',
+      'lw-rvt3',
+      'lw-rvt4',
+      'lw-rvt5',
+      'lw-rvt6',
+      'lw-rvt7',
+      'lw-rvt8',
     ],
   },
 }

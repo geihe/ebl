@@ -4,15 +4,17 @@
     <option name="SCOPE_TYPE" value="3" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c0a8d840-d2a4-41a1-9e79-f574c09cafbd" name="Default Changelist" comment="items analog zu Schalck erstellt&#10;fss-Skala Abfrage nach je 4 Beispielen">
-      <change afterPath="$PROJECT_DIR$/src/Frames/ToDoFrame.js" afterDir="false" />
+    <list default="true" id="c0a8d840-d2a4-41a1-9e79-f574c09cafbd" name="Default Changelist" comment="ToDOFrame eingeführt">
+      <change afterPath="$PROJECT_DIR$/src/assets/EBL_01/verification.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Demographics.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Demographics.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Frames/EBL/EblFrame.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frames/EBL/EblFrame.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MicroComponents/SessionFinished.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/MicroComponents/SessionFinished.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Session.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Session.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/assets/EBL_01/EBL01Builder.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/EBL_01/EBL01Builder.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/EBL_01/examples/fahrradhelm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/EBL_01/examples/fahrradhelm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cssModules/TextFrame.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/cssModules/TextFrame.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/EBL_01/EBL01_RessourcePrePostTestManager.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/EBL_01/EBL01_RessourcePrePostTestManager.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/EBL_01/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/EBL_01/config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cssModules/shortResponse.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/cssModules/shortResponse.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -64,7 +66,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="js.last.introduce.type" value="CONST" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/Frames" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/assets/EBL_01" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -79,11 +81,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="G:\OneDrive_Marienschule\Marienschule Krefeld\Programmprojekte - Dokumente\react\bipsy\ebl\src\assets\EBL_01" />
       <recent name="G:\OneDrive_Marienschule\Marienschule Krefeld\Programmprojekte - Dokumente\react\bipsy\ebl\src\Frames" />
       <recent name="G:\OneDrive_Marienschule\Marienschule Krefeld\Programmprojekte - Dokumente\react\bipsy\ebl\src\Frames\RheinbergFss" />
       <recent name="G:\OneDrive_Marienschule\Marienschule Krefeld\Programmprojekte - Dokumente\react\bipsy\ebl\src\assets" />
       <recent name="G:\OneDrive_Marienschule\Marienschule Krefeld\Programmprojekte - Dokumente\react\bipsy\ebl\src\MicroComponents" />
-      <recent name="G:\OneDrive_Marienschule\Marienschule Krefeld\Programmprojekte - Dokumente\react\bipsy\ebl\src\cssModules" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="G:\OneDrive_Marienschule\Marienschule Krefeld\Programmprojekte - Dokumente\react\bipsy\ebl\src\assets\EBL_01" />
@@ -203,7 +205,14 @@
       <workItem from="1610124923341" duration="5279000" />
       <workItem from="1610131409307" duration="550000" />
       <workItem from="1610306968423" duration="1353000" />
-      <workItem from="1610564979587" duration="4837000" />
+      <workItem from="1610564979587" duration="6151000" />
+      <workItem from="1610710035902" duration="1432000" />
+      <workItem from="1610724347841" duration="2931000" />
+      <workItem from="1610873349625" duration="6443000" />
+      <workItem from="1610891827353" duration="11270000" />
+      <workItem from="1611338218702" duration="940000" />
+      <workItem from="1611343344595" duration="536000" />
+      <workItem from="1611349685553" duration="4731000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1608320225945</created>
@@ -345,7 +354,14 @@
       <option name="project" value="LOCAL" />
       <updated>1610128318428</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="ToDOFrame eingeführt">
+      <created>1610569985849</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1610569985849</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -399,7 +415,8 @@
     <MESSAGE value="process measures added&#10;EBL01Builder.buildProcessMeasures" />
     <MESSAGE value="changed color of checked likert item to blue" />
     <MESSAGE value="items analog zu Schalck erstellt&#10;fss-Skala Abfrage nach je 4 Beispielen" />
-    <option name="LAST_COMMIT_MESSAGE" value="items analog zu Schalck erstellt&#10;fss-Skala Abfrage nach je 4 Beispielen" />
+    <MESSAGE value="ToDOFrame eingeführt" />
+    <option name="LAST_COMMIT_MESSAGE" value="ToDOFrame eingeführt" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
 </project>

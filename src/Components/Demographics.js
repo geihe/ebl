@@ -2,11 +2,8 @@ import React, {useContext} from 'react';
 import * as Yup from 'yup';
 import {MyNumInput} from "../Forms/MyNumInput";
 import {MyRadioGroup} from "../Forms/MyRadioGroup";
-import {MySelect} from "../Forms/MySelect";
-import {MyInput} from "../Forms/MyInput";
 import {LngContext} from "../helper/i18n";
 import {Form} from "../Forms/Form";
-import {Zone} from "../MicroComponents/Zone";
 
 export function Demographics(props) {
   const t = useContext(LngContext);
@@ -43,24 +40,6 @@ export function Demographics(props) {
           {label: {en: 'female', de: 'weiblich'}, value: 'female'},
           {label: {en: 'other', de: 'divers'}, value: 'other'},
         ]}/>
-
-      <MySelect
-        name='role'
-        label={{de: 'Rolle an der Universität', en: 'Role at the university'}}
-        options={[
-          {label: ' ', value: ''},
-          {label: {de: 'Student', en: 'student'}, value: 'student'},
-          {label: {de: 'Mitarbeiter', en: 'staff'}, value: 'staff'},
-          {label: {de: 'Anderes', en: 'other'}, value: 'other'},
-        ]}/>
-      <Zone show={ data => data.role === 'student'}>
-        <MyInput
-          name='course'
-          label={{de: 'Kurs an der Universität', en: 'Course at the university'}}
-          placeholder='course'
-          disabled={false}
-        />
-      </Zone>
     </Form>
   );
 }

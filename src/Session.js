@@ -68,7 +68,7 @@ export function Session(props) {
     }
   );
   const progressBar = el.noProgress ? <div/> :
-    <progress id="progress-bar" value={el.cumEffort} max="100" style={{width: '90%'}}/>;
+   <progress id="progress-bar" value={el.cumEffort} max="100" style={{width: '90%'}}/>;
 
   return <>
     <header/>
@@ -79,7 +79,7 @@ export function Session(props) {
     </main>
     <footer>
       <Zone style={{width: '50%'}}>
-        {progressBar}
+        {progressBar} index: {tempIndex}
       </Zone>
     </footer>
   </>;

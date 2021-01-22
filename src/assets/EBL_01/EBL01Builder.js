@@ -11,6 +11,8 @@ import {ImiFrame} from "../../Frames/ImiFrame";
 import {FixationCrossFrame} from "../../Frames/FixationCrossFrame";
 import {EBL01Video} from "../../Frames/EBL/EBL01Video";
 import {ToDoFrame} from "../../Frames/ToDoFrame";
+import {Demographics} from "../../Components/Demographics";
+import {Shuffler} from "../../helper/Shuffle";
 
 
 export class EBL01Builder {
@@ -67,12 +69,25 @@ export class EBL01Builder {
       .map(s => this.rpptm.getStimulusResponseElement(s, postTestConfig));
 
     this.tlManager.add([
-      <EBL01Video videoID={'introduction'}/>,
+      postFrames,
       <ToDoFrame text={'Begrüßungsseite'}/>,
-      introductionFrames,
+      <ToDoFrame
+        text={'Das folgende Beispielvideo durch ein Begrüßungsvideo ("Nun einige mathematische Fragen") ersetzen'}/>,
+      <EBL01Video videoID={'introduction'}/>,
       preFrames,
+      <ToDoFrame text={'Video "und nun eine kleiner mathematischer Lehrtext"'}/>,
+      introductionFrames,
+      <ToDoFrame
+        text={'Video "nun kommt das eigentliche Experiment mit Beschreibung"<br/>4 mal, für jeden Fall eins<br/>auch Erläuterung der Fragen zur Anstrengung'}/>,
+      <ToDoFrame text={' 2-3 Fragen, ob der Ablauf des Experiments verstanden wurde'}/>,
       exampleFrames,
-      postFrames]);
+      <ToDoFrame text={'10 min Pause ?'}/>,
+      <ToDoFrame text={'Video "Nun kommen einige Aufgaben, mit denen wie den Lernerfolg überprüfen"'}/>,
+      postFrames,
+      <Demographics/>,
+      <ToDoFrame text={'Einverständnis, dass die Daten anonymisiert auf den Server geladen werden '}/>,
+      <ToDoFrame text={'Video Debriefing, '}/>,
+    ]);
   }
 
   buildSession2() {
@@ -88,28 +103,29 @@ export class EBL01Builder {
   }
 
   getProcessMeasures() {
-    return [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-      .map(nr =>
-        [wrap(fssItems[nr - 1].id,
-          <ImiFrame
-            minText={{de: 'Trifft nicht zu', en: 'not at all'}}
-            maxText={{de: 'Trifft zu', en: 'very much'}}
-            item={fssItems[nr - 1].text}
-            key={nr}
-          />),
-          {frame: <FixationCrossFrame nocross duration={200}/>, nolog: true}
+    return [wrap('cognitive effort', <ImiFrame
+      minText={{de: 'sehr wenig angestrengt', en: 'very little effort'}}
+      maxText={{de: 'sehr stark angestrengt', en: 'very high effort'}}
+      max={7}
+      item={{
+        de: 'Wie stark haben Sie sich bei den letzten vier Beispielen angestrengt, um sie zu verstehen?',
+        en: 'How much effort did you invest to understand the last four worked examples?'
+      }}
+      key={'cognitive load'}
+    />)].concat(
+      Shuffler.shuffleArray([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]).map(nr =>
+        [
+          {frame: <FixationCrossFrame nocross duration={200}/>, nolog: true},
+          wrap(fssItems[nr - 1].id,
+            <ImiFrame
+              minText={{de: 'Trifft nicht zu', en: 'not at all'}}
+              maxText={{de: 'Trifft zu', en: 'very much'}}
+              item={fssItems[nr - 1].text}
+              key={nr}
+            />)
         ]
-      ).concat([wrap('cognitive effort', <ImiFrame
-          minText={{de: 'sehr wenig angestrengt', en: 'very little effort'}}
-          maxText={{de: 'sehr stark angestrengt', en: 'very high effort'}}
-          max={9}
-          item={{
-            de: 'Wie stark haben Sie sich bei den letzten vier Beispielen angestrengt, um sie zu verstehen?',
-            en: 'How much effort did you invest to understand the last four worked examples?'
-          }}
-          key={'cognitive load'}
-        />)]
       )
+    )
   }
 }
 

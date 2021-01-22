@@ -3,7 +3,7 @@ import {LngContext} from "../../helper/i18n";
 import {Html} from "../../MicroComponents/Html";
 import styles from "../../cssModules/EBL/EblFrame.module.css";
 import {phrase} from "../../assets/ressourceLanguage";
-import {Button, EditableText} from "@blueprintjs/core";
+import {Button} from "@blueprintjs/core";
 
 export function EblFrame(props) {
   const {content, config} = props;
@@ -97,24 +97,23 @@ function SingleExplanation(props) {
   const {explanation, callback, active, minLength} = props;
   const [text, setText] = useState('');
 
+  console.log(text);
   return (
     <div className={styles.singleExplanation}>
       <Html className={styles.explanationHeader} html={t(explanation)}/>
-      <EditableText
+      {active ? <textarea
         className={styles.editable}
-        multiline={true}
         placeholder={t(phrase.editablePlaceholder)}
-        minLines={active? 5: 2}
-        maxLines={active? 8: 2}
-        isEditing={active}
         disabled={!active}
-        onChange={setText}
-      />
-      <Button intent={active ? 'primary' : 'none'}
+        onChange={(ev) => setText(ev.target.value)}
+        rows={9}
+        cols={25}
+      /> : null}
+      {active ? <Button intent={active ? 'primary' : 'none'}
               disabled={!active || text.length<minLength}
               onClick={(text)=>callback(text)}>
         {t(phrase.continue)}
-      </Button>
+      </Button> : null}
     </div>
   );
 }

@@ -18,7 +18,7 @@ getElementInfo().then((info) => {
   console.log(info);
   t = (ressource, param) =>
     translate(info.language, ressource, param);
-
+//TODO Experiment voll
   let element;
   switch (info.type) {
     case "finished":
@@ -55,9 +55,9 @@ function render(element) {
 
 function finished(data) {
   const {userId, session, groupId, mailId} = data[0];
-
+/*
   server.postData(userId, session, groupId, data, mailId )
-    .then( () => render(<SessionFinished nextSessionStart={data[0].nextSessionStart}/>));
+    .then( () => render(<SessionFinished nextSessionStart={data[0].nextSessionStart}/>));*/ //TODO: Daten auf Server laden
 }
 
 async function getElementInfo() {
