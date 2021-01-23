@@ -6,7 +6,7 @@ import {Button, Radio, RadioGroup} from "@blueprintjs/core";
 import {useStateDelayed} from "../Hooks/useStateDelayed";
 
 export function ResponseRadioButtons(props) {
-    const {callback, autoContinue = false, delay=500, options = []} = props;
+    const {callback, inline, autoContinue = false, delay=500, options = []} = props;
     const [value, setValue] = useStateDelayed(null)
     const t = useContext(LngContext);
     if (value && autoContinue) {
@@ -16,6 +16,7 @@ export function ResponseRadioButtons(props) {
         <div className={styles.radioWrapper}>
             <RadioGroup
                 className={styles.radioGroup}
+                inline={inline}
                 selectedValue={value}
                 onChange={(event) => setValue(event.currentTarget.value)}
             >

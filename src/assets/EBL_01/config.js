@@ -155,7 +155,7 @@ export const config = {
     textAreaMinLength: 7,
     inputMinLength: 2,
     radioAutoContinue: true,
-    radioDelay: 1111,
+    radioDelay: 777,
     items: [
       'postConcept_1',
       'postConcept_2',

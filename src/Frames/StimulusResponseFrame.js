@@ -48,10 +48,10 @@ export function StimulusResponseFrame(props) {
   switch (state) {
     case 'fixationCrossCorrect':
       setState(finish, 500);
-      return <div>x</div>;
+      return <div></div>;
     case 'fixationCrossWrong':
       setState(repeatOnWrong ? 'present' : finish, 500);
-      return <div>x</div>;
+      return <div></div>;
     case 'feedbackCorrect':
       elements.push([].concat(responseElement.correct));
       setState(finish, 1000);

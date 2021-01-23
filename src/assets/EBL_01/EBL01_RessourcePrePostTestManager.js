@@ -13,6 +13,7 @@ import {postFT} from "./postFT2step";
 import {postNT} from "./postNT";
 import styles from "../../cssModules/StimulusResponseFrame.module.css";
 import {verification} from "./verification";
+import {YesNoSure} from "../../Components/YesNoSure";
 
 export class EBL01_RessourcePrePostTestManager {
   constructor() {
@@ -32,7 +33,6 @@ export class EBL01_RessourcePrePostTestManager {
   getResponseElement(id, config) {
     const rawItem = this.prePostTest.find(e => e.id === id);
     let responseInput;
-    console.log(id);
     switch (rawItem.responseType) {
       case 'radio':
         responseInput =
@@ -47,10 +47,7 @@ export class EBL01_RessourcePrePostTestManager {
         break;
       case 'yesNoSure':
         responseInput =
-          <ResponseRadioButtons
-            options={[{value: 'richtig', label: 'Richtig'},{value: 'falsch', label: 'Falsch'}]}
-            autoContinue={config.radioAutoContinue}
-            delay={config.radioDelay}/>;
+          <YesNoSure config={config}/>
         break;
       default:
         responseInput =

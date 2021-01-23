@@ -69,6 +69,7 @@ export class EBL01Builder {
       .map(s => this.rpptm.getStimulusResponseElement(s, postTestConfig));
 
     this.tlManager.add([
+      <Demographics/>,
       postFrames,
       <ToDoFrame text={'Begrüßungsseite'}/>,
       <ToDoFrame

@@ -12,7 +12,6 @@ export function Form(props) {
   const showErrors = useRef(false);
   const isValid = useRef(false);
 
-
   function handleChange(p1, p2, p3) {
     const target = p3 || p1.target;
     const value = target.value;

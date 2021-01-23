@@ -16,7 +16,6 @@ export function Zone(props) {
   ) {
     myStyle={...myStyle, position: 'absolute'}
   }
-
   if (animate !== '') {
     myStyle.transition = `transform ${animate}`;
   }
