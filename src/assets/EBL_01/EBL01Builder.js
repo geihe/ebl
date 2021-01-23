@@ -13,6 +13,7 @@ import {EBL01Video} from "../../Frames/EBL/EBL01Video";
 import {ToDoFrame} from "../../Frames/ToDoFrame";
 import {Demographics} from "../../Components/Demographics";
 import {Shuffler} from "../../helper/Shuffle";
+import {Pause} from "../../Frames/Pause";
 
 
 export class EBL01Builder {
@@ -69,7 +70,7 @@ export class EBL01Builder {
       .map(s => this.rpptm.getStimulusResponseElement(s, postTestConfig));
 
     this.tlManager.add([
-      <Demographics/>,
+      <Pause seconds={3}/>,
       postFrames,
       <ToDoFrame text={'Begrüßungsseite'}/>,
       <ToDoFrame
