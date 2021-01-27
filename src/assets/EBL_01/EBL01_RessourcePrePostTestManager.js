@@ -27,7 +27,6 @@ export class EBL01_RessourcePrePostTestManager {
       ...postNT,
       ...verification
     ];
-    console.log(verification)
   }
 
   getResponseElement(id, config) {

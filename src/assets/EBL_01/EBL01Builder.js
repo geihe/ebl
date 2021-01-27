@@ -13,7 +13,9 @@ import {EBL01Video} from "../../Frames/EBL/EBL01Video";
 import {ToDoFrame} from "../../Frames/ToDoFrame";
 import {Demographics} from "../../Components/Demographics";
 import {Shuffler} from "../../helper/Shuffle";
-import {Pause} from "../../Frames/Pause";
+import {EBLPause} from "../../Frames/EBL/EBLPause";
+import {DelayedSpaceFrame} from "../../Frames/DelayedSpaceFrame";
+import {phrase} from "../ressourceLanguage";
 
 
 export class EBL01Builder {
@@ -70,8 +72,7 @@ export class EBL01Builder {
       .map(s => this.rpptm.getStimulusResponseElement(s, postTestConfig));
 
     this.tlManager.add([
-      <Pause seconds={3}/>,
-      postFrames,
+      exampleFrames,
       <ToDoFrame text={'Begrüßungsseite'}/>,
       <ToDoFrame
         text={'Das folgende Beispielvideo durch ein Begrüßungsvideo ("Nun einige mathematische Fragen") ersetzen'}/>,
@@ -83,7 +84,7 @@ export class EBL01Builder {
         text={'Video "nun kommt das eigentliche Experiment mit Beschreibung"<br/>4 mal, für jeden Fall eins<br/>auch Erläuterung der Fragen zur Anstrengung'}/>,
       <ToDoFrame text={' 2-3 Fragen, ob der Ablauf des Experiments verstanden wurde'}/>,
       exampleFrames,
-      <ToDoFrame text={'10 min Pause ?'}/>,
+      <EBLPause/>,
       <ToDoFrame text={'Video "Nun kommen einige Aufgaben, mit denen wie den Lernerfolg überprüfen"'}/>,
       postFrames,
       <Demographics/>,
@@ -105,7 +106,22 @@ export class EBL01Builder {
   }
 
   getProcessMeasures() {
-    return [wrap('cognitive effort', <ImiFrame
+    const processMeasureInstructionFrame = {id: 'process-instruction',
+      frame: (<DelayedSpaceFrame
+        continueText={phrase.continueText}
+        delay={1000}
+      >
+        <p style={{textAlign: 'center', fontSize:'150%'}}>Wie haben Sie sich beim Lesen der Beispiele gefühlt?</p>
+        <p style={{textAlign: 'center', fontSize:'150%'}}>Bitte beurteilen Sie die folgenden Aussagen auf einer Skala von</p>
+        <p style={{textAlign: 'center', fontSize:'150%', color: 'darkred'}}>1 (trifft nicht zu) bis 7 (trifft zu)...</p>
+      </DelayedSpaceFrame>),
+      nolog: true,
+      noProgres: true
+    };
+
+
+    return [
+      wrap('cognitive effort', <ImiFrame
       minText={{de: 'sehr wenig angestrengt', en: 'very little effort'}}
       maxText={{de: 'sehr stark angestrengt', en: 'very high effort'}}
       max={7}
@@ -114,7 +130,9 @@ export class EBL01Builder {
         en: 'How much effort did you invest to understand the last four worked examples?'
       }}
       key={'cognitive load'}
-    />)].concat(
+    />),
+      processMeasureInstructionFrame
+    ].concat(
       Shuffler.shuffleArray([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]).map(nr =>
         [
           {frame: <FixationCrossFrame nocross duration={200}/>, nolog: true},
@@ -130,6 +148,7 @@ export class EBL01Builder {
     )
   }
 }
+
 
 function wrap(id, el) {
   return {

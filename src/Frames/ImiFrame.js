@@ -14,7 +14,8 @@ export function ImiFrame(props) {//TODO Umbenennen in LikertFrame
   const [rating, setRating] = useStateDelayed(-Infinity);
 
   function callback(rating) {//TODO get delay from config
-    setRating(() => props.finish(rating), 500);
+    const delay = 500;
+    setRating(() => props.finish(rating), delay);
     setRating(rating);
   }
 

@@ -4,13 +4,23 @@
     <option name="SCOPE_TYPE" value="3" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c0a8d840-d2a4-41a1-9e79-f574c09cafbd" name="Default Changelist" comment="Classification-Test: Wie sicher bist du dir?&#10;--&gt; neu: Element YesNoSure &#10;&#10;Demographics: Alter als Dropdown">
-      <change afterPath="$PROJECT_DIR$/src/Frames/Pause.js" afterDir="false" />
+    <list default="true" id="c0a8d840-d2a4-41a1-9e79-f574c09cafbd" name="Default Changelist" comment="Pause-Komponente eingefügt">
+      <change afterPath="$PROJECT_DIR$/src/Frames/EBL/EBLPause.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Likert.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Likert.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Frames/EBL/EblFrame.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frames/EBL/EblFrame.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Frames/ImiFrame.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frames/ImiFrame.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Frames/Pause.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frames/Pause.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Hooks/useStateDelayed.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Hooks/useStateDelayed.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MicroComponents/TimeView.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/MicroComponents/TimeView.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/assets/EBL_01/EBL01Builder.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/EBL_01/EBL01Builder.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/EBL_01/EBL01_ExampleManager.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/EBL_01/EBL01_ExampleManager.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/EBL_01/EBL01_RessourcePrePostTestManager.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/EBL_01/EBL01_RessourcePrePostTestManager.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/EBL_01/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/EBL_01/config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/EBL_01/examples/explanations.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/EBL_01/examples/explanations.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/EBL_01/examples/kekse.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/EBL_01/examples/kekse.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cssModules/shortResponse.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/cssModules/shortResponse.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,7 +71,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="js.last.introduce.type" value="CONST" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/Frames" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/Frames/EBL" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -76,11 +86,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="G:\OneDrive_Marienschule\Marienschule Krefeld\Programmprojekte - Dokumente\react\bipsy\ebl\src\Frames\EBL" />
       <recent name="G:\OneDrive_Marienschule\Marienschule Krefeld\Programmprojekte - Dokumente\react\bipsy\ebl\src\Frames" />
       <recent name="G:\OneDrive_Marienschule\Marienschule Krefeld\Programmprojekte - Dokumente\react\bipsy\ebl\src\Components" />
       <recent name="G:\OneDrive_Marienschule\Marienschule Krefeld\Programmprojekte - Dokumente\react\bipsy\ebl\src\assets\EBL_01" />
       <recent name="G:\OneDrive_Marienschule\Marienschule Krefeld\Programmprojekte - Dokumente\react\bipsy\ebl\src\Frames\RheinbergFss" />
-      <recent name="G:\OneDrive_Marienschule\Marienschule Krefeld\Programmprojekte - Dokumente\react\bipsy\ebl\src\assets" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="G:\OneDrive_Marienschule\Marienschule Krefeld\Programmprojekte - Dokumente\react\bipsy\ebl\src\assets\EBL_01" />
@@ -208,7 +218,11 @@
       <workItem from="1611338218702" duration="940000" />
       <workItem from="1611343344595" duration="536000" />
       <workItem from="1611349685553" duration="4946000" />
-      <workItem from="1611386671889" duration="11630000" />
+      <workItem from="1611386671889" duration="11973000" />
+      <workItem from="1611599588364" duration="931000" />
+      <workItem from="1611681014340" duration="7034000" />
+      <workItem from="1611688637270" duration="4850000" />
+      <workItem from="1611768168621" duration="7160000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1608320225945</created>
@@ -371,7 +385,14 @@
       <option name="project" value="LOCAL" />
       <updated>1611396501281</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="Pause-Komponente eingefügt">
+      <created>1611400344254</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1611400344254</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -428,7 +449,8 @@
     <MESSAGE value="ToDOFrame eingeführt" />
     <MESSAGE value="Explanation: textarea statt EditableText -&gt; kein Bug mehr&#10;Prozessmaße: Paas-Item zu Beginn, sonst zufällige Reihenfolge, 1-7" />
     <MESSAGE value="Classification-Test: Wie sicher bist du dir?&#10;--&gt; neu: Element YesNoSure &#10;&#10;Demographics: Alter als Dropdown" />
-    <option name="LAST_COMMIT_MESSAGE" value="Classification-Test: Wie sicher bist du dir?&#10;--&gt; neu: Element YesNoSure &#10;&#10;Demographics: Alter als Dropdown" />
+    <MESSAGE value="Pause-Komponente eingefügt" />
+    <option name="LAST_COMMIT_MESSAGE" value="Pause-Komponente eingefügt" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
 </project>

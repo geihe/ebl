@@ -30,6 +30,10 @@
     padding-left: 15%
 }
 
+.radioGroup label:hover {
+    background-color: #dddddd;
+}
+
 .likert {
 
 }

@@ -18,7 +18,7 @@ export const kekse = {
     {
       principle: 1,
       problem: {
-        de: `Wie groß ist die Wahrscheinlichkeit, dass Du aus der ersten Dose das Lebkuchenherz und aus der zweiten Dose die Nussecke?`,
+        de: `Wie groß ist die Wahrscheinlichkeit, dass Du aus der ersten Dose das Lebkuchenherz und aus der zweiten Dose die Nussecke greifst?`,
       },
       solution:
         <MathComponent tex={String.raw`{1 \over 6} \cdot {1 \over 6}={1 \over 36}`} display={false}/>

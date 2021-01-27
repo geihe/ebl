@@ -3,7 +3,8 @@ import {LngContext} from "../../helper/i18n";
 import {Html} from "../../MicroComponents/Html";
 import styles from "../../cssModules/EBL/EblFrame.module.css";
 import {phrase} from "../../assets/ressourceLanguage";
-import {Button} from "@blueprintjs/core";
+import {Button, Intent, TextArea} from "@blueprintjs/core";
+import {ResponseRadioButtons} from "../../MicroComponents/ResponseRadioButtons";
 
 export function EblFrame(props) {
   const {content, config} = props;
@@ -11,18 +12,18 @@ export function EblFrame(props) {
   const [activeExp, setActiveExp] = useState(0); // active explanation box
   const logData = useRef({string: content.string, explanations: []});
 
+  const header = content.singleHeader && <Html html={t(content.htmlHeader)}/>;
+
   const nextExplanation = (data) => {
     logData.current.explanations.push(data);
-    if (activeExp >= content.htmlExplanations.length - 1) {
+    if (activeExp >= explanations.length - 1) {
       props.finish(logData);
     } else {
       setActiveExp(activeExp + 1);
     }
   }
 
-  const header = content.singleHeader && <Html html={t(content.htmlHeader)}/>;
-
-  const explanations = content.htmlExplanations.map((explanation, index) =>
+  const textExplanations = content.htmlExplanations.map((explanation, index) =>
     <SingleExplanation
       key={index}
       explanation={explanation}
@@ -31,6 +32,21 @@ export function EblFrame(props) {
       minLength={config.textAreaMinLength}
     />
   );
+
+  const radios = content.htmlRadios.map((radio, index) =>
+    <SingleRadios
+      key={index}
+      html={radio.html}
+      callback={nextExplanation}
+      active={activeExp === index}
+      options={radio.options}
+    />
+  )
+
+  const explanations = [...textExplanations, ...radios];
+
+
+
 
   const examples = content.htmlExamples.map((ex, index) =>
     <SingleExample
@@ -97,23 +113,42 @@ function SingleExplanation(props) {
   const {explanation, callback, active, minLength} = props;
   const [text, setText] = useState('');
 
-  console.log(text);
   return (
     <div className={styles.singleExplanation}>
       <Html className={styles.explanationHeader} html={t(explanation)}/>
-      {active ? <textarea
+      {active ? <TextArea
         className={styles.editable}
         placeholder={t(phrase.editablePlaceholder)}
         disabled={!active}
         onChange={(ev) => setText(ev.target.value)}
+        intent={Intent.PRIMARY}
         rows={9}
         cols={25}
       /> : null}
       {active ? <Button intent={active ? 'primary' : 'none'}
-              disabled={!active || text.length<minLength}
-              onClick={(text)=>callback(text)}>
+                        disabled={!active || text.length < minLength}
+                        onClick={(text) => callback(text)}>
         {t(phrase.continue)}
       </Button> : null}
     </div>
   );
+}
+
+function SingleRadios(props) {
+  const t = useContext(LngContext);
+  const {callback, options, html, active} = props;
+  console.log(props);
+  return (
+    <div className={styles.singleExplanation}>
+      <Html
+        className={styles.explanationHeader}
+        style={{marginBottom: '8px'}}
+        html={t(html)}/>
+      {active ? <ResponseRadioButtons
+        callback={callback}
+        options={options}
+        autoContinue={true}
+      /> : null}
+    </div>
+  )
 }

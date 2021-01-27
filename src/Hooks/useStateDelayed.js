@@ -11,10 +11,10 @@ export function useStateDelayed(initState) {
 
 
   function setStateDelayed(newState, delay = 0) {
-    clearTimeout(timeout.current);
     const actor = typeof newState === 'function' ?
       newState : (() => regularSetState(newState));
     if (delay > 0) {
+    clearTimeout(timeout.current);
       timeout.current = setTimeout(actor, delay);
     } else {
       actor();

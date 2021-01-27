@@ -42,4 +42,23 @@ export const selfExplanations = [
       en: `Compare all four solutions of these worked examples.`
     }
   },
-]
+];
+
+export const selfRadio = [
+  {
+    id: 0,
+    html: {de: `Bitte anklicken: Die Aufgabe ist vom Typ ...?`},
+    options: [
+      {label: `"ziehen ohne Zurücklegen".`, value: 'ohne Zurücklegen'},
+      {label: `"ziehen mit Zurücklegen".`, value: 'mit Zurücklegen'},
+    ]
+  },
+  {
+    id: 1,
+    html: {de: `Bitte anklicken: In diesem Beispiel ist die Reihenfolge ....`},
+    options: [
+      {label: `wichtig.`, value: 'Reihenfolge wichtig'},
+      {label: `nicht wichtig.`, value: 'Reihenfolge beliebig'},
+    ]
+  },
+];

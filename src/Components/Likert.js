@@ -5,12 +5,6 @@ import {FlexZone} from "../MicroComponents/FlexZone";
 export function Likert(props) {
   const {options, callback, rating} = props;
 
-  const optionStyle={
-    backgroundColor: '#eeeeee',
-    border: '#cccccc',
-    margin: '5px'
-  };
-
   const rb = options.map((op) => {
     const checked = (op === rating);
     return (

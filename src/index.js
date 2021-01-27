@@ -85,14 +85,13 @@ async function getElementInfo() {
   const dataItemsJSON = localStorage.getItem('data');
 
   if (!dataItemsJSON) { //neues Experiment
-    // const response = await fetch('https://psychologie.geihe.net/rest/EBL/new01.php');
-    // const serverData= await response.json();
     const serverData = await server.getNewData();
 
     initialData.session = serverData.session;
     initialData.language = serverData.language;
     initialData.userId = serverData.user_id;
-    initialData.groupId = serverData.group_id;
+    // initialData.groupId = serverData.group_id; TODO: Wieder aktivieren
+    initialData.groupId=0;
     return {type: 'session', language: initialData.language, initialData: [initialData]};
   }
 
