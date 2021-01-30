@@ -7,14 +7,13 @@ Die rekursive Timeline entspricht der timeline in jspsych.
 
 Es können folgende Elemente enthalten sein:
 * ein Frame
-* ein Effort-Frame (Frame mit Aufwand-Angabe anders als 1 für progress bar)
 > {  
->frame: Frame  
+>frame: Frame
 >id  
 >effort: number //1 - default  
 >noProgress: //false - default    
->nolog: //false - default
->
+>nolog: //false - default  
+
 >}
 * ein Array von TimelineRec-Elementen, insbesondere auch ein Array von Frames
 * ein IfElse-Element:  
@@ -32,6 +31,10 @@ Es können folgende Elemente enthalten sein:
 > {  
 > milestone: true  
 > }
+* ein Timer-Element:
+> timer: seconds:number || false // false - default
+> frames: Frame[]
+
 
 
 #Timeline
@@ -45,6 +48,7 @@ Es ist ein Array, das folgenden Elemente enthalten kann.
 >frame: Frame ,
 >id,
 >effort?: number //default 1  
+>timer?: seconds || 'continueTimer'
 >}
 * ein jump-Objekt:  
 > {  
@@ -61,6 +65,7 @@ Es ist ein Array, das folgenden Elemente enthalten kann.
 > {  
 > type: 'milestone'  
 > }
+
 
 #Umwandlung TimelineRec in Timeline
 

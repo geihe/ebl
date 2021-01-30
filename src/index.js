@@ -33,7 +33,7 @@ getElementInfo().then((info) => {
       tb.setSession(initData.session)
         .setGroup(initData.groupId)
         .build();
-      console.log(tb.getTimeline());
+      console.log(tb.getTimeline()); //TODO ggf. entfernen
       element =
         <Session timeline={tb.getTimeline()} initialData={info.initialData} finished={(data) => finished(data)}/>
   }
@@ -91,7 +91,7 @@ async function getElementInfo() {
     initialData.language = serverData.language;
     initialData.userId = serverData.user_id;
     // initialData.groupId = serverData.group_id; TODO: Wieder aktivieren
-    initialData.groupId=0;
+    initialData.groupId=0; //TODO löschen
     return {type: 'session', language: initialData.language, initialData: [initialData]};
   }
 

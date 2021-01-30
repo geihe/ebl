@@ -4,22 +4,15 @@
     <option name="SCOPE_TYPE" value="3" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c0a8d840-d2a4-41a1-9e79-f574c09cafbd" name="Default Changelist" comment="Pause-Komponente eingefügt">
-      <change afterPath="$PROJECT_DIR$/src/Frames/EBL/EBLPause.js" afterDir="false" />
+    <list default="true" id="c0a8d840-d2a4-41a1-9e79-f574c09cafbd" name="Default Changelist" comment="MC-Komponente als self-explanation eingefügt&#10;Instruktionsseite bei process-measures eingefügt">
       <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Likert.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Likert.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Frames/EBL/EblFrame.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frames/EBL/EblFrame.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Frames/ImiFrame.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frames/ImiFrame.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Frames/Pause.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frames/Pause.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Hooks/useStateDelayed.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Hooks/useStateDelayed.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Session.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Session.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/assets/EBL_01/EBL01Builder.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/EBL_01/EBL01Builder.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/EBL_01/EBL01_ExampleManager.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/EBL_01/EBL01_ExampleManager.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/EBL_01/EBL01_RessourcePrePostTestManager.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/EBL_01/EBL01_RessourcePrePostTestManager.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/assets/EBL_01/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/EBL_01/config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/EBL_01/examples/explanations.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/EBL_01/examples/explanations.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/EBL_01/examples/kekse.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/EBL_01/examples/kekse.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cssModules/shortResponse.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/cssModules/shortResponse.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/documentation.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/documentation.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/helper/TimelineManager.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/helper/TimelineManager.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -222,7 +215,14 @@
       <workItem from="1611599588364" duration="931000" />
       <workItem from="1611681014340" duration="7034000" />
       <workItem from="1611688637270" duration="4850000" />
-      <workItem from="1611768168621" duration="7160000" />
+      <workItem from="1611768168621" duration="8042000" />
+      <workItem from="1611855733219" duration="2801000" />
+      <workItem from="1611860230874" duration="1480000" />
+      <workItem from="1611943754999" duration="1230000" />
+      <workItem from="1611948533454" duration="4915000" />
+      <workItem from="1611991004671" duration="5335000" />
+      <workItem from="1612001200022" duration="5231000" />
+      <workItem from="1612017264878" duration="3595000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1608320225945</created>
@@ -392,7 +392,14 @@
       <option name="project" value="LOCAL" />
       <updated>1611400344254</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="MC-Komponente als self-explanation eingefügt&#10;Instruktionsseite bei process-measures eingefügt">
+      <created>1611782173390</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1611782173390</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -450,7 +457,8 @@
     <MESSAGE value="Explanation: textarea statt EditableText -&gt; kein Bug mehr&#10;Prozessmaße: Paas-Item zu Beginn, sonst zufällige Reihenfolge, 1-7" />
     <MESSAGE value="Classification-Test: Wie sicher bist du dir?&#10;--&gt; neu: Element YesNoSure &#10;&#10;Demographics: Alter als Dropdown" />
     <MESSAGE value="Pause-Komponente eingefügt" />
-    <option name="LAST_COMMIT_MESSAGE" value="Pause-Komponente eingefügt" />
+    <MESSAGE value="MC-Komponente als self-explanation eingefügt&#10;Instruktionsseite bei process-measures eingefügt" />
+    <option name="LAST_COMMIT_MESSAGE" value="MC-Komponente als self-explanation eingefügt&#10;Instruktionsseite bei process-measures eingefügt" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
 </project>

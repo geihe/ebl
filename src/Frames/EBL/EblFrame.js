@@ -137,7 +137,6 @@ function SingleExplanation(props) {
 function SingleRadios(props) {
   const t = useContext(LngContext);
   const {callback, options, html, active} = props;
-  console.log(props);
   return (
     <div className={styles.singleExplanation}>
       <Html

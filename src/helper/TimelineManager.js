@@ -42,13 +42,16 @@ class TimelineElement {
         return new TLrepeat(el);
       }
       if (el.hasOwnProperty('milestone')) {
-        return new TLMilestone(el);
+        return new TLmilestone(el);
       }
       if (el.hasOwnProperty('nextSession')) {
         return new TLNextSession(el);
       }
+      if (el.hasOwnProperty('timer')) {
+        return new TLtimerFrame(el);
+      }
 
-      return new TLFrame(el);
+      return new TLframe(el);
     } else {
       return {type: 'unknown'};
     }
@@ -65,7 +68,7 @@ class TimelineElement {
   }
 }
 
-class TLFrame extends TimelineElement {
+class TLframe extends TimelineElement {
   constructor(frameSource) {
     super(frameSource);
     this.type = 'frame';
@@ -116,6 +119,15 @@ class TLarray extends TimelineElement {
 
   normCumEffort(total) {
     this.array.forEach(el => el.normCumEffort(total));
+  }
+}
+
+class TLtimerFrame extends TLarray {
+  constructor(frameSource) {
+    super(frameSource.frames);
+    this.array.forEach((el, index) => {
+      el.timer = index === 0 ? frameSource.timer : 'continueTimer';
+    })
   }
 }
 
@@ -220,7 +232,7 @@ class TLrepeat extends TimelineElement {
   }
 }
 
-class TLMilestone extends TimelineElement {
+class TLmilestone extends TimelineElement {
   constructor(frameSource) {
     super(frameSource);
     this.type = 'milestone';

@@ -1,6 +1,39 @@
 import React, {useRef, useState} from "react";
 import {Zone} from "./MicroComponents/Zone";
+import {useStateDelayed} from "./Hooks/useStateDelayed";
+import {TimeView} from "./MicroComponents/TimeView";
 
+
+function Frame(props) {
+  const [remainingTime, setRemainigTime] = useStateDelayed(props.remainingTime || 0);
+  const hasTimer = typeof props.remainingTime !== 'undefined';
+  const isTicking = useRef(hasTimer && remainingTime > 0);
+  const expired = hasTimer && remainingTime <= 0;
+  if (isTicking.current && remainingTime <= 0) {
+    isTicking.current=false;
+    console.log("Vorbei"); //Timer abgelaufen
+  }
+  if (isTicking.current) {
+    setRemainigTime(remainingTime - 1, 1000);
+  }
+  if (expired) {
+    props.next();
+  }
+  return expired ? null :
+    <>
+      <header>{isTicking.current ? <TimeView seconds={remainingTime}/> : null}</header>
+      <main>
+        <aside id="left-aside"/>
+        <article>{props.content}</article>
+        <aside id="right-aside"/>
+      </main>
+      <footer>
+        <Zone style={{width: "50%"}}>
+          {props.progressBar} index: {props.tempIndex}
+        </Zone>
+      </footer>
+    </>;
+}
 
 export function Session(props) {
   const {timeline, initialData} = props;
@@ -68,21 +101,16 @@ export function Session(props) {
     }
   );
   const progressBar = el.noProgress ? <div/> :
-   <progress id="progress-bar" value={el.cumEffort} max="100" style={{width: '90%'}}/>;
+    <progress id="progress-bar" value={el.cumEffort} max="100" style={{width: '90%'}}/>;
 
-  return <>
-    <header/>
-    <main>
-      <aside id="left-aside"/>
-      <article>{content}</article>
-      <aside id="right-aside"/>
-    </main>
-    <footer>
-      <Zone style={{width: '50%'}}>
-        {progressBar} index: {tempIndex}
-      </Zone>
-    </footer>
-  </>;
+  return <Frame
+    content={content}
+    progressBar={progressBar}
+    tempIndex={tempIndex}
+    remainingTime={el.timer}
+    next={(logData) => next(tempIndex + 1, logData)}
+    key={el.timer ? null : tempIndex}
+  />;
 
   function next(newIndex, logData) {
     if (!el.noLog) {

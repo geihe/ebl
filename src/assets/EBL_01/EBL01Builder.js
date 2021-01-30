@@ -61,11 +61,16 @@ export class EBL01Builder {
 
     const {groups: exampleGroups, ...exampleConfig} = config.examples;
     const {items: exampleItems, id} = exampleGroups[this.group];
-    const exampleFrames = exampleItems.map(itemGroup =>
-      itemGroup.map(s =>
-        <EblFrame config={exampleConfig} content={this.rem.string2html(s)}/>)
-        .concat(this.getProcessMeasures())
+    const exampleFrames = exampleItems.map(itemGroup => {
+        return [{
+          timer: config.timeForExamples,
+          frames: itemGroup.map(s =>
+            <EblFrame config={exampleConfig} content={this.rem.string2html(s)}/>)
+
+        }].concat(this.getProcessMeasures());
+      }
     )
+    console.log(exampleItems);
 
     const {items: postTestItems, ...postTestConfig} = config.postTest;
     const postFrames = postTestItems
@@ -97,7 +102,7 @@ export class EBL01Builder {
     this.tlManager.add([testTimeline(2)]);
   }
 
-  buildSession3() {
+  buildTest() {
     this.tlManager.add(this.getProcessMeasures());
   }
 
@@ -106,53 +111,53 @@ export class EBL01Builder {
   }
 
   getProcessMeasures() {
-    const processMeasureInstructionFrame = {id: 'process-instruction',
-      frame: (<DelayedSpaceFrame
-        continueText={phrase.continueText}
-        delay={1000}
-      >
-        <p style={{textAlign: 'center', fontSize:'150%'}}>Wie haben Sie sich beim Lesen der Beispiele gefühlt?</p>
-        <p style={{textAlign: 'center', fontSize:'150%'}}>Bitte beurteilen Sie die folgenden Aussagen auf einer Skala von</p>
-        <p style={{textAlign: 'center', fontSize:'150%', color: 'darkred'}}>1 (trifft nicht zu) bis 7 (trifft zu)...</p>
-      </DelayedSpaceFrame>),
-      nolog: true,
-      noProgres: true
-    };
-
-
     return [
-      wrap('cognitive effort', <ImiFrame
-      minText={{de: 'sehr wenig angestrengt', en: 'very little effort'}}
-      maxText={{de: 'sehr stark angestrengt', en: 'very high effort'}}
-      max={7}
-      item={{
-        de: 'Wie stark haben Sie sich bei den letzten vier Beispielen angestrengt, um sie zu verstehen?',
-        en: 'How much effort did you invest to understand the last four worked examples?'
-      }}
-      key={'cognitive load'}
-    />),
-      processMeasureInstructionFrame
+      {
+        frame: <ImiFrame
+          minText={{de: 'sehr wenig angestrengt', en: 'very little effort'}}
+          maxText={{de: 'sehr stark angestrengt', en: 'very high effort'}}
+          max={7}
+          item={{
+            de: 'Wie stark haben Sie sich bei den letzten vier Beispielen angestrengt, um sie zu verstehen?',
+            en: 'How much effort did you invest to understand the last four worked examples?'
+          }}
+          key={'cognitive load'}
+        />,
+        id: 'cognitive effort'
+      },
+      {
+        frame: (<DelayedSpaceFrame
+          continueText={phrase.continueText}
+          delay={1000}
+        >
+          <p style={{textAlign: 'center', fontSize: '150%'}}>Wie haben Sie sich beim Lesen der Beispiele gefühlt?</p>
+          <p style={{textAlign: 'center', fontSize: '150%'}}>Bitte beurteilen Sie die folgenden Aussagen auf einer Skala
+            von</p>
+          <p style={{textAlign: 'center', fontSize: '150%', color: 'darkred'}}>1 (trifft nicht zu) bis 7 (trifft
+            zu)...</p>
+        </DelayedSpaceFrame>),
+        nolog: true,
+        noProgres: true,
+        id: 'process-instruction'
+      }
     ].concat(
       Shuffler.shuffleArray([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]).map(nr =>
         [
-          {frame: <FixationCrossFrame nocross duration={200}/>, nolog: true},
-          wrap(fssItems[nr - 1].id,
-            <ImiFrame
+          {
+            frame: <FixationCrossFrame nocross duration={200}/>,
+            nolog: true
+          },
+          {
+            frame: <ImiFrame
               minText={{de: 'Trifft nicht zu', en: 'not at all'}}
               maxText={{de: 'Trifft zu', en: 'very much'}}
               item={fssItems[nr - 1].text}
               key={nr}
-            />)
+            />,
+            id: fssItems[nr - 1].id
+          },
         ]
       )
     )
-  }
-}
-
-
-function wrap(id, el) {
-  return {
-    frame: el,
-    id: id
   }
 }

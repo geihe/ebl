@@ -23,6 +23,7 @@ export const config = {
   numberOfSessions: 2,
   timeBetweenSessionsInSeconds: 5*60,
   pauseSeconds: 600,
+  timeForExamples: 10,
 
   introduction: {
     delay: 1000, //TODO 3000
@@ -196,4 +197,5 @@ export const config = {
       'lw-rvt8',
     ],
   },
+
 }
