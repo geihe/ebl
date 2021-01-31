@@ -14,6 +14,11 @@ export function EblFrame(props) {
 
   const header = content.singleHeader && <Html html={t(content.htmlHeader)}/>;
 
+  function test() //TODO Wieder entfernen
+  {
+    alert("TEST");
+  }
+
   const nextExplanation = (data) => {
     logData.current.explanations.push(data);
     if (activeExp >= explanations.length - 1) {

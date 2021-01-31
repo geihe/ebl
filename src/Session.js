@@ -5,31 +5,51 @@ import {TimeView} from "./MicroComponents/TimeView";
 
 
 function Frame(props) {
-  const [remainingTime, setRemainigTime] = useStateDelayed(props.remainingTime || 0);
-  const hasTimer = typeof props.remainingTime !== 'undefined';
+  const {el} = props;
+  const [remainingTime, setRemainigTime] = useStateDelayed(el.timer || 0);
+
+  const hasTimer = typeof el.timer !== 'undefined';
   const isTicking = useRef(hasTimer && remainingTime > 0);
   const expired = hasTimer && remainingTime <= 0;
-  if (isTicking.current && remainingTime <= 0) {
-    isTicking.current=false;
-    console.log("Vorbei"); //Timer abgelaufen
-  }
+
+  const content = React.cloneElement(
+    el.frame,
+    {
+      finish: props.finish,
+      key: el.key
+    }
+  );
+
+  const progressBar = el.noProgress ? <div/> :
+    <progress id="progress-bar" value={el.cumEffort} max="100" style={{width: '90%'}}/>;
+
   if (isTicking.current) {
-    setRemainigTime(remainingTime - 1, 1000);
+    if (remainingTime <= 1) {
+      setRemainigTime(() => {
+        isTicking.current = false;
+        console.log("Vorbei"); //TODO Meldung Timer abgelaufen
+        props.finish();
+      }, 1000);
+    } else {
+      setRemainigTime(remainingTime - 1, 1000);
+    }
   }
+
   if (expired) {
     props.next();
   }
+
   return expired ? null :
     <>
       <header>{isTicking.current ? <TimeView seconds={remainingTime}/> : null}</header>
       <main>
         <aside id="left-aside"/>
-        <article>{props.content}</article>
+        <article>{content}</article>
         <aside id="right-aside"/>
       </main>
       <footer>
         <Zone style={{width: "50%"}}>
-          {props.progressBar} index: {props.tempIndex}
+          {progressBar} index: {props.tempIndex}
         </Zone>
       </footer>
     </>;
@@ -53,7 +73,7 @@ export function Session(props) {
 
   let el = timeline[index];
   let tempIndex = index;
-
+  console.log(index);
   while (el && el.type !== 'frame') {
     switch (el.type) {
       case 'jump':
@@ -93,22 +113,13 @@ export function Session(props) {
     return finish();
   }
 
-  const content = React.cloneElement(
-    el.frame,
-    {
-      finish: (logData) => next(tempIndex + 1, logData),
-      key: el.key
-    }
-  );
-  const progressBar = el.noProgress ? <div/> :
-    <progress id="progress-bar" value={el.cumEffort} max="100" style={{width: '90%'}}/>;
+
+
 
   return <Frame
-    content={content}
-    progressBar={progressBar}
+    el={el}
+    finish={(logData) => next(tempIndex + 1, logData)}
     tempIndex={tempIndex}
-    remainingTime={el.timer}
-    next={(logData) => next(tempIndex + 1, logData)}
     key={el.timer ? null : tempIndex}
   />;
 

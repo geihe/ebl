@@ -23,7 +23,7 @@ export const config = {
   numberOfSessions: 2,
   timeBetweenSessionsInSeconds: 5*60,
   pauseSeconds: 600,
-  timeForExamples: 10,
+  timeForExamples: 10,//TODO 3600
 
   introduction: {
     delay: 1000, //TODO 3000
