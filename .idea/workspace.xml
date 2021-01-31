@@ -4,12 +4,10 @@
     <option name="SCOPE_TYPE" value="3" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c0a8d840-d2a4-41a1-9e79-f574c09cafbd" name="Default Changelist" comment="Timer für Frames&#10;Komponente &#10;&#10;{timer: 600, frames: [...]}">
+    <list default="true" id="c0a8d840-d2a4-41a1-9e79-f574c09cafbd" name="Default Changelist" comment="Pause-Komponente eingefügt">
       <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Frames/EBL/EblFrame.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frames/EBL/EblFrame.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Session.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Session.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/EBL_01/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/EBL_01/config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,7 +67,7 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
     <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2019.3.1\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -149,6 +147,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="HTTP Request.rest-api#1" />
         <item itemvalue="HTTP Request.rest-api#1" />
       </list>
     </recent_temporary>
@@ -424,7 +423,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="notification" />
+                        <option value="timerFrame" />
                       </list>
                     </value>
                   </entry>

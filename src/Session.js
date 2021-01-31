@@ -11,7 +11,6 @@ function Frame(props) {
   const hasTimer = typeof el.timer !== 'undefined';
   const isTicking = useRef(hasTimer && remainingTime > 0);
   const expired = hasTimer && remainingTime <= 0;
-
   const content = React.cloneElement(
     el.frame,
     {
@@ -24,8 +23,9 @@ function Frame(props) {
     <progress id="progress-bar" value={el.cumEffort} max="100" style={{width: '90%'}}/>;
 
   if (isTicking.current) {
-    if (remainingTime <= 1) {
+    if (expired) {
       setRemainigTime(() => {
+
         isTicking.current = false;
         console.log("Vorbei"); //TODO Meldung Timer abgelaufen
         props.finish();
@@ -34,9 +34,8 @@ function Frame(props) {
       setRemainigTime(remainingTime - 1, 1000);
     }
   }
-
   if (expired) {
-    props.next();
+    props.finish();
   }
 
   return expired ? null :
@@ -112,6 +111,7 @@ export function Session(props) {
   if (!el) {
     return finish();
   }
+
 
 
 
