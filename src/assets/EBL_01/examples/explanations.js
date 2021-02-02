@@ -47,7 +47,7 @@ export const selfExplanations = [
 export const selfRadio = [
   {
     id: 0,
-    html: {de: `Bitte anklicken: Die Anzahl möglicher Ergebnisse ...?`},
+    html: {de: `Bitte anklicken:<br /> Die Anzahl möglicher Ergebnisse ...?`},
     options: [
       {label: `ändert sich.`, value: 'Ergebnisanzahl ändert sich.'},
       {label: `bleibt gleich.`, value: 'Ergebnisanzahl bleibt gleich.'},
@@ -55,26 +55,42 @@ export const selfRadio = [
   },
   {
     id: 1,
-    html: {de: `Bitte anklicken: In diesem Beispiel ...`},
+    html: {de: `Bitte anklicken:<br /> In diesem Beispiel ...`},
     options: [
       {label: `ist nur eine Ergebnisfolge günstig.`, value: 'eine günstig'},
       {label: `sind mehrere Ergebnisfolgen günstig.`, value: 'mehrere günstig'},
     ]
   },
   {
-    id: 2,
-    html: {de: `Bitte anklicken: In diesem Beispiel ...`},
+    id: 2, //principle 3 or 4
+    html: {de: `Bitte anklicken:<br /> In diesem Beispiel <strong>wird mit 2 multipliziert</strong>, weil...`},
     options: [
-      {label: `ist nur eine Ergebnisfolge günstig.`, value: 'eine günstig'},
-      {label: `sind mehrere Ergebnisfolgen günstig.`, value: 'mehrere günstig'},
+      {label: `nur eine Ergebnisfolge günstig ist.`, value: 'mal 2, da nur eine Ergebnisfolge'},
+      {label: `mehrere Ergebnisfolgen günstig sind.`, value: 'mal 2, da mehrere Ergebnisfolgen'},
     ]
   },
   {
-    id: 3,
-    html: {de: `Bitte anklicken: In diesem Beispiel ...`},
+    id: 3, //principle 1 or 2
+    html: {de: `Bitte anklicken:<br /> In diesem Beispiel wird <strong>nicht mit 2 multipliziert</strong>, weil...`},
     options: [
-      {label: `ist nur eine Ergebnisfolge günstig.`, value: 'eine günstig'},
-      {label: `sind mehrere Ergebnisfolgen günstig.`, value: 'mehrere günstig'},
+      {label: `nur eine Ergebnisfolge günstig ist.`, value: 'nicht mal 2, da nur eine Ergebnisfolge'},
+      {label: `mehrere Ergebnisfolgen günstig sind.`, value: 'nicht mal 2, da mehrere Ergebnisfolgen'},
+    ]
+  },
+  {
+    id: 4, //principle 1 or 3
+    html: {de: `Bitte anklicken:<br /> In diesem Beispiel sind die Nenner der Brüche <strong>gleich</strong>, weil ...`},
+    options: [
+      {label: `die Ergebnisanzahl gleich bleibt.`, value: 'Nenner gleich, da Ergebnisanzahl gleich bleibt'},
+      {label: `sich die Ergebnisanzahl ändert.`, value: 'Nenner gleich, da sich Ergebnisanzahl ändert'},
+    ]
+  },
+  {
+    id: 5, //principle 2 or 4
+    html: {de: `Bitte anklicken:<br /> In diesem Beispiel sind die Nenner der Brüche <strong>verschieden</strong>, weil ...`},
+    options: [
+      {label: `die Ergebnisanzahl gleich bleibt.`, value: 'Nenner verschieden, da Ergebnisanzahl gleich bleibt'},
+      {label: `sich die Ergebnisanzahl ändert.`, value: 'Nenner verschieden, da sich Ergebnisanzahl ändert'},
     ]
   },
 ];
