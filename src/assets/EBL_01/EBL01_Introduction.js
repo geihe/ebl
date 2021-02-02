@@ -85,7 +85,7 @@ export function Instruction04b(props) {
       sondern für die Wahrscheinlichkeit eines <strong>zusammengesetzten Ereignisses </strong>
       (z.B. für die Wahrscheinlichkeit, eine gerade Zahl zu würfeln). Man definiert
       <MathComponent
-        tex={String.raw`p(Ergebnis) = {Anzahl\ g\ddot{u}nstiger\ Ergebnisse \over Anzahl\ aller\ Ergebnisse}`}
+        tex={String.raw`p(zusammengesetztes Ereignis) = {Anzahl\ g\ddot{u}nstiger\ Ergebnisse \over Anzahl\ aller\ Ergebnisse}`}
         display={true}/>
       Die Wahrscheinlichkeit, eine gerade Zahl zu würfeln, ist &nbsp;
       <MathComponent inline tex={String.raw` p = {3 \over 6}`} display={false}/> &nbsp;
@@ -149,7 +149,7 @@ export function Instruction07a(props) {
     <div>
       <h2>Vier Typen mehrstufiger Zufallsexperimente</h2>
       <p>Beachten muss man, dass es unterschiedliche Typen von mehrstufigen Experimenten gibt,
-        bei denen die Anzahl der günstigen und möglichen Ereignisse auf verschiedene Weisen bestimmt werden muss.</p>
+        bei denen die Anzahl der günstigen und möglichen Ergebnisse auf verschiedene Weisen bestimmt werden muss.</p>
       <p>Zwei Punkte sind dabei relevant – diese beiden Punkte werden hier an dem Beispiel „Ziehen aus einer Urne mit
         Kugeln“ erklärt:</p>
     </div>
@@ -159,12 +159,12 @@ export function Instruction07a(props) {
 export function Instruction07b(props) {
   return (
     <div>
-      <h2>1. Anzahl möglicher Ereignisse ändert sich oder bleibt gleich:</h2>
+      <h2>1. Anzahl möglicher Ergebnisse ändert sich oder bleibt gleich:</h2>
       <p>Wird eine aus einer Urne gezogene Kugel vor einer zweiten Ziehung <strong>zurückgelegt</strong>, verändert sich bei den
         Ziehungen
         die Anzahl der möglichen Ergebnisse <strong>nicht</strong>.</p>
       <p>Wenn eine gezogene Kugel vor einer zweiten Ziehung <strong>nicht zurückgelegt</strong> wird,
-        dann gibt es bei der nächsten Ziehung ein mögliches Ergebnis weniger - die Anzahl der möglichen Ereignisse <strong>wird
+        dann gibt es bei der nächsten Ziehung ein mögliches Ergebnis weniger - die Anzahl der möglichen Ergebnisse <strong>wird
           also von Ziehung zu Ziehung geringer</strong>.</p>
       <div>
         <h2>2. Eine oder mehrere Ereignisfolgen sind günstig:</h2>

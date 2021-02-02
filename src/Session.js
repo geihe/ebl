@@ -28,14 +28,14 @@ function Frame(props) {
 
         isTicking.current = false;
         console.log("Vorbei"); //TODO Meldung Timer abgelaufen
-        props.finish();
+        props.finish('timer expired');
       }, 1000);
     } else {
       setRemainigTime(remainingTime - 1, 1000);
     }
   }
   if (expired) {
-    props.finish();
+    props.finish('timer expired');
   }
 
   return expired ? null :

@@ -22,8 +22,8 @@ export const config = {
   language: 'de',
   numberOfSessions: 2,
   timeBetweenSessionsInSeconds: 5*60,
-  pauseSeconds: 600,
-  timeForExamples: 10,//TODO 3600
+  pauseSeconds: 75,
+  timeForExamples: 60,//TODO 3600
 
   introduction: {
     delay: 1000, //TODO 3000
@@ -97,9 +97,9 @@ export const config = {
       {id: 'blocked-sequential',
       items:[
         ["c1 p1 r01",
-        "c2 p1 e0",
-        "c3 p1 e0",
-        "c4 p1 e0"],
+        "c2 p1 r01",
+        "c3 p1 r01",
+        "c4 p1 r01"],
         ["c2 p2 e0",
         "c3 p2 e0",
         "c4 p2 e0",

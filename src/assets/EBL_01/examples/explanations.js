@@ -47,18 +47,34 @@ export const selfExplanations = [
 export const selfRadio = [
   {
     id: 0,
-    html: {de: `Bitte anklicken: Die Aufgabe ist vom Typ ...?`},
+    html: {de: `Bitte anklicken: Die Anzahl möglicher Ergebnisse ...?`},
     options: [
-      {label: `"ziehen ohne Zurücklegen".`, value: 'ohne Zurücklegen'},
-      {label: `"ziehen mit Zurücklegen".`, value: 'mit Zurücklegen'},
+      {label: `ändert sich.`, value: 'Ergebnisanzahl ändert sich.'},
+      {label: `bleibt gleich.`, value: 'Ergebnisanzahl bleibt gleich.'},
     ]
   },
   {
     id: 1,
-    html: {de: `Bitte anklicken: In diesem Beispiel ist die Reihenfolge ....`},
+    html: {de: `Bitte anklicken: In diesem Beispiel ...`},
     options: [
-      {label: `wichtig.`, value: 'Reihenfolge wichtig'},
-      {label: `nicht wichtig.`, value: 'Reihenfolge beliebig'},
+      {label: `ist nur eine Ergebnisfolge günstig.`, value: 'eine günstig'},
+      {label: `sind mehrere Ergebnisfolgen günstig.`, value: 'mehrere günstig'},
+    ]
+  },
+  {
+    id: 2,
+    html: {de: `Bitte anklicken: In diesem Beispiel ...`},
+    options: [
+      {label: `ist nur eine Ergebnisfolge günstig.`, value: 'eine günstig'},
+      {label: `sind mehrere Ergebnisfolgen günstig.`, value: 'mehrere günstig'},
+    ]
+  },
+  {
+    id: 3,
+    html: {de: `Bitte anklicken: In diesem Beispiel ...`},
+    options: [
+      {label: `ist nur eine Ergebnisfolge günstig.`, value: 'eine günstig'},
+      {label: `sind mehrere Ergebnisfolgen günstig.`, value: 'mehrere günstig'},
     ]
   },
 ];

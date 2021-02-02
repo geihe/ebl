@@ -77,7 +77,6 @@ export class EBL01Builder {
       .map(s => this.rpptm.getStimulusResponseElement(s, postTestConfig));
 
     this.tlManager.add([
-      exampleFrames,
       <ToDoFrame text={'Begrüßungsseite'}/>,
       <ToDoFrame
         text={'Das folgende Beispielvideo durch ein Begrüßungsvideo ("Nun einige mathematische Fragen") ersetzen'}/>,
