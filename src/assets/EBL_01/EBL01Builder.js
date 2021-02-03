@@ -70,13 +70,13 @@ export class EBL01Builder {
         }].concat(this.getProcessMeasures());
       }
     )
-    console.log(exampleItems);
 
     const {items: postTestItems, ...postTestConfig} = config.postTest;
     const postFrames = postTestItems
       .map(s => this.rpptm.getStimulusResponseElement(s, postTestConfig));
 
     this.tlManager.add([
+      exampleFrames, //TODO entfernen
       <ToDoFrame text={'Begrüßungsseite'}/>,
       <ToDoFrame
         text={'Das folgende Beispielvideo durch ein Begrüßungsvideo ("Nun einige mathematische Fragen") ersetzen'}/>,

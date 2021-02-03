@@ -11,13 +11,7 @@ export function EblFrame(props) {
   const t = useContext(LngContext);
   const [activeExp, setActiveExp] = useState(0); // active explanation box
   const logData = useRef({string: content.string, explanations: []});
-
   const header = content.singleHeader && <Html html={t(content.htmlHeader)}/>;
-
-  function test() //TODO Wieder entfernen
-  {
-    alert("TEST");
-  }
 
   const nextExplanation = (data) => {
     logData.current.explanations.push(data);
@@ -48,9 +42,10 @@ export function EblFrame(props) {
     />
   )
 
-  const explanations = [...textExplanations, ...radios];
-
-
+  const explanations = [...textExplanations, ...radios, ];
+  if (content.button) {
+    explanations.push(<ButtonDiv key={0} callback={props.finish}/>);
+  }
 
 
   const examples = content.htmlExamples.map((ex, index) =>
@@ -74,7 +69,8 @@ export function EblFrame(props) {
       </div>
 
     </div>
-  );
+  )
+    ;
 }
 
 function ExHeader(props) {
@@ -135,6 +131,17 @@ function SingleExplanation(props) {
                         onClick={(text) => callback(text)}>
         {t(phrase.continue)}
       </Button> : null}
+    </div>
+  );
+}
+
+function ButtonDiv(props) {
+  const t = useContext(LngContext);
+  return (
+    <div className={styles.buttonDiv}>
+      <Button fill intent={'primary'} onClick={props.callback}>
+        {t(phrase.continue)}
+      </Button>
     </div>
   );
 }

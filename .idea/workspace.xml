@@ -4,10 +4,16 @@
     <option name="SCOPE_TYPE" value="3" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c0a8d840-d2a4-41a1-9e79-f574c09cafbd" name="Default Changelist" comment="bugfix">
+    <list default="true" id="c0a8d840-d2a4-41a1-9e79-f574c09cafbd" name="Default Changelist" comment="Radiofragen zu Formeln hinzugefügt">
+      <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Frames/EBL/EblFrame.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frames/EBL/EblFrame.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Session.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Session.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/EBL_01/EBL01Builder.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/EBL_01/EBL01Builder.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/EBL_01/EBL01_ExampleManager.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/EBL_01/EBL01_ExampleManager.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/assets/EBL_01/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/EBL_01/config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/EBL_01/examples/explanations.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/EBL_01/examples/explanations.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cssModules/EBL/EblFrame.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/cssModules/EBL/EblFrame.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -221,6 +227,8 @@
       <workItem from="1612080585052" duration="1756000" />
       <workItem from="1612105435137" duration="2710000" />
       <workItem from="1612284252999" duration="2128000" />
+      <workItem from="1612289548972" duration="1147000" />
+      <workItem from="1612374117066" duration="4963000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1608320225945</created>
@@ -411,7 +419,14 @@
       <option name="project" value="LOCAL" />
       <updated>1612116074320</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="Radiofragen zu Formeln hinzugefügt">
+      <created>1612288799667</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1612288799667</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -446,7 +461,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="Bugfix: Ereignisse-&gt;Ergebnisse bei Instruction4a" />
     <MESSAGE value="fetch-test" />
     <MESSAGE value="get URL-Parameters" />
     <MESSAGE value="rename App to Sesion" />
@@ -471,7 +485,8 @@
     <MESSAGE value="MC-Komponente als self-explanation eingefügt&#10;Instruktionsseite bei process-measures eingefügt" />
     <MESSAGE value="Timer für Frames&#10;Komponente &#10;&#10;{timer: 600, frames: [...]}" />
     <MESSAGE value="bugfix" />
-    <option name="LAST_COMMIT_MESSAGE" value="bugfix" />
+    <MESSAGE value="Radiofragen zu Formeln hinzugefügt" />
+    <option name="LAST_COMMIT_MESSAGE" value="Radiofragen zu Formeln hinzugefügt" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
 </project>

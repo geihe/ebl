@@ -91,7 +91,7 @@ async function getElementInfo() {
     initialData.language = serverData.language;
     initialData.userId = serverData.user_id;
     // initialData.groupId = serverData.group_id; TODO: Wieder aktivieren
-    initialData.groupId=0; //TODO löschen
+    initialData.groupId=4; //zum Testen TODO löschen
     return {type: 'session', language: initialData.language, initialData: [initialData]};
   }
 

@@ -54,13 +54,8 @@ export class EBL01_ExampleManager {
     return ra;
   }
 
-  test() {
-    const sig = EBL01_ExampleManager.string2signature("c1 p1234 e3");
-    console.log(this.signature2html(sig));
-  }
-
   signature2html(signature) {
-    const {context, principle, explanation, radio} = signature;
+    const {context, principle, explanation, radio, button} = signature;
     const singleHeader = (context.length === 1);
     const htmlHeader = singleHeader ?
       this.getHeader(context[0])
@@ -79,7 +74,8 @@ export class EBL01_ExampleManager {
       htmlHeader,
       htmlExamples,
       htmlExplanations,
-      htmlRadios
+      htmlRadios,
+      button: signature.button
     }
   }
 
@@ -94,12 +90,14 @@ export class EBL01_ExampleManager {
     let p = s.match(/p(\d*)/)[1].split('');
     let e = s.match(/e(\d*)/)[1].split('');
     let r = s.match(/r(\d*)/)[1].split('');
+    let b = !!s.match(/b/);
 
     return {
       context: c.map(Number),
       principle: p.map(Number),
       explanation: e.map(Number),
-      radio: r.map(Number)
+      radio: r.map(Number),
+      button: b
     };
   }
 }

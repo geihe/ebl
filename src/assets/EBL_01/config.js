@@ -99,15 +99,17 @@ export const config = {
   radio 3: nicht mal 2, weil eine/mehrere Ereignisfolgen --> zu p1, p2
   radio 4: Nenner gleich, weil sich Ergebnisanzahl ändert/nicht ändert --> zu p1, p3
   radio 5: Nenner verschieden, weil sich Ergebnisanzahl ändert/nicht ändert --> zu p2, p4
+
+  b: nur ein Button ohne weiter Eingabefelder
   */
   examples: {
     groups: [//TODO 2. Session berücksichtigen
       {id: 'blocked-sequential',
       items:[
-        ["c1 p1 r01",
-        "c2 p1 r01",
-        "c3 p1 r01",
-        "c4 p1 r01"],
+        ["c1 p1 e0",
+        "c2 p1 e0",
+        "c3 p1 e0",
+        "c4 p1 e0"],
         ["c2 p2 e0",
         "c3 p2 e0",
         "c4 p2 e0",
@@ -152,6 +154,19 @@ export const config = {
         ["c1 p1234 e1234"],
         ["c2 p2341 e1234"],
         ["c3 p3412 e1234"],
+        ["c4 p4123 e1234"],
+      ]},
+      {id: 'test',
+      items:[
+        ["c4 p4 b",
+          "c1 p4 b",
+          "c2 p4 b",
+          "c3 p4 e4"],
+        ["c1 p1 r01",
+          "c2 p2 r01",
+          "c3 p3 r24",
+          "c4 p4 r25"],
+        ["c2341 p2 e1234"],
         ["c4 p4123 e1234"],
       ]},
     ],

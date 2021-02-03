@@ -72,7 +72,6 @@ export function Session(props) {
 
   let el = timeline[index];
   let tempIndex = index;
-  console.log(index);
   while (el && el.type !== 'frame') {
     switch (el.type) {
       case 'jump':
