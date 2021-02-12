@@ -1,28 +1,18 @@
 import React from 'react';
 import {TimelineManager} from "../../helper/TimelineManager";
-import {EBL01_ExampleManager} from "./EBL01_ExampleManager";
-import {EblFrame} from "../../Frames/EBL/EblFrame";
 import {EBL01_MathCourse} from "./EBL01_MathCourse";
-import {config} from "./config";
 import {testTimeline} from "../../Test/testTimeline";
-import {fssItems} from "./fssItems";
-import {ImiFrame} from "../../Frames/ImiFrame";
-import {FixationCrossFrame} from "../../Frames/FixationCrossFrame";
 import {EBL01Video} from "../../Frames/EBL/EBL01Video";
 import {ToDoFrame} from "../../Frames/ToDoFrame";
 import {Demographics} from "../../Components/Demographics";
-import {Shuffler} from "../../helper/Shuffle";
 import {EBLPause} from "../../Frames/EBL/EBLPause";
-import {DelayedSpaceFrame} from "../../Frames/DelayedSpaceFrame";
-import {phrase} from "../ressourceLanguage";
 import {postFrames, preFrames} from "./EBL01_PrePostTest";
-
+import {exampleFrames} from "./EBL01_ExampleFrames";
 
 export class EBL01Builder {
   constructor(t) {
     this.t = t;
     this.tlManager = new TimelineManager();
-    this.rem = new EBL01_ExampleManager();
     this.session = 1;
     this.group = 0;
   }
@@ -51,19 +41,8 @@ export class EBL01Builder {
   }
 
   buildSession1() {
-    const {groups: exampleGroups, ...exampleConfig} = config.examples;
-    const {items: exampleItems, id} = exampleGroups[this.group];
-    const exampleFrames = exampleItems.map(itemGroup => {
-        return [{
-          timer: config.timeForExamples,
-          frames: itemGroup.map(s =>
-            <EblFrame config={exampleConfig} content={this.rem.string2html(s)}/>)
-
-        }].concat(this.getProcessMeasures());
-      }
-    )
-
     this.tlManager.add([
+      exampleFrames(this.group),
       EBL01_MathCourse,
       <ToDoFrame text={'Begrüßungsseite'}/>,
       <ToDoFrame
@@ -74,7 +53,7 @@ export class EBL01Builder {
       <ToDoFrame
         text={'Video "nun kommt das eigentliche Experiment mit Beschreibung"<br/>4 mal, für jeden Fall eins<br/>auch Erläuterung der Fragen zur Anstrengung'}/>,
       <ToDoFrame text={' 2-3 Fragen, ob der Ablauf des Experiments verstanden wurde'}/>,
-      exampleFrames,
+      exampleFrames(this.group),
       <EBLPause/>,
       <ToDoFrame text={'Video "Nun kommen einige Aufgaben, mit denen wie den Lernerfolg überprüfen"'}/>,
       postFrames,
@@ -89,61 +68,11 @@ export class EBL01Builder {
   }
 
   buildTest() {
-    this.tlManager.add(this.getProcessMeasures());
+    // this.tlManager.add(this.getProcessMeasures());
   }
 
   getTimeline(session = 1) {
     return this.tlManager.getFlatTimeline();
   }
 
-  getProcessMeasures() {
-    return [
-      {
-        frame: <ImiFrame
-          minText={{de: 'sehr wenig angestrengt', en: 'very little effort'}}
-          maxText={{de: 'sehr stark angestrengt', en: 'very high effort'}}
-          max={7}
-          item={{
-            de: 'Wie stark haben Sie sich bei den letzten vier Beispielen angestrengt, um sie zu verstehen?',
-            en: 'How much effort did you invest to understand the last four worked examples?'
-          }}
-          key={'cognitive load'}
-        />,
-        id: 'cognitive effort'
-      },
-      {
-        frame: (<DelayedSpaceFrame
-          continueText={phrase.continueText}
-          delay={1000}
-        >
-          <p style={{textAlign: 'center', fontSize: '150%'}}>Wie haben Sie sich beim Lesen der Beispiele gefühlt?</p>
-          <p style={{textAlign: 'center', fontSize: '150%'}}>Bitte beurteilen Sie die folgenden Aussagen auf einer Skala
-            von</p>
-          <p style={{textAlign: 'center', fontSize: '150%', color: 'darkred'}}>1 (trifft nicht zu) bis 7 (trifft
-            zu)...</p>
-        </DelayedSpaceFrame>),
-        nolog: true,
-        noProgres: true,
-        id: 'process-instruction'
-      }
-    ].concat(
-      Shuffler.shuffleArray([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]).map(nr =>
-        [
-          {
-            frame: <FixationCrossFrame nocross duration={200}/>,
-            nolog: true
-          },
-          {
-            frame: <ImiFrame
-              minText={{de: 'Trifft nicht zu', en: 'not at all'}}
-              maxText={{de: 'Trifft zu', en: 'very much'}}
-              item={fssItems[nr - 1].text}
-              key={nr}
-            />,
-            id: fssItems[nr - 1].id
-          },
-        ]
-      )
-    )
-  }
 }
