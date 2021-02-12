@@ -1,20 +1,4 @@
 import React from "react";
-import {
-  Instruction01,
-  Instruction02,
-  Instruction03,
-  Instruction04a,
-  Instruction04b,
-  Instruction05,
-  Instruction06a,
-  Instruction06b,
-  Instruction07a,
-  Instruction07b,
-  Instruction07c,
-  Instruction08,
-  Instruction09,
-  Instruction10
-} from "./EBL01_Introduction";
 
 export const config = {
   develop: true,
@@ -25,25 +9,9 @@ export const config = {
   pauseSeconds: 75,
   timeForExamples: 60,//TODO 3600
 
-  introduction: {
+  mathCourse: {
     delay: 1000, //TODO 3000
     animation: '',
-    items: [
-      <Instruction01/>,
-      <Instruction02/>,
-      <Instruction03/>,
-      <Instruction04a/>,
-      <Instruction04b/>,
-      <Instruction05/>,
-      <Instruction06a/>,
-      <Instruction06b/>,
-      <Instruction07a/>,
-      <Instruction07b/>,
-      <Instruction07c/>,
-      <Instruction08/>,
-      <Instruction09/>,
-      <Instruction10/>,
-    ],
   },
 
   preTest: {

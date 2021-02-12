@@ -3,7 +3,7 @@ import {TimelineManager} from "../../helper/TimelineManager";
 import {EBL01_ExampleManager} from "./EBL01_ExampleManager";
 import {EBL01_RessourcePrePostTestManager} from "./EBL01_RessourcePrePostTestManager";
 import {EblFrame} from "../../Frames/EBL/EblFrame";
-import {EBL01_Introduction} from "./EBL01_Introduction";
+import {EBL01_MathCourse} from "./EBL01_MathCourse";
 import {config} from "./config";
 import {testTimeline} from "../../Test/testTimeline";
 import {fssItems} from "./fssItems";
@@ -52,9 +52,6 @@ export class EBL01Builder {
   }
 
   buildSession1() {
-    const introductionFrames =
-      EBL01_Introduction(config.introduction.items);
-
     const {items: preTestItems, ...preTestConfig} = config.preTest;
     const preFrames = preTestItems
       .map(s => this.rpptm.getStimulusResponseElement(s, preTestConfig));
@@ -76,14 +73,13 @@ export class EBL01Builder {
       .map(s => this.rpptm.getStimulusResponseElement(s, postTestConfig));
 
     this.tlManager.add([
-      exampleFrames, //TODO entfernen
+      EBL01_MathCourse,
       <ToDoFrame text={'Begrüßungsseite'}/>,
       <ToDoFrame
         text={'Das folgende Beispielvideo durch ein Begrüßungsvideo ("Nun einige mathematische Fragen") ersetzen'}/>,
       <EBL01Video videoID={'introduction'}/>,
       preFrames,
       <ToDoFrame text={'Video "und nun eine kleiner mathematischer Lehrtext"'}/>,
-      introductionFrames,
       <ToDoFrame
         text={'Video "nun kommt das eigentliche Experiment mit Beschreibung"<br/>4 mal, für jeden Fall eins<br/>auch Erläuterung der Fragen zur Anstrengung'}/>,
       <ToDoFrame text={' 2-3 Fragen, ob der Ablauf des Experiments verstanden wurde'}/>,

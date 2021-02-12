@@ -1,32 +1,40 @@
-/*
-principle 0: Header
-principle 1: order relevant, with replacement
-principle 2: order relevant, without replacement
-principle 3: order irrelevant, with replacement
-principle 4: order irrelevant, without replacement
-*/
-
 import {DelayedSpaceFrame} from "../../Frames/DelayedSpaceFrame";
 import React from "react";
 import styles from "../../cssModules/Instructions.module.css";
 import {MathComponent} from "mathjax-react";
 import {config} from "./config";
 
-export function EBL01_Introduction(items) {
-  const contentClass = styles.zone + ' ' + styles.content;
-  const continueClass = styles.zone + ' ' + styles.continue;
-  return items.map(content =>
-    <DelayedSpaceFrame
-      delay={config.introduction.delay}
-      contentClass={contentClass}
-      continueClass={continueClass}>
+const contentClass = styles.zone + ' ' + styles.content;
+const continueClass = styles.zone + ' ' + styles.continue;
 
-      {content}
-    </DelayedSpaceFrame>
-  );
-}
+const items=[
+  <MathCourse01/>,
+  <MathCourse02/>,
+  <MathCourse03/>,
+  <MathCourse04a/>,
+  <MathCourse04b/>,
+  <MathCourse05/>,
+  <MathCourse06a/>,
+  <MathCourse06b/>,
+  <MathCourse07a/>,
+  <MathCourse07b/>,
+  <MathCourse07c/>,
+  <MathCourse08/>,
+  <MathCourse09/>,
+  <MathCourse10/>,
+];
 
-export function Instruction01(props) {
+export const EBL01_MathCourse = items.map(content =>
+  <DelayedSpaceFrame
+    delay={config.mathCourse.delay}
+    contentClass={contentClass}
+    continueClass={continueClass}>
+
+    {content}
+  </DelayedSpaceFrame>
+);
+
+export function MathCourse01(props) {
   return (
     <div>
       <h1>Mit Beispielen Wahrscheinlichkeitsrechnung lernen</h1>
@@ -34,7 +42,7 @@ export function Instruction01(props) {
   );
 }
 
-export function Instruction02(props) {
+export function MathCourse02(props) {
   return (
     <div>
       <h1>Übersicht über das Lernprogramm</h1>
@@ -48,7 +56,7 @@ export function Instruction02(props) {
   );
 }
 
-export function Instruction03(props) {
+export function MathCourse03(props) {
   return (
     <div>
       <p>In dem folgenden Lernprogramm sollst Du aus Beispielen etwas über Wahrscheinlichkeitsrechnung lernen. Um die
@@ -64,7 +72,7 @@ export function Instruction03(props) {
   );
 }
 
-export function Instruction04a(props) {
+export function MathCourse04a(props) {
   return (
     <div>
       <h2>2. Wahrscheinlichkeit eines Ergebnisses bei einem einstufigen Experiment</h2>
@@ -78,7 +86,7 @@ export function Instruction04a(props) {
   );
 }
 
-export function Instruction04b(props) {
+export function MathCourse04b(props) {
   return (
     <div>
       Oftmals interessiert man sich jedoch nicht für die Wahrscheinlichkeit eines einzelnen Ergebnisses,
@@ -91,17 +99,18 @@ export function Instruction04b(props) {
       <MathComponent inline tex={String.raw` p = {3 \over 6}`} display={false}/> &nbsp;
       <p>(denn von den 6 Zahlen eines Würfels sind 3 gerade – das heißt, es gibt 3 günstige Ergebnisse bei 6 möglichen
         Ergebnissen).</p>
-      Die Wahrscheinlichkeit p eines Ereignisses kann zwischen 0 und 1 liegen. <br />
+      Die Wahrscheinlichkeit p eines Ereignisses kann zwischen 0 und 1 liegen. <br/>
       Ist p = 1, so tritt das Ereignis sicher ein, ist p = 0, so tritt das Ereignis keinesfalls ein.
     </div>
   );
 }
 
-export function Instruction05(props) {
+export function MathCourse05(props) {
   return (
     <div>
       <h1>3 .Wahrscheinlichkeit einer Ereignisfolge bei mehrstufigen Experimenten</h1>
-      <p> Bei einem <strong>mehrstufigen</strong> Experiment werden zwei oder mehr „Einzelexperimente“ durchgeführt, und man interessiert
+      <p> Bei einem <strong>mehrstufigen</strong> Experiment werden zwei oder mehr „Einzelexperimente“ durchgeführt, und
+        man interessiert
         sich für die Wahrscheinlichkeit einer bestimmten <strong>Ereignisfolge</strong>.
         Ein Beispiel ist das Ziehen aus einer Urne mit Kugeln, die alle verschiedene Farben haben.
         Eine Ereignisfolge ist beispielsweise „erst eine blaue Kugel und dann eine gelbe Kugel“.</p>
@@ -114,7 +123,7 @@ export function Instruction05(props) {
   );
 }
 
-export function Instruction06a(props) {
+export function MathCourse06a(props) {
   return (
     <div>
       <h1>4. Wahrscheinlichkeit mehrerer Ereignisfolgen bei mehrstufigen Experimenten</h1>
@@ -128,7 +137,7 @@ export function Instruction06a(props) {
   );
 }
 
-export function Instruction06b(props) {
+export function MathCourse06b(props) {
   return (
     <div>
       <p>Zur Berechnung der Wahrscheinlichkeit, dass bei einem mehrstufigen Zufallsversuch zwei oder mehr Ereignisse
@@ -136,15 +145,16 @@ export function Instruction06b(props) {
         unabhängig von ihrer Reihenfolge, werden die Wahrscheinlichkeiten der günstigen Ereignisfolgen addiert.
       </p>
       <p>Für den Fall, dass zwei Ereignisfolgen günstig sind, gilt:</p>
-      <MathComponent  tex={String.raw` p(A\ und\ B,\ Reihenfolge\ egal) `} display={true}/>
-      <MathComponent  tex={String.raw` \begin{align} = p(erst\ A\ dann\ B) + p(erst\ B\ dann\ A) \end{align} `} display={true}/>
-      <MathComponent  tex={String.raw` = p(A) \cdot p(B) + p(B) \cdot p(A)`} display={true}/>
-      <MathComponent  tex={String.raw` = 2 \cdot p(A) \cdot p(B)`} display={true}/>
+      <MathComponent tex={String.raw` p(A\ und\ B,\ Reihenfolge\ egal) `} display={true}/>
+      <MathComponent tex={String.raw` \begin{align} = p(erst\ A\ dann\ B) + p(erst\ B\ dann\ A) \end{align} `}
+                     display={true}/>
+      <MathComponent tex={String.raw` = p(A) \cdot p(B) + p(B) \cdot p(A)`} display={true}/>
+      <MathComponent tex={String.raw` = 2 \cdot p(A) \cdot p(B)`} display={true}/>
     </div>
   );
 }
 
-export function Instruction07a(props) {
+export function MathCourse07a(props) {
   return (
     <div>
       <h2>Vier Typen mehrstufiger Zufallsexperimente</h2>
@@ -156,15 +166,17 @@ export function Instruction07a(props) {
   );
 }
 
-export function Instruction07b(props) {
+export function MathCourse07b(props) {
   return (
     <div>
       <h2>1. Anzahl möglicher Ergebnisse ändert sich oder bleibt gleich:</h2>
-      <p>Wird eine aus einer Urne gezogene Kugel vor einer zweiten Ziehung <strong>zurückgelegt</strong>, verändert sich bei den
+      <p>Wird eine aus einer Urne gezogene Kugel vor einer zweiten Ziehung <strong>zurückgelegt</strong>, verändert sich
+        bei den
         Ziehungen
         die Anzahl der möglichen Ergebnisse <strong>nicht</strong>.</p>
       <p>Wenn eine gezogene Kugel vor einer zweiten Ziehung <strong>nicht zurückgelegt</strong> wird,
-        dann gibt es bei der nächsten Ziehung ein mögliches Ergebnis weniger - die Anzahl der möglichen Ergebnisse <strong>wird
+        dann gibt es bei der nächsten Ziehung ein mögliches Ergebnis weniger - die Anzahl der möglichen
+        Ergebnisse <strong>wird
           also von Ziehung zu Ziehung geringer</strong>.</p>
       <div>
         <h2>2. Eine oder mehrere Ereignisfolgen sind günstig:</h2>
@@ -177,14 +189,14 @@ export function Instruction07b(props) {
   );
 }
 
-export function Instruction07c(props) {
+export function MathCourse07c(props) {
   return (
     <div><p>Aus diesen beiden Punkten leiten sich vier Typen mehrstufiger Zufallsexperimente ab.</p>
       <p>Im folgenden Lernprogramm werden Dir Beispiele zu diesen vier Typen gezeigt.</p></div>
   );
 }
 
-export function Instruction08(props) {
+export function MathCourse08(props) {
   return (
     <div>
       <h1>Ziele des Lernprogramms</h1>
@@ -198,7 +210,7 @@ export function Instruction08(props) {
   );
 }
 
-export function Instruction09(props) {
+export function MathCourse09(props) {
   return (
     <div>
       <h1>Aufbau des Lernprogramms (Version 1)</h1>
@@ -220,7 +232,7 @@ export function Instruction09(props) {
   );
 }
 
-export function Instruction10(props) {
+export function MathCourse10(props) {
   return (
     <div>
       <h1>Aufbau des Lernprogramms (Version 2)</h1>
