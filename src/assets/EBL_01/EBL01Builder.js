@@ -1,7 +1,6 @@
 import React from 'react';
 import {TimelineManager} from "../../helper/TimelineManager";
 import {EBL01_ExampleManager} from "./EBL01_ExampleManager";
-import {EBL01_RessourcePrePostTestManager} from "./EBL01_RessourcePrePostTestManager";
 import {EblFrame} from "../../Frames/EBL/EblFrame";
 import {EBL01_MathCourse} from "./EBL01_MathCourse";
 import {config} from "./config";
@@ -16,6 +15,7 @@ import {Shuffler} from "../../helper/Shuffle";
 import {EBLPause} from "../../Frames/EBL/EBLPause";
 import {DelayedSpaceFrame} from "../../Frames/DelayedSpaceFrame";
 import {phrase} from "../ressourceLanguage";
+import {postFrames, preFrames} from "./EBL01_PrePostTest";
 
 
 export class EBL01Builder {
@@ -23,7 +23,6 @@ export class EBL01Builder {
     this.t = t;
     this.tlManager = new TimelineManager();
     this.rem = new EBL01_ExampleManager();
-    this.rpptm = new EBL01_RessourcePrePostTestManager();
     this.session = 1;
     this.group = 0;
   }
@@ -52,10 +51,6 @@ export class EBL01Builder {
   }
 
   buildSession1() {
-    const {items: preTestItems, ...preTestConfig} = config.preTest;
-    const preFrames = preTestItems
-      .map(s => this.rpptm.getStimulusResponseElement(s, preTestConfig));
-
     const {groups: exampleGroups, ...exampleConfig} = config.examples;
     const {items: exampleItems, id} = exampleGroups[this.group];
     const exampleFrames = exampleItems.map(itemGroup => {
@@ -67,10 +62,6 @@ export class EBL01Builder {
         }].concat(this.getProcessMeasures());
       }
     )
-
-    const {items: postTestItems, ...postTestConfig} = config.postTest;
-    const postFrames = postTestItems
-      .map(s => this.rpptm.getStimulusResponseElement(s, postTestConfig));
 
     this.tlManager.add([
       EBL01_MathCourse,

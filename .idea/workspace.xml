@@ -4,12 +4,11 @@
     <option name="SCOPE_TYPE" value="3" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c0a8d840-d2a4-41a1-9e79-f574c09cafbd" name="Default Changelist" comment="Weiter-Button ohne weitere Eingabe hinzugefügt (b)&#10;&#10;Test-Example-Konfiguration eingefügt">
+    <list default="true" id="c0a8d840-d2a4-41a1-9e79-f574c09cafbd" name="Default Changelist" comment="Introduction zu MathCourse umbenannt und umstrukturiert">
+      <change afterPath="$PROJECT_DIR$/src/assets/EBL_01/EBL01_PrePostTest.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/assets/EBL_01/EBL01Builder.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/EBL_01/EBL01Builder.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/EBL_01/EBL01_Introduction.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/EBL_01/EBL01_MathCourse.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/EBL_01/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/EBL_01/config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,7 +59,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="js.last.introduce.type" value="CONST" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/Frames/EBL" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/assets/EBL_01" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -75,10 +74,10 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="G:\OneDrive_Marienschule\Marienschule Krefeld\Programmprojekte - Dokumente\react\bipsy\ebl\src\assets\EBL_01" />
       <recent name="G:\OneDrive_Marienschule\Marienschule Krefeld\Programmprojekte - Dokumente\react\bipsy\ebl\src\Frames\EBL" />
       <recent name="G:\OneDrive_Marienschule\Marienschule Krefeld\Programmprojekte - Dokumente\react\bipsy\ebl\src\Frames" />
       <recent name="G:\OneDrive_Marienschule\Marienschule Krefeld\Programmprojekte - Dokumente\react\bipsy\ebl\src\Components" />
-      <recent name="G:\OneDrive_Marienschule\Marienschule Krefeld\Programmprojekte - Dokumente\react\bipsy\ebl\src\assets\EBL_01" />
       <recent name="G:\OneDrive_Marienschule\Marienschule Krefeld\Programmprojekte - Dokumente\react\bipsy\ebl\src\Frames\RheinbergFss" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -225,7 +224,7 @@
       <workItem from="1612284252999" duration="2128000" />
       <workItem from="1612289548972" duration="1147000" />
       <workItem from="1612374117066" duration="5854000" />
-      <workItem from="1613152360974" duration="3798000" />
+      <workItem from="1613152360974" duration="5737000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1608320225945</created>
@@ -430,7 +429,14 @@
       <option name="project" value="LOCAL" />
       <updated>1612379662421</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="Introduction zu MathCourse umbenannt und umstrukturiert">
+      <created>1613156239682</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1613156239682</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -465,7 +471,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="get URL-Parameters" />
     <MESSAGE value="rename App to Sesion" />
     <MESSAGE value="data[0]:&#10;{&#10;    version: &#10;    finished: &#10;    language: &#10;    session: &#10;    user_id: &#10;    group_id: &#10;  }" />
     <MESSAGE value="use initalData.language&#10;possibility to send language from server" />
@@ -490,7 +495,8 @@
     <MESSAGE value="bugfix" />
     <MESSAGE value="Radiofragen zu Formeln hinzugefügt" />
     <MESSAGE value="Weiter-Button ohne weitere Eingabe hinzugefügt (b)&#10;&#10;Test-Example-Konfiguration eingefügt" />
-    <option name="LAST_COMMIT_MESSAGE" value="Weiter-Button ohne weitere Eingabe hinzugefügt (b)&#10;&#10;Test-Example-Konfiguration eingefügt" />
+    <MESSAGE value="Introduction zu MathCourse umbenannt und umstrukturiert" />
+    <option name="LAST_COMMIT_MESSAGE" value="Introduction zu MathCourse umbenannt und umstrukturiert" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
 </project>
