@@ -1,6 +1,6 @@
 import React, {useContext} from 'react';
 import {LngContext} from "../helper/i18n";
-import styles from "../cssModules/TextFrame.module.css";
+import styles from "../cssModules/DelayedSpaceFrame.module.css";
 import {Zone} from "../MicroComponents/Zone";
 import {Html} from "../MicroComponents/Html";
 import {useStateDelayed} from "../Hooks/useStateDelayed";
@@ -13,7 +13,7 @@ export function DelayedSpaceFrame(props) {
     children,
     continueText=phrase.continueText,
     delay=3000,
-    contentClass=styles.zone + ' ' + styles.text+ ' ' + styles.elements,
+    contentClass=styles.zone + ' ' + styles.content+ ' ' + styles.elements,
     continueClass=styles.zone + ' ' + styles.continue,
   } = props;
   const [responseActive, setResponseActive] = useStateDelayed(!(delay > 0));
@@ -21,7 +21,7 @@ export function DelayedSpaceFrame(props) {
   if (!responseActive) {
     setResponseActive(true, delay);
   }
-  //TODO eigene styles (hier von TextFrame übernommen
+
   return (
     <React.Fragment>
       <Zone className={contentClass}>

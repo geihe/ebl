@@ -1,11 +1,8 @@
 import {DelayedSpaceFrame} from "../../Frames/DelayedSpaceFrame";
 import React from "react";
-import styles from "../../cssModules/Instructions.module.css";
 import {MathComponent} from "mathjax-react";
 import {config} from "./config";
 
-const contentClass = styles.zone + ' ' + styles.content;
-const continueClass = styles.zone + ' ' + styles.continue;
 
 const items=[
   <MathCourse01/>,
@@ -27,8 +24,7 @@ const items=[
 export const EBL01_MathCourse = items.map(content =>
   <DelayedSpaceFrame
     delay={config.mathCourse.delay}
-    contentClass={contentClass}
-    continueClass={continueClass}>
+  >
 
     {content}
   </DelayedSpaceFrame>

@@ -8,6 +8,7 @@ import {Demographics} from "../../Components/Demographics";
 import {EBLPause} from "../../Frames/EBL/EBLPause";
 import {postFrames, preFrames} from "./EBL01_PrePostTest";
 import {exampleFrames} from "./EBL01_ExampleFrames";
+import {InstructionFrame01} from "../../Frames/Instructions/InstructionFrame";
 
 export class EBL01Builder {
   constructor(t) {
@@ -42,7 +43,7 @@ export class EBL01Builder {
 
   buildSession1() {
     this.tlManager.add([
-      exampleFrames(this.group),
+      <InstructionFrame01/>,
       EBL01_MathCourse,
       <ToDoFrame text={'Begrüßungsseite'}/>,
       <ToDoFrame

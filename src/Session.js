@@ -48,7 +48,7 @@ function Frame(props) {
       </main>
       <footer>
         <Zone style={{width: "50%"}}>
-          {progressBar} index: {props.tempIndex}
+          {progressBar}
         </Zone>
       </footer>
     </>;

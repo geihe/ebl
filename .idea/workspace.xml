@@ -4,11 +4,18 @@
     <option name="SCOPE_TYPE" value="3" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c0a8d840-d2a4-41a1-9e79-f574c09cafbd" name="Default Changelist" comment="PrePostTest-File erstellt&#10;preTest und postTest aud Builder extrahiert">
-      <change afterPath="$PROJECT_DIR$/src/assets/EBL_01/EBL01_ExampleFrames.js" afterDir="false" />
+    <list default="true" id="c0a8d840-d2a4-41a1-9e79-f574c09cafbd" name="Default Changelist" comment="EBL01_ExampleFrames-File erstellt&#10;und in Builder umstrukturiert">
+      <change afterPath="$PROJECT_DIR$/src/Frames/Instructions/InstructionFrame.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/MicroComponents/UniBielefeld.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Frames/DelayedSpaceFrame.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frames/DelayedSpaceFrame.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Frames/EBL/ElementsKeyFrame.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frames/EBL/ElementsKeyFrame.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Session.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Session.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/assets/EBL_01/EBL01Builder.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/EBL_01/EBL01Builder.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/EBL_01/EBL01_MathCourse.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/EBL_01/EBL01_MathCourse.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cssModules/Instructions.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/cssModules/Instructions.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cssModules/TextFrame.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/cssModules/DelayedSpaceFrame.module.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,7 +66,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="js.last.introduce.type" value="CONST" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/assets/EBL_01" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/Frames/Instructions" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -74,18 +81,18 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="G:\OneDrive_Marienschule\Marienschule Krefeld\Programmprojekte - Dokumente\react\bipsy\ebl\src\Frames\Instructions" />
+      <recent name="G:\OneDrive_Marienschule\Marienschule Krefeld\Programmprojekte - Dokumente\react\bipsy\ebl\src\MicroComponents" />
+      <recent name="G:\OneDrive_Marienschule\Marienschule Krefeld\Programmprojekte - Dokumente\react\bipsy\ebl\src\Frames" />
       <recent name="G:\OneDrive_Marienschule\Marienschule Krefeld\Programmprojekte - Dokumente\react\bipsy\ebl\src\assets\EBL_01" />
       <recent name="G:\OneDrive_Marienschule\Marienschule Krefeld\Programmprojekte - Dokumente\react\bipsy\ebl\src\Frames\EBL" />
-      <recent name="G:\OneDrive_Marienschule\Marienschule Krefeld\Programmprojekte - Dokumente\react\bipsy\ebl\src\Frames" />
-      <recent name="G:\OneDrive_Marienschule\Marienschule Krefeld\Programmprojekte - Dokumente\react\bipsy\ebl\src\Components" />
-      <recent name="G:\OneDrive_Marienschule\Marienschule Krefeld\Programmprojekte - Dokumente\react\bipsy\ebl\src\Frames\RheinbergFss" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="G:\OneDrive_Marienschule\Marienschule Krefeld\Programmprojekte - Dokumente\react\bipsy\ebl\src\Frames\Instructions" />
       <recent name="G:\OneDrive_Marienschule\Marienschule Krefeld\Programmprojekte - Dokumente\react\bipsy\ebl\src\assets\EBL_01" />
       <recent name="G:\OneDrive_Marienschule\Marienschule Krefeld\Programmprojekte - Dokumente\react\bipsy\ebl\src\Frames\RheinbergFss" />
       <recent name="G:\OneDrive_Marienschule\Marienschule Krefeld\Programmprojekte - Dokumente\react\bipsy\ebl\src\Frames\EBL" />
       <recent name="G:\OneDrive_Marienschule\Marienschule Krefeld\Programmprojekte - Dokumente\react\bipsy\ebl\src" />
-      <recent name="G:\OneDrive_Marienschule\Marienschule Krefeld\Programmprojekte - Dokumente\react\bipsy\ebl\src\assets\EBL_01\examples" />
     </key>
   </component>
   <component name="RestClientSettings">
@@ -224,7 +231,8 @@
       <workItem from="1612284252999" duration="2128000" />
       <workItem from="1612289548972" duration="1147000" />
       <workItem from="1612374117066" duration="5854000" />
-      <workItem from="1613152360974" duration="9266000" />
+      <workItem from="1613152360974" duration="11441000" />
+      <workItem from="1613202011145" duration="2115000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1608320225945</created>
@@ -443,7 +451,14 @@
       <option name="project" value="LOCAL" />
       <updated>1613158238202</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="EBL01_ExampleFrames-File erstellt&#10;und in Builder umstrukturiert">
+      <created>1613163190593</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1613163190593</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -478,7 +493,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="data[0]:&#10;{&#10;    version: &#10;    finished: &#10;    language: &#10;    session: &#10;    user_id: &#10;    group_id: &#10;  }" />
     <MESSAGE value="use initalData.language&#10;possibility to send language from server" />
     <MESSAGE value="nextSession als Frame-element angefügt" />
     <MESSAGE value="Elemente &#10;&lt;ElementFinished&gt; und&#10;&lt;Pending&gt; erstellt" />
@@ -503,7 +517,8 @@
     <MESSAGE value="Weiter-Button ohne weitere Eingabe hinzugefügt (b)&#10;&#10;Test-Example-Konfiguration eingefügt" />
     <MESSAGE value="Introduction zu MathCourse umbenannt und umstrukturiert" />
     <MESSAGE value="PrePostTest-File erstellt&#10;preTest und postTest aud Builder extrahiert" />
-    <option name="LAST_COMMIT_MESSAGE" value="PrePostTest-File erstellt&#10;preTest und postTest aud Builder extrahiert" />
+    <MESSAGE value="EBL01_ExampleFrames-File erstellt&#10;und in Builder umstrukturiert" />
+    <option name="LAST_COMMIT_MESSAGE" value="EBL01_ExampleFrames-File erstellt&#10;und in Builder umstrukturiert" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
 </project>
