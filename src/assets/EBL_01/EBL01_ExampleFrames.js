@@ -1,7 +1,7 @@
 import React from "react";
 import {config} from "./config";
 import {EblFrame} from "../../Frames/EBL/EblFrame";
-import {ImiFrame} from "../../Frames/ImiFrame";
+import {LikertFrame} from "../../Frames/LikertFrame";
 import {DelayedFrame} from "../../Frames/DelayedFrame";
 import {phrase} from "../ressourceLanguage";
 import {Shuffler} from "../../helper/Shuffle";
@@ -11,7 +11,7 @@ import {EBL01_ExampleManager} from "./EBL01_ExampleManager";
 
 const processMeasures = [
   {
-    frame: <ImiFrame
+    frame: <LikertFrame
       minText={{de: 'sehr wenig angestrengt', en: 'very little effort'}}
       maxText={{de: 'sehr stark angestrengt', en: 'very high effort'}}
       max={7}
@@ -47,7 +47,7 @@ const processMeasures = [
         nolog: true
       },
       {
-        frame: <ImiFrame
+        frame: <LikertFrame
           minText={{de: 'Trifft nicht zu', en: 'not at all'}}
           maxText={{de: 'Trifft zu', en: 'very much'}}
           item={fssItems[nr - 1].text}

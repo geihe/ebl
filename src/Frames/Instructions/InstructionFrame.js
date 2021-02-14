@@ -5,6 +5,7 @@ import {UniBielefeld} from "../../MicroComponents/UniBielefeld";
 import {config} from "../../assets/EBL_01/config";
 import {EBL01Video} from "../EBL/EBL01Video";
 import {ToDoFrame} from "../ToDoFrame";
+import {LikertFrame} from "../LikertFrame";
 
 export function InstructionFrame(props) {
   const {html, ...restProps} = props;
@@ -204,6 +205,7 @@ export function InstructionFrame16a_II_simultan_group23(props) {
 
   return <InstructionFrame html={html} space finish={props.finish}/>;
 }
+
 export function InstructionFrame16b_I_sequenziell_group01(props) {
   const html = `
   <h1>Aufbau des Lernprogramms I</h1>
@@ -268,6 +270,7 @@ export function InstructionFrame20b(props) {
 
   return <InstructionFrame html={html} space finish={props.finish}/>;
 }
+
 export function InstructionFrame20c(props) {
   const html = `
   <p>Vielen Dank für die Berechnung der Aufgaben!</p>
@@ -293,4 +296,28 @@ export function InstructionFrame22(props) {
  `;
 
   return <InstructionFrame html={html} space finish={props.finish}/>;
+}
+
+
+export function InstructionFrame22bI(props) {
+  return (
+    <>
+      <UniBielefeld/>
+      <LikertFrame
+        max={9}
+        minText={'sehr wenig'} maxText={'sehr viel'}
+        item={'In welchem Umfang wurdest du während dieser Studie von deiner Umgebung gestört?'}
+        finish={props.finish}/>
+    </>)
+}
+export function InstructionFrame22bII(props) {
+  return (
+    <>
+      <UniBielefeld/>
+      <LikertFrame
+        max={9}
+        minText={'sehr schlecht'} maxText={'sehr gut'}
+        item={'In welchem Umfang konntest du dich auf die vorgegebenen Lernaufgaben konzentrieren?'}
+        finish={props.finish}/>
+    </>)
 }

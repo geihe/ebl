@@ -28,9 +28,12 @@ import {
   InstructionFrame16b_II_sequenziell_group01,
   InstructionFrame18,
   InstructionFrame19,
-  InstructionFrame22
+  InstructionFrame22,
+  InstructionFrame22bI,
+  InstructionFrame22bII
 } from "../../Frames/Instructions/InstructionFrame";
 import {CancelFrame} from "../../Frames/CancelFrame";
+import {FixationCrossFrame} from "../../Frames/FixationCrossFrame";
 
 export class EBL01Builder {
   constructor(t) {
@@ -70,6 +73,8 @@ export class EBL01Builder {
     };
 
     this.tlManager.add([
+      <InstructionFrame22bI/>, <FixationCrossFrame nocross/>,
+      <InstructionFrame22bII/>, <FixationCrossFrame nocross/>,
       <InstructionFrame22/>,
       <Demographics/>,
       <InstructionFrame01/>,
