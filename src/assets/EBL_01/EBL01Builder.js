@@ -1,14 +1,27 @@
 import React from 'react';
 import {TimelineManager} from "../../helper/TimelineManager";
-import {EBL01_MathCourse} from "./EBL01_MathCourse";
 import {testTimeline} from "../../Test/testTimeline";
-import {EBL01Video} from "../../Frames/EBL/EBL01Video";
 import {ToDoFrame} from "../../Frames/ToDoFrame";
 import {Demographics} from "../../Components/Demographics";
 import {EBLPause} from "../../Frames/EBL/EBLPause";
 import {postFrames, preFrames} from "./EBL01_PrePostTest";
 import {exampleFrames} from "./EBL01_ExampleFrames";
-import {InstructionFrame01} from "../../Frames/Instructions/InstructionFrame";
+import {
+  InstructionFrame01,
+  InstructionFrame02,
+  InstructionFrame03,
+  InstructionFrame04,
+  InstructionFrame05,
+  InstructionFrame06,
+  InstructionFrame07,
+  InstructionFrame08_I,
+  InstructionFrame08_II,
+  InstructionFrame09_I,
+  InstructionFrame09_II,
+  InstructionFrame09_III
+} from "../../Frames/Instructions/InstructionFrame";
+import {DelayedButtonFrame} from "../../Frames/DelayedButtonFrame";
+import {BreakFrame} from "../../Frames/BreakFrame";
 
 export class EBL01Builder {
   constructor(t) {
@@ -43,12 +56,24 @@ export class EBL01Builder {
 
   buildSession1() {
     this.tlManager.add([
+      <DelayedButtonFrame delay={500}> *** </DelayedButtonFrame>,
+      {
+        if: (lastlog) => lastlog === 'break',
+        then: <BreakFrame/>,
+      },
+
       <InstructionFrame01/>,
-      EBL01_MathCourse,
-      <ToDoFrame text={'Begrüßungsseite'}/>,
-      <ToDoFrame
-        text={'Das folgende Beispielvideo durch ein Begrüßungsvideo ("Nun einige mathematische Fragen") ersetzen'}/>,
-      <EBL01Video videoID={'introduction'}/>,
+      <InstructionFrame02/>,
+      <InstructionFrame03/>,
+      <InstructionFrame04/>,
+      <InstructionFrame05/>,
+      <InstructionFrame06/>,
+      <InstructionFrame07/>,
+      <InstructionFrame08_I/>,
+      <InstructionFrame08_II/>,
+      <InstructionFrame09_I/>,
+      <InstructionFrame09_II/>,
+      <InstructionFrame09_III/>,
       preFrames,
       <ToDoFrame text={'Video "und nun eine kleiner mathematischer Lehrtext"'}/>,
       <ToDoFrame

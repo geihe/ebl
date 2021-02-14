@@ -2,12 +2,12 @@ import React, {useContext} from 'react';
 import {LngContext} from "../helper/i18n";
 import styles from "../cssModules/DelayedFrame.module.css";
 import {Zone} from "../MicroComponents/Zone";
-import {Html} from "../MicroComponents/Html";
 import {useStateDelayed} from "../Hooks/useStateDelayed";
 import {useKeyListenerOnce} from "../Hooks/useKeyListenerOnce";
 import {phrase} from "../assets/ressourceLanguage";
+import {Button} from "@blueprintjs/core";
 
-export function DelayedSpaceFrame(props) {
+export function DelayedButtonFrame(props) {
   const t = useContext(LngContext);
   const {
     children,
@@ -30,8 +30,13 @@ export function DelayedSpaceFrame(props) {
 
       <Zone animate={'0.1s'}
             className={continueClass}
-            show={responseActive && continueText}>
-        <Html html={t(continueText)}/>
+            show={responseActive}>
+        <Button intent={'Danger'} onClick={() =>props.finish('break')}>
+          {t(phrase.breakButton)}
+        </Button>
+        <Button intent={'Success'} onClick={() =>props.finish('continue')}>
+          {t(phrase.continueButton)}
+        </Button>
       </Zone>
     </React.Fragment>
   );

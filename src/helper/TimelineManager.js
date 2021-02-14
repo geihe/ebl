@@ -136,8 +136,11 @@ class TLif extends TimelineElement {
     super(ifSource);
     this.type = 'if';
     this.if = ifSource.if;
-    this.then = TimelineElement.convert(ifSource.then || []);
-    this.else = TimelineElement.convert(ifSource.else || []);
+
+    this.then = ifSource.then ?
+      TimelineElement.convert([].concat(ifSource.then)) : [];
+    this.else = ifSource.else ?
+      TimelineElement.convert([].concat(ifSource.else)) : [];
     this.effort = (this.then.effort + this.else.effort) / 2;
   }
 

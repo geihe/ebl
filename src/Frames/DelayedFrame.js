@@ -7,7 +7,7 @@ import {useStateDelayed} from "../Hooks/useStateDelayed";
 import {useKeyListenerOnce} from "../Hooks/useKeyListenerOnce";
 import {phrase} from "../assets/ressourceLanguage";
 
-export function DelayedSpaceFrame(props) {
+export function DelayedFrame(props) { //als Oberklasse für DelayedSpaceFrame und DelayedButtonFrame
   const t = useContext(LngContext);
   const {
     children,

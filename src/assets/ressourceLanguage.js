@@ -10,6 +10,8 @@ export const phrase = {
     de: 'Brüche mit &quot;/&quot; eingeben, z.B. 1/2 ...'
   },
   continueText: {en: 'Please press SPACE to continue...', de: 'Weiter mit der Leertaste ...'},
+  continueButton: {en: 'continue...', de: 'Weiter...'},
+  breakButton: {en: 'stop...', de: 'Abbrechen...'},
   sessionFinished: {
     en: 'Thank you very much for participating in our study. This part of the experiment is finished.',
     de: 'Dieser Teil des Experiments ist beendet. Vielen Dank, dass Sie an der Studie teilgenommen haben. Sie können das Fenster jetzt schließen.',

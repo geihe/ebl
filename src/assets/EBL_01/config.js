@@ -9,9 +9,14 @@ export const config = {
   pauseSeconds: 75,
   timeForExamples: 60,//TODO 3600
 
+  instructions: {
+    delay: 1000, //TODO 3000
+    animation: '0.1s',
+  },
+
   mathCourse: {
     delay: 1000, //TODO 3000
-    animation: '',
+    animation: '0.1s',
   },
 
   preTest: {
