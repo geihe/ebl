@@ -90,8 +90,8 @@ async function getElementInfo() {
     initialData.session = serverData.session;
     initialData.language = serverData.language;
     initialData.userId = serverData.user_id;
-    // initialData.groupId = serverData.group_id; TODO: Wieder aktivieren
-    initialData.groupId=4; //zum Testen TODO löschen
+    initialData.groupId = serverData.group_id;
+    // initialData.groupId=4; //zum Testen TODO löschen
     return {type: 'session', language: initialData.language, initialData: [initialData]};
   }
 

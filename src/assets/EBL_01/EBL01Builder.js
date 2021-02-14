@@ -18,10 +18,19 @@ import {
   InstructionFrame08_II,
   InstructionFrame09_I,
   InstructionFrame09_II,
-  InstructionFrame09_III
+  InstructionFrame09_III,
+  InstructionFrame10,
+  InstructionFrame11,
+  InstructionFrame12,
+  InstructionFrame16a_I_simultan_group23,
+  InstructionFrame16a_II_simultan_group23,
+  InstructionFrame16b_I_sequenziell_group01,
+  InstructionFrame16b_II_sequenziell_group01,
+  InstructionFrame18,
+  InstructionFrame19,
+  InstructionFrame22
 } from "../../Frames/Instructions/InstructionFrame";
 import {CancelFrame} from "../../Frames/CancelFrame";
-import {DelayedFrame} from "../../Frames/DelayedFrame";
 
 export class EBL01Builder {
   constructor(t) {
@@ -55,34 +64,42 @@ export class EBL01Builder {
   }
 
   buildSession1() {
-    this.tlManager.add([
-      <DelayedFrame space delay={0}>#####</DelayedFrame>,
-      <DelayedFrame cancelButton delay={3000}> *** </DelayedFrame>,
-      {
-        if: (lastlog) => lastlog === 'break',
-        then: <CancelFrame/>,
-      },
+    const cancelTest = {
+      if: (lastlog) => lastlog === 'break',
+      then: <CancelFrame/>,
+    };
 
+    this.tlManager.add([
+      <InstructionFrame22/>,
+      <Demographics/>,
       <InstructionFrame01/>,
       <InstructionFrame02/>,
       <InstructionFrame03/>,
       <InstructionFrame04/>,
-      <InstructionFrame05/>,
+      <InstructionFrame05/>,cancelTest,
       <InstructionFrame06/>,
-      <InstructionFrame07/>,
-      <InstructionFrame08_I/>,
-      <InstructionFrame08_II/>,
+      <InstructionFrame07/>,cancelTest,
+      <InstructionFrame08_I/>,cancelTest,
+      <InstructionFrame08_II/>,cancelTest,
       <InstructionFrame09_I/>,
       <InstructionFrame09_II/>,
       <InstructionFrame09_III/>,
+      <InstructionFrame10/>,
+      <InstructionFrame11/>,
       preFrames,
-      <ToDoFrame text={'Video "und nun eine kleiner mathematischer Lehrtext"'}/>,
-      <ToDoFrame
-        text={'Video "nun kommt das eigentliche Experiment mit Beschreibung"<br/>4 mal, für jeden Fall eins<br/>auch Erläuterung der Fragen zur Anstrengung'}/>,
+      <InstructionFrame12/>,
+      this.group >1 ?
+        [<InstructionFrame16a_I_simultan_group23/>,
+        <InstructionFrame16a_II_simultan_group23/>,]
+        :
+        [<InstructionFrame16b_I_sequenziell_group01/>,
+          <InstructionFrame16b_II_sequenziell_group01/>,]
+      ,
       <ToDoFrame text={' 2-3 Fragen, ob der Ablauf des Experiments verstanden wurde'}/>,
       exampleFrames(this.group),
+      <InstructionFrame18/>,
       <EBLPause/>,
-      <ToDoFrame text={'Video "Nun kommen einige Aufgaben, mit denen wie den Lernerfolg überprüfen"'}/>,
+      <InstructionFrame19/>,
       postFrames,
       <Demographics/>,
       <ToDoFrame text={'Einverständnis, dass die Daten anonymisiert auf den Server geladen werden '}/>,

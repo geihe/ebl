@@ -7,14 +7,13 @@ import {EBL01Video} from "../EBL/EBL01Video";
 import {ToDoFrame} from "../ToDoFrame";
 
 export function InstructionFrame(props) {
-  const {html} = props;
+  const {html, ...restProps} = props;
   return (<> //TODO bei kleiner Höhe des Bildschirms Höhen anpassen
       <UniBielefeld/>
       <DelayedFrame
-        space
+        {...restProps}
         delay={config.instructions.delay}
         animation={config.instructions.animation}
-        finish={props.finish}
       >
         <Html html={html}/>
       </DelayedFrame>
@@ -26,10 +25,10 @@ export function InstructionFrame01(props) {
   const html = `
   <h1>Herzlich willkommen zur Studie „Gleichzeitiges Lernen von mehreren stochastischen Konzepten“</h1>
   <p><strong>Hinweis:</strong></p>
-  <p>Es folgt nach „Weiter mit der Leertaste“ eine Videoinstruktion.<br/>Schalte bitte deinen Ton an.</p>
+  <p>Es folgt nach „Weiter mit der Leertaste“ eine Videoinstruktion.<br/>Schalte bitte deinen Ton an.<br/>Wenn das Video nicht von selbst startet, kannst du es mit der Maus steuern.</p>
   `;
 
-  return <InstructionFrame html={html} finish={props.finish}/>;
+  return <InstructionFrame html={html} space finish={props.finish}/>;
 }
 
 export function InstructionFrame02(props) {
@@ -42,7 +41,7 @@ export function InstructionFrame03(props) {
   <p> Du wirst durch das Experiment geleitet. An einigen Stellen kann es einen kurzen Moment dauern, bis die nächste Ansicht zu sehen ist.</p>
   <p>Zuweilen kann es vorkommen, dass das Laden von neuen Seiten einige Sekunden dauert. Warte bitte immer ab, bis du die nächste Seite siehst und klicke währenddessen nicht mit der Maus!</p>
   `;
-  return <InstructionFrame html={html} finish={props.finish}/>;
+  return <InstructionFrame html={html} space finish={props.finish}/>;
 }
 
 export function InstructionFrame04(props) {
@@ -58,10 +57,10 @@ export function InstructionFrame04(props) {
   <p> Für die sachgemäße Datenverarbeitung verantwortlich ist <a href="mailto: veit.kubik@uni-bielefeld.de">veit.kubik@uni-bielefeld.de</a></p>
   `;
 
-  return <InstructionFrame html={html} finish={props.finish}/>;
+  return <InstructionFrame html={html} space finish={props.finish}/>;
 }
 
-export function InstructionFrame05(props) { //TODO Buttons Abbrechen/Einverstanden
+export function InstructionFrame05(props) {
   const html = `
 <h1>Wichtiger Hinweis</h1>
   <p>Diese Studie ist Teil eines wissenschaftlichen Projekts, das in Fachzeitschriften der Psychologie veröffentlicht wird. Wir möchten dich bitten, den Test - <strong>ohne Unterbrechung</strong> - bis zum Ende durchzuführen. Bitte stelle sicher, dass du während der Bearbeitung der Aufgaben nicht gestört wirst. Es ist wichtig, dass du die folgenden Vorkehrungen getroffen hast und dein Einverständnis mit einem Klick auf "Einverstanden" bestätigst: </p>
@@ -73,7 +72,7 @@ export function InstructionFrame05(props) { //TODO Buttons Abbrechen/Einverstand
 <p>Mit der konzentrierten Bearbeitung der Aufgaben trägst du dazu bei, die Qualität der Studie und der Ergebnisse zu sichern. Vielen Dank! </p>
   `;
 
-  return <InstructionFrame html={html} finish={props.finish}/>;
+  return <InstructionFrame html={html} cancelButton finish={props.finish}/>;
 }
 
 export function InstructionFrame06(props) {
@@ -84,10 +83,9 @@ export function InstructionFrame06(props) {
   <p>Mit herzlichen Grüßen <br/>Dr. Veit Kubik </p>
   `;
 
-  return <InstructionFrame html={html} finish={props.finish}/>;
+  return <InstructionFrame html={html} space finish={props.finish}/>;
 }
 
-//TODO Buttons Abbrechen/Einverstanden
 export function InstructionFrame07(props) {
   const html = `
   <h1>Teilnahme</h1>
@@ -95,10 +93,10 @@ export function InstructionFrame07(props) {
   <p>Falls du im Moment keine störungsfreien Bedingungen vorfindest, so kannst du gerne zu einem anderen, günstigeren Zeitpunkt an dieser Studie teilnehmen. Klicke dafür bitte auf <strong>"Später teilnehmen"</strong>. </p>
   `;
 
-  return <InstructionFrame html={html} finish={props.finish}/>;
+  return <InstructionFrame html={html} cancelButton finish={props.finish}/>;
 }
 
-export function InstructionFrame08_I(props) { //TODO Buttons Abbrechen/Einverstanden
+export function InstructionFrame08_I(props) {
   const html = `
   <h1>Einverständniserklärung I</h1>
   <p>Bestätige bitte dein Einverständnis, indem du auf "Einverstanden" klickst.  </p>
@@ -111,10 +109,10 @@ export function InstructionFrame08_I(props) { //TODO Buttons Abbrechen/Einversta
 </ul>
   `;
 
-  return <InstructionFrame html={html} finish={props.finish}/>;
+  return <InstructionFrame html={html} cancelButton finish={props.finish}/>;
 }
 
-export function InstructionFrame08_II(props) { //TODO Buttons Abbrechen/Einverstanden
+export function InstructionFrame08_II(props) {
   const html = `
   <h1>Einverständniserklärung II</h1>
   <p>Bestätige bitte dein Einverständnis, indem du auf "Einverstanden" klickst.  </p>
@@ -126,7 +124,7 @@ export function InstructionFrame08_II(props) { //TODO Buttons Abbrechen/Einverst
 <p>Wir freuen uns sehr über deine Teilnahme</p>
   `;
 
-  return <InstructionFrame html={html} finish={props.finish}/>;
+  return <InstructionFrame html={html} cancelButton finish={props.finish}/>;
 }
 
 
@@ -137,7 +135,7 @@ export function InstructionFrame09_I(props) {
   <p>Durch deine Teilnahme unterstützt du den Informationsgewinn zu Prozessen beim Lernen und somit die Erweiterung des bisherigen Kenntnisstands der Forschung. Deine Teilnahme ist mit keinerlei Risiken für dich verbunden. Sie erfolgt anonym. Ein Rückschluss von den erhobenen Daten auf deine Person ist nicht möglich. Die Daten werden selbstverständlich vertraulich behandelt und ausschließlich für den angegebenen Forschungszweck verwendet. Durch Beenden der Teilnahme hast du bis zum Ende der Sitzung die Möglichkeit, der Speicherung der Daten nicht zuzustimmen. </p>
   `;
 
-  return <InstructionFrame html={html} finish={props.finish}/>;
+  return <InstructionFrame html={html} space finish={props.finish}/>;
 }
 
 export function InstructionFrame09_II(props) {
@@ -147,13 +145,9 @@ export function InstructionFrame09_II(props) {
 
   `;
 
-  return <InstructionFrame html={html} finish={props.finish}/>;
+  return <InstructionFrame html={html} space finish={props.finish}/>;
 }
 
-
-export function InstructionFrame10(props) {
-  return <ToDoFrame text={'Formular: Wurde der Ablauf verstanden?'} finish={props.finish}/>;
-}
 
 export function InstructionFrame09_III(props) {
   const html = `
@@ -162,7 +156,11 @@ export function InstructionFrame09_III(props) {
   <p>Die Studie erfolgt also in zwei Sitzungen. Die erste absolvierst du jetzt. Die zweite Sitzung solltest du möglichst in genau sieben Tagen zur gleichen Uhrzeit absolvieren. An diese zweite Sitzung wirst du automatisch per Mail erinnert. Du wirst am Ende der ersten Sitzung aufgefordert deine E-Mail-Adresse anzugeben. Beide Sitzungen nehmen erfahrungsgemäß ca. 2,5 Stunden in Anspruch.</p>
   `;
 
-  return <InstructionFrame html={html} finish={props.finish}/>;
+  return <InstructionFrame html={html} space finish={props.finish}/>;
+}
+
+export function InstructionFrame10(props) {
+  return <ToDoFrame text={'Formular: Wurde der Ablauf verstanden?'} finish={props.finish}/>;
 }
 
 export function InstructionFrame11(props) {
@@ -174,7 +172,7 @@ export function InstructionFrame11(props) {
 <p>Der Vortest beginnt, wenn du die Leertaste betätigst.</p>
   `;
 
-  return <InstructionFrame html={html} finish={props.finish}/>;
+  return <InstructionFrame html={html} space finish={props.finish}/>;
 }
 
 export function InstructionFrame12(props) {
@@ -183,7 +181,7 @@ export function InstructionFrame12(props) {
 <p>Mit der Leertaste wirst du automatisch zum Lernprogramm weitergeleitet. </p>
   `;
 
-  return <InstructionFrame html={html} finish={props.finish}/>;
+  return <InstructionFrame html={html} space finish={props.finish}/>;
 }
 
 export function InstructionFrame16a_I_simultan_group23(props) {
@@ -194,7 +192,7 @@ export function InstructionFrame16a_I_simultan_group23(props) {
   <p>Für die Bearbeitung von je vier Beispielaufgaben hast du insgesamt sechs Minuten Zeit. Die Einteilung dieser Zeit obliegt dir. Du solltest aber alle Lösungen nachvollzogen und alle Multiple Choice-Fragen beantwortet haben, denn nach Ablauf dieser Zeit wirst du automatisch zur Befragung deines Flow-Erlebens und deiner kognitiven Beanspruchung weitergeleitet und kannst nicht mehr zurückgehen. Ein Timer wird eingeblendet.</p>
   `;
 
-  return <InstructionFrame html={html} finish={props.finish}/>;
+  return <InstructionFrame html={html} space finish={props.finish}/>;
 }
 
 export function InstructionFrame16a_II_simultan_group23(props) {
@@ -204,7 +202,7 @@ export function InstructionFrame16a_II_simultan_group23(props) {
   <p>Mit Betätigung der Leertaste wirst du zu Verständnisfragen weitergeleitet, bevor die Lernphase beginnt.</p>
   `;
 
-  return <InstructionFrame html={html} finish={props.finish}/>;
+  return <InstructionFrame html={html} space finish={props.finish}/>;
 }
 export function InstructionFrame16b_I_sequenziell_group01(props) {
   const html = `
@@ -212,10 +210,10 @@ export function InstructionFrame16b_I_sequenziell_group01(props) {
   <p>Auf jeder Seite des Lernprogramms wird dir nur eine Beispielaufgabe präsentiert. Du sollst jede Aufgabe aufmerksam lesen und versuchen, die Lösung nachzuvollziehen. </p>
   <p>Zudem befindet sich rechts auf jeder Seite des Lernprogramms eine Multiple-Choice Frage. Hier sollst du das deiner Meinung nach zutreffendste auswählen. </p>
   <p>Erst danach sollst du auf den „nächste Seite“-Button klicken, um auf die nächste Seite des Lernprogramms zu gelangen. Dann kannst du nicht mehr zurückgehen. Du durchläufst vier Durchgänge mit jeweils vier Beispielaufgaben, sodass dir insgesamt 16 Beispielaufgaben präsentiert werden und du 16 Multiple Choice-Fragen beantwortest.</p>
-  <p>Für die Bearbeitung von je vier Beispielaufgaben hast du sechs Minuten Zeit. Die Einteilung dieser Zeit obliegt dir. Du solltest aber alle Lösungen nachvollzogen und alle Multiple Choice-Fragen beantwortet haben.. Nach Ablauf der sechs Minuten wirst du automatisch zur Befragung deines Flow-Erlebens und deiner kognitiven Beanspruchung weitergeleitet und kannst nicht mehr zurückgehen. Ein Timer wird eingeblendet.</p>
+  <p>Für die Bearbeitung von je vier Beispielaufgaben hast du sechs Minuten Zeit. Die Einteilung dieser Zeit obliegt dir. Du solltest aber alle Lösungen nachvollzogen und alle Multiple Choice-Fragen beantwortet haben. Nach Ablauf der sechs Minuten wirst du automatisch zur Befragung deines Flow-Erlebens und deiner kognitiven Beanspruchung weitergeleitet und kannst nicht mehr zurückgehen. Ein Timer wird eingeblendet.</p>
   `;
 
-  return <InstructionFrame html={html} finish={props.finish}/>;
+  return <InstructionFrame html={html} space finish={props.finish}/>;
 }
 
 export function InstructionFrame16b_II_sequenziell_group01(props) {
@@ -225,7 +223,7 @@ export function InstructionFrame16b_II_sequenziell_group01(props) {
   <p>Mit Betätigung der Leertaste wirst du zu Verständnisfragen weitergeleitet, bevor die Lernphase beginnt.</p>
   `;
 
-  return <InstructionFrame html={html} finish={props.finish}/>;
+  return <InstructionFrame html={html} space finish={props.finish}/>;
 }
 
 //TODO 17
@@ -237,7 +235,7 @@ export function InstructionFrame18(props) {
   <p>Bitte mach nun eine Pause von 10 Minuten. Gerne kannst du dir die Beine vertreten, durchlüften oder dir etwas zu trinken holen. Du siehst sogleich einen Timer. Bitte sei vor Ablauf der Zeit zurück und schalte alle Störungsquellen aus. Du wirst nach Ablauf der Zeit automatisch zum Test weitergeleitet.</p>
   `;
 
-  return <InstructionFrame html={html} finish={props.finish}/>;
+  return <InstructionFrame html={html} space finish={props.finish}/>;
 }
 
 export function InstructionFrame19(props) {
@@ -248,7 +246,7 @@ export function InstructionFrame19(props) {
   <p>Viel Spaß!</p>
   `;
 
-  return <InstructionFrame html={html} finish={props.finish}/>;
+  return <InstructionFrame html={html} space finish={props.finish}/>;
 }
 
 export function InstructionFrame20a(props) {
@@ -257,7 +255,7 @@ export function InstructionFrame20a(props) {
   <p>Bitte nutze [/] um Brüche auszudrücken. Bestätige deine Eingabe mit [Enter]. Du wirst dann automatisch weitergeleitet zur nächsten Aufgabe weitergeleitet.</p>
   `;
 
-  return <InstructionFrame html={html} finish={props.finish}/>;
+  return <InstructionFrame html={html} space finish={props.finish}/>;
 }
 
 export function InstructionFrame20b(props) {
@@ -268,7 +266,7 @@ export function InstructionFrame20b(props) {
   <p>Lies die Aufgaben aufmerksam durch, überlege genau und entscheide dich dann für eine Antwort. Es ist wichtig, dass du die offenen Fragen in ganzen Sätzen und so genau wie möglich beantwortest. Du kannst nicht mehr zurückgehen</p>
   `;
 
-  return <InstructionFrame html={html} finish={props.finish}/>;
+  return <InstructionFrame html={html} space finish={props.finish}/>;
 }
 export function InstructionFrame20c(props) {
   const html = `
@@ -279,9 +277,20 @@ export function InstructionFrame20c(props) {
   <p>Lies die Aufgaben aufmerksam durch, überlege gut und entscheide dich dann für eine Antwort. Du wirst nach deiner Antwortwahl automatisch zur nächsten Antwort weitergeleitet. Du kannst nicht mehr zurückgehen.</p>
   `;
 
-  return <InstructionFrame html={html} finish={props.finish}/>;
+  return <InstructionFrame html={html} space finish={props.finish}/>;
 }
 
 export function InstructionFrame21(props) {
   return <EBL01Video videoID={'outro'} finish={props.finish}/>
+}
+
+export function InstructionFrame22(props) {
+  const html = `
+  <h1>Abschließende Fragen</h1>
+<p>Diese Fragen sind zur Beurteilung der wissenschaftlichen Datenqualität unserer Studie besonders wichtig. Für die Berücksichtigung deiner anonymen Daten ist es beispielsweise wichtig, dass du dich hinreichend konzentrieren und dass du die Instruktionen lesen und die präsentierten Aufgaben verstehen konntest. </p>
+<p>Die Beantwortung der Fragen trägt wesentlich zur Datenqualität unserer Studie bei. Deine Antworten sind anonym und können somit nicht auf deine Person zurückgeführt werden. </p>
+<p>Es ist wichtig, dass du wahrheitsgetreu antwortest.</p>
+ `;
+
+  return <InstructionFrame html={html} space finish={props.finish}/>;
 }
