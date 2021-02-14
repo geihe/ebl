@@ -20,8 +20,8 @@ import {
   InstructionFrame09_II,
   InstructionFrame09_III
 } from "../../Frames/Instructions/InstructionFrame";
-import {DelayedButtonFrame} from "../../Frames/DelayedButtonFrame";
-import {BreakFrame} from "../../Frames/BreakFrame";
+import {CancelFrame} from "../../Frames/CancelFrame";
+import {DelayedFrame} from "../../Frames/DelayedFrame";
 
 export class EBL01Builder {
   constructor(t) {
@@ -56,10 +56,11 @@ export class EBL01Builder {
 
   buildSession1() {
     this.tlManager.add([
-      <DelayedButtonFrame delay={500}> *** </DelayedButtonFrame>,
+      <DelayedFrame space delay={0}>#####</DelayedFrame>,
+      <DelayedFrame cancelButton delay={3000}> *** </DelayedFrame>,
       {
         if: (lastlog) => lastlog === 'break',
-        then: <BreakFrame/>,
+        then: <CancelFrame/>,
       },
 
       <InstructionFrame01/>,

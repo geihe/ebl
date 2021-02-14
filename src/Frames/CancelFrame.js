@@ -1,21 +1,18 @@
 import React, {useContext} from 'react';
 import {LngContext} from "../helper/i18n";
-import {DelayedSpaceFrame} from "./DelayedSpaceFrame";
+import {DelayedFrame} from "./DelayedFrame";
 
 
-export function BreakFrame(props) {
+export function CancelFrame(props) {
   const t = useContext(LngContext);
 
   return (
-    <DelayedSpaceFrame
-      delay={86400000}
-      continueText={false}
-    >
+    <DelayedFrame noResponse>
       <h1>Das Experiment wurde abgebrochen.</h1>
       <h2>Es wurden keine Daten an den Server übertragen.</h2>
       <h2>Sie können das Browserfenster jetzt schließen..</h2>
 
-    </DelayedSpaceFrame>
+    </DelayedFrame>
   );
 }
 

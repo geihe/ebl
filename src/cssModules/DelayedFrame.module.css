@@ -10,10 +10,11 @@
 }
 
 .continue {
+    display: flex;
+    justify-content: space-around;
     color: darkblue;
     bottom: 10%;
     font-size: 18px;
-    text-align: center;
 }
 
 .elements {

@@ -1,5 +1,5 @@
 import React from 'react';
-import {DelayedSpaceFrame} from "../DelayedSpaceFrame";
+import {DelayedFrame} from "../DelayedFrame";
 import {Html} from "../../MicroComponents/Html";
 import {UniBielefeld} from "../../MicroComponents/UniBielefeld";
 import {config} from "../../assets/EBL_01/config";
@@ -10,13 +10,14 @@ export function InstructionFrame(props) {
   const {html} = props;
   return (<> //TODO bei kleiner Höhe des Bildschirms Höhen anpassen
       <UniBielefeld/>
-      <DelayedSpaceFrame
+      <DelayedFrame
+        space
         delay={config.instructions.delay}
         animation={config.instructions.animation}
         finish={props.finish}
       >
         <Html html={html}/>
-      </DelayedSpaceFrame>
+      </DelayedFrame>
     </>
   );
 }

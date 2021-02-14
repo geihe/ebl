@@ -32,7 +32,7 @@ export function DelayedButtonFrame(props) {
             className={continueClass}
             show={responseActive}>
         <Button intent={'Danger'} onClick={() =>props.finish('break')}>
-          {t(phrase.breakButton)}
+          {t(phrase.cancelButton)}
         </Button>
         <Button intent={'Success'} onClick={() =>props.finish('continue')}>
           {t(phrase.continueButton)}

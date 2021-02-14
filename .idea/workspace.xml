@@ -4,20 +4,20 @@
     <option name="SCOPE_TYPE" value="3" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c0a8d840-d2a4-41a1-9e79-f574c09cafbd" name="Default Changelist" comment="Einheitliche css-Datei für Instructions und MathCourse&#10;--&gt; in DelayedSpaceFrame eingebettet">
-      <change afterPath="$PROJECT_DIR$/src/Frames/BreakFrame.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Frames/DelayedButtonFrame.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Frames/DelayedFrame.js" afterDir="false" />
+    <list default="true" id="c0a8d840-d2a4-41a1-9e79-f574c09cafbd" name="Default Changelist" comment="Instruktionen bis 21 vorbereitet">
       <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Frames/DelayedSpaceFrame.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frames/DelayedSpaceFrame.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Frames/EBL/ElementsKeyFrame.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frames/EBL/ElementsKeyFrame.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Frames/BreakFrame.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frames/CancelFrame.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Frames/DelayedButtonFrame.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frames/DelayedButtonFrame.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Frames/DelayedFrame.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frames/DelayedFrame.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Frames/DelayedSpaceFrame.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Frames/Instructions/InstructionFrame.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frames/Instructions/InstructionFrame.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Frames/ToDoFrame.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frames/ToDoFrame.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/assets/EBL_01/EBL01Builder.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/EBL_01/EBL01Builder.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/EBL_01/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/EBL_01/config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/EBL_01/EBL01_ExampleFrames.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/EBL_01/EBL01_ExampleFrames.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/EBL_01/EBL01_MathCourse.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/EBL_01/EBL01_MathCourse.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/assets/ressourceLanguage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/ressourceLanguage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cssModules/DelayedSpaceFrame.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/cssModules/DelayedFrame.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/helper/TimelineManager.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/helper/TimelineManager.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cssModules/DelayedFrame.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/cssModules/DelayedFrame.module.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -236,7 +236,7 @@
       <workItem from="1613152360974" duration="11441000" />
       <workItem from="1613202011145" duration="9092000" />
       <workItem from="1613231210197" duration="15872000" />
-      <workItem from="1613286702021" duration="1616000" />
+      <workItem from="1613286702021" duration="6376000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1608320225945</created>
@@ -469,7 +469,14 @@
       <option name="project" value="LOCAL" />
       <updated>1613204461374</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="Instruktionen bis 21 vorbereitet">
+      <created>1613288614560</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1613288614560</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -504,7 +511,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="nextSession als Frame-element angefügt" />
     <MESSAGE value="Elemente &#10;&lt;ElementFinished&gt; und&#10;&lt;Pending&gt; erstellt" />
     <MESSAGE value="timeBetweenSessionsInSeconds &#10;in config-File ergänzt" />
     <MESSAGE value="Session-Verwaltung mit local-Storage erstellt" />
@@ -529,7 +535,8 @@
     <MESSAGE value="PrePostTest-File erstellt&#10;preTest und postTest aud Builder extrahiert" />
     <MESSAGE value="EBL01_ExampleFrames-File erstellt&#10;und in Builder umstrukturiert" />
     <MESSAGE value="Einheitliche css-Datei für Instructions und MathCourse&#10;--&gt; in DelayedSpaceFrame eingebettet" />
-    <option name="LAST_COMMIT_MESSAGE" value="Einheitliche css-Datei für Instructions und MathCourse&#10;--&gt; in DelayedSpaceFrame eingebettet" />
+    <MESSAGE value="Instruktionen bis 21 vorbereitet" />
+    <option name="LAST_COMMIT_MESSAGE" value="Instruktionen bis 21 vorbereitet" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
 </project>

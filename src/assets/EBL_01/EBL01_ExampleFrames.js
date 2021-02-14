@@ -2,7 +2,7 @@ import React from "react";
 import {config} from "./config";
 import {EblFrame} from "../../Frames/EBL/EblFrame";
 import {ImiFrame} from "../../Frames/ImiFrame";
-import {DelayedSpaceFrame} from "../../Frames/DelayedSpaceFrame";
+import {DelayedFrame} from "../../Frames/DelayedFrame";
 import {phrase} from "../ressourceLanguage";
 import {Shuffler} from "../../helper/Shuffle";
 import {FixationCrossFrame} from "../../Frames/FixationCrossFrame";
@@ -24,7 +24,8 @@ const processMeasures = [
     id: 'cognitive effort'
   },
   {
-    frame: (<DelayedSpaceFrame
+    frame: (<DelayedFrame
+      space
       continueText={phrase.continueText}
       delay={1000}
     >
@@ -33,7 +34,7 @@ const processMeasures = [
         von</p>
       <p style={{textAlign: 'center', fontSize: '150%', color: 'darkred'}}>1 (trifft nicht zu) bis 7 (trifft
         zu)...</p>
-    </DelayedSpaceFrame>),
+    </DelayedFrame>),
     nolog: true,
     noProgres: true,
     id: 'process-instruction'
