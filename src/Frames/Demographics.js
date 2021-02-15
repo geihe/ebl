@@ -5,11 +5,12 @@ import {LngContext} from "../helper/i18n";
 import {Form} from "../Forms/Form";
 import {MySelect} from "../Forms/MySelect";
 import {UniBielefeld} from "../MicroComponents/UniBielefeld";
+import {MyInput} from "../Forms/MyInput";
 
 export function Demographics(props) {
   const t = useContext(LngContext);
-
-  const initial = {degree: '', age: '', gender: '', nativeLanguage: ''};
+  const initial = {degree: '', age: '', gender: '', nativeLanguage: '', difficulties: '', diffcltText: ''};
+  let data=initial;
   const validationSchema = Yup.object().shape({
     degree: Yup.string()
       .required({en: 'Please enter your degree', de: 'Bitte geben Sie Ihren Bildungsabschluss ein'}),
@@ -22,11 +23,13 @@ export function Demographics(props) {
       .required({en: 'Please enter your gender', de: 'Bitte geben Sie Ihr Geschlecht ein'}),
     gender: Yup.string()
       .required({en: 'Please enter your native language', de: 'Bitte geben Sie Ihre Muttersprache ein'}),
+    difficulties: Yup.string()
+      .required({en: 'Please answer "yes" or "no"', de: 'Bitte antworte "Ja" oder "Nein"'}),
   });
 
   return (<>
       <UniBielefeld/>
-      <h1>Bitte beantworte diese Fragen über dich:</h1>
+      <h1>Bitte beantworte diese Fragen:</h1>
       <Form initial={initial} validationSchema={validationSchema} finish={props.finish}>
         <MySelect
           name={'degree'}
@@ -85,6 +88,20 @@ export function Demographics(props) {
             {label: 'Deutsch und weiter(e) Sprache(n) (multilingual)', value: 'multilingual'},
             {label: 'andere', value: 30},
           ]}
+        />
+
+        <MyRadioGroup
+          name={'difficulties'}
+          label={{de: 'Hattest du besondere Schwierigkeiten bei der Bearbeitung der Aufgaben?'}}
+          inline={false}
+          options={[
+            {label: {en: 'yes', de: 'Ja'}, value: 'yes'},
+            {label: {en: 'no', de: 'Nein'}, value: 'no'},
+          ]}/>
+
+        <MyInput
+          name={'diffcltText'}
+          placeholder={'Schwierigkeiten, falls es welche gab'}
         />
       </Form>
     </>

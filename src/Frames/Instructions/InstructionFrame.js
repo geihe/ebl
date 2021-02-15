@@ -6,6 +6,7 @@ import {config} from "../../assets/EBL_01/config";
 import {EBL01Video} from "../EBL/EBL01Video";
 import {ToDoFrame} from "../ToDoFrame";
 import {LikertFrame} from "../LikertFrame";
+import {DelayedRadioFrame} from "../DelayedRadioFrame";
 
 export function InstructionFrame(props) {
   const {html, ...restProps} = props;
@@ -299,7 +300,7 @@ export function InstructionFrame22(props) {
 }
 
 
-export function InstructionFrame22bI(props) {
+export function InstructionFrame22bIa(props) {
   return (
     <>
       <UniBielefeld/>
@@ -310,7 +311,8 @@ export function InstructionFrame22bI(props) {
         finish={props.finish}/>
     </>)
 }
-export function InstructionFrame22bII(props) {
+
+export function InstructionFrame22bIb(props) {
   return (
     <>
       <UniBielefeld/>
@@ -321,3 +323,88 @@ export function InstructionFrame22bII(props) {
         finish={props.finish}/>
     </>)
 }
+
+export function InstructionFrame22bIIb(props) {
+  const options = [
+    {
+      label: 'Ich habe schon einmal an DERSELBEN Studie teilgenommen.',
+      value: 'selbe Studie teilgenommen'
+    },
+    {
+      label: 'Ich habe schon einmal an einer ÄHNLICHEN Studie teilgenommen.',
+      value: 'ähnliche Studie teilgenommen'
+    },
+    {
+      label: 'Ich habe noch NICHT an dieser oder einer ähnlichen Studie teilgenommen.',
+      value: 'keine ähnliche Studie teilgenommen'
+    },
+  ]
+
+  return <>
+    <UniBielefeld/>
+    <DelayedRadioFrame
+    large
+    options={options}
+    label={'Wähle die Antwort, die auf dich zutrifft:'}
+    name={'teilgenommen?'}
+    finish={props.finish}
+  />
+  </>
+}
+
+export function InstructionFrame22bIIc(props) {
+  const options = [
+    {
+      label: 'Nein',
+      value: 'Nein'
+    },
+    {
+      label: 'Eine Prüfung',
+      value: '1 Prüfung'
+    },
+    {
+      label: 'Zwei oder mehr Prüfungen',
+      value: '2 oder mehr Prüfungen'
+    },
+  ]
+
+  return <>
+    <UniBielefeld/>
+    <DelayedRadioFrame
+      large
+      options={options}
+      label={'Wähle die Antwort, die auf dich zutrifft:'}
+      name={'teilgenommen?'}
+      finish={props.finish}
+    />
+  </>
+}
+
+export function InstructionFrame22bIId(props) {
+  const options = [
+    {
+      label: 'Nein',
+      value: 'Nein'
+    },
+    {
+      label: 'Keine Angabe',
+      value: 'Keine Angabe'
+    },
+    {
+      label: 'Ja',
+      value: 'JA'
+    },
+  ]
+
+  return <>
+    <UniBielefeld/>
+    <DelayedRadioFrame
+    large
+    options={options}
+    label={'Hast du externe Hilfsmittel verwendet (bspw. Taschenrechner oder dir Notizen auf einem Blatt notiert)?'}
+    name={'Hilsmittel?'}
+    finish={props.finish}
+  />
+  </>
+}
+

@@ -156,7 +156,7 @@ class TLif extends TimelineElement {
     return TimelineElement.mergeArrays(nested);
   }
 
-  setCumEffort(start) {
+  setCumEffort(start) { //TODO klappt nicht
     this.then.setCumEffort(start, this.effort / this.then.effort);
 
     if (this.else.setCumEffort) {

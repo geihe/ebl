@@ -5,6 +5,7 @@
 .likertbox {
     background-color: #9babc1;
     border: 1px solid #5388c3;
+    border-radius: 2px;
     width: 50px;
     height: 50px;
     display: flex;
@@ -45,7 +46,9 @@
 }
 
 .likert {
-    background-color: #ccc;
+    background-color: #ddd;
+    border: 1px solid #aaf;
+    border-radius: 5px;
     font-size: 125%;
     padding: 10px;
     display: flex;

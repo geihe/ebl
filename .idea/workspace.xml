@@ -4,16 +4,19 @@
     <option name="SCOPE_TYPE" value="3" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c0a8d840-d2a4-41a1-9e79-f574c09cafbd" name="Default Changelist" comment="DelayedSpaceFrame und DelayedButtonFrame in&#10;&#10;DelayedFrame&#10;&#10;integriert und Programm angepasst.">
-      <change afterPath="$PROJECT_DIR$/src/Components/Instruction10.js" afterDir="false" />
+    <list default="true" id="c0a8d840-d2a4-41a1-9e79-f574c09cafbd" name="Default Changelist" comment="Instruktionen 22b I ergänzt">
+      <change afterPath="$PROJECT_DIR$/src/Frames/DelayedRadioFrame.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Demographics.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Demographics.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Frames/CancelFrame.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frames/CancelFrame.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Frames/DelayedButtonFrame.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Demographics.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frames/Demographics.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Forms/Form.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Forms/Form.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Frames/Instructions/InstructionFrame.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frames/Instructions/InstructionFrame.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/assets/EBL_01/EBL01Builder.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/EBL_01/EBL01Builder.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cssModules/DelayedFrame.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/cssModules/DelayedFrame.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cssModules/Form.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/cssModules/Form.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cssModules/Likert.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/cssModules/Likert.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/helper/TimelineManager.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/helper/TimelineManager.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,7 +67,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="js.last.introduce.type" value="CONST" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/Components" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/Frames" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -79,18 +82,18 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="G:\OneDrive_Marienschule\Marienschule Krefeld\Programmprojekte - Dokumente\react\bipsy\ebl\src\Components" />
       <recent name="G:\OneDrive_Marienschule\Marienschule Krefeld\Programmprojekte - Dokumente\react\bipsy\ebl\src\Frames" />
+      <recent name="G:\OneDrive_Marienschule\Marienschule Krefeld\Programmprojekte - Dokumente\react\bipsy\ebl\src\Components" />
       <recent name="G:\OneDrive_Marienschule\Marienschule Krefeld\Programmprojekte - Dokumente\react\bipsy\ebl\src\Frames\Instructions" />
       <recent name="G:\OneDrive_Marienschule\Marienschule Krefeld\Programmprojekte - Dokumente\react\bipsy\ebl\src\MicroComponents" />
       <recent name="G:\OneDrive_Marienschule\Marienschule Krefeld\Programmprojekte - Dokumente\react\bipsy\ebl\src\assets\EBL_01" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="G:\OneDrive_Marienschule\Marienschule Krefeld\Programmprojekte - Dokumente\react\bipsy\ebl\src\Frames" />
       <recent name="G:\OneDrive_Marienschule\Marienschule Krefeld\Programmprojekte - Dokumente\react\bipsy\ebl\src\Frames\Instructions" />
       <recent name="G:\OneDrive_Marienschule\Marienschule Krefeld\Programmprojekte - Dokumente\react\bipsy\ebl\src\assets\EBL_01" />
       <recent name="G:\OneDrive_Marienschule\Marienschule Krefeld\Programmprojekte - Dokumente\react\bipsy\ebl\src\Frames\RheinbergFss" />
       <recent name="G:\OneDrive_Marienschule\Marienschule Krefeld\Programmprojekte - Dokumente\react\bipsy\ebl\src\Frames\EBL" />
-      <recent name="G:\OneDrive_Marienschule\Marienschule Krefeld\Programmprojekte - Dokumente\react\bipsy\ebl\src" />
     </key>
   </component>
   <component name="RestClientSettings">
@@ -233,7 +236,10 @@
       <workItem from="1613202011145" duration="9092000" />
       <workItem from="1613231210197" duration="15872000" />
       <workItem from="1613286702021" duration="10475000" />
-      <workItem from="1613318087713" duration="5743000" />
+      <workItem from="1613318087713" duration="12669000" />
+      <workItem from="1613376048239" duration="597000" />
+      <workItem from="1613385448519" duration="3113000" />
+      <workItem from="1613396721969" duration="6514000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1608320225945</created>
@@ -480,7 +486,21 @@
       <option name="project" value="LOCAL" />
       <updated>1613293406416</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="Demographics ergänzt">
+      <created>1613327187376</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1613327187376</updated>
+    </task>
+    <task id="LOCAL-00037" summary="Instruktionen 22b I ergänzt">
+      <created>1613329688607</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1613329688607</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -515,8 +535,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="timeBetweenSessionsInSeconds &#10;in config-File ergänzt" />
-    <MESSAGE value="Session-Verwaltung mit local-Storage erstellt" />
     <MESSAGE value="Bei neuem Experiment:&#10;holt session, userId, groupId vom Server" />
     <MESSAGE value="save data to server after session" />
     <MESSAGE value="added Minicomponent" />
@@ -540,7 +558,9 @@
     <MESSAGE value="Einheitliche css-Datei für Instructions und MathCourse&#10;--&gt; in DelayedSpaceFrame eingebettet" />
     <MESSAGE value="Instruktionen bis 21 vorbereitet" />
     <MESSAGE value="DelayedSpaceFrame und DelayedButtonFrame in&#10;&#10;DelayedFrame&#10;&#10;integriert und Programm angepasst." />
-    <option name="LAST_COMMIT_MESSAGE" value="DelayedSpaceFrame und DelayedButtonFrame in&#10;&#10;DelayedFrame&#10;&#10;integriert und Programm angepasst." />
+    <MESSAGE value="Demographics ergänzt" />
+    <MESSAGE value="Instruktionen 22b I ergänzt" />
+    <option name="LAST_COMMIT_MESSAGE" value="Instruktionen 22b I ergänzt" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
 </project>

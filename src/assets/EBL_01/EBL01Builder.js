@@ -2,7 +2,7 @@ import React from 'react';
 import {TimelineManager} from "../../helper/TimelineManager";
 import {testTimeline} from "../../Test/testTimeline";
 import {ToDoFrame} from "../../Frames/ToDoFrame";
-import {Demographics} from "../../Components/Demographics";
+import {Demographics} from "../../Frames/Demographics";
 import {EBLPause} from "../../Frames/EBL/EBLPause";
 import {postFrames, preFrames} from "./EBL01_PrePostTest";
 import {exampleFrames} from "./EBL01_ExampleFrames";
@@ -29,8 +29,11 @@ import {
   InstructionFrame18,
   InstructionFrame19,
   InstructionFrame22,
-  InstructionFrame22bI,
-  InstructionFrame22bII
+  InstructionFrame22bIa,
+  InstructionFrame22bIb,
+  InstructionFrame22bIIb,
+  InstructionFrame22bIIc,
+  InstructionFrame22bIId
 } from "../../Frames/Instructions/InstructionFrame";
 import {CancelFrame} from "../../Frames/CancelFrame";
 import {FixationCrossFrame} from "../../Frames/FixationCrossFrame";
@@ -73,10 +76,13 @@ export class EBL01Builder {
     };
 
     this.tlManager.add([
-      <InstructionFrame22bI/>, <FixationCrossFrame nocross/>,
-      <InstructionFrame22bII/>, <FixationCrossFrame nocross/>,
       <InstructionFrame22/>,
       <Demographics/>,
+      <InstructionFrame22bIa/>, <FixationCrossFrame nocross/>,
+      <InstructionFrame22bIb/>, <FixationCrossFrame nocross/>,
+      <InstructionFrame22bIIb/>, <FixationCrossFrame nocross/>,
+      <InstructionFrame22bIIc/>, <FixationCrossFrame nocross/>,
+      <InstructionFrame22bIId/>, <FixationCrossFrame nocross/>,
       <InstructionFrame01/>,
       <InstructionFrame02/>,
       <InstructionFrame03/>,

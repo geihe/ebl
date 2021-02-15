@@ -1,6 +1,7 @@
 import React, {useContext, useRef, useState} from 'react';
 import {Button} from "@blueprintjs/core";
 import {LngContext} from "../helper/i18n";
+import styles from "../cssModules/Form.module.css"
 
 export function Form(props) {
   const validationSchema = props.validationSchema;
@@ -59,7 +60,7 @@ export function Form(props) {
       'key': c.props.name+'-'+index,
     }))
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} className={styles.form}>
       {components}
       <Button type="submit" intent={'success'} disabled={!isValid.current && showErrors.current}>
         {t({en: 'Continue', de: 'Weiter'})}
