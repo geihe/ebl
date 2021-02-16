@@ -37,6 +37,7 @@ import {
 } from "../../Frames/Instructions/InstructionFrame";
 import {CancelFrame} from "../../Frames/CancelFrame";
 import {FixationCrossFrame} from "../../Frames/FixationCrossFrame";
+import {Test} from "../../Frames/Test";
 
 export class EBL01Builder {
   constructor(t) {
@@ -76,6 +77,10 @@ export class EBL01Builder {
     };
 
     this.tlManager.add([
+      {
+        repeat: [<InstructionFrame09_I/>, <InstructionFrame09_II/>, <InstructionFrame09_III/>,<Test/>,],
+        until: (lastlog)=>lastlog.correct
+      },
       <InstructionFrame22/>,
       <Demographics/>,
       <InstructionFrame22bIa/>, <FixationCrossFrame nocross/>,
@@ -92,9 +97,6 @@ export class EBL01Builder {
       <InstructionFrame07/>,cancelTest,
       <InstructionFrame08_I/>,cancelTest,
       <InstructionFrame08_II/>,cancelTest,
-      <InstructionFrame09_I/>,
-      <InstructionFrame09_II/>,
-      <InstructionFrame09_III/>,
       <InstructionFrame10/>,
       <InstructionFrame11/>,
       preFrames,

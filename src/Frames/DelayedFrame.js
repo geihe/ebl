@@ -14,23 +14,26 @@ export function DelayedFrame(props) {
     children,
     continueText = phrase.continueText,
     delay = 3000, //delay=0 -> Continue-Element erscheint sofort
-    noResponse,   //es erscheint kein Continue-Element
-    space,        //
-    cancelButton,
+    auto,         //automatisch weiter nach Zeit
+    noResponse,   //es erscheint kein Continue-Element, Frame wird endlos angezeigt
+    space,        //Weiter mit Leertaste
+    cancelButton, //Button abbrechen hinzufügen
     contentClass = styles.zone + ' ' + styles.content + ' ' + styles.elements,
     continueClass = styles.zone + ' ' + styles.continue,
   } = props;
   const [responseActive, setResponseActive] = useStateDelayed(!(delay > 0) && !noResponse);
   useKeyListenerOnce(' ', () => props.finish(), responseActive && space);
-
-  if (!responseActive && !noResponse) {
+  if (auto) {
+    setResponseActive(() => props.finish(), delay);
+  }
+  if (!responseActive && !noResponse && !auto) {
     setResponseActive(true, delay);
   }
 
   let continueElement;
   if (space) {
     continueElement = <Html html={t(continueText)}/>;
-  } else {
+  } else if (!auto) {
     continueElement =
       <>
         {cancelButton ?

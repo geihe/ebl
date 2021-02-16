@@ -5,18 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c0a8d840-d2a4-41a1-9e79-f574c09cafbd" name="Default Changelist" comment="Instruktionen 22b I ergänzt">
-      <change afterPath="$PROJECT_DIR$/src/Frames/DelayedRadioFrame.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Frames/Test.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Demographics.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frames/Demographics.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Forms/Form.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Forms/Form.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Frames/DelayedFrame.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frames/DelayedFrame.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Frames/Instructions/InstructionFrame.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frames/Instructions/InstructionFrame.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/assets/EBL_01/EBL01Builder.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/EBL_01/EBL01Builder.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cssModules/DelayedFrame.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/cssModules/DelayedFrame.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cssModules/Form.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/cssModules/Form.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cssModules/Likert.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/cssModules/Likert.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/helper/TimelineManager.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/helper/TimelineManager.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -240,6 +234,7 @@
       <workItem from="1613376048239" duration="597000" />
       <workItem from="1613385448519" duration="3113000" />
       <workItem from="1613396721969" duration="6514000" />
+      <workItem from="1613461535458" duration="4006000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1608320225945</created>

@@ -143,7 +143,10 @@ export function InstructionFrame09_I(props) {
 export function InstructionFrame09_II(props) {
   const html = `
   <h1>Vorabinformation II</h1>
-  <p>In der ersten, heutigen Sitzung absolvierst du zuerst einen Vortest mit 12 Aufgaben, in dem deine Fähigkeiten im Umgang mit Wahrscheinlichkeiten geprüft werden. Daraufhin erhältst du allgemeine Erklärungen über Urnenmodelle und Stochastik. Im Anschluss daran lernst du vier Prinzipien der Wahrscheinlichkeitsrechnung anhand von 16 Lösungsbeispielen kennen. Zu jedem Lösungsbeispiel erhältst du Fragen im Multiple Choice-Format. Nach vier bearbeiteten Aufgaben wirst du gebeten, Fragen zu deiner kognitiven Beanspruchung und zu deinem Flow-Erleben zu beantworten. Nach Beendigung der Lernphase erfolgt eine 10-minütige Pause. Zum Abschluss der ersten Session sollst du die Prinzipien in einer Testphase anhand von 22 Testaufgaben und 16 Verifikationsaufgaben anwenden. Es ist keinerlei Vorwissen von deiner Seite notwendig – alle Informationen erhältst du ausschließlich in dieser Studie.  </p>
+  <p>In der ersten, heutigen Sitzung absolvierst du zuerst einen <strong>Vortest mit 12 Aufgaben</strong>, in dem deine Fähigkeiten im Umgang mit Wahrscheinlichkeiten geprüft werden. Daraufhin erhältst du <strong>allgemeine Erklärungen über Urnenmodelle und Stochastik</strong>. <br/>
+  Im Anschluss daran lernst du vier Prinzipien der Wahrscheinlichkeitsrechnung <strong>anhand von 16 Lösungsbeispielen</strong> kennen. Zu jedem Lösungsbeispiel erhältst du Fragen im Multiple Choice-Format. Nach vier bearbeiteten Aufgaben wirst du gebeten, <strong>Fragen zu deiner kognitiven Beanspruchung und zu deinem Flow-Erleben</strong> zu beantworten.<br/>
+   Nach Beendigung der Lernphase erfolgt eine <strong>10-minütige Pause</strong>. Zum Abschluss der ersten Session sollst du die Prinzipien in einer Testphase anhand von <strong>22 Testaufgaben</strong> und <strong>16 Verifikationsaufgaben</strong> anwenden. <br/>
+   Es ist keinerlei Vorwissen von deiner Seite notwendig – alle Informationen erhältst du ausschließlich in dieser Studie.  </p></>
 
   `;
 
