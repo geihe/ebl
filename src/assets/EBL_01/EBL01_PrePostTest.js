@@ -9,5 +9,6 @@ export const preFrames = preTestItems
   .map(s => rpptm.getStimulusResponseElement(s, preTestConfig));
 
 const {items: postTestItems, ...postTestConfig} = config.postTest;
-export const postFrames = postTestItems
-  .map(s => rpptm.getStimulusResponseElement(s, postTestConfig));
+export const postFrames = postTestItems.map(itemList =>
+  itemList.map(s => rpptm.getStimulusResponseElement(s, postTestConfig))
+);

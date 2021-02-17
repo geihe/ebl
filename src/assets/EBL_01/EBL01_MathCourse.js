@@ -26,7 +26,6 @@ export const EBL01_MathCourse = items.map(content =>
     space
     delay={config.mathCourse.delay}
   >
-
     {content}
   </DelayedFrame>
 );

@@ -258,7 +258,7 @@ export function InstructionFrame19(props) {
 export function InstructionFrame20a(props) {
   const html = `
   <p>Dir werden nun 12 Aufgaben präsentiert, deren Lösungen du berechnen und in das dir zur Verfügung stehende Notizfeld eintippen sollst. </p>
-  <p>Bitte nutze [/] um Brüche auszudrücken. Bestätige deine Eingabe mit [Enter]. Du wirst dann automatisch weitergeleitet zur nächsten Aufgabe weitergeleitet.</p>
+  <p>Bitte nutze [/] um Brüche auszudrücken. Bestätige deine Eingabe mit [Enter]. Du wirst dann automatisch zur nächsten Aufgabe weitergeleitet.</p>
   `;
 
   return <InstructionFrame html={html} space finish={props.finish}/>;
@@ -267,8 +267,8 @@ export function InstructionFrame20a(props) {
 export function InstructionFrame20b(props) {
   const html = `
   <p>Vielen Dank für die Berechnung der Aufgaben!</p>
-  <p>Dir werden nun zehn weitere Aufgaben präsentiert. Vier Aufgaben erfordern, dass du aus vier Antwortmöglichkeiten eine Antwort auswählst, die die Lösung des Problems korrekt beschreibt. Wähle deine Antwort durch Klicken auf den Kreis vor der entsprechenden Antwortalternative. Du wirst nach deiner Antwortwahl automatisch zur nächsten Antwort weitergeleitet.</p>
-  <p>Sechs weitere Aufgaben fordern sind offene Fragen, die von dir eine Eingabe per Tastatur erfordern. Nutze dafür das dir zur Verfügung stehende Notizfeld, um deine Antwort zu notieren und bestätige deine Eingabe mit [Enter] Du wirst dann zur nächsten Aufgabe weitergeleitet.</p>
+  <p>Dir werden nun zehn weitere Aufgaben präsentiert. Vier Aufgaben erfordern, dass du aus vier Antwortmöglichkeiten eine Antwort auswählst. Du wirst nach deiner Antwortwahl automatisch zur nächsten Antwort weitergeleitet.</p>
+  <p>Sechs weitere Aufgaben fordern sind offene Fragen, die von dir eine Eingabe per Tastatur erfordern. Nutze dafür das dir zur Verfügung stehende Notizfeld, um deine Antwort zu notieren und bestätige deine Eingabe mit [Enter].</p>
   <p>Lies die Aufgaben aufmerksam durch, überlege genau und entscheide dich dann für eine Antwort. Es ist wichtig, dass du die offenen Fragen in ganzen Sätzen und so genau wie möglich beantwortest. Du kannst nicht mehr zurückgehen</p>
   `;
 

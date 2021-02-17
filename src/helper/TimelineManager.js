@@ -15,7 +15,6 @@ export class TimelineManager {
     const tl = TimelineElement.convert(this.timelineRec);
     tl.setCumEffort(0);
     tl.normCumEffort(tl.effort);
-
     return tl.flat().map((el, i) => {
       return {...el, key: i}
     });
@@ -141,7 +140,11 @@ class TLif extends TimelineElement {
       TimelineElement.convert([].concat(ifSource.then)) : [];
     this.else = ifSource.else ?
       TimelineElement.convert([].concat(ifSource.else)) : [];
-    this.effort = (this.then.effort + this.else.effort) / 2;
+
+    const thenEffort = this.then.effort || 0;
+    const elseEffort = this.else.effort || 0;
+    this.effort = (thenEffort + elseEffort) / 2;
+    this.effort = Math.max(thenEffort, elseEffort);
   }
 
   flat() {
@@ -157,6 +160,8 @@ class TLif extends TimelineElement {
   }
 
   setCumEffort(start) { //TODO klappt nicht
+
+    console.log(start, this.effort, this.then.effort, this.else.effort);
     this.then.setCumEffort(start, this.effort / this.then.effort);
 
     if (this.else.setCumEffort) {
