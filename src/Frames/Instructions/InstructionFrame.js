@@ -4,7 +4,6 @@ import {Html} from "../../MicroComponents/Html";
 import {UniBielefeld} from "../../MicroComponents/UniBielefeld";
 import {config} from "../../assets/EBL_01/config";
 import {EBL01Video} from "../EBL/EBL01Video";
-import {ToDoFrame} from "../ToDoFrame";
 import {LikertFrame} from "../LikertFrame";
 import {DelayedRadioFrame} from "../DelayedRadioFrame";
 
@@ -129,12 +128,12 @@ export function InstructionFrame08_II(props) {
   return <InstructionFrame html={html} cancelButton finish={props.finish}/>;
 }
 
-
 export function InstructionFrame09_I(props) {
   const html = `
   <h1>Vorabinformation I</h1>
-  <p>Durch deine Teilnahme erwirbst du nicht nur neues Wissen, sondern erhältst auch einen Einblick in die aktuelle Forschung. Außerdem erhältst du für deine Teilnahme bei Bedarf 2,5 Versuchspersonenstunden für dein Psychologiestudium.</p>
-  <p>Durch deine Teilnahme unterstützt du den Informationsgewinn zu Prozessen beim Lernen und somit die Erweiterung des bisherigen Kenntnisstands der Forschung. Deine Teilnahme ist mit keinerlei Risiken für dich verbunden. Sie erfolgt anonym. Ein Rückschluss von den erhobenen Daten auf deine Person ist nicht möglich. Die Daten werden selbstverständlich vertraulich behandelt und ausschließlich für den angegebenen Forschungszweck verwendet. Durch Beenden der Teilnahme hast du bis zum Ende der Sitzung die Möglichkeit, der Speicherung der Daten nicht zuzustimmen. </p>
+  <p>Schön, dass du zugestimmt hast. Dann kann es gleich losgehen.</p>
+  <p>Zunächst bekommst du weitere Informationen über den Ablauf des Experiments. Es ist wichtig, dass du die einzelnen Phasen gut kennst.</p>
+  <p>Deshalb folgt nach den nächsten drei Seiten eine kleine Aufgabe für dich.</p>
   `;
 
   return <InstructionFrame html={html} space finish={props.finish}/>;
@@ -143,6 +142,16 @@ export function InstructionFrame09_I(props) {
 export function InstructionFrame09_II(props) {
   const html = `
   <h1>Vorabinformation II</h1>
+  <p>Durch deine Teilnahme erwirbst du nicht nur neues Wissen, sondern erhältst auch einen Einblick in die aktuelle Forschung. Außerdem erhältst du für deine Teilnahme bei Bedarf 2,5 Versuchspersonenstunden für dein Psychologiestudium.</p>
+  <p>Durch deine Teilnahme unterstützt du den Informationsgewinn zu Prozessen beim Lernen und somit die Erweiterung des bisherigen Kenntnisstands der Forschung. Deine Teilnahme ist mit keinerlei Risiken für dich verbunden. Sie erfolgt anonym. Ein Rückschluss von den erhobenen Daten auf deine Person ist nicht möglich. Die Daten werden selbstverständlich vertraulich behandelt und ausschließlich für den angegebenen Forschungszweck verwendet. Durch Beenden der Teilnahme hast du bis zum Ende der Sitzung die Möglichkeit, der Speicherung der Daten nicht zuzustimmen. </p>
+  `;
+
+  return <InstructionFrame html={html} space finish={props.finish}/>;
+}
+
+export function InstructionFrame09_III(props) {
+  const html = `
+  <h1>Vorabinformation III</h1>
   <p>In der ersten, heutigen Sitzung absolvierst du zuerst einen <strong>Vortest mit 12 Aufgaben</strong>, in dem deine Fähigkeiten im Umgang mit Wahrscheinlichkeiten geprüft werden. Daraufhin erhältst du <strong>allgemeine Erklärungen über Urnenmodelle und Stochastik</strong>. <br/>
   Im Anschluss daran lernst du vier Prinzipien der Wahrscheinlichkeitsrechnung <strong>anhand von 16 Lösungsbeispielen</strong> kennen. Zu jedem Lösungsbeispiel erhältst du Fragen im Multiple Choice-Format. Nach vier bearbeiteten Aufgaben wirst du gebeten, <strong>Fragen zu deiner kognitiven Beanspruchung und zu deinem Flow-Erleben</strong> zu beantworten.<br/>
    Nach Beendigung der Lernphase erfolgt eine <strong>10-minütige Pause</strong>. Zum Abschluss der ersten Session sollst du die Prinzipien in einer Testphase anhand von <strong>22 Testaufgaben</strong> und <strong>16 Verifikationsaufgaben</strong> anwenden. <br/>
@@ -154,9 +163,9 @@ export function InstructionFrame09_II(props) {
 }
 
 
-export function InstructionFrame09_III(props) {
+export function InstructionFrame09_IV(props) {
   const html = `
-  <h1>Vorabinformation III</h1>
+  <h1>Vorabinformation IV</h1>
   <p>Nach einer Woche erfolgt in einer zweiten Sitzung zuerst eine weitere Testphase, in der du die heute gelernten Prinzipien erneut anwenden sollst. Abschließend erfolgt ein Test zum schlussfolgernden Denken. </p>
   <p>Die Studie erfolgt also in zwei Sitzungen. Die erste absolvierst du jetzt. Die zweite Sitzung solltest du möglichst in genau sieben Tagen zur gleichen Uhrzeit absolvieren. An diese zweite Sitzung wirst du automatisch per Mail erinnert. Du wirst am Ende der ersten Sitzung aufgefordert deine E-Mail-Adresse anzugeben. Beide Sitzungen nehmen erfahrungsgemäß ca. 2,5 Stunden in Anspruch.</p>
   `;
@@ -164,9 +173,6 @@ export function InstructionFrame09_III(props) {
   return <InstructionFrame html={html} space finish={props.finish}/>;
 }
 
-export function InstructionFrame10(props) {
-  return <ToDoFrame text={'Formular: Wurde der Ablauf verstanden?'} finish={props.finish}/>;
-}
 
 export function InstructionFrame11(props) {
   const html = `

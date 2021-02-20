@@ -4,18 +4,13 @@
     <option name="SCOPE_TYPE" value="3" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c0a8d840-d2a4-41a1-9e79-f574c09cafbd" name="Default Changelist" comment="Test.js mit Testaufgabe las drag'n drop">
+    <list default="true" id="c0a8d840-d2a4-41a1-9e79-f574c09cafbd" name="Default Changelist" comment="postFrames in 3 Gruppen aufgeteilt, damit man jeweils eine Instruktion davorschalten kann">
       <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/YesNoSure.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/YesNoSure.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Frames/EBL/EBLPause.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frames/EBL/EBLPause.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Frames/Instructions/InstructionFrame.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frames/Instructions/InstructionFrame.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Frames/Test.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frames/Test.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/assets/EBL_01/EBL01Builder.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/EBL_01/EBL01Builder.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/EBL_01/EBL01_MathCourse.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/EBL_01/EBL01_MathCourse.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/EBL_01/EBL01_PrePostTest.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/EBL_01/EBL01_PrePostTest.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/EBL_01/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/EBL_01/config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/helper/TimelineManager.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/helper/TimelineManager.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/EBL_01/EBL01_ExampleFrames.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/EBL_01/EBL01_ExampleFrames.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -242,7 +237,8 @@
       <workItem from="1613461535458" duration="8999000" />
       <workItem from="1613480924857" duration="342000" />
       <workItem from="1613487737582" duration="10357000" />
-      <workItem from="1613590467501" duration="2815000" />
+      <workItem from="1613590467501" duration="4385000" />
+      <workItem from="1613820654255" duration="1798000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1608320225945</created>
@@ -510,7 +506,14 @@
       <option name="project" value="LOCAL" />
       <updated>1613466256221</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="postFrames in 3 Gruppen aufgeteilt, damit man jeweils eine Instruktion davorschalten kann">
+      <created>1613594339797</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1613594339797</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -545,7 +548,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="save data to server after session" />
     <MESSAGE value="added Minicomponent" />
     <MESSAGE value="added Frame EBL01Video" />
     <MESSAGE value="bugfix&#10;added maxLines={4} to EditableText" />
@@ -570,7 +572,8 @@
     <MESSAGE value="Demographics ergänzt" />
     <MESSAGE value="Instruktionen 22b I ergänzt" />
     <MESSAGE value="Test.js mit Testaufgabe las drag'n drop" />
-    <option name="LAST_COMMIT_MESSAGE" value="Test.js mit Testaufgabe las drag'n drop" />
+    <MESSAGE value="postFrames in 3 Gruppen aufgeteilt, damit man jeweils eine Instruktion davorschalten kann" />
+    <option name="LAST_COMMIT_MESSAGE" value="postFrames in 3 Gruppen aufgeteilt, damit man jeweils eine Instruktion davorschalten kann" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
 </project>

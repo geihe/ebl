@@ -8,6 +8,7 @@ import {Shuffler} from "../../helper/Shuffle";
 import {FixationCrossFrame} from "../../Frames/FixationCrossFrame";
 import {fssItems} from "./fssItems";
 import {EBL01_ExampleManager} from "./EBL01_ExampleManager";
+import {Icon} from "@blueprintjs/core";
 
 const processMeasures = [
   {
@@ -66,11 +67,15 @@ export function exampleFrames(group) {
   const rem = new EBL01_ExampleManager();
 
   return exampleItems.map(itemGroup => {
-      return [{
+    const waitFrame = <DelayedFrame noResponse>
+      <h1><Icon icon={'time'} iconSize={20}/> Bitte warten</h1>
+      <p>Du hast deine Lernzeit nicht vollständig genutzt. Bitte warte </p>
+    </DelayedFrame>;    //TODO Frame verbessern
+    return [{
         timer: config.timeForExamples,
-        frames: itemGroup.map(s =>
-          <EblFrame config={exampleConfig} content={rem.string2html(s)}/>)
-
+        frames: itemGroup
+          .map(s => <EblFrame config={exampleConfig} content={rem.string2html(s)}/>)
+          .concat(waitFrame)
       }].concat(processMeasures);
     }
   )

@@ -102,7 +102,7 @@ export function Test(props) {
         auto
         data={data.current}
         finish={()=>props.finish(data.current)}>
-        Richtig!<br/>Du wirst nun automatisch weitergeleitet
+        <h1>Richtig!</h1><br/>Du wirst nun automatisch weitergeleitet...
       </DelayedFrame>
     case 'wrongOrder':
       return <DelayedFrame
@@ -110,7 +110,7 @@ export function Test(props) {
         auto
         data={data.current}
         finish={()=>props.finish(data.current)}>
-        Das war nicht die richtige Reihenfolge. <br/>Lies die Versuchbeschreibung noch einmal gut durch.
+        <h1>Das war nicht die richtige Reihenfolge.</h1> <br/>Lies die Versuchbeschreibung noch einmal gut durch.
       </DelayedFrame>
     default:
       return (

@@ -18,6 +18,7 @@ import {
   InstructionFrame09_I,
   InstructionFrame09_II,
   InstructionFrame09_III,
+  InstructionFrame09_IV,
   InstructionFrame11,
   InstructionFrame12,
   InstructionFrame16a_I_simultan_group23,
@@ -78,9 +79,6 @@ export class EBL01Builder {
     };
 
     this.tlManager.add([
-      <InstructionFrame20a/>, postFrames[0],
-      <InstructionFrame20b/>, postFrames[1],
-      <InstructionFrame20c/>, postFrames[2],
       <InstructionFrame01/>,
       <ToDoFrame text={'Video Einleitung '}/>,
       <InstructionFrame03/>,
@@ -91,7 +89,7 @@ export class EBL01Builder {
       <InstructionFrame08_II/>,cancelTest,
       <InstructionFrame06/>,
       {
-        repeat: [<InstructionFrame09_I/>, <InstructionFrame09_II/>, <InstructionFrame09_III/>,<Test/>,],
+        repeat: [<InstructionFrame09_I/>, <InstructionFrame09_II/>, <InstructionFrame09_III/>,<InstructionFrame09_IV/>,<Test/>,],
         until: (lastlog)=>lastlog.correct
       },
       <InstructionFrame11/>,
@@ -110,8 +108,9 @@ export class EBL01Builder {
       // <InstructionFrame18/>,  -> ist bereits in EBLPause integriert
       <EBLPause/>,
       <InstructionFrame19/>,
-      <InstructionFrame20a/>,
-      postFrames,
+      <InstructionFrame20a/>, postFrames[0],
+      <InstructionFrame20b/>, postFrames[1],
+      <InstructionFrame20c/>, postFrames[2],
       <InstructionFrame20b/>,
       <InstructionFrame20c/>,
       <ToDoFrame text={'Video Debriefing, '}/>,
