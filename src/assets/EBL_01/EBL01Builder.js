@@ -5,7 +5,7 @@ import {ToDoFrame} from "../../Frames/ToDoFrame";
 import {Demographics} from "../../Frames/Demographics";
 import {EBLPause} from "../../Frames/EBL/EBLPause";
 import {postFrames, preFrames} from "./EBL01_PrePostTest";
-import {exampleFrames} from "./EBL01_ExampleFrames";
+import {exampleFrames, exampleFramesTest} from "./EBL01_ExampleFrames";
 import {
   InstructionFrame01,
   InstructionFrame02,
@@ -58,6 +58,9 @@ export class EBL01Builder {
 
   build() {
     switch (this.session) {
+      case 99:
+        this.buildTestSession();
+        break;
       case 1:
         this.buildSession1();
         break;
@@ -122,8 +125,9 @@ export class EBL01Builder {
     this.tlManager.add([testTimeline(2)]);
   }
 
-  buildTest() {
-    // this.tlManager.add(this.getProcessMeasures());
+  buildTestSession() {
+    console.log(exampleFramesTest());
+    this.tlManager.add(exampleFramesTest(),);
   }
 
   getTimeline(session = 1) {

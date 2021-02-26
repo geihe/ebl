@@ -2,13 +2,12 @@ import {fahrradhelm} from "./examples/fahrradhelm";
 import {edelgase} from "./examples/edelgase";
 import {kekse} from "./examples/kekse";
 import {skispringen} from "./examples/skispringen";
-import {selfExplanations, selfRadio} from "./examples/explanations";
+import {selfExplanations, selfRadioFunction} from "./examples/explanations";
 
 export class EBL01_ExampleManager {
   constructor() {
     this.examples = [fahrradhelm, edelgase, skispringen, kekse];
     this.explanations = selfExplanations;
-    this.radio = selfRadio;
   }
 
   getItem(context, principle) {
@@ -47,7 +46,7 @@ export class EBL01_ExampleManager {
     return ex.html;
   }
   getRadio(radio) {
-    const ra = this.radio.find(e => e.id === radio); //TODO radios
+    const ra = selfRadioFunction(radio);
     if (!ra) {
       return undefined;
     }
@@ -55,7 +54,7 @@ export class EBL01_ExampleManager {
   }
 
   signature2html(signature) {
-    const {context, principle, explanation, radio, button} = signature;
+    const {context, principle, explanation, radio} = signature;
     const singleHeader = (context.length === 1);
     const htmlHeader = singleHeader ?
       this.getHeader(context[0])
@@ -85,18 +84,22 @@ export class EBL01_ExampleManager {
   }
 
   static string2signature(s0) { //example "c2p234e3" ->
-    const s = s0.toLowerCase() + 'cper';
-    let c = s.match(/c(\d*)/)[1].split('');
-    let p = s.match(/p(\d*)/)[1].split('');
-    let e = s.match(/e(\d*)/)[1].split('');
-    let r = s.match(/r(\d*)/)[1].split('');
+    const process = a => a && a[1] ?
+      a[1].split('-').filter(e=>e!=='').map(Number)
+      :
+      [];
+    const s = s0.toLowerCase();
+    let c = s.match(/c([\d-|\d]*)/);
+    let p = s.match(/p([\d-|\d]*)/);
+    let e = s.match(/e([\d-|\d]*)/);
+    let r = s.match(/r([\d-|\d]*)/);
     let b = !!s.match(/b/);
 
     return {
-      context: c.map(Number),
-      principle: p.map(Number),
-      explanation: e.map(Number),
-      radio: r.map(Number),
+      context: process(c),
+      principle: process(p),
+      explanation: process(e),
+      radio: process(r),
       button: b
     };
   }

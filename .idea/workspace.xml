@@ -4,19 +4,16 @@
     <option name="SCOPE_TYPE" value="3" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c0a8d840-d2a4-41a1-9e79-f574c09cafbd" name="Default Changelist" comment="Instruktionen 22b I ergänzt">
-      <change afterPath="$PROJECT_DIR$/src/Frames/DelayedRadioFrame.js" afterDir="false" />
+    <list default="true" id="c0a8d840-d2a4-41a1-9e79-f574c09cafbd" name="Default Changelist" comment="Hinweis auf Anordnungsaufgabe eingebaut&#10;InstrucionFrame09_I bis Iv umgebaut">
       <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Demographics.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frames/Demographics.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Forms/Form.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Forms/Form.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Frames/Instructions/InstructionFrame.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frames/Instructions/InstructionFrame.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/assets/EBL_01/EBL01Builder.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/EBL_01/EBL01Builder.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cssModules/DelayedFrame.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/cssModules/DelayedFrame.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cssModules/Form.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/cssModules/Form.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cssModules/Likert.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/cssModules/Likert.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/helper/TimelineManager.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/helper/TimelineManager.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/EBL_01/EBL01_ExampleFrames.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/EBL_01/EBL01_ExampleFrames.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/EBL_01/EBL01_ExampleManager.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/EBL_01/EBL01_ExampleManager.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/EBL_01/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/EBL_01/config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/EBL_01/examples/explanations.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/EBL_01/examples/explanations.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cssModules/EBL/EblFrame.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/cssModules/EBL/EblFrame.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,7 +40,7 @@
     </option>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="timerFrame" />
+        <entry key="$PROJECT_DIR$" value="DragnDrop" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -240,6 +237,11 @@
       <workItem from="1613376048239" duration="597000" />
       <workItem from="1613385448519" duration="3113000" />
       <workItem from="1613396721969" duration="6514000" />
+      <workItem from="1614104297372" duration="4767000" />
+      <workItem from="1614114115216" duration="1973000" />
+      <workItem from="1614194901971" duration="7635000" />
+      <workItem from="1614269343059" duration="8147000" />
+      <workItem from="1614356773533" duration="2524000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1608320225945</created>

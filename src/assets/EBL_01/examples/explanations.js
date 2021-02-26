@@ -44,53 +44,107 @@ export const selfExplanations = [
   },
 ];
 
-export const selfRadio = [
+const numberText = ['In dieser Aufgabe', 'In Aufgabe 1', 'In Aufgabe 2', 'In Aufgabe 3', 'In Aufgabe 4'];
+const lowercaseFirstLetter = string => string[0].toLowerCase() + string.slice(1);
+const selfRadioTemplate = [(nrText) => (
   {
-    id: 0,
-    html: {de: `Bitte anklicken:<br /> Die Anzahl möglicher Ergebnisse ...?`},
+    html: {de: `Die Anzahl möglicher Ergebnisse <strong>${lowercaseFirstLetter(nrText)}</strong>...?`},
     options: [
       {label: `ändert sich.`, value: 'Ergebnisanzahl ändert sich.'},
       {label: `bleibt gleich.`, value: 'Ergebnisanzahl bleibt gleich.'},
     ]
-  },
+  }), (nrText) => (
   {
-    id: 1,
-    html: {de: `Bitte anklicken:<br /> In diesem Beispiel ...`},
+    html: {de: `<strong>${nrText}</strong> ...`},
     options: [
       {label: `ist nur eine Ergebnisfolge günstig.`, value: 'eine günstig'},
       {label: `sind mehrere Ergebnisfolgen günstig.`, value: 'mehrere günstig'},
     ]
-  },
+  }), (nrText) => (
   {
-    id: 2, //principle 3 or 4
-    html: {de: `Bitte anklicken:<br /> In diesem Beispiel <strong>wird mit 2 multipliziert</strong>, weil...`},
+    //principle 3 or 4
+    html: {de: `<strong>${nrText}</strong> <strong>wird mit 2 multipliziert</strong>, weil...`},
     options: [
       {label: `nur eine Ergebnisfolge günstig ist.`, value: 'mal 2, da nur eine Ergebnisfolge'},
       {label: `mehrere Ergebnisfolgen günstig sind.`, value: 'mal 2, da mehrere Ergebnisfolgen'},
     ]
-  },
+  }), (nrText) => (
   {
-    id: 3, //principle 1 or 2
-    html: {de: `Bitte anklicken:<br /> In diesem Beispiel wird <strong>nicht mit 2 multipliziert</strong>, weil...`},
+    //principle 1 or 2
+    html: {de: `<strong>${nrText}</strong> wird <strong>nicht mit 2 multipliziert</strong>, weil...`},
     options: [
       {label: `nur eine Ergebnisfolge günstig ist.`, value: 'nicht mal 2, da nur eine Ergebnisfolge'},
       {label: `mehrere Ergebnisfolgen günstig sind.`, value: 'nicht mal 2, da mehrere Ergebnisfolgen'},
     ]
-  },
+  }), (nrText) => (
   {
-    id: 4, //principle 1 or 3
-    html: {de: `Bitte anklicken:<br /> In diesem Beispiel sind die Nenner der Brüche <strong>gleich</strong>, weil ...`},
+    //principle 1 or 3
+    html: {de: `<strong>${nrText}</strong> sind die Nenner der Brüche <strong>gleich</strong>, weil ...`},
     options: [
       {label: `die Ergebnisanzahl gleich bleibt.`, value: 'Nenner gleich, da Ergebnisanzahl gleich bleibt'},
       {label: `sich die Ergebnisanzahl ändert.`, value: 'Nenner gleich, da sich Ergebnisanzahl ändert'},
     ]
-  },
+  }), (nrText) => (
   {
-    id: 5, //principle 2 or 4
-    html: {de: `Bitte anklicken:<br /> In diesem Beispiel sind die Nenner der Brüche <strong>verschieden</strong>, weil ...`},
+    //principle 2 or 4
+    html: {de: `<strong>${nrText}</strong> sind die Nenner der Brüche <strong>verschieden</strong>, weil ...`},
     options: [
       {label: `die Ergebnisanzahl gleich bleibt.`, value: 'Nenner verschieden, da Ergebnisanzahl gleich bleibt'},
       {label: `sich die Ergebnisanzahl ändert.`, value: 'Nenner verschieden, da sich Ergebnisanzahl ändert'},
     ]
-  },
+  }),
 ];
+
+export const selfRadio = selfRadioTemplate
+  .map((f, id) => (
+    {...f('Piep'), id: id}
+  ));
+
+export const selfRadioFunction = (n) => {
+  const nrText = Math.floor(n / 10);
+  const id = n % 10;
+  return {id: id, ...selfRadioTemplate[id](numberText[nrText])}
+};
+
+// Zehnerstelle:   nrText = Text "In Aufgabe 1"...
+// 0 - "In Dieser Aufgabe..."
+// Einerstelle:    id der Frage
+
+//  principe 1  -->  ids  0,1,3,4
+//  principe 2  -->  ids  0,1,3,5
+//  principe 3  -->  ids  0,1,2,4
+//  principe 4  -->  ids  0,1,2,5
+
+
+
+//  n     nrText   id    principles
+//  0     0         0     1234
+//  1     0         1     1234
+//  2     0         2     34
+//  3     0         3     12
+//  4     0         4     13
+//  5     0         5     24
+// 10     1         0     1234
+// 11     1         1     1234
+// 12     1         2     34
+// 13     1         3     12
+// 14     1         4     13
+// 15     1         5     24
+// 20     2         0     1234
+// 21     2         1     1234
+// 22     2         2     34
+// 23     2         3     12
+// 24     2         4     13
+// 25     2         5     24
+// 30     3         0     1234
+// 31     3         1     1234
+// 32     3         2     34
+// 33     3         3     12
+// 34     3         4     13
+// 35     3         5     24
+// 40     4         0     1234
+// 41     4         1     1234
+// 42     4         2     34
+// 43     4         3     12
+// 44     4         4     13
+// 45     4         5     24
