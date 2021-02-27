@@ -7,6 +7,8 @@ import {Pause} from "../Pause";
 export function EBLPause(props) {//TODO exclude from data
 
   const   pauseText= '<h2>Liebe*r Studienteilnehmer*in</h2>' +
+    '<p>Die Lernphase ist nun abgeschlossen – vielen Dank! ' +
+    '<p></p>'+
     '<p>Bitte mache nun eine Pause von 10 Minuten. ' +
     'Gerne kannst du dir die Beine vertreten, durchlüften oder dir etwas zu trinken holen. </p>' +
     '<p>Du siehst sogleich einen Timer.</p>' +

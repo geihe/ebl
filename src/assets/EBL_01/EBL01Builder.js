@@ -8,7 +8,6 @@ import {postFrames, preFrames} from "./EBL01_PrePostTest";
 import {exampleFrames, exampleFramesTest} from "./EBL01_ExampleFrames";
 import {
   InstructionFrame01,
-  InstructionFrame02,
   InstructionFrame03,
   InstructionFrame04,
   InstructionFrame05,
@@ -19,15 +18,17 @@ import {
   InstructionFrame09_I,
   InstructionFrame09_II,
   InstructionFrame09_III,
-  InstructionFrame10,
+  InstructionFrame09_IV,
   InstructionFrame11,
   InstructionFrame12,
   InstructionFrame16a_I_simultan_group23,
   InstructionFrame16a_II_simultan_group23,
   InstructionFrame16b_I_sequenziell_group01,
   InstructionFrame16b_II_sequenziell_group01,
-  InstructionFrame18,
   InstructionFrame19,
+  InstructionFrame20a,
+  InstructionFrame20b,
+  InstructionFrame20c,
   InstructionFrame22,
   InstructionFrame22bIa,
   InstructionFrame22bIb,
@@ -37,6 +38,8 @@ import {
 } from "../../Frames/Instructions/InstructionFrame";
 import {CancelFrame} from "../../Frames/CancelFrame";
 import {FixationCrossFrame} from "../../Frames/FixationCrossFrame";
+import {Test} from "../../Frames/Test";
+import {EBL01_MathCourse} from "./EBL01_MathCourse";
 
 export class EBL01Builder {
   constructor(t) {
@@ -79,29 +82,23 @@ export class EBL01Builder {
     };
 
     this.tlManager.add([
-      <InstructionFrame22/>,
-      <Demographics/>,
-      <InstructionFrame22bIa/>, <FixationCrossFrame nocross/>,
-      <InstructionFrame22bIb/>, <FixationCrossFrame nocross/>,
-      <InstructionFrame22bIIb/>, <FixationCrossFrame nocross/>,
-      <InstructionFrame22bIIc/>, <FixationCrossFrame nocross/>,
-      <InstructionFrame22bIId/>, <FixationCrossFrame nocross/>,
       <InstructionFrame01/>,
-      <InstructionFrame02/>,
+      <ToDoFrame text={'Video Einleitung '}/>,
       <InstructionFrame03/>,
       <InstructionFrame04/>,
       <InstructionFrame05/>,cancelTest,
-      <InstructionFrame06/>,
       <InstructionFrame07/>,cancelTest,
       <InstructionFrame08_I/>,cancelTest,
       <InstructionFrame08_II/>,cancelTest,
-      <InstructionFrame09_I/>,
-      <InstructionFrame09_II/>,
-      <InstructionFrame09_III/>,
-      <InstructionFrame10/>,
+      <InstructionFrame06/>,
+      {
+        repeat: [<InstructionFrame09_I/>, <InstructionFrame09_II/>, <InstructionFrame09_III/>,<InstructionFrame09_IV/>,<Test/>,],
+        until: (lastlog)=>lastlog.correct
+      },
       <InstructionFrame11/>,
       preFrames,
       <InstructionFrame12/>,
+      EBL01_MathCourse,
       this.group >1 ?
         [<InstructionFrame16a_I_simultan_group23/>,
         <InstructionFrame16a_II_simultan_group23/>,]
@@ -109,15 +106,27 @@ export class EBL01Builder {
         [<InstructionFrame16b_I_sequenziell_group01/>,
           <InstructionFrame16b_II_sequenziell_group01/>,]
       ,
-      <ToDoFrame text={' 2-3 Fragen, ob der Ablauf des Experiments verstanden wurde'}/>,
       exampleFrames(this.group),
-      <InstructionFrame18/>,
+
+      // <InstructionFrame18/>,  -> ist bereits in EBLPause integriert
       <EBLPause/>,
       <InstructionFrame19/>,
-      postFrames,
-      <Demographics/>,
-      <ToDoFrame text={'Einverständnis, dass die Daten anonymisiert auf den Server geladen werden '}/>,
+      <InstructionFrame20a/>, postFrames[0],
+      <InstructionFrame20b/>, postFrames[1],
+      <InstructionFrame20c/>, postFrames[2],
+      <InstructionFrame20b/>,
+      <InstructionFrame20c/>,
       <ToDoFrame text={'Video Debriefing, '}/>,
+      <InstructionFrame22/>,
+      <Demographics/>,
+      <InstructionFrame22bIa/>, <FixationCrossFrame nocross/>,
+      <InstructionFrame22bIb/>, <FixationCrossFrame nocross/>,
+      <InstructionFrame22bIIb/>, <FixationCrossFrame nocross/>,
+      <InstructionFrame22bIIc/>, <FixationCrossFrame nocross/>,
+      <InstructionFrame22bIId/>, <FixationCrossFrame nocross/>,
+      <ToDoFrame text={'Versuchspersonenbescheinigung '}/>,
+      <ToDoFrame text={'Einverständnis, dass die Daten anonymisiert auf den Server geladen werden '}/>,
+      <ToDoFrame text={'Session-Ende, Code erzeugen, Mailadresse abfragen,  '}/>,
     ]);
   }
 

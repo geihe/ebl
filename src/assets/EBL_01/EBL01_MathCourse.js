@@ -26,7 +26,6 @@ export const EBL01_MathCourse = items.map(content =>
     space
     delay={config.mathCourse.delay}
   >
-
     {content}
   </DelayedFrame>
 );
@@ -105,7 +104,7 @@ export function MathCourse04b(props) {
 export function MathCourse05(props) {
   return (
     <div>
-      <h1>3 .Wahrscheinlichkeit einer Ereignisfolge bei mehrstufigen Experimenten</h1>
+      <h1>3. Wahrscheinlichkeit einer Ereignisfolge bei mehrstufigen Experimenten</h1>
       <p> Bei einem <strong>mehrstufigen</strong> Experiment werden zwei oder mehr „Einzelexperimente“ durchgeführt, und
         man interessiert
         sich für die Wahrscheinlichkeit einer bestimmten <strong>Ereignisfolge</strong>.
