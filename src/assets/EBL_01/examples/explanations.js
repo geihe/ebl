@@ -9,6 +9,7 @@ principle 4: order irrelevant, without replacement
 export const selfExplanations = [
   {
     id: 0,
+    exampleNrs: [0],
     html: {
       de: `Beschreibe die Lösung der Beispielaufgabe! <br/>Was fällt dir auf?`,
       en: `Describe the solution of the worked example. <br/>What do you notice?`
@@ -16,6 +17,7 @@ export const selfExplanations = [
   },
   {
     id: 1,
+    exampleNrs: [0, 1],
     html: {
       de: `Vergleiche Aufgabe 1 und 2, welche Unterschiede und Gemeinsamkeiten fallen dir auf?`,
       en: `Describe the solution of the first and the second worked examples. <br/>Compare them!`
@@ -23,6 +25,7 @@ export const selfExplanations = [
   },
   {
     id: 2,
+    exampleNrs: [0, 2],
     html: {
       de: `Vergleiche Aufgabe 1 und 3, welche Unterschiede und Gemeinsamkeiten fallen dir auf?`,
       en: `Describe the solution of the third worked example and compare it with the solutions for the first and second example.`
@@ -30,6 +33,7 @@ export const selfExplanations = [
   },
   {
     id: 3,
+    exampleNrs: [0, 3],
     html: {
       de: `Vergleiche Aufgabe 1 und 4, welche Unterschiede und Gemeinsamkeiten fallen dir auf?`,
       en: `Describe the solution of the fourth worked example and compare it to the other three.`
@@ -37,6 +41,7 @@ export const selfExplanations = [
   },
   {
     id: 4,
+    exampleNrs: [0, 1, 2, 3],
     html: {
       de: `Vergleiche alle vier Aufgaben, welche Unterschiede und Gemeinsamkeiten fallen dir auf?`,
       en: `Compare all four solutions of these worked examples.`
@@ -101,9 +106,10 @@ export const selfRadio = selfRadioTemplate
   ));
 
 export const selfRadioFunction = (n) => {
-  const nrText = Math.floor(n / 10);
+  const exampleNr = [Math.floor(n / 10)];
+  const exampleNrs = [n < 10 ? 0 : exampleNr - 1]; //Nr. 1-4 auf index 0-3 herunterrechnen
   const id = n % 10;
-  return {id: id, ...selfRadioTemplate[id](numberText[nrText])}
+  return {id: id, exampleNrs, ...selfRadioTemplate[id](numberText[exampleNr])}
 };
 
 // Zehnerstelle:   nrText = Text "In Aufgabe 1"...
@@ -114,7 +120,6 @@ export const selfRadioFunction = (n) => {
 //  principe 2  -->  ids  0,1,3,5
 //  principe 3  -->  ids  0,1,2,4
 //  principe 4  -->  ids  0,1,2,5
-
 
 
 //  n     nrText   id    principles

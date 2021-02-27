@@ -25,13 +25,12 @@ export function EblFrame(props) {
   const textExplanations = content.htmlExplanations.map((explanation, index) =>
     <SingleExplanation
       key={index}
-      explanation={explanation}
+      explanation={explanation && explanation.html}
       callback={nextExplanation}
       active={activeExp === index}
       minLength={config.textAreaMinLength}
     />
   );
-
   const radios = content.htmlRadios.map((radio, index) =>
     <SingleRadios
       key={index}
@@ -42,20 +41,35 @@ export function EblFrame(props) {
     />
   )
 
-  const explanations = [...textExplanations, ...radios, ];
+  const explanations = [...textExplanations, ...radios,];
   if (content.button) {
     explanations.push(<ButtonDiv key={0} callback={props.finish}/>);
   }
 
 
-  const examples = content.htmlExamples.map((ex, index) =>
-    <SingleExample
-      key={index}
-      example={ex}
-      nr={index + 1}
-      singleHeader={content.singleHeader}
-      showCount={content.htmlExamples.length > 1}
-    />
+  const activeRadioNumbers=content.htmlRadios[activeExp];
+  const activeExplanationNumbers=content.htmlExplanations[activeExp];
+  if (activeRadioNumbers) console.log(activeRadioNumbers.exampleNrs);
+  if (activeExplanationNumbers) console.log(activeExplanationNumbers.exampleNrs);
+
+  const activeNrs = [];
+  if (activeRadioNumbers && activeRadioNumbers.exampleNrs) {
+    activeNrs.push(...activeRadioNumbers.exampleNrs);
+  }
+  if (activeExplanationNumbers && activeExplanationNumbers.exampleNrs) {
+    activeNrs.push(...activeExplanationNumbers.exampleNrs);
+  } //TODO eleganter
+  console.log(activeNrs);
+  const examples = content.htmlExamples.map((ex, index) => {
+      return <SingleExample
+        key={index}
+        example={ex}
+        nr={index + 1}
+        active={activeNrs.includes(index)}
+        singleHeader={content.singleHeader}
+        showCount={content.htmlExamples.length > 1}
+      />;
+    }
   );
 
   return (
@@ -74,9 +88,11 @@ export function EblFrame(props) {
 }
 
 function ExHeader(props) {
-  const {header} = props;
+  const
+    {header} = props;
   return header ?
-    <div className={styles.exampleHeader}>
+    <div
+      className={styles.exampleHeader}>
       {header}
     </div> : null;
 }
@@ -92,9 +108,11 @@ function Examples(props) {
 
 function SingleExample(props) {
   const t = useContext(LngContext);
-  const {example, nr, singleHeader, showCount} = props;
+  const {example, nr, singleHeader, showCount, active} = props;
+
+  const activeClass = active ? ' ' + styles.highlight : '';
   return (
-    <div className={styles.singleExample}>
+    <div className={styles.singleExample + activeClass}>
       <div>
         <div className={styles.exampleCount}>
           {t(phrase.eblQuestion)} {showCount ? nr : ''}:
@@ -114,8 +132,9 @@ function SingleExplanation(props) {
   const {explanation, callback, active, minLength} = props;
   const [text, setText] = useState('');
 
+  const activeClass = active ? ' ' + styles.highlight : '';
   return (
-    <div className={styles.singleExplanation}>
+    <div className={styles.singleExplanation + activeClass}>
       <Html className={styles.explanationHeader} html={t(explanation)}/>
       {active ? <TextArea
         className={styles.editable}
@@ -135,22 +154,12 @@ function SingleExplanation(props) {
   );
 }
 
-function ButtonDiv(props) {
-  const t = useContext(LngContext);
-  return (
-    <div className={styles.buttonDiv}>
-      <Button fill intent={'primary'} onClick={props.callback}>
-        {t(phrase.continue)}
-      </Button>
-    </div>
-  );
-}
-
 function SingleRadios(props) {
   const t = useContext(LngContext);
   const {callback, options, html, active} = props;
+  const activeClass = active ? ' ' + styles.highlight : '';
   return (
-    <div className={styles.singleExplanation}>
+    <div className={styles.singleExplanation + activeClass}>
       <Html
         className={styles.explanationHeader}
         style={{marginBottom: '8px'}}
@@ -162,4 +171,15 @@ function SingleRadios(props) {
       /> : null}
     </div>
   )
+}
+
+function ButtonDiv(props) {
+  const t = useContext(LngContext);
+  return (
+    <div className={styles.buttonDiv}>
+      <Button fill intent={'primary'} onClick={props.callback}>
+        {t(phrase.continue)}
+      </Button>
+    </div>
+  );
 }

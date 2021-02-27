@@ -39,11 +39,7 @@ export class EBL01_ExampleManager {
   }
 
   getExplanation(explanation) {
-    const ex = this.explanations.find(e => e.id === explanation);
-    if (!ex) {
-      return undefined;
-    }
-    return ex.html;
+    return this.explanations.find(e => e.id === explanation);
   }
   getRadio(radio) {
     const ra = selfRadioFunction(radio);
@@ -63,7 +59,7 @@ export class EBL01_ExampleManager {
       principle.map(
         p => [].concat(c, p)
       )
-    ))
+    ));
     const htmlExamples = cartesianProduct.map(e => this.getItem(...e));
     const htmlExplanations = explanation.map(e => this.getExplanation(e));
     const htmlRadios = radio.map(e => this.getRadio(e));

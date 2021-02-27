@@ -81,7 +81,7 @@ async function getElementInfo() {
     groupId: params.get('group_id'),
     session: params.get('session'),
   }
-
+  console.log(URLParams);
   const dataItemsJSON = localStorage.getItem('data');
 
   if (!dataItemsJSON) { //neues Experiment
@@ -91,7 +91,7 @@ async function getElementInfo() {
     initialData.language = serverData.language;
     initialData.userId = serverData.user_id;
     initialData.groupId = serverData.group_id;
-//     initialData.session=99; //zum Testen TODO löschen
+     initialData.session=99; //zum Testen TODO löschen
     return {type: 'session', language: initialData.language, initialData: [initialData]};
   }
 

@@ -81,11 +81,10 @@ export function exampleFramesTest() {
   const {groups: exampleGroups, ...exampleConfig} = config.examples;
   const {items: exampleItems, id} = exampleGroups[4];
   const rem = new EBL01_ExampleManager();
-  console.log(exampleItems);
   return exampleItems.map(itemGroup => {
       return itemGroup.map(s =>
           <EblFrame config={exampleConfig} content={rem.string2html(s)}/>)
-      .concat([cognitiveEffortFrame, processMeasuresIntroduction, processMeasureFrames]);
+      .concat([cognitiveEffortFrame]);
     }
   )
 }

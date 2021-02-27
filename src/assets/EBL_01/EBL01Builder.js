@@ -135,7 +135,6 @@ export class EBL01Builder {
   }
 
   buildTestSession() {
-    console.log(exampleFramesTest());
     this.tlManager.add(exampleFramesTest(),);
   }
 
