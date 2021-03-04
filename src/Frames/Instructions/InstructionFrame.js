@@ -6,6 +6,9 @@ import {config} from "../../assets/EBL_01/config";
 import {EBL01Video} from "../EBL/EBL01Video";
 import {LikertFrame} from "../LikertFrame";
 import {DelayedRadioFrame} from "../DelayedRadioFrame";
+import {Form} from "../../Forms/Form";
+import {MyTextArea} from "../../Forms/MyTextArea";
+import * as Yup from "yup";
 
 export function InstructionFrame(props) {
   const {html, ...restProps} = props;
@@ -382,7 +385,7 @@ export function InstructionFrame22bIIc(props) {
     <DelayedRadioFrame
       large
       options={options}
-      label={'Wähle die Antwort, die auf dich zutrifft:'}
+      label={'Hast du in den letzten sieben Tagen eine schriftliche und/oder mündliche Prüfung absolviert?'}
       name={'teilgenommen?'}
       finish={props.finish}
     />
@@ -414,6 +417,45 @@ export function InstructionFrame22bIId(props) {
     name={'Hilsmittel?'}
     finish={props.finish}
   />
+  </>
+}
+export function InstructionFrame22bIIe(props) {
+  const options = [
+    {
+      label: 'Nein',
+      value: 'Nein'
+    },
+    {
+      label: 'Ja',
+      value: 'JA'
+    },
+  ]
+
+  return <>
+    <UniBielefeld/>
+    <DelayedRadioFrame
+    large
+    options={options}
+    label={{de: 'Hattest du besondere Schwierigkeiten bei der Bearbeitung der Aufgaben?'}}
+    name={'Schwierigkeiten?'}
+    finish={props.finish}
+  />
+  </>
+}
+export function InstructionFrame23(props) {
+  const initial = {feedback: ''};
+  let data=initial;
+  const validationSchema = Yup.object();
+
+  return <>
+    <UniBielefeld/>
+    <Form initial={initial}  finish={props.finish} validationSchema={validationSchema}>
+    <MyTextArea
+      large
+      name={'feedback'}
+      label={'Gibt es noch etwas, das du zum Ablauf des Experiments bemerken möchtest (z.B. Schwierigkeiten oder besondere Vorkommnisse)?'}
+    />
+    </Form>
   </>
 }
 

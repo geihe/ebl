@@ -34,7 +34,9 @@ import {
   InstructionFrame22bIb,
   InstructionFrame22bIIb,
   InstructionFrame22bIIc,
-  InstructionFrame22bIId
+  InstructionFrame22bIId,
+  InstructionFrame22bIIe,
+  InstructionFrame23
 } from "../../Frames/Instructions/InstructionFrame";
 import {CancelFrame} from "../../Frames/CancelFrame";
 import {FixationCrossFrame} from "../../Frames/FixationCrossFrame";
@@ -124,6 +126,8 @@ export class EBL01Builder {
       <InstructionFrame22bIIb/>, <FixationCrossFrame nocross/>,
       <InstructionFrame22bIIc/>, <FixationCrossFrame nocross/>,
       <InstructionFrame22bIId/>, <FixationCrossFrame nocross/>,
+      <InstructionFrame22bIIe/>, <FixationCrossFrame nocross/>,
+      <InstructionFrame23/>,
       <ToDoFrame text={'Versuchspersonenbescheinigung '}/>,
       <ToDoFrame text={'Einverständnis, dass die Daten anonymisiert auf den Server geladen werden '}/>,
       <ToDoFrame text={'Session-Ende, Code erzeugen, Mailadresse abfragen,  '}/>,
@@ -135,7 +139,9 @@ export class EBL01Builder {
   }
 
   buildTestSession() {
-    this.tlManager.add(postFrames[1],exampleFramesTest(),);
+    this.tlManager.add(
+      exampleFramesTest()
+    );
   }
 
   getTimeline(session = 1) {

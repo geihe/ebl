@@ -174,7 +174,8 @@ export const config = {
     radioAutoContinue: true,
     radioDelay: 777,
     items: [
-      ['postMC_1',
+      [
+        'postMC_1',
         'postMC_3',
         'postMC_6',
         'postMC_7',
@@ -185,12 +186,11 @@ export const config = {
         'postFT2step_1',
         'postFT2step_2',
         'postFT2step_3',
-        'postFT2step_4',],
+        'postFT2step_4',
+      ],
       //------------------------
-      ['postOpen_1',
-        'postOpen_2',
+      [
         'postConcept_1',
-        //  'postOpen_1_2', //TODO löschen
         'postConcept_2',
         'postConcept_3',
         'postConcept_4',
@@ -198,9 +198,11 @@ export const config = {
         'postConceptNew_2',
         'postConceptNew_3',
         'postConceptNew_4',
-        'postOpen_1', 'postOpen_2',],
+        'postOpen_1', 'postOpen_2',
+      ],
       //Nun 16 Textaufgaben
-      ['pz-rvt1',
+      [
+        'pz-rvt1',
         'pz-rvt2',
         'pz-rvt3',
         'pz-rvt4',
@@ -215,7 +217,8 @@ export const config = {
         'lw-rvt5',
         'lw-rvt6',
         'lw-rvt7',
-        'lw-rvt8',]
+        'lw-rvt8',
+      ]
     ],
   },
 

@@ -8,20 +8,7 @@ import {Radio, RadioGroup} from "@blueprintjs/core";
 export function DelayedRadioFrame(props) {
   const t = useContext(LngContext);
   const {
-    options = [
-      {
-        label: 'Ich habe schon einmal an DERSELBEN Studie teilgenommen.',
-        value: 'selbe Studie teilgenommen'
-      },
-      {
-        label: 'Ich habe schon einmal an einer ÄHNLICHEN Studie teilgenommen.',
-        value: 'ähnliche Studie teilgenommen'
-      },
-      {
-        label: 'Ich habe noch NICHT an dieser oder einer ähnlichen Studie teilgenommen.',
-        value: 'keine ähnliche Studie teilgenommen'
-      },
-    ],
+    options,
     label,
     inline,
     name,
@@ -42,8 +29,8 @@ export function DelayedRadioFrame(props) {
       className={styles.radio}
       onChange={onChange}
       selectedValue={selected}
-      label={label}
-      name={name}
+      label={t(label)}
+      name={t(name)}
       inline={inline}
     >
       {options.map(({label, value}) =>
