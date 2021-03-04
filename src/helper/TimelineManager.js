@@ -6,7 +6,7 @@ export class TimelineManager {
     }
   }
 
-  add(timelineRec) {
+  add(...timelineRec) {
     this.timelineRec = this.timelineRec.concat(timelineRec);
     return this;
   }

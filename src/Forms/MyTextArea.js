@@ -3,7 +3,7 @@ import {FormGroup, TextArea} from "@blueprintjs/core";
 import {LngContext} from "../helper/i18n";
 
 
-export function MyInput(props) {
+export function MyTextArea(props) {
   const t = useContext(LngContext);
   const {
     name, onChange, value, label, error, ...otherProps

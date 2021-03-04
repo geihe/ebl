@@ -31,4 +31,42 @@ export const postMC = [
       (answer) => ['1/36', '1/6*1/6=1/36'].includes(answer),
     responseType: 'input'
   },
+  {
+    id: 'postOpen_1',
+    header:` 
+          <p>Bitte stelle Dir folgendes Szenario möglichst anschaulich vor:</p>
+ <strong><p>In einer Vase befinden sich alle 26 Buchstaben des Alphabets.
+ Du ziehst nacheinander und zufällig fünf Buchstaben aus der Vase. 
+ Wenn Du einen Buchstaben gezogen hast, legst Du ihn vor Dich auf den Tisch. </p>
+ <p>Am Ende jedes Durchgangs hast Du ein „Wort“ aus fünf Buchstaben vor Dir liegen (z.B. GFAVB oder FUMEQ), das Du notierst. 
+ <p>Die Buchstaben werden danach alle wieder in die Vase geschüttet und für den nächsten Durchgang neu gemischt. </p>
+   Auf diese Weise ziehst Du insgesamt zehn „Wörter“.</p></strong>
+
+        <p>Beantworte nun bitte die beiden folgenden Fragen zu Auswirkungen von hypothetischen Veränderungen an diesem Szenario.</p>
+`,
+    question:'1. Welche Auswirkungen hätte es auf die Wahrscheinlichkeit, in einem der zehn Durchgänge ein bestimmtes Wort ziehen (z.B. BOHNE), \n' +
+      '        wenn Du jeden gezogenen Buchstaben zwar notieren, dann aber sofort wieder in die Vase zurücklegen würdest? \n' +
+      '        Bitte erkläre (eine Rechnung ist nicht notwendig).',
+    validate:
+      (answer) => true,
+    responseType: 'textArea'
+  },
+  {
+    id: 'postOpen_2',
+    header:`       
+          <p>Bitte stelle Dir folgendes Szenario möglichst anschaulich vor:</p>
+ <strong><p>In einer Vase befinden sich alle 26 Buchstaben des Alphabets.
+ Du ziehst nacheinander und zufällig fünf Buchstaben aus der Vase. 
+ Wenn Du einen Buchstaben gezogen hast, legst Du ihn vor Dich auf den Tisch. </p>
+ <p>Am Ende jedes Durchgangs hast Du ein „Wort“ aus fünf Buchstaben vor Dir liegen (z.B. GFAVB oder FUMEQ), das Du notierst. 
+ <p>Die Buchstaben werden danach alle wieder in die Vase geschüttet und für den nächsten Durchgang neu gemischt. </p>
+   Auf diese Weise ziehst Du insgesamt zehn „Wörter“.</p></strong>
+        <p>Beantworte dazu nun bitte die zweite Frage:</p>
+`,
+    question:'2.	Die Wahrscheinlichkeit, dass Du in einem der zehn Durchgänge ein bestimmtes Wort ziehst (z.B. BOHNE), hängt davon ab, ob Du die Buchstaben bereits in der richtigen Reihenfolge ziehen musst oder ob Du diese nachträglich noch umsortieren darfst. ' +
+      'Bitte erkläre diese Beziehung (eine Rechnung ist nicht notwendig).',
+    validate:
+      (answer) => true,
+    responseType: 'textArea'
+  },
 ]

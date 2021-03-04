@@ -187,15 +187,18 @@ export const config = {
         'postFT2step_3',
         'postFT2step_4',],
       //------------------------
-      ['postConcept_1',
+      ['postOpen_1',
+        'postOpen_2',
+        'postConcept_1',
+        //  'postOpen_1_2', //TODO löschen
         'postConcept_2',
         'postConcept_3',
         'postConcept_4',
         'postConceptNew_1',
         'postConceptNew_2',
         'postConceptNew_3',
-        'postConceptNew_4',],
-      //TODO Postopen_1 und Postopen_2
+        'postConceptNew_4',
+        'postOpen_1', 'postOpen_2',],
       //Nun 16 Textaufgaben
       ['pz-rvt1',
         'pz-rvt2',

@@ -1,7 +1,7 @@
 import React from "react";
 import {MathComponent} from "mathjax-react";
 
-export const postOpen = [
+export const posFreeForm = [
   {
     id: 'postConceptNew_1',
     header: [

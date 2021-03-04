@@ -135,7 +135,7 @@ export class EBL01Builder {
   }
 
   buildTestSession() {
-    this.tlManager.add(exampleFramesTest(),);
+    this.tlManager.add(postFrames[1],exampleFramesTest(),);
   }
 
   getTimeline(session = 1) {

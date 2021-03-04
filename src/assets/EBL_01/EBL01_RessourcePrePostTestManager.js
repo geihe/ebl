@@ -8,7 +8,7 @@ import React from "react";
 import {StimulusResponseFrame} from "../../Frames/StimulusResponseFrame";
 import {Html} from "../../MicroComponents/Html";
 import {postConcept} from "./postConcept";
-import {postOpen} from "./postOpen";
+import {posFreeForm} from "./posFreeForm";
 import {postFT} from "./postFT2step";
 import {postNT} from "./postNT";
 import styles from "../../cssModules/StimulusResponseFrame.module.css";
@@ -22,14 +22,15 @@ export class EBL01_RessourcePrePostTestManager {
       ...preMulti,
       ...postMC,
       ...postConcept,
-      ...postOpen,
+      ...posFreeForm,
       ...postFT,
       ...postNT,
-      ...verification
+      ...verification,
     ];
   }
 
   getResponseElement(id, config) {
+    console.log(id);
     const rawItem = this.prePostTest.find(e => e.id === id);
     let responseInput;
     switch (rawItem.responseType) {
