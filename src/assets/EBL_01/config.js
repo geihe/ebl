@@ -77,67 +77,7 @@ export const config = {
   */
   examples: {
     groups: [//TODO 2. Session berücksichtigen
-      {
-        id: 'blocked-sequential',
-        items: [
-          ["c1 p1 e0",
-            "c2 p1 e0",
-            "c3 p1 e0",
-            "c4 p1 e0"],
-          ["c2 p2 e0",
-            "c3 p2 e0",
-            "c4 p2 e0",
-            "c1 p2 e0"],
-          ["c3 p3 e0",
-            "c4 p3 e0",
-            "c1 p3 e0",
-            "c2 p3 e0"],
-          ["c4 p4 e0",
-            "c1 p4 e0",
-            "c2 p4 e0",
-            "c3 p4 e0"],
-        ]
-      },
-      {
-        id: 'interleaved-sequential',
-        items: [
-          ["c1 p1 e0",
-            "c2 p2 e0",
-            "c3 p3 e0",
-            "c4 p4 e0"],
-          ["c2 p2 e0",
-            "c3 p3 e0",
-            "c4 p4 e0",
-            "c1 p1 e0"],
-          ["c3 p3 e0",
-            "c3 p4 e0",
-            "c3 p1 e0",
-            "c3 p2 e0"],
-          ["c4 p4 e0",
-            "c4 p1 e0",
-            "c4 p2 e0",
-            "c4 p3 e0"],
-        ]
-      },
-      {
-        id: 'blocked-simultaneous',
-        items: [
-          ["c1-2-3-4 p1 e1-2-3-4"],
-          ["c2-3-4-1 p2 e1-2-3-4"],
-          ["c3-4-1-2 p3 e1-2-3-4"],
-          ["c4-1-2-3 p4 e1-2-3-4"],
-        ]
-      },
-      {
-        id: 'interleaved-simultaneous',
-        items: [
-          ["c1 p1-2-3-4 e1-2-3-4"],
-          ["c2 p2-3-4-1 e1-2-3-4"],
-          ["c3 p3-4-1-2 e1-2-3-4"],
-          ["c4 p4-1-2-3 e1-2-3-4"],
-        ]
-      },
-      {
+      { // group 0
         id: 'test',
         items: [
           ["c1 p1-2-3-4 e1-2-3-4"],
@@ -159,6 +99,66 @@ export const config = {
           ["c2-3-4-1 p2 e1-2-3-4"],
           ["c3-4-1-2 p3 e1-2-3-4"],
           ["c4-1-2-3 p4 e1-2-3-4"],
+        ]
+      },
+      {  // group 1
+        id: 'blocked-sequential',
+        items: [
+          ["c1 p1 e0",
+            "c2 p1 e0",
+            "c3 p1 e0",
+            "c4 p1 e0"],
+          ["c2 p2 e0",
+            "c3 p2 e0",
+            "c4 p2 e0",
+            "c1 p2 e0"],
+          ["c3 p3 e0",
+            "c4 p3 e0",
+            "c1 p3 e0",
+            "c2 p3 e0"],
+          ["c4 p4 e0",
+            "c1 p4 e0",
+            "c2 p4 e0",
+            "c3 p4 e0"],
+        ]
+      },
+      {   // group 2
+        id: 'interleaved-sequential',
+        items: [
+          ["c1 p1 e0",
+            "c2 p2 e0",
+            "c3 p3 e0",
+            "c4 p4 e0"],
+          ["c2 p2 e0",
+            "c3 p3 e0",
+            "c4 p4 e0",
+            "c1 p1 e0"],
+          ["c3 p3 e0",
+            "c3 p4 e0",
+            "c3 p1 e0",
+            "c3 p2 e0"],
+          ["c4 p4 e0",
+            "c4 p1 e0",
+            "c4 p2 e0",
+            "c4 p3 e0"],
+        ]
+      },
+      { // group 3
+        id: 'blocked-simultaneous',
+        items: [
+          ["c1-2-3-4 p1 e1-2-3-4"],
+          ["c2-3-4-1 p2 e1-2-3-4"],
+          ["c3-4-1-2 p3 e1-2-3-4"],
+          ["c4-1-2-3 p4 e1-2-3-4"],
+        ]
+      },
+      { // group 4
+        id: 'interleaved-simultaneous',
+        items: [
+          ["c1 p1-2-3-4 e1-2-3-4"],
+          ["c2 p2-3-4-1 e1-2-3-4"],
+          ["c3 p3-4-1-2 e1-2-3-4"],
+          ["c4 p4-1-2-3 e1-2-3-4"],
         ]
       },
     ],

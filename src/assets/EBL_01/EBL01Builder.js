@@ -48,7 +48,7 @@ export class EBL01Builder {
     this.t = t;
     this.tlManager = new TimelineManager();
     this.session = 1;
-    this.group = 0;
+    this.group = 0; //group von 1 bis 4 , 0 -> test
   }
 
   setSession(session) {
@@ -101,7 +101,7 @@ export class EBL01Builder {
       preFrames,
       <InstructionFrame12/>,
       EBL01_MathCourse,
-      this.group >1 ?
+      this.group >2 ?
         [<InstructionFrame16a_I_simultan_group23/>,
         <InstructionFrame16a_II_simultan_group23/>,]
         :
@@ -140,7 +140,7 @@ export class EBL01Builder {
 
   buildTestSession() {
     this.tlManager.add(
-      exampleFramesTest()
+      exampleFramesTest(this.group)
     );
   }
 

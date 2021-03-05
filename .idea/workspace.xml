@@ -7,10 +7,11 @@
     <list default="true" id="c0a8d840-d2a4-41a1-9e79-f574c09cafbd" name="Default Changelist" comment="Postopen 1, 2&#10;als einzelne StimulusResponse-Elemente">
       <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Frames/DelayedRadioFrame.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frames/DelayedRadioFrame.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Frames/Instructions/InstructionFrame.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frames/Instructions/InstructionFrame.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Frames/EBL/EblFrame.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frames/EBL/EblFrame.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/assets/EBL_01/EBL01Builder.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/EBL_01/EBL01Builder.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/EBL_01/EBL01_ExampleFrames.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/EBL_01/EBL01_ExampleFrames.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/assets/EBL_01/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/EBL_01/config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -245,6 +246,7 @@
       <workItem from="1614460944956" duration="3855000" />
       <workItem from="1614522263620" duration="4515000" />
       <workItem from="1614883895556" duration="7029000" />
+      <workItem from="1614957612598" duration="7045000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1608320225945</created>

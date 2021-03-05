@@ -29,6 +29,7 @@ getElementInfo().then((info) => {
       break;
     default: //Session
       const initData = info.initialData[0];
+      console.log(initData);
       const tb = new EBL01Builder(t);
       tb.setSession(initData.session)
         .setGroup(initData.groupId)
@@ -75,23 +76,24 @@ async function getElementInfo() {
 
   const url = new URL(window.location);
   const params = new URLSearchParams(url.search);
-  const URLParams = {
+  const URLparams = {
     language: params.get('language'),
-    userID: params.get('user_id'),
-    groupId: params.get('group_id'),
+    user_id: params.get('user_id'),
+    group_id: params.get('group_id'),
     session: params.get('session'),
   }
-  console.log(URLParams);
+
   const dataItemsJSON = localStorage.getItem('data');
 
   if (!dataItemsJSON) { //neues Experiment
     const serverData = await server.getNewData();
+    console.log(URLparams, serverData);
 
-    initialData.session = serverData.session;
-    initialData.language = serverData.language;
-    initialData.userId = serverData.user_id;
-    initialData.groupId = serverData.group_id;
-     initialData.session=99; //zum Testen TODO löschen
+    initialData.session = URLparams.session ? +URLparams.session : serverData.session;
+    initialData.language = URLparams.language ? URLparams.language : serverData.language;
+    initialData.userId = URLparams.user_id ? +URLparams.user_id : serverData.user_id;
+    initialData.groupId = URLparams.group_id ? +URLparams.group_id : serverData.group_id;
+
     return {type: 'session', language: initialData.language, initialData: [initialData]};
   }
 

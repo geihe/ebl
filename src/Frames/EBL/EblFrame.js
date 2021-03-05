@@ -49,8 +49,6 @@ export function EblFrame(props) {
 
   const activeRadioNumbers=content.htmlRadios[activeExp];
   const activeExplanationNumbers=content.htmlExplanations[activeExp];
-  if (activeRadioNumbers) console.log(activeRadioNumbers.exampleNrs);
-  if (activeExplanationNumbers) console.log(activeExplanationNumbers.exampleNrs);
 
   const activeNrs = [];
   if (activeRadioNumbers && activeRadioNumbers.exampleNrs) {
@@ -59,7 +57,7 @@ export function EblFrame(props) {
   if (activeExplanationNumbers && activeExplanationNumbers.exampleNrs) {
     activeNrs.push(...activeExplanationNumbers.exampleNrs);
   } //TODO eleganter
-  console.log(activeNrs);
+
   const examples = content.htmlExamples.map((ex, index) => {
       return <SingleExample
         key={index}

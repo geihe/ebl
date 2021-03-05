@@ -60,7 +60,7 @@ const processMeasureFrames = Shuffler.shuffleArray([1, 2, 3, 4, 5, 6, 7, 8, 9, 1
 
 export function exampleFrames(group) {
   const {groups: exampleGroups, ...exampleConfig} = config.examples;
-  const {items: exampleItems, id} = exampleGroups[group];
+  const {items: exampleItems, id} = exampleGroups[group-1];
   const rem = new EBL01_ExampleManager();
 
   return exampleItems.map(itemGroup => {
@@ -77,9 +77,9 @@ export function exampleFrames(group) {
   )
 }
 
-export function exampleFramesTest() {
+export function exampleFramesTest(group) {
   const {groups: exampleGroups, ...exampleConfig} = config.examples;
-  const {items: exampleItems, id} = exampleGroups[4];
+  const {items: exampleItems, id} = exampleGroups[group];
   const rem = new EBL01_ExampleManager();
   return exampleItems.map(itemGroup => {
       return itemGroup.map(s =>
