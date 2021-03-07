@@ -2,11 +2,11 @@ import React from 'react';
 import ReactDOM from "react-dom";
 import * as serviceWorker from './serviceWorker';
 import './index.css';
-import {Session} from "./Session.js";
-import {EBL01Builder} from "./assets/EBL_01/EBL01Builder";
+import {Session} from "./Manager/Session";
+import {EBL01Builder} from "./Manager/EBL01Builder";
 import {LngContext, translate} from "./helper/i18n";
 import {FocusStyleManager} from "@blueprintjs/core";
-import {config} from "./assets/EBL_01/config";
+import {config} from "./config";
 import {SessionFinished} from "./MicroComponents/SessionFinished";
 import {Server} from "./helper/Server";
 

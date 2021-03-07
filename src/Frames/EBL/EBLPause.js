@@ -1,6 +1,6 @@
 import React from 'react';
 import {TimeView} from "../../MicroComponents/TimeView";
-import {config} from "../../assets/EBL_01/config";
+import {config} from "../../config";
 import {Html} from "../../MicroComponents/Html";
 import {Pause} from "../Pause";
 

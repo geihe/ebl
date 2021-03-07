@@ -6,7 +6,7 @@ export function UniBielefeld(props) {
     <Zone style={{top: '5px', left:'5px'}}>
       Universität Bielefeld<br/>
       Arbeitseinheit Bildungspsychologie<br/>
-      FernUniversität in Hagen<br/>
+      (in Kollaboration mir der FernUniversität in Hagen)<br/>
       Dr. Veit Kubik
     </Zone>
   );

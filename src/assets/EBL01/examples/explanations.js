@@ -99,13 +99,8 @@ const selfRadioTemplate = [(nrText) => (
     ]
   }),
 ];
-
-export const selfRadio = selfRadioTemplate
-  .map((f, id) => (
-    {...f('Piep'), id: id}
-  ));
-
 export const selfRadioFunction = (n) => {
+
   const exampleNr = [Math.floor(n / 10)];
   const exampleNrs = [n < 10 ? 0 : exampleNr - 1]; //Nr. 1-4 auf index 0-3 herunterrechnen
   const id = n % 10;

@@ -1,7 +1,7 @@
 import React, {useContext, useRef, useState} from "react";
 import {LngContext} from "../../helper/i18n";
 import {Html} from "../../MicroComponents/Html";
-import styles from "../../cssModules/EBL/EblFrame.module.css";
+import styles from "../../cssModules/EBLFrame.module.css";
 import {phrase} from "../../assets/ressourceLanguage";
 import {Button, Intent, TextArea} from "@blueprintjs/core";
 import {ResponseRadioButtons} from "../../MicroComponents/ResponseRadioButtons";

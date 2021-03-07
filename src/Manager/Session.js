@@ -1,7 +1,7 @@
 import React, {useRef, useState} from "react";
-import {Zone} from "./MicroComponents/Zone";
-import {useStateDelayed} from "./Hooks/useStateDelayed";
-import {TimeView} from "./MicroComponents/TimeView";
+import {Zone} from "../MicroComponents/Zone";
+import {TimeView} from "../MicroComponents/TimeView";
+import {useStateDelayed} from "../Hooks/useStateDelayed";
 
 
 function Frame(props) {

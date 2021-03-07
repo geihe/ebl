@@ -1,13 +1,13 @@
 import React, {useContext} from 'react';
 import * as Yup from 'yup';
-import {MyRadioGroup} from "../Forms/MyRadioGroup";
-import {LngContext} from "../helper/i18n";
-import {Form} from "../Forms/Form";
-import {MySelect} from "../Forms/MySelect";
-import {UniBielefeld} from "../MicroComponents/UniBielefeld";
-import {MyInput} from "../Forms/MyInput";
+import {MyRadioGroup} from "../../Forms/MyRadioGroup";
+import {LngContext} from "../../helper/i18n";
+import {Form} from "../../Forms/Form";
+import {MySelect} from "../../Forms/MySelect";
+import {UniBielefeld} from "../../MicroComponents/UniBielefeld";
+import {MyInput} from "../../Forms/MyInput";
 
-export function Demographics(props) {
+export function EBL01_Demographics(props) {
   const t = useContext(LngContext);
   const initial = {degree: '', age: '', gender: '', nativeLanguage: '', difficulties: '', diffcltText: ''};
   let data=initial;

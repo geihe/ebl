@@ -1,11 +1,11 @@
 import React from "react";
-import {config} from "./config";
-import {EBL01_RessourcePrePostTestManager} from "./EBL01_RessourcePrePostTestManager";
+import {config} from "../../config";
+import {EBL01_RessourcePrePostTestManager} from "../../Manager/EBL01_RessourcePrePostTestManager";
 
 const rpptm = new EBL01_RessourcePrePostTestManager();
 
 const {items: preTestItems, ...preTestConfig} = config.preTest;
-export const preFrames = preTestItems
+export const preTest = preTestItems
   .map(s => rpptm.getStimulusResponseElement(s, preTestConfig));
 
 const {items: postTestItems, ...postTestConfig} = config.postTest;

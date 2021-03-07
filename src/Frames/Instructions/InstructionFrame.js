@@ -2,7 +2,7 @@ import React from 'react';
 import {DelayedFrame} from "../DelayedFrame";
 import {Html} from "../../MicroComponents/Html";
 import {UniBielefeld} from "../../MicroComponents/UniBielefeld";
-import {config} from "../../assets/EBL_01/config";
+import {config} from "../../config";
 import {EBL01Video} from "../EBL/EBL01Video";
 import {LikertFrame} from "../LikertFrame";
 import {DelayedRadioFrame} from "../DelayedRadioFrame";
@@ -41,20 +41,22 @@ export function InstructionFrame02(props) {
 
 export function InstructionFrame03(props) {
   const html = `
-  <p>Navigiere während des Experiments bitte nicht im Browser mit den Vor- oder Zurückbuttons Deines Browsers.</p>
-  <p> Du wirst durch das Experiment geleitet. An einigen Stellen kann es einen kurzen Moment dauern, bis die nächste Ansicht zu sehen ist.</p>
-  <p>Zuweilen kann es vorkommen, dass das Laden von neuen Seiten einige Sekunden dauert. Warte bitte immer ab, bis du die nächste Seite siehst und klicke währenddessen nicht mit der Maus!</p>
+<p><strong>Schön, dass du dabei bist!</strong></p>
+<p>Durch deine Teilnahme erwirbst du nicht nur neues Wissen, sondern erhältst auch einen Einblick in die aktuelle Forschung zu Lehren und Lernen. Zudem erhältst du für deine Teilnahme bei Bedarf 3 Versuchspersonenstunden für dein Psychologiestudium.</p>
+  <p><strong>Navigiere während des Experiments bitte nicht im Browser mit den Vor- oder Zurückbuttons Deines Browsers.</strong> Du wirst durch das Experiment geleitet. An einigen Stellen kann es einen kurzen Moment dauern, bis die nächste Ansicht zu sehen ist.</p>
+  <p>Manchmal kann es vorkommen, dass das Laden von neuen Seiten einige Sekunden dauert. Warte bitte immer ab, bis du die nächste Seite siehst und klicke währenddessen nicht mit der Maus!</p>
   `;
   return <InstructionFrame html={html} space finish={props.finish}/>;
 }
 
-export function InstructionFrame04(props) {
+export function InstructionFrame09(props) {
   const html = `
 <h1>Datenschutz</h1>
   <p>Der Schutz deiner Daten ist für uns besonders wichtig! </p>
   <ul>
       <li>Die erhobenen, studienbezogenen Daten werden ausschließlich zu wissenschaftlichen Zwecken verwendet. </li>
       <li>Bei der Erhebung werden keine Daten gespeichert, die Rückschlüsse auf deine Person zulassen. </li>
+      <li>Alle Daten werden in Deutschland gespeichert und unterliegen somit der Europäischen Datenschutzgrundverordnung.</li>
       <li>Die erhobenen, studienbezogenen Daten werden im Rahmen wissenschaftlicher Publikationen anonymisiert gespeichert, ausgewertet und weiterverarbeitet – ein Rückschluss auf deine Person ist dabei unter keinen Umständen möglich. </li>
       <li>Du kannst diese Studie jederzeit ohne eine Angabe von Gründen abbrechen. Dir entstehen daraus keine Nachteile.</li>
   </ul>
@@ -64,7 +66,7 @@ export function InstructionFrame04(props) {
   return <InstructionFrame html={html} space finish={props.finish}/>;
 }
 
-export function InstructionFrame05(props) {
+export function InstructionFrame10(props) {
   const html = `
 <h1>Wichtiger Hinweis</h1>
   <p>Diese Studie ist Teil eines wissenschaftlichen Projekts, das in Fachzeitschriften der Psychologie veröffentlicht wird. Wir möchten dich bitten, den Test - <strong>ohne Unterbrechung</strong> - bis zum Ende durchzuführen. Bitte stelle sicher, dass du während der Bearbeitung der Aufgaben nicht gestört wirst. Es ist wichtig, dass du die folgenden Vorkehrungen getroffen hast und dein Einverständnis mit einem Klick auf "Einverstanden" bestätigst: </p>
@@ -76,10 +78,10 @@ export function InstructionFrame05(props) {
 <p>Mit der konzentrierten Bearbeitung der Aufgaben trägst du dazu bei, die Qualität der Studie und der Ergebnisse zu sichern. Vielen Dank! </p>
   `;
 
-  return <InstructionFrame html={html} cancelButton finish={props.finish}/>;
+  return <InstructionFrame html={html} cancelButton continueButtonText="Einverstanden" cancelButtonText="Abbrechen" finish={props.finish}/>;
 }
 
-export function InstructionFrame06(props) {
+export function InstructionFrame14(props) {
   const html = `
   <h1>Rückfragen</h1>
   <p>Bei Rückfragen oder Hinweisen zu diesem Forschungsprojekt wende dich bitte an: <p><a href="mailto:onlinestudienforschung@gmail.com"> onlinestudienforschung@gmail.com </a></p></p>
@@ -90,17 +92,17 @@ export function InstructionFrame06(props) {
   return <InstructionFrame html={html} space finish={props.finish}/>;
 }
 
-export function InstructionFrame07(props) {
+export function InstructionFrame11(props) {
   const html = `
   <h1>Teilnahme</h1>
   <p>Wenn du an der Studie teilnehmen möchtest, klicke bitte auf <strong>"Jetzt teilnehmen"</strong>. </p>
   <p>Falls du im Moment keine störungsfreien Bedingungen vorfindest, so kannst du gerne zu einem anderen, günstigeren Zeitpunkt an dieser Studie teilnehmen. Klicke dafür bitte auf <strong>"Später teilnehmen"</strong>. </p>
   `;
 
-  return <InstructionFrame html={html} cancelButton finish={props.finish}/>;
+  return <InstructionFrame html={html}  cancelButton continueButtonText="Jetzt teilnehmen" cancelButtonText="Später teilnehmen" finish={props.finish}/>;
 }
 
-export function InstructionFrame08_I(props) {
+export function InstructionFrame12(props) {
   const html = `
   <h1>Einverständniserklärung I</h1>
   <p>Bestätige bitte dein Einverständnis, indem du auf "Einverstanden" klickst.  </p>
@@ -109,14 +111,14 @@ export function InstructionFrame08_I(props) {
     <li>Ich habe verstanden, dass ich die Studie jederzeit ohne eine Angabe von Gründen abbrechen kann, ohne dass mir persönliche Nachteile hieraus entstehen. </li>
     <li>Ich habe verstanden, dass nach Abschluss der Datenerhebung prinzipiell keine Zuordnung zwischen den Daten im Datensatz und meinen personenbezogenen Daten (Name, Mailadresse) möglich ist und somit der von mir produzierte Datensatz nicht gezielt gelöscht werden kann. </li>
     <li>Ich bin mit der angegebenen Art der sachgemäßen Verarbeitung, Speicherung und Weitergabe meiner vollständig anonymisiert erhobenen Daten in dieser Onlinestudie einverstanden. </li>
-    <li>Für die vollständige Teilnahme an dieser Studie erhalten ich 2,5 Versuchspersonenstunden.</li>
+    <li>Für die vollständige Teilnahme an dieser Studie erhalten ich 3 Versuchspersonenstunden.</li>
 </ul>
   `;
 
-  return <InstructionFrame html={html} cancelButton finish={props.finish}/>;
+  return <InstructionFrame html={html}  cancelButton continueButtonText="Einverstanden" cancelButtonText="Abbrechen"  finish={props.finish}/>;
 }
 
-export function InstructionFrame08_II(props) {
+export function InstructionFrame13(props) {
   const html = `
   <h1>Einverständniserklärung II</h1>
   <p>Bestätige bitte dein Einverständnis, indem du auf "Einverstanden" klickst.  </p>
@@ -128,37 +130,67 @@ export function InstructionFrame08_II(props) {
 <p>Wir freuen uns sehr über deine Teilnahme</p>
   `;
 
-  return <InstructionFrame html={html} cancelButton finish={props.finish}/>;
+  return <InstructionFrame html={html}  cancelButton continueButtonText="Einverstanden" cancelButtonText="Abbrechen"  finish={props.finish}/>;
 }
 
-export function InstructionFrame09_I(props) {
+export function InstructionFrame04(props) {
   const html = `
-  <h1>Vorabinformation I</h1>
-  <p>Schön, dass du zugestimmt hast. Dann kann es gleich losgehen.</p>
-  <p>Zunächst bekommst du weitere Informationen über den Ablauf des Experiments. Es ist wichtig, dass du die einzelnen Phasen gut kennst.</p>
+  <p>Du bekommst nun zunächst weitere Informationen über den Ablauf des Experiments.</p> 
+  <p><strong>Es ist wichtig, dass du die einzelnen Phasen gut kennst.</strong></p>
   <p>Deshalb folgt nach den nächsten drei Seiten eine kleine Aufgabe für dich.</p>
   `;
 
   return <InstructionFrame html={html} space finish={props.finish}/>;
 }
 
-export function InstructionFrame09_II(props) {
+export function InstructionFrame05(props) {
   const html = `
-  <h1>Vorabinformation II</h1>
-  <p>Durch deine Teilnahme erwirbst du nicht nur neues Wissen, sondern erhältst auch einen Einblick in die aktuelle Forschung. Außerdem erhältst du für deine Teilnahme bei Bedarf 2,5 Versuchspersonenstunden für dein Psychologiestudium.</p>
+<p>Die Studie besteht aus zwei Studiensitzungen: </p>
+  <ul>
+  <li>In der heutigen <strong>ersten Studiensitzung</strong> lernst du die vier Prinzipien der Wahrscheinlichkeitsrechnung kennen und wendest diese am Ende in verschiedenen Beispielssituationen an. </li>
+  <li>Die <strong>zweite Sitzung</strong> findet in genau sieben Tagen statt. Du erhältst dann eine E-Mail mit einem Link.  </li>
+</ul>
+<p>Bitte plane für die heutige Sitzung ca. 90 Minuten und für die zweite Sitzung ca. eine Stunde ein.</p>
+  `;
+
+  return <InstructionFrame html={html} space finish={props.finish}/>;
+}
+
+export function InstructionFrame09_IIalt(props) {
+  const html = `
+  <p>Durch deine Teilnahme erwirbst du nicht nur neues Wissen, sondern erhältst auch einen Einblick in die aktuelle Forschung. Außerdem erhältst du für deine Teilnahme bei Bedarf 3 Versuchspersonenstunden für dein Psychologiestudium.</p>
   <p>Durch deine Teilnahme unterstützt du den Informationsgewinn zu Prozessen beim Lernen und somit die Erweiterung des bisherigen Kenntnisstands der Forschung. Deine Teilnahme ist mit keinerlei Risiken für dich verbunden. Sie erfolgt anonym. Ein Rückschluss von den erhobenen Daten auf deine Person ist nicht möglich. Die Daten werden selbstverständlich vertraulich behandelt und ausschließlich für den angegebenen Forschungszweck verwendet. Durch Beenden der Teilnahme hast du bis zum Ende der Sitzung die Möglichkeit, der Speicherung der Daten nicht zuzustimmen. </p>
   `;
 
   return <InstructionFrame html={html} space finish={props.finish}/>;
 }
 
-export function InstructionFrame09_III(props) {
+export function InstructionFrame06(props) {
   const html = `
-  <h1>Vorabinformation III</h1>
-  <p>In der ersten, heutigen Sitzung absolvierst du zuerst einen <strong>Vortest mit 12 Aufgaben</strong>, in dem deine Fähigkeiten im Umgang mit Wahrscheinlichkeiten geprüft werden. Daraufhin erhältst du <strong>allgemeine Erklärungen über Urnenmodelle und Stochastik</strong>. <br/>
-  Im Anschluss daran lernst du vier Prinzipien der Wahrscheinlichkeitsrechnung <strong>anhand von 16 Lösungsbeispielen</strong> kennen. Zu jedem Lösungsbeispiel erhältst du Fragen im Multiple Choice-Format. Nach vier bearbeiteten Aufgaben wirst du gebeten, <strong>Fragen zu deiner kognitiven Beanspruchung und zu deinem Flow-Erleben</strong> zu beantworten.<br/>
-   Nach Beendigung der Lernphase erfolgt eine <strong>10-minütige Pause</strong>. Zum Abschluss der ersten Session sollst du die Prinzipien in einer Testphase anhand von <strong>22 Testaufgaben</strong> und <strong>16 Verifikationsaufgaben</strong> anwenden. <br/>
-   Es ist keinerlei Vorwissen von deiner Seite notwendig – alle Informationen erhältst du ausschließlich in dieser Studie.  </p></>
+<p>In der heutigen ersten Studiensitzung wirst du deine Kenntnisse zur Wahrscheinlichkeitsrechnung auffrischen. Diese Sitzung besteht aus den folgenden Phasen:</p>
+<p><i>Vortest:</i> in <strong>12 Aufgaben</strong> wird herausgefunden, wie gut du Rechenaufgaben lösen und Wahrscheinlichkeiten bereits bestimmen kannst. </p>
+<p><i>Lernphase:</i>
+<ul>
+<li>Du erhältst eine <strong>allgemeine Erklärung über Urnenmodelle und Stochastik</strong>. </li>
+<li>Anschließend lernst du vier Prinzipien der Wahrscheinlichkeitsrechnung anhand von <strong>16 Lösungsbeispielen</strong>. Zu jedem Lösungsbeispiel erhältst du Fragen im Multiple Choice-Format. </li>
+<li>Nach jeweils vier Lösungsbeispielen werden dir verschiedene <strong>Fragen zu deiner kognitiven Beanspruchung und deinem Flowerleben</strong> gestellt. </li>
+</ul>
+</p>
+<p><i>Pause: Du hast 10 Minuten Zeit dich zu entspannen. </i></p>
+<p><i>Anwendungsphase:</i>
+Zum Abschluss der ersten Studiensitzung sollst du die Prinzipien anhand von <strong>22 Testaufgaben</strong> und <strong>16 Verifikationsaufgaben</strong> anwenden. Hierfür ist keinerlei Vorwissen von deiner Seite notwendig – alle Informationen erhältst du ausschließlich in dieser Studie.  
+</p>
+  `;
+
+  return <InstructionFrame html={html} space finish={props.finish}/>;
+}
+
+
+export function InstructionFrame07(props) {
+  const html = `
+  <p>Die zweite Studiensitzung erfolgt nach 7 Tagen. </p>
+  <p>Du sollst dann erneut die Prinzipien der Wahrscheinlichkeitsrechnung anhand der Testaufgaben anwenden.</p>
+  <p> Abschließend erfolgt eine Aufgabe zum schlussfolgernden Denken. </p>
 
   `;
 
@@ -166,18 +198,7 @@ export function InstructionFrame09_III(props) {
 }
 
 
-export function InstructionFrame09_IV(props) {
-  const html = `
-  <h1>Vorabinformation IV</h1>
-  <p>Nach einer Woche erfolgt in einer zweiten Sitzung zuerst eine weitere Testphase, in der du die heute gelernten Prinzipien erneut anwenden sollst. Abschließend erfolgt ein Test zum schlussfolgernden Denken. </p>
-  <p>Die Studie erfolgt also in zwei Sitzungen. Die erste absolvierst du jetzt. Die zweite Sitzung solltest du möglichst in genau sieben Tagen zur gleichen Uhrzeit absolvieren. An diese zweite Sitzung wirst du automatisch per Mail erinnert. Du wirst am Ende der ersten Sitzung aufgefordert deine E-Mail-Adresse anzugeben. Beide Sitzungen nehmen erfahrungsgemäß ca. 2,5 Stunden in Anspruch.</p>
-  `;
-
-  return <InstructionFrame html={html} space finish={props.finish}/>;
-}
-
-
-export function InstructionFrame11(props) {
+export function InstructionFrame11alt(props) {
   const html = `
   <h1>Vortest</h1>
 <p>Nun wirst du einen Vortest mit 12 Aufgaben zur Einschätzung deiner bisherigen stochastischen Kenntnisse und mathematischen Fähigkeiten durchlaufen. </p>
@@ -189,7 +210,7 @@ export function InstructionFrame11(props) {
   return <InstructionFrame html={html} space finish={props.finish}/>;
 }
 
-export function InstructionFrame12(props) {
+export function InstructionFrame12alt(props) {
   const html = `
   <h1>Du hast den Vortest abgeschlossen - vielen Dank! </h1>
 <p>Mit der Leertaste wirst du automatisch zum Lernprogramm weitergeleitet. </p>
@@ -198,7 +219,7 @@ export function InstructionFrame12(props) {
   return <InstructionFrame html={html} space finish={props.finish}/>;
 }
 
-export function InstructionFrame16a_I_simultan_group23(props) {
+export function InstructionFrame16a_I_simultan_group23alt(props) {
   const html = `
   <h1>Aufbau des Lernprogramms I</h1>
   <p>Auf jeder Seite des Lernprogramms werden dir vier Beispielaufgaben präsentiert, wovon zunächst nur eine sichtbar sein wird. Du sollst diese Aufgabe aufmerksam lesen und versuchen, die Lösung nachzuvollziehen. Anschließend kannst du auf den „Weiter“-Button klicken und es erscheinen eine weitere Beispielaufgabe, sowie eine Multiple Choice-Frage auf der rechten Seite. </p>
@@ -209,7 +230,7 @@ export function InstructionFrame16a_I_simultan_group23(props) {
   return <InstructionFrame html={html} space finish={props.finish}/>;
 }
 
-export function InstructionFrame16a_II_simultan_group23(props) {
+export function InstructionFrame16a_II_simultan_group23alt(props) {
   const html = `
   <h1>Aufbau des Lernprogramms II</h1>
   <p>Zum Abschluss jeder der vier Durchgänge erfolgt eine Befragung zu deinem Flow-Erleben und deiner kognitiven Beanspruchung. Dir werden 11 verschiedene Aussagen präsentiert. Du sollst dann auf einer Skala entscheiden, inwiefern jede dieser Aussagen auf dich zutrifft. Es ist wichtig, dass du die Fragen wahrheitsgemäß beantwortest. </p>
@@ -219,7 +240,7 @@ export function InstructionFrame16a_II_simultan_group23(props) {
   return <InstructionFrame html={html} space finish={props.finish}/>;
 }
 
-export function InstructionFrame16b_I_sequenziell_group01(props) {
+export function InstructionFrame16b_I_sequenziell_group01alt(props) {
   const html = `
   <h1>Aufbau des Lernprogramms I</h1>
   <p>Auf jeder Seite des Lernprogramms wird dir nur eine Beispielaufgabe präsentiert. Du sollst jede Aufgabe aufmerksam lesen und versuchen, die Lösung nachzuvollziehen. </p>
@@ -231,7 +252,7 @@ export function InstructionFrame16b_I_sequenziell_group01(props) {
   return <InstructionFrame html={html} space finish={props.finish}/>;
 }
 
-export function InstructionFrame16b_II_sequenziell_group01(props) {
+export function InstructionFrame16b_II_sequenziell_group01alt(props) {
   const html = `
   <h1>Aufbau des Lernprogramms II</h1>
   <p>Nach vier bearbeiteten Aufgaben erfolgt eine kurze Befragung zu deinem Flow-Erleben und deiner kognitiven Beanspruchung. Dir werden 11 verschiedene Aussagen präsentiert. Du sollst dann auf einer Skala entscheiden, inwiefern jede dieser Aussagen auf dich zutrifft. Es ist wichtig, dass du die Fragen wahrheitsgemäß beantwortest.</p>
@@ -244,7 +265,7 @@ export function InstructionFrame16b_II_sequenziell_group01(props) {
 //TODO 17
 
 
-export function InstructionFrame18(props) {
+export function InstructionFrame18alt(props) {
   const html = `
   <p>Die Lernphase ist nun abgeschlossen – vielen Dank!</p>
   <p>Bitte mach nun eine Pause von 10 Minuten. Gerne kannst du dir die Beine vertreten, durchlüften oder dir etwas zu trinken holen. Du siehst sogleich einen Timer. Bitte sei vor Ablauf der Zeit zurück und schalte alle Störungsquellen aus. Du wirst nach Ablauf der Zeit automatisch zum Test weitergeleitet.</p>
@@ -253,7 +274,7 @@ export function InstructionFrame18(props) {
   return <InstructionFrame html={html} space finish={props.finish}/>;
 }
 
-export function InstructionFrame19(props) {
+export function InstructionFrame19alt(props) {
   const html = `
 <h1>Post-Test</h1>
   <p>Im letzten Abschnitt der Studie werden dir verschiedene Aufgaben präsentiert, die deinen Lernerfolg messen. Es ist deshalb wichtig, dass du bitte keine Hilfsmittel (z.B. Taschenrechner oder Internetseiten) benutzt.</p>
@@ -264,7 +285,7 @@ export function InstructionFrame19(props) {
   return <InstructionFrame html={html} space finish={props.finish}/>;
 }
 
-export function InstructionFrame20a(props) {
+export function InstructionFrame20aalt(props) {
   const html = `
   <p>Dir werden nun 12 Aufgaben präsentiert, deren Lösungen du berechnen und in das dir zur Verfügung stehende Notizfeld eintippen sollst. </p>
   <p>Bitte nutze [/] um Brüche auszudrücken. Bestätige deine Eingabe mit [Enter]. Du wirst dann automatisch zur nächsten Aufgabe weitergeleitet.</p>
@@ -273,7 +294,7 @@ export function InstructionFrame20a(props) {
   return <InstructionFrame html={html} space finish={props.finish}/>;
 }
 
-export function InstructionFrame20b(props) {
+export function InstructionFrame20balt(props) {
   const html = `
   <p>Vielen Dank für die Berechnung der Aufgaben!</p>
   <p>Dir werden nun zehn weitere Aufgaben präsentiert. Vier Aufgaben erfordern, dass du aus vier Antwortmöglichkeiten eine Antwort auswählst. Du wirst nach deiner Antwortwahl automatisch zur nächsten Antwort weitergeleitet.</p>
@@ -284,7 +305,7 @@ export function InstructionFrame20b(props) {
   return <InstructionFrame html={html} space finish={props.finish}/>;
 }
 
-export function InstructionFrame20c(props) {
+export function InstructionFrame20calt(props) {
   const html = `
   <p>Vielen Dank für die Berechnung der Aufgaben!</p>
   <p>Dir werden nun 16 Textaufgaben präsentiert. Achtmal erhältst du zur Textaufgabe eine rechnerische Lösung. Bei acht weiteren Textaufgaben erhältst du eine Beschreibung eines der vier Prinzipien. </p>
@@ -296,11 +317,11 @@ export function InstructionFrame20c(props) {
   return <InstructionFrame html={html} space finish={props.finish}/>;
 }
 
-export function InstructionFrame21(props) {
+export function InstructionFrame21alt(props) {
   return <EBL01Video videoID={'outro'} finish={props.finish}/>
 }
 
-export function InstructionFrame22(props) {
+export function InstructionFrame22alt(props) {
   const html = `
   <h1>Abschließende Fragen</h1>
 <p>Diese Fragen sind zur Beurteilung der wissenschaftlichen Datenqualität unserer Studie besonders wichtig. Für die Berücksichtigung deiner anonymen Daten ist es beispielsweise wichtig, dass du dich hinreichend konzentrieren und dass du die Instruktionen lesen und die präsentierten Aufgaben verstehen konntest. </p>
@@ -312,7 +333,7 @@ export function InstructionFrame22(props) {
 }
 
 
-export function InstructionFrame22bIa(props) {
+export function InstructionFrame22bIaalt(props) {
   return (
     <>
       <UniBielefeld/>
@@ -324,7 +345,7 @@ export function InstructionFrame22bIa(props) {
     </>)
 }
 
-export function InstructionFrame22bIb(props) {
+export function InstructionFrame22bIbalt(props) {
   return (
     <>
       <UniBielefeld/>
@@ -336,7 +357,7 @@ export function InstructionFrame22bIb(props) {
     </>)
 }
 
-export function InstructionFrame22bIIb(props) {
+export function InstructionFrame22bIIbalt(props) {
   const options = [
     {
       label: 'Ich habe schon einmal an DERSELBEN Studie teilgenommen.',
@@ -364,7 +385,7 @@ export function InstructionFrame22bIIb(props) {
   </>
 }
 
-export function InstructionFrame22bIIc(props) {
+export function InstructionFrame22bIIcalt(props) {
   const options = [
     {
       label: 'Nein',
@@ -392,7 +413,7 @@ export function InstructionFrame22bIIc(props) {
   </>
 }
 
-export function InstructionFrame22bIId(props) {
+export function InstructionFrame22bIIdalt(props) {
   const options = [
     {
       label: 'Nein',
@@ -419,7 +440,7 @@ export function InstructionFrame22bIId(props) {
   />
   </>
 }
-export function InstructionFrame22bIIe(props) {
+export function InstructionFrame22bIIealt(props) {
   const options = [
     {
       label: 'Nein',
@@ -442,7 +463,7 @@ export function InstructionFrame22bIIe(props) {
   />
   </>
 }
-export function InstructionFrame23(props) {
+export function InstructionFrame23alt(props) {
   const initial = {feedback: ''};
   let data=initial;
   const validationSchema = Yup.object();

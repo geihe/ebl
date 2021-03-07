@@ -1,7 +1,7 @@
 import {DelayedFrame} from "../../Frames/DelayedFrame";
 import React from "react";
 import {MathComponent} from "mathjax-react";
-import {config} from "./config";
+import {config} from "../../config";
 
 
 const items=[

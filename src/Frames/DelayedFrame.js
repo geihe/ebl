@@ -13,11 +13,13 @@ export function DelayedFrame(props) {
   const {
     children,
     continueText = phrase.continueText,
+    cancelButton, //Button abbrechen hinzufügen
+    cancelButtonText = phrase.cancelButton,
+    continueButtonText = phrase.continueButton,
     delay = 3000, //delay=0 -> Continue-Element erscheint sofort
     auto,         //automatisch weiter nach Zeit
     noResponse,   //es erscheint kein Continue-Element, Frame wird endlos angezeigt
     space,        //Weiter mit Leertaste
-    cancelButton, //Button abbrechen hinzufügen
     contentClass = styles.zone + ' ' + styles.content + ' ' + styles.elements,
     continueClass = styles.zone + ' ' + styles.continue,
   } = props;
@@ -38,10 +40,10 @@ export function DelayedFrame(props) {
       <>
         {cancelButton ?
           <Button intent={'Danger'} onClick={() => props.finish('break')}>
-          {t(phrase.cancelButton)}
+          {t(cancelButtonText)}
         </Button> : null}
         <Button intent={'Success'} onClick={() => props.finish('continue')}>
-          {t(phrase.continueButton)}
+          {t(continueButtonText)}
         </Button>
       </>;
   }

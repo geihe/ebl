@@ -1,9 +1,9 @@
 import React, {useContext} from 'react';
 import * as Yup from 'yup';
-import {MyRadioGroup} from "../Forms/MyRadioGroup";
-import {LngContext} from "../helper/i18n";
-import {Form} from "../Forms/Form";
-import {MySelect} from "../Forms/MySelect";
+import {MyRadioGroup} from "../../Forms/MyRadioGroup";
+import {LngContext} from "../../helper/i18n";
+import {Form} from "../../Forms/Form";
+import {MySelect} from "../../Forms/MySelect";
 
 export function Instruction10(props) {
   const t = useContext(LngContext);

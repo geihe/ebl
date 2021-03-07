@@ -2,7 +2,7 @@ import React, {useRef, useState} from "react";
 import styled from "@emotion/styled";
 import {DragDropContext, Draggable, Droppable} from "react-beautiful-dnd";
 import {Shuffler} from "../helper/Shuffle";
-import {DelayedFrame} from "../Frames/DelayedFrame";
+import {DelayedFrame} from "./DelayedFrame";
 import {UniBielefeld} from "../MicroComponents/UniBielefeld";
 import {Button} from "@blueprintjs/core";
 
@@ -12,7 +12,8 @@ const items = [
   '4 mal 4 Lösungsbeispiele mit Befragung zu kognitiver Belastung und zum Flow-Erleben',
   'Pause (10 Minuten)',
   'Testaufgaben (22 Aufgaben)',
-  'Verifikationsaufgaben (16 Aufgaben)'
+  'Verifikationsaufgaben (16 Aufgaben)',
+  'Zweite Sitzung in 7 Tagen'
 ];
 
 const initial = Shuffler.shuffleArray(
@@ -66,7 +67,7 @@ const QuoteList = React.memo(function QuoteList({quotes}) {
   ));
 });
 
-export function Test(props) {
+export function InstructionTest(props) {
   const [state, setState] = useState({quotes: initial});
   const [phase, setPhase] = useState('problem');
   const data = useRef({});

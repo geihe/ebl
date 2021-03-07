@@ -1,8 +1,8 @@
-import {fahrradhelm} from "./examples/fahrradhelm";
-import {edelgase} from "./examples/edelgase";
-import {kekse} from "./examples/kekse";
-import {skispringen} from "./examples/skispringen";
-import {selfExplanations, selfRadioFunction} from "./examples/explanations";
+import {fahrradhelm} from "../assets/EBL01/examples/fahrradhelm";
+import {edelgase} from "../assets/EBL01/examples/edelgase";
+import {kekse} from "../assets/EBL01/examples/kekse";
+import {skispringen} from "../assets/EBL01/examples/skispringen";
+import {selfExplanations, selfRadioFunction} from "../assets/EBL01/examples/explanations";
 
 export class EBL01_ExampleManager {
   constructor() {

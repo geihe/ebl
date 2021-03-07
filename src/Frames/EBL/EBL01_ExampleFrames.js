@@ -1,14 +1,14 @@
 import React from "react";
-import {config} from "./config";
-import {EblFrame} from "../../Frames/EBL/EblFrame";
-import {LikertFrame} from "../../Frames/LikertFrame";
-import {DelayedFrame} from "../../Frames/DelayedFrame";
-import {phrase} from "../ressourceLanguage";
+import {config} from "../../config";
+import {EblFrame} from "./EblFrame";
+import {LikertFrame} from "../LikertFrame";
+import {DelayedFrame} from "../DelayedFrame";
+import {phrase} from "../../assets/ressourceLanguage";
 import {Shuffler} from "../../helper/Shuffle";
-import {FixationCrossFrame} from "../../Frames/FixationCrossFrame";
-import {fssItems} from "./fssItems";
-import {EBL01_ExampleManager} from "./EBL01_ExampleManager";
+import {FixationCrossFrame} from "../FixationCrossFrame";
+import {fssItems} from "../../assets/EBL01/fssItems";
 import {Icon} from "@blueprintjs/core";
+import {EBL01_ExampleManager} from "../../Manager/EBL01_ExampleManager";
 
 const processMeasuresIntroduction = {
   frame: (<DelayedFrame
