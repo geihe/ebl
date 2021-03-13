@@ -9,33 +9,33 @@ import {
   InstructionFrame01,
   InstructionFrame03,
   InstructionFrame04,
-  InstructionFrame05,
   InstructionFrame06,
   InstructionFrame07,
   InstructionFrame09,
   InstructionFrame10,
+  InstructionFrame100_sequenziell_12,
+  InstructionFrame100_simultan_34,
+  InstructionFrame101_sequenziell_12,
+  InstructionFrame101_simultan_34,
   InstructionFrame11,
-  InstructionFrame11alt,
   InstructionFrame12,
-  InstructionFrame12alt,
   InstructionFrame13,
   InstructionFrame14,
-  InstructionFrame16a_I_simultan_group23alt,
-  InstructionFrame16a_II_simultan_group23alt,
-  InstructionFrame16b_I_sequenziell_group01alt,
-  InstructionFrame16b_II_sequenziell_group01alt,
-  InstructionFrame19alt,
-  InstructionFrame20aalt,
-  InstructionFrame20balt,
-  InstructionFrame20calt,
-  InstructionFrame22alt,
-  InstructionFrame22bIaalt,
-  InstructionFrame22bIbalt,
-  InstructionFrame22bIIbalt,
-  InstructionFrame22bIIcalt,
-  InstructionFrame22bIIdalt,
-  InstructionFrame22bIIealt,
-  InstructionFrame23alt
+  InstructionFrame16,
+  InstructionFrame17,
+  InstructionFrame200,
+  InstructionFrame201,
+  InstructionFrame202,
+  InstructionFrame203,
+  InstructionFrame204,
+  InstructionFrame206,
+  InstructionFrame207,
+  InstructionFrame208,
+  InstructionFrame209,
+  InstructionFrame210,
+  InstructionFrame211a,
+  InstructionFrame211b,
+  InstructionFrame212
 } from "../Frames/Instructions/InstructionFrame";
 import {CancelFrame} from "../Frames/CancelFrame";
 import {FixationCrossFrame} from "../Frames/FixationCrossFrame";
@@ -77,66 +77,59 @@ export class EBL01Builder {
     }
   }
 
-  buildSession1() {
+  buildSession1() { //TODO milestones einbauen
     const cancelTest = {
       if: (lastlog) => lastlog === 'break',
       then: <CancelFrame/>,
     };
 
-    const einleitung = [<InstructionFrame01/>,
-      <ToDoFrame text={'Video Einleitung '}/>]; // -->InstructionFrame02
 
-    const vorabInformation = [<InstructionFrame03/>,
+    // -->InstructionFrame02
+    this.tlManager.add([
+
+      <InstructionFrame01/>,
+      <ToDoFrame text={'Video Einleitung '}/>,
+      <InstructionFrame03/>,
       {
-        repeat: [<InstructionFrame04/>, <InstructionFrame05/>, <InstructionFrame06/>,
+        repeat: [<InstructionFrame04/>, <InstructionFrame06/>,
           <InstructionFrame07/>, <InstructionTest/>,],
         until: (lastlog) => lastlog.correct
-      }];
-
-    const datenschutzEinverstaendnis = [<InstructionFrame09/>,
+      },
+      <InstructionFrame09/>,
       <InstructionFrame10/>, cancelTest,
       <InstructionFrame11/>, cancelTest,
       <InstructionFrame12/>, cancelTest,
       <InstructionFrame13/>, cancelTest,
-      <InstructionFrame14/>];
+      <InstructionFrame14/>,
 
-    this.tlManager.add([
-      ...einleitung,
-      ...vorabInformation,
-      ...datenschutzEinverstaendnis,
-
-
-      <InstructionFrame11alt/>,
+      <InstructionFrame16/>,
       preTest,
-      <InstructionFrame12alt/>,
+      <InstructionFrame17/>,
       EBL01_MathCourse,
-      this.group >2 ?
-        [<InstructionFrame16a_I_simultan_group23alt/>,
-        <InstructionFrame16a_II_simultan_group23alt/>,]
-        :
-        [<InstructionFrame16b_I_sequenziell_group01alt/>,
-          <InstructionFrame16b_II_sequenziell_group01alt/>,]
+      this.group <= 2 ?
+        [<InstructionFrame100_sequenziell_12/>,
+          <InstructionFrame101_sequenziell_12/>,] :
+        [<InstructionFrame100_simultan_34/>,
+          <InstructionFrame101_simultan_34/>,]
       ,
       exampleFrames(this.group),
 
-      // <InstructionFrame18/>,  -> ist bereits in EBLPause integriert
       <EBLPause/>,
-      <InstructionFrame19alt/>,
-      <InstructionFrame20aalt/>, postFrames[0],
-      <InstructionFrame20balt/>, postFrames[1],
-      <InstructionFrame20calt/>, postFrames[2],
-      <InstructionFrame20balt/>,
-      <InstructionFrame20calt/>,
-      <ToDoFrame text={'Video Debriefing, '}/>,
-      <InstructionFrame22alt/>,
+      <ToDoFrame text={'Nächsten Frame durch Video ersetzen.'}/>,
+      <InstructionFrame200/>,
+      <InstructionFrame201/>, postFrames[0],
+      <InstructionFrame202/>, postFrames[1],
+      <InstructionFrame203/>, postFrames[2],
+      <ToDoFrame text={'Video Debriefing?, '} />,
+      <InstructionFrame204/>,
       <EBL01_Demographics/>,
-      <InstructionFrame22bIaalt/>, <FixationCrossFrame nocross/>,
-      <InstructionFrame22bIbalt/>, <FixationCrossFrame nocross/>,
-      <InstructionFrame22bIIbalt/>, <FixationCrossFrame nocross/>,
-      <InstructionFrame22bIIcalt/>, <FixationCrossFrame nocross/>,
-      <InstructionFrame22bIIdalt/>, <FixationCrossFrame nocross/>,
-      <InstructionFrame22bIIealt/>, <FixationCrossFrame nocross/>,
-      <InstructionFrame23alt/>,
+      <InstructionFrame206/>, <FixationCrossFrame nocross/>,
+      <InstructionFrame207/>, <FixationCrossFrame nocross/>,
+      <InstructionFrame208/>, <FixationCrossFrame nocross/>,
+      <InstructionFrame209/>, <FixationCrossFrame nocross/>,
+      <InstructionFrame210/>, <FixationCrossFrame nocross/>,
+      <InstructionFrame211a/>, <FixationCrossFrame nocross/>,
+      <InstructionFrame212/>,
       <ToDoFrame text={'Versuchspersonenbescheinigung '}/>,
       <ToDoFrame text={'Einverständnis, dass die Daten anonymisiert auf den Server geladen werden '}/>,
       <ToDoFrame text={'Session-Ende, Code erzeugen, Mailadresse abfragen,  '}/>,
@@ -149,6 +142,13 @@ export class EBL01Builder {
 
   buildTestSession() {
     this.tlManager.add(
+      <InstructionFrame211a/>,
+        {
+          if: (lastlog) => lastlog === 'Ja',
+          then:  <InstructionFrame211b/>,
+        },
+      <FixationCrossFrame nocross/>,
+      <InstructionFrame212/>,
       exampleFramesTest(this.group)
     );
   }

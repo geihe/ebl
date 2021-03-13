@@ -5,7 +5,6 @@ import {LngContext} from "../../helper/i18n";
 import {Form} from "../../Forms/Form";
 import {MySelect} from "../../Forms/MySelect";
 import {UniBielefeld} from "../../MicroComponents/UniBielefeld";
-import {MyInput} from "../../Forms/MyInput";
 
 export function EBL01_Demographics(props) {
   const t = useContext(LngContext);
@@ -88,20 +87,6 @@ export function EBL01_Demographics(props) {
             {label: 'Deutsch und weiter(e) Sprache(n) (multilingual)', value: 'multilingual'},
             {label: 'andere', value: 30},
           ]}
-        />
-
-        <MyRadioGroup
-          name={'difficulties'}
-          label={{de: 'Hattest du besondere Schwierigkeiten bei der Bearbeitung der Aufgaben?'}}
-          inline={false}
-          options={[
-            {label: {en: 'yes', de: 'Ja'}, value: 'yes'},
-            {label: {en: 'no', de: 'Nein'}, value: 'no'},
-          ]}/>
-
-        <MyInput
-          name={'diffcltText'}
-          placeholder={'Schwierigkeiten, falls es welche gab'}
         />
       </Form>
     </>

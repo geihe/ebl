@@ -9,13 +9,12 @@ export function EBLPause(props) {//TODO exclude from data
   const   pauseText= '<h2>Liebe*r Studienteilnehmer*in</h2>' +
     '<p>Die Lernphase ist nun abgeschlossen – vielen Dank! ' +
     '<p></p>'+
-    '<p>Bitte mache nun eine Pause von 10 Minuten. ' +
+    '<p>Du hast dir nun eine Pause von 10 Minuten verdient. ' +
     'Gerne kannst du dir die Beine vertreten, durchlüften oder dir etwas zu trinken holen. </p>' +
     '<p>Du siehst sogleich einen Timer.</p>' +
     '<p>Bitte sei pünktlich zurück und schalte alle Störquellen aus.</p>';
 
   const pauseFunction = (remaining => {
-    console.log(remaining);
     if (remaining > config.pauseSeconds - 10) {
       return <Html
         html={pauseText}
@@ -28,7 +27,7 @@ export function EBLPause(props) {//TODO exclude from data
           padding: '10px',
         }}
       />
-    };
+    }
     return (<>
       <p><strong>Pause, gleich geht's weiter.</strong></p>
       <TimeView seconds={remaining}/>

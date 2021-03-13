@@ -4,9 +4,9 @@ export const config = {
   develop: true,
 
   language: 'de',
-  numberOfSessions: 2,
+  numberOfSessions: 1,
   timeBetweenSessionsInSeconds: 5 * 60,
-  pauseSeconds: 75,
+  pauseSeconds: 75, //TODO 600
   timeForExamples: 60,//TODO 3600
 
   instructions: {

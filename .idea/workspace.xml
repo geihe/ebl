@@ -4,41 +4,17 @@
     <option name="SCOPE_TYPE" value="3" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c0a8d840-d2a4-41a1-9e79-f574c09cafbd" name="Default Changelist" comment="Instruktionen Teil 1 überarbeitet">
+    <list default="true" id="c0a8d840-d2a4-41a1-9e79-f574c09cafbd" name="Default Changelist" comment="Instruktionen Teil 1 Nummerierung der Instruction-Frames vereinfacht">
       <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Instruction10.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frames/Instructions/Instruction10.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Frames/DelayedFrame.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frames/DelayedFrame.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Frames/Demographics.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frames/Instructions/EBL01_Demographics.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Frames/EBL/EBL01_PostOpen_1_2.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Frames/EBL/EBLPause.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frames/EBL/EBLPause.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Frames/EBL/EblFrame.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frames/EBL/EblFrame.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Frames/InstructionTest.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frames/InstructionTest.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Frames/Instructions/EBL01_Demographics.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frames/Instructions/EBL01_Demographics.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Frames/Instructions/InstructionFrame.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frames/Instructions/InstructionFrame.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Frames/Test.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frames/InstructionTest.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Manager/EBL01Builder.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Manager/EBL01Builder.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/MicroComponents/UniBielefeld.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/MicroComponents/UniBielefeld.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Session.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Manager/Session.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/EBL_01/EBL01Builder.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Manager/EBL01Builder.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/EBL_01/EBL01_ExampleFrames.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frames/EBL/EBL01_ExampleFrames.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/EBL_01/EBL01_ExampleManager.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Manager/EBL01_ExampleManager.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/EBL_01/EBL01_MathCourse.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/EBL01/EBL01_MathCourse.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/EBL_01/EBL01_PrePostTest.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/EBL01/EBL01_PrePostTest.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/EBL_01/EBL01_RessourcePrePostTestManager.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Manager/EBL01_RessourcePrePostTestManager.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/EBL_01/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/EBL_01/examples/edelgase.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/EBL01/examples/edelgase.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/EBL_01/examples/explanations.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/EBL01/examples/explanations.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/EBL_01/examples/fahrradhelm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/EBL01/examples/fahrradhelm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/EBL_01/examples/kekse.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/EBL01/examples/kekse.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/EBL_01/examples/skispringen.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/EBL01/examples/skispringen.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/EBL_01/fssItems.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/EBL01/fssItems.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/EBL_01/posFreeForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/EBL01/posFreeForm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/EBL_01/postConcept.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/EBL01/postConcept.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/EBL_01/postFT2step.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/EBL01/postFT2step.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/EBL_01/postMC.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/EBL01/postMC.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/EBL_01/postNT.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/EBL01/postNT.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/EBL_01/pre1step.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/EBL01/pre1step.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/EBL_01/preMulti.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/EBL01/preMulti.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/EBL_01/verification.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/EBL01/verification.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cssModules/EBL/EblFrame.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/cssModules/EBLFrame.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/EBL01/EBL01_MathCourse.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/EBL01/EBL01_MathCourse.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/config.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -278,7 +254,13 @@
       <workItem from="1614975755524" duration="3255000" />
       <workItem from="1615046431092" duration="600000" />
       <workItem from="1615101908508" duration="17087000" />
-      <workItem from="1615141216490" duration="1515000" />
+      <workItem from="1615141216490" duration="1628000" />
+      <workItem from="1615150711089" duration="1379000" />
+      <workItem from="1615399577809" duration="1501000" />
+      <workItem from="1615404489590" duration="629000" />
+      <workItem from="1615558850758" duration="8351000" />
+      <workItem from="1615571875749" duration="5765000" />
+      <workItem from="1615629428426" duration="1465000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1608320225945</created>
@@ -574,7 +556,14 @@
       <option name="project" value="LOCAL" />
       <updated>1614965331096</updated>
     </task>
-    <option name="localTasksCounter" value="43" />
+    <task id="LOCAL-00043" summary="Instruktionen Teil 1 Nummerierung der Instruction-Frames vereinfacht">
+      <created>1615142846502</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1615142846502</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -609,7 +598,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="process measures added&#10;EBL01Builder.buildProcessMeasures" />
     <MESSAGE value="changed color of checked likert item to blue" />
     <MESSAGE value="items analog zu Schalck erstellt&#10;fss-Skala Abfrage nach je 4 Beispielen" />
     <MESSAGE value="ToDOFrame eingeführt" />
@@ -634,7 +622,8 @@
     <MESSAGE value="Highlighte aktive Beispiele und Erklärungen" />
     <MESSAGE value="Postopen 1, 2&#10;als einzelne StimulusResponse-Elemente" />
     <MESSAGE value="Steuerung über URL eingeführt:&#10;group_id=1,..,4&#10;group_id=0 -&gt; Test&#10;session=99 -&gt; Kurzfassung Beispiele" />
-    <option name="LAST_COMMIT_MESSAGE" value="Steuerung über URL eingeführt:&#10;group_id=1,..,4&#10;group_id=0 -&gt; Test&#10;session=99 -&gt; Kurzfassung Beispiele" />
+    <MESSAGE value="Instruktionen Teil 1 Nummerierung der Instruction-Frames vereinfacht" />
+    <option name="LAST_COMMIT_MESSAGE" value="Instruktionen Teil 1 Nummerierung der Instruction-Frames vereinfacht" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
 </project>

@@ -81,6 +81,7 @@ async function getElementInfo() {
     user_id: params.get('user_id'),
     group_id: params.get('group_id'),
     session: params.get('session'),
+    test: params.get('test')
   }
 
   const dataItemsJSON = localStorage.getItem('data');

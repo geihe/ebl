@@ -10,6 +10,7 @@ export function UniBielefeld(props) {
       Dr. Veit Kubik
     </Zone>
   );
+
 }
 
 

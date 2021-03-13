@@ -13,7 +13,6 @@ const items = [
   'Pause (10 Minuten)',
   'Testaufgaben (22 Aufgaben)',
   'Verifikationsaufgaben (16 Aufgaben)',
-  'Zweite Sitzung in 7 Tagen'
 ];
 
 const initial = Shuffler.shuffleArray(

@@ -17,8 +17,6 @@ const items=[
   <MathCourse07b/>,
   <MathCourse07c/>,
   <MathCourse08/>,
-  <MathCourse09/>,
-  <MathCourse10/>,
 ];
 
 export const EBL01_MathCourse = items.map(content =>
@@ -202,44 +200,6 @@ export function MathCourse08(props) {
 
         <li>…lernst, wie man Aufgaben zu den vier Typen von mehrstufigen Zufallsexperimenten löst.</li>
       </ol>
-    </div>
-  );
-}
-
-export function MathCourse09(props) {
-  return (
-    <div>
-      <h1>Aufbau des Lernprogramms (Version 1)</h1>
-
-      <p>Auf jeder Seite des Lernprogramms ist zunächst nur eine Beispielaufgabe sichtbar.
-        Du sollst diese Aufgabe aufmerksam lesen und versuchen, die Lösung nachzuvollziehen.
-        Anschließend kannst Du auf den „Weiter“-Button klicken und es erscheinen eine weitere Beispielaufgabe,
-        sowie ein Arbeitsauftrag und ein Notizfeld auf der rechten Seite.</p>
-      <p>Nachdem Du auch die zweite Aufgabe aufmerksam gelesen hast, sollst Du den Arbeitsauftrag bearbeiten und deine
-        Antwort in das Notizfeld tippen.
-        Anschließend kannst Du erneut auf den „Weiter“-Button klicken und es erscheint eine weitere Beispielaufgabe,
-        sowie ein weiteres Notizfeld mit einem Arbeitsauftrag.
-        Insgesamt werden Dir auf jeder Seite vier Beispielaufgaben präsentiert und Du sollst vier Arbeitsaufträge in den
-        Notizfeldern beantworten.</p>
-      <p>Erst nachdem Du alle vier Arbeitsaufträge auf einer Seite bearbeitet hast, sollst Du den „nächste Seite“-Button
-        klicken und gelangst auf die nächste Seite des Lernprogramms.
-        Dann kannst Du nicht mehr zurückgehen.</p>
-    </div>
-  );
-}
-
-export function MathCourse10(props) {
-  return (
-    <div>
-      <h1>Aufbau des Lernprogramms (Version 2)</h1>
-
-      <p>Auf jeder Seite des Lernprogramms wird Dir eine Beispielaufgabe präsentiert.
-        Du sollst jede Aufgabe aufmerksam lesen und versuchen, die Lösung nachzuvollziehen. </p>
-      <p>Zudem befindet sich rechts auf jeder Seite des Lernprogramms ein Notizfeld und ein Arbeitsauftrag.
-        <p>Den Arbeitsauftrag sollst Du bearbeiten und Deine Antwort in das Notizfeld tippen.</p>
-        Erst danach sollst Du den „nächste Seite“-Button klicken und gelangst auf die nächste Seite des Lernprogramms.
-        Dann kannst Du nicht mehr zurückgehen.
-      </p>
     </div>
   );
 }
