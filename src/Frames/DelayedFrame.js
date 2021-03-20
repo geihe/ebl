@@ -7,6 +7,7 @@ import {useStateDelayed} from "../Hooks/useStateDelayed";
 import {useKeyListenerOnce} from "../Hooks/useKeyListenerOnce";
 import {phrase} from "../assets/ressourceLanguage";
 import {Button} from "@blueprintjs/core";
+import {FlexZone} from "../MicroComponents/FlexZone";
 
 export function DelayedFrame(props) {
   const t = useContext(LngContext);
@@ -20,7 +21,8 @@ export function DelayedFrame(props) {
     auto,         //automatisch weiter nach Zeit
     noResponse,   //es erscheint kein Continue-Element, Frame wird endlos angezeigt
     space,        //Weiter mit Leertaste
-    contentClass = styles.zone + ' ' + styles.content + ' ' + styles.elements,
+    style,
+    contentClass = styles.zone + ' ' + styles.content,
     continueClass = styles.zone + ' ' + styles.continue,
   } = props;
   const [responseActive, setResponseActive] = useStateDelayed(!(delay > 0) && !noResponse);
@@ -47,9 +49,8 @@ export function DelayedFrame(props) {
         </Button>
       </>;
   }
-
   return (
-    <React.Fragment>
+    <FlexZone style={style}>
       <Zone className={contentClass}>
         {children}
       </Zone>
@@ -59,6 +60,6 @@ export function DelayedFrame(props) {
             show={responseActive}>
         {continueElement}
       </Zone>
-    </React.Fragment>
+    </FlexZone>
   );
 }

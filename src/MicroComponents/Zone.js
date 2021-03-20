@@ -8,7 +8,6 @@ export function Zone(props) {
     ...style,
     transform: trans,
   };
-
   if (typeof myStyle.top !== 'undefined' ||
     typeof myStyle.bottom !== 'undefined' ||
     typeof myStyle.left !== 'undefined' ||

@@ -3,7 +3,6 @@ import styled from "@emotion/styled";
 import {DragDropContext, Draggable, Droppable} from "react-beautiful-dnd";
 import {Shuffler} from "../helper/Shuffle";
 import {DelayedFrame} from "./DelayedFrame";
-import {UniBielefeld} from "../MicroComponents/UniBielefeld";
 import {Button} from "@blueprintjs/core";
 
 const items = [
@@ -115,7 +114,6 @@ export function InstructionTest(props) {
     default:
       return (
         <>
-          <UniBielefeld/>
           <h3>Ziehe mit der Maus die Bausteine des Experiments in die richtige Reihenfolge:</h3>
           <DragDropContext onDragEnd={onDragEnd}>
             <Droppable droppableId="list">

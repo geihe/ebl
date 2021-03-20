@@ -10,7 +10,7 @@ import {fssItems} from "../../assets/EBL01/fssItems";
 import {Icon} from "@blueprintjs/core";
 import {EBL01_ExampleManager} from "../../Manager/EBL01_ExampleManager";
 
-const processMeasuresIntroduction = {
+const processMeasuresIntroduction = { //TODO in eigene Datei
   frame: (<DelayedFrame
     space
     continueText={phrase.continueText}
@@ -26,7 +26,7 @@ const processMeasuresIntroduction = {
   noProgres: true,
   id: 'process-instruction'
 };
-const cognitiveEffortFrame =
+export const cognitiveEffortFrame =
   {
     frame: <LikertFrame
       minText={{de: 'sehr wenig angestrengt', en: 'very little effort'}}

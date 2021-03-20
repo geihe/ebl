@@ -7,23 +7,14 @@
     background-color: #ddd;
     border: 1px solid #aaf;
     border-radius: 5px;
-    width: 1000px;
+    width: 800px;
 }
 
 .continue {
-    display: flex;
-    justify-content: space-around;
     color: darkblue;
     bottom: 10%;
     font-size: 18px;
-}
-
-.elements {
-    position: absolute;
-    top: 10%;
-    bottom: 30%;
-    flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
 }
 
 .content {
@@ -31,8 +22,8 @@
     justify-content: center;
     position: absolute;
     top: 10%;
-    bottom: 30%;
-    font-size: 18px;
+    bottom: 25%;
+    font-size: 14px;
     line-height: 150%;
 }
 
@@ -40,14 +31,17 @@
     color: darkblue;
 }
 
-.content p {
-    width: 100%;
-    line-height: 130%;
-    font-size: 18px;
-}
+/*.content p {*/
+/*    width: 100%;*/
+/*    line-height: 130%;*/
+/*    font-size: 18px;*/
+/*}*/
 
 .content h1 {
     font-size: 20px;
+    text-align: center;
+    position: absolute;
+    top: 5px;
 }
 
 .content h2 {

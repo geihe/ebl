@@ -10,7 +10,6 @@ import {
   InstructionFrame03,
   InstructionFrame04,
   InstructionFrame06,
-  InstructionFrame07,
   InstructionFrame09,
   InstructionFrame10,
   InstructionFrame100_sequenziell_12,
@@ -39,7 +38,7 @@ import {
 } from "../Frames/Instructions/InstructionFrame";
 import {CancelFrame} from "../Frames/CancelFrame";
 import {FixationCrossFrame} from "../Frames/FixationCrossFrame";
-import {EBL01_MathCourse} from "../assets/EBL01/EBL01_MathCourse";
+import {ebl01_MathCourse} from "../assets/EBL01/Ebl01_MathCourse";
 import {InstructionTest} from "../Frames/InstructionTest";
 import {postFrames, preTest} from "../assets/EBL01/EBL01_PrePostTest";
 
@@ -86,13 +85,12 @@ export class EBL01Builder {
 
     // -->InstructionFrame02
     this.tlManager.add([
-
       <InstructionFrame01/>,
       <ToDoFrame text={'Video Einleitung '}/>,
       <InstructionFrame03/>,
       {
         repeat: [<InstructionFrame04/>, <InstructionFrame06/>,
-          <InstructionFrame07/>, <InstructionTest/>,],
+           <InstructionTest/>,],
         until: (lastlog) => lastlog.correct
       },
       <InstructionFrame09/>,
@@ -105,7 +103,7 @@ export class EBL01Builder {
       <InstructionFrame16/>,
       preTest,
       <InstructionFrame17/>,
-      EBL01_MathCourse,
+      ebl01_MathCourse,
       this.group <= 2 ?
         [<InstructionFrame100_sequenziell_12/>,
           <InstructionFrame101_sequenziell_12/>,] :
@@ -120,7 +118,7 @@ export class EBL01Builder {
       <InstructionFrame201/>, postFrames[0],
       <InstructionFrame202/>, postFrames[1],
       <InstructionFrame203/>, postFrames[2],
-      <ToDoFrame text={'Video Debriefing?, '} />,
+      <ToDoFrame text={'Video Debriefing?, '}/>,
       <InstructionFrame204/>,
       <EBL01_Demographics/>,
       <InstructionFrame206/>, <FixationCrossFrame nocross/>,
@@ -128,7 +126,12 @@ export class EBL01Builder {
       <InstructionFrame208/>, <FixationCrossFrame nocross/>,
       <InstructionFrame209/>, <FixationCrossFrame nocross/>,
       <InstructionFrame210/>, <FixationCrossFrame nocross/>,
-      <InstructionFrame211a/>, <FixationCrossFrame nocross/>,
+      <InstructionFrame211a/>,
+      {
+        if: (lastlog) => lastlog === 'Ja',
+        then: <InstructionFrame211b/>,
+      },
+      <FixationCrossFrame nocross/>,
       <InstructionFrame212/>,
       <ToDoFrame text={'Versuchspersonenbescheinigung '}/>,
       <ToDoFrame text={'Einverständnis, dass die Daten anonymisiert auf den Server geladen werden '}/>,
@@ -142,12 +145,7 @@ export class EBL01Builder {
 
   buildTestSession() {
     this.tlManager.add(
-      <InstructionFrame211a/>,
-        {
-          if: (lastlog) => lastlog === 'Ja',
-          then:  <InstructionFrame211b/>,
-        },
-      <FixationCrossFrame nocross/>,
+
       <InstructionFrame212/>,
       exampleFramesTest(this.group)
     );

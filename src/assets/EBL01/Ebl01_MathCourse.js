@@ -5,7 +5,6 @@ import {config} from "../../config";
 
 
 const items=[
-  <MathCourse01/>,
   <MathCourse02/>,
   <MathCourse03/>,
   <MathCourse04a/>,
@@ -19,7 +18,7 @@ const items=[
   <MathCourse08/>,
 ];
 
-export const EBL01_MathCourse = items.map(content =>
+export const ebl01_MathCourse = items.map(content =>
   <DelayedFrame
     space
     delay={config.mathCourse.delay}
@@ -28,18 +27,11 @@ export const EBL01_MathCourse = items.map(content =>
   </DelayedFrame>
 );
 
-export function MathCourse01(props) {
-  return (
-    <div>
-      <h1>Mit Beispielen Wahrscheinlichkeitsrechnung lernen</h1>
-    </div>
-  );
-}
-
 export function MathCourse02(props) {
   return (
     <div>
-      <h1>Übersicht über das Lernprogramm</h1>
+      <h1>Mit Beispielen Wahrscheinlichkeitsrechnung lernen</h1>
+      <h2>Übersicht über das Lernprogramm</h2>
       Das Lernprogramm besteht aus folgenden Abschnitten:
       <ol>
         <li>Lehrtext</li>

@@ -4,18 +4,21 @@
     <option name="SCOPE_TYPE" value="3" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c0a8d840-d2a4-41a1-9e79-f574c09cafbd" name="Default Changelist" comment="Instruktionen Teil 1 Nummerierung der Instruction-Frames vereinfacht">
+    <list default="true" id="c0a8d840-d2a4-41a1-9e79-f574c09cafbd" name="Default Changelist" comment="Frage nach Schwierigkeiten am Ende&#10;&#10;Falls Ja erscheint eigenes Textfeld">
+      <change afterPath="$PROJECT_DIR$/src/Components/MySlider.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Frames/SliderFrame.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Frames/EBL/EBLPause.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frames/EBL/EBLPause.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Frames/DelayedFrame.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frames/DelayedFrame.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Frames/EBL/EBL01_ExampleFrames.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frames/EBL/EBL01_ExampleFrames.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Frames/InstructionTest.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frames/InstructionTest.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Frames/Instructions/EBL01_Demographics.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frames/Instructions/EBL01_Demographics.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Frames/Instructions/InstructionFrame.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frames/Instructions/InstructionFrame.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Manager/EBL01Builder.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Manager/EBL01Builder.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/MicroComponents/UniBielefeld.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/MicroComponents/UniBielefeld.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/EBL01/EBL01_MathCourse.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/EBL01/EBL01_MathCourse.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MicroComponents/Zone.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/MicroComponents/Zone.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/EBL01/EBL01_MathCourse.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/EBL01/Ebl01_MathCourse.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cssModules/DelayedFrame.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/cssModules/DelayedFrame.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cssModules/StimulusResponseFrame.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/cssModules/StimulusResponseFrame.module.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,7 +70,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="js.last.introduce.type" value="CONST" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/assets/EBL_01" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/Frames" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -82,10 +85,10 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="G:\OneDrive_Marienschule\Marienschule Krefeld\Programmprojekte - Dokumente\react\bipsy\ebl\src\assets\EBL_01" />
-      <recent name="G:\OneDrive_Marienschule\Marienschule Krefeld\Programmprojekte - Dokumente\react\bipsy\ebl\src\Frames\EBL" />
       <recent name="G:\OneDrive_Marienschule\Marienschule Krefeld\Programmprojekte - Dokumente\react\bipsy\ebl\src\Frames" />
       <recent name="G:\OneDrive_Marienschule\Marienschule Krefeld\Programmprojekte - Dokumente\react\bipsy\ebl\src\Components" />
+      <recent name="G:\OneDrive_Marienschule\Marienschule Krefeld\Programmprojekte - Dokumente\react\bipsy\ebl\src\assets\EBL_01" />
+      <recent name="G:\OneDrive_Marienschule\Marienschule Krefeld\Programmprojekte - Dokumente\react\bipsy\ebl\src\Frames\EBL" />
       <recent name="G:\OneDrive_Marienschule\Marienschule Krefeld\Programmprojekte - Dokumente\react\bipsy\ebl\src\Frames\Instructions" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -260,7 +263,11 @@
       <workItem from="1615404489590" duration="629000" />
       <workItem from="1615558850758" duration="8351000" />
       <workItem from="1615571875749" duration="5765000" />
-      <workItem from="1615629428426" duration="1465000" />
+      <workItem from="1615629428426" duration="2444000" />
+      <workItem from="1615642375788" duration="18351000" />
+      <workItem from="1616168915064" duration="438000" />
+      <workItem from="1616169388238" duration="652000" />
+      <workItem from="1616275676244" duration="400000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1608320225945</created>
@@ -563,7 +570,14 @@
       <option name="project" value="LOCAL" />
       <updated>1615142846502</updated>
     </task>
-    <option name="localTasksCounter" value="44" />
+    <task id="LOCAL-00044" summary="Frage nach Schwierigkeiten am Ende&#10;&#10;Falls Ja erscheint eigenes Textfeld">
+      <created>1615633028941</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1615633028941</updated>
+    </task>
+    <option name="localTasksCounter" value="45" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -598,7 +612,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="changed color of checked likert item to blue" />
     <MESSAGE value="items analog zu Schalck erstellt&#10;fss-Skala Abfrage nach je 4 Beispielen" />
     <MESSAGE value="ToDOFrame eingeführt" />
     <MESSAGE value="Explanation: textarea statt EditableText -&gt; kein Bug mehr&#10;Prozessmaße: Paas-Item zu Beginn, sonst zufällige Reihenfolge, 1-7" />
@@ -623,7 +636,8 @@
     <MESSAGE value="Postopen 1, 2&#10;als einzelne StimulusResponse-Elemente" />
     <MESSAGE value="Steuerung über URL eingeführt:&#10;group_id=1,..,4&#10;group_id=0 -&gt; Test&#10;session=99 -&gt; Kurzfassung Beispiele" />
     <MESSAGE value="Instruktionen Teil 1 Nummerierung der Instruction-Frames vereinfacht" />
-    <option name="LAST_COMMIT_MESSAGE" value="Instruktionen Teil 1 Nummerierung der Instruction-Frames vereinfacht" />
+    <MESSAGE value="Frage nach Schwierigkeiten am Ende&#10;&#10;Falls Ja erscheint eigenes Textfeld" />
+    <option name="LAST_COMMIT_MESSAGE" value="Frage nach Schwierigkeiten am Ende&#10;&#10;Falls Ja erscheint eigenes Textfeld" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
 </project>

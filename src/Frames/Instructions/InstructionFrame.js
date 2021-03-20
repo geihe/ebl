@@ -10,9 +10,10 @@ import {Form} from "../../Forms/Form";
 import {MyTextArea} from "../../Forms/MyTextArea";
 import * as Yup from "yup";
 
+
 export function InstructionFrame(props) {
   const {html, ...restProps} = props;
-  return (<> //TODO bei kleiner Höhe des Bildschirms Höhen anpassen
+  return (<>
       <UniBielefeld/>
       <DelayedFrame
         {...restProps}
@@ -27,7 +28,7 @@ export function InstructionFrame(props) {
 
 export function InstructionFrame01(props) {
   const html = `
-  <h1>Herzlich willkommen zur Studie „Gleichzeitiges Lernen von mehreren stochastischen Konzepten“</h1>
+  <h1>Herzlich willkommen zur Studie </h1><h2>„Gleichzeitiges Lernen von mehreren stochastischen Konzepten“</h2>
   <p><strong>Hinweis:</strong></p>
   <p>Es folgt nach „Weiter mit der Leertaste“ eine Videoinstruktion.<br/>Schalte bitte deinen Ton an.<br/>Wenn das Video nicht von selbst startet, kannst du es mit der Maus steuern.</p>
   `;
@@ -51,9 +52,11 @@ export function InstructionFrame03(props) {
 
 export function InstructionFrame04(props) {
   const html = `
-  <p>Du bekommst nun zunächst weitere Informationen über den Ablauf des Experiments.</p> 
-  <p><strong>Es ist wichtig, dass du die einzelnen Phasen gut kennst.</strong></p>
-  <p>Deshalb folgt nach den nächsten drei Seiten eine kleine Aufgabe für dich.</p>
+  <p>Du bekommst nun zunächst weitere Informationen über den Ablauf des Experiments:</p>
+<p>Heute wirst du deine Kenntnisse zur Wahrscheinlichkeitsrechnung auffrischen. </p>
+<p>Auf der nächsten Seite erfährst du, aus welchen Phasen das Experiment besteht.</p>
+  <p><strong>Es ist wichtig, dass du die einzelnen Phasen gut kennst, </strong></p>
+  <p>Nach der folgenden Seite folgt deshalb eine kleine Aufgabe für dich.</p>
   `;
 
   return <InstructionFrame html={html} space finish={props.finish}/>;
@@ -61,7 +64,7 @@ export function InstructionFrame04(props) {
 
 export function InstructionFrame06(props) {
   const html = `
-<p>In der heutigen ersten Studiensitzung wirst du deine Kenntnisse zur Wahrscheinlichkeitsrechnung auffrischen. Diese Sitzung besteht aus den folgenden Phasen:</p>
+
 <p><i>Vortest:</i> in <strong>12 Aufgaben</strong> wird herausgefunden, wie gut du Rechenaufgaben lösen und Wahrscheinlichkeiten bereits bestimmen kannst. </p>
 <p><i>Lernphase:</i>
 <ul>
@@ -72,7 +75,7 @@ export function InstructionFrame06(props) {
 </p>
 <p><i>Pause: Du hast 10 Minuten Zeit dich zu entspannen. </i></p>
 <p><i>Anwendungsphase:</i>
-Zum Abschluss der ersten Studiensitzung sollst du die Prinzipien anhand von <strong>22 Testaufgaben</strong> und <strong>16 Verifikationsaufgaben</strong> anwenden. Hierfür ist keinerlei Vorwissen von deiner Seite notwendig – alle Informationen erhältst du ausschließlich in dieser Studie.  
+Zum Abschluss sollst du die Prinzipien anhand von <strong>22 Testaufgaben</strong> und <strong>16 Verifikationsaufgaben</strong> anwenden. Hierfür ist keinerlei Vorwissen von deiner Seite notwendig – alle Informationen erhältst du ausschließlich in dieser Studie.  
 </p>
   `;
 
@@ -443,9 +446,8 @@ export function InstructionFrame211b(props) {
   const validationSchema = Yup.object();
 
   return <>
-    <UniBielefeld/>
     <Form initial={initial}  finish={props.finish} validationSchema={validationSchema}>
-    <MyTextArea
+    <MyTextArea style={{width: '100%'}}
       large
       name={'feedbackSchwierigkeit'}
       label={'Welche Schwierigkeit ist aufgetreten?'}
@@ -461,9 +463,8 @@ export function InstructionFrame212(props) {
   const validationSchema = Yup.object();
 
   return <>
-    <UniBielefeld/>
     <Form initial={initial}  finish={props.finish} validationSchema={validationSchema}>
-    <MyTextArea
+    <MyTextArea style={{width: '100%'}}
       large
       name={'feedbackAllgmein'}
       label={'Möchtest du uns zu dem Experiment noch etwas miteilen? Dann trage es hier ins Textfels ein.:'}

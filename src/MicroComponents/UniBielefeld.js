@@ -1,16 +1,13 @@
 import React from 'react';
-import {Zone} from "./Zone";
 
 export function UniBielefeld(props) {
+  const style={alignSelf:'start', margin:'0 5px'};
   return (
-    <Zone style={{top: '5px', left:'5px'}}>
+    <div style={style}>
       Universität Bielefeld<br/>
       Arbeitseinheit Bildungspsychologie<br/>
       (in Kollaboration mir der FernUniversität in Hagen)<br/>
       Dr. Veit Kubik
-    </Zone>
+    </div>
   );
-
 }
-
-
