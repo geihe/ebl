@@ -56,9 +56,8 @@ function render(element) {
 
 function finished(data) {
   const {userId, session, groupId, mailId} = data[0];
-/*
   server.postData(userId, session, groupId, data, mailId )
-    .then( () => render(<SessionFinished nextSessionStart={data[0].nextSessionStart}/>));*/ //TODO: Daten auf Server laden
+    .then( () => render(<SessionFinished nextSessionStart={data[0].nextSessionStart}/>));
 }
 
 async function getElementInfo() {

@@ -40,12 +40,14 @@
 .content h1 {
     font-size: 20px;
     text-align: center;
-    position: absolute;
-    top: 5px;
 }
 
 .content h2 {
     font-size: 18px;
+}
+
+.content div {
+    overflow-y: auto;
 }
 
 .content svg {
@@ -55,13 +57,16 @@
 .whiteline {
     border-top: 1px solid white;
 }
-.radio label:nth-child(1){
+
+.radio label:nth-child(1) {
     color: darkblue;
 }
-.radio label:nth-child(n+3){
-   margin-top: 10px;
+
+.radio label:nth-child(n+3) {
+    margin-top: 10px;
 }
-.radio label:nth-child(n+2):hover{
+
+.radio label:nth-child(n+2):hover {
     background-color: #ccc;
 }
 

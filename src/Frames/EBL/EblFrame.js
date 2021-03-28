@@ -16,7 +16,7 @@ export function EblFrame(props) {
   const nextExplanation = (data) => {
     logData.current.explanations.push(data);
     if (activeExp >= explanations.length - 1) {
-      props.finish(logData);
+      props.finish(logData.current);
     } else {
       setActiveExp(activeExp + 1);
     }
@@ -145,7 +145,7 @@ function SingleExplanation(props) {
       /> : null}
       {active ? <Button intent={active ? 'primary' : 'none'}
                         disabled={!active || text.length < minLength}
-                        onClick={(text) => callback(text)}>
+                        onClick={() => callback(text)}>
         {t(phrase.continue)}
       </Button> : null}
     </div>

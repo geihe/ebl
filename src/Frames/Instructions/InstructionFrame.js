@@ -26,6 +26,22 @@ export function InstructionFrame(props) {
   );
 }
 
+
+export function InstructionFrameTest(props) {
+  const html = `
+<h1>Wichtiger Hinweis</h1>
+  <p>Diese Studie ist Teil eines wissenschaftlichen Projekts, das in Fachzeitschriften der Psychologie veröffentlicht wird. Wir möchten dich bitten, den Test - <strong>ohne Unterbrechung</strong> - bis zum Ende durchzuführen. Bitte stelle sicher, dass du während der Bearbeitung der Aufgaben nicht gestört wirst. Es ist wichtig, dass du die folgenden Vorkehrungen getroffen hast und dein Einverständnis mit einem Klick auf "Einverstanden" bestätigst: </p>
+<ul>
+    <li>Ich befinde mich in einem ruhigen Raum. </li>
+    <li>Ich habe die nötigen Vorkehrungen getroffen, sodass ich im Verlauf der Studie nicht bei der Aufgabenbearbeitung unterbrochen werde. </li>
+    <li>Mein Mobiltelefon liegt außerhalb meiner Reich- und Sichtweite und ist auf stumm gestellt oder ausgeschaltet. </li>
+</ul>
+<p>Mit der konzentrierten Bearbeitung der Aufgaben trägst du dazu bei, die Qualität der Studie und der Ergebnisse zu sichern. Vielen Dank! </p>
+  `;
+
+  return <InstructionFrame html={html} cancelButton continueButtonText="Einverstanden" cancelButtonText="Abbrechen" finish={props.finish}/>;
+}
+
 export function InstructionFrame01(props) {
   const html = `
   <h1>Herzlich willkommen zur Studie </h1><h2>„Gleichzeitiges Lernen von mehreren stochastischen Konzepten“</h2>
