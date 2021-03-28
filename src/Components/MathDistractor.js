@@ -1,7 +1,7 @@
 import React, {useContext, useRef} from 'react';
 import {Zone} from "../MicroComponents/Zone";
 import {AdvancedInput} from "../MicroComponents/AdvancedInput";
-import styles from "../cssModules/MathDistractor.module.css"
+import styles from "../css/MathDistractor.module.css"
 import {phrase} from "../assets/ressourceLanguage";
 import {LngContext} from "../helper/i18n";
 import {useStateDelayed} from "../Hooks/useStateDelayed";

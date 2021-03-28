@@ -1,6 +1,6 @@
 import React, {useContext} from 'react';
 import {LngContext} from "../helper/i18n";
-import styles from "../cssModules/DelayedFrame.module.css";
+import styles from "../css/DelayedFrame.module.css";
 import {Zone} from "../MicroComponents/Zone";
 import {Html} from "../MicroComponents/Html";
 import {useStateDelayed} from "../Hooks/useStateDelayed";

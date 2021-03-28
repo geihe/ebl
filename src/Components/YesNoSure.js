@@ -3,7 +3,7 @@ import {FlexZone} from "../MicroComponents/FlexZone";
 import {LngContext} from "../helper/i18n";
 import {useStateDelayed} from "../Hooks/useStateDelayed";
 import {Likert} from "./Likert";
-import styles from "../cssModules/shortResponse.module.css"
+import styles from "../css/shortResponse.module.css"
 import {Radio, RadioGroup} from "@blueprintjs/core";
 import {Zone} from "../MicroComponents/Zone";
 

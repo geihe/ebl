@@ -41,6 +41,7 @@ import {FixationCrossFrame} from "../Frames/FixationCrossFrame";
 import {ebl01_MathCourse} from "../assets/EBL01/Ebl01_MathCourse";
 import {InstructionTest} from "../Frames/InstructionTest";
 import {postFrames, preTest} from "../assets/EBL01/EBL01_PrePostTest";
+import {JolFrame} from "../Frames/JolFrame";
 
 export class EBL01Builder {
   constructor(t) {
@@ -145,8 +146,7 @@ export class EBL01Builder {
 
   buildTestSession() {
     this.tlManager.add(
-
-      <InstructionFrame212/>,
+      <JolFrame/>,
       exampleFramesTest(this.group)
     );
   }
@@ -154,5 +154,4 @@ export class EBL01Builder {
   getTimeline(session = 1) {
     return this.tlManager.getFlatTimeline();
   }
-
 }

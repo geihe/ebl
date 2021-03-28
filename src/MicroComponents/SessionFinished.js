@@ -1,7 +1,7 @@
 import React, {useContext} from 'react';
 import {LngContext} from "../helper/i18n";
 import {phrase} from "../assets/ressourceLanguage";
-// import styles from "../cssModules/SessionFinished.module.css";
+// import styles from "../css/SessionFinished.module.css";
 //TODO import wegen merkwürdiger Seiteneffekte auf instructions deaktiviert
 export function SessionFinished(props) {
   const {nextSessionStart} = props;

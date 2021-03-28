@@ -169,7 +169,7 @@ export function InstructionFrame13(props) {
 export function InstructionFrame14(props) {
   const html = `
   <h1>Rückfragen</h1>
-  <p>Bei Rückfragen oder Hinweisen zu diesem Forschungsprojekt wende dich bitte an: <p><a href="mailto:onlinestudienforschung@gmail.com"> onlinestudienforschung@gmail.com </a></p></p>
+  <p>Bei Rückfragen oder Hinweisen zu diesem Forschungsprojekt wende dich bitte an: <p><a href="mailto: veit.kubik@uni-bielefeld.de">veit.kubik@uni-bielefeld.de</a></p></p>
   <p><strong>Vielen Dank für deine Unterstützung! </strong></p>
   <p>Mit herzlichen Grüßen <br/>Dr. Veit Kubik </p>
   `;

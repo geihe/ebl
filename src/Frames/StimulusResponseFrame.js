@@ -1,5 +1,5 @@
 import React, {useRef} from 'react';
-import styles from "../cssModules/StimulusResponseFrame.module.css";
+import styles from "../css/StimulusResponseFrame.module.css";
 import {useStateDelayed} from "../Hooks/useStateDelayed";
 import {FeedbackCorrect} from "../MicroComponents/FeedbackCorrect";
 import {FeedbackWrong} from "../MicroComponents/FeedbackWrong";

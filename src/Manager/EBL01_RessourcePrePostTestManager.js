@@ -7,7 +7,7 @@ import {postFT} from "../assets/EBL01/postFT2step";
 import {postNT} from "../assets/EBL01/postNT";
 import {verification} from "../assets/EBL01/verification";
 import React from "react";
-import styles from "../cssModules/StimulusResponseFrame.module.css";
+import styles from "../css/StimulusResponseFrame.module.css";
 import {ResponseRadioButtons} from "../MicroComponents/ResponseRadioButtons";
 import {ResponseTextArea} from "../MicroComponents/ResponseTextArea";
 import {YesNoSure} from "../Components/YesNoSure";

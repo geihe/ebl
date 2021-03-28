@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from "../cssModules/Likert.module.css";
+import styles from "../css/Likert.module.css";
 import {FlexZone} from "../MicroComponents/FlexZone";
 
 export function Likert(props) {

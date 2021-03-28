@@ -1,8 +1,4 @@
-import React, {useContext} from 'react';
-import styles from "../cssModules/Likert.module.css";
-import {Zone} from "../MicroComponents/Zone";
-import {useStateDelayed} from "../Hooks/useStateDelayed";
-import {getArray} from "../assets/ressourceIMI";
+import React, {useContext, useState} from 'react';
 import {LngContext} from "../helper/i18n";
 import {FlexZone} from "../MicroComponents/FlexZone";
 import {MySlider} from "../Components/MySlider";
@@ -11,24 +7,18 @@ import {MySlider} from "../Components/MySlider";
 export function SliderFrame(props) {//TODO Umbenennen in LikertFrame
   const t = useContext(LngContext);
   const {min = 1, max = 7, step = 1, minText = '', maxText = '', title = '', item} = props;
-  const [rating, setRating] = useStateDelayed(-Infinity);
+  const [value, setValue] = useState(undefined);
 
-  function callback(rating) {//TODO get delay from config
-    const delay = 500;
-    setRating(() => props.finish(rating), delay);
-    setRating(rating);
+  const options = {
+    min: 0,
+    max: 100,
+    stepSize: 1,
+    labelStepSize: 20,
+    callback: (value)=>setValue(value)
   }
-
-  const options = getArray(min, max, step);
   return (//TODO überall Klassen verwenden
     <FlexZone column style={{height: '500px', width: '800px'}}>
-      <Zone className={styles.titel}>{t(title)}</Zone>
-      <Zone column className={styles.itemtext}>{t(item)}</Zone>
-      <Zone className={styles.likert}>
-        <div className={styles.mintext}>{t(minText)}</div>
-        <MySlider options={options} callback={callback} rating={rating}/>
-        <div className={styles.maxtext}>{t(maxText)}</div>
-      </Zone>
+        <MySlider {...options} value={value}/>
     </FlexZone>
   );
 }

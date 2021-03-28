@@ -1,5 +1,5 @@
 import React, {useContext} from 'react';
-import styles from "../cssModules/Likert.module.css";
+import styles from "../css/Likert.module.css";
 import {Zone} from "../MicroComponents/Zone";
 import {useStateDelayed} from "../Hooks/useStateDelayed";
 import {Likert} from "../Components/Likert";
