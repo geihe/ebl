@@ -4,13 +4,10 @@
     <option name="SCOPE_TYPE" value="3" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c0a8d840-d2a4-41a1-9e79-f574c09cafbd" name="Default Changelist" comment="bugfix: in EBLFrame logdata enthält Button-Element statt Text&#10;&#10;Overflow aktiviert">
+    <list default="true" id="c0a8d840-d2a4-41a1-9e79-f574c09cafbd" name="Default Changelist" comment="Radiobuttons umstrukturiert&#10;zufällige Reihenfolge&#10;&#10;zusätzliches Attribut valid&#10;&#10;TESTFASSUNG">
       <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Manager/EBL01Builder.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Manager/EBL01Builder.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Manager/EBL01_ExampleManager.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Manager/EBL01_ExampleManager.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MicroComponents/ResponseRadioButtons.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/MicroComponents/ResponseRadioButtons.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/EBL01/examples/explanations.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/EBL01/examples/explanations.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -272,7 +269,7 @@
       <workItem from="1617011113463" duration="2038000" />
       <workItem from="1617023867812" duration="1861000" />
       <workItem from="1617034261558" duration="10426000" />
-      <workItem from="1617084551879" duration="6637000" />
+      <workItem from="1617084551879" duration="11274000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1608320225945</created>
@@ -603,7 +600,14 @@
       <option name="project" value="LOCAL" />
       <updated>1616955597670</updated>
     </task>
-    <option name="localTasksCounter" value="48" />
+    <task id="LOCAL-00048" summary="Radiobuttons umstrukturiert&#10;zufällige Reihenfolge&#10;&#10;zusätzliches Attribut valid&#10;&#10;TESTFASSUNG">
+      <created>1617093959832</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1617093959832</updated>
+    </task>
+    <option name="localTasksCounter" value="49" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -638,7 +642,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="Classification-Test: Wie sicher bist du dir?&#10;--&gt; neu: Element YesNoSure &#10;&#10;Demographics: Alter als Dropdown" />
     <MESSAGE value="Pause-Komponente eingefügt" />
     <MESSAGE value="MC-Komponente als self-explanation eingefügt&#10;Instruktionsseite bei process-measures eingefügt" />
     <MESSAGE value="Timer für Frames&#10;Komponente &#10;&#10;{timer: 600, frames: [...]}" />
@@ -663,7 +666,8 @@
     <MESSAGE value="Layout für Instruktionen verändert&#10;&#10;MySlider angefangen" />
     <MESSAGE value="Jol eingebaut" />
     <MESSAGE value="bugfix: in EBLFrame logdata enthält Button-Element statt Text&#10;&#10;Overflow aktiviert" />
-    <option name="LAST_COMMIT_MESSAGE" value="bugfix: in EBLFrame logdata enthält Button-Element statt Text&#10;&#10;Overflow aktiviert" />
+    <MESSAGE value="Radiobuttons umstrukturiert&#10;zufällige Reihenfolge&#10;&#10;zusätzliches Attribut valid&#10;&#10;TESTFASSUNG" />
+    <option name="LAST_COMMIT_MESSAGE" value="Radiobuttons umstrukturiert&#10;zufällige Reihenfolge&#10;&#10;zusätzliches Attribut valid&#10;&#10;TESTFASSUNG" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
 </project>

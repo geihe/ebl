@@ -63,7 +63,7 @@ export class EBL01_ExampleManager {
     const htmlExamples = cartesianProduct.map(e => this.getItem(...e));
     const htmlExplanations = explanation.map(e => this.getExplanation(e));
     const htmlRadios = radio.map(e => this.getRadio(e, principle));
-    console.log(radio);
+
     return {
       singleHeader,
       htmlHeader,
