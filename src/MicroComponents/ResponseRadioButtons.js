@@ -21,7 +21,7 @@ export function ResponseRadioButtons(props) {
                 onChange={(event) => setValue(event.currentTarget.value)}
             >
                 {options.map(o =>
-                    <Radio label={o.label} value={String(o.value)} key={o.value}/>)}
+                    <Radio label={o.label+o.valid} value={String(o.value)} key={o.value}/>)} //TODO valid löschen
             </RadioGroup>
             {autoContinue ? null :
                 <Button

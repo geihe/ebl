@@ -49,102 +49,148 @@ export const selfExplanations = [
   },
 ];
 
-const numberText = ['In dieser Aufgabe', 'In Aufgabe 1', 'In Aufgabe 2', 'In Aufgabe 3', 'In Aufgabe 4'];
-const lowercaseFirstLetter = string => string[0].toLowerCase() + string.slice(1);
-const selfRadioTemplate = [(nrText) => (
-  {
-    html: {de: `Die Anzahl möglicher Ergebnisse <strong>${lowercaseFirstLetter(nrText)}</strong>...?`},
-    options: [
-      {label: `ändert sich.`, value: 'Ergebnisanzahl ändert sich.'},
-      {label: `bleibt gleich.`, value: 'Ergebnisanzahl bleibt gleich.'},
-    ]
-  }), (nrText) => (
-  {
-    html: {de: `<strong>${nrText}</strong> ...`},
-    options: [
-      {label: `ist nur eine Ergebnisfolge günstig.`, value: 'eine günstig'},
-      {label: `sind mehrere Ergebnisfolgen günstig.`, value: 'mehrere günstig'},
-    ]
-  }), (nrText) => (
-  {
-    //principle 3 or 4
-    html: {de: `<strong>${nrText}</strong> <strong>wird mit 2 multipliziert</strong>, weil...`},
-    options: [
-      {label: `nur eine Ergebnisfolge günstig ist.`, value: 'mal 2, da nur eine Ergebnisfolge'},
-      {label: `mehrere Ergebnisfolgen günstig sind.`, value: 'mal 2, da mehrere Ergebnisfolgen'},
-    ]
-  }), (nrText) => (
-  {
-    //principle 1 or 2
-    html: {de: `<strong>${nrText}</strong> wird <strong>nicht mit 2 multipliziert</strong>, weil...`},
-    options: [
-      {label: `nur eine Ergebnisfolge günstig ist.`, value: 'nicht mal 2, da nur eine Ergebnisfolge'},
-      {label: `mehrere Ergebnisfolgen günstig sind.`, value: 'nicht mal 2, da mehrere Ergebnisfolgen'},
-    ]
-  }), (nrText) => (
-  {
-    //principle 1 or 3
-    html: {de: `<strong>${nrText}</strong> sind die Nenner der Brüche <strong>gleich</strong>, weil ...`},
-    options: [
-      {label: `die Ergebnisanzahl gleich bleibt.`, value: 'Nenner gleich, da Ergebnisanzahl gleich bleibt'},
-      {label: `sich die Ergebnisanzahl ändert.`, value: 'Nenner gleich, da sich Ergebnisanzahl ändert'},
-    ]
-  }), (nrText) => (
-  {
-    //principle 2 or 4
-    html: {de: `<strong>${nrText}</strong> sind die Nenner der Brüche <strong>verschieden</strong>, weil ...`},
-    options: [
-      {label: `die Ergebnisanzahl gleich bleibt.`, value: 'Nenner verschieden, da Ergebnisanzahl gleich bleibt'},
-      {label: `sich die Ergebnisanzahl ändert.`, value: 'Nenner verschieden, da sich Ergebnisanzahl ändert'},
-    ]
-  }),
+const numberText = [
+  'In dieser Aufgabe',
+  'In Aufgabe 1',
+  'In Aufgabe 2',
+  'In Aufgabe 3',
+  'In Aufgabe 4'
 ];
+const lowercaseFirstLetter = string => string[0].toLowerCase() + string.slice(1);
+
+// 1. Ziffer: Prinzip
+// principle 0: Header
+// principle 1: order relevant, with replacement
+// principle 2: order relevant, without replacement
+// principle 3: order irrelevant, with replacement
+// principle 4: order irrelevant, without replacement
+
+// 2. Ziffer: Nummer der Aufgabe (0 bei sequential)
+
+// 3. Ziffer: Welche der 6 Fragen?
+//    0: Anzahl gleich/ändert sich
+//    1: Anzahl eine/mehrere Ergebnisfolgen
+//    2: mal 2, weil eine/mehrere Ereignisfolgen --> zu p3, p4
+//    3: nicht mal 2, weil eine/mehrere Ereignisfolgen --> zu p1, p2
+//    4: Nenner gleich, weil sich Ergebnisanzahl ändert/nicht ändert --> zu p1, p3
+//    5: Nenner verschieden, weil sich Ergebnisanzahl ändert/nicht ändert --> zu p2, p4
+
+// 4. Ziffer (optional): Distraktor-Nummer
+//    0: Ergebnisanzahl ändert sich.
+//    1: Ergebnisanzahl bleibt gleich.
+//    2: eine günstig
+//    3: mehrere günstig
+//    4: mal 2, da nur eine Ergebnisfolge
+//    5: mal 2, da mehrere Ergebnisfolgen
+//    6: Nenner gleich, da Ergebnisanzahl gleich bleibt
+//    7: Nenner gleich, da sich Ergebnisanzahl ändert
+
+const radioHtml = [
+  (nrText) => (
+    {de: `Die Anzahl möglicher Ergebnisse <strong>${lowercaseFirstLetter(nrText)}</strong>...?`}
+  ),
+  (nrText) => (
+    {de: `<strong>${nrText}</strong> ...`}
+  ),
+  (nrText) => (
+    {de: `<strong>${nrText}</strong> <strong>wird mit 2 multipliziert</strong>, weil...`}
+  ),
+  (nrText) => (
+    {de: `<strong>${nrText}</strong> wird <strong>nicht mit 2 multipliziert</strong>, weil...`}
+  ),
+  (nrText) => (
+    {de: `<strong>${nrText}</strong> sind die Nenner der Brüche <strong>gleich</strong>, weil ...`}
+  ),
+  (nrText) => (
+    {de: `<strong>${nrText}</strong> sind die Nenner der Brüche <strong>verschieden</strong>, weil ...`}
+  ),
+];
+
+const radioOption = [
+  {label: `ändert sich.`, value: 'Ergebnisanzahl ändert sich.'},
+  {label: `bleibt gleich.`, value: 'Ergebnisanzahl bleibt gleich.'},
+  {label: `ist nur eine Ereignisfolge günstig.`, value: 'eine günstig'},
+  {label: `sind mehrere Ereignisfolgen günstig.`, value: 'mehrere günstig'},
+  {label: `nur eine Ereignisfolge günstig ist.`, value: 'mal 2, da nur eine Ergebnisfolge'},
+  {label: `mehrere Ereignisfolgen günstig sind.`, value: 'mal 2, da mehrere Ergebnisfolgen'},
+  {label: `die Ergebnisanzahl gleich bleibt.`, value: 'Nenner gleich, da Ergebnisanzahl gleich bleibt'},
+  {label: `sich die Ergebnisanzahl ändert.`, value: 'Nenner gleich, da sich Ergebnisanzahl ändert'},
+]
+
+
+const radioCombine = [
+  {
+    principle: 1, //order relevant, with replacement
+    html: [ //Optionen zu Frage 0 bis 5
+      {trueOption: 1, falseOptions: [0]}, //Frage 0 Option 1 korrekt, Option 0 falsch etc.
+      {trueOption: 2, falseOptions: [3]},
+      {trueOption: undefined, falseOptions: []},
+      {trueOption: 4, falseOptions: [5, 6, 7]},
+      {trueOption: 6, falseOptions: [4, 5, 7]},
+      {trueOption: undefined, falseOptions: []},
+    ]
+  },
+  {
+    principle: 2, //order relevant, without replacement
+    html: [ //Optionen zu Frage 0 bis 5
+      {trueOption: 0, falseOptions: [1]}, //Frage 0 Option 1 korrekt, Option 0 falsch etc.
+      {trueOption: 2, falseOptions: [3]},
+      {trueOption: undefined, falseOptions: []},
+      {trueOption: 4, falseOptions: [5, 6, 7]},
+      {trueOption: undefined, falseOptions: []},
+      {trueOption: 7, falseOptions: [4, 5, 6]},
+    ]
+  },
+  {
+    principle: 3, //order irrelevant, with replacement
+    html: [ //Optionen zu Frage 0 bis 5
+      {trueOption: 1, falseOptions: [0]}, //Frage 0 Option 1 korrekt, Option 0 falsch etc.
+      {trueOption: 3, falseOptions: [2]},
+      {trueOption: 5, falseOptions: [4, 6, 7]},
+      {trueOption: undefined, falseOptions: []},
+      {trueOption: 6, falseOptions: [4, 5, 7]},
+      {trueOption: undefined, falseOptions: []},
+    ]
+  },
+  {
+    principle: 4, //order irrelevant, without replacement
+    html: [ //Optionen zu Frage 0 bis 5
+      {trueOption: 0, falseOptions: [1]}, //Frage 0 Option 1 korrekt, Option 0 falsch etc.
+      {trueOption: 3, falseOptions: [2]},
+      {trueOption: 5, falseOptions: [4, 6, 7]},
+      {trueOption: undefined, falseOptions: []},
+      {trueOption: undefined, falseOptions: []},
+      {trueOption: 7, falseOptions: [4, 5, 6]},
+    ]
+  },
+]
+
 export const selfRadioFunction = (n) => {
+  const digits = n.toString().split('');
+  const principle = +digits.shift();
+  const exampleNr = +digits.shift();
+  const questionNr = +digits.shift();
+  const distractor = +digits.shift();
 
-  const exampleNr = [Math.floor(n / 10)];
-  const exampleNrs = [n < 10 ? 0 : exampleNr - 1]; //Nr. 1-4 auf index 0-3 herunterrechnen
-  const id = n % 10;
-  return {id: id, exampleNrs, ...selfRadioTemplate[id](numberText[exampleNr])}
+  const exampleText = numberText[exampleNr];
+  const htmlFunction = radioHtml[questionNr];
+  const htmlObject = htmlFunction(exampleText);
+
+  const combineData = radioCombine[principle-1];
+  if (combineData.principle !== principle) {
+    console.warn('Prinzipien inkonsistent');
+  }
+  const options = combineData.html[questionNr];
+  const trueOptionIndex = options.trueOption;
+  const trueOption = {valid: true, ...radioOption[trueOptionIndex]};
+  const distractorArray = options.falseOptions;
+  const distractorOptionIndex = isNaN(distractor) ?
+    distractorArray[Math.floor(Math.random() * distractorArray.length)] :
+    distractor;
+  const distractorOption = {valid: false, ...radioOption[distractorOptionIndex]};
+
+   return({
+     html: htmlObject,
+     options: Math.random() <0.5 ? [trueOption, distractorOption] :  [distractorOption, trueOption]
+   });
 };
-
-// Zehnerstelle:   nrText = Text "In Aufgabe 1"...
-// 0 - "In Dieser Aufgabe..."
-// Einerstelle:    id der Frage
-
-//  principe 1  -->  ids  0,1,3,4
-//  principe 2  -->  ids  0,1,3,5
-//  principe 3  -->  ids  0,1,2,4
-//  principe 4  -->  ids  0,1,2,5
-
-
-//  n     nrText   id    principles
-//  0     0         0     1234
-//  1     0         1     1234
-//  2     0         2     34
-//  3     0         3     12
-//  4     0         4     13
-//  5     0         5     24
-// 10     1         0     1234
-// 11     1         1     1234
-// 12     1         2     34
-// 13     1         3     12
-// 14     1         4     13
-// 15     1         5     24
-// 20     2         0     1234
-// 21     2         1     1234
-// 22     2         2     34
-// 23     2         3     12
-// 24     2         4     13
-// 25     2         5     24
-// 30     3         0     1234
-// 31     3         1     1234
-// 32     3         2     34
-// 33     3         3     12
-// 34     3         4     13
-// 35     3         5     24
-// 40     4         0     1234
-// 41     4         1     1234
-// 42     4         2     34
-// 43     4         3     12
-// 44     4         4     13
-// 45     4         5     24

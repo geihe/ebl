@@ -146,8 +146,8 @@ export class EBL01Builder {
 
   buildTestSession() {
     this.tlManager.add(
-      <InstructionFrameTest/>,
-      exampleFramesTest(this.group)
+      exampleFramesTest(this.group),
+      <InstructionFrameTest/>
     );
   }
 
