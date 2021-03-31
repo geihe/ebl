@@ -6,16 +6,16 @@ export const config = {
   language: 'de',
   numberOfSessions: 1,
   timeBetweenSessionsInSeconds: 5 * 60,
-  pauseSeconds: 75, //TODO 600
-  timeForExamples: 60,//TODO 3600
+  pauseSeconds: 600,
+  timeForExamples: 300,
 
   instructions: {
-    delay: 1000, //TODO 3000
+    delay: 3000,
     animation: '0.1s',
   },
 
   mathCourse: {
-    delay: 1000, //TODO 3000
+    delay: 3000,
     animation: '0.1s',
   },
 

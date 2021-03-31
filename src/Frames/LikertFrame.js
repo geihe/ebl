@@ -8,7 +8,7 @@ import {LngContext} from "../helper/i18n";
 import {FlexZone} from "../MicroComponents/FlexZone";
 
 
-export function LikertFrame(props) {//TODO Umbenennen in LikertFrame
+export function LikertFrame(props) {
   const t = useContext(LngContext);
   const {min = 1, max = 7, step = 1, minText = '', maxText = '', title = '', item} = props;
   const [rating, setRating] = useStateDelayed(-Infinity);

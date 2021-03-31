@@ -10,7 +10,7 @@ export function ResponseRadioButtons(props) {
     const [value, setValue] = useStateDelayed(null)
     const t = useContext(LngContext);
     if (value && autoContinue) {
-        setValue(() => callback(value), delay);
+        setValue(() => callback(options[value]), delay);
     }
     return (
         <div className={styles.radioWrapper}>
@@ -20,8 +20,8 @@ export function ResponseRadioButtons(props) {
                 selectedValue={value}
                 onChange={(event) => setValue(event.currentTarget.value)}
             >
-                {options.map(o =>
-                    <Radio label={o.label+o.valid} value={String(o.value)} key={o.value}/>)} //TODO valid löschen
+                {options.map((o, index) =>
+                    <Radio label={o.label} value={String(index)} key={o.value}/>)}
             </RadioGroup>
             {autoContinue ? null :
                 <Button

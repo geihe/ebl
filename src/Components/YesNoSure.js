@@ -32,7 +32,7 @@ export function YesNoSure(props) {
       </div>
         <Zone show={!!values.answer} animate={'0.1s'}>
           <h3>Wie sicher bist du bei deiner Antwort?</h3>
-          <Likert //TODO sehr unsicher/sicher  -  Rahmen
+          <Likert
             callback={(rating) => setValues({...values, rating: rating})}
             options={[1, 2, 3, 4, 5]}
             rating={values.rating}

@@ -1,7 +1,7 @@
 import React from 'react';
 import {LikertFrame} from "./LikertFrame";
 
-export function JolFrame(props) {//TODO exclude from data
+export function JolFrame(props) {
 return (
   <LikertFrame
     min={0}

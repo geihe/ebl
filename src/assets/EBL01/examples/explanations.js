@@ -190,6 +190,8 @@ export const selfRadioFunction = (n) => {
   const distractorOption = {valid: false, ...radioOption[distractorOptionIndex]};
 
    return({
+     id: n,
+     exampleNrs: [exampleNr],
      html: htmlObject,
      options: Math.random() <0.5 ? [trueOption, distractorOption] :  [distractorOption, trueOption]
    });

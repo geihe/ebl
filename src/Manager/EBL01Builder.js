@@ -42,6 +42,7 @@ import {FixationCrossFrame} from "../Frames/FixationCrossFrame";
 import {ebl01_MathCourse} from "../assets/EBL01/Ebl01_MathCourse";
 import {InstructionTest} from "../Frames/InstructionTest";
 import {postFrames, preTest} from "../assets/EBL01/EBL01_PrePostTest";
+import {JolFrame} from "../Frames/JolFrame";
 
 export class EBL01Builder {
   constructor(t) {
@@ -91,7 +92,7 @@ export class EBL01Builder {
       <InstructionFrame03/>,
       {
         repeat: [<InstructionFrame04/>, <InstructionFrame06/>,
-           <InstructionTest/>,],
+          <InstructionTest/>,],
         until: (lastlog) => lastlog.correct
       },
       <InstructionFrame09/>,
@@ -112,7 +113,7 @@ export class EBL01Builder {
           <InstructionFrame101_simultan_34/>,]
       ,
       exampleFrames(this.group),
-
+      <JolFrame/>,
       <EBLPause/>,
       <ToDoFrame text={'Nächsten Frame durch Video ersetzen.'}/>,
       <InstructionFrame200/>,

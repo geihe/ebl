@@ -112,9 +112,6 @@ export function Session(props) {
   }
 
 
-
-
-
   return <Frame
     el={el}
     finish={(logData) => next(tempIndex + 1, logData)}
@@ -134,6 +131,7 @@ export function Session(props) {
           log: logData,
         });
     }
+    console.log(data.current);
     setIndex(newIndex);
   }
 
