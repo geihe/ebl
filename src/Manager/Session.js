@@ -2,6 +2,7 @@ import React, {useRef, useState} from "react";
 import {Zone} from "../MicroComponents/Zone";
 import {TimeView} from "../MicroComponents/TimeView";
 import {useStateDelayed} from "../Hooks/useStateDelayed";
+import {ProgressBar} from "@blueprintjs/core";
 
 
 function Frame(props) {
@@ -20,7 +21,13 @@ function Frame(props) {
   );
 
   const progressBar = el.noProgress ? <div/> :
-    <progress id="progress-bar" value={el.cumEffort} max="100" style={{width: '90%'}}/>;
+    <ProgressBar id="progress-bar"
+                 value={el.cumEffort / 100}
+                 intent={'Primary'}
+                 style={{width: '90%'}}
+                 animate={false}
+                 stripes={false}
+    />;
 
   if (isTicking.current) {
     if (expired) {
@@ -47,6 +54,7 @@ function Frame(props) {
         <aside id="right-aside"/>
       </main>
       <footer>
+        {props.tempIndex}
         <Zone style={{width: "50%"}}>
           {progressBar}
         </Zone>

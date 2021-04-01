@@ -1,8 +1,8 @@
 export const postNT = [
   {
     id: 'postNT2step_1',
-    header: `Du und Dein Freund nehmen an einem zweitägigen Mountainbike-Kurs teil. An beiden Tagen bringt der Kursleiter jeweils 7 Fahrradhelme mit, die alle unterschiedliche Farben haben (grün, blau, orange, silber, braun, rot und gelb). Die Helme werden zufällig verteilt und am Ende des Tages an den Kursleiter zurückgegeben. An beiden Tagen erhältst Du zuerst und Dein Freund als Zweiter einen Helm.`,
-    question: `Wie hoch ist die Wahrscheinlichkeit, dass Du und Dein Freund am ersten Kurstag den blauen und den grünen Helm bekommen (es ist egal, wer welche Farbe bekommt)?`,
+    header: `Du und dein Freund nehmen an einem zweitägigen Mountainbike-Kurs teil. An beiden Tagen bringt der Kursleiter jeweils 7 Fahrradhelme mit, die alle unterschiedliche Farben haben (grün, blau, orange, silber, braun, rot und gelb). Die Helme werden zufällig verteilt und am Ende des Tages an den Kursleiter zurückgegeben. An beiden Tagen erhältst Du zuerst und Dein Freund als Zweiter einen Helm.`,
+    question: `Wie hoch ist die Wahrscheinlichkeit, dass du und dein Freund am ersten Kurstag den blauen und den grünen Helm bekommen (es ist egal, wer welche Farbe bekommt)?`,
     validate:
       (answer) => ['2/42', '1/21', '2*1/42', '2*1/7*1/6', '2*(1/7)*(1/6)'].includes(answer),
     responseType: 'input'
@@ -26,7 +26,7 @@ export const postNT = [
   {
     id: 'postNT2step_4',
     header:`Du und eine Freundin kaufen zwei Dosen, die jeweils 3 unterschiedliche Weihnachtskekse enthalten: ein Zimtstern, eine Nussecke und ein Vanillekipferl. Ihr beide greift ohne hinzuschauen in die Dosen hinein und nehmt den zufällig ausgewählten Keks heraus. Du greifst immer zuerst in die Dose.`,
-    question:`Wie groß ist die Wahrscheinlichkeit, dass Du beim Ziehen zunächst aus der einen Dose dann aus der anderen Dose sowohl einen Zimtstern als auch ein Vanillekipferl bekommst?`,
+    question:`Wie groß ist die Wahrscheinlichkeit, dass du beim Ziehen zunächst aus der einen Dose dann aus der anderen Dose sowohl einen Zimtstern als auch ein Vanillekipferl bekommst?`,
     validate:
       (answer) => ['2/9', '2*(1/3*1/3)', '2*1/9', '2*(1/9)'].includes(answer),
     responseType: 'input'

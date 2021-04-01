@@ -12,14 +12,14 @@ import React from "react";
 export const fahrradhelm = {
   context: 1,
   header: {
-    de: `Du und Dein Freund nehmen an einem zweitägigen Mountainbike-Kurs teil. An beiden Tagen bringt der Kursleiter jeweils 5 Fahrradhelme mit, die alle unterschiedliche Farben haben (orange, silber, braun, rot und gelb). Die Helme werden zufällig verteilt und am Ende des Tages an den Kursleiter zurückgegeben. An beiden Tagen erhältst Du zuerst und Dein Freund als Zweiter einen Helm.`,
+    de: `Du und dein Freund nehmen an einem zweitägigen Mountainbike-Kurs teil. An beiden Tagen bringt der Kursleiter jeweils 5 Fahrradhelme mit, die alle unterschiedliche Farben haben (orange, silber, braun, rot und gelb). Die Helme werden zufällig verteilt und am Ende des Tages an den Kursleiter zurückgegeben. An beiden Tagen erhältst Du zuerst und Dein Freund als Zweiter einen Helm.`,
     en: `You and your friend are taking part in a two-day mountain bike course. On both days, the instructor will bring 5 bike helmets, each with different colors (orange, silver, brown, red and yellow). The helmets are distributed randomly an returned to the instructor at the end of the day. On both days you will receive a helmet first and your friend second.`,
   },
   items: [
     {
       principle: 1,
       problem: {
-        de: `Wie hoch ist die Wahrscheinlichkeit, dass Du am ersten Tag einen roten und am zweiten Tag einen gelben Helm bekommst?`,
+        de: `Wie hoch ist die Wahrscheinlichkeit, dass du am ersten Tag einen roten und am zweiten Tag einen gelben Helm bekommst?`,
         en: `What is the probability that you will get a red helmet on the first day and a yellow helmet on the second day?`,
       },
       solution:
@@ -28,7 +28,7 @@ export const fahrradhelm = {
     {
       principle: 2,
       problem: {
-        de: `Wie hoch ist die Wahrscheinlichkeit, dass Du am ersten Kurstag den roten Helm bekommst und Dein Freund den gelben?`,
+        de: `Wie hoch ist die Wahrscheinlichkeit, dass du am ersten Kurstag den roten Helm bekommst und dein Freund den gelben?`,
         en: `What is the probability that you will get the red helmet on the first day of the course and your friend the yellow one?`,
       },
       solution:
@@ -37,7 +37,7 @@ export const fahrradhelm = {
     {
       principle: 3,
       problem: {
-        de: `Wie hoch ist die Wahrscheinlichkeit, dass Du im Lauf des zweitägigen Kurses sowohl einen roten als auch einen gelben Helm bekommst?`,
+        de: `Wie hoch ist die Wahrscheinlichkeit, dass du im Lauf des zweitägigen Kurses sowohl einen roten als auch einen gelben Helm bekommst?`,
         en: `What is the probability that you will get both a red helmet and a yellow helmet during the two-day course?`,
       },
       solution:
@@ -46,7 +46,7 @@ export const fahrradhelm = {
     {
       principle: 4,
       problem: {
-        de: `Wie hoch ist die Wahrscheinlichkeit, dass Du und Dein Freund am ersten Kurstag den roten und den gelben Helm bekommen (es ist egal, wer welche Farbe bekommt)?`,
+        de: `Wie hoch ist die Wahrscheinlichkeit, dass du und ddein Freund am ersten Kurstag den roten und den gelben Helm bekommen (es ist egal, wer welche Farbe bekommt)?`,
         en: `What is the probability that you and your friend will get the red helmet and yellow helmet on the first day of the course (it doesn't matter who gets which color)?`,
       },
       solution:

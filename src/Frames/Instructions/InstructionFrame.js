@@ -60,7 +60,7 @@ export function InstructionFrame03(props) {
   const html = `
 <p><strong>Schön, dass du dabei bist!</strong></p>
 <p>Durch deine Teilnahme erwirbst du nicht nur neues Wissen, sondern erhältst auch einen Einblick in die aktuelle Forschung zu Lehren und Lernen. Zudem erhältst du für deine Teilnahme bei Bedarf 3 Versuchspersonenstunden für dein Psychologiestudium.</p>
-  <p><strong>Navigiere während des Experiments bitte nicht im Browser mit den Vor- oder Zurückbuttons Deines Browsers.</strong> Du wirst durch das Experiment geleitet. An einigen Stellen kann es einen kurzen Moment dauern, bis die nächste Ansicht zu sehen ist.</p>
+  <p><strong>Navigiere während des Experiments bitte nicht im Browser mit den Vor- oder Zurückbuttons deines Browsers.</strong> Du wirst durch das Experiment geleitet. An einigen Stellen kann es einen kurzen Moment dauern, bis die nächste Ansicht zu sehen ist.</p>
   <p>Manchmal kann es vorkommen, dass das Laden von neuen Seiten einige Sekunden dauert. Warte bitte immer ab, bis du die nächste Seite siehst und klicke währenddessen nicht mit der Maus!</p>
   `;
   return <InstructionFrame html={html} space finish={props.finish}/>;
@@ -72,7 +72,7 @@ export function InstructionFrame04(props) {
 <p>Heute wirst du deine Kenntnisse zur Wahrscheinlichkeitsrechnung auffrischen. </p>
 <p>Auf der nächsten Seite erfährst du, aus welchen Phasen das Experiment besteht.</p>
   <p><strong>Es ist wichtig, dass du die einzelnen Phasen gut kennst, </strong></p>
-  <p>Nach der folgenden Seite folgt deshalb eine kleine Aufgabe für dich.</p>
+  <p>Nach der folgenden Seite sollst du deshalb eine kleine Aufgabe lösen.</p>
   `;
 
   return <InstructionFrame html={html} space finish={props.finish}/>;
@@ -228,9 +228,9 @@ export function InstructionFrame100_sequenziell_12(props) {
   const html = `
   <h1>Aufbau des Lernprogramms I</h1>
   <p>Auf jeder Seite des Lernprogramms wird dir eine Beispielaufgabe präsentiert. Du sollst jede Aufgabe aufmerksam lesen und versuchen, die Lösung nachzuvollziehen. </p>
-  <p>Zudem befinden sich rechts auf jeder Seite des Lernprogramms Multiple-Choice-Fragen. Hier sollst du das deiner Meinung nach zutreffendste auswählen. </p>
-  <p>Erst danach sollst du auf den „Weiter“-Button klicken, um auf die nächste Seite des Lernprogramms zu gelangen. Dann kannst du nicht mehr zurückgehen. Du durchläufst vier Durchgänge mit jeweils vier Beispielaufgaben, sodass dir insgesamt 16 Beispielaufgaben präsentiert werden und du 16 Multiple Choice-Fragen beantwortest.</p>
-  <p>Für die Bearbeitung von je vier Beispielaufgaben hast du sechs Minuten Zeit. Die Zeit kannst du frei einteilen, du solltest aber alle Lösungen nachvollzogen und alle Multiple Choice-Fragen beantwortet haben. Nach Ablauf der sechs Minuten wirst du automatisch zur Befragung deines Flow-Erlebens und deiner kognitiven Beanspruchung weitergeleitet und kannst nicht mehr zurückgehen. Ein Timer wird eingeblendet.</p>
+  <p>Zudem befinden sich rechts auf jeder Seite des Lernprogramms Multiple-Choice-Fragen. Hier sollst du das deiner Meinung nach zutreffendste auswählen. Du kannst deine Wahl nicht mehr ändern. </p>
+  <p>Du durchläufst vier Durchgänge mit jeweils vier Beispielaufgaben, sodass dir insgesamt 16 Beispielaufgaben präsentiert werden und du 16 Multiple Choice-Fragen beantwortest.</p>
+  <p>Für die Bearbeitung von je vier Beispielaufgaben hast du fünf Minuten Zeit. Die Zeit kannst du frei einteilen, du solltest aber alle Lösungen nachvollzogen und alle Multiple Choice-Fragen beantwortet haben. Nach Ablauf der fünf Minuten wirst du automatisch zur Befragung deines Flow-Erlebens und deiner kognitiven Beanspruchung weitergeleitet und kannst nicht mehr zurückgehen. Ein Timer wird eingeblendet.</p>
   `;
 
   return <InstructionFrame html={html} space finish={props.finish}/>;
@@ -239,9 +239,10 @@ export function InstructionFrame100_sequenziell_12(props) {
 export function InstructionFrame100_simultan_34(props) {
   const html = `
   <h1>Aufbau des Lernprogramms I</h1>
-  <p>Auf jeder Seite des Lernprogramms werden dir vier Beispielaufgaben präsentiert, wovon zunächst nur eine sichtbar sein wird. Du sollst diese Aufgabe aufmerksam lesen und versuchen, die Lösung nachzuvollziehen. Anschließend kannst du auf den „Weiter“-Button klicken und es erscheinen eine weitere Beispielaufgabe, sowie eine Multiple Choice-Frage auf der rechten Seite. </p>
-  <p>Nachdem du auch die zweite Aufgabe aufmerksam gelesen hast, sollst du erneut eine Multiple Choice-Frage beantworten. Anschließend kannst du erneut auf den „Weiter“-Button klicken und es erscheint eine weitere Beispielaufgabe, sowie eine erneute Multiple Choice-Frage. Insgesamt werden dir also auf jeder Seite vier Beispielaufgaben präsentiert und du sollst zu jeder Aufgabe eine Multiple Choice-Frage beantworten. Du durchläufst vier Durchgänge mit jeweils vier Beispielaufgaben und vier Multiple Choice-Fragen, sodass dir insgesamt 16 Beispielaufgaben präsentiert werden und du 16 Multiple Choice-Fragen beantwortest.</p>
-  <p>Für die Bearbeitung von je vier Beispielaufgaben hast du insgesamt sechs Minuten Zeit. Die Einteilung dieser Zeit obliegt dir. Du solltest aber alle Lösungen nachvollzogen und alle Multiple Choice-Fragen beantwortet haben, denn nach Ablauf dieser Zeit wirst du automatisch zur Befragung deines Flow-Erlebens und deiner kognitiven Beanspruchung weitergeleitet und kannst nicht mehr zurückgehen. Ein Timer wird eingeblendet.</p>
+  <p>Auf jeder Seite des Lernprogramms werden dir vier Beispielaufgaben präsentiert. Du sollst diese Aufgaben aufmerksam lesen und versuchen, die Lösung nachzuvollziehen. </p>
+  <p>Zu jeder Aufgabe sollst du zwei Multiple Choice-Fragen beantworten. Auf einer Seite also insgesamt acht Multiple-Choice-Fragen.</p>
+  <p>Du durchläufst vier Durchgänge mit jeweils vier Beispielaufgaben und acht Multiple Choice-Fragen, sodass dir insgesamt 16 Beispielaufgaben präsentiert werden und du 32 Multiple Choice-Fragen beantwortest.</p>
+  <p>Für die Bearbeitung von je vier Beispielaufgaben hast du insgesamt fünf Minuten Zeit. Die Zeit kannst du frei einteilen, du solltest aber alle Lösungen nachvollzogen und alle Multiple Choice-Fragen beantwortet haben, denn nach Ablauf dieser Zeit wirst du automatisch zur Befragung deines Flow-Erlebens und deiner kognitiven Beanspruchung weitergeleitet und kannst nicht mehr zurückgehen. Ein Timer wird eingeblendet.</p>
   `;
 
   return <InstructionFrame html={html} space finish={props.finish}/>;
@@ -271,7 +272,7 @@ export function InstructionFrame200(props) {
   const html = `
   <p>Im letzten Abschnitt der Studie werden dir verschiedene Aufgaben präsentiert, die deinen Lernerfolg messen. Es ist deshalb wichtig, dass du bitte keine Hilfsmittel (z.B. Taschenrechner oder Internetseiten) benutzt und konzentriert arbeitest.</p>
   <p>Es gibt kein Zeitlimit, arbeite die Aufgaben aber bitte kontinuierlich durch.</p>
-  <p>Viel Spaß!</p>
+  <p>Viel Erfolg!</p>
   `;
 
   return <InstructionFrame html={html} space finish={props.finish}/>;
@@ -302,7 +303,6 @@ export function InstructionFrame203(props) {
   <p>Vielen Dank für die Berechnung der Aufgaben!</p>
   <p>Dir werden nun 16 Textaufgaben präsentiert. Achtmal erhältst du zur Textaufgabe eine rechnerische Lösung. Bei acht weiteren Textaufgaben erhältst du eine Beschreibung eines der vier Prinzipien. </p>
   <p>Deine Aufgabe besteht nun darin, zu entscheiden, ob die rechnerische Lösung bzw. die Beschreibung des Prinzips zur Aufgabe passt. </p>
-  <p>Wähle deine Antwort durch Klicken auf den Kreis vor der entsprechenden Antwortalternative.</p>
   <p>Lies die Aufgaben aufmerksam durch, überlege gut und entscheide dich dann für eine Antwort. Du wirst nach deiner Antwortwahl automatisch zur nächsten Antwort weitergeleitet. Du kannst nicht mehr zurückgehen.</p>
   `;
 

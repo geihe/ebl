@@ -8,7 +8,7 @@ import {UniBielefeld} from "../../MicroComponents/UniBielefeld";
 
 export function EBL01_Demographics(props) {
   const t = useContext(LngContext);
-  const initial = {degree: '', age: '', gender: '', nativeLanguage: '', difficulties: '', diffcltText: ''};
+  const initial = {degree: '', age: '', gender: '', nativeLanguage: ''};
   let data=initial;
   const validationSchema = Yup.object().shape({
     degree: Yup.string()
@@ -22,8 +22,6 @@ export function EBL01_Demographics(props) {
       .required({en: 'Please enter your gender', de: 'Bitte geben Sie Ihr Geschlecht ein'}),
     gender: Yup.string()
       .required({en: 'Please enter your native language', de: 'Bitte geben Sie Ihre Muttersprache ein'}),
-    difficulties: Yup.string()
-      .required({en: 'Please answer "yes" or "no"', de: 'Bitte antworte "Ja" oder "Nein"'}),
   });
 
   return (<>

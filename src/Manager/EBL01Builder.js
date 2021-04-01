@@ -3,7 +3,7 @@ import {TimelineManager} from "../helper/TimelineManager";
 import {testTimeline} from "../Test/testTimeline";
 import {ToDoFrame} from "../Frames/ToDoFrame";
 import {EBLPause} from "../Frames/EBL/EBLPause";
-import {exampleFrames, exampleFramesTest} from "../Frames/EBL/EBL01_ExampleFrames";
+import {exampleFrames} from "../Frames/EBL/EBL01_ExampleFrames";
 import {EBL01_Demographics} from "../Frames/Instructions/EBL01_Demographics"
 import {
   InstructionFrame01,
@@ -34,8 +34,7 @@ import {
   InstructionFrame210,
   InstructionFrame211a,
   InstructionFrame211b,
-  InstructionFrame212,
-  InstructionFrameTest
+  InstructionFrame212
 } from "../Frames/Instructions/InstructionFrame";
 import {CancelFrame} from "../Frames/CancelFrame";
 import {FixationCrossFrame} from "../Frames/FixationCrossFrame";
@@ -146,9 +145,9 @@ export class EBL01Builder {
   }
 
   buildTestSession() {
+    console.log(exampleFrames(this.group));
     this.tlManager.add(
-      exampleFramesTest(this.group),
-      <InstructionFrameTest/>
+      exampleFrames(this.group),
     );
   }
 

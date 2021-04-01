@@ -45,7 +45,7 @@ export function MathCourse02(props) {
 export function MathCourse03(props) {
   return (
     <div>
-      <p>In dem folgenden Lernprogramm sollst Du aus Beispielen etwas über Wahrscheinlichkeitsrechnung lernen. Um die
+      <p>In dem folgenden Lernprogramm sollst du aus Beispielen etwas über Wahrscheinlichkeitsrechnung lernen. Um die
         Beispiele zu verstehen, lies den folgenden Lehrtext zur Wahrscheinlichkeitsrechnung bitte aufmerksam durch. </p>
       <h1>Kleine Einführung in die Wahrscheinlichkeitsrechnung</h1>
       <h2>1. Experiment und Ergebnis</h2>
@@ -117,7 +117,7 @@ export function MathCourse06a(props) {
         So gibt es auch mehrstufige Experimenten, bei denen man sich für die Wahrscheinlichkeit interessiert,
         dass zwei oder mehr Ereignisse überhaupt auftreten,
         <strong> unabhängig von der Reihenfolge der Ereignisse</strong>.</p>
-      <p>In diesem Fall sind sind mehrere Ereignisfolgen günstig
+      <p>In diesem Fall sind sind <strong>mehrere Ereignisfolgen günstig</strong>
         (z.B. „erst Ereignis A, dann Ereignis B“ oder „erst Ereignis B, dann Ereignis A“). </p>
     </div>
   );
@@ -178,7 +178,7 @@ export function MathCourse07b(props) {
 export function MathCourse07c(props) {
   return (
     <div><p>Aus diesen beiden Punkten leiten sich vier Typen mehrstufiger Zufallsexperimente ab.</p>
-      <p>Im folgenden Lernprogramm werden Dir Beispiele zu diesen vier Typen gezeigt.</p></div>
+      <p>Im folgenden Lernprogramm werden dir Beispiele zu diesen vier Typen gezeigt.</p></div>
   );
 }
 

@@ -62,7 +62,7 @@ export function exampleFrames(group) {
   const {groups: exampleGroups, ...exampleConfig} = config.examples;
   const {items: exampleItems, id} = exampleGroups[group-1];
   const rem = new EBL01_ExampleManager();
-
+  console.log(exampleItems);
   return exampleItems.map(itemGroup => {
     const waitFrame = <DelayedFrame noResponse>
       <h1><Icon icon={'time'} iconSize={20}/> Bitte warten</h1>

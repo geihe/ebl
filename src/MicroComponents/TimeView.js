@@ -15,7 +15,7 @@ export function TimeView(props) {
   if (seconds <= 60) {
     time = seconds + ' s';
   } else {
-    time = '>' + Math.floor(seconds / 60) + ' min';
+    time = '>' + Math.floor((seconds-0.1) / 60) + ' min';
   }
 
   return (

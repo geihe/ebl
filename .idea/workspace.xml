@@ -4,11 +4,25 @@
     <option name="SCOPE_TYPE" value="3" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c0a8d840-d2a4-41a1-9e79-f574c09cafbd" name="Default Changelist" comment="Radiobuttons umstrukturiert&#10;zufällige Reihenfolge&#10;&#10;zusätzliches Attribut valid&#10;&#10;TESTFASSUNG">
+    <list default="true" id="c0a8d840-d2a4-41a1-9e79-f574c09cafbd" name="Default Changelist" comment="MC-Fragen in config.js zugeordnet">
       <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Manager/EBL01_ExampleManager.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Manager/EBL01_ExampleManager.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Frames/EBL/EBL01_ExampleFrames.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frames/EBL/EBL01_ExampleFrames.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Frames/Instructions/EBL01_Demographics.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frames/Instructions/EBL01_Demographics.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Frames/Instructions/InstructionFrame.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frames/Instructions/InstructionFrame.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Manager/EBL01Builder.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Manager/EBL01Builder.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Manager/Session.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Manager/Session.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MicroComponents/TimeView.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/MicroComponents/TimeView.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/EBL01/Ebl01_MathCourse.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/EBL01/Ebl01_MathCourse.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/EBL01/examples/fahrradhelm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/EBL01/examples/fahrradhelm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/EBL01/examples/kekse.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/EBL01/examples/kekse.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/EBL01/posFreeForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/EBL01/posFreeForm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/EBL01/postFT2step.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/EBL01/postFT2step.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/EBL01/postMC.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/EBL01/postMC.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/EBL01/postNT.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/EBL01/postNT.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/EBL01/verification.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/EBL01/verification.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/css/Likert.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/css/Likert.module.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -269,14 +283,13 @@
       <workItem from="1617011113463" duration="2038000" />
       <workItem from="1617023867812" duration="1861000" />
       <workItem from="1617034261558" duration="10426000" />
-      <workItem from="1617084551879" duration="11274000" />
-    </task>
-    <task id="LOCAL-00001" summary="Initial commit">
-      <created>1608320225945</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1608320225945</updated>
+      <workItem from="1617084551879" duration="11496000" />
+      <workItem from="1617110332164" duration="307000" />
+      <workItem from="1617126399385" duration="1970000" />
+      <workItem from="1617175343370" duration="7958000" />
+      <workItem from="1617203734847" duration="6096000" />
+      <workItem from="1617273253925" duration="1523000" />
+      <workItem from="1617289275657" duration="2431000" />
     </task>
     <task id="LOCAL-00002" summary="Bugfix: Ereignisse-&gt;Ergebnisse bei Instruction4a">
       <created>1608586452654</created>
@@ -607,7 +620,21 @@
       <option name="project" value="LOCAL" />
       <updated>1617093959832</updated>
     </task>
-    <option name="localTasksCounter" value="49" />
+    <task id="LOCAL-00049" summary="MC-Fragen in config.js zugeordnet">
+      <created>1617101110128</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1617101110128</updated>
+    </task>
+    <task id="LOCAL-00050" summary="Validierung der MC-Fragen in Daten">
+      <created>1617203997402</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1617203997402</updated>
+    </task>
+    <option name="localTasksCounter" value="51" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -642,8 +669,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="Pause-Komponente eingefügt" />
-    <MESSAGE value="MC-Komponente als self-explanation eingefügt&#10;Instruktionsseite bei process-measures eingefügt" />
     <MESSAGE value="Timer für Frames&#10;Komponente &#10;&#10;{timer: 600, frames: [...]}" />
     <MESSAGE value="bugfix" />
     <MESSAGE value="Radiofragen zu Formeln hinzugefügt" />
@@ -667,7 +692,9 @@
     <MESSAGE value="Jol eingebaut" />
     <MESSAGE value="bugfix: in EBLFrame logdata enthält Button-Element statt Text&#10;&#10;Overflow aktiviert" />
     <MESSAGE value="Radiobuttons umstrukturiert&#10;zufällige Reihenfolge&#10;&#10;zusätzliches Attribut valid&#10;&#10;TESTFASSUNG" />
-    <option name="LAST_COMMIT_MESSAGE" value="Radiobuttons umstrukturiert&#10;zufällige Reihenfolge&#10;&#10;zusätzliches Attribut valid&#10;&#10;TESTFASSUNG" />
+    <MESSAGE value="MC-Fragen in config.js zugeordnet" />
+    <MESSAGE value="Validierung der MC-Fragen in Daten" />
+    <option name="LAST_COMMIT_MESSAGE" value="Validierung der MC-Fragen in Daten" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
 </project>

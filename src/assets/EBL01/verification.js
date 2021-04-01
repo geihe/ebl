@@ -5,16 +5,16 @@ export const verification = [
   {
     context: 1,
     header: {
-      de: `Du und Dein Freund nehmen an einem zweitägigen Mountainbike-Kurs teil. An beiden Tagen bringt der Kursleiter jeweils 6 Fahrradhelme mit, die alle unterschiedliche Farben haben (grün, orange, silber, braun, rot und gelb). Die Helme werden zufällig verteilt und am Ende des Tages an den Kursleiter zurückgegeben. An beiden Tagen erhältst Du zuerst und Dein Freund als Zweiter einen Helm.`,
+      de: `Du und dein Freund nehmen an einem zweitägigen Mountainbike-Kurs teil. An beiden Tagen bringt der Kursleiter jeweils 6 Fahrradhelme mit, die alle unterschiedliche Farben haben (grün, orange, silber, braun, rot und gelb). Die Helme werden zufällig verteilt und am Ende des Tages an den Kursleiter zurückgegeben. An beiden Tagen erhältst Du zuerst und Dein Freund als Zweiter einen Helm.`,
       en: `You and your friend are taking part in a two-day mountain bike course. On both days, the instructor will bring 6 bike helmets, each with different colors (green, orange, silver, brown, red and yellow). The helmets are distributed randomly an returned to the instructor at the end of the day. On both days you will receive a helmet first and your friend second.`,
     },
     questions: [
       {
         id: 'pz-rvt1',
         question: [
-          <p>Aufgabe: Wie hoch ist die Wahrscheinlichkeit, dass Du am ersten Kurstag den grünen Helm bekommst und dein
+          <p>Aufgabe: Wie hoch ist die Wahrscheinlichkeit, dass du am ersten Kurstag den grünen Helm bekommst und dein
             Freund den blauen?</p>,
-          <p>Diese Aufgabe entspricht dem Typ „Eine günstige Ereignisfolge/Anzahl möglicher Ereignisse ändert sich“.</p>
+          <p>Diese Aufgabe entspricht dem Typ „Eine günstige Ereignisfolge/Anzahl möglicher Ergebnisse ändert sich“.</p>
         ],
         responseType: 'yesNoSure',
         validation: true,
@@ -22,9 +22,9 @@ export const verification = [
       {
         id: 'pz-rvt2',
         question: [
-          <p>Aufgabe: Wie hoch ist die Wahrscheinlichkeit, dass Du am ersten Tag den roten Helm und am zweiten Tag den
+          <p>Aufgabe: Wie hoch ist die Wahrscheinlichkeit, dass du am ersten Tag den roten Helm und am zweiten Tag den
             braunen Helm bekommst?</p>,
-          <p>Diese Aufgabe entspricht dem Typ „Eine günstige Ereignisfolge/Anzahl möglicher Ereignisse ändert sich“.</p>
+          <p>Diese Aufgabe entspricht dem Typ „Eine günstige Ereignisfolge/Anzahl möglicher Ergebnisse ändert sich“.</p>
         ],
         responseType: 'yesNoSure',
         validation: false,
@@ -32,7 +32,7 @@ export const verification = [
       {
         id: 'lw-rvt1',
         question: [
-          <p>Aufgabe: Wie hoch ist die Wahrscheinlichkeit, dass Du und Dein Freund am ersten Kurstag den roten und den
+          <p>Aufgabe: Wie hoch ist die Wahrscheinlichkeit, dass du und dein Freund am ersten Kurstag den roten und den
             grünen Helm bekommen (es ist egal, wer welche Farbe bekommt)?</p>,
           <p>Zur Lösung dieser Aufgabe muss Folgendes berechnet werden:
             <MathComponent tex={String.raw`2 \cdot ({1 \over 6} \cdot {1 \over 5})`} display={true}/>
@@ -44,7 +44,7 @@ export const verification = [
       {
         id: 'lw-rvt2',
         question: [
-          <p>Aufgabe: Wie hoch ist die Wahrscheinlichkeit, dass Du im Lauf des zweitägigen Kurses sowohl einen roten als
+          <p>Aufgabe: Wie hoch ist die Wahrscheinlichkeit, dass du im Lauf des zweitägigen Kurses sowohl einen roten als
             auch einen grünen Helm bekommst?</p>,
           <p>Zur Lösung dieser Aufgabe muss Folgendes berechnet werden:
             <MathComponent tex={String.raw`{1 \over 6} \cdot {1 \over 5}`} display={true}/>
@@ -67,7 +67,7 @@ export const verification = [
         question: [
           <p>Aufgabe: Wie hoch ist die Wahrscheinlichkeit, dass die Chemikerin in einem Schrank zuerst den Behälter mit
             dem Argon herausgreift und dann den Behälter mit dem Krypton?</p>,
-          <p>Diese Aufgabe entspricht dem Typ „Mehrere günstige Ereignisfolgen/Anzahl möglicher Ereignisse bleibt
+          <p>Diese Aufgabe entspricht dem Typ „Mehrere günstige Ereignisfolgen/Anzahl möglicher Ergebnisse bleibt
             gleich“.</p>
         ],
         responseType: 'yesNoSure',
@@ -78,7 +78,7 @@ export const verification = [
         question: [
           <p>Aufgabe: Wie hoch ist die Wahrscheinlichkeit, dass die Chemikerin in dem einen Schrank zuerst den Behälter
             mit dem Argon herausgreift und dann in dem zweiten Schrank den Behälter mit dem Krypton?</p>,
-          <p>Diese Aufgabe entspricht dem Typ „Eine günstige Ereignisfolge/Anzahl möglicher Ereignisse bleibt
+          <p>Diese Aufgabe entspricht dem Typ „Eine günstige Ereignisfolge/Anzahl möglicher Ergebnisse bleibt
             gleich“.</p>
         ],
         responseType: 'yesNoSure',
@@ -122,7 +122,7 @@ export const verification = [
         question: [
           <p>Aufgabe: Wie groß ist die Wahrscheinlichkeit, dass Adam und Urs im ersten Durchgang die ersten beiden
             Plätze belegen (es ist egal, wer von ihnen auf Platz 1 oder 2 kommt)?</p>,
-          <p>Diese Aufgabe entspricht dem Typ „Mehrere günstige Ereignisfolgen/Anzahl möglicher Ereignisse ändert
+          <p>Diese Aufgabe entspricht dem Typ „Mehrere günstige Ereignisfolgen/Anzahl möglicher Ergebnisse ändert
             sich“.</p>
         ],
         responseType: 'yesNoSure',
@@ -133,7 +133,7 @@ export const verification = [
         question: [
           <p>Aufgabe: Wie groß ist die Wahrscheinlichkeit, dass Beat in den beiden Durchgängen einmal den ersten und
             einmal den zweiten Platz belegt?</p>,
-          <p>Diese Aufgabe entspricht dem Typ „Mehrere günstige Ereignisfolgen/Anzahl möglicher Ereignisse ändert
+          <p>Diese Aufgabe entspricht dem Typ „Mehrere günstige Ereignisfolgen/Anzahl möglicher Ergebnisse ändert
             sich“.</p>
         ],
         responseType: 'yesNoSure',
@@ -174,9 +174,9 @@ export const verification = [
       {
         id: 'pz-rvt7',
         question: [
-          <p>Aufgabe: Wie groß ist die Wahrscheinlichkeit, Du und deine Freundin aus der ersten Dose das
+          <p>Aufgabe: Wie groß ist die Wahrscheinlichkeit, dass du und deine Freundin aus der ersten Dose das
             Amarettoplätzchen und den Zimtstern ziehen (es ist egal, wer welchen der beiden Kekse bekommt)?</p>,
-          <p>Diese Aufgabe entspricht dem Typ „Eine günstige Ereignisfolge/Anzahl möglicher Ereignisse bleibt
+          <p>Diese Aufgabe entspricht dem Typ „Eine günstige Ereignisfolge/Anzahl möglicher Ergebnisse bleibt
             gleich“.</p>
         ],
         responseType: 'yesNoSure',
@@ -185,9 +185,9 @@ export const verification = [
       {
         id: 'pz-rvt8',
         question: [
-          <p>Aufgabe: Wie groß ist die Wahrscheinlichkeit, dass Du beim Ziehen zunächst aus der einen Dose dann aus der
+          <p>Aufgabe: Wie groß ist die Wahrscheinlichkeit, dass du beim Ziehen zunächst aus der einen Dose dann aus der
             anderen Dose sowohl eine Nussecke als auch ein Vanillekipferl bekommst?</p>,
-          <p>Diese Aufgabe entspricht dem Typ „Mehrere günstige Ereignisfolgen/Anzahl möglicher Ereignisse bleibt
+          <p>Diese Aufgabe entspricht dem Typ „Mehrere günstige Ereignisfolgen/Anzahl möglicher Ergebnisse bleibt
             gleich“.</p>
         ],
         responseType: 'yesNoSure',
@@ -196,7 +196,7 @@ export const verification = [
       {
         id: 'lw-rvt7',
         question: [
-          <p>Aufgabe: Wie groß ist die Wahrscheinlichkeit, dass Du aus der ersten Dose die Nussecke bekommst und Deine
+          <p>Aufgabe: Wie groß ist die Wahrscheinlichkeit, dass du aus der ersten Dose die Nussecke bekommst und deine
             Freundin den Zimtstern?</p>,
           <p>Zur Lösung dieser Aufgabe muss Folgendes berechnet werden:
             <MathComponent tex={String.raw`{1 \over 4} \cdot {1 \over 4}`} display={true}/>
@@ -208,7 +208,7 @@ export const verification = [
       {
         id: 'lw-rvt8',
         question: [
-          <p>Aufgabe: Wie groß ist die Wahrscheinlichkeit, dass Du aus der ersten Dose den Zimtstern und aus der zweiten
+          <p>Aufgabe: Wie groß ist die Wahrscheinlichkeit, dass du aus der ersten Dose den Zimtstern und aus der zweiten
             Dose das Vanillekipferl bekommst?</p>,
           <p>Zur Lösung dieser Aufgabe muss Folgendes berechnet werden:
             <MathComponent tex={String.raw`{1 \over 4} \cdot {1 \over 4}`} display={true}/>
