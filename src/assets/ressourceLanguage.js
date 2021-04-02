@@ -12,13 +12,13 @@ export const phrase = {
   continueText: {en: 'Please press SPACE to continue...', de: 'Weiter mit der Leertaste ...'},
   continueButton: {en: 'continue...', de: 'Weiter...'},
   cancelButton: {en: 'stop...', de: 'Abbrechen...'},
-  sessionFinished: {
+  sessionFinishedDu: {
+    en: '<p>Thank you very much for participating in our study.</p> <p>This part of the experiment is finished.</p>',
+    de: '<p>Dieser Teil des Experiments ist beendet.</p> <p>Vielen Dank, dass du an der Studie teilgenommen hast.</p> <p>Du kannst den Browser jetzt schließen.</p>',
+  },
+  sessionFinishedSie: {
     en: 'Thank you very much for participating in our study. This part of the experiment is finished.',
     de: 'Dieser Teil des Experiments ist beendet. Vielen Dank, dass Sie an der Studie teilgenommen haben. Sie können das Fenster jetzt schließen.',
-  },
-  experimentFinished: {
-    en: 'Thank you very much for participating in our study. The experiment is finished. Please close the window.',
-    de: 'Das Experiment ist beendet. Vielen Dank, dass Sie an der Studie teilgenommen haben. Sie können das Fenster jetzt schließen.',
   },
   pending: {
     en: 'The next part of the experiment has not been activated yet.',

@@ -42,7 +42,7 @@ export const postMC = [
  <p>Die Buchstaben werden danach alle wieder in die Vase geschüttet und für den nächsten Durchgang neu gemischt. </p>
    Auf diese Weise ziehst du insgesamt zehn „Wörter“.</p></strong>
 
-        <p>Beantworte nun bitte die beiden folgenden Fragen zu Auswirkungen von hypothetischen Veränderungen an diesem Szenario.</p>
+        <p>Beantworte nun bitte <strong>die beiden folgenden Fragen</strong> zu Auswirkungen von hypothetischen Veränderungen an diesem Szenario.</p>
 `,
     question:'1. Welche Auswirkungen hätte es auf die Wahrscheinlichkeit, in einem der zehn Durchgänge ein bestimmtes Wort ziehen (z.B. BOHNE), \n' +
       '        wenn du jeden gezogenen Buchstaben zwar notieren, dann aber sofort wieder in die Vase zurücklegen würdest? \n' +
@@ -61,7 +61,7 @@ export const postMC = [
  <p>Am Ende jedes Durchgangs hast du ein „Wort“ aus fünf Buchstaben vor dir liegen (z.B. GFAVB oder FUMEQ), das du notierst. 
  <p>Die Buchstaben werden danach alle wieder in die Vase geschüttet und für den nächsten Durchgang neu gemischt. </p>
    Auf diese Weise ziehst du insgesamt zehn „Wörter“.</p></strong>
-        <p>Beantworte dazu nun bitte die zweite Frage:</p>
+        <p>Beantworte dazu nun bitte <strong>die zweite Frage</strong>:</p>
 `,
     question:'2.	Die Wahrscheinlichkeit, dass du in einem der zehn Durchgänge ein bestimmtes Wort ziehst (z.B. BOHNE), hängt davon ab, ob du die Buchstaben bereits in der richtigen Reihenfolge ziehen musst oder ob Du diese nachträglich noch umsortieren darfst. ' +
       'Bitte erkläre diese Beziehung (eine Rechnung ist nicht notwendig).',

@@ -145,9 +145,8 @@ export class EBL01Builder {
   }
 
   buildTestSession() {
-    console.log(exampleFrames(this.group));
     this.tlManager.add(
-      exampleFrames(this.group),
+      <InstructionFrame203/>, postFrames[2],
     );
   }
 

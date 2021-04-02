@@ -45,9 +45,9 @@ export function MathCourse02(props) {
 export function MathCourse03(props) {
   return (
     <div>
+      <h1>Kleine Einführung in die Wahrscheinlichkeitsrechnung</h1>
       <p>In dem folgenden Lernprogramm sollst du aus Beispielen etwas über Wahrscheinlichkeitsrechnung lernen. Um die
         Beispiele zu verstehen, lies den folgenden Lehrtext zur Wahrscheinlichkeitsrechnung bitte aufmerksam durch. </p>
-      <h1>Kleine Einführung in die Wahrscheinlichkeitsrechnung</h1>
       <h2>1. Experiment und Ergebnis</h2>
       <p>Wird beispielsweise ein Würfel oder eine Münze geworfen oder wird aus einer Urne eine Kugel gezogen, so nennt
         man das ein <strong>Experiment</strong>.
@@ -100,7 +100,7 @@ export function MathCourse05(props) {
         sich für die Wahrscheinlichkeit einer bestimmten <strong>Ereignisfolge</strong>.
         Ein Beispiel ist das Ziehen aus einer Urne mit Kugeln, die alle verschiedene Farben haben.
         Eine Ereignisfolge ist beispielsweise „erst eine blaue Kugel und dann eine gelbe Kugel“.</p>
-      <h3>Der Multiplikationssatz</h3>
+      <h2>Der Multiplikationssatz</h2>
       Will man die Wahrscheinlichkeit solcher Ereignisfolgen berechnen, so muss man die Einzelwahrscheinlichkeiten
       miteinander multiplizieren.
       Allgemein formuliert lautet der <strong>Multiplikationssatz</strong> (Ereignis A, Ereignis B) also:

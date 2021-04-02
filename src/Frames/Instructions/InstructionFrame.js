@@ -59,7 +59,7 @@ export function InstructionFrame02(props) {
 export function InstructionFrame03(props) {
   const html = `
 <p><strong>Schön, dass du dabei bist!</strong></p>
-<p>Durch deine Teilnahme erwirbst du nicht nur neues Wissen, sondern erhältst auch einen Einblick in die aktuelle Forschung zu Lehren und Lernen. Zudem erhältst du für deine Teilnahme bei Bedarf 3 Versuchspersonenstunden für dein Psychologiestudium.</p>
+<p>Durch deine Teilnahme erwirbst du nicht nur neues Wissen, sondern erhältst auch einen Einblick in die aktuelle Forschung zu Lehren und Lernen. Zudem erhältst du für deine Teilnahme bei Bedarf 2 Versuchspersonenstunden für dein Psychologiestudium.</p>
   <p><strong>Navigiere während des Experiments bitte nicht im Browser mit den Vor- oder Zurückbuttons deines Browsers.</strong> Du wirst durch das Experiment geleitet. An einigen Stellen kann es einen kurzen Moment dauern, bis die nächste Ansicht zu sehen ist.</p>
   <p>Manchmal kann es vorkommen, dass das Laden von neuen Seiten einige Sekunden dauert. Warte bitte immer ab, bis du die nächste Seite siehst und klicke währenddessen nicht mit der Maus!</p>
   `;
@@ -81,16 +81,16 @@ export function InstructionFrame04(props) {
 export function InstructionFrame06(props) {
   const html = `
 
-<p><i>Vortest:</i> in <strong>12 Aufgaben</strong> wird herausgefunden, wie gut du Rechenaufgaben lösen und Wahrscheinlichkeiten bereits bestimmen kannst. </p>
-<p><i>Lernphase:</i>
+<p><i><b>Vortest:</b></i> in <strong>12 Aufgaben</strong> wird herausgefunden, wie gut du Rechenaufgaben lösen und Wahrscheinlichkeiten bereits bestimmen kannst. </p>
+<p><i><b>Lernphase:</b></i>
 <ul>
 <li>Du erhältst eine <strong>allgemeine Erklärung über Urnenmodelle und Stochastik</strong>. </li>
 <li>Anschließend lernst du vier Prinzipien der Wahrscheinlichkeitsrechnung anhand von <strong>16 Lösungsbeispielen</strong>. Zu jedem Lösungsbeispiel erhältst du Fragen im Multiple Choice-Format. </li>
 <li>Nach jeweils vier Lösungsbeispielen werden dir verschiedene <strong>Fragen zu deiner kognitiven Beanspruchung und deinem Flowerleben</strong> gestellt. </li>
 </ul>
 </p>
-<p><i>Pause: Du hast 10 Minuten Zeit dich zu entspannen. </i></p>
-<p><i>Anwendungsphase:</i>
+<p><i><b>Pause: </b></i>Du hast 10 Minuten Zeit dich zu entspannen.</p>
+<p><i><b>Anwendungsphase:</b></i>
 Zum Abschluss sollst du die Prinzipien anhand von <strong>22 Testaufgaben</strong> und <strong>16 Verifikationsaufgaben</strong> anwenden. Hierfür ist keinerlei Vorwissen von deiner Seite notwendig – alle Informationen erhältst du ausschließlich in dieser Studie.  
 </p>
   `;

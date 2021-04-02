@@ -12,7 +12,6 @@ import {EBL01_ExampleManager} from "../../Manager/EBL01_ExampleManager";
 
 const processMeasuresIntroduction = { //TODO in eigene Datei
   frame: (<DelayedFrame
-    space
     continueText={phrase.continueText}
     delay={1000}
   >

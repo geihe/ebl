@@ -1,14 +1,15 @@
 import React, {useContext} from 'react';
 import {LngContext} from "../helper/i18n";
 import {phrase} from "../assets/ressourceLanguage";
-// import styles from "../css/SessionFinished.module.css";
+import {Html} from "./Html";
+//import styles from "../css/SessionFinished.module.css";
 //TODO import wegen merkwürdiger Seiteneffekte auf instructions deaktiviert
 export function SessionFinished(props) {
   const {nextSessionStart} = props;
   const t = useContext(LngContext);
   if (!nextSessionStart) {
     return (
-      <div> {t(phrase.experimentFinished)} </div>
+      <Html html={t(phrase.sessionFinishedDu)}/>
     );
   }
   return null;
