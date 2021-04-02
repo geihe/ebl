@@ -112,7 +112,8 @@ export function Session(props) {
     el = timeline[tempIndex];
   }
 
-  const startTime = new Date().toLocaleString('de');
+  const startTime = new Date();
+  const startTimeString = startTime.toLocaleString('de');
 
   el = timeline[tempIndex];
   if (!el) {
@@ -128,14 +129,17 @@ export function Session(props) {
   />;
 
   function next(newIndex, logData) {
+    const endTime=new Date();
+    const endTimeString = endTime.toLocaleString('de');
     if (!el.noLog) {
       data.current.push(
         {
           index: index,
           component: el.frame.type.name,
           id: el.id,
-          startTime: startTime,
-          endTime: new Date().toLocaleString('de'),
+          startTime: startTimeString,
+          endTime: endTimeString,
+          duration: ((endTime - startTime) / 1000).toFixed(1)+'s',
           log: logData,
         });
     }

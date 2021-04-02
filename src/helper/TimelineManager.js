@@ -160,8 +160,6 @@ class TLif extends TimelineElement {
   }
 
   setCumEffort(start) {
-
-    console.log(start, this.effort, this.then.effort, this.else.effort);
     this.then.setCumEffort(start, this.effort / this.then.effort);
 
     if (this.else.setCumEffort) {

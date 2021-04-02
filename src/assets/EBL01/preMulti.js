@@ -1,5 +1,6 @@
 import {MathComponent} from "mathjax-react";
 import React from "react";
+import {evalValidator} from "../../helper/evalValidate";
 
 export const preMulti = [
   {
@@ -7,8 +8,7 @@ export const preMulti = [
     header: 'Berechne! Der Bruchstrich kann mit &quot;/&quot; eingegeben werden (z.B. 1/2).',
     question:
       <MathComponent tex={String.raw`{1 \over 4} \cdot {3 \over 7}`} display={true}/>,
-    validate:
-      (answer) => answer === '3/28',
+    validate: evalValidator(3/28),
     responseType: 'input'
   },
   {
@@ -16,8 +16,7 @@ export const preMulti = [
     header: 'Berechne! Der Bruchstrich kann mit &quot;/&quot; eingegeben werden (z.B. 1/2).',
     question:
         <MathComponent tex={String.raw`{2 \over 5} \cdot {1 \over 3}`} display={true}/>,
-    validate:
-      (answer) => answer === '2/15',
+    validate: evalValidator(2/15),
     responseType: 'input'
   },
   {
@@ -25,8 +24,7 @@ export const preMulti = [
     header: 'Berechne! Der Bruchstrich kann mit &quot;/&quot; eingegeben werden (z.B. 1/2).',
     question:
       <MathComponent tex={String.raw`{5 \over 6} \cdot {3 \over 4}`} display={true}/>,
-    validate:
-      (answer) => ['15/24', '5/8'].includes(answer),
+    validate: evalValidator(15/24),
     responseType: 'input'
   },
   {
@@ -34,8 +32,7 @@ export const preMulti = [
     header: 'Berechne! Der Bruchstrich kann mit &quot;/&quot; eingegeben werden (z.B. 1/2).',
     question:
       <MathComponent tex={String.raw`{1 \over 2} \cdot {4 \over 9}`} display={true}/>,
-    validate:
-      (answer) => ['4/18', '2/9'].includes(answer),
+    validate:evalValidator(4/18),
     responseType: 'input'
   }
 ]

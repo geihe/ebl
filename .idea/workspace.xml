@@ -4,19 +4,18 @@
     <option name="SCOPE_TYPE" value="3" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c0a8d840-d2a4-41a1-9e79-f574c09cafbd" name="Default Changelist" comment="bugfixes&#10;&#10;-Gruppenzuteilung war falsch&#10;-cursor in Likertframe&#10;-Zeitformat">
+    <list default="true" id="c0a8d840-d2a4-41a1-9e79-f574c09cafbd" name="Default Changelist" comment="diverse kleine Änderungen im Text">
+      <change afterPath="$PROJECT_DIR$/src/helper/evalValidate.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/YesNoSure.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/YesNoSure.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Frames/EBL/EBL01_ExampleFrames.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frames/EBL/EBL01_ExampleFrames.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Frames/Instructions/InstructionFrame.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frames/Instructions/InstructionFrame.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Manager/EBL01Builder.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Manager/EBL01Builder.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MicroComponents/SessionFinished.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/MicroComponents/SessionFinished.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/EBL01/Ebl01_MathCourse.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/EBL01/Ebl01_MathCourse.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Manager/Session.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Manager/Session.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/EBL01/postFT2step.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/EBL01/postFT2step.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/assets/EBL01/postMC.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/EBL01/postMC.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/ressourceLanguage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/ressourceLanguage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/css/DelayedFrame.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/css/DelayedFrame.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/EBL01/postNT.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/EBL01/postNT.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/EBL01/pre1step.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/EBL01/pre1step.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/EBL01/preMulti.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/EBL01/preMulti.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/helper/TimelineManager.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/helper/TimelineManager.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -285,14 +284,9 @@
       <workItem from="1617273253925" duration="1523000" />
       <workItem from="1617289275657" duration="2739000" />
       <workItem from="1617303671433" duration="1019000" />
-      <workItem from="1617350482121" duration="4668000" />
-    </task>
-    <task id="LOCAL-00003" summary="fetch-test">
-      <created>1609075060128</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1609075060128</updated>
+      <workItem from="1617350482121" duration="5261000" />
+      <workItem from="1617383617587" duration="3270000" />
+      <workItem from="1617389570901" duration="4082000" />
     </task>
     <task id="LOCAL-00004" summary="get URL-Parameters">
       <created>1609090303015</created>
@@ -630,7 +624,14 @@
       <option name="project" value="LOCAL" />
       <updated>1617293118326</updated>
     </task>
-    <option name="localTasksCounter" value="52" />
+    <task id="LOCAL-00052" summary="diverse kleine Änderungen im Text">
+      <created>1617355903787</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1617355903787</updated>
+    </task>
+    <option name="localTasksCounter" value="53" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -665,7 +666,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="bugfix" />
     <MESSAGE value="Radiofragen zu Formeln hinzugefügt" />
     <MESSAGE value="Weiter-Button ohne weitere Eingabe hinzugefügt (b)&#10;&#10;Test-Example-Konfiguration eingefügt" />
     <MESSAGE value="Introduction zu MathCourse umbenannt und umstrukturiert" />
@@ -690,7 +690,8 @@
     <MESSAGE value="MC-Fragen in config.js zugeordnet" />
     <MESSAGE value="Validierung der MC-Fragen in Daten" />
     <MESSAGE value="bugfixes&#10;&#10;-Gruppenzuteilung war falsch&#10;-cursor in Likertframe&#10;-Zeitformat" />
-    <option name="LAST_COMMIT_MESSAGE" value="bugfixes&#10;&#10;-Gruppenzuteilung war falsch&#10;-cursor in Likertframe&#10;-Zeitformat" />
+    <MESSAGE value="diverse kleine Änderungen im Text" />
+    <option name="LAST_COMMIT_MESSAGE" value="diverse kleine Änderungen im Text" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
 </project>
