@@ -13,7 +13,8 @@ export const posFreeForm = [
         dass du richtig liegst  <MathComponent tex={String.raw`2 \cdot ({1 \over 5} \cdot {1 \over 4})`} display={false}/>.</p>,
     ],
     question: `Warum wird in der zweiten Berechnung mit 2 multipliziert, in der ersten Berechnung jedoch nicht?`,
-    responseType: 'textArea'
+    responseType: 'textArea',
+    effort: 3,
   },
   {
     id: 'postConceptNew_2',
@@ -24,18 +25,21 @@ export const posFreeForm = [
     question: [
       <p>Warum wird in der ersten Berechnung <MathComponent tex={String.raw`{1 \over 5}`} display={false}/> mit <MathComponent tex={String.raw`{1 \over 5}`} display={false}/> multipliziert und in der zweiten Berechnung <MathComponent tex={String.raw`{1 \over 5}`} display={false}/> mit <MathComponent tex={String.raw`{1 \over 4}`} display={false}/>?</p>,
     ],
-    responseType: 'textArea'
+    responseType: 'textArea',
+    effort: 3,
   },
   {
     id: 'postConceptNew_3',
     header: `Wie unterscheidet sich die Berechnung der Wahrscheinlichkeit einer Ereignisfolge bei mehrstufigen Zufallsexperimenten, in denen mehr nur eine Ereignisfolge günstig ist, von der Berechnung der Wahrscheinlichkeit bei Zufallsexperimenten, in denen mehrere Ereignisfolgen günstig sind? `,
     question: `Erkläre.`,
-    responseType: 'textArea'
+    responseType: 'textArea',
+    effort: 3,
   },
   {
     id: 'postConceptNew_4',
     header: `Wie unterscheidet sich die Berechnung der Wahrscheinlichkeit einer Ereignisfolge bei mehrstufigen Zufallsexperimenten, in denen die Anzahl möglicher Ergebnisse sich ändert von der Berechnung der Wahrscheinlichkeit bei Zufallsexperimenten, in denen die Anzahl möglicher Ergebnisse gleich bleibt? `,
     question: `Erkläre.`,
-    responseType: 'textArea'
+    responseType: 'textArea',
+    effort: 3,
   },
 ]

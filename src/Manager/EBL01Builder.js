@@ -146,9 +146,7 @@ export class EBL01Builder {
 
   buildTestSession() {
     this.tlManager.add(
-      <FixationCrossFrame/>,
-      <InstructionFrame03/>,
-      <FixationCrossFrame/>,
+      postFrames[0],
     );
   }
 

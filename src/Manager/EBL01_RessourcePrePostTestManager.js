@@ -68,7 +68,10 @@ export class EBL01_RessourcePrePostTestManager {
       React.cloneElement(el, {key: 'element_' + id + '_' + index})
     );
 
-    return <StimulusResponseFrame
+    const effort = item.effort || 1;
+    return {
+      effort,
+    frame: <StimulusResponseFrame
       key={item.id}
       id={item.id}
       stimulus={{
@@ -81,6 +84,7 @@ export class EBL01_RessourcePrePostTestManager {
       repeatOnWrong={config.repeatOnWrong}
       hideStimulusOnResponse={config.hideStimulusOnResponse}
     />
+  }
   }
 
   static flatArrayWithComponents(...params) { //TODO kommt zweimal vor (siehe ElementsKeyFrame)
