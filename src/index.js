@@ -9,6 +9,7 @@ import {FocusStyleManager} from "@blueprintjs/core";
 import {config} from "./config";
 import {SessionFinished} from "./MicroComponents/SessionFinished";
 import {Server} from "./helper/Server";
+import {ExperimentFullFrame} from "./Frames/Instructions/ExperimentFullFrame";
 
 FocusStyleManager.onlyShowFocusOnTabs();
 const server = new Server();
@@ -18,9 +19,11 @@ getElementInfo().then((info) => {
   console.log(info);
   t = (ressource, param) =>
     translate(info.language, ressource, param);
-//TODO Experiment voll
   let element;
   switch (info.type) {
+    case "full":
+      element = <ExperimentFullFrame/>;
+      break;
     case "finished":
       element = <SessionFinished/>;
       break;
@@ -93,6 +96,10 @@ async function getElementInfo() {
     initialData.language = URLparams.language ? URLparams.language : serverData.language;
     initialData.userId = URLparams.user_id ? +URLparams.user_id : serverData.user_id;
     initialData.groupId = URLparams.group_id ? +URLparams.group_id : serverData.group_id;
+
+    if (initialData.groupId < 0) {
+      return {type: 'full', language: initialData.language}
+    }
 
     return {type: 'session', language: initialData.language, initialData: [initialData]};
   }

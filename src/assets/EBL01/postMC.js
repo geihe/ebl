@@ -33,14 +33,14 @@ export const postMC = [
     id: 'postMC_1_draw3',
     header: `Du und dein Freund nehmen an einem dreitägigen Mountainbike-Kurs teil. An allen drei Tagen bringt der Kursleiter jeweils 5 Fahrradhelme mit, die alle unterschiedliche Farben haben (orange, silber, braun, rot und gelb). Die Helme werden zufällig verteilt und am Ende des Tages an den Kursleiter zurückgegeben. An allen Tagen erhältst Du zuerst, deine Freundin Alice als Zweite und dein Freund Ben als Dritter einen Helm.`,
     question: `Wie hoch ist die Wahrscheinlichkeit, dass du am ersten Kurstag den roten Helm bekommst, Alice den gelben und Ben den braunen?`,
-    validate: evalValidator(1/20),
+    validate: evalValidator(1/60),
     responseType: 'input'
   },
   {
     id: 'postMC_3_draw3',
-    header: `Eine Chemikerin lagert in zwei verschiedenen Sicherheitsschränken Edelgase. In beiden Schränken befinden sich dieselben 3 Edelgase (Argon, Krypton, Xenon) in einzelnen Behältern. Ihr Kollege hat jedoch vergessen, die Behälter zu beschriften und alle Behälter sehen genau gleich aus. Für ein Experiment begibt sich die Chemikerin auf die Suche nach zwei verschiedenen Edelgasen und nimmt die Behälter einzeln aus den Schränken und prüft danach welches Gas enthalten ist.`,
-    question: `Wie hoch ist die Wahrscheinlichkeit, dass die Chemikerin in einem Schrank zuerst die Behälter mit den Edelgasen Helium und Argon herausgreift (es ist egal, welches Behältnis sie als Erstes entdeckt)?`,
-    validate: evalValidator(2/6),
+    header: `Eine Chemikerin lagert in zwei verschiedenen Sicherheitsschränken Edelgase. In beiden Schränken befinden sich dieselben 4 Edelgase (Argon, Neon, Krypton, Xenon) in einzelnen Behältern. Ihr Kollege hat jedoch vergessen, die Behälter zu beschriften und alle Behälter sehen genau gleich aus. Für ein Experiment begibt sich die Chemikerin auf die Suche nach drei verschiedenen Edelgasen und nimmt die Behälter einzeln aus den Schränken und prüft danach welches Gas enthalten ist.`,
+    question: `Wie hoch ist die Wahrscheinlichkeit, dass die Chemikerin in einem Schrank zuerst die Behälter mit den Edelgasen Helium, Neon und Argon herausgreift (es ist egal, welches Behältnis sie als Erstes entdeckt)?`,
+    validate: evalValidator(1/4),
     responseType: 'input'
   },
   {

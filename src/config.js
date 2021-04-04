@@ -211,6 +211,12 @@ export const config = {
         'lw-rvt6',
         'lw-rvt7',
         'lw-rvt8',
+      ],
+      [
+        'postMC_1_draw3',
+        'postMC_3_draw3',
+        'postMC_6_draw3',
+        'postMC_7_draw3',
       ]
     ],
   },

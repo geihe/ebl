@@ -4,18 +4,13 @@
     <option name="SCOPE_TYPE" value="3" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c0a8d840-d2a4-41a1-9e79-f574c09cafbd" name="Default Changelist" comment="diverse kleine Änderungen im Text">
-      <change afterPath="$PROJECT_DIR$/src/helper/evalValidate.js" afterDir="false" />
+    <list default="true" id="c0a8d840-d2a4-41a1-9e79-f574c09cafbd" name="Default Changelist" comment="vph aus config.sys übernehmen&#10;&#10;nolog in data auslesen">
+      <change afterPath="$PROJECT_DIR$/src/Frames/Instructions/ExperimentFullFrame.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Manager/EBL01Builder.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Manager/EBL01Builder.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Manager/Session.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Manager/Session.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/EBL01/postFT2step.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/EBL01/postFT2step.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/assets/EBL01/postMC.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/EBL01/postMC.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/EBL01/postNT.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/EBL01/postNT.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/EBL01/pre1step.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/EBL01/pre1step.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/EBL01/preMulti.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/EBL01/preMulti.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/helper/TimelineManager.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/helper/TimelineManager.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,7 +63,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="js.last.introduce.type" value="CONST" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/Frames" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/Frames/Instructions" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -84,11 +79,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="G:\OneDrive_Marienschule\Marienschule Krefeld\Programmprojekte - Dokumente\react\bipsy\ebl\src\Frames\Instructions" />
       <recent name="G:\OneDrive_Marienschule\Marienschule Krefeld\Programmprojekte - Dokumente\react\bipsy\ebl\src\Frames" />
       <recent name="G:\OneDrive_Marienschule\Marienschule Krefeld\Programmprojekte - Dokumente\react\bipsy\ebl\src\Components" />
       <recent name="G:\OneDrive_Marienschule\Marienschule Krefeld\Programmprojekte - Dokumente\react\bipsy\ebl\src\assets\EBL_01" />
       <recent name="G:\OneDrive_Marienschule\Marienschule Krefeld\Programmprojekte - Dokumente\react\bipsy\ebl\src\Frames\EBL" />
-      <recent name="G:\OneDrive_Marienschule\Marienschule Krefeld\Programmprojekte - Dokumente\react\bipsy\ebl\src\Frames\Instructions" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="G:\OneDrive_Marienschule\Marienschule Krefeld\Programmprojekte - Dokumente\react\bipsy\ebl\src" />
@@ -286,14 +281,13 @@
       <workItem from="1617303671433" duration="1019000" />
       <workItem from="1617350482121" duration="5261000" />
       <workItem from="1617383617587" duration="3270000" />
-      <workItem from="1617389570901" duration="4082000" />
-    </task>
-    <task id="LOCAL-00004" summary="get URL-Parameters">
-      <created>1609090303015</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1609090303015</updated>
+      <workItem from="1617389570901" duration="4160000" />
+      <workItem from="1617528994352" duration="1751000" />
+      <workItem from="1617544503659" duration="160000" />
+      <workItem from="1617544672657" duration="2308000" />
+      <workItem from="1617554229465" duration="156000" />
+      <workItem from="1617554421379" duration="130000" />
+      <workItem from="1617554870988" duration="1624000" />
     </task>
     <task id="LOCAL-00005" summary="rename App to Sesion">
       <created>1609090871127</created>
@@ -631,7 +625,14 @@
       <option name="project" value="LOCAL" />
       <updated>1617355903787</updated>
     </task>
-    <option name="localTasksCounter" value="53" />
+    <task id="LOCAL-00053" summary="evalValidator eingeführt und benutzt&#10;--&gt; Eingaben werden als expression ausgewertet und mit der richtigen Lösung verglichen.">
+      <created>1617393741678</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1617393741679</updated>
+    </task>
+    <option name="localTasksCounter" value="54" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -666,7 +667,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="Radiofragen zu Formeln hinzugefügt" />
     <MESSAGE value="Weiter-Button ohne weitere Eingabe hinzugefügt (b)&#10;&#10;Test-Example-Konfiguration eingefügt" />
     <MESSAGE value="Introduction zu MathCourse umbenannt und umstrukturiert" />
     <MESSAGE value="PrePostTest-File erstellt&#10;preTest und postTest aud Builder extrahiert" />
@@ -691,7 +691,8 @@
     <MESSAGE value="Validierung der MC-Fragen in Daten" />
     <MESSAGE value="bugfixes&#10;&#10;-Gruppenzuteilung war falsch&#10;-cursor in Likertframe&#10;-Zeitformat" />
     <MESSAGE value="diverse kleine Änderungen im Text" />
-    <option name="LAST_COMMIT_MESSAGE" value="diverse kleine Änderungen im Text" />
+    <MESSAGE value="evalValidator eingeführt und benutzt&#10;--&gt; Eingaben werden als expression ausgewertet und mit der richtigen Lösung verglichen." />
+    <option name="LAST_COMMIT_MESSAGE" value="evalValidator eingeführt und benutzt&#10;--&gt; Eingaben werden als expression ausgewertet und mit der richtigen Lösung verglichen." />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
 </project>
