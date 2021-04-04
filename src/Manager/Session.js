@@ -131,7 +131,7 @@ export function Session(props) {
   function next(newIndex, logData) {
     const endTime=new Date();
     const endTimeString = endTime.toLocaleString('de');
-    if (!el.noLog) {
+    if (!el.noLog && !logData.nolog) {
       data.current.push(
         {
           index: index,

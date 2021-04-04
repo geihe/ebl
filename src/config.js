@@ -8,6 +8,7 @@ export const config = {
   timeBetweenSessionsInSeconds: 5 * 60,
   pauseSeconds: 600,
   timeForExamples: 300,
+  vph: 2,
 
   instructions: {
     delay: 3000,

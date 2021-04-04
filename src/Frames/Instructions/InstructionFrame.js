@@ -59,7 +59,7 @@ export function InstructionFrame02(props) {
 export function InstructionFrame03(props) {
   const html = `
 <p><strong>Schön, dass du dabei bist!</strong></p>
-<p>Durch deine Teilnahme erwirbst du nicht nur neues Wissen, sondern erhältst auch einen Einblick in die aktuelle Forschung zu Lehren und Lernen. Zudem erhältst du für deine Teilnahme bei Bedarf 2 Versuchspersonenstunden für dein Psychologiestudium.</p>
+<p>Durch deine Teilnahme erwirbst du nicht nur neues Wissen, sondern erhältst auch einen Einblick in die aktuelle Forschung zu Lehren und Lernen. Zudem erhältst du für deine Teilnahme bei Bedarf ${config.vph} Versuchspersonenstunden für dein Psychologiestudium.</p>
   <p><strong>Navigiere während des Experiments bitte nicht im Browser mit den Vor- oder Zurückbuttons deines Browsers.</strong> Du wirst durch das Experiment geleitet. An einigen Stellen kann es einen kurzen Moment dauern, bis die nächste Ansicht zu sehen ist.</p>
   <p>Manchmal kann es vorkommen, dass das Laden von neuen Seiten einige Sekunden dauert. Warte bitte immer ab, bis du die nächste Seite siehst und klicke währenddessen nicht mit der Maus!</p>
   `;
@@ -160,7 +160,7 @@ export function InstructionFrame12(props) {
     <li>Ich habe verstanden, dass ich die Studie jederzeit ohne eine Angabe von Gründen abbrechen kann, ohne dass mir persönliche Nachteile hieraus entstehen. </li>
     <li>Ich habe verstanden, dass nach Abschluss der Datenerhebung prinzipiell keine Zuordnung zwischen den Daten im Datensatz und meinen personenbezogenen Daten (Name, Mailadresse) möglich ist und somit der von mir produzierte Datensatz nicht gezielt gelöscht werden kann. </li>
     <li>Ich bin mit der angegebenen Art der sachgemäßen Verarbeitung, Speicherung und Weitergabe meiner vollständig anonymisiert erhobenen Daten in dieser Onlinestudie einverstanden. </li>
-    <li>Für die vollständige Teilnahme an dieser Studie erhalten ich 3 Versuchspersonenstunden.</li>
+    <li>Für die vollständige Teilnahme an dieser Studie erhalten ich ${config.vph} Versuchspersonenstunden.</li>
 </ul>
   `;
 
@@ -196,7 +196,7 @@ export function InstructionFrame14(props) {
 
 export function InstructionFrame09_IIalt(props) {
   const html = `
-  <p>Durch deine Teilnahme erwirbst du nicht nur neues Wissen, sondern erhältst auch einen Einblick in die aktuelle Forschung. Außerdem erhältst du für deine Teilnahme bei Bedarf 3 Versuchspersonenstunden für dein Psychologiestudium.</p>
+  <p>Durch deine Teilnahme erwirbst du nicht nur neues Wissen, sondern erhältst auch einen Einblick in die aktuelle Forschung. Außerdem erhältst du für deine Teilnahme bei Bedarf ${config.vph} Versuchspersonenstunden für dein Psychologiestudium.</p>
   <p>Durch deine Teilnahme unterstützt du den Informationsgewinn zu Prozessen beim Lernen und somit die Erweiterung des bisherigen Kenntnisstands der Forschung. Deine Teilnahme ist mit keinerlei Risiken für dich verbunden. Sie erfolgt anonym. Ein Rückschluss von den erhobenen Daten auf deine Person ist nicht möglich. Die Daten werden selbstverständlich vertraulich behandelt und ausschließlich für den angegebenen Forschungszweck verwendet. Durch Beenden der Teilnahme hast du bis zum Ende der Sitzung die Möglichkeit, der Speicherung der Daten nicht zuzustimmen. </p>
   `;
 
