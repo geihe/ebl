@@ -1,14 +1,13 @@
-import React, {useContext} from 'react';
+import React from 'react';
 import * as Yup from 'yup';
 import {MyRadioGroup} from "../../Forms/MyRadioGroup";
-import {LngContext} from "../../helper/i18n";
 import {Form} from "../../Forms/Form";
 import {MySelect} from "../../Forms/MySelect";
 import {UniBielefeld} from "../../MicroComponents/UniBielefeld";
 
 export function EBL01_Demographics(props) {
-  const t = useContext(LngContext);
   const initial = {degree: '', age: '', gender: '', nativeLanguage: ''};
+  // eslint-disable-next-line no-unused-vars
   let data=initial;
   const validationSchema = Yup.object().shape({
     degree: Yup.string()

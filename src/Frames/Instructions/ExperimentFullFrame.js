@@ -1,11 +1,8 @@
-import React, {useContext} from 'react';
-import {LngContext} from "../../helper/i18n";
+import React from 'react';
 import {DelayedFrame} from "../DelayedFrame";
 
 
 export function ExperimentFullFrame(props) {
-  const t = useContext(LngContext);
-
   return (
     <DelayedFrame noResponse>
       <h1>Das Experiment ist beendet.</h1>

@@ -1,10 +1,8 @@
-import React, {useContext} from 'react';
-import {LngContext} from "../helper/i18n";
+import React from 'react';
 import {DelayedFrame} from "./DelayedFrame";
 
 
 export function CancelFrame(props) {
-  const t = useContext(LngContext);
 
   return (
     <DelayedFrame noResponse>

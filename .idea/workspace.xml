@@ -4,16 +4,20 @@
     <option name="SCOPE_TYPE" value="3" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c0a8d840-d2a4-41a1-9e79-f574c09cafbd" name="Default Changelist" comment="Meldung, wenn Experiment voll ist.">
+    <list default="true" id="c0a8d840-d2a4-41a1-9e79-f574c09cafbd" name="Default Changelist" comment="effort für pre- und posttest-elemente gesetzt und benutzt">
       <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Manager/EBL01Builder.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Manager/EBL01Builder.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/YesNoSure.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/YesNoSure.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Frames/CancelFrame.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frames/CancelFrame.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Frames/Instructions/EBL01_Demographics.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frames/Instructions/EBL01_Demographics.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Frames/Instructions/ExperimentFullFrame.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frames/Instructions/ExperimentFullFrame.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Manager/EBL01_RessourcePrePostTestManager.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Manager/EBL01_RessourcePrePostTestManager.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/EBL01/posFreeForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/EBL01/posFreeForm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/EBL01/postFT2step.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/EBL01/postFT2step.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MicroComponents/SessionFinished.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/MicroComponents/SessionFinished.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/EBL01/EBL01_PrePostTest.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/EBL01/EBL01_PrePostTest.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/assets/EBL01/postMC.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/EBL01/postMC.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/EBL01/postNT.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/EBL01/postNT.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/EBL01/pre1step.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/EBL01/pre1step.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/css/EBLFrame.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/css/EBLFrame.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/helper/evalValidate.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/helper/evalValidate.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,7 +80,7 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="editing.templates" />
+    <property name="settings.editor.selected.configurable" value="Errors" />
     <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2019.3.1\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -290,14 +294,8 @@
       <workItem from="1617544672657" duration="2308000" />
       <workItem from="1617554229465" duration="156000" />
       <workItem from="1617554421379" duration="130000" />
-      <workItem from="1617554870988" duration="3155000" />
-    </task>
-    <task id="LOCAL-00006" summary="data[0]:&#10;{&#10;    version: &#10;    finished: &#10;    language: &#10;    session: &#10;    user_id: &#10;    group_id: &#10;  }">
-      <created>1609147285863</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1609147285863</updated>
+      <workItem from="1617554870988" duration="7463000" />
+      <workItem from="1617636285293" duration="611000" />
     </task>
     <task id="LOCAL-00007" summary="use initalData.language&#10;possibility to send language from server">
       <created>1609147560285</created>
@@ -635,7 +633,14 @@
       <option name="project" value="LOCAL" />
       <updated>1617556769280</updated>
     </task>
-    <option name="localTasksCounter" value="55" />
+    <task id="LOCAL-00055" summary="effort für pre- und posttest-elemente gesetzt und benutzt">
+      <created>1617558271036</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1617558271036</updated>
+    </task>
+    <option name="localTasksCounter" value="56" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -670,7 +675,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="Introduction zu MathCourse umbenannt und umstrukturiert" />
     <MESSAGE value="PrePostTest-File erstellt&#10;preTest und postTest aud Builder extrahiert" />
     <MESSAGE value="EBL01_ExampleFrames-File erstellt&#10;und in Builder umstrukturiert" />
     <MESSAGE value="Einheitliche css-Datei für Instructions und MathCourse&#10;--&gt; in DelayedSpaceFrame eingebettet" />
@@ -695,7 +699,8 @@
     <MESSAGE value="diverse kleine Änderungen im Text" />
     <MESSAGE value="evalValidator eingeführt und benutzt&#10;--&gt; Eingaben werden als expression ausgewertet und mit der richtigen Lösung verglichen." />
     <MESSAGE value="Meldung, wenn Experiment voll ist." />
-    <option name="LAST_COMMIT_MESSAGE" value="Meldung, wenn Experiment voll ist." />
+    <MESSAGE value="effort für pre- und posttest-elemente gesetzt und benutzt" />
+    <option name="LAST_COMMIT_MESSAGE" value="effort für pre- und posttest-elemente gesetzt und benutzt" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
 </project>

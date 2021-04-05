@@ -39,19 +39,20 @@ export class EBL01_RessourcePrePostTestManager {
           <ResponseRadioButtons
             options={rawItem.options}
             autoContinue={config.radioAutoContinue}
-            delay={config.radioDelay}/>;
+            delay={config.radioDelay}
+            key={'radio'}/>;
         break;
       case 'textArea':
         responseInput =
-          <ResponseTextArea minLength={config.textAreaMinLength}/>;
+          <ResponseTextArea minLength={config.textAreaMinLength} key={'textArea'}/>;
         break;
       case 'yesNoSure':
         responseInput =
-          <YesNoSure config={config}/>
+          <YesNoSure config={config} key={'yesNoSure'}/>
         break;
       default:
         responseInput =
-          <ResponseInput minLength={config.inputMinLength}/>;
+          <ResponseInput minLength={config.inputMinLength} key={'input'}/>;
     }
     return {...rawItem, responseElement: responseInput};
   }
@@ -71,20 +72,20 @@ export class EBL01_RessourcePrePostTestManager {
     const effort = item.effort || 1;
     return {
       effort,
-    frame: <StimulusResponseFrame
-      key={item.id}
-      id={item.id}
-      stimulus={{
-        data: item.id,
-        element: <div className={styles.stimulus}> {stimulusWithKeys} </div>
-      }}
-      responseInput={item.responseElement}
-      validator={item.validate}
-      showFeedback={config.showFeedback}
-      repeatOnWrong={config.repeatOnWrong}
-      hideStimulusOnResponse={config.hideStimulusOnResponse}
-    />
-  }
+      frame: <StimulusResponseFrame
+        key={item.id}
+        id={item.id}
+        stimulus={{
+          data: item.id,
+          element: <div className={styles.stimulus} key={item.id}> {stimulusWithKeys} </div>
+        }}
+        responseInput={item.responseElement}
+        validator={item.validate}
+        showFeedback={config.showFeedback}
+        repeatOnWrong={config.repeatOnWrong}
+        hideStimulusOnResponse={config.hideStimulusOnResponse}
+      />
+    }
   }
 
   static flatArrayWithComponents(...params) { //TODO kommt zweimal vor (siehe ElementsKeyFrame)

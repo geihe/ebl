@@ -9,7 +9,7 @@ import {Radio, RadioGroup} from "@blueprintjs/core";
 import {Zone} from "../MicroComponents/Zone";
 
 export function YesNoSure(props) {
-  const {callback, config, delay = 500} = props;
+  const {callback, delay = 500} = props;
   const t = useContext(LngContext);
   const [values, setValues] = useStateDelayed({answer: null, rating: null})
   const options = [{value: 'richtig', label: 'Richtig'}, {value: 'falsch', label: 'Falsch'}];
@@ -32,16 +32,16 @@ export function YesNoSure(props) {
         </RadioGroup>
       </div>
       <Zone show={!!values.answer} animate={'0.1s'}>
-        <h3>Wie sicher bist du bei deiner Antwort?</h3>
+        <h3>{t('Wie sicher bist du bei deiner Antwort?')}</h3>
         <div className={likertStyles.likert}>
-          <div className={likertStyles.mintext}>sehr unsicher</div>
+          <div className={likertStyles.mintext}>{t('sehr unsicher')}</div>
           <Likert
             callback={(rating) => setValues({...values, rating: rating})}
 
             options={[1, 2, 3, 4, 5]}
             rating={values.rating}
           />
-          <div className={likertStyles.maxtext}>sehr sicher</div>
+          <div className={likertStyles.maxtext}>{t('sehr sicher')}</div>
         </div>
       </Zone>
     </FlexZone>
