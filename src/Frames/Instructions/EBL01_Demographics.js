@@ -6,7 +6,7 @@ import {MySelect} from "../../Forms/MySelect";
 import {UniBielefeld} from "../../MicroComponents/UniBielefeld";
 
 export function EBL01_Demographics(props) {
-  const initial = {degree: '', age: '', gender: '', nativeLanguage: ''};
+  const initial = {degree: '', subject: "", age: '', gender: '', nativeLanguage: ''};
   // eslint-disable-next-line no-unused-vars
   let data=initial;
   const validationSchema = Yup.object().shape({
@@ -15,12 +15,14 @@ export function EBL01_Demographics(props) {
     age: Yup.number()
       .min(18, {en: 'You have to be at least 18 years old', de: 'Sie müssen mindestens 18 Jahr alt sein'})
       .max(100, {en: 'Are your really that old?', de: 'Sind Sie wirklich so alt?'})
-      .typeError({en: 'Please enter your age', de: 'Bitte geben Sie Ihr Alter ein'})
+      .typeError({en: 'Please enter your age', de: 'Bitte gib dein Alter ein'})
       .round('floor'),
     nativeLanguage: Yup.string()
-      .required({en: 'Please enter your gender', de: 'Bitte geben Sie Ihr Geschlecht ein'}),
+      .required({en: 'Please enter your gender', de: 'Bitte gebe ein Geschlecht an'}),
     gender: Yup.string()
-      .required({en: 'Please enter your native language', de: 'Bitte geben Sie Ihre Muttersprache ein'}),
+      .required({en: 'Please enter your native language', de: 'Bitte gib deine Muttersprache ein'}),
+    subject: Yup.string()
+      .required('Bitte klicke die Angabe zum Studium an'),
   });
 
   return (<>
@@ -45,7 +47,7 @@ export function EBL01_Demographics(props) {
           ]}
         />
         <MySelect
-          name={'fach'}
+          name={'subject'}
           label={'Studium'}
           options={[
             {label: 'Bitte wähle die passendste Option:', value: ''},
@@ -82,9 +84,8 @@ export function EBL01_Demographics(props) {
 
         <MyRadioGroup
           name={'nativeLanguage'}
-          label={'Muttersprache'}
+          label={'Muttersprache: Bitte wähle die passendste Option'}
           options={[
-            {label: 'Bitte wähle die passendste Option', value: ''},
             {label: 'Deutsch', value: 'Deutsch'},
             {label: 'Deutsch und weiter(e) Sprache(n) (multilingual)', value: 'multilingual'},
             {label: 'andere', value: 30},

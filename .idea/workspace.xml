@@ -4,10 +4,11 @@
     <option name="SCOPE_TYPE" value="3" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c0a8d840-d2a4-41a1-9e79-f574c09cafbd" name="Default Changelist" comment="Mc-Fragen angepasst, damit stets Anzahl der Ereignispfade und Änderung der Ergebnisanzahl geprüft wird">
+    <list default="true" id="c0a8d840-d2a4-41a1-9e79-f574c09cafbd" name="Default Changelist" comment="Tippfehler in Datenschutzerklärung korrigiert">
       <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Frames/Instructions/InstructionFrame.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frames/Instructions/InstructionFrame.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Frames/Instructions/EBL01_Demographics.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frames/Instructions/EBL01_Demographics.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Manager/EBL01Builder.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Manager/EBL01Builder.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -295,14 +296,7 @@
       <workItem from="1619190577465" duration="2934000" />
       <workItem from="1619366828882" duration="1282000" />
       <workItem from="1619802412807" duration="3711000" />
-      <workItem from="1619852875639" duration="2690000" />
-    </task>
-    <task id="LOCAL-00010" summary="timeBetweenSessionsInSeconds &#10;in config-File ergänzt">
-      <created>1609171711047</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1609171711047</updated>
+      <workItem from="1619852875639" duration="3296000" />
     </task>
     <task id="LOCAL-00011" summary="Session-Verwaltung mit local-Storage erstellt">
       <created>1609320785685</created>
@@ -640,7 +634,14 @@
       <option name="project" value="LOCAL" />
       <updated>1619855720276</updated>
     </task>
-    <option name="localTasksCounter" value="59" />
+    <task id="LOCAL-00059" summary="Tippfehler in Datenschutzerklärung korrigiert">
+      <created>1619856949590</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1619856949590</updated>
+    </task>
+    <option name="localTasksCounter" value="60" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -675,7 +676,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="Instruktionen bis 21 vorbereitet" />
     <MESSAGE value="DelayedSpaceFrame und DelayedButtonFrame in&#10;&#10;DelayedFrame&#10;&#10;integriert und Programm angepasst." />
     <MESSAGE value="Demographics ergänzt" />
     <MESSAGE value="Instruktionen 22b I ergänzt" />
@@ -700,7 +700,8 @@
     <MESSAGE value="key in Response-Element&#10;&#10;post-MC-Fragen mit drei Ziehungen ergänzt" />
     <MESSAGE value="Datenschutzerklärung aktualisiert" />
     <MESSAGE value="Mc-Fragen angepasst, damit stets Anzahl der Ereignispfade und Änderung der Ergebnisanzahl geprüft wird" />
-    <option name="LAST_COMMIT_MESSAGE" value="Mc-Fragen angepasst, damit stets Anzahl der Ereignispfade und Änderung der Ergebnisanzahl geprüft wird" />
+    <MESSAGE value="Tippfehler in Datenschutzerklärung korrigiert" />
+    <option name="LAST_COMMIT_MESSAGE" value="Tippfehler in Datenschutzerklärung korrigiert" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
 </project>
