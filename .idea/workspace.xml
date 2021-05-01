@@ -4,19 +4,8 @@
     <option name="SCOPE_TYPE" value="3" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c0a8d840-d2a4-41a1-9e79-f574c09cafbd" name="Default Changelist" comment="key in Response-Element&#10;&#10;post-MC-Fragen mit drei Ziehungen ergänzt">
-      <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Frames/EBL/EBL01_ExampleFrames.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frames/EBL/EBL01_ExampleFrames.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Frames/EBL/EblFrame.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frames/EBL/EblFrame.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Frames/InstructionTest.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frames/InstructionTest.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Frames/Instructions/EBL01_Demographics.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frames/Instructions/EBL01_Demographics.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Frames/Instructions/InstructionFrame.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frames/Instructions/InstructionFrame.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Frames/LikertFrame.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frames/LikertFrame.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Manager/EBL01Builder.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Manager/EBL01Builder.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Manager/Session.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Manager/Session.js" afterDir="false" />
+    <list default="true" id="c0a8d840-d2a4-41a1-9e79-f574c09cafbd" name="Default Changelist" comment="Datenschutzerklärung aktualisiert">
       <change beforePath="$PROJECT_DIR$/src/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/css/SessionFinished.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/css/SessionFinished.module.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -304,14 +293,7 @@
       <workItem from="1619190577465" duration="2934000" />
       <workItem from="1619366828882" duration="1282000" />
       <workItem from="1619802412807" duration="3711000" />
-      <workItem from="1619852875639" duration="863000" />
-    </task>
-    <task id="LOCAL-00008" summary="nextSession als Frame-element angefügt">
-      <created>1609158243408</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1609158243408</updated>
+      <workItem from="1619852875639" duration="1529000" />
     </task>
     <task id="LOCAL-00009" summary="Elemente &#10;&lt;ElementFinished&gt; und&#10;&lt;Pending&gt; erstellt">
       <created>1609170751557</created>
@@ -649,7 +631,14 @@
       <option name="project" value="LOCAL" />
       <updated>1617636993885</updated>
     </task>
-    <option name="localTasksCounter" value="57" />
+    <task id="LOCAL-00057" summary="Datenschutzerklärung aktualisiert">
+      <created>1619855094361</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1619855094361</updated>
+    </task>
+    <option name="localTasksCounter" value="58" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -684,7 +673,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="EBL01_ExampleFrames-File erstellt&#10;und in Builder umstrukturiert" />
     <MESSAGE value="Einheitliche css-Datei für Instructions und MathCourse&#10;--&gt; in DelayedSpaceFrame eingebettet" />
     <MESSAGE value="Instruktionen bis 21 vorbereitet" />
     <MESSAGE value="DelayedSpaceFrame und DelayedButtonFrame in&#10;&#10;DelayedFrame&#10;&#10;integriert und Programm angepasst." />
@@ -709,7 +697,8 @@
     <MESSAGE value="Meldung, wenn Experiment voll ist." />
     <MESSAGE value="effort für pre- und posttest-elemente gesetzt und benutzt" />
     <MESSAGE value="key in Response-Element&#10;&#10;post-MC-Fragen mit drei Ziehungen ergänzt" />
-    <option name="LAST_COMMIT_MESSAGE" value="key in Response-Element&#10;&#10;post-MC-Fragen mit drei Ziehungen ergänzt" />
+    <MESSAGE value="Datenschutzerklärung aktualisiert" />
+    <option name="LAST_COMMIT_MESSAGE" value="Datenschutzerklärung aktualisiert" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
 </project>
