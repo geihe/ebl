@@ -3,6 +3,7 @@ import {Zone} from "../MicroComponents/Zone";
 import {TimeView} from "../MicroComponents/TimeView";
 import {useStateDelayed} from "../Hooks/useStateDelayed";
 import {ProgressBar} from "@blueprintjs/core";
+import {config} from "../config";
 
 
 function Frame(props) {
@@ -95,8 +96,10 @@ export function Session(props) {
         break;
       case 'milestone':
         tempIndex++;
-        localStorage.setItem('data', JSON.stringify(data.current));
-        localStorage.setItem('index', '' + tempIndex);
+        if (config.milestones) {
+          localStorage.setItem('data', JSON.stringify(data.current));
+          localStorage.setItem('index', '' + tempIndex);
+        }
         break;
       case 'nextSession':
         tempIndex = Number.MAX_VALUE;
@@ -129,9 +132,10 @@ export function Session(props) {
   />;
 
   function next(newIndex, logData) {
-    const endTime=new Date();
+    const endTime = new Date();
     const endTimeString = endTime.toLocaleString('de');
-    if (!el.noLog && !logData.nolog) {
+    const noLog = el.noLog || (logData && logData.nolog);
+    if (!noLog) {
       data.current.push(
         {
           index: index,
@@ -139,7 +143,7 @@ export function Session(props) {
           id: el.id,
           startTime: startTimeString,
           endTime: endTimeString,
-          duration: ((endTime - startTime) / 1000).toFixed(1)+'s',
+          duration: ((endTime - startTime) / 1000).toFixed(1) + 's',
           log: logData,
         });
     }

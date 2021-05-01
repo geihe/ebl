@@ -91,7 +91,7 @@ export function InstructionFrame06(props) {
 </p>
 <p><i><b>Pause: </b></i>Du hast 10 Minuten Zeit dich zu entspannen.</p>
 <p><i><b>Anwendungsphase:</b></i>
-Zum Abschluss sollst du die Prinzipien anhand von <strong>22 Testaufgaben</strong> und <strong>16 Verifikationsaufgaben</strong> anwenden. Hierfür ist keinerlei Vorwissen von deiner Seite notwendig – alle Informationen erhältst du ausschließlich in dieser Studie.  
+Zum Abschluss sollst du die Prinzipien anhand von <strong>26 Testaufgaben</strong> und <strong>16 Verifikationsaufgaben</strong> anwenden. Hierfür ist keinerlei Vorwissen von deiner Seite notwendig – alle Informationen erhältst du ausschließlich in dieser Studie.  
 </p>
   `;
 
@@ -110,20 +110,13 @@ export function InstructionFrame07(props) {
 }
 
 export function InstructionFrame09(props) {
-  const html = `
-<h1>Datenschutz</h1>
-  <p>Der Schutz deiner Daten ist für uns besonders wichtig! </p>
-  <ul>
-      <li>Die erhobenen, studienbezogenen Daten werden ausschließlich zu wissenschaftlichen Zwecken verwendet. </li>
-      <li>Bei der Erhebung werden keine Daten gespeichert, die Rückschlüsse auf deine Person zulassen. </li>
-      <li>Alle Daten werden in Deutschland gespeichert und unterliegen somit der Europäischen Datenschutzgrundverordnung.</li>
-      <li>Die erhobenen, studienbezogenen Daten werden im Rahmen wissenschaftlicher Publikationen anonymisiert gespeichert, ausgewertet und weiterverarbeitet – ein Rückschluss auf deine Person ist dabei unter keinen Umständen möglich. </li>
-      <li>Du kannst diese Studie jederzeit ohne eine Angabe von Gründen abbrechen. Dir entstehen daraus keine Nachteile.</li>
-  </ul>
-  <p> Für die sachgemäße Datenverarbeitung verantwortlich ist <a href="mailto: veit.kubik@uni-bielefeld.de">veit.kubik@uni-bielefeld.de</a></p>
-  `;
+  const html = `<h3>Freiwilligkeit</h3> <p>Die Teilnahme an der Studie ist freiwillig. Du kannst jederzeit und ohne Angabe von Gründen die Teilnahme an dieser Studie beenden, ohne dass dir daraus Nachteile entstehen. Auch wenn du die Studie vorzeitig abbrichst hast du Anspruch auf entsprechende Versuchspersonenstunden für den bis dahin erbrachtenZeitaufwand.</p> <h3>Datennutzung</h3> <p>Die Erhebung der Forschungsdaten erfolgt aus Sicht der Forschenden anonym. Durch die Größe der Stichprobe sowie die Abfragekategorien/Auswahlmöglichkeiten/Kohortenbildung der oben genannten Daten, lassen sich die Daten zu keinem Zeitpunkt einer konkreten Person zuordnen. Die im Rahmen dieser Studie erhobenen, werden vertraulich behandelt. Deine Vp-ID wird getrennt von den Forschungsdaten aufbewahrt. Bitte beachte die Datenschutzhinweise der für die Verwaltung der Vp-Stunden genutzten Software.Die Verwaltung der Vp_ID und der Vp-Stunden erfolgt durch die Prüfungsverwaltung in der Fakultät Psychologie und Sportwissenschaften. Die erhobenen Forschungsdaten in aggregierter Form werden z.B. in wissenschaftlichen Zeitschriften, Vorträgen oder Lehrveranstaltungen veröffentlicht.Nach Abschluss der Studie werden die Daten ggf. in einem gesicherten Datenarchiv, wie z.B. dem „Open Science Framework“ öffentlich zugänglich gemacht. Zweck, Art und Umfang der potentiellen Nachnutzung im Rahmen von Open-Data stehen noch nicht fest, aber die Daten werden nur anonymisiert im Rahmen von Open-Science veröffentlicht. Eine Forderung auf Löschung der Daten aus einem anonymisierten Datensatz ist nicht möglich. Mit diesem Vorgehen folgt das Forschungsprojekt den Empfehlungen der Deutschen Forschungsgemeinschaft zur Qualitätssicherung der Forschung.<p>
+<h3>Verantwortliche Stelle für diese Studie</h3>
+Das Forschungsprojekt „Lernerfolg und Metakognition beim Lernen von Studienmaterialien“ wird durchgeführt von der Fakultät für Psychologie und Sportwissenschaft, Abteilung für Psychologie, Arbeitseinheit 13 – Bildungspsychologie, unter der Projektleitung von Dr. Veit Kubik. Kooperationspartner*innen in diesem Projekt ist die Arbeitsgruppe von Dr. Marlit Lindner vom Leibniz-Institut für die Pädagogik der Naturwissenschaften und Mathematik sowie Prof. Dr. Alexander Eitel von der Justus-Liebig-Universität Giessen. Die Studie wird eigenverantwortlich im Rahmen meiner Habilitation durchgeführt.KontaktdatenBei Fragen zur Teilnahme, Freiwilligkeit und Datennutzung melden Sie sich gerne beidem Projektverantwortlichen:  Dr. Veit KubikE-Mail: veit.kubik@uni-bielefeld.deTel.: 0521-106-3100Web.: https://www.uni-bielefeld.de/psychologie/abteilung/arbeitseinheiten/13/personen//kubik.xml
+<h3>Einwilligung</h3>
+<p>Ich habe die Teilnehmerinformation zum Forschungsprojekt „Lernerfolg und Metakognition beim Lernen Studienmaterialien“ zur Kenntnis genommen. Ich bin ausreichend informiert worden und hatte die Möglichkeit vor Weiterführung der Studie per Mail oder telefonisch Fragen zu stellen.Mir ist bewusst, dass meine Teilnahme an der Studie freiwillig ist und ich bei einer Verweigerung meiner Einwilligung für mich keinerlei Nachteile entstehen. Eine Kopie der Informationsschrift und dieser Einwilligungserklärung habe ich heruntergeladen und somit erhalten.</p><p>Wenn du mit unserem Vorhaben einverstanden bist, so klicke bitte auf <i>Einverstanden</i>.Falls nicht, so klicke bitte auf <i>Nicht einverstanden</i>.</p><p>Wir danken dir für deine Mitwirkung und dein Vertrauen.</p>`;
 
-  return <InstructionFrame html={html} space finish={props.finish}/>;
+  return <InstructionFrame html={html}  cancelButton continueButtonText="Einverstanden" cancelButtonText="Nicht einverstanden" finish={props.finish}/>;
 }
 
 export function InstructionFrame10(props) {
@@ -280,7 +273,7 @@ export function InstructionFrame200(props) {
 
 export function InstructionFrame201(props) {
   const html = `
-  <p>Dir werden nun 12 Aufgaben präsentiert. Du sollst die Aufgaben berechnen und die Lösungen in das Notizfeld eintippen. </p>
+  <p>Dir werden nun 16 Aufgaben präsentiert. Du sollst die Aufgaben berechnen und die Lösungen in das Notizfeld eintippen. </p>
   <p>Bitte nutze [/] um Brüche auszudrücken. Bestätige deine Eingabe mit [Enter]. Du wirst dann automatisch zur nächsten Aufgabe weitergeleitet.</p>
   `;
 
@@ -324,11 +317,9 @@ export function InstructionFrame204(props) {
   return <InstructionFrame html={html} space finish={props.finish}/>;
 }
 
-
 export function InstructionFrame206(props) {
   return (
     <>
-      <UniBielefeld/>
       <LikertFrame
         max={9}
         minText={'sehr wenig'} maxText={'sehr viel'}
@@ -340,7 +331,6 @@ export function InstructionFrame206(props) {
 export function InstructionFrame207(props) {
   return (
     <>
-      <UniBielefeld/>
       <LikertFrame
         max={9}
         minText={'sehr schlecht'} maxText={'sehr gut'}
@@ -366,7 +356,6 @@ export function InstructionFrame208(props) {
   ]
 
   return <>
-    <UniBielefeld/>
     <DelayedRadioFrame
     large
     options={options}
@@ -394,7 +383,6 @@ export function InstructionFrame209(props) {
   ]
 
   return <>
-    <UniBielefeld/>
     <DelayedRadioFrame
       large
       options={options}
@@ -422,7 +410,6 @@ export function InstructionFrame210(props) {
   ]
 
   return <>
-    <UniBielefeld/>
     <DelayedRadioFrame
     large
     options={options}
@@ -445,7 +432,6 @@ export function InstructionFrame211a(props) {
   ]
 
   return <>
-    <UniBielefeld/>
     <DelayedRadioFrame
     large
     options={options}

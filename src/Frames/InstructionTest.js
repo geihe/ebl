@@ -10,7 +10,7 @@ const items = [
   'Erklärungen über das Urnenmodell und Stochastik',
   '4 mal 4 Lösungsbeispiele mit Befragung zu kognitiver Belastung und zum Flow-Erleben',
   'Pause (10 Minuten)',
-  'Testaufgaben (22 Aufgaben)',
+  'Testaufgaben (26 Aufgaben)',
   'Verifikationsaufgaben (16 Aufgaben)',
 ];
 

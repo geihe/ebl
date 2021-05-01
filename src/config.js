@@ -1,5 +1,6 @@
 export const config = {
   develop: true,
+  milestones: false,
 
   language: 'de',
   numberOfSessions: 1,
@@ -178,6 +179,10 @@ export const config = {
         'postFT2step_2',
         'postFT2step_3',
         'postFT2step_4',
+        'postMC_1_draw3',
+        'postMC_3_draw3',
+        'postMC_6_draw3',
+        'postMC_7_draw3',
       ],
       //------------------------
       [
@@ -189,7 +194,8 @@ export const config = {
         'postConceptNew_2',
         'postConceptNew_3',
         'postConceptNew_4',
-        'postOpen_1', 'postOpen_2',
+        'postOpen_1',
+        'postOpen_2',
       ],
       //Nun 16 Textaufgaben
       [
@@ -210,12 +216,7 @@ export const config = {
         'lw-rvt7',
         'lw-rvt8',
       ],
-      [
-        'postMC_1_draw3',
-        'postMC_3_draw3',
-        'postMC_6_draw3',
-        'postMC_7_draw3',
-      ]
+
     ],
   },
 

@@ -15,7 +15,13 @@ export function LikertFrame(props) {
 
   function callback(rating) {//TODO get delay from config
     const delay = 500;
-    setRating(() => props.finish(rating), delay);
+    const log = {
+      rating,
+      min,
+      max,
+      percent: (rating-min)/(max-min)*100,
+    }
+    setRating(() => props.finish(log), delay);
     setRating(rating);
   }
 

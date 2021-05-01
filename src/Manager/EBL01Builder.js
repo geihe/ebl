@@ -100,11 +100,12 @@ export class EBL01Builder {
       <InstructionFrame12/>, cancelTest,
       <InstructionFrame13/>, cancelTest,
       <InstructionFrame14/>,
-
+      {type: 'milestone'},
       <InstructionFrame16/>,
       preTest,
       <InstructionFrame17/>,
       ebl01_MathCourse,
+      {type: 'milestone'},
       this.group <= 2 ?
         [<InstructionFrame100_sequenziell_12/>,
           <InstructionFrame101_sequenziell_12/>,] :
@@ -112,13 +113,16 @@ export class EBL01Builder {
           <InstructionFrame101_simultan_34/>,]
       ,
       exampleFrames(this.group),
+      {type: 'milestone'},
       <JolFrame/>,
       <EBLPause/>,
+      {type: 'milestone'},
       <ToDoFrame text={'Nächsten Frame durch Video ersetzen.'}/>,
       <InstructionFrame200/>,
-      <InstructionFrame201/>, postFrames[0],
-      <InstructionFrame202/>, postFrames[1],
-      <InstructionFrame203/>, postFrames[2],
+      <InstructionFrame201/>, postFrames[0], {type: 'milestone'},
+      <InstructionFrame202/>, postFrames[1], {type: 'milestone'},
+      <InstructionFrame203/>, postFrames[2], {type: 'milestone'},
+
       <ToDoFrame text={'Video Debriefing?, '}/>,
       <InstructionFrame204/>,
       <EBL01_Demographics/>,
@@ -146,7 +150,7 @@ export class EBL01Builder {
 
   buildTestSession() {
     this.tlManager.add(
-      postFrames[0],
+      exampleFrames(this.group),
     );
   }
 

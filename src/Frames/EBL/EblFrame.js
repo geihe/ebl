@@ -24,6 +24,7 @@ export function EblFrame(props) {
 
   const textExplanations = content.htmlExplanations.map((explanation, index) =>
     <SingleExplanation
+      id={explanation.id}
       key={index}
       explanation={explanation && explanation.html}
       callback={nextExplanation}
@@ -38,6 +39,7 @@ export function EblFrame(props) {
       callback={nextExplanation}
       active={activeExp === index}
       options={radio.options}
+      id={radio.id}
     />
   )
 
@@ -154,7 +156,7 @@ function SingleExplanation(props) {
 
 function SingleRadios(props) {
   const t = useContext(LngContext);
-  const {callback, options, html, active} = props;
+  const {callback, options, html, active, id} = props;//TODO id benutzen
   const activeClass = active ? ' ' + styles.highlight : '';
   return (
     <div className={styles.singleExplanation + activeClass}>

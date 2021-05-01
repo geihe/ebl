@@ -71,7 +71,9 @@ export function exampleFrames(group) {
         timer: config.timeForExamples,
         frames: itemGroup.map(s =>
           <EblFrame config={exampleConfig} content={rem.string2html(s)}/>)
-      }].concat([cognitiveEffortFrame, processMeasuresIntroduction, processMeasureFrames]);
+          .concat(waitFrame)
+      },
+    ].concat([cognitiveEffortFrame, processMeasuresIntroduction, processMeasureFrames]);
     }
   )
 }

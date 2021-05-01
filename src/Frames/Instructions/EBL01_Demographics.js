@@ -45,6 +45,16 @@ export function EBL01_Demographics(props) {
           ]}
         />
         <MySelect
+          name={'fach'}
+          label={'Studium'}
+          options={[
+            {label: 'Bitte wähle die passendste Option:', value: ''},
+            {label: 'Ich studiere Mathematik oder Physik oder habe früher eines der Fächer studiert..', value: 'mathe'},
+            {label: 'Ich studiere ein anderes Fach als Mathematik oder Physik oder habe früher ein anderes Fach studiert.', value: 'andere'},
+            {label: 'Ich habe nicht studiert.', value: 'kein'},
+          ]}
+        />
+        <MySelect
           name={'age'}
           label={'Alter'}
           options={[
@@ -57,25 +67,20 @@ export function EBL01_Demographics(props) {
             {label: '45-49', value: 45},
             {label: '50-54', value: 50},
             {label: '55-59', value: 55},
-            {label: '60-64', value: 60},
-            {label: '65-69', value: 65},
-            {label: '70-74', value: 70},
-            {label: '75-79', value: 75},
-            {label: '80 oder älter', value: 80},
+            {label: 'über 60', value: 60},
           ]}
         />
 
         <MyRadioGroup
-          name='gender'
+          name={'gender'}
           label={{en: 'Gender', de: 'Geschlecht'}}
           inline={true}
           options={[
             {label: {en: 'male', de: 'männlich'}, value: 'male'},
             {label: {en: 'female', de: 'weiblich'}, value: 'female'},
-            {label: {en: 'other', de: 'divers'}, value: 'other'},
           ]}/>
 
-        <MySelect
+        <MyRadioGroup
           name={'nativeLanguage'}
           label={'Muttersprache'}
           options={[
