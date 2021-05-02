@@ -5,17 +5,17 @@ export const config = {
   language: 'de',
   numberOfSessions: 1,
   timeBetweenSessionsInSeconds: 5 * 60,
-  pauseSeconds: 600,
-  timeForExamples: 300,
+  pauseSeconds: 60, //600
+  timeForExamples: 60, //300
   vph: 2,
 
   instructions: {
-    delay: 3000,
+    delay: 300, //3000
     animation: '0.1s',
   },
 
   mathCourse: {
-    delay: 3000,
+    delay: 300, //3000
     animation: '0.1s',
   },
 

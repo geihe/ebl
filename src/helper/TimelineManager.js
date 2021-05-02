@@ -27,6 +27,7 @@ class TimelineElement {
   }
 
   static convert(el) {
+    console.log(el);
     if (Array.isArray(el)) {
       return new TLarray(el);
     }
@@ -41,7 +42,7 @@ class TimelineElement {
         return new TLrepeat(el);
       }
       if (el.hasOwnProperty('milestone')) {
-        return new TLmilestone(el);
+          return new TLmilestone(el);
       }
       if (el.hasOwnProperty('nextSession')) {
         return new TLNextSession(el);

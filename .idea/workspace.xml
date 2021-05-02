@@ -4,11 +4,14 @@
     <option name="SCOPE_TYPE" value="3" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c0a8d840-d2a4-41a1-9e79-f574c09cafbd" name="Default Changelist" comment="Tippfehler in Datenschutzerklärung korrigiert">
+    <list default="true" id="c0a8d840-d2a4-41a1-9e79-f574c09cafbd" name="Default Changelist" comment="Demographics angepasst">
+      <change afterPath="$PROJECT_DIR$/src/Frames/TriggerFrame.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Frames/Instructions/EBL01_Demographics.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frames/Instructions/EBL01_Demographics.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Hooks/useKeyListenerOnce.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Hooks/useKeyListenerOnce.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Manager/EBL01Builder.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Manager/EBL01Builder.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/helper/TimelineManager.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/helper/TimelineManager.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,7 +39,7 @@
     </option>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="DragnDrop" />
+        <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -61,7 +64,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="js.last.introduce.type" value="CONST" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/Js Spiel" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/Frames/EBL" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -84,11 +87,11 @@
       <recent name="G:\OneDrive_Marienschule\Marienschule Krefeld\Programmprojekte - Dokumente\react\bipsy\ebl\src\Frames\EBL" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="G:\OneDrive_Marienschule\Marienschule Krefeld\Programmprojekte - Dokumente\react\bipsy\ebl\src\Frames" />
       <recent name="G:\OneDrive_Marienschule\Marienschule Krefeld\Programmprojekte - Dokumente\react\bipsy\ebl\src" />
       <recent name="G:\OneDrive_Marienschule\Marienschule Krefeld\Programmprojekte - Dokumente\react\bipsy\ebl\src\Manager" />
       <recent name="G:\OneDrive_Marienschule\Marienschule Krefeld\Programmprojekte - Dokumente\react\bipsy\ebl\src\Frames\Instructions" />
       <recent name="G:\OneDrive_Marienschule\Marienschule Krefeld\Programmprojekte - Dokumente\react\bipsy\ebl\src\Frames\EBL" />
-      <recent name="G:\OneDrive_Marienschule\Marienschule Krefeld\Programmprojekte - Dokumente\react\bipsy\ebl\src\cssModules" />
     </key>
   </component>
   <component name="RestClientSettings">
@@ -296,14 +299,11 @@
       <workItem from="1619190577465" duration="2934000" />
       <workItem from="1619366828882" duration="1282000" />
       <workItem from="1619802412807" duration="3711000" />
-      <workItem from="1619852875639" duration="3296000" />
-    </task>
-    <task id="LOCAL-00011" summary="Session-Verwaltung mit local-Storage erstellt">
-      <created>1609320785685</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1609320785685</updated>
+      <workItem from="1619852875639" duration="5399000" />
+      <workItem from="1619875601650" duration="1873000" />
+      <workItem from="1619891488300" duration="212000" />
+      <workItem from="1619891739779" duration="688000" />
+      <workItem from="1619971849896" duration="1952000" />
     </task>
     <task id="LOCAL-00012" summary="Bei neuem Experiment:&#10;holt session, userId, groupId vom Server">
       <created>1609343718300</created>
@@ -641,7 +641,14 @@
       <option name="project" value="LOCAL" />
       <updated>1619856949590</updated>
     </task>
-    <option name="localTasksCounter" value="60" />
+    <task id="LOCAL-00060" summary="Demographics angepasst">
+      <created>1619857344914</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1619857344914</updated>
+    </task>
+    <option name="localTasksCounter" value="61" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -676,7 +683,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="DelayedSpaceFrame und DelayedButtonFrame in&#10;&#10;DelayedFrame&#10;&#10;integriert und Programm angepasst." />
     <MESSAGE value="Demographics ergänzt" />
     <MESSAGE value="Instruktionen 22b I ergänzt" />
     <MESSAGE value="Layout für bis zu 8 Radiobuttons&#10;Radiobuttons können sich auf einzelne Aufgaben beziehen (bei simultanous)" />
@@ -701,7 +707,8 @@
     <MESSAGE value="Datenschutzerklärung aktualisiert" />
     <MESSAGE value="Mc-Fragen angepasst, damit stets Anzahl der Ereignispfade und Änderung der Ergebnisanzahl geprüft wird" />
     <MESSAGE value="Tippfehler in Datenschutzerklärung korrigiert" />
-    <option name="LAST_COMMIT_MESSAGE" value="Tippfehler in Datenschutzerklärung korrigiert" />
+    <MESSAGE value="Demographics angepasst" />
+    <option name="LAST_COMMIT_MESSAGE" value="Demographics angepasst" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
 </project>
