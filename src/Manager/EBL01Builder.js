@@ -83,9 +83,9 @@ export class EBL01Builder {
       then: <CancelFrame/>,
     };
 
-
     // -->InstructionFrame02
     this.tlManager.add([
+      {milestone: true},
       <InstructionFrame01/>,
       <ToDoFrame text={'Video Einleitung '}/>,
       <InstructionFrame03/>,
@@ -119,9 +119,10 @@ export class EBL01Builder {
       {milestone: true},
       <ToDoFrame text={'Nächsten Frame durch Video ersetzen.'}/>,
       <InstructionFrame200/>,
-      <InstructionFrame201/>, postFrames[0],       {milestone: true},
-      <InstructionFrame202/>, postFrames[1],       {milestone: true},
-      <InstructionFrame203/>, postFrames[2],       {milestone: true},
+      <InstructionFrame201/>, postFrames[0], {milestone: true},
+      <InstructionFrame202/>, postFrames[1], {milestone: true},
+      <InstructionFrame203/>, postFrames[2], {milestone: true},
+
       <ToDoFrame text={'Video Debriefing?, '}/>,
       <InstructionFrame204/>,
       <EBL01_Demographics/>,
@@ -149,7 +150,8 @@ export class EBL01Builder {
 
   buildTestSession() {
     this.tlManager.add(
-      <EBL01_Demographics></EBL01_Demographics>,
+      <InstructionFrame17/>,
+      ebl01_MathCourse,
       exampleFrames(this.group),
     );
   }
