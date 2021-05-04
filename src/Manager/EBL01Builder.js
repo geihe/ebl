@@ -150,8 +150,6 @@ export class EBL01Builder {
 
   buildTestSession() {
     this.tlManager.add(
-      <InstructionFrame17/>,
-      ebl01_MathCourse,
       exampleFrames(this.group),
     );
   }

@@ -9,6 +9,7 @@ import {FixationCrossFrame} from "../FixationCrossFrame";
 import {fssItems} from "../../assets/EBL01/fssItems";
 import {Icon} from "@blueprintjs/core";
 import {EBL01_ExampleManager} from "../../Manager/EBL01_ExampleManager";
+import {EblWaitFrame} from "./EblWaitFrame";
 
 const processMeasuresIntroduction = { //TODO in eigene Datei
   frame: (<DelayedFrame
@@ -59,21 +60,21 @@ const processMeasureFrames = Shuffler.shuffleArray([1, 2, 3, 4, 5, 6, 7, 8, 9, 1
 
 export function exampleFrames(group) {
   const {groups: exampleGroups, ...exampleConfig} = config.examples;
-  const {items: exampleItems, id} = exampleGroups[group-1];
+  const {items: exampleItems, id} = exampleGroups[group - 1];
   const rem = new EBL01_ExampleManager();
   console.log(exampleItems);
   return exampleItems.map(itemGroup => {
-    const waitFrame = <DelayedFrame noResponse>
-      <h1><Icon icon={'time'} iconSize={20}/> Bitte warten</h1>
-      <p>Du hast deine Lernzeit nicht vollständig genutzt. Bitte warte </p>
-    </DelayedFrame>;    //TODO Frame verbessern
-    return [{
-        timer: config.timeForExamples,
-        frames: itemGroup.map(s =>
-          <EblFrame config={exampleConfig} content={rem.string2html(s)}/>)
-          .concat(waitFrame)
-      },
-    ].concat([cognitiveEffortFrame, processMeasuresIntroduction, processMeasureFrames]);
+      const waitFrame = <DelayedFrame noResponse>
+        <h1><Icon icon={'time'} iconSize={20}/> Bitte warten</h1>
+        <p>Du hast deine Lernzeit nicht vollständig genutzt. Bitte warte </p>
+      </DelayedFrame>;    //TODO Frame verbessern
+      return itemGroup.map(s =>
+        <EblWaitFrame
+          config={exampleConfig}
+          content={rem.string2html(s)}
+          seconds={config.timeForExamples/itemGroup.length}
+        />
+      ).concat([cognitiveEffortFrame, processMeasuresIntroduction, processMeasureFrames]);
     }
   )
 }
@@ -84,8 +85,8 @@ export function exampleFramesTest(group) {
   const rem = new EBL01_ExampleManager();
   return exampleItems.map(itemGroup => {
       return itemGroup.map(s =>
-          <EblFrame config={exampleConfig} content={rem.string2html(s)}/>)
-      .concat([cognitiveEffortFrame]);
+        <EblFrame config={exampleConfig} content={rem.string2html(s)}/>)
+        .concat([cognitiveEffortFrame]);
     }
   )
 }
