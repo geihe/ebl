@@ -7,7 +7,7 @@ import {Button} from "@blueprintjs/core";
 
 const items = [
   'Vortest (12 Aufgaben)',
-  'Erklärungen über das Urnenmodell und Stochastik',
+  'Lehrtext: Erklärung über das Urnenmodell und Wahrscheinlichkeitslehre (Stochastik)',
   '4 mal 4 Lösungsbeispiele mit Befragung zu kognitiver Belastung und zum Flow-Erleben',
   'Pause (10 Minuten)',
   'Testaufgaben (26 Aufgaben)',
@@ -114,7 +114,8 @@ export function InstructionTest(props) {
     default:
       return (
         <>
-          <h3>Ziehe mit der Maus die Bausteine des Experiments in die richtige Reihenfolge:</h3>
+          <h1>Verständnisaufgabe zum Ablauf des Lernprogramms</h1>
+          <h3>Ziehe mit der Maus die Phasen des Lernprogramms in die richtige Reihenfolge:</h3>
           <DragDropContext onDragEnd={onDragEnd}>
             <Droppable droppableId="list">
               {provided => (

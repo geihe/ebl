@@ -185,13 +185,8 @@ export function MathCourse07c(props) {
 export function MathCourse08(props) {
   return (
     <div>
-      <h1>Ziele des Lernprogramms</h1>
-      Ziel der Bearbeitung des Lernprogramms ist insbesondere, dass Du…
-      <ol style={{listStyleType: 'lower-latin'}}>
-        <li>…ein grundlegendes Verständnis der vier Typen von mehrstufigen Zufallsexperimenten aufbaust.</li>
-
-        <li>…lernst, wie man Aufgaben zu den vier Typen von mehrstufigen Zufallsexperimenten löst.</li>
-      </ol>
+      <h1>Zweck des Lernprogramms</h1>
+      <p>Zweck des Lernprogramms ist es, dass du ein grundlegende Verständnis von Zufallsexperimenten aufbaust und Aufgaben zu verschiedenen Zufallsexperimenten löst.</p>
     </div>
   );
 }

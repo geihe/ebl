@@ -4,13 +4,16 @@
     <option name="SCOPE_TYPE" value="3" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c0a8d840-d2a4-41a1-9e79-f574c09cafbd" name="Default Changelist" comment="Toast in Waitframe eingebaut">
+    <list default="true" id="c0a8d840-d2a4-41a1-9e79-f574c09cafbd" name="Default Changelist" comment="Toast in Waitframe mit Intent.DANGER&#10;InstructionFrames 12, 13, 14 aus Timeline entfernt&#10;InstructionFrames 102 (Gleich wieder 4 Beispiele) eingebaut">
       <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Frames/EBL/EBL01_ExampleFrames.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frames/EBL/EBL01_ExampleFrames.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Frames/EBL/EblWaitFrame.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frames/EBL/EblWaitFrame.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Frames/InstructionTest.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frames/InstructionTest.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Frames/Instructions/InstructionFrame.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frames/Instructions/InstructionFrame.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Manager/EBL01Builder.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Manager/EBL01Builder.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/EBL01/Ebl01_MathCourse.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/EBL01/Ebl01_MathCourse.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/ressourceLanguage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/ressourceLanguage.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -304,14 +307,7 @@
       <workItem from="1619891739779" duration="688000" />
       <workItem from="1619971849896" duration="1952000" />
       <workItem from="1620044327581" duration="9185000" />
-      <workItem from="1620136704320" duration="6491000" />
-    </task>
-    <task id="LOCAL-00015" summary="added Minicomponent">
-      <created>1609964724752</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1609964724752</updated>
+      <workItem from="1620136704320" duration="10187000" />
     </task>
     <task id="LOCAL-00016" summary="added Frame EBL01Video">
       <created>1609967288051</created>
@@ -649,7 +645,14 @@
       <option name="project" value="LOCAL" />
       <updated>1620142242641</updated>
     </task>
-    <option name="localTasksCounter" value="64" />
+    <task id="LOCAL-00064" summary="Toast in Waitframe mit Intent.DANGER&#10;InstructionFrames 12, 13, 14 aus Timeline entfernt&#10;InstructionFrames 102 (Gleich wieder 4 Beispiele) eingebaut">
+      <created>1620144479639</created>
+      <option name="number" value="00064" />
+      <option name="presentableId" value="LOCAL-00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1620144479639</updated>
+    </task>
+    <option name="localTasksCounter" value="65" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -684,7 +687,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="Merge" />
     <MESSAGE value="Highlighte aktive Beispiele und Erklärungen" />
     <MESSAGE value="Postopen 1, 2&#10;als einzelne StimulusResponse-Elemente" />
     <MESSAGE value="Steuerung über URL eingeführt:&#10;group_id=1,..,4&#10;group_id=0 -&gt; Test&#10;session=99 -&gt; Kurzfassung Beispiele" />
@@ -709,7 +711,8 @@
     <MESSAGE value="Milestone korrigiert, richtig:&#10;{milestone: true}," />
     <MESSAGE value="EBLWaitFrame eingebaut&#10;Zeiten in config.js in Testmodus gesetzt" />
     <MESSAGE value="Toast in Waitframe eingebaut" />
-    <option name="LAST_COMMIT_MESSAGE" value="Toast in Waitframe eingebaut" />
+    <MESSAGE value="Toast in Waitframe mit Intent.DANGER&#10;InstructionFrames 12, 13, 14 aus Timeline entfernt&#10;InstructionFrames 102 (Gleich wieder 4 Beispiele) eingebaut" />
+    <option name="LAST_COMMIT_MESSAGE" value="Toast in Waitframe mit Intent.DANGER&#10;InstructionFrames 12, 13, 14 aus Timeline entfernt&#10;InstructionFrames 102 (Gleich wieder 4 Beispiele) eingebaut" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
 </project>

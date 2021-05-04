@@ -22,7 +22,7 @@ export function EblWaitFrame(props) {
     logData.current.explanations.push(data);
     setActiveExp(activeExp + 1);
     if (activeExp >= explanations.length - 1) {
-      toast.current.show({message: "Bitte warte, bis die Zeit abgelaufen ist.!", intent: Intent.DANGER});
+      toast.current.show({message: "Bitte warte, bis die Zeit abgelaufen ist.!", intent: Intent.PRIMARY});
     }
   }
 

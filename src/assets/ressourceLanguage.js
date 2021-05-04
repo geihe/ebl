@@ -13,8 +13,8 @@ export const phrase = {
   continueButton: {en: 'continue...', de: 'Weiter...'},
   cancelButton: {en: 'stop...', de: 'Abbrechen...'},
   sessionFinishedDu: {
-    en: '<p>Thank you very much for participating in our study.</p> <p>This part of the experiment is finished.</p>',
-    de: '<p>Dieser Teil des Experiments ist beendet.</p> <p>Vielen Dank, dass du an der Studie teilgenommen hast.</p> <p>Du kannst den Browser jetzt schließen.</p>',
+    en: '<p>Thank you very much for participating in our study.</p> <p>The experiment is finished.</p>',
+    de: '<p>Das Experiments ist beendet.</p> <p>Vielen Dank, dass du an der Studie teilgenommen hast.</p> <p>Du kannst den Browser jetzt schließen.</p>',
   },
   sessionFinishedSie: {
     en: 'Thank you very much for participating in our study. This part of the experiment is finished.',

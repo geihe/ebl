@@ -16,8 +16,8 @@ const processMeasuresIntroduction = { //TODO in eigene Datei
     continueText={phrase.continueText}
     delay={1000}
   >
-    <p style={{textAlign: 'center', fontSize: '150%'}}>Wie haben Sie sich beim Lesen der Beispiele gefühlt?</p>
-    <p style={{textAlign: 'center', fontSize: '150%'}}>Bitte beurteilen Sie die folgenden Aussagen auf einer Skala
+    <p style={{textAlign: 'center', fontSize: '150%'}}>Wie hast du dich beim Lesen der Beispiele gefühlt?</p>
+    <p style={{textAlign: 'center', fontSize: '150%'}}>Bitte beurteile die folgenden Aussagen auf einer Skala
       von</p>
     <p style={{textAlign: 'center', fontSize: '150%', color: 'darkred'}}>1 (trifft nicht zu) bis 7 (trifft
       zu)...</p>
@@ -33,7 +33,7 @@ export const cognitiveEffortFrame =
       maxText={{de: 'sehr stark angestrengt', en: 'very high effort'}}
       max={7}
       item={{
-        de: 'Wie stark haben Sie sich bei den letzten vier Beispielen angestrengt, um sie zu verstehen?',
+        de: 'Wie stark hast du dich bei den letzten vier Beispielen angestrengt, um sie zu verstehen?',
         en: 'How much effort did you invest to understand the last four worked examples?'
       }}
       key={'cognitive load'}

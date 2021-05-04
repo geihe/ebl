@@ -43,7 +43,7 @@ export function InstructionFrameTest(props) {
 
 export function InstructionFrame01(props) {
   const html = `
-  <h1>Herzlich willkommen zur Studie </h1><h2>„Gleichzeitiges Lernen von mehreren stochastischen Konzepten“</h2>
+  <h1>Herzlich willkommen zur Studie </h1><h2>„Mit Beispielen Wahrscheinlichkeitsrechnung lernen: Ein Lernprogramm“</h2>
   <p><strong>Hinweis:</strong></p>
   <p>Es folgt nach „Weiter mit der Leertaste“ eine Videoinstruktion.<br/>Schalte bitte deinen Ton an.<br/>Wenn das Video nicht von selbst startet, kannst du es mit der Maus steuern.</p>
   `;
@@ -67,11 +67,11 @@ export function InstructionFrame03(props) {
 
 export function InstructionFrame04(props) {
   const html = `
-  <p>Du bekommst nun zunächst weitere Informationen über den Ablauf des Experiments:</p>
+  <p>Du bekommst nun zunächst weitere Informationen über den Ablauf des Lernprogramms:</p>
 <p>Heute wirst du deine Kenntnisse zur Wahrscheinlichkeitsrechnung auffrischen. </p>
-<p>Auf der nächsten Seite erfährst du, aus welchen Phasen das Experiment besteht.</p>
+<p>Auf der nächsten Seite erfährst du, aus welchen Phasen das Lernprogramm besteht.</p>
   <p><strong>Es ist wichtig, dass du die einzelnen Phasen gut kennst, </strong></p>
-  <p>Nach der folgenden Seite sollst du deshalb eine kleine Aufgabe lösen.</p>
+  <p>Nach der folgenden Seite sollst du deshalb eine kleine Verständnisaufgabe lösen.</p>
   `;
 
   return <InstructionFrame html={html} space finish={props.finish}/>;
@@ -79,6 +79,7 @@ export function InstructionFrame04(props) {
 
 export function InstructionFrame06(props) {
   const html = `
+<h1>Ablauf des Lernprogramms</h1>
 <p><i><b>Vortest:</b></i> in <strong>12 Aufgaben</strong> wird herausgefunden, wie gut du Rechenaufgaben lösen und Wahrscheinlichkeiten bereits bestimmen kannst. </p>
 <p><i><b>Lernphase:</b></i>
 <ul>
@@ -200,14 +201,19 @@ export function InstructionFrame09_IIalt(props) {
 }
 
 
-export function InstructionFrame16(props) {
+export function InstructionFrame16a(props) {
+  const html = `
+<h1>Bitte drücke auf die Leertaste, dann geht es direkt mit dem Vortest los.</h1>
+  `;
+  return <InstructionFrame html={html} space finish={props.finish}/>;
+}
+export function InstructionFrame16b(props) {
   const html = `
   <h1>Vortest</h1>
 <p>Dir werden nun 12 Aufgaben präsentiert. Du sollst die Aufgaben berechnen und die Lösungen in das dir Notizfeld eintippen. </p>
 <p>Bitte nutze [/] um Brüche auszudrücken. Beispiel: Schreibe ein Drittel als <strong>1/3</strong></p>
 <p>Bestätige deine Eingabe mit [Enter]. Du wirst dann automatisch zur nächsten Aufgabe weitergeleitet.</p>
   `;
-
   return <InstructionFrame html={html} space finish={props.finish}/>;
 }
 
@@ -383,16 +389,12 @@ export function InstructionFrame208(props) {
 export function InstructionFrame209(props) {
   const options = [
     {
-      label: 'Nein',
-      value: 'Nein'
+      label: 'Ich habe ernsthaft teilgenommen und die Aufgaben entsprechend bearbeitet',
+      value: 'ernsthaft'
     },
     {
-      label: 'Eine Prüfung',
-      value: '1 Prüfung'
-    },
-    {
-      label: 'Zwei oder mehr Prüfungen',
-      value: '2 oder mehr Prüfungen'
+      label: 'Ich habe nicht ernsthaft teilgenommen und mich (teilweise) unaufmerksam durchgeklickt. ',
+      value: 'nicht'
     },
   ]
 
@@ -400,8 +402,12 @@ export function InstructionFrame209(props) {
     <DelayedRadioFrame
       large
       options={options}
-      label={'Hast du in den letzten sieben Tagen eine schriftliche und/oder mündliche Prüfung absolviert?'}
-      name={'teilgenommen?'}
+      label={`
+      <h1>In welcher Form hast du an der Studie teilgenommen?</h1> 
+      <p>Bitte beantworte diese Frage wahrheitsgemäß, damit möglichst gültige Aussagen über die Forschungsdaten dieser Studie treffen können.</p>
+       <p>Deine Antwort hat keinerlei Auswirkungen für dich bzw. auf die Ausstellung deiner Versuchspersonenstunden. Habe vielen Dank hierfür.</p>
+      `}
+      name={'ernsthaft?'}
       finish={props.finish}
     />
   </>
@@ -483,7 +489,7 @@ export function InstructionFrame212(props) {
     <MyTextArea style={{width: '100%'}}
       large
       name={'feedbackAllgmein'}
-      label={'Möchtest du uns zu dem Experiment noch etwas miteilen? Dann trage es hier ins Textfels ein.:'}
+      label={'Möchtest du uns zu dem Experiment noch etwas miteilen? Dann trage es hier ins Textfeld ein.:'}
     />
     </Form>
   </>
