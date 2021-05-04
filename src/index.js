@@ -60,7 +60,7 @@ function render(element) {
 function finished(data) {
   const {userId, session, groupId, mailId} = data[0];
   server.postData(userId, session, groupId, data, mailId )
-    .then( () => render(<SessionFinished nextSessionStart={data[0].nextSessionStart}/>));
+    .then( () => render(<SessionFinished nextSessionStart={data[0].nextSessionStart}/>)); //TODO hier zurück zu Unipark o.ä.
 }
 
 async function getElementInfo() {
@@ -83,9 +83,12 @@ async function getElementInfo() {
     user_id: params.get('user_id'),
     group_id: params.get('group_id'),
     session: params.get('session'),
-    test: params.get('test')
+    test: params.get('test'),
+    origin: params.get('origin'),
+    tic: params.get('tic'),
   }
-
+  const returnUrl = {unipark: 'https://ww2.unipark.de/uc/M_APLME_Kubik/ea33/ospe.php?return_tic='+URLparams.tic};
+  console.log(URLparams);
   const dataItemsJSON = localStorage.getItem('data');
 
   if (!dataItemsJSON) { //neues Experiment
