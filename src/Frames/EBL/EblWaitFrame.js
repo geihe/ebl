@@ -3,29 +3,26 @@ import {LngContext} from "../../helper/i18n";
 import {Html} from "../../MicroComponents/Html";
 import styles from "../../css/EBLFrame.module.css";
 import {phrase} from "../../assets/ressourceLanguage";
-import {Button, Intent, TextArea} from "@blueprintjs/core";
+import {Button, Intent, Position, TextArea, Toaster} from "@blueprintjs/core";
 import {ResponseRadioButtons} from "../../MicroComponents/ResponseRadioButtons";
 import {useStateDelayed} from "../../Hooks/useStateDelayed";
 import {TimeView} from "../../MicroComponents/TimeView";
 
 export function EblWaitFrame(props) {
-  const {content, config, seconds=60} = props;
+  const {content, config, seconds = 60} = props;
   const t = useContext(LngContext);
   const [activeExp, setActiveExp] = useState(0); // active explanation box
   const logData = useRef({string: content.string, explanations: []});
   const header = content.singleHeader && <Html html={t(content.htmlHeader)}/>;
+  const toast = useRef(null);
   const [timer, setTimer] = useStateDelayed(Math.ceil(seconds));
-  const timeText = useRef('');
-
-  timer >0 ? setTimer(timer - 1, 1000) : setTimer(()=>props.finish(logData.current), 1000);
+  timer > 0 ? setTimer(timer - 1, 1000) : setTimer(() => props.finish(logData.current), 1000);
 
   const nextExplanation = (data) => {
     logData.current.explanations.push(data);
+    setActiveExp(activeExp + 1);
     if (activeExp >= explanations.length - 1) {
-
-      timeText.current = 'Bitte warte, bis die Zeit abglaufen ist.';
-    } else {
-      setActiveExp(activeExp + 1);
+      toast.current.show({message: "Bitte warte, bis die Zeit abgelaufen ist.!", intent: Intent.PRIMARY});
     }
   }
 
@@ -56,8 +53,8 @@ export function EblWaitFrame(props) {
   }
 
 
-  const activeRadioNumbers=content.htmlRadios[activeExp];
-  const activeExplanationNumbers=content.htmlExplanations[activeExp];
+  const activeRadioNumbers = content.htmlRadios[activeExp];
+  const activeExplanationNumbers = content.htmlExplanations[activeExp];
 
   const activeNrs = [];
   if (activeRadioNumbers && activeRadioNumbers.exampleNrs) {
@@ -81,19 +78,19 @@ export function EblWaitFrame(props) {
 
   return (<>
       <div className={styles.header}>
+        <Toaster position={Position.TOP_RIGHT} maxToasts={1} ref={toast}/>
         <TimeView seconds={timer}/>
       </div>
-    <div className={styles.eblFrame}>
-      <div className={styles.exampleContainer}>
-        {timeText.current}
-        <ExHeader header={header}/>
-        <Examples examples={examples}/>
-      </div>
-      <div className={styles.explanations}>
-        {explanations}
-      </div>
+      <div className={styles.eblFrame}>
+        <div className={styles.exampleContainer}>
+          <ExHeader header={header}/>
+          <Examples examples={examples}/>
+        </div>
+        <div className={styles.explanations}>
+          {explanations}
+        </div>
 
-    </div>
+      </div>
     </>
   )
     ;
