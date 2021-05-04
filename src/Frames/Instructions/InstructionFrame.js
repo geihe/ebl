@@ -31,7 +31,6 @@ export function InstructionFrameTest(props) {
   const html = `
 <h1>Wichtiger Hinweis</h1>
   <p>Diese Studie ist Teil eines wissenschaftlichen Projekts, das in Fachzeitschriften der Psychologie veröffentlicht wird. Wir möchten dich bitten, den Test - <strong>ohne Unterbrechung</strong> - bis zum Ende durchzuführen. Bitte stelle sicher, dass du während der Bearbeitung der Aufgaben nicht gestört wirst. Es ist wichtig, dass du die folgenden Vorkehrungen getroffen hast und dein Einverständnis mit einem Klick auf "Einverstanden" bestätigst: </p>
-<ul>
     <li>Ich befinde mich in einem ruhigen Raum. </li>
     <li>Ich habe die nötigen Vorkehrungen getroffen, sodass ich im Verlauf der Studie nicht bei der Aufgabenbearbeitung unterbrochen werde. </li>
     <li>Mein Mobiltelefon liegt außerhalb meiner Reich- und Sichtweite und ist auf stumm gestellt oder ausgeschaltet. </li>
@@ -264,6 +263,17 @@ export function InstructionFrame101_simultan_34(props) {
 
   return <InstructionFrame html={html} space finish={props.finish}/>;
 }
+
+export function InstructionFrame102(props) {
+  const html = `
+<p>Nun wirst erneute 4 Beispielaufgabe erhalten.</p> 
+<p>Drück auf die Leertaste, wenn du bereit bist</p>
+  `;
+
+  return <InstructionFrame html={html} space finish={props.finish}/>;
+}
+
+
 
 export function InstructionFrame200(props) {
   const html = `

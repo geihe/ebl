@@ -7,9 +7,9 @@ import {phrase} from "../../assets/ressourceLanguage";
 import {Shuffler} from "../../helper/Shuffle";
 import {FixationCrossFrame} from "../FixationCrossFrame";
 import {fssItems} from "../../assets/EBL01/fssItems";
-import {Icon} from "@blueprintjs/core";
 import {EBL01_ExampleManager} from "../../Manager/EBL01_ExampleManager";
 import {EblWaitFrame} from "./EblWaitFrame";
+import {InstructionFrame102} from "../Instructions/InstructionFrame";
 
 const processMeasuresIntroduction = { //TODO in eigene Datei
   frame: (<DelayedFrame
@@ -63,18 +63,20 @@ export function exampleFrames(group) {
   const {items: exampleItems, id} = exampleGroups[group - 1];
   const rem = new EBL01_ExampleManager();
   console.log(exampleItems);
-  return exampleItems.map(itemGroup => {
-      const waitFrame = <DelayedFrame noResponse>
+  return exampleItems.map((itemGroup, index) => {
+/*      const waitFrame = <DelayedFrame noResponse>
         <h1><Icon icon={'time'} iconSize={20}/> Bitte warten</h1>
         <p>Du hast deine Lernzeit nicht vollständig genutzt. Bitte warte </p>
-      </DelayedFrame>;    //TODO Frame verbessern
+      </DelayedFrame>;*/
       return itemGroup.map(s =>
         <EblWaitFrame
           config={exampleConfig}
           content={rem.string2html(s)}
           seconds={config.timeForExamples/itemGroup.length}
         />
-      ).concat([cognitiveEffortFrame, processMeasuresIntroduction, processMeasureFrames]);
+      )
+        .concat([cognitiveEffortFrame, processMeasuresIntroduction, processMeasureFrames])
+        .concat(index<exampleItems.length-1 ? [<InstructionFrame102/>] : []);
     }
   )
 }

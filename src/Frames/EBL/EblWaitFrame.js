@@ -22,7 +22,7 @@ export function EblWaitFrame(props) {
     logData.current.explanations.push(data);
     setActiveExp(activeExp + 1);
     if (activeExp >= explanations.length - 1) {
-      toast.current.show({message: "Bitte warte, bis die Zeit abgelaufen ist.!", intent: Intent.PRIMARY});
+      toast.current.show({message: "Bitte warte, bis die Zeit abgelaufen ist.!", intent: Intent.DANGER});
     }
   }
 
@@ -78,7 +78,7 @@ export function EblWaitFrame(props) {
 
   return (<>
       <div className={styles.header}>
-        <Toaster position={Position.TOP_RIGHT} maxToasts={1} ref={toast}/>
+        <Toaster position={Position.TOP} maxToasts={1} ref={toast}/>
         <TimeView seconds={timer}/>
       </div>
       <div className={styles.eblFrame}>
