@@ -15,6 +15,13 @@ FocusStyleManager.onlyShowFocusOnTabs();
 const server = new Server();
 
 let t;
+let returnUrl;
+function finished(data) {
+  const {userId, session, groupId, mailId} = data[0];
+  server.postData(userId, session, groupId, data, mailId )
+    .then( () => window.location.href = returnUrl); //zurück zu Unipark etc.
+}
+
 getElementInfo().then((info) => {
   console.log(info);
   t = (ressource, param) =>
@@ -45,7 +52,6 @@ getElementInfo().then((info) => {
   render(element);
 });
 
-
 function render(element) {
   ReactDOM.render(
     (
@@ -56,16 +62,10 @@ function render(element) {
     document.getElementById('root')
   )
 }
-
-function finished(data) {
-  const {userId, session, groupId, mailId} = data[0];
-  server.postData(userId, session, groupId, data, mailId )
-    .then( () => render(<SessionFinished nextSessionStart={data[0].nextSessionStart}/>)); //TODO hier zurück zu Unipark o.ä.
-}
-
 async function getElementInfo() {
 //TODO URLParams und localData vergleichen
   const packageJson = require('../package.json');
+
   const initialData = {
     version: packageJson.version,
     finished: false,
@@ -75,7 +75,6 @@ async function getElementInfo() {
     userId: null,
     groupId: null,
   }
-
   const url = new URL(window.location);
   const params = new URLSearchParams(url.search);
   const URLparams = {
@@ -87,8 +86,7 @@ async function getElementInfo() {
     origin: params.get('origin'),
     tic: params.get('tic'),
   }
-  const returnUrl = {unipark: 'https://ww2.unipark.de/uc/M_APLME_Kubik/ea33/ospe.php?return_tic='+URLparams.tic};
-  console.log(URLparams);
+  returnUrl = 'https://ww2.unipark.de/uc/M_APLME_Kubik/ea33/ospe.php?return_tic='+URLparams.tic;
   const dataItemsJSON = localStorage.getItem('data');
 
   if (!dataItemsJSON) { //neues Experiment
@@ -123,7 +121,6 @@ async function getElementInfo() {
   const nextSessionStart = new Date(localData.nextSessionStart);
   let remainingTimeInSeconds = (nextSessionStart - Date.now()) / 1000;
   console.log(nextSessionStart, remainingTimeInSeconds, localData);
-
 
   if (remainingTimeInSeconds < 0) { //starte nächste Session
     console.log("Nächste Session starten");

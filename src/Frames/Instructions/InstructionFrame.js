@@ -484,6 +484,7 @@ export function InstructionFrame212(props) {
   let data=initial;
   const validationSchema = Yup.object();
 
+
   return <>
     <Form initial={initial}  finish={props.finish} validationSchema={validationSchema}>
     <MyTextArea style={{width: '100%'}}
@@ -494,4 +495,3 @@ export function InstructionFrame212(props) {
     </Form>
   </>
 }
-
