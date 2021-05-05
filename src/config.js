@@ -23,8 +23,8 @@ export const config = { //TODO Testzeiten zurücksetzen
     showFeedback: false,
     repeatOnWrong: false,
     hideStimulusOnResponse: true,
-    textAreaMinLength: 7,
-    inputMinLength: 2,
+    textAreaMinLength: 5,
+    inputMinLength: 1,
     radioAutoContinue: true,
     radioDelay: 300, //800
 
@@ -161,8 +161,8 @@ export const config = { //TODO Testzeiten zurücksetzen
     showFeedback: false,
     repeatOnWrong: false,
     hideStimulusOnResponse: true,
-    textAreaMinLength: 7,
-    inputMinLength: 2,
+    textAreaMinLength: 5,
+    inputMinLength: 1,
     radioAutoContinue: true,
     radioDelay: 777,
     items: [

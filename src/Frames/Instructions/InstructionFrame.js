@@ -403,9 +403,9 @@ export function InstructionFrame209(props) {
       large
       options={options}
       label={`
-      <h1>In welcher Form hast du an der Studie teilgenommen?</h1> 
-      <p>Bitte beantworte diese Frage wahrheitsgemäß, damit möglichst gültige Aussagen über die Forschungsdaten dieser Studie treffen können.</p>
-       <p>Deine Antwort hat keinerlei Auswirkungen für dich bzw. auf die Ausstellung deiner Versuchspersonenstunden. Habe vielen Dank hierfür.</p>
+      In welcher Form hast du an der Studie teilgenommen?  
+      Bitte beantworte diese Frage wahrheitsgemäß, damit möglichst gültige Aussagen über die Forschungsdaten dieser Studie treffen können.
+      Deine Antwort hat keinerlei Auswirkungen für dich bzw. auf die Ausstellung deiner Versuchspersonenstunden. Habe vielen Dank hierfür.
       `}
       name={'ernsthaft?'}
       finish={props.finish}

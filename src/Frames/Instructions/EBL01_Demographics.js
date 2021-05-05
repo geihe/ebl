@@ -3,7 +3,6 @@ import * as Yup from 'yup';
 import {MyRadioGroup} from "../../Forms/MyRadioGroup";
 import {Form} from "../../Forms/Form";
 import {MySelect} from "../../Forms/MySelect";
-import {UniBielefeld} from "../../MicroComponents/UniBielefeld";
 
 export function EBL01_Demographics(props) {
   const initial = {degree: '', subject: "", age: '', gender: '', nativeLanguage: ''};
@@ -26,7 +25,6 @@ export function EBL01_Demographics(props) {
   });
 
   return (<>
-      <UniBielefeld/>
       <h1>Bitte beantworte diese Fragen:</h1>
       <Form initial={initial} validationSchema={validationSchema} finish={props.finish}>
         <MySelect

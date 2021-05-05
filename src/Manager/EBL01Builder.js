@@ -146,6 +146,11 @@ export class EBL01Builder {
 
   buildTestSession() {
     this.tlManager.add(
+      <ToDoFrame text={'Nächsten Frame durch Video ersetzen.'}/>,
+      <InstructionFrame200/>,
+      <InstructionFrame201/>, postFrames[0], {milestone: true},
+      <InstructionFrame202/>, postFrames[1], {milestone: true},
+      <InstructionFrame203/>, postFrames[2], {milestone: true},
       exampleFrames(this.group),
     );
   }
