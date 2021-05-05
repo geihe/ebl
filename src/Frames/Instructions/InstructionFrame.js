@@ -272,7 +272,7 @@ export function InstructionFrame101_simultan_34(props) {
 
 export function InstructionFrame102(props) {
   const html = `
-<p>Nun wirst erneute 4 Beispielaufgabe erhalten.</p> 
+<p>Nun wirst du erneut 4 Beispielaufgabe erhalten.</p> 
 <p>Drück auf die Leertaste, wenn du bereit bist</p>
   `;
 

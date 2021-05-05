@@ -55,7 +55,6 @@ function Frame(props) {
         <aside id="right-aside"/>
       </main>
       <footer>
-        {props.tempIndex}
         <Zone style={{width: "50%"}}>
           {progressBar}
         </Zone>

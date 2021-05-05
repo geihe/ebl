@@ -191,7 +191,7 @@ export const selfRadioFunction = (n) => {
 
    return({
      id: n,
-     exampleNrs: [exampleNr],
+     exampleNrs: [exampleNr-1],
      html: htmlObject,
      options: Math.random() <0.5 ? [trueOption, distractorOption] :  [distractorOption, trueOption]
    });
