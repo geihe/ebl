@@ -4,13 +4,27 @@
     <option name="SCOPE_TYPE" value="3" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c0a8d840-d2a4-41a1-9e79-f574c09cafbd" name="Default Changelist" comment="bugfixes&#10;minimale Inputlänge in config.js verringert">
+    <list default="true" id="c0a8d840-d2a4-41a1-9e79-f574c09cafbd" name="Default Changelist" comment="Schriftfarbe in index.css auf ein dunkles Grau gesetzt.">
+      <change afterPath="$PROJECT_DIR$/src/Frames/JolFrames.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Likert.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Likert.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Frames/EBL/EBL01_ExampleFrames.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frames/EBL/EBL01_ExampleFrames.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Frames/EBL/EBLPause.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frames/EBL/EBLPause.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Frames/EBL/EblWaitFrame.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frames/EBL/EblWaitFrame.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Frames/Instructions/InstructionFrame.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frames/Instructions/InstructionFrame.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Frames/JolFrame.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Frames/LikertFrame.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frames/LikertFrame.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Manager/EBL01Builder.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Manager/EBL01Builder.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MicroComponents/ResponseTextArea.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/MicroComponents/ResponseTextArea.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/EBL01/fssItems.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/EBL01/fssItems.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/introduction.mp4" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/introduction.mp4" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/css/DelayedFrame.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/css/DelayedFrame.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/css/EBLFrame.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/css/EBLFrame.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/css/Likert.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/css/Likert.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/css/SessionFinished.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/css/SessionFinished.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/css/StimulusResponseFrame.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/css/StimulusResponseFrame.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/css/shortResponse.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/css/shortResponse.module.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,24 +87,24 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="Errors" />
+    <property name="settings.editor.selected.configurable" value="editing.templates" />
     <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2019.3.1\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="G:\OneDrive_Marienschule\Marienschule Krefeld\Programmprojekte - Dokumente\react\bipsy\ebl\src\Frames\EBL" />
-      <recent name="G:\OneDrive_Marienschule\Marienschule Krefeld\Programmprojekte - Dokumente\react\bipsy\ebl\src\Frames\Instructions" />
       <recent name="G:\OneDrive_Marienschule\Marienschule Krefeld\Programmprojekte - Dokumente\react\bipsy\ebl\src\Frames" />
+      <recent name="G:\OneDrive_Marienschule\Marienschule Krefeld\Programmprojekte - Dokumente\react\bipsy\ebl\src\Frames\Instructions" />
       <recent name="G:\OneDrive_Marienschule\Marienschule Krefeld\Programmprojekte - Dokumente\react\bipsy\ebl\src\Components" />
       <recent name="G:\OneDrive_Marienschule\Marienschule Krefeld\Programmprojekte - Dokumente\react\bipsy\ebl\src\assets\EBL_01" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="G:\OneDrive_Marienschule\Marienschule Krefeld\Programmprojekte - Dokumente\react\bipsy\ebl\src\Frames" />
+      <recent name="G:\OneDrive_Marienschule\Marienschule Krefeld\Programmprojekte - Dokumente\react\bipsy\ebl\src\assets" />
       <recent name="G:\OneDrive_Marienschule\Marienschule Krefeld\Programmprojekte - Dokumente\react\bipsy\ebl\src" />
       <recent name="G:\OneDrive_Marienschule\Marienschule Krefeld\Programmprojekte - Dokumente\react\bipsy\ebl\src\Manager" />
       <recent name="G:\OneDrive_Marienschule\Marienschule Krefeld\Programmprojekte - Dokumente\react\bipsy\ebl\src\Frames\Instructions" />
-      <recent name="G:\OneDrive_Marienschule\Marienschule Krefeld\Programmprojekte - Dokumente\react\bipsy\ebl\src\Frames\EBL" />
     </key>
   </component>
   <component name="RestClientSettings">
@@ -307,14 +321,22 @@
       <workItem from="1620136704320" duration="12193000" />
       <workItem from="1620203603177" duration="2760000" />
       <workItem from="1620234270750" duration="7884000" />
-      <workItem from="1620246719005" duration="861000" />
-    </task>
-    <task id="LOCAL-00020" summary="items analog zu Schalck erstellt&#10;fss-Skala Abfrage nach je 4 Beispielen">
-      <created>1610128318428</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1610128318428</updated>
+      <workItem from="1620246719005" duration="1600000" />
+      <workItem from="1620404478449" duration="3743000" />
+      <workItem from="1620459430312" duration="8557000" />
+      <workItem from="1620489898714" duration="1361000" />
+      <workItem from="1620498302881" duration="4326000" />
+      <workItem from="1620539626785" duration="1918000" />
+      <workItem from="1620577369645" duration="316000" />
+      <workItem from="1620656912260" duration="3880000" />
+      <workItem from="1620747643923" duration="598000" />
+      <workItem from="1620821094231" duration="600000" />
+      <workItem from="1620842885452" duration="1448000" />
+      <workItem from="1620896514925" duration="4222000" />
+      <workItem from="1620906018275" duration="1291000" />
+      <workItem from="1620911777000" duration="8536000" />
+      <workItem from="1620933032208" duration="3393000" />
+      <workItem from="1620936472475" duration="1018000" />
     </task>
     <task id="LOCAL-00021" summary="ToDOFrame eingeführt">
       <created>1610569985849</created>
@@ -652,7 +674,14 @@
       <option name="project" value="LOCAL" />
       <updated>1620238319795</updated>
     </task>
-    <option name="localTasksCounter" value="69" />
+    <task id="LOCAL-00069" summary="Schriftfarbe in index.css auf ein dunkles Grau gesetzt.">
+      <created>1620247621859</created>
+      <option name="number" value="00069" />
+      <option name="presentableId" value="LOCAL-00069" />
+      <option name="project" value="LOCAL" />
+      <updated>1620247621860</updated>
+    </task>
+    <option name="localTasksCounter" value="70" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -687,7 +716,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="Frage nach Schwierigkeiten am Ende&#10;&#10;Falls Ja erscheint eigenes Textfeld" />
     <MESSAGE value="Layout für Instruktionen verändert&#10;&#10;MySlider angefangen" />
     <MESSAGE value="Jol eingebaut" />
     <MESSAGE value="bugfix: in EBLFrame logdata enthält Button-Element statt Text&#10;&#10;Overflow aktiviert" />
@@ -712,7 +740,8 @@
     <MESSAGE value="tic und returnURL speichern" />
     <MESSAGE value="Zuordnung Radiobutton - Aufgabe korrigiert&#10;Index aud Footer entfernt" />
     <MESSAGE value="bugfixes&#10;minimale Inputlänge in config.js verringert" />
-    <option name="LAST_COMMIT_MESSAGE" value="bugfixes&#10;minimale Inputlänge in config.js verringert" />
+    <MESSAGE value="Schriftfarbe in index.css auf ein dunkles Grau gesetzt." />
+    <option name="LAST_COMMIT_MESSAGE" value="Schriftfarbe in index.css auf ein dunkles Grau gesetzt." />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
 </project>

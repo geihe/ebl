@@ -11,6 +11,7 @@ import {EBL01_ExampleManager} from "../../Manager/EBL01_ExampleManager";
 import {EblWaitFrame} from "./EblWaitFrame";
 import {InstructionFrame102} from "../Instructions/InstructionFrame";
 
+
 const processMeasuresIntroduction = { //TODO in eigene Datei
   frame: (<DelayedFrame
     continueText={phrase.continueText}
@@ -32,7 +33,7 @@ export const cognitiveEffortFrame =
       minText={{de: 'sehr wenig angestrengt', en: 'very little effort'}}
       maxText={{de: 'sehr stark angestrengt', en: 'very high effort'}}
       max={7}
-      item={{
+      title={{
         de: 'Wie stark hast du dich bei den letzten vier Beispielen angestrengt, um sie zu verstehen?',
         en: 'How much effort did you invest to understand the last four worked examples?'
       }}
@@ -48,9 +49,9 @@ const processMeasureFrames = Shuffler.shuffleArray([1, 2, 3, 4, 5, 6, 7, 8, 9, 1
     },
     {
       frame: <LikertFrame
+        title={'Wie hast du dich beim Lesen der Beispiele gefühlt?<br/><br/>'+fssItems[nr - 1].text.de}
         minText={{de: 'Trifft nicht zu', en: 'not at all'}}
         maxText={{de: 'Trifft zu', en: 'very much'}}
-        item={fssItems[nr - 1].text}
         key={nr}
       />,
       id: fssItems[nr - 1].id
@@ -64,18 +65,16 @@ export function exampleFrames(group) {
   const rem = new EBL01_ExampleManager();
   console.log(exampleItems);
   return exampleItems.map((itemGroup, index) => {
-/*      const waitFrame = <DelayedFrame noResponse>
-        <h1><Icon icon={'time'} iconSize={20}/> Bitte warten</h1>
-        <p>Du hast deine Lernzeit nicht vollständig genutzt. Bitte warte </p>
-      </DelayedFrame>;*/
       return itemGroup.map(s =>
-        <EblWaitFrame
+        [<EblWaitFrame
           config={exampleConfig}
           content={rem.string2html(s)}
           seconds={config.timeForExamples/itemGroup.length}
-        />
+          hurry={config.timeForExamples/itemGroup.length/5}
+        />,
+          <FixationCrossFrame nocross/>]
       )
-        .concat([cognitiveEffortFrame, processMeasuresIntroduction, processMeasureFrames])
+        .concat([cognitiveEffortFrame, processMeasureFrames])
         .concat(index<exampleItems.length-1 ? [<InstructionFrame102/>] : []);
     }
   )

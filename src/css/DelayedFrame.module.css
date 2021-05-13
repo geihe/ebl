@@ -48,6 +48,9 @@
 
 .content div {
     overflow-y: auto;
+    -webkit-overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+
 }
 
 .content svg {

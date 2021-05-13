@@ -12,9 +12,9 @@ import * as Yup from "yup";
 
 
 export function InstructionFrame(props) {
-  const {html, ...restProps} = props;
+  const {html, header=false, ...restProps} = props;
   return (<>
-      <UniBielefeld/>
+      {header ? <UniBielefeld/> : null}
       <DelayedFrame
         {...restProps}
         delay={config.instructions.delay}
@@ -48,7 +48,7 @@ export function InstructionFrame01(props) {
   <p>Es folgt nach „Weiter mit der Leertaste“ eine Videoinstruktion.<br/>Schalte bitte deinen Ton an.<br/>Wenn das Video nicht von selbst startet, kannst du es mit der Maus steuern.</p>
   `;
 
-  return <InstructionFrame html={html} space finish={props.finish}/>;
+  return <InstructionFrame header html={html} space finish={props.finish}/>;
 }
 
 export function InstructionFrame02(props) {
@@ -58,11 +58,11 @@ export function InstructionFrame02(props) {
 export function InstructionFrame03(props) {
   const html = `
 <p><strong>Schön, dass du dabei bist!</strong></p>
-<p>Durch deine Teilnahme erwirbst du nicht nur neues Wissen, sondern erhältst auch einen Einblick in die aktuelle Forschung zu Lehren und Lernen. Zudem erhältst du für deine Teilnahme bei Bedarf ${config.vph} Versuchspersonenstunden für dein Psychologiestudium.</p>
+<p>Durch deine Teilnahme erwirbst du nicht nur neues Wissen, sondern erhältst auch einen Einblick in die aktuelle Forschung, wie man Lehren und Lernen verbessern kann. Zudem erhältst du für deine Teilnahme bei Bedarf ${config.vph} Versuchspersonenstunden für dein Psychologiestudium.</p>
   <p><strong>Navigiere während des Experiments bitte nicht im Browser mit den Vor- oder Zurückbuttons deines Browsers.</strong> Du wirst durch das Experiment geleitet. An einigen Stellen kann es einen kurzen Moment dauern, bis die nächste Ansicht zu sehen ist.</p>
   <p>Manchmal kann es vorkommen, dass das Laden von neuen Seiten einige Sekunden dauert. Warte bitte immer ab, bis du die nächste Seite siehst und klicke währenddessen nicht mit der Maus!</p>
   `;
-  return <InstructionFrame html={html} space finish={props.finish}/>;
+  return <InstructionFrame header html={html} space finish={props.finish}/>;
 }
 
 export function InstructionFrame04(props) {
@@ -70,11 +70,11 @@ export function InstructionFrame04(props) {
   <p>Du bekommst nun zunächst weitere Informationen über den Ablauf des Lernprogramms:</p>
 <p>Heute wirst du deine Kenntnisse zur Wahrscheinlichkeitsrechnung auffrischen. </p>
 <p>Auf der nächsten Seite erfährst du, aus welchen Phasen das Lernprogramm besteht.</p>
-  <p><strong>Es ist wichtig, dass du die einzelnen Phasen gut kennst, </strong></p>
+  <p><strong>Es ist wichtig, dass du die einzelnen Phasen gut kennst.</strong></p>
   <p>Nach der folgenden Seite sollst du deshalb eine kleine Verständnisaufgabe lösen.</p>
   `;
 
-  return <InstructionFrame html={html} space finish={props.finish}/>;
+  return <InstructionFrame header html={html} space finish={props.finish}/>;
 }
 
 export function InstructionFrame06(props) {
@@ -94,7 +94,7 @@ Zum Abschluss sollst du die Prinzipien anhand von <strong>26 Testaufgaben</stron
 </p>
   `;
 
-  return <InstructionFrame html={html} space finish={props.finish}/>;
+  return <InstructionFrame header html={html} space finish={props.finish}/>;
 }
 
 export function InstructionFrame07(props) {
@@ -105,13 +105,13 @@ export function InstructionFrame07(props) {
 
   `;
 
-  return <InstructionFrame html={html} space finish={props.finish}/>;
+  return <InstructionFrame header html={html} space finish={props.finish}/>;
 }
 
 export function InstructionFrame09(props) {
-  const html = `<h3>Freiwilligkeit</h3> <p>Die Teilnahme an der Studie ist freiwillig. Du kannst jederzeit und ohne Angabe von Gründen die Teilnahme an dieser Studie beenden, ohne dass dir daraus Nachteile entstehen. Auch wenn du die Studie vorzeitig abbrichst hast du Anspruch auf entsprechende Versuchspersonenstunden für den bis dahin erbrachtenZeitaufwand.</p> <h3>Datennutzung</h3> <p>Die Erhebung der Forschungsdaten erfolgt aus Sicht der Forschenden anonym. Durch die Größe der Stichprobe sowie die Abfragekategorien/Auswahlmöglichkeiten/Kohortenbildung der oben genannten Daten, lassen sich die Daten zu keinem Zeitpunkt einer konkreten Person zuordnen. Die im Rahmen dieser Studie erhobenen, werden vertraulich behandelt. Deine Vp-ID wird getrennt von den Forschungsdaten aufbewahrt. Bitte beachte die Datenschutzhinweise der für die Verwaltung der Vp-Stunden genutzten Software.Die Verwaltung der Vp_ID und der Vp-Stunden erfolgt durch die Prüfungsverwaltung in der Fakultät Psychologie und Sportwissenschaften. Die erhobenen Forschungsdaten in aggregierter Form werden z.B. in wissenschaftlichen Zeitschriften, Vorträgen oder Lehrveranstaltungen veröffentlicht.Nach Abschluss der Studie werden die Daten ggf. in einem gesicherten Datenarchiv, wie z.B. dem „Open Science Framework“ öffentlich zugänglich gemacht. Zweck, Art und Umfang der potentiellen Nachnutzung im Rahmen von Open-Data stehen noch nicht fest, aber die Daten werden nur anonymisiert im Rahmen von Open-Science veröffentlicht. Eine Forderung auf Löschung der Daten aus einem anonymisierten Datensatz ist nicht möglich. Mit diesem Vorgehen folgt das Forschungsprojekt den Empfehlungen der Deutschen Forschungsgemeinschaft zur Qualitätssicherung der Forschung.<p>
+  const html = `<h3>Freiwilligkeit</h3> <p>Die Teilnahme an der Studie ist freiwillig. Du kannst jederzeit und ohne Angabe von Gründen die Teilnahme an dieser Studie beenden, ohne dass dir daraus Nachteile entstehen. Auch wenn du die Studie vorzeitig abbrichst hast du Anspruch auf entsprechende Versuchspersonenstunden für den bis dahin erbrachtenZeitaufwand.</p> <h3>Datennutzung</h3> <p>Die Erhebung der Forschungsdaten erfolgt aus Sicht der Forschenden anonym. Durch die Größe der Stichprobe sowie die Abfragekategorien/Auswahlmöglichkeiten/Kohortenbildung der oben genannten Daten, lassen sich die Daten zu keinem Zeitpunkt einer konkreten Person zuordnen. Die im Rahmen dieser Studie erhobenen, werden vertraulich behandelt. Deine Vp-ID wird getrennt von den Forschungsdaten aufbewahrt. Bitte beachte die Datenschutzhinweise der für die Verwaltung der Vp-Stunden genutzten Software. Die Verwaltung der Vp_ID und der Vp-Stunden erfolgt durch die Prüfungsverwaltung in der Fakultät Psychologie und Sportwissenschaften. Die erhobenen Forschungsdaten in aggregierter Form werden z.B. in wissenschaftlichen Zeitschriften, Vorträgen oder Lehrveranstaltungen veröffentlicht. Nach Abschluss der Studie werden die Daten ggf. in einem gesicherten Datenarchiv, wie z.B. dem „Open Science Framework“ öffentlich zugänglich gemacht. Zweck, Art und Umfang der potentiellen Nachnutzung im Rahmen von Open-Data stehen noch nicht fest, aber die Daten werden nur anonymisiert im Rahmen von Open-Science veröffentlicht. Eine Forderung auf Löschung der Daten aus einem anonymisierten Datensatz ist nicht möglich. Mit diesem Vorgehen folgt das Forschungsprojekt den Empfehlungen der Deutschen Forschungsgemeinschaft zur Qualitätssicherung der Forschung.<p>
 <h3>Verantwortliche Stelle für diese Studie</h3>
-<p>Das Forschungsprojekt „Lernerfolg und Metakognition beim Lernen von Studienmaterialien“ wird durchgeführt von der Fakultät für Psychologie und Sportwissenschaft, Abteilung für Psychologie, Arbeitseinheit 13 – Bildungspsychologie, unter der Projektleitung von Dr. Veit Kubik. Kooperationspartner*innen in diesem Projekt ist die Arbeitsgruppe von Dr. Marlit Lindner vom Leibniz-Institut für die Pädagogik der Naturwissenschaften und Mathematik sowie Prof. Dr. Alexander Eitel von der Justus-Liebig-Universität Giessen. Die Studie wird eigenverantwortlich im Rahmen meiner Habilitation durchgeführt.</p><h3>Kontaktdaten</h3><p>Bei Fragen zur Teilnahme, Freiwilligkeit und Datennutzung melden Sie sich gerne beidem Projektverantwortlichen:  Dr. Veit Kubik</p>
+<p>Das Forschungsprojekt „Lernerfolg und Metakognition beim Lernen von Studienmaterialien“ wird durchgeführt von der Fakultät für Psychologie und Sportwissenschaft, Abteilung für Psychologie, Arbeitseinheit 13 – Bildungspsychologie, unter der Projektleitung von Dr. Veit Kubik. Kooperationspartner*innen in diesem Projekt ist die Arbeitsgruppe von Prof. Dr. Alexander Renkl von der Albert-Ludwigs-Universität Freiburg. Die Studie wird eigenverantwortlich im Rahmen meiner Habilitation durchgeführt. </p><h3>Kontaktdaten</h3><p>Bei Fragen zur Teilnahme, Freiwilligkeit und Datennutzung melden Sie sich gerne beidem Projektverantwortlichen:  Dr. Veit Kubik</p>
 <p>
 E-Mail: <a href= "mailto:veit.kubik@uni-bielefeld.de">veit.kubik@uni-bielefeld.de</a><br/>
 Tel.: 0521-106-3100<br/>
@@ -120,7 +120,7 @@ Web.: <a href="https://www.uni-bielefeld.de/psychologie/abteilung/arbeitseinheit
 <h3>Einwilligung</h3>
 <p>Ich habe die Teilnehmerinformation zum Forschungsprojekt „Lernerfolg und Metakognition beim Lernen Studienmaterialien“ zur Kenntnis genommen. Ich bin ausreichend informiert worden und hatte die Möglichkeit vor Weiterführung der Studie per Mail oder telefonisch Fragen zu stellen.Mir ist bewusst, dass meine Teilnahme an der Studie freiwillig ist und ich bei einer Verweigerung meiner Einwilligung für mich keinerlei Nachteile entstehen. Eine Kopie der Informationsschrift und dieser Einwilligungserklärung habe ich heruntergeladen und somit erhalten.</p><p>Wenn du mit unserem Vorhaben einverstanden bist, so klicke bitte auf <i>Einverstanden</i>.Falls nicht, so klicke bitte auf <i>Nicht einverstanden</i>.</p><p>Wir danken dir für deine Mitwirkung und dein Vertrauen.</p>`;
 
-  return <InstructionFrame html={html}  cancelButton continueButtonText="Einverstanden" cancelButtonText="Nicht einverstanden" finish={props.finish}/>;
+  return <InstructionFrame header html={html}  cancelButton continueButtonText="Einverstanden" cancelButtonText="Nicht einverstanden" finish={props.finish}/>;
 }
 
 export function InstructionFrame10(props) {
@@ -135,7 +135,7 @@ export function InstructionFrame10(props) {
 <p>Mit der konzentrierten Bearbeitung der Aufgaben trägst du dazu bei, die Qualität der Studie und der Ergebnisse zu sichern. Vielen Dank! </p>
   `;
 
-  return <InstructionFrame html={html} cancelButton continueButtonText="Einverstanden" cancelButtonText="Abbrechen" finish={props.finish}/>;
+  return <InstructionFrame header html={html} cancelButton continueButtonText="Einverstanden" cancelButtonText="Abbrechen" finish={props.finish}/>;
 }
 
 export function InstructionFrame11(props) {
@@ -145,7 +145,7 @@ export function InstructionFrame11(props) {
   <p>Falls du im Moment keine störungsfreien Bedingungen vorfindest, so kannst du gerne zu einem anderen, günstigeren Zeitpunkt an dieser Studie teilnehmen. Klicke dafür bitte auf <strong>"Später teilnehmen"</strong>. </p>
   `;
 
-  return <InstructionFrame html={html}  cancelButton continueButtonText="Jetzt teilnehmen" cancelButtonText="Später teilnehmen" finish={props.finish}/>;
+  return <InstructionFrame header html={html}  cancelButton continueButtonText="Jetzt teilnehmen" cancelButtonText="Später teilnehmen" finish={props.finish}/>;
 }
 
 export function InstructionFrame12(props) {
@@ -161,7 +161,7 @@ export function InstructionFrame12(props) {
 </ul>
   `;
 
-  return <InstructionFrame html={html}  cancelButton continueButtonText="Einverstanden" cancelButtonText="Abbrechen"  finish={props.finish}/>;
+  return <InstructionFrame header html={html}  cancelButton continueButtonText="Einverstanden" cancelButtonText="Abbrechen"  finish={props.finish}/>;
 }
 
 export function InstructionFrame13(props) {
@@ -230,9 +230,10 @@ export function InstructionFrame100_sequenziell_12(props) {
   const html = `
   <h1>Aufbau des Lernprogramms I</h1>
   <p>Auf jeder Seite des Lernprogramms wird dir eine Beispielaufgabe präsentiert. Du sollst jede Aufgabe aufmerksam lesen und versuchen, die Lösung nachzuvollziehen. </p>
-  <p>Zudem befinden sich rechts auf jeder Seite des Lernprogramms Multiple-Choice-Fragen. Hier sollst du das deiner Meinung nach zutreffendste auswählen. Du kannst deine Wahl nicht mehr ändern. </p>
+  <p>Zudem befinden sich rechts auf jeder Seite des Lernprogramms Multiple-Choice-Fragen. Hier sollst du die deiner Meinung nach zutreffendste Antwort. Du kannst deine Wahl nicht mehr ändern. </p>
   <p>Du durchläufst vier Durchgänge mit jeweils vier Beispielaufgaben, sodass dir insgesamt 16 Beispielaufgaben präsentiert werden und du 16 Multiple Choice-Fragen beantwortest.</p>
-  <p>Für die Bearbeitung von je vier Beispielaufgaben hast du fünf Minuten Zeit. Die Zeit kannst du frei einteilen, du solltest aber alle Lösungen nachvollzogen und alle Multiple Choice-Fragen beantwortet haben. Nach Ablauf der fünf Minuten wirst du automatisch zur Befragung deines Flow-Erlebens und deiner kognitiven Beanspruchung weitergeleitet und kannst nicht mehr zurückgehen. Ein Timer wird eingeblendet.</p>
+  <p>Für die Bearbeitung von je vier Beispielaufgaben hast du fünf Minuten Zeit. Die Zeit kannst du frei einteilen, du solltest aber alle Texte sorgfältig gelesen und alle Lösungen genau nachvollzogen haben, bevor du die Multiple-Choice Fragen beantwortest. 
+. Nach Ablauf der fünf Minuten wirst du automatisch zur Befragung deines Flow-Erlebens und deiner kognitiven Beanspruchung weitergeleitet und kannst nicht mehr zurückgehen. Ein Timer wird eingeblendet.</p>
   `;
 
   return <InstructionFrame html={html} space finish={props.finish}/>;
@@ -279,6 +280,15 @@ export function InstructionFrame102(props) {
   return <InstructionFrame html={html} space finish={props.finish}/>;
 }
 
+export function InstructionFrame103(props) {
+  const html = `
+<p>Auf den folgenden vier Seiten sollst du einschätzen, wie gut du nun verschiedene Typen von Aufgaben bearbeiten kannst.</p> 
+<p>Drück auf die Leertaste, wenn du bereit bist</p>
+  `;
+
+  return <InstructionFrame html={html} space finish={props.finish}/>;
+}
+
 
 
 export function InstructionFrame200(props) {
@@ -297,15 +307,15 @@ export function InstructionFrame201(props) {
   <p>Bitte nutze [/] um Brüche auszudrücken. Bestätige deine Eingabe mit [Enter]. Du wirst dann automatisch zur nächsten Aufgabe weitergeleitet.</p>
   `;
 
-  return <InstructionFrame html={html} space finish={props.finish}/>;
+  return <InstructionFrame header html={html} space finish={props.finish}/>;
 }
 
 export function InstructionFrame202(props) {
   const html = `
   <p>Vielen Dank für die Berechnung der Aufgaben!</p>
-  <p>Dir werden nun zehn weitere Aufgaben präsentiert. Vier Aufgaben erfordern, dass du aus vier Antwortmöglichkeiten eine Antwort auswählst. Du wirst nach deiner Antwortwahl automatisch zur nächsten Antwort weitergeleitet.</p>
+  <p>Dir werden nun zehn weitere Aufgaben präsentiert. Vier Aufgaben erfordern, dass du eine Antwort aus vier Antwortmöglichkeiten auswählst. Treffe deine Entscheidung überlegt, du kannst dich nicht umentscheiden.</p>
   <p>Sechs weitere Aufgaben sind offene Fragen. Bitte tippe die Antworten mithilfe der Tastatur in das Notizfeld und bestätige deine Eingabe mit [Enter].</p>
-  <p>Lies die Aufgaben aufmerksam durch, überlege genau und entscheide dich dann für eine Antwort. Es ist wichtig, dass du die offenen Fragen <strong>in ganzen Sätzen und so genau wie möglich</strong> beantwortest. Du kannst nicht mehr zurückgehen</p>
+  <p>Lies die Aufgaben aufmerksam durch, überlege genau und entscheide dich dann für eine Antwort. Es ist wichtig, dass du die offenen Fragen <strong>in ganzen Sätzen und so genau wie möglich</strong> beantwortest. Du kannst nicht mehr zurückgehen.</p>
   `;
 
   return <InstructionFrame html={html} space finish={props.finish}/>;
@@ -490,7 +500,7 @@ export function InstructionFrame212(props) {
     <MyTextArea style={{width: '100%'}}
       large
       name={'feedbackAllgmein'}
-      label={'Möchtest du uns zu dem Experiment noch etwas miteilen? Dann trage es hier ins Textfeld ein.:'}
+      label={'Möchtest du uns zu dem Experiment noch etwas miteilen? Dann trage es hier ins Textfeld ein:'}
     />
     </Form>
   </>

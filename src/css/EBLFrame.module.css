@@ -52,6 +52,10 @@
     background-color: #e3e3f3;
 }
 
+.mousePointer {
+    cursor: pointer;
+}
+
 .question {
     font-style: italic;
     margin-top: 3px;

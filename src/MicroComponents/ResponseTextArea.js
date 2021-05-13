@@ -17,6 +17,7 @@ export function ResponseTextArea(props) {
     <div className={styles.textAreaWrapper}>
       <TextArea
         disabled={!active}
+        growVertically={true}
         placeholder={t(phrase.editablePlaceholder)}
         className={styles.textArea}
         onChange={(event) => setText(event.target.value)}

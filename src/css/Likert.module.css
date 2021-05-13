@@ -42,8 +42,13 @@
 }
 
 .titel {
-    font-size: 25px;
-    margin-bottom: 50px;
+    font-size: 20px;
+    background-color: #bbc2d9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+    margin-bottom: 30px;
 }
 
 .likert {

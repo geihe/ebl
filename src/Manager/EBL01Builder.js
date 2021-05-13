@@ -1,7 +1,6 @@
 import React from 'react';
 import {TimelineManager} from "../helper/TimelineManager";
 import {testTimeline} from "../Test/testTimeline";
-import {ToDoFrame} from "../Frames/ToDoFrame";
 import {EBLPause} from "../Frames/EBL/EBLPause";
 import {exampleFrames} from "../Frames/EBL/EBL01_ExampleFrames";
 import {EBL01_Demographics} from "../Frames/Instructions/EBL01_Demographics"
@@ -16,6 +15,7 @@ import {
   InstructionFrame100_simultan_34,
   InstructionFrame101_sequenziell_12,
   InstructionFrame101_simultan_34,
+  InstructionFrame103,
   InstructionFrame11,
   InstructionFrame16a,
   InstructionFrame16b,
@@ -39,7 +39,8 @@ import {FixationCrossFrame} from "../Frames/FixationCrossFrame";
 import {ebl01_MathCourse} from "../assets/EBL01/Ebl01_MathCourse";
 import {InstructionTest} from "../Frames/InstructionTest";
 import {postFrames, preTest} from "../assets/EBL01/EBL01_PrePostTest";
-import {JolFrame} from "../Frames/JolFrame";
+import {EBL01Video} from "../Frames/EBL/EBL01Video";
+import {JolFrame1, JolFrame2, JolFrame3, JolFrame4} from "../Frames/JolFrames";
 
 export class EBL01Builder {
   constructor(t) {
@@ -85,7 +86,7 @@ export class EBL01Builder {
     this.tlManager.add([
       {milestone: true},
       <InstructionFrame01/>,
-      <ToDoFrame text={'Video Einleitung '}/>,
+      <EBL01Video videoID={'introduction'}/>,
       <InstructionFrame03/>,
       {
         repeat: [<InstructionFrame04/>, <InstructionFrame06/>,
@@ -110,16 +111,18 @@ export class EBL01Builder {
       ,
       exampleFrames(this.group),
       {milestone: true},
-      <JolFrame/>,
+      <InstructionFrame103/>,
+      <JolFrame1/>,
+      <JolFrame2/>,
+      <JolFrame3/>,
+      <JolFrame4/>,
       <EBLPause/>,
       {milestone: true},
-      <ToDoFrame text={'Nächsten Frame durch Video ersetzen.'}/>,
       <InstructionFrame200/>,
       <InstructionFrame201/>, postFrames[0], {milestone: true},
       <InstructionFrame202/>, postFrames[1], {milestone: true},
       <InstructionFrame203/>, postFrames[2], {milestone: true},
 
-      <ToDoFrame text={'Video Debriefing?, '}/>,
       <InstructionFrame204/>,
       <EBL01_Demographics/>,
       <InstructionFrame206/>, <FixationCrossFrame nocross/>,
@@ -134,9 +137,7 @@ export class EBL01Builder {
       },
       <FixationCrossFrame nocross/>,
       <InstructionFrame212/>,
-      <ToDoFrame text={'Versuchspersonenbescheinigung '}/>,
-      <ToDoFrame text={'Einverständnis, dass die Daten anonymisiert auf den Server geladen werden '}/>,
-      <ToDoFrame text={'Session-Ende, Code erzeugen, Mailadresse abfragen,  '}/>,
+
     ]);
   }
 
@@ -146,10 +147,12 @@ export class EBL01Builder {
 
   buildTestSession() {
     this.tlManager.add(
-      <InstructionFrame212/>,
-      <ToDoFrame text={'Versuchspersonenbescheinigung '}/>,
-      <ToDoFrame text={'Einverständnis, dass die Daten anonymisiert auf den Server geladen werden '}/>,
-      <ToDoFrame text={'Session-Ende, Code erzeugen, Mailadresse abfragen,  '}/>,
+      <InstructionFrame201/>,
+      <JolFrame1/>, <FixationCrossFrame nocross/>,
+      <JolFrame2/>, <FixationCrossFrame nocross/>,
+      <JolFrame3/>, <FixationCrossFrame nocross/>,
+      <JolFrame4/>, <FixationCrossFrame nocross/>,
+      exampleFrames(this.group),
     );
   }
 

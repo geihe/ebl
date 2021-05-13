@@ -1,29 +1,67 @@
-import React, {useContext, useRef, useState} from "react";
+import React, {useContext, useEffect, useRef, useState} from "react";
 import {LngContext} from "../../helper/i18n";
 import {Html} from "../../MicroComponents/Html";
 import styles from "../../css/EBLFrame.module.css";
 import {phrase} from "../../assets/ressourceLanguage";
-import {Button, Intent, Position, TextArea, Toaster} from "@blueprintjs/core";
+import {Button, Icon, Intent, Position, TextArea, Toaster} from "@blueprintjs/core";
 import {ResponseRadioButtons} from "../../MicroComponents/ResponseRadioButtons";
 import {useStateDelayed} from "../../Hooks/useStateDelayed";
 import {TimeView} from "../../MicroComponents/TimeView";
 
 export function EblWaitFrame(props) {
-  const {content, config, seconds = 60} = props;
+  const {content, config, seconds = 60, hurry = 15} = props;
   const t = useContext(LngContext);
-  const [activeExp, setActiveExp] = useState(0); // active explanation box
+  const [state, setState] = useState({activeExp: 0, waiting: false}); // active explanation box
   const logData = useRef({string: content.string, explanations: []});
   const header = content.singleHeader && <Html html={t(content.htmlHeader)}/>;
   const toast = useRef(null);
+  const toastRight = useRef(null);
   const [timer, setTimer] = useStateDelayed(Math.ceil(seconds));
   timer > 0 ? setTimer(timer - 1, 1000) : setTimer(() => props.finish(logData.current), 1000);
+  useEffect(() => {
+    if (timer === Math.ceil(hurry) && !state.waiting) {
+      toastRight.current.show({
+        message: "Du hast nicht mehr viel Zeit. Bitte beantworte alle Fragen.",
+        intent: Intent.DANGER
+      });
+    }
+  })
+
 
   const nextExplanation = (data) => {
-    logData.current.explanations.push(data);
-    setActiveExp(activeExp + 1);
-    if (activeExp >= explanations.length - 1) {
-      toast.current.show({message: "Bitte warte, bis die Zeit abgelaufen ist.!", intent: Intent.PRIMARY});
+    if (data) {
+      logData.current.explanations.push(data);
     }
+    const lastExpAnswered = !state.waiting && state.activeExp >= explanations.length - 1;
+    if (lastExpAnswered) {
+      toast.current.show({
+        message: "Du hast noch etwas Zeit! Nutze die Zeit aktiv, die Lösungen nachzuvollziehen. Du kannst deine Antworten mit einem Klick öffnen und ändern.",
+        intent: Intent.PRIMARY
+      });
+    }
+    const newStateFunction = (state) => (
+      {
+        activeExp: state.waiting ? -1 : state.activeExp + 1,
+        waiting: state.waiting || lastExpAnswered
+      }
+    );
+
+    setState(s => newStateFunction(s));
+  }
+
+  const onExplClick = (index) => {
+    console.log(index);
+    if (state.waiting) {
+      const newStateFunction = (state) => (
+        {
+          activeExp: index,
+          waiting: state.waiting
+        }
+      );
+
+      setState(s => newStateFunction(s));
+    }
+
   }
 
   const textExplanations = content.htmlExplanations.map((explanation, index) =>
@@ -31,30 +69,33 @@ export function EblWaitFrame(props) {
       id={explanation.id}
       key={index}
       explanation={explanation && explanation.html}
-      callback={nextExplanation}
-      active={activeExp === index}
+      callback={(data) => nextExplanation(data)}
+      active={state.activeExp === index}
       minLength={config.textAreaMinLength}
     />
   );
   const radios = content.htmlRadios.map((radio, index) =>
     <SingleRadios
+      onClick={() => onExplClick(index)}
       key={index}
       html={radio.html}
-      callback={nextExplanation}
-      active={activeExp === index}
+      finish={(data) => nextExplanation(data)}
+      active={state.activeExp === index}
+      waiting={state.waiting}
+      showIcon={state.waiting}
       options={radio.options}
       id={radio.id}
     />
   )
 
   const explanations = [...textExplanations, ...radios,];
+
   if (content.button) {
     explanations.push(<ButtonDiv key={0} callback={props.finish}/>);
   }
 
-
-  const activeRadioNumbers = content.htmlRadios[activeExp];
-  const activeExplanationNumbers = content.htmlExplanations[activeExp];
+  const activeRadioNumbers = content.htmlRadios[state.activeExp];
+  const activeExplanationNumbers = content.htmlExplanations[state.activeExp];
 
   const activeNrs = [];
   if (activeRadioNumbers && activeRadioNumbers.exampleNrs) {
@@ -87,6 +128,7 @@ export function EblWaitFrame(props) {
           <Examples examples={examples}/>
         </div>
         <div className={styles.explanations}>
+          <Toaster position={Position.TOP} maxToasts={1} ref={toastRight}/>
           {explanations}
         </div>
 
@@ -120,6 +162,7 @@ function SingleExample(props) {
   const {example, nr, singleHeader, showCount, active} = props;
 
   const activeClass = active ? ' ' + styles.highlight : '';
+
   return (
     <div className={styles.singleExample + activeClass}>
       <div>
@@ -138,12 +181,13 @@ function SingleExample(props) {
 
 function SingleExplanation(props) {
   const t = useContext(LngContext);
-  const {explanation, callback, active, minLength} = props;
+  const {explanation, callback, active, minLength, icon} = props;
   const [text, setText] = useState('');
-
   const activeClass = active ? ' ' + styles.highlight : '';
+  const waitingClass = true ? ' ' + styles.mousePointer : '';
+
   return (
-    <div className={styles.singleExplanation + activeClass}>
+    <div className={styles.singleExplanation + activeClass + waitingClass}>
       <Html className={styles.explanationHeader} html={t(explanation)}/>
       {active ? <TextArea
         className={styles.editable}
@@ -165,17 +209,22 @@ function SingleExplanation(props) {
 
 function SingleRadios(props) {
   const t = useContext(LngContext);
-  const {callback, options, html, active, id} = props;//TODO id benutzen
+  const {finish, options, html, active, waiting, id, showIcon, onClick} = props;//TODO id benutzen
   const activeClass = active ? ' ' + styles.highlight : '';
+  const waitingClass = waiting ? ' ' + styles.mousePointer : '';
+  const icon = active ? <Icon icon="chevron-down"/>
+    : <Icon icon="chevron-right"/>;
   return (
-    <div className={styles.singleExplanation + activeClass}>
-      <Html
-        className={styles.explanationHeader}
-        style={{marginBottom: '8px'}}
-        html={t(html)}/>
+    <div className={styles.singleExplanation + activeClass + waitingClass} onClick={onClick}>
+      <div style={{display: 'flex'}}>
+        {showIcon ? icon : ''}
+        <Html
+          className={styles.explanationHeader}
+          style={{marginBottom: '8px'}}
+          html={t(html)}/></div>
       {active ? <ResponseRadioButtons
         delay={300}
-        callback={callback}
+        callback={finish}
         options={options}
         autoContinue={true}
       /> : null}
