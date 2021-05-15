@@ -307,7 +307,7 @@ export function InstructionFrame201(props) {
   <p>Bitte nutze [/] um Brüche auszudrücken. Bestätige deine Eingabe mit [Enter]. Du wirst dann automatisch zur nächsten Aufgabe weitergeleitet.</p>
   `;
 
-  return <InstructionFrame header html={html} space finish={props.finish}/>;
+  return <InstructionFrame html={html} space finish={props.finish}/>;
 }
 
 export function InstructionFrame202(props) {
@@ -353,7 +353,7 @@ export function InstructionFrame206(props) {
       <LikertFrame
         max={9}
         minText={'sehr wenig'} maxText={'sehr viel'}
-        item={'In welchem Umfang wurdest du während dieser Studie von deiner Umgebung gestört?'}
+        titel={'In welchem Umfang wurdest du während dieser Studie von deiner Umgebung gestört?'}
         finish={props.finish}/>
     </>)
 }
@@ -364,7 +364,7 @@ export function InstructionFrame207(props) {
       <LikertFrame
         max={9}
         minText={'sehr schlecht'} maxText={'sehr gut'}
-        item={'In welchem Umfang konntest du dich auf die vorgegebenen Lernaufgaben konzentrieren?'}
+        titel={'In welchem Umfang konntest du dich auf die vorgegebenen Lernaufgaben konzentrieren?'}
         finish={props.finish}/>
     </>)
 }

@@ -41,6 +41,7 @@ import {InstructionTest} from "../Frames/InstructionTest";
 import {postFrames, preTest} from "../assets/EBL01/EBL01_PrePostTest";
 import {EBL01Video} from "../Frames/EBL/EBL01Video";
 import {JolFrame1, JolFrame2, JolFrame3, JolFrame4} from "../Frames/JolFrames";
+import {config} from "../config";
 
 export class EBL01Builder {
   constructor(t) {
@@ -116,7 +117,7 @@ export class EBL01Builder {
       <JolFrame2/>,
       <JolFrame3/>,
       <JolFrame4/>,
-      <EBLPause/>,
+      {timer: config.pauseSeconds, frames: [<EBLPause/>]},
       {milestone: true},
       <InstructionFrame200/>,
       <InstructionFrame201/>, postFrames[0], {milestone: true},
@@ -147,11 +148,6 @@ export class EBL01Builder {
 
   buildTestSession() {
     this.tlManager.add(
-      <InstructionFrame201/>,
-      <JolFrame1/>, <FixationCrossFrame nocross/>,
-      <JolFrame2/>, <FixationCrossFrame nocross/>,
-      <JolFrame3/>, <FixationCrossFrame nocross/>,
-      <JolFrame4/>, <FixationCrossFrame nocross/>,
       exampleFrames(this.group),
     );
   }

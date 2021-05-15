@@ -6,19 +6,28 @@ import {Button, Radio, RadioGroup} from "@blueprintjs/core";
 import {useStateDelayed} from "../Hooks/useStateDelayed";
 
 export function ResponseRadioButtons(props) {
-    const {callback, inline, autoContinue = false, delay=500, options = []} = props;
+    const {callback, display, inline, autoContinue = false, delay=500, options = []} = props;
     const [value, setValue] = useStateDelayed(null)
     const t = useContext(LngContext);
+
+
+
+    if (!display) {
+      return null;
+    }
     if (value && autoContinue) {
         setValue(() => callback(options[value]), delay);
     }
-    return (
+
+  const onChange = (event) => setValue(event.currentTarget.value);
+
+  return (
         <div className={styles.radioWrapper}>
             <RadioGroup
                 className={styles.radioGroup}
                 inline={inline}
                 selectedValue={value}
-                onChange={(event) => setValue(event.currentTarget.value)}
+                onChange={onChange}
             >
                 {options.map((o, index) =>
                     <Radio label={o.label} value={String(index)} key={o.value}/>)}
@@ -31,4 +40,5 @@ export function ResponseRadioButtons(props) {
             }
         </div>
     );
+
 }

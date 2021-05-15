@@ -27,11 +27,8 @@ export function EblWaitFrame(props) {
     }
   })
 
-
   const nextExplanation = (data) => {
-    if (data) {
       logData.current.explanations.push(data);
-    }
     const lastExpAnswered = !state.waiting && state.activeExp >= explanations.length - 1;
     if (lastExpAnswered) {
       toast.current.show({
@@ -77,9 +74,9 @@ export function EblWaitFrame(props) {
   const radios = content.htmlRadios.map((radio, index) =>
     <SingleRadios
       onClick={() => onExplClick(index)}
+      finish={(data) => nextExplanation(data)}
       key={index}
       html={radio.html}
-      finish={(data) => nextExplanation(data)}
       active={state.activeExp === index}
       waiting={state.waiting}
       showIcon={state.waiting}
@@ -222,12 +219,13 @@ function SingleRadios(props) {
           className={styles.explanationHeader}
           style={{marginBottom: '8px'}}
           html={t(html)}/></div>
-      {active ? <ResponseRadioButtons
+      {<ResponseRadioButtons
+        display={active}
         delay={300}
         callback={finish}
         options={options}
         autoContinue={true}
-      /> : null}
+      /> }
     </div>
   )
 }

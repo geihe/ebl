@@ -5,17 +5,17 @@ export const config = { //TODO Testzeiten zurücksetzen
   language: 'de',
   numberOfSessions: 1,
   timeBetweenSessionsInSeconds: 5 * 60, //7*60*60*24
-  pauseSeconds: 30, //600
-  timeForExamples: 60, //300
+  pauseSeconds: 600, //600
+  timeForExamples: 300, //300
   vph: 2,
 
   instructions: {
-    delay: 500, //3000
+    delay: 3000, //3000
     animation: '0.1s',
   },
 
   mathCourse: {
-    delay: 500, //3000
+    delay: 3000, //3000
     animation: '0.1s',
   },
 
@@ -26,7 +26,7 @@ export const config = { //TODO Testzeiten zurücksetzen
     textAreaMinLength: 5,
     inputMinLength: 1,
     radioAutoContinue: true,
-    radioDelay: 300, //800
+    radioDelay: 500, //800
 
     items: [
       'pre1step_1',

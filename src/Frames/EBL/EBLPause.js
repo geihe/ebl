@@ -1,7 +1,5 @@
 import React from 'react';
-import {config} from "../../config";
 import {Html} from "../../MicroComponents/Html";
-import {Pause} from "../Pause";
 
 export function EBLPause(props) {//TODO exclude from data
 
@@ -11,7 +9,7 @@ export function EBLPause(props) {//TODO exclude from data
     '<p></p>' +
     '<p>Bitte sei pünktlich zurück und schalte alle Störquellen aus.</p>';
 
-  const htmlElement = <Html
+  return <Html
     html={pauseText}
     style={{
       width: '600px',
@@ -23,17 +21,6 @@ export function EBLPause(props) {//TODO exclude from data
     }}
   />;
 
-  const pauseFunction = (remaining => {
-    if (remaining > config.pauseSeconds - 10) {
-      return htmlElement
-    }
-    return (htmlElement);
-  })
-  return <Pause
-    seconds={config.pauseSeconds}
-    elementFunction={pauseFunction}
-    finish={props.finish}
-  />;
 }
 
 
