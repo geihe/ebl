@@ -45,7 +45,7 @@ export function InstructionFrame01(props) {
   const html = `
   <h1>Herzlich willkommen zur Studie </h1><h2>„Mit Beispielen Wahrscheinlichkeitsrechnung lernen: Ein Lernprogramm“</h2>
   <p><strong>Hinweis:</strong></p>
-  <p>Es folgt nach „Weiter mit der Leertaste“ eine Videoinstruktion.<br/>Schalte bitte deinen Ton an.<br/>Wenn das Video nicht von selbst startet, kannst du es mit der Maus steuern.</p>
+  <p>Es folgt nach „Weiter mit der Leertaste“ eine Videoinstruktion.<br/>Schalte bitte deinen Ton an.<br/>Wenn das Video nicht von selbst startet, kannst du es mit der Maus starten.</p>
   `;
 
   return <InstructionFrame header html={html} space finish={props.finish}/>;
@@ -59,7 +59,7 @@ export function InstructionFrame03(props) {
   const html = `
 <p><strong>Schön, dass du dabei bist!</strong></p>
 <p>Durch deine Teilnahme erwirbst du nicht nur neues Wissen, sondern erhältst auch einen Einblick in die aktuelle Forschung, wie man Lehren und Lernen verbessern kann. Zudem erhältst du für deine Teilnahme bei Bedarf ${config.vph} Versuchspersonenstunden für dein Psychologiestudium.</p>
-  <p><strong>Navigiere während des Experiments bitte nicht im Browser mit den Vor- oder Zurückbuttons deines Browsers.</strong> Du wirst durch das Experiment geleitet. An einigen Stellen kann es einen kurzen Moment dauern, bis die nächste Ansicht zu sehen ist.</p>
+  <p><strong>Navigiere während des Experiments bitte nicht mit den Vor- oder Zurückbuttons deines Browsers.</strong> Du wirst durch das Experiment geleitet. An einigen Stellen kann es einen kurzen Moment dauern, bis die nächste Ansicht zu sehen ist.</p>
   <p>Manchmal kann es vorkommen, dass das Laden von neuen Seiten einige Sekunden dauert. Warte bitte immer ab, bis du die nächste Seite siehst und klicke währenddessen nicht mit der Maus!</p>
   `;
   return <InstructionFrame header html={html} space finish={props.finish}/>;
@@ -85,7 +85,7 @@ export function InstructionFrame06(props) {
 <ul>
 <li>Du erhältst eine <strong>allgemeine Erklärung über Urnenmodelle und Stochastik</strong>. </li>
 <li>Anschließend lernst du vier Prinzipien der Wahrscheinlichkeitsrechnung anhand von <strong>16 Lösungsbeispielen</strong>. Zu jedem Lösungsbeispiel erhältst du Fragen im Multiple Choice-Format. </li>
-<li>Nach jeweils vier Lösungsbeispielen werden dir verschiedene <strong>Fragen zu deiner kognitiven Beanspruchung und deinem Flowerleben</strong> gestellt. </li>
+<li>Nach jeweils vier Lösungsbeispielen werden dir verschiedene <strong>Fragen zu deiner kognitiven Beanspruchung und deinem Flow-Erleben</strong> gestellt. </li>
 </ul>
 </p>
 <p><i><b>Pause: </b></i>Du hast 10 Minuten Zeit dich zu entspannen.</p>
@@ -109,16 +109,16 @@ export function InstructionFrame07(props) {
 }
 
 export function InstructionFrame09(props) {
-  const html = `<h3>Freiwilligkeit</h3> <p>Die Teilnahme an der Studie ist freiwillig. Du kannst jederzeit und ohne Angabe von Gründen die Teilnahme an dieser Studie beenden, ohne dass dir daraus Nachteile entstehen. Auch wenn du die Studie vorzeitig abbrichst hast du Anspruch auf entsprechende Versuchspersonenstunden für den bis dahin erbrachtenZeitaufwand.</p> <h3>Datennutzung</h3> <p>Die Erhebung der Forschungsdaten erfolgt aus Sicht der Forschenden anonym. Durch die Größe der Stichprobe sowie die Abfragekategorien/Auswahlmöglichkeiten/Kohortenbildung der oben genannten Daten, lassen sich die Daten zu keinem Zeitpunkt einer konkreten Person zuordnen. Die im Rahmen dieser Studie erhobenen, werden vertraulich behandelt. Deine Vp-ID wird getrennt von den Forschungsdaten aufbewahrt. Bitte beachte die Datenschutzhinweise der für die Verwaltung der Vp-Stunden genutzten Software. Die Verwaltung der Vp_ID und der Vp-Stunden erfolgt durch die Prüfungsverwaltung in der Fakultät Psychologie und Sportwissenschaften. Die erhobenen Forschungsdaten in aggregierter Form werden z.B. in wissenschaftlichen Zeitschriften, Vorträgen oder Lehrveranstaltungen veröffentlicht. Nach Abschluss der Studie werden die Daten ggf. in einem gesicherten Datenarchiv, wie z.B. dem „Open Science Framework“ öffentlich zugänglich gemacht. Zweck, Art und Umfang der potentiellen Nachnutzung im Rahmen von Open-Data stehen noch nicht fest, aber die Daten werden nur anonymisiert im Rahmen von Open-Science veröffentlicht. Eine Forderung auf Löschung der Daten aus einem anonymisierten Datensatz ist nicht möglich. Mit diesem Vorgehen folgt das Forschungsprojekt den Empfehlungen der Deutschen Forschungsgemeinschaft zur Qualitätssicherung der Forschung.<p>
+  const html = `<h3>Freiwilligkeit</h3> <p>Die Teilnahme an der Studie ist freiwillig. Du kannst jederzeit und ohne Angabe von Gründen die Teilnahme an dieser Studie beenden, ohne dass dir daraus Nachteile entstehen. Auch wenn du die Studie vorzeitig abbrichst hast du Anspruch auf entsprechende Versuchspersonenstunden für den bis dahin erbrachten Zeitaufwand.</p> <h3>Datennutzung</h3> <p>Die Erhebung der Forschungsdaten erfolgt aus Sicht der Forschenden anonym. Durch die Größe der Stichprobe sowie die Abfragekategorien/Auswahlmöglichkeiten/Kohortenbildung der oben genannten Daten, lassen sich die Daten zu keinem Zeitpunkt einer konkreten Person zuordnen. Die im Rahmen dieser Studie erhobenen Daten werden vertraulich behandelt. Deine Vp-ID wird getrennt von den Forschungsdaten aufbewahrt. Bitte beachte die Datenschutzhinweise der für die Verwaltung der Vp-Stunden genutzten Software. Die Verwaltung der Vp-ID und der Vp-Stunden erfolgt durch die Prüfungsverwaltung in der Fakultät Psychologie und Sportwissenschaften. Die erhobenen Forschungsdaten in aggregierter Form werden z.B. in wissenschaftlichen Zeitschriften, Vorträgen oder Lehrveranstaltungen veröffentlicht. Nach Abschluss der Studie werden die Daten ggf. in einem gesicherten Datenarchiv, wie z.B. dem „Open Science Framework“ öffentlich zugänglich gemacht. Zweck, Art und Umfang der potentiellen Nachnutzung im Rahmen von Open-Data stehen noch nicht fest, aber die Daten werden nur anonymisiert im Rahmen von Open-Science veröffentlicht. Eine Forderung auf Löschung der Daten aus einem anonymisierten Datensatz ist nicht möglich. Mit diesem Vorgehen folgt das Forschungsprojekt den Empfehlungen der Deutschen Forschungsgemeinschaft zur Qualitätssicherung der Forschung.<p>
 <h3>Verantwortliche Stelle für diese Studie</h3>
-<p>Das Forschungsprojekt „Lernerfolg und Metakognition beim Lernen von Studienmaterialien“ wird durchgeführt von der Fakultät für Psychologie und Sportwissenschaft, Abteilung für Psychologie, Arbeitseinheit 13 – Bildungspsychologie, unter der Projektleitung von Dr. Veit Kubik. Kooperationspartner*innen in diesem Projekt ist die Arbeitsgruppe von Prof. Dr. Alexander Renkl von der Albert-Ludwigs-Universität Freiburg. Die Studie wird eigenverantwortlich im Rahmen meiner Habilitation durchgeführt. </p><h3>Kontaktdaten</h3><p>Bei Fragen zur Teilnahme, Freiwilligkeit und Datennutzung melden Sie sich gerne beidem Projektverantwortlichen:  Dr. Veit Kubik</p>
+<p>Das Forschungsprojekt „Lernerfolg und Metakognition beim Lernen von Studienmaterialien“ wird durchgeführt von der Fakultät für Psychologie und Sportwissenschaft, Abteilung für Psychologie, Arbeitseinheit 13 – Bildungspsychologie, unter der Projektleitung von Dr. Veit Kubik. Kooperationspartner*innen in diesem Projekt ist die Arbeitsgruppe von Prof. Dr. Alexander Renkl von der Albert-Ludwigs-Universität Freiburg. Die Studie wird eigenverantwortlich im Rahmen meiner Habilitation durchgeführt. </p><h3>Kontaktdaten</h3><p>Bei Fragen zur Teilnahme, Freiwilligkeit und Datennutzung melden Sie sich gerne bei dem Projektverantwortlichen:  Dr. Veit Kubik</p>
 <p>
 E-Mail: <a href= "mailto:veit.kubik@uni-bielefeld.de">veit.kubik@uni-bielefeld.de</a><br/>
 Tel.: 0521-106-3100<br/>
 Web.: <a href="https://www.uni-bielefeld.de/psychologie/abteilung/arbeitseinheiten/13/personen//kubik.xml">https://www.uni-bielefeld.de/psychologie/abteilung/arbeitseinheiten/13/personen//kubik.xml</a>
 </p>
 <h3>Einwilligung</h3>
-<p>Ich habe die Teilnehmerinformation zum Forschungsprojekt „Lernerfolg und Metakognition beim Lernen Studienmaterialien“ zur Kenntnis genommen. Ich bin ausreichend informiert worden und hatte die Möglichkeit vor Weiterführung der Studie per Mail oder telefonisch Fragen zu stellen.Mir ist bewusst, dass meine Teilnahme an der Studie freiwillig ist und ich bei einer Verweigerung meiner Einwilligung für mich keinerlei Nachteile entstehen. Eine Kopie der Informationsschrift und dieser Einwilligungserklärung habe ich heruntergeladen und somit erhalten.</p><p>Wenn du mit unserem Vorhaben einverstanden bist, so klicke bitte auf <i>Einverstanden</i>.Falls nicht, so klicke bitte auf <i>Nicht einverstanden</i>.</p><p>Wir danken dir für deine Mitwirkung und dein Vertrauen.</p>`;
+<p>Ich habe die Teilnehmerinformation zum Forschungsprojekt „Lernerfolg und Metakognition beim Lernen  von Studienmaterialien“ zur Kenntnis genommen. Ich bin ausreichend informiert worden und hatte die Möglichkeit vor Weiterführung der Studie per Mail oder telefonisch Fragen zu stellen. Mir ist bewusst, dass meine Teilnahme an der Studie freiwillig ist und ich bei einer Verweigerung meiner Einwilligung für mich keinerlei Nachteile entstehen. Eine Kopie der Informationsschrift und dieser Einwilligungserklärung habe ich heruntergeladen und somit erhalten.</p><p>Wenn du mit unserem Vorhaben einverstanden bist, so klicke bitte auf <i>Einverstanden</i>. Falls nicht, so klicke bitte auf <i>Nicht einverstanden</i>.</p><p>Wir danken dir für deine Mitwirkung und dein Vertrauen.</p>`;
 
   return <InstructionFrame header html={html}  cancelButton continueButtonText="Einverstanden" cancelButtonText="Nicht einverstanden" finish={props.finish}/>;
 }
@@ -210,7 +210,7 @@ export function InstructionFrame16a(props) {
 export function InstructionFrame16b(props) {
   const html = `
   <h1>Vortest</h1>
-<p>Dir werden nun 12 Aufgaben präsentiert. Du sollst die Aufgaben berechnen und die Lösungen in das dir Notizfeld eintippen. </p>
+<p>Dir werden nun 12 Aufgaben präsentiert. Du sollst die Aufgaben berechnen und die Lösungen in das Notizfeld eintippen. </p>
 <p>Bitte nutze [/] um Brüche auszudrücken. Beispiel: Schreibe ein Drittel als <strong>1/3</strong></p>
 <p>Bestätige deine Eingabe mit [Enter]. Du wirst dann automatisch zur nächsten Aufgabe weitergeleitet.</p>
   `;
@@ -230,10 +230,9 @@ export function InstructionFrame100_sequenziell_12(props) {
   const html = `
   <h1>Aufbau des Lernprogramms I</h1>
   <p>Auf jeder Seite des Lernprogramms wird dir eine Beispielaufgabe präsentiert. Du sollst jede Aufgabe aufmerksam lesen und versuchen, die Lösung nachzuvollziehen. </p>
-  <p>Zudem befinden sich rechts auf jeder Seite des Lernprogramms Multiple-Choice-Fragen. Hier sollst du die deiner Meinung nach zutreffendste Antwort. Du kannst deine Wahl nicht mehr ändern. </p>
+  <p>Zudem befinden sich rechts auf jeder Seite des Lernprogramms Multiple-Choice-Fragen. Hier sollst du die deiner Meinung nach zutreffendste Antwort auswählen. Du kannst deine Wahl nicht mehr ändern. </p>
   <p>Du durchläufst vier Durchgänge mit jeweils vier Beispielaufgaben, sodass dir insgesamt 16 Beispielaufgaben präsentiert werden und du 16 Multiple Choice-Fragen beantwortest.</p>
-  <p>Für die Bearbeitung von je vier Beispielaufgaben hast du fünf Minuten Zeit. Die Zeit kannst du frei einteilen, du solltest aber alle Texte sorgfältig gelesen und alle Lösungen genau nachvollzogen haben, bevor du die Multiple-Choice Fragen beantwortest. 
-. Nach Ablauf der fünf Minuten wirst du automatisch zur Befragung deines Flow-Erlebens und deiner kognitiven Beanspruchung weitergeleitet und kannst nicht mehr zurückgehen. Ein Timer wird eingeblendet.</p>
+  <p>Für die Bearbeitung von je vier Beispielaufgaben hast du fünf Minuten Zeit. Die Zeit kannst du frei einteilen, du solltest aber alle Texte sorgfältig gelesen und alle Lösungen genau nachvollzogen haben, bevor du die Multiple-Choice Fragen beantwortest. Nach Ablauf der fünf Minuten wirst du automatisch zur Befragung deines Flow-Erlebens und deiner kognitiven Beanspruchung weitergeleitet und kannst nicht mehr zurückgehen. Ein Timer wird eingeblendet.</p>
   `;
 
   return <InstructionFrame html={html} space finish={props.finish}/>;
@@ -339,7 +338,7 @@ export function InstructionFrame21alt(props) {
 export function InstructionFrame204(props) {
   const html = `
   <h1>Abschließende Fragen</h1>
-<p>Diese Fragen sind zur Beurteilung der wissenschaftlichen Datenqualität unserer Studie besonders wichtig. Für die Berücksichtigung deiner anonymen Daten ist es beispielsweise wichtig, dass du dich hinreichend konzentrieren und dass du die Instruktionen lesen und die präsentierten Aufgaben verstehen konntest. </p>
+<p>Diese Fragen sind zur Beurteilung der wissenschaftlichen Datenqualität unserer Studie von besonderer Bedeutung. Für die Berücksichtigung deiner anonymen Daten ist es beispielsweise wichtig, dass du dich hinreichend konzentrieren und dass du die Instruktionen lesen und die präsentierten Aufgaben verstehen konntest. </p>
 <p>Die Beantwortung der Fragen trägt wesentlich zur Datenqualität unserer Studie bei. Deine Antworten sind anonym und können somit nicht auf deine Person zurückgeführt werden. </p>
 <p>Es ist wichtig, dass du wahrheitsgetreu antwortest.</p>
  `;
@@ -414,7 +413,7 @@ export function InstructionFrame209(props) {
       options={options}
       label={`
       In welcher Form hast du an der Studie teilgenommen?  
-      Bitte beantworte diese Frage wahrheitsgemäß, damit möglichst gültige Aussagen über die Forschungsdaten dieser Studie treffen können.
+      Bitte beantworte diese Frage wahrheitsgemäß, damit wir möglichst gültige Aussagen über die Forschungsdaten dieser Studie treffen können.
       Deine Antwort hat keinerlei Auswirkungen für dich bzw. auf die Ausstellung deiner Versuchspersonenstunden. Habe vielen Dank hierfür.
       `}
       name={'ernsthaft?'}

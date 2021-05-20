@@ -28,7 +28,7 @@ export const pre1step = [
   {
     id: 'pre1step_4',
     header: 'Bei einem Konzert treten 9 Bands auf, darunter ist auch deine Lieblingsband. Leider kommst du zu spät und verpasst die erste Band. ',
-    question: 'Wie wahrscheinlich ist es, dass als erste Band <strong>nicht</strong> deine Lieblingsband gespielt hat?',
+    question: 'Wie wahrscheinlich ist es, dass als Erste Band <strong>nicht</strong> deine Lieblingsband gespielt hat?',
     validate: evalValidator(8/9),
     responseType: 'input',
     effort: 2

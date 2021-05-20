@@ -67,7 +67,7 @@ export function MathCourse04a(props) {
       <p>Für die <strong>Wahrscheinlichkeit p eines Ergebnisses gilt:</strong></p>
       <MathComponent tex={String.raw`p(Ergebnis) = {1 \over Anzahl\ aller\ Ergebnisse}`} display={true}/>
       Beispielsweise ist die Wahrscheinlichkeit, mit einem Würfel eine „3“ zu würfeln, &nbsp;
-      <MathComponent inline tex={String.raw` p = {1 \over 6}`} display={false}/>
+      <MathComponent inline tex={String.raw` p = {1 \over 6}`} display={false}/>.
     </div>
   );
 }
@@ -117,7 +117,7 @@ export function MathCourse06a(props) {
         So gibt es auch mehrstufige Experimenten, bei denen man sich für die Wahrscheinlichkeit interessiert,
         dass zwei oder mehr Ereignisse überhaupt auftreten,
         <strong> unabhängig von der Reihenfolge der Ereignisse</strong>.</p>
-      <p>In diesem Fall sind sind <strong>mehrere Ereignisfolgen günstig</strong>
+      <p>In diesem Fall sind <strong>mehrere Ereignisfolgen günstig </strong>
         (z.B. „erst Ereignis A, dann Ereignis B“ oder „erst Ereignis B, dann Ereignis A“). </p>
     </div>
   );
@@ -186,7 +186,7 @@ export function MathCourse08(props) {
   return (
     <div>
       <h1>Zweck des Lernprogramms</h1>
-      <p>Zweck des Lernprogramms ist es, dass du ein grundlegende Verständnis von Zufallsexperimenten aufbaust und Aufgaben zu verschiedenen Zufallsexperimenten löst.</p>
+      <p>Zweck des Lernprogramms ist es, dass du ein grundlegendes Verständnis von Zufallsexperimenten aufbaust und Aufgaben zu verschiedenen Zufallsexperimenten löst.</p>
     </div>
   );
 }

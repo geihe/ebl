@@ -22,7 +22,8 @@ export function EblWaitFrame(props) {
     if (timer === Math.ceil(hurry) && !state.waiting) {
       toastRight.current.show({
         message: "Du hast nicht mehr viel Zeit. Bitte beantworte alle Fragen.",
-        intent: Intent.DANGER
+        intent: Intent.DANGER,
+        timeout: 7777
       });
     }
   })
@@ -33,7 +34,8 @@ export function EblWaitFrame(props) {
     if (lastExpAnswered) {
       toast.current.show({
         message: "Du hast noch etwas Zeit! Nutze die Zeit aktiv, die Lösungen nachzuvollziehen. Du kannst deine Antworten mit einem Klick öffnen und ändern.",
-        intent: Intent.PRIMARY
+        intent: Intent.PRIMARY,
+        timeout: 8888
       });
     }
     const newStateFunction = (state) => (

@@ -86,7 +86,7 @@ export function EBL01_Demographics(props) {
           options={[
             {label: 'Deutsch', value: 'Deutsch'},
             {label: 'Deutsch und weiter(e) Sprache(n) (multilingual)', value: 'multilingual'},
-            {label: 'andere', value: 30},
+            {label: 'andere', value: 'andere'},
           ]}
         />
       </Form>

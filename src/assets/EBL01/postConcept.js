@@ -25,7 +25,7 @@ export const postConcept = [
       {value: '1',
       label: `1. Ja, die Chance, den Ersten und den Zeiten korrekt vorherzusagen, ist kleiner als die Chance die zwei Teams im Finale korrekt vorherzusagen. `},
       {value: '2',
-      label: `2. Ja, die Chance die, zwei Teams im Finale korrekt vorherzusagen, ist kleiner als die Chance den Ersten und den Zweiten korrekt vorherzusagen. `},
+      label: `2. Ja, die Chance, die zwei Teams im Finale korrekt vorherzusagen, ist kleiner als die Chance den Ersten und den Zweiten korrekt vorherzusagen. `},
       {value: '3',
       label: `3. Nein, in beiden Fällen muss man zwei Teams vorhersagen, und das ist gleich schwierig. `},
       {value: '4',

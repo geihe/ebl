@@ -148,6 +148,7 @@ export class EBL01Builder {
 
   buildTestSession() {
     this.tlManager.add(
+      <EBL01_Demographics/>,
       exampleFrames(this.group),
     );
   }

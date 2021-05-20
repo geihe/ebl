@@ -7,17 +7,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c0a8d840-d2a4-41a1-9e79-f574c09cafbd" name="Default Changelist" comment="Diverse Veränderungen">
+    <list default="true" id="c0a8d840-d2a4-41a1-9e79-f574c09cafbd" name="Default Changelist" comment="bugfix Timerframe im Versuch">
       <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Likert.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Likert.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Frames/EBL/EBLPause.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frames/EBL/EBLPause.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Frames/EBL/EblWaitFrame.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frames/EBL/EblWaitFrame.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Frames/Instructions/EBL01_Demographics.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frames/Instructions/EBL01_Demographics.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Frames/Instructions/InstructionFrame.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frames/Instructions/InstructionFrame.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Frames/JolFrames.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frames/JolFrames.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Manager/EBL01Builder.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Manager/EBL01Builder.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/MicroComponents/ResponseRadioButtons.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/MicroComponents/ResponseRadioButtons.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/EBL01/Ebl01_MathCourse.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/EBL01/Ebl01_MathCourse.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/EBL01/examples/fahrradhelm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/EBL01/examples/fahrradhelm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/EBL01/fssItems.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/EBL01/fssItems.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/EBL01/posFreeForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/EBL01/posFreeForm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/EBL01/postConcept.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/EBL01/postConcept.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/EBL01/postMC.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/EBL01/postMC.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/EBL01/postNT.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/EBL01/postNT.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/EBL01/pre1step.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/EBL01/pre1step.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/EBL01/verification.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/EBL01/verification.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/css/StimulusResponseFrame.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/css/StimulusResponseFrame.module.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -332,14 +340,10 @@
       <workItem from="1620936472475" duration="2626000" />
       <workItem from="1620973403979" duration="6043000" />
       <workItem from="1621074105778" duration="2075000" />
-      <workItem from="1621092553484" duration="832000" />
-    </task>
-    <task id="LOCAL-00022" summary="Explanation: textarea statt EditableText -&gt; kein Bug mehr&#10;Prozessmaße: Paas-Item zu Beginn, sonst zufällige Reihenfolge, 1-7">
-      <created>1611354657792</created>
-      <option name="number" value="00022" />
-      <option name="presentableId" value="LOCAL-00022" />
-      <option name="project" value="LOCAL" />
-      <updated>1611354657792</updated>
+      <workItem from="1621092553484" duration="1543000" />
+      <workItem from="1621153684683" duration="3496000" />
+      <workItem from="1621167337072" duration="594000" />
+      <workItem from="1621528917817" duration="4967000" />
     </task>
     <task id="LOCAL-00023" summary="Classification-Test: Wie sicher bist du dir?&#10;--&gt; neu: Element YesNoSure &#10;&#10;Demographics: Alter als Dropdown">
       <created>1611396501281</created>
@@ -677,7 +681,14 @@
       <option name="project" value="LOCAL" />
       <updated>1620937521237</updated>
     </task>
-    <option name="localTasksCounter" value="71" />
+    <task id="LOCAL-00071" summary="bugfix Timerframe im Versuch">
+      <created>1621093644774</created>
+      <option name="number" value="00071" />
+      <option name="presentableId" value="LOCAL-00071" />
+      <option name="project" value="LOCAL" />
+      <updated>1621093644775</updated>
+    </task>
+    <option name="localTasksCounter" value="72" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -712,7 +723,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="Jol eingebaut" />
     <MESSAGE value="bugfix: in EBLFrame logdata enthält Button-Element statt Text&#10;&#10;Overflow aktiviert" />
     <MESSAGE value="Radiobuttons umstrukturiert&#10;zufällige Reihenfolge&#10;&#10;zusätzliches Attribut valid&#10;&#10;TESTFASSUNG" />
     <MESSAGE value="MC-Fragen in config.js zugeordnet" />
@@ -737,7 +747,8 @@
     <MESSAGE value="bugfixes&#10;minimale Inputlänge in config.js verringert" />
     <MESSAGE value="Schriftfarbe in index.css auf ein dunkles Grau gesetzt." />
     <MESSAGE value="Diverse Veränderungen" />
-    <option name="LAST_COMMIT_MESSAGE" value="Diverse Veränderungen" />
+    <MESSAGE value="bugfix Timerframe im Versuch" />
+    <option name="LAST_COMMIT_MESSAGE" value="bugfix Timerframe im Versuch" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
 </project>

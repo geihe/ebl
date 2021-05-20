@@ -19,7 +19,7 @@ export const postNT = [
   },
   {
     id: 'postNT2step_3',
-    header:`Die fünf Engelberger Skispringer Adam, Urs, Beat, Christoph und Daniel traten auf der alten Engelberger Schanze häufig gegeneinander an. Dabei kam jeder mit gleicher Häufigkeit auf den ersten, zweiten, dritten, vierten oder fünften Platz. Somit sind die fünf Springer also gleich gut, wer am weitesten springt hängt von zufälligen Faktoren ab (z. B. den Windverhältnissen). Jetzt wurde in Engelberg eine neue Skischanze errichtet und als erste dürfen Adam, Urs, Beat, Christoph und Daniel sie ausprobieren. Es gibt zwei Durchgänge.`,
+    header:`Die fünf Engelberger Skispringer Adam, Urs, Beat, Christoph und Daniel traten auf der alten Engelberger Schanze häufig gegeneinander an. Dabei kam jeder mit gleicher Häufigkeit auf den ersten, zweiten, dritten, vierten oder fünften Platz. Somit sind die fünf Springer also gleich gut, wer am weitesten springt hängt von zufälligen Faktoren ab (z. B. den Windverhältnissen). Jetzt wurde in Engelberg eine neue Skischanze errichtet und als Erste dürfen Adam, Urs, Beat, Christoph und Daniel sie ausprobieren. Es gibt zwei Durchgänge.`,
     question:`Wie groß ist die Wahrscheinlichkeit, dass Beat in beiden Durchgängen am weitesten springt? `,
     validate: evalValidator(1/25),
     responseType: 'input',

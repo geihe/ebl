@@ -46,7 +46,7 @@ export const fahrradhelm = {
     {
       principle: 4,
       problem: {
-        de: `Wie hoch ist die Wahrscheinlichkeit, dass du und ddein Freund am ersten Kurstag den roten und den gelben Helm bekommen (es ist egal, wer welche Farbe bekommt)?`,
+        de: `Wie hoch ist die Wahrscheinlichkeit, dass du und dein Freund am ersten Kurstag den roten und den gelben Helm bekommen (es ist egal, wer welche Farbe bekommt)?`,
         en: `What is the probability that you and your friend will get the red helmet and yellow helmet on the first day of the course (it doesn't matter who gets which color)?`,
       },
       solution:

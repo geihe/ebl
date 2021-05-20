@@ -11,7 +11,7 @@ export const postMC = [
   },
   {
     id: 'postMC_3',
-    header: `Eine Chemikerin lagert in zwei verschiedenen Sicherheitsschränken Edelgase. In beiden Schränken befinden sich dieselben 3 Edelgase (Argon, Krypton, Xenon) in einzelnen Behältern. Ihr Kollege hat jedoch vergessen, die Behälter zu beschriften und alle Behälter sehen genau gleich aus. Für ein Experiment begibt sich die Chemikerin auf die Suche nach zwei verschiedenen Edelgasen und nimmt die Behälter einzeln aus den Schränken und prüft danach welches Gas enthalten ist.`,
+    header: `Eine Chemikerin lagert in zwei verschiedenen Sicherheitsschränken Edelgase. In beiden Schränken befinden sich dieselben 3 Edelgase (Argon, Helium, Xenon) in einzelnen Behältern. Ihr Kollege hat jedoch vergessen, die Behälter zu beschriften und alle Behälter sehen genau gleich aus. Für ein Experiment begibt sich die Chemikerin auf die Suche nach zwei verschiedenen Edelgasen und nimmt die Behälter einzeln aus den Schränken und prüft danach welches Gas enthalten ist.`,
     question: `Wie hoch ist die Wahrscheinlichkeit, dass die Chemikerin in einem Schrank zuerst die Behälter mit den Edelgasen Helium und Argon herausgreift (es ist egal, welches Behältnis sie als Erstes entdeckt)?`,
     validate: evalValidator(2/6),
     responseType: 'input',
@@ -19,7 +19,7 @@ export const postMC = [
   },
   {
     id: 'postMC_6',
-    header:`Die vier Engelberger Skispringer Adam, Beat, Christoph und Daniel traten auf der alten Engelberger Schanze häufig gegeneinander an. Dabei kam jeder mit gleicher Häufigkeit auf den ersten, zweiten, dritten oder vierten Platz. Somit sind die vier Springer also gleich gut, wer am weitesten springt hängt von zufälligen Faktoren ab (z. B. den Windverhältnissen). Jetzt wurde in Engelberg eine neue Skischanze errichtet und als erste dürfen Adam, Beat, Christoph und Daniel sie ausprobieren. Es gibt zwei Durchgänge.`,
+    header:`Die vier Engelberger Skispringer Adam, Beat, Christoph und Daniel traten auf der alten Engelberger Schanze häufig gegeneinander an. Dabei kam jeder mit gleicher Häufigkeit auf den ersten, zweiten, dritten oder vierten Platz. Somit sind die vier Springer also gleich gut, wer am weitesten springt hängt von zufälligen Faktoren ab (z. B. den Windverhältnissen). Jetzt wurde in Engelberg eine neue Skischanze errichtet und als Erste dürfen Adam, Beat, Christoph und Daniel sie ausprobieren. Es gibt zwei Durchgänge.`,
     question:`Wie groß ist die Wahrscheinlichkeit, dass Beat in den beiden Durchgängen einmal einen ersten und einmal einen zweiten Platz belegt?`,
     validate: evalValidator(2/16),
     responseType: 'input',
@@ -43,7 +43,7 @@ export const postMC = [
   },
   {
     id: 'postMC_3_draw3',
-    header: `Eine Chemikerin lagert in zwei verschiedenen Sicherheitsschränken Edelgase. In beiden Schränken befinden sich dieselben 4 Edelgase (Argon, Neon, Krypton, Xenon) in einzelnen Behältern. Ihr Kollege hat jedoch vergessen, die Behälter zu beschriften und alle Behälter sehen genau gleich aus. Für ein Experiment begibt sich die Chemikerin auf die Suche nach <strong>drei</strong> verschiedenen Edelgasen und nimmt die Behälter einzeln aus den Schränken und prüft danach welches Gas enthalten ist.`,
+    header: `Eine Chemikerin lagert in zwei verschiedenen Sicherheitsschränken Edelgase. In beiden Schränken befinden sich dieselben 4 Edelgase (Argon, Neon, Helium, Xenon) in einzelnen Behältern. Ihr Kollege hat jedoch vergessen, die Behälter zu beschriften und alle Behälter sehen genau gleich aus. Für ein Experiment begibt sich die Chemikerin auf die Suche nach <strong>drei</strong> verschiedenen Edelgasen und nimmt die Behälter einzeln aus den Schränken und prüft danach welches Gas enthalten ist.`,
     question: `Wie hoch ist die Wahrscheinlichkeit, dass die Chemikerin in einem Schrank zuerst die Behälter mit den Edelgasen Helium, Neon und Argon herausgreift (egal in welcher Reihenfolge)?`,
     validate: evalValidator(1/4),
     responseType: 'input',
@@ -51,7 +51,7 @@ export const postMC = [
   },
   {
     id: 'postMC_6_draw3',
-    header:`Die vier Engelberger Skispringer Adam, Beat, Christoph und Daniel traten auf der alten Engelberger Schanze häufig gegeneinander an. Dabei kam jeder mit gleicher Häufigkeit auf den ersten, zweiten, dritten oder vierten Platz. Somit sind die vier Springer also gleich gut, wer am weitesten springt hängt von zufälligen Faktoren ab (z. B. den Windverhältnissen). Jetzt wurde in Engelberg eine neue Skischanze errichtet und als erste dürfen Adam, Beat, Christoph und Daniel sie ausprobieren. Es gibt drei Durchgänge.`,
+    header:`Die vier Engelberger Skispringer Adam, Beat, Christoph und Daniel traten auf der alten Engelberger Schanze häufig gegeneinander an. Dabei kam jeder mit gleicher Häufigkeit auf den ersten, zweiten, dritten oder vierten Platz. Somit sind die vier Springer also gleich gut, wer am weitesten springt hängt von zufälligen Faktoren ab (z. B. den Windverhältnissen). Jetzt wurde in Engelberg eine neue Skischanze errichtet und als Erste dürfen Adam, Beat, Christoph und Daniel sie ausprobieren. Es gibt drei Durchgänge.`,
     question:`Wie groß ist die Wahrscheinlichkeit, dass Beat in den <strong>drei</strong> Durchgängen einmal einen ersten, einmal einen zweiten und einmal einen dritten Platz belegt?`,
     validate: evalValidator(6/64),
     responseType: 'input',
@@ -78,7 +78,7 @@ export const postMC = [
 
         <p>Beantworte nun bitte <strong>die beiden folgenden Fragen</strong> zu Auswirkungen von hypothetischen Veränderungen an diesem Szenario.</p>
 `,
-    question:'1. Welche Auswirkungen hätte es auf die Wahrscheinlichkeit, in einem der zehn Durchgänge ein bestimmtes Wort ziehen (z.B. BOHNE), \n' +
+    question:'1. Welche Auswirkungen hätte es auf die Wahrscheinlichkeit, in einem der zehn Durchgänge ein bestimmtes Wort zu ziehen (z.B. BOHNE), \n' +
       '        wenn du jeden gezogenen Buchstaben zwar notieren, dann aber sofort wieder in die Vase zurücklegen würdest? \n' +
       '        Bitte erkläre (eine Rechnung ist nicht notwendig).',
     responseType: 'textArea'

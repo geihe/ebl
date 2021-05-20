@@ -38,7 +38,7 @@ export const fssItems = [
   {
     id: 'fss_6',
     text: {
-      de: '"Ich bin ganz vertieft in das was ich gerade mache."',
+      de: '"Ich bin ganz vertieft in das, was ich gerade mache."',
       en: 'I am totally absorbed in what I am doing.'
     }
   },
