@@ -147,13 +147,13 @@ export class EBL01Builder {
   }
 
   buildTestSession() {
-    this.tlManager.add(<InstructionFrame06/>,<InstructionFrame10/>,
-      {
+    this.tlManager.add(<InstructionFrame04/>,
+/*      {
 
         repeat: [<InstructionFrame04/>, <InstructionFrame06/>,
           <InstructionTest/>,],
         until: (lastlog) => lastlog.correct
-      },
+      },*/
     );
   }
 

@@ -19,9 +19,9 @@ let returnUrl;
 function finished(data) {
   const {userId, session, groupId, mailId} = data[0];
   console.log("Daten zum Server: ", JSON.stringify(data));
-  server.postData(userId, session, groupId, data, mailId )
+  server.postData(userId, session, groupId, {test: 1}, mailId )
     .then( () => {
-
+      alert("Daten gespeichert")
       window.location.href = returnUrl;
     }); //zurück zu Unipark etc.
 }
