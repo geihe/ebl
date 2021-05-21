@@ -18,8 +18,12 @@ let t;
 let returnUrl;
 function finished(data) {
   const {userId, session, groupId, mailId} = data[0];
+  console.log("Daten zum Server: ", JSON.stringify(data));
   server.postData(userId, session, groupId, data, mailId )
-    .then( () => window.location.href = returnUrl); //zurück zu Unipark etc.
+    .then( () => {
+
+      window.location.href = returnUrl;
+    }); //zurück zu Unipark etc.
 }
 
 getElementInfo().then((info) => {
@@ -65,7 +69,6 @@ function render(element) {
 async function getElementInfo() {
 //TODO URLParams und localData vergleichen
   const packageJson = require('../package.json');
-
   const initialData = {
     version: packageJson.version,
     finished: false,
@@ -84,7 +87,8 @@ async function getElementInfo() {
     session: params.get('session'),
     test: params.get('test'),
     origin: params.get('origin'),
-    tic: params.get('tic'),
+    tic: params.get('tic'), //Unipark
+    external_id: params.get('external_id'), //Sonas
   }
   returnUrl = 'https://ww2.unipark.de/uc/M_APLME_Kubik/ea33/ospe.php?return_tic='+URLparams.tic;
   const dataItemsJSON = localStorage.getItem('data');
@@ -97,6 +101,7 @@ async function getElementInfo() {
     initialData.language = URLparams.language ? URLparams.language : serverData.language;
     initialData.userId = URLparams.user_id ? +URLparams.user_id : serverData.user_id;
     initialData.groupId = URLparams.group_id ? +URLparams.group_id : serverData.group_id;
+    initialData.userAgent = navigator.userAgent;
 
     if (initialData.groupId < 0) {
       return {type: 'full', language: initialData.language}
@@ -129,6 +134,7 @@ async function getElementInfo() {
     initialData.groupId = localData.groupId;
     initialData.nextSessionStart = null;
     initialData.finished = false;
+
     localStorage.setItem('index', '0');
     return {type: 'session', language: initialData.language, initialData: [initialData]};
   }

@@ -147,9 +147,13 @@ export class EBL01Builder {
   }
 
   buildTestSession() {
-    this.tlManager.add(
-      <EBL01_Demographics/>,
-      exampleFrames(this.group),
+    this.tlManager.add(<InstructionFrame06/>,<InstructionFrame10/>,
+      {
+
+        repeat: [<InstructionFrame04/>, <InstructionFrame06/>,
+          <InstructionTest/>,],
+        until: (lastlog) => lastlog.correct
+      },
     );
   }
 

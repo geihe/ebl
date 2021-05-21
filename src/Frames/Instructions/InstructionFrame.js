@@ -86,6 +86,7 @@ export function InstructionFrame06(props) {
 <li>Du erhältst eine <strong>allgemeine Erklärung über Urnenmodelle und Stochastik</strong>. </li>
 <li>Anschließend lernst du vier Prinzipien der Wahrscheinlichkeitsrechnung anhand von <strong>16 Lösungsbeispielen</strong>. Zu jedem Lösungsbeispiel erhältst du Fragen im Multiple Choice-Format. </li>
 <li>Nach jeweils vier Lösungsbeispielen werden dir verschiedene <strong>Fragen zu deiner kognitiven Beanspruchung und deinem Flow-Erleben</strong> gestellt. </li>
+<li>Zum Abschluss der Lernphase sollst du einschätzen, wie gut du die vier Prinzipien anwenden kannst.</li>
 </ul>
 </p>
 <p><i><b>Pause: </b></i>Du hast 10 Minuten Zeit dich zu entspannen.</p>
@@ -129,6 +130,7 @@ export function InstructionFrame10(props) {
   <p>Diese Studie ist Teil eines wissenschaftlichen Projekts, das in Fachzeitschriften der Psychologie veröffentlicht wird. Wir möchten dich bitten, den Test - <strong>ohne Unterbrechung</strong> - bis zum Ende durchzuführen. Bitte stelle sicher, dass du während der Bearbeitung der Aufgaben nicht gestört wirst. Es ist wichtig, dass du die folgenden Vorkehrungen getroffen hast und dein Einverständnis mit einem Klick auf "Einverstanden" bestätigst: </p>
 <ul>
     <li>Ich befinde mich in einem ruhigen Raum. </li>
+    <li>Ich mache mir während des Experiments keine Notizen.</li>
     <li>Ich habe die nötigen Vorkehrungen getroffen, sodass ich im Verlauf der Studie nicht bei der Aufgabenbearbeitung unterbrochen werde. </li>
     <li>Mein Mobiltelefon liegt außerhalb meiner Reich- und Sichtweite und ist auf stumm gestellt oder ausgeschaltet. </li>
 </ul>
