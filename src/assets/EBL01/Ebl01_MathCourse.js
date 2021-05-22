@@ -18,13 +18,10 @@ const items=[
   <MathCourse08/>,
 ];
 
-export const ebl01_MathCourse = items.map(content =>
-  <DelayedFrame
-    space
-    delay={config.mathCourse.delay}
-  >
-    {content}
-  </DelayedFrame>
+export const ebl01_MathCourse = items.map(content =>( {
+  id: content.type.name,
+  frame:    <DelayedFrame space delay={config.mathCourse.delay}> {content} </DelayedFrame>
+  })
 );
 
 export function MathCourse02(props) {
@@ -132,7 +129,7 @@ export function MathCourse06b(props) {
       </p>
       <p>Für den Fall, dass zwei Ereignisfolgen günstig sind, gilt:</p>
       <MathComponent tex={String.raw` p(A\ und\ B,\ Reihenfolge\ egal) `} display={true}/>
-      <MathComponent tex={String.raw` \begin{align} = p(erst\ A\ dann\ B) + p(erst\ B\ dann\ A) \end{align} `}
+      <MathComponent tex={String.raw`  = p(erst\ A\ dann\ B) + p(erst\ B\ dann\ A)  `}
                      display={true}/>
       <MathComponent tex={String.raw` = p(A) \cdot p(B) + p(B) \cdot p(A)`} display={true}/>
       <MathComponent tex={String.raw` = 2 \cdot p(A) \cdot p(B)`} display={true}/>

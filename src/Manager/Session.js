@@ -8,6 +8,7 @@ import {config} from "../config";
 
 function Frame(props) {
   const {el} = props;
+  console.log(el);
   const [remainingTime, setRemainigTime] = useStateDelayed(el.timer || 0);
 
   const hasTimer = typeof el.timer !== 'undefined';
@@ -20,7 +21,6 @@ function Frame(props) {
       key: el.key
     }
   );
-
   const progressBar = el.noProgress ? <div/> :
     <ProgressBar id="progress-bar"
                  value={el.cumEffort / 100}

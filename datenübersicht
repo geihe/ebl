@@ -1,3 +1,3 @@
 - Wie oft InstructionTest
 - <StimulusResponseFrame> --> id, duration, log.stimulus, log.response, log.valid
--
+- Dauer der Mathcourse-Elemente speichern MathCourse02 bis MathCourse08,
