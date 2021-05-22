@@ -30,7 +30,6 @@ export class EBL01_RessourcePrePostTestManager {
   }
 
   getResponseElement(id, config) {
-    console.log(id);
     const rawItem = this.prePostTest.find(e => e.id === id);
     let responseInput;
     switch (rawItem.responseType) {
@@ -72,9 +71,9 @@ export class EBL01_RessourcePrePostTestManager {
     const effort = item.effort || 1;
     return {
       effort,
+      id: item.id,
       frame: <StimulusResponseFrame
         key={item.id}
-        id={item.id}
         stimulus={{
           data: item.id,
           element: <div className={styles.stimulus} key={item.id}> {stimulusWithKeys} </div>

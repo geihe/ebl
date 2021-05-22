@@ -146,7 +146,6 @@ export function Session(props) {
           log: logData,
         });
     }
-    console.log(data.current);
     setIndex(newIndex);
   }
 

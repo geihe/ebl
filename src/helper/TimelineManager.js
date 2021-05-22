@@ -80,6 +80,7 @@ class TLframe extends TimelineElement {
     } else {
       this.effort = 1;
       this.frame = frameSource;
+
     }
   }
 
