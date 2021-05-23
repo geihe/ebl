@@ -17,22 +17,30 @@ export function EblWaitFrame(props) {
   const toast = useRef(null);
   const toastRight = useRef(null);
   const dataWithSummary = (data) => {
-    const explanations = new Map();
-    data.explanations.forEach((e) => explanations.set(e.id, {
+    const explanationMap = new Map();
+    data.explanations.forEach((e) => explanationMap.set(e.id, {
       id: e.id, valid: e.valid, title: e.html, label: e.value
     }));
-    console.log(data.explanations);
+    const explanationArray = Array.from(explanationMap.values());
+    const totalCount = explanationArray.length;
+    const validCount = explanationArray.reduce((count, cur) => count + cur ? 1 : 0, 0);
     return {
       summary:
         {
           id: data.string,
-          explanations: Array.from(explanations.values())
+          validCount,
+          totalCount,
+          percentage: Math.round(validCount/totalCount*100),
+          explanations: explanationArray
         },
       ...data
     };
   }
   const [timer, setTimer] = useStateDelayed(Math.ceil(seconds));
-  timer > 0 ? setTimer(timer - 1, 1000) : setTimer(() => {
+  const startTime = useRef(Date.now());
+  const timerTime = seconds-(Date.now()-startTime.current)/1000;
+  console.log(timerTime);
+  timer > 0 ? setTimer(Math.round(timerTime-1), 1000) : setTimer(() => { //TODO keine Verzögerung bei Klick auf Radiobutton
     console.log(dataWithSummary(logData.current));
     props.finish(dataWithSummary(logData.current));
   }, 1000);

@@ -7,16 +7,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c0a8d840-d2a4-41a1-9e79-f574c09cafbd" name="Default Changelist" comment="id in Mathcourse-Elementen">
+    <list default="true" id="c0a8d840-d2a4-41a1-9e79-f574c09cafbd" name="Default Changelist" comment="Diverse Bugfixes für Daten in EBLWaitframe">
       <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/datenübersicht" beforeDir="false" afterPath="$PROJECT_DIR$/datenübersicht" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Frames/EBL/EblWaitFrame.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frames/EBL/EblWaitFrame.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Frames/InstructionTest.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frames/InstructionTest.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Manager/EBL01Builder.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Manager/EBL01Builder.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MicroComponents/ResponseRadioButtons.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/MicroComponents/ResponseRadioButtons.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/helper/Server.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/helper/Server.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -339,14 +334,7 @@
       <workItem from="1621618086020" duration="7911000" />
       <workItem from="1621688107663" duration="8762000" />
       <workItem from="1621715842861" duration="2490000" />
-      <workItem from="1621753112890" duration="8535000" />
-    </task>
-    <task id="LOCAL-00029" summary="Weiter-Button ohne weitere Eingabe hinzugefügt (b)&#10;&#10;Test-Example-Konfiguration eingefügt">
-      <created>1612379662421</created>
-      <option name="number" value="00029" />
-      <option name="presentableId" value="LOCAL-00029" />
-      <option name="project" value="LOCAL" />
-      <updated>1612379662421</updated>
+      <workItem from="1621753112890" duration="10866000" />
     </task>
     <task id="LOCAL-00030" summary="Introduction zu MathCourse umbenannt und umstrukturiert">
       <created>1613156239682</created>
@@ -684,7 +672,14 @@
       <option name="project" value="LOCAL" />
       <updated>1621698831463</updated>
     </task>
-    <option name="localTasksCounter" value="78" />
+    <task id="LOCAL-00078" summary="Diverse Bugfixes für Daten in EBLWaitframe">
+      <created>1621762389049</created>
+      <option name="number" value="00078" />
+      <option name="presentableId" value="LOCAL-00078" />
+      <option name="project" value="LOCAL" />
+      <updated>1621762389050</updated>
+    </task>
+    <option name="localTasksCounter" value="79" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -719,7 +714,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="diverse kleine Änderungen im Text" />
     <MESSAGE value="evalValidator eingeführt und benutzt&#10;--&gt; Eingaben werden als expression ausgewertet und mit der richtigen Lösung verglichen." />
     <MESSAGE value="Meldung, wenn Experiment voll ist." />
     <MESSAGE value="effort für pre- und posttest-elemente gesetzt und benutzt" />
@@ -744,7 +738,8 @@
     <MESSAGE value="weitere kleine Textänderungen" />
     <MESSAGE value="id in Pre- und Posttestframes korrigiert" />
     <MESSAGE value="id in Mathcourse-Elementen" />
-    <option name="LAST_COMMIT_MESSAGE" value="id in Mathcourse-Elementen" />
+    <MESSAGE value="Diverse Bugfixes für Daten in EBLWaitframe" />
+    <option name="LAST_COMMIT_MESSAGE" value="Diverse Bugfixes für Daten in EBLWaitframe" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
 </project>
