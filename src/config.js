@@ -6,7 +6,7 @@ export const config = { //TODO Testzeiten zurücksetzen
   numberOfSessions: 1,
   timeBetweenSessionsInSeconds: 5 * 60, //7*60*60*24
   pauseSeconds: 600, //600
-  timeForExamples: 10, //300 //TODO
+  timeForExamples: 300, //300
   vph: 2,
 
   instructions: {
