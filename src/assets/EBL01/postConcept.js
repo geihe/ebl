@@ -50,7 +50,7 @@ export const postConcept = [
       label: `4. Das hängt von der Anzahl der Mitspieler ab.`},
     ],
     validate:
-      (answer) => ['2'].includes(answer),
+      (answer) => ['2'].includes(''+answer),
     responseType: 'radio'
   },
   {

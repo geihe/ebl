@@ -354,7 +354,7 @@ export function InstructionFrame206(props) {
       <LikertFrame
         max={9}
         minText={'sehr wenig'} maxText={'sehr viel'}
-        titel={'In welchem Umfang wurdest du während dieser Studie von deiner Umgebung gestört?'}
+        title={'In welchem Umfang wurdest du während dieser Studie von deiner Umgebung gestört?'}
         finish={props.finish}/>
     </>)
 }
@@ -365,7 +365,7 @@ export function InstructionFrame207(props) {
       <LikertFrame
         max={9}
         minText={'sehr schlecht'} maxText={'sehr gut'}
-        titel={'In welchem Umfang konntest du dich auf die vorgegebenen Lernaufgaben konzentrieren?'}
+        title={'In welchem Umfang konntest du dich auf die vorgegebenen Lernaufgaben konzentrieren?'}
         finish={props.finish}/>
     </>)
 }
@@ -374,15 +374,15 @@ export function InstructionFrame208(props) {
   const options = [
     {
       label: 'Ich habe schon einmal an DERSELBEN Studie teilgenommen.',
-      value: 'selbe Studie teilgenommen'
+      value: 'Ich habe schon einmal an DERSELBEN Studie teilgenommen.',
     },
     {
       label: 'Ich habe schon einmal an einer ÄHNLICHEN Studie teilgenommen.',
-      value: 'ähnliche Studie teilgenommen'
+      value: 'Ich habe schon einmal an einer ÄHNLICHEN Studie teilgenommen.',
     },
     {
       label: 'Ich habe noch NICHT an dieser oder einer ähnlichen Studie teilgenommen.',
-      value: 'keine ähnliche Studie teilgenommen'
+      value: 'Ich habe noch NICHT an dieser oder einer ähnlichen Studie teilgenommen.',
     },
   ]
 
@@ -401,11 +401,11 @@ export function InstructionFrame209(props) {
   const options = [
     {
       label: 'Ich habe ernsthaft teilgenommen und die Aufgaben entsprechend bearbeitet',
-      value: 'ernsthaft'
+      value: 'Ich habe ernsthaft teilgenommen und die Aufgaben entsprechend bearbeitet',
     },
     {
       label: 'Ich habe nicht ernsthaft teilgenommen und mich (teilweise) unaufmerksam durchgeklickt. ',
-      value: 'nicht'
+      value: 'Ich habe nicht ernsthaft teilgenommen und mich (teilweise) unaufmerksam durchgeklickt. ',
     },
   ]
 
@@ -428,15 +428,15 @@ export function InstructionFrame210(props) {
   const options = [
     {
       label: 'Nein',
-      value: 'Nein'
+      value: 'Hilsmittel? Nein'
     },
     {
       label: 'Keine Angabe',
-      value: 'Keine Angabe'
+      value: 'Hilsmittel? Keine Angabe'
     },
     {
       label: 'Ja',
-      value: 'JA'
+      value: 'Hilsmittel? Ja'
     },
   ]
 
@@ -454,11 +454,11 @@ export function InstructionFrame211a(props) {
   const options = [
     {
       label: 'Nein',
-      value: 'Nein'
+      value: 'Schwierigkeiten? Nein'
     },
     {
       label: 'Ja',
-      value: 'Ja'
+      value: 'Schwierigkeiten? Ja'
     },
   ]
 
@@ -491,7 +491,7 @@ export function InstructionFrame211b(props) {
 
 
 export function InstructionFrame212(props) {
-  const initial = {feedback: ''};
+  const initial = {feedbackAllgemein: ''};
   let data=initial;
   const validationSchema = Yup.object();
 
@@ -500,7 +500,7 @@ export function InstructionFrame212(props) {
     <Form initial={initial}  finish={props.finish} validationSchema={validationSchema}>
     <MyTextArea style={{width: '100%'}}
       large
-      name={'feedbackAllgmein'}
+      name={'feedbackAllgemein'}
       label={'Möchtest du uns zu dem Experiment noch etwas miteilen? Dann trage es hier ins Textfeld ein:'}
     />
     </Form>

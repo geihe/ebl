@@ -17,6 +17,9 @@ export function LikertFrame(props) {
   function callback(rating) {//TODO get delay from config
     const delay = 500;
     const log = {
+      title,
+      item,
+      unit,
       rating,
       min,
       max,

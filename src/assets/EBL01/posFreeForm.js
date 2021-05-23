@@ -5,11 +5,11 @@ export const posFreeForm = [
   {
     id: 'postConceptNew_1',
     header: [
-      <p>Fünf Leute nehmen mit ihren Meerschweinchen an einem Labyrinthwettbewerb teil. Das Meerscheinchen gewinnt,
+      <p key={1}>Fünf Leute nehmen mit ihren Meerschweinchen an einem Labyrinthwettbewerb teil. Das Meerscheinchen gewinnt,
         welches als Erstes den Ausgang findet. Alle Meerschweinchen haben dieselbe Chance zu gewinnen. Wenn du den
         Gewinner und den Zweiten vorhersagen willst, ist die Chance, dass du richtig liegst, <MathComponent
           tex={String.raw`{1 \over 5} \cdot {1 \over 4}`} display={false}/>.</p>,
-      <p>Wenn du die beiden Ersten vorhersagen willst, ohne zu sagen, wer Erster und wer Zweiter wird, ist die Chance,
+      <p key={3}>Wenn du die beiden Ersten vorhersagen willst, ohne zu sagen, wer Erster und wer Zweiter wird, ist die Chance,
         dass du richtig liegst  <MathComponent tex={String.raw`2 \cdot ({1 \over 5} \cdot {1 \over 4})`} display={false}/>.</p>,
     ],
     question: `Warum wird in der zweiten Berechnung mit 2 multipliziert, in der ersten Berechnung jedoch nicht?`,

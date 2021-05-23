@@ -12,7 +12,7 @@ export function YesNoSure(props) {
   const {callback, delay = 500} = props;
   const t = useContext(LngContext);
   const [values, setValues] = useStateDelayed({answer: null, rating: null})
-  const options = [{value: 'richtig', label: 'Richtig'}, {value: 'falsch', label: 'Falsch'}];
+  const options = [{value: true, label: 'Richtig'}, {value: false, label: 'Falsch'}];
 
   if (values.answer && values.rating) {
     setValues(() => callback(values), delay)

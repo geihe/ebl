@@ -1,4 +1,14 @@
 - Wie oft InstructionTest
 - <StimulusResponseFrame> --> id, duration, log.stimulus, log.response, log.valid
-- Dauer der Mathcourse-Elemente speichern MathCourse02 bis MathCourse08,
+- Dauer der Mathcourse-Elemente speichern MathCourse02 bis MathCourse08, --> id, duration
 - EBLWaitFrame: summary
+- Likert-Fragen nach EBL-Frame zusammenfassen
+- JoLFrame1-4 Mittelwert
+- postMC, postNT2, postFT2, postMC_draw3: id, duration, log.response, log.valid
+- postConcept: id, duration, log.response.value, log.response.label
+- postConceptNew, postOpen: id, duration, log.response
+- pz-rvt: id, duration, log.response.answer, log.response.rating
+- EBL01_Demographics: id, duration, log.age, log.degree, log.gender, log.nativeLanguage, log.subject
+- InstructionFrame206 207: component, duration, log.title, log.percent
+- InstructionFrame208 209 210 211a: component, duration, log
+- InstructionFrame: component, duration, log.feedbackAllgemein
