@@ -16,8 +16,26 @@ export function EblWaitFrame(props) {
   const header = content.singleHeader && <Html html={t(content.htmlHeader)}/>;
   const toast = useRef(null);
   const toastRight = useRef(null);
+  const dataWithSummary = (data) => {
+    const explanations = new Map();
+    data.explanations.forEach((e) => explanations.set(e.id, {
+      id: e.id, valid: e.valid, title: e.html, label: e.value
+    }));
+    console.log(data.explanations);
+    return {
+      summary:
+        {
+          id: data.string,
+          explanations: Array.from(explanations.values())
+        },
+      ...data
+    };
+  }
   const [timer, setTimer] = useStateDelayed(Math.ceil(seconds));
-  timer > 0 ? setTimer(timer - 1, 1000) : setTimer(() => props.finish(logData.current), 1000);
+  timer > 0 ? setTimer(timer - 1, 1000) : setTimer(() => {
+    console.log(dataWithSummary(logData.current));
+    props.finish(dataWithSummary(logData.current));
+  }, 1000);
   useEffect(() => {
     if (timer === Math.ceil(hurry) && !state.waiting) {
       toastRight.current.show({
@@ -29,7 +47,7 @@ export function EblWaitFrame(props) {
   })
 
   const nextExplanation = (data) => {
-      logData.current.explanations.push(data);
+    logData.current.explanations.push(data);
     const lastExpAnswered = !state.waiting && state.activeExp >= explanations.length - 1;
     if (lastExpAnswered) {
       toast.current.show({
@@ -48,8 +66,7 @@ export function EblWaitFrame(props) {
     setState(s => newStateFunction(s));
   }
 
-  const onExplClick = (index) => {
-    console.log(index);
+  const onExplClick = (index, event) => {
     if (state.waiting) {
       const newStateFunction = (state) => (
         {
@@ -60,7 +77,6 @@ export function EblWaitFrame(props) {
 
       setState(s => newStateFunction(s));
     }
-
   }
 
   const textExplanations = content.htmlExplanations.map((explanation, index) =>
@@ -75,7 +91,7 @@ export function EblWaitFrame(props) {
   );
   const radios = content.htmlRadios.map((radio, index) =>
     <SingleRadios
-      onClick={() => onExplClick(index)}
+      onClick={(event) => onExplClick(index, event)}
       finish={(data) => nextExplanation(data)}
       key={index}
       html={radio.html}
@@ -211,23 +227,25 @@ function SingleRadios(props) {
   const {finish, options, html, active, waiting, id, showIcon, onClick} = props;//TODO id benutzen
   const activeClass = active ? ' ' + styles.highlight : '';
   const waitingClass = waiting ? ' ' + styles.mousePointer : '';
+  const myCallback = (data) => finish({...data, html: t(html), id})
   const icon = active ? <Icon icon="chevron-down"/>
     : <Icon icon="chevron-right"/>;
   return (
-    <div className={styles.singleExplanation + activeClass + waitingClass} onClick={onClick}>
+    <div className={styles.singleExplanation + activeClass + waitingClass}>
       <div style={{display: 'flex'}}>
         {showIcon ? icon : ''}
-        <Html
-          className={styles.explanationHeader}
-          style={{marginBottom: '8px'}}
-          html={t(html)}/></div>
+        <Html onClick={onClick}
+              className={styles.explanationHeader}
+              style={{marginBottom: '8px'}}
+              html={t(html)}/>
+      </div>
       {<ResponseRadioButtons
         display={active}
         delay={300}
-        callback={finish}
+        callback={myCallback}
         options={options}
         autoContinue={true}
-      /> }
+      />}
     </div>
   )
 }

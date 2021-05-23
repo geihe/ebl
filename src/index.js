@@ -18,16 +18,14 @@ let t;
 let returnUrl;
 function finished(data) {
   const {userId, session, groupId, mailId} = data[0];
-  console.log("Daten zum Server: ", JSON.stringify(data));
-  server.postData(userId, session, groupId, {test: 1}, mailId )
+  server.postData(userId, session, groupId, data, mailId )
     .then( () => {
-      alert("Daten gespeichert")
+      alert("Daten gespeichert");
       window.location.href = returnUrl;
     }); //zurück zu Unipark etc.
 }
 
 getElementInfo().then((info) => {
-  console.log(info);
   t = (ressource, param) =>
     translate(info.language, ressource, param);
   let element;
@@ -43,12 +41,10 @@ getElementInfo().then((info) => {
       break;
     default: //Session
       const initData = info.initialData[0];
-      console.log(initData);
       const tb = new EBL01Builder(t);
       tb.setSession(initData.session)
         .setGroup(initData.groupId)
         .build();
-      console.log(tb.getTimeline()); //TODO ggf. entfernen
       element =
         <Session timeline={tb.getTimeline()} initialData={info.initialData} finished={(data) => finished(data)}/>
   }
@@ -95,7 +91,6 @@ async function getElementInfo() {
 
   if (!dataItemsJSON) { //neues Experiment
     const serverData = await server.getNewData();
-    console.log(URLparams, serverData);
 
     initialData.session = URLparams.session ? +URLparams.session : serverData.session;
     initialData.language = URLparams.language ? URLparams.language : serverData.language;

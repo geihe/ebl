@@ -89,9 +89,9 @@ export function InstructionTest(props) {
   }
 
   function onClick(items) {
-    const correct = items.reduce((acc, val, ind) => acc && (val === ind), true);
-    data.current = {items, correct};
-    setPhase(correct ? 'correctOrder' : 'wrongOrder')
+    const valid = items.reduce((acc, val, ind) => acc && (val === ind), true);
+    data.current = {items, valid};
+    setPhase(valid ? 'correctOrder' : 'wrongOrder')
   }
 
   switch (phase) {

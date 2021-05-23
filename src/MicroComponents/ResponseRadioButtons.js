@@ -1,4 +1,4 @@
-import React, {useContext} from 'react';
+import React, {useContext, useState} from 'react';
 import {LngContext} from "../helper/i18n";
 import {phrase} from "../assets/ressourceLanguage";
 import styles from "../css/shortResponse.module.css"
@@ -7,20 +7,22 @@ import {useStateDelayed} from "../Hooks/useStateDelayed";
 
 export function ResponseRadioButtons(props) {
   const {callback, display = true, inline, autoContinue = false, delay = 500, options = []} = props;
-  const [value, setValue] = useStateDelayed(null)
+  const [value, setValue] = useState(null);
+  const [delayed, setDelayed] = useStateDelayed(false);
   const t = useContext(LngContext);
-
 
   if (!display) {
     return null;
   }
-  /*    if (value && autoContinue) {
-          setValue(() => callback(options[value]), delay);
-      }*/
+
+  if (delayed) {
+    setDelayed(() => callback(options[value]), delay);
+    setDelayed(false);
+  }
 
   const onChange = (event) => {
-    setValue(event.currentTarget.value);
-    setValue(() => callback(options[value]), delay); //TODO sauberer Programmieren
+    setValue(() => event.currentTarget.value);
+    setDelayed(true); //TODO sauberer Programmieren
   };
 
   return (
