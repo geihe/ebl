@@ -66,12 +66,14 @@ export function exampleFrames(group) {
   console.log(exampleItems);
   return exampleItems.map((itemGroup, index) => {
       return itemGroup.map(s =>
-        [<EblWaitFrame
+        [{id: 'Examples_'+s,
+          frame: <EblWaitFrame
           config={exampleConfig}
           content={rem.string2html(s)}
-          seconds={config.timeForExamples/itemGroup.length}
-          hurry={config.timeForExamples/itemGroup.length/5}
-        />,
+          seconds={config.timeForExamples / itemGroup.length}
+          hurry={config.timeForExamples / itemGroup.length /5}
+        />
+    },
           <FixationCrossFrame nocross/>]
       )
         .concat([cognitiveEffortFrame, processMeasureFrames])

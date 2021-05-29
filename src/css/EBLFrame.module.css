@@ -12,6 +12,14 @@
     font-size: 30px;
 }
 
+.lowOnTime, .highlight.lowOnTime {
+    background-color: #de8c8c;
+}
+
+.highlight {
+    background-color: #e3e3f3;
+}
+
 .exampleContainer {
     display: flex;
     flex-direction: column;
@@ -46,10 +54,6 @@
     background-color: #bbbbbb;
     border: 1px solid blue;
     border-radius: 2px;
-}
-
-.highlight {
-    background-color: #e3e3f3;
 }
 
 .mousePointer {

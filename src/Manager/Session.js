@@ -8,7 +8,6 @@ import {config} from "../config";
 
 function Frame(props) {
   const {el} = props;
-  console.log(el);
   const [remainingTime, setRemainigTime] = useStateDelayed(el.timer || 0);
 
   const hasTimer = typeof el.timer !== 'undefined';
@@ -64,10 +63,8 @@ function Frame(props) {
 
 export function Session(props) {
   const {timeline, initialData} = props;
-
   const [index, setIndex] = useState(0);
   const data = useRef(initialData);
-
   if (index >= timeline.length || data.current[0].finished) {
     return finish();
   }

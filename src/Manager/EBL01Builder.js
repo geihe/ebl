@@ -86,13 +86,13 @@ export class EBL01Builder {
     // -->InstructionFrame02
     this.tlManager.add([
       {milestone: true},
-      <InstructionFrame01/>,
+      {frame: <InstructionFrame01/>, id:99},
       <EBL01Video videoID={'introduction'}/>,
       <InstructionFrame03/>,
       {
         repeat: [<InstructionFrame04/>, <InstructionFrame06/>,
-          <InstructionTest/>,],
-        until: (lastlog) => lastlog.correct
+          {frame: <InstructionTest/>, id:'InstructionTest'}],
+        until: (lastlog) => lastlog.valid
       },
       <InstructionFrame09/>, cancelTest,
       <InstructionFrame10/>, cancelTest,
@@ -113,10 +113,10 @@ export class EBL01Builder {
       exampleFrames(this.group),
       {milestone: true},
       <InstructionFrame103/>,
-      <JolFrame1/>,
-      <JolFrame2/>,
-      <JolFrame3/>,
-      <JolFrame4/>,
+      {frame: <JolFrame1/>, id:'JoL1'},
+      {frame: <JolFrame2/>, id:'JoL2'},
+      {frame: <JolFrame3/>, id:'JoL3'},
+      {frame: <JolFrame4/>, id:'JoL4'},
       {timer: config.pauseSeconds, frames: [<EBLPause/>]},
       {milestone: true},
       <InstructionFrame200/>,
@@ -125,20 +125,19 @@ export class EBL01Builder {
       <InstructionFrame203/>, postFrames[2], {milestone: true},
 
       <InstructionFrame204/>,
-      <EBL01_Demographics/>,
-      <InstructionFrame206/>, <FixationCrossFrame nocross/>,
-      <InstructionFrame207/>, <FixationCrossFrame nocross/>,
-      <InstructionFrame208/>, <FixationCrossFrame nocross/>,
-      <InstructionFrame209/>, <FixationCrossFrame nocross/>,
-      <InstructionFrame210/>, <FixationCrossFrame nocross/>,
-      <InstructionFrame211a/>,
+      {frame: <EBL01_Demographics/>, id:'Demographics'},
+      {frame: <InstructionFrame206/>, id:'Störung'}, <FixationCrossFrame nocross/>,
+      {frame: <InstructionFrame207/>, id:'Konzentration'}, <FixationCrossFrame nocross/>,
+      {frame: <InstructionFrame208/>, id:'IstStudieNeu'}, <FixationCrossFrame nocross/>,
+      {frame: <InstructionFrame209/>, id:'Ernsthaft'}, <FixationCrossFrame nocross/>,
+      {frame: <InstructionFrame210/>, id:'Hilfsmittel'}, <FixationCrossFrame nocross/>,
+      {frame: <InstructionFrame211a/>, id:'GabEsSchwierigkeiten'},
       {
         if: (lastlog) => lastlog === 'Ja',
-        then: <InstructionFrame211b/>,
+        then: {frame: <InstructionFrame211b/>, id:'Schwierigkeiten'},
       },
       <FixationCrossFrame nocross/>,
-      <InstructionFrame212/>,
-
+      {frame: <InstructionFrame212/>, id:'Feedback'},
     ]);
   }
 
@@ -148,7 +147,7 @@ export class EBL01Builder {
 
   buildTestSession() {
     this.tlManager.add(
-      postFrames[2],
+      exampleFrames(3)
     );
   }
 

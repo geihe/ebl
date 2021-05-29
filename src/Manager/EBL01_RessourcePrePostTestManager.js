@@ -71,7 +71,7 @@ export class EBL01_RessourcePrePostTestManager {
     const effort = item.effort || 1;
     return {
       effort,
-      id: item.id,
+      id: 'Test_' + item.id,
       frame: <StimulusResponseFrame
         key={item.id}
         stimulus={{

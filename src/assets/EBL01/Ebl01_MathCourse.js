@@ -5,22 +5,22 @@ import {config} from "../../config";
 
 
 const items=[
-  <MathCourse02/>,
-  <MathCourse03/>,
-  <MathCourse04a/>,
-  <MathCourse04b/>,
-  <MathCourse05/>,
-  <MathCourse06a/>,
-  <MathCourse06b/>,
-  <MathCourse07a/>,
-  <MathCourse07b/>,
-  <MathCourse07c/>,
-  <MathCourse08/>,
+  {frame: <MathCourse02/>, id:'MathCourse02'},
+  {frame: <MathCourse03/>, id:'MathCourse03'},
+  {frame: <MathCourse04a/>, id:'MathCourse04a'},
+  {frame: <MathCourse04b/>, id:'MathCourse04b'},
+  {frame: <MathCourse05/>, id:'MathCourse05'},
+  {frame: <MathCourse06a/>, id:'MathCourse06a'},
+  {frame: <MathCourse06b/>, id:'MathCourse06b'},
+  {frame: <MathCourse07a/>, id:'MathCourse07a'},
+  {frame: <MathCourse07b/>, id:'MathCourse07b'},
+  {frame: <MathCourse07c/>, id:'MathCourse07c'},
+  {frame: <MathCourse08/>, id:'MathCourse08'},
 ];
 
 export const ebl01_MathCourse = items.map(content =>( {
-  id: content.type.name,
-  frame:    <DelayedFrame space delay={config.mathCourse.delay}> {content} </DelayedFrame>
+  id: content.id,
+  frame:    <DelayedFrame space delay={config.mathCourse.delay}> {content.frame} </DelayedFrame>
   })
 );
 

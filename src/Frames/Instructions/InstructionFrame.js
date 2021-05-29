@@ -213,7 +213,8 @@ export function InstructionFrame16b(props) {
   const html = `
   <h1>Vortest</h1>
 <p>Dir werden nun 12 Aufgaben präsentiert. Du sollst die Aufgaben berechnen und die Lösungen in das Notizfeld eintippen. </p>
-<p>Bitte nutze [/] um Brüche auszudrücken. Beispiel: Schreibe ein Drittel als <strong>1/3</strong></p>
+<p>Bitte nutze [/] um Brüche auszudrücken und [*] um zu multiplizieren.<br/> Beispiel: Schreibe ein Drittel als <strong>1/3</strong>
+und ein Drittel mal ein Viertel als <strong>1/3 * 1/4</strong></p>
 <p>Bestätige deine Eingabe mit [Enter]. Du wirst dann automatisch zur nächsten Aufgabe weitergeleitet.</p>
   `;
   return <InstructionFrame html={html} space finish={props.finish}/>;
