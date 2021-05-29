@@ -23,14 +23,16 @@ export function EblWaitFrame(props) {
     }));
     const explanationArray = Array.from(explanationMap.values());
     const totalCount = explanationArray.length;
-    const validCount = explanationArray.reduce((count, cur) => count + cur.valid ? 1 : 0, 0);
+    const validCount = explanationArray.reduce((count, cur) => {
+      return cur.valid ? count + 1 : count
+    }, 0);
     return {
       summary:
         {
           id: data.string,
           validCount,
           totalCount,
-          percentage: Math.round(validCount/totalCount*100),
+          percentage: Math.round(validCount / totalCount * 100),
           explanations: explanationArray
         },
       ...data
@@ -38,9 +40,8 @@ export function EblWaitFrame(props) {
   }
   const [timer, setTimer] = useStateDelayed(Math.ceil(seconds));
   const startTime = useRef(Date.now());
-  const timerTime = seconds-(Date.now()-startTime.current)/1000;
-  console.log(timerTime);
-  timer > 0 ? setTimer(Math.round(timerTime-1), 1000) : setTimer(() => { //TODO keine Verzögerung bei Klick auf Radiobutton
+  const timerTime = seconds - (Date.now() - startTime.current) / 1000;
+  timer > 0 ? setTimer(Math.round(timerTime - 1), 1000) : setTimer(() => {
     console.log(dataWithSummary(logData.current));
     props.finish(dataWithSummary(logData.current));
   }, 1000);
@@ -57,7 +58,7 @@ export function EblWaitFrame(props) {
   const nextExplanation = (data) => {
     logData.current.explanations.push(data);
     const lastExpAnswered = !state.waiting && state.activeExp >= explanations.length - 1;
-    if (lastExpAnswered) {
+    if (lastExpAnswered && timerTime > 10) {
       toast.current.show({
         message: "Du hast noch etwas Zeit! Nutze die Zeit aktiv, die Lösungen nachzuvollziehen. Du kannst deine Antworten mit einem Klick öffnen und ändern.",
         intent: Intent.PRIMARY,

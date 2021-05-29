@@ -77,6 +77,11 @@ export const config = { //TODO Testzeiten zurücksetzen
   */
   examples: {
     groups: [//TODO 2. Session berücksichtigen
+      {  // group 0
+        id: 'full',
+        items: [
+        ]
+      },
       {  // group 1
         id: 'blocked-sequential',
         items: [
@@ -144,13 +149,6 @@ export const config = { //TODO Testzeiten zurücksetzen
             "c2 p1 r101-1044",
             "c3 p1 r100-1037",
             "c4 p1 r101-1045"],
-          // ["c1 p1-2-3-4 e1-2-3-4"],
-          // ["c2-3-4-1 p2 r10-13-20-25-31-33-41-45"],
-          // ["c1 p1 r0-3",
-          //   "c2 p2 r1-5",
-          //   "c3 p3 r0-4",
-          //   "c4 p4 r1-2"],
-          // ["c3 p2-3-4-1 r11-15-20-24-31-32-40-43"],
         ]
       },
     ],

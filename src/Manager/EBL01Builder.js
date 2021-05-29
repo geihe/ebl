@@ -147,7 +147,7 @@ export class EBL01Builder {
 
   buildTestSession() {
     this.tlManager.add(
-      postFrames[1]
+      exampleFrames(this.group)
     );
   }
 

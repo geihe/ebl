@@ -7,12 +7,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c0a8d840-d2a4-41a1-9e79-f574c09cafbd" name="Default Changelist" comment="Färbung der Erkläreingabe bei knapper Zeit">
+    <list default="true" id="c0a8d840-d2a4-41a1-9e79-f574c09cafbd" name="Default Changelist" comment="Bugfix Berechnung validCount">
       <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Frames/EBL/EBL01_ExampleFrames.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frames/EBL/EBL01_ExampleFrames.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Frames/EBL/EblWaitFrame.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frames/EBL/EblWaitFrame.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Manager/EBL01Builder.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Manager/EBL01Builder.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MicroComponents/ResponseTextArea.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/MicroComponents/ResponseTextArea.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/EBL01/examples/fahrradhelm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/EBL01/examples/fahrradhelm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -342,14 +346,7 @@
       <workItem from="1622131790113" duration="491000" />
       <workItem from="1622201058333" duration="4093000" />
       <workItem from="1622214992560" duration="13693000" />
-      <workItem from="1622269555835" duration="2873000" />
-    </task>
-    <task id="LOCAL-00034" summary="Instruktionen bis 21 vorbereitet">
-      <created>1613288614560</created>
-      <option name="number" value="00034" />
-      <option name="presentableId" value="LOCAL-00034" />
-      <option name="project" value="LOCAL" />
-      <updated>1613288614560</updated>
+      <workItem from="1622269555835" duration="8578000" />
     </task>
     <task id="LOCAL-00035" summary="DelayedSpaceFrame und DelayedButtonFrame in&#10;&#10;DelayedFrame&#10;&#10;integriert und Programm angepasst.">
       <created>1613293406416</created>
@@ -687,7 +684,14 @@
       <option name="project" value="LOCAL" />
       <updated>1622271604810</updated>
     </task>
-    <option name="localTasksCounter" value="83" />
+    <task id="LOCAL-00083" summary="Bugfix Berechnung validCount">
+      <created>1622274776553</created>
+      <option name="number" value="00083" />
+      <option name="presentableId" value="LOCAL-00083" />
+      <option name="project" value="LOCAL" />
+      <updated>1622274776553</updated>
+    </task>
+    <option name="localTasksCounter" value="84" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -722,7 +726,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="Datenschutzerklärung aktualisiert" />
     <MESSAGE value="Mc-Fragen angepasst, damit stets Anzahl der Ereignispfade und Änderung der Ergebnisanzahl geprüft wird" />
     <MESSAGE value="Tippfehler in Datenschutzerklärung korrigiert" />
     <MESSAGE value="Demographics angepasst" />
@@ -747,7 +750,8 @@
     <MESSAGE value="Zeit wieder hochgesetzt" />
     <MESSAGE value="Bugfixes" />
     <MESSAGE value="Färbung der Erkläreingabe bei knapper Zeit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Färbung der Erkläreingabe bei knapper Zeit" />
+    <MESSAGE value="Bugfix Berechnung validCount" />
+    <option name="LAST_COMMIT_MESSAGE" value="Bugfix Berechnung validCount" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
 </project>

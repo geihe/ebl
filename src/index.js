@@ -96,9 +96,10 @@ async function getElementInfo() {
     initialData.language = URLparams.language ? URLparams.language : serverData.language;
     initialData.userId = URLparams.user_id ? +URLparams.user_id : serverData.user_id;
     initialData.groupId = URLparams.group_id ? +URLparams.group_id : serverData.group_id;
+    initialData.group = config.examples.groups[initialData.groupId].id;
     initialData.userAgent = navigator.userAgent;
-
-    if (initialData.groupId < 0) {
+    console.log("Gruppe ", initialData.groupId, initialData.group);
+    if (initialData.groupId < 1) {
       return {type: 'full', language: initialData.language}
     }
 
