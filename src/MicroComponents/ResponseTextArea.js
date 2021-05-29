@@ -23,6 +23,7 @@ export function ResponseTextArea(props) {
         onChange={(event) => setText(event.target.value)}
         onPaste={e => e.preventDefault()}
         value={text}
+        isEditing={true} // focus on textarea
       />
       <Button
         intent={buttonActive ? 'primary' : 'none'}

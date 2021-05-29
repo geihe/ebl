@@ -23,7 +23,7 @@ export function EblWaitFrame(props) {
     }));
     const explanationArray = Array.from(explanationMap.values());
     const totalCount = explanationArray.length;
-    const validCount = explanationArray.reduce((count, cur) => count + cur ? 1 : 0, 0);
+    const validCount = explanationArray.reduce((count, cur) => count + cur.valid ? 1 : 0, 0);
     return {
       summary:
         {
@@ -50,7 +50,7 @@ export function EblWaitFrame(props) {
       toastRight.current.show({
         message: "Du hast nicht mehr viel Zeit. Bitte beantworte alle Fragen.",
         intent: Intent.DANGER,
-        timeout: 7777
+        timeout: 10000
       });
     }
   })
@@ -61,7 +61,7 @@ export function EblWaitFrame(props) {
       toast.current.show({
         message: "Du hast noch etwas Zeit! Nutze die Zeit aktiv, die Lösungen nachzuvollziehen. Du kannst deine Antworten mit einem Klick öffnen und ändern.",
         intent: Intent.PRIMARY,
-        timeout: 8888
+        timeout: 10000
       });
     }
     const newStateFunction = (state) => (
