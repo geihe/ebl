@@ -10,10 +10,11 @@ import {config} from "./config";
 import {SessionFinished} from "./MicroComponents/SessionFinished";
 import {Server} from "./helper/Server";
 import {ExperimentFullFrame} from "./Frames/Instructions/ExperimentFullFrame";
+import {processData} from "./Test/processData";
 
 FocusStyleManager.onlyShowFocusOnTabs();
 const server = new Server();
-
+console.log(processData()); //TODO löschen
 let t;
 let returnUrl;
 function finished(data) {
@@ -86,7 +87,19 @@ async function getElementInfo() {
     tic: params.get('tic'), //Unipark
     external_id: params.get('external_id'), //Sonas
   }
-  returnUrl = 'https://ww2.unipark.de/uc/M_APLME_Kubik/ea33/ospe.php?return_tic='+URLparams.tic;
+
+  const returnUrlOther='https://ww2.unipark.de/uc/M_APLME_Kubik/8055/';
+  const returnUrlUnipark = 'https://ww2.unipark.de/uc/M_APLME_Kubik/ea33/ospe.php?return_tic='+URLparams.tic;
+  const returnUrlSonas = 'https://bielefeld-psy.sona-systems.com//webstudy_credit.aspx?experiment_id=171&credit_token=5c69f412686040df8ee72b2106213d08&survey_code='+URLparams.external_id;
+
+  if (URLparams.tic) {
+    returnUrl=returnUrlUnipark;
+  } else if (URLparams.external_id) {
+    returnUrl=returnUrlSonas;
+  } else {
+    returnUrl = returnUrlOther;
+  }
+
   const dataItemsJSON = localStorage.getItem('data');
 
   if (!dataItemsJSON) { //neues Experiment

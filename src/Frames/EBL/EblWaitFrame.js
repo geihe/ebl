@@ -9,7 +9,7 @@ import {useStateDelayed} from "../../Hooks/useStateDelayed";
 import {TimeView} from "../../MicroComponents/TimeView";
 
 export function EblWaitFrame(props) {
-  const {content, config, seconds = 60, hurry = 15} = props;
+  const {content, config, seconds = 60, hurry = 15, explanationTime} = props;
   const t = useContext(LngContext);
   const [state, setState] = useState({activeExp: 0, waiting: false}); // active explanation box
   const logData = useRef({string: content.string, explanations: []});
@@ -130,18 +130,18 @@ export function EblWaitFrame(props) {
     activeNrs.push(...activeExplanationNumbers.exampleNrs);
   } //TODO eleganter
 
+const displayExplanation = timerTime < explanationTime;
   const examples = content.htmlExamples.map((ex, index) => {
       return <SingleExample
         key={index}
         example={ex}
         nr={index + 1}
-        active={activeNrs.includes(index)}
+        active={activeNrs.includes(index) && displayExplanation}
         singleHeader={content.singleHeader}
         showCount={content.htmlExamples.length > 1}
       />;
     }
   );
-
   return (<>
       <div className={styles.header}>
         <Toaster position={Position.TOP_RIGHT} maxToasts={1} ref={toast}/>
@@ -152,7 +152,8 @@ export function EblWaitFrame(props) {
           <ExHeader header={header}/>
           <Examples examples={examples}/>
         </div>
-        <div className={styles.explanations}>
+
+        <div style={{opacity: displayExplanation ? 1 : 0, transition: 'opacity 0.5s'}} className={styles.explanations}>
           <Toaster position={Position.TOP_RIGHT} maxToasts={1} ref={toastRight}/>
           {explanations}
         </div>

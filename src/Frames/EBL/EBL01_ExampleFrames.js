@@ -71,6 +71,7 @@ export function exampleFrames(group) {
           config={exampleConfig}
           content={rem.string2html(s)}
           seconds={config.timeForExamples / itemGroup.length}
+          explanationTime={config.timeForExamples / itemGroup.length /2}
           hurry={config.timeForExamples / itemGroup.length /5}
         />
     },

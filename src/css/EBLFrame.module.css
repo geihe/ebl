@@ -12,11 +12,11 @@
     font-size: 30px;
 }
 
-.lowOnTime, .highlight.lowOnTime {
+.lowOnTime, .singleExplanation.highlight.lowOnTime {
     background-color: #de8c8c;
 }
 
-.highlight {
+.singleExample.highlight, .singleExplanation.highlight {
     background-color: #e3e3f3;
 }
 

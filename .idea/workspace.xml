@@ -7,15 +7,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c0a8d840-d2a4-41a1-9e79-f574c09cafbd" name="Default Changelist" comment="Bugfix Berechnung validCount">
+    <list default="true" id="c0a8d840-d2a4-41a1-9e79-f574c09cafbd" name="Default Changelist" comment="group type as text included in data[0]">
+      <change afterPath="$PROJECT_DIR$/src/Test/processData.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Test/testData.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Frames/EBL/EBL01_ExampleFrames.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frames/EBL/EBL01_ExampleFrames.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Frames/EBL/EblWaitFrame.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frames/EBL/EblWaitFrame.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Manager/EBL01Builder.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Manager/EBL01Builder.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/EBL01/examples/fahrradhelm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/EBL01/examples/fahrradhelm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Frames/Instructions/ExperimentFullFrame.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frames/Instructions/ExperimentFullFrame.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Frames/Instructions/InstructionFrame.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frames/Instructions/InstructionFrame.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Frames/JolFrames.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frames/JolFrames.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/css/EBLFrame.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/css/EBLFrame.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -31,8 +34,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
         <option value="CSS File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -346,14 +349,11 @@
       <workItem from="1622131790113" duration="491000" />
       <workItem from="1622201058333" duration="4093000" />
       <workItem from="1622214992560" duration="13693000" />
-      <workItem from="1622269555835" duration="8578000" />
-    </task>
-    <task id="LOCAL-00035" summary="DelayedSpaceFrame und DelayedButtonFrame in&#10;&#10;DelayedFrame&#10;&#10;integriert und Programm angepasst.">
-      <created>1613293406416</created>
-      <option name="number" value="00035" />
-      <option name="presentableId" value="LOCAL-00035" />
-      <option name="project" value="LOCAL" />
-      <updated>1613293406416</updated>
+      <workItem from="1622269555835" duration="9073000" />
+      <workItem from="1622311743033" duration="756000" />
+      <workItem from="1622358432932" duration="8476000" />
+      <workItem from="1622377548282" duration="349000" />
+      <workItem from="1622380924690" duration="828000" />
     </task>
     <task id="LOCAL-00036" summary="Demographics ergänzt">
       <created>1613327187376</created>
@@ -691,7 +691,14 @@
       <option name="project" value="LOCAL" />
       <updated>1622274776553</updated>
     </task>
-    <option name="localTasksCounter" value="84" />
+    <task id="LOCAL-00084" summary="group type as text included in data[0]">
+      <created>1622282767224</created>
+      <option name="number" value="00084" />
+      <option name="presentableId" value="LOCAL-00084" />
+      <option name="project" value="LOCAL" />
+      <updated>1622282767224</updated>
+    </task>
+    <option name="localTasksCounter" value="85" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -726,7 +733,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="Mc-Fragen angepasst, damit stets Anzahl der Ereignispfade und Änderung der Ergebnisanzahl geprüft wird" />
     <MESSAGE value="Tippfehler in Datenschutzerklärung korrigiert" />
     <MESSAGE value="Demographics angepasst" />
     <MESSAGE value="Milestone korrigiert, richtig:&#10;{milestone: true}," />
@@ -751,7 +757,19 @@
     <MESSAGE value="Bugfixes" />
     <MESSAGE value="Färbung der Erkläreingabe bei knapper Zeit" />
     <MESSAGE value="Bugfix Berechnung validCount" />
-    <option name="LAST_COMMIT_MESSAGE" value="Bugfix Berechnung validCount" />
+    <MESSAGE value="group type as text included in data[0]" />
+    <option name="LAST_COMMIT_MESSAGE" value="group type as text included in data[0]" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/Test/testData.js</url>
+          <line>3468</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

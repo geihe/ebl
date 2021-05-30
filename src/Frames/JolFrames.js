@@ -8,7 +8,7 @@ export function JolFrame1(props) {
         max={100}
         step={10}
         unit={'%'}
-        title={'<p>1. Prozedurell:<br/> Du erhältst im Folgenden 12 Textaufgaben, in denen du die Wahrscheinlichkeit von bestimmten Ereignissen berechnen sollst - ähnlich wie du dies bisher kennengelernt hast.</p> ' +
+        title={'<p>1. Prozedurelle Aufgaben:<br/> Du erhältst im Folgenden 12 Textaufgaben, in denen du die Wahrscheinlichkeit von bestimmten Ereignissen berechnen sollst - ähnlich wie du dies bisher kennengelernt hast.</p> ' +
         '<p><strong>Für wieviel Prozent dieser Textaufgaben wirst du die Wahrscheinlichkeit von Ereignissen korrekt bestimmen?</strong></p>'}
         finish={props.finish}
       />
@@ -24,7 +24,7 @@ export function JolFrame2(props) {
         max={100}
         step={10}
         unit={'%'}
-        title={'<p>2. Konzeptuell:<br/> Du erhältst u.a. 6 offene Verständnisfragen zu den Texten und Beispielaufgaben, wie man Wahrscheinlichkeiten von Ereignissen berechnet. Du sollst diese Verständnisfragen in einem Antwortfeld schriftlich beantworten.</p> ' +
+        title={'<p>2. Konzeptuelle Aufgaben:<br/> Du erhältst u.a. 6 offene Verständnisfragen zu den Texten und Beispielaufgaben, wie man Wahrscheinlichkeiten von Ereignissen berechnet. Du sollst diese Verständnisfragen in einem Antwortfeld schriftlich beantworten.</p> ' +
         '<p><strong>Wie gut (vollständig) kannst du diese Verständnisfragen beantworten?</strong></p>'}
         finish={props.finish}
       />

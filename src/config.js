@@ -5,17 +5,17 @@ export const config = { //TODO Testzeiten zurücksetzen
   language: 'de',
   numberOfSessions: 1,
   timeBetweenSessionsInSeconds: 5 * 60, //7*60*60*24
-  pauseSeconds: 600, //600
-  timeForExamples: 300, //300
+  pauseSeconds: 10, //600
+  timeForExamples: 30, //300
   vph: 2,
 
   instructions: {
-    delay: 3000, //3000
+    delay: 30, //3000
     animation: '0.1s',
   },
 
   mathCourse: {
-    delay: 3000, //3000
+    delay: 30, //3000
     animation: '0.1s',
   },
 
@@ -26,7 +26,7 @@ export const config = { //TODO Testzeiten zurücksetzen
     textAreaMinLength: 5,
     inputMinLength: 1,
     radioAutoContinue: true,
-    radioDelay: 500, //800
+    radioDelay: 100, //800
 
     items: [
       'pre1step_1',
@@ -99,7 +99,7 @@ export const config = { //TODO Testzeiten zurücksetzen
             "c2 p3 r301-3047"],
           ["c4 p4 r400-4024",
             "c1 p4 r401-4055",
-            "c2 p4 r400-4026",
+            "c2 p4 r400-4027",
             "c3 p4 r401-4056"],
         ]
       },
@@ -112,16 +112,16 @@ export const config = { //TODO Testzeiten zurücksetzen
             "c1 p4 r401-4055"],
           ["c2 p2 r200-2035",
             "c2 p3 r301-3047",
-            "c2 p4 r400-4026",
+            "c2 p4 r400-4027",
             "c2 p1 r101-1044"],
-          ["c3 p3 r301-3026",
-            "c3 p4 r400-4057",
-            "c3 p1 r101-1036",
-            "c3 p2 r200-2056"],
+          ["c3 p3 r300-3026",
+            "c3 p4 r401-4056",
+            "c3 p1 r100-1036",
+            "c3 p2 r201-2056"],
           ["c4 p4 r400-4024",
-            "c4 p1 p1 r101-1047",
+            "c4 p1 r101-1047",
             "c4 p2 r200-2037",
-            "c4 p3 p3 r301-3045"],
+            "c4 p3 r301-3045"],
         ]
       },
       { // group 3
@@ -129,16 +129,16 @@ export const config = { //TODO Testzeiten zurücksetzen
         items: [
           ["c1-2-3-4 p1 r110-1135-121-1244-130-1336-141-1447"],
           ["c2-3-4-1 p2 r210-2135-221-2256-230-2337-241-2454"],
-          ["c3-4-1-2 p3 r311-3145-320-3224-331-3347-340-3426"],
-          ["c4-1-2-3 p4 r410-4124-421-4255-430-4326-441-4455"],
+          ["c3-4-1-2 p3 r310-3126-321-3245-330-3324-341-3447"],
+          ["c4-1-2-3 p4 r410-4124-421-4255-430-4327-441-4456"],
         ]
       },
       { // group 4
         id: 'interleaved-simultaneous',
         items: [
           ["c1 p1-2-3-4 r110-1135-221-2254-330-3324-441-4455"],
-          ["c2 p2-3-4-1 r210-2135-321-3247-430-4326-141-1444"],
-          ["c3 p3-4-1-2 r310-3126-421-4257-130-1336-241-2456"],
+          ["c2 p2-3-4-1 r210-2135-321-3247-430-4327-141-1444"],
+          ["c3 p3-4-1-2 r310-3126-421-4256-130-1336-241-2456"],
           ["c4 p4-1-2-3 r410-4124-121-1247-230-2337-341-3445"],
         ]
       },

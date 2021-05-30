@@ -233,7 +233,7 @@ export function InstructionFrame100_sequenziell_12(props) {
   const html = `
   <h1>Aufbau des Lernprogramms I</h1>
   <p>Auf jeder Seite des Lernprogramms wird dir eine Beispielaufgabe präsentiert. Du sollst jede Aufgabe aufmerksam lesen und versuchen, die Lösung nachzuvollziehen. </p>
-  <p>Zudem befinden sich rechts auf jeder Seite des Lernprogramms Multiple-Choice-Fragen. Hier sollst du die deiner Meinung nach zutreffendste Antwort auswählen. Du kannst deine Wahl nicht mehr ändern. </p>
+  <p>Zudem werden nach einiger Zeit rechts auf jeder Seite des Lernprogramms Multiple-Choice-Fragen eingeblendet. Hier sollst du die deiner Meinung nach zutreffendste Antwort auswählen. Du kannst deine Wahl nicht mehr ändern. </p>
   <p>Du durchläufst vier Durchgänge mit jeweils vier Beispielaufgaben, sodass dir insgesamt 16 Beispielaufgaben präsentiert werden und du 16 Multiple Choice-Fragen beantwortest.</p>
   <p>Für die Bearbeitung von je vier Beispielaufgaben hast du fünf Minuten Zeit. Die Zeit kannst du frei einteilen, du solltest aber alle Texte sorgfältig gelesen und alle Lösungen genau nachvollzogen haben, bevor du die Multiple-Choice Fragen beantwortest. Nach Ablauf der fünf Minuten wirst du automatisch zur Befragung deines Flow-Erlebens und deiner kognitiven Beanspruchung weitergeleitet und kannst nicht mehr zurückgehen. Ein Timer wird eingeblendet.</p>
   `;
@@ -245,7 +245,7 @@ export function InstructionFrame100_simultan_34(props) {
   const html = `
   <h1>Aufbau des Lernprogramms I</h1>
   <p>Auf jeder Seite des Lernprogramms werden dir vier Beispielaufgaben präsentiert. Du sollst diese Aufgaben aufmerksam lesen und versuchen, die Lösung nachzuvollziehen. </p>
-  <p>Zu jeder Aufgabe sollst du zwei Multiple Choice-Fragen beantworten. Auf einer Seite also insgesamt acht Multiple-Choice-Fragen.</p>
+  <p>Nach einiger Zeit werden pro Aufgabe zwei Multiple Choice-Fragen eingeblendet, die du beantworten sollst. Auf einer Seite also insgesamt acht Multiple-Choice-Fragen.</p>
   <p>Du durchläufst vier Durchgänge mit jeweils vier Beispielaufgaben und acht Multiple Choice-Fragen, sodass dir insgesamt 16 Beispielaufgaben präsentiert werden und du 32 Multiple Choice-Fragen beantwortest.</p>
   <p>Für die Bearbeitung von je vier Beispielaufgaben hast du insgesamt fünf Minuten Zeit. Die Zeit kannst du frei einteilen, du solltest aber alle Lösungen nachvollzogen und alle Multiple Choice-Fragen beantwortet haben, denn nach Ablauf dieser Zeit wirst du automatisch zur Befragung deines Flow-Erlebens und deiner kognitiven Beanspruchung weitergeleitet und kannst nicht mehr zurückgehen. Ein Timer wird eingeblendet.</p>
   `;
@@ -325,7 +325,7 @@ export function InstructionFrame202(props) {
 
 export function InstructionFrame203(props) {
   const html = `
-  <p>Vielen Dank für die Berechnung der Aufgaben!</p>
+  <p>Vielen Dank!</p>
   <p>Dir werden nun 16 Textaufgaben präsentiert. Achtmal erhältst du zur Textaufgabe eine rechnerische Lösung. Bei acht weiteren Textaufgaben erhältst du eine Beschreibung eines der vier Prinzipien. </p>
   <p>Deine Aufgabe besteht nun darin, zu entscheiden, ob die rechnerische Lösung bzw. die Beschreibung des Prinzips zur Aufgabe passt. </p>
   <p>Lies die Aufgaben aufmerksam durch, überlege gut und entscheide dich dann für eine Antwort. Du wirst nach deiner Antwortwahl automatisch zur nächsten Antwort weitergeleitet. Du kannst nicht mehr zurückgehen.</p>
