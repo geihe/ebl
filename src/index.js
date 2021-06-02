@@ -12,15 +12,17 @@ import {Server} from "./helper/Server";
 import {ExperimentFullFrame} from "./Frames/Instructions/ExperimentFullFrame";
 import {processData} from "./Test/processData";
 
+export const TimefactorContext = React.createContext(1);
 FocusStyleManager.onlyShowFocusOnTabs();
 const server = new Server();
 console.log(processData()); //TODO löschen
 let t;
 let returnUrl;
+
 function finished(data) {
   const {userId, session, groupId, mailId} = data[0];
-  server.postData(userId, session, groupId, data, mailId )
-    .then( () => {
+  server.postData(userId, session, groupId, data, mailId)
+    .then(() => {
       alert("Daten gespeichert");
       window.location.href = returnUrl;
     }); //zurück zu Unipark etc.
@@ -47,7 +49,9 @@ getElementInfo().then((info) => {
         .setGroup(initData.groupId)
         .build();
       element =
-        <Session timeline={tb.getTimeline()} initialData={info.initialData} finished={(data) => finished(data)}/>
+        <TimefactorContext.Provider value={initData.timeFactor}>
+          <Session timeline={tb.getTimeline()} initialData={info.initialData} finished={(data) => finished(data)}/>
+        </TimefactorContext.Provider>
   }
 
   render(element);
@@ -63,6 +67,7 @@ function render(element) {
     document.getElementById('root')
   )
 }
+
 async function getElementInfo() {
 //TODO URLParams und localData vergleichen
   const packageJson = require('../package.json');
@@ -82,20 +87,20 @@ async function getElementInfo() {
     user_id: params.get('user_id'),
     group_id: params.get('group_id'),
     session: params.get('session'),
-    test: params.get('test'),
-    origin: params.get('origin'),
+    timeFactor: params.get('timefactor'),
     tic: params.get('tic'), //Unipark
     external_id: params.get('external_id'), //Sonas
+
   }
 
-  const returnUrlOther='https://ww2.unipark.de/uc/M_APLME_Kubik/8055/';
-  const returnUrlUnipark = 'https://ww2.unipark.de/uc/M_APLME_Kubik/ea33/ospe.php?return_tic='+URLparams.tic;
-  const returnUrlSonas = 'https://bielefeld-psy.sona-systems.com//webstudy_credit.aspx?experiment_id=171&credit_token=5c69f412686040df8ee72b2106213d08&survey_code='+URLparams.external_id;
+  const returnUrlOther = 'https://ww2.unipark.de/uc/M_APLME_Kubik/8055/';
+  const returnUrlUnipark = 'https://ww2.unipark.de/uc/M_APLME_Kubik/ea33/ospe.php?return_tic=' + URLparams.tic;
+  const returnUrlSonas = 'https://bielefeld-psy.sona-systems.com//webstudy_credit.aspx?experiment_id=171&credit_token=5c69f412686040df8ee72b2106213d08&survey_code=' + URLparams.external_id;
 
   if (URLparams.tic) {
-    returnUrl=returnUrlUnipark;
+    returnUrl = returnUrlUnipark;
   } else if (URLparams.external_id) {
-    returnUrl=returnUrlSonas;
+    returnUrl = returnUrlSonas;
   } else {
     returnUrl = returnUrlOther;
   }
@@ -106,12 +111,13 @@ async function getElementInfo() {
     const serverData = await server.getNewData();
 
     initialData.session = URLparams.session ? +URLparams.session : serverData.session;
+    initialData.timeFactor = +URLparams.timeFactor || 1;
     initialData.language = URLparams.language ? URLparams.language : serverData.language;
     initialData.userId = URLparams.user_id ? +URLparams.user_id : serverData.user_id;
     initialData.groupId = URLparams.group_id ? +URLparams.group_id : serverData.group_id;
     initialData.group = config.examples.groups[initialData.groupId].id;
     initialData.userAgent = navigator.userAgent;
-    console.log("Gruppe ", initialData.groupId, initialData.group);
+    console.log(initialData);
     if (initialData.groupId < 1) {
       return {type: 'full', language: initialData.language}
     }

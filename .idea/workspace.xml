@@ -7,18 +7,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c0a8d840-d2a4-41a1-9e79-f574c09cafbd" name="Default Changelist" comment="group type as text included in data[0]">
-      <change afterPath="$PROJECT_DIR$/src/Test/processData.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Test/testData.js" afterDir="false" />
+    <list default="true" id="c0a8d840-d2a4-41a1-9e79-f574c09cafbd" name="Default Changelist" comment="Beispiele: MC-Fragen kommen verzögert&#10;MC-Fragen: kleine bugs korrigiert">
       <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Frames/EBL/EBL01_ExampleFrames.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frames/EBL/EBL01_ExampleFrames.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Frames/EBL/EblWaitFrame.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frames/EBL/EblWaitFrame.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Frames/Instructions/ExperimentFullFrame.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frames/Instructions/ExperimentFullFrame.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Frames/Instructions/InstructionFrame.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frames/Instructions/InstructionFrame.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Frames/JolFrames.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frames/JolFrames.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Frames/DelayedFrame.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frames/DelayedFrame.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Frames/LikertFrame.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frames/LikertFrame.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Manager/EBL01Builder.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Manager/EBL01Builder.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Test/processData.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Test/processData.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/css/EBLFrame.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/css/EBLFrame.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -353,14 +349,11 @@
       <workItem from="1622311743033" duration="756000" />
       <workItem from="1622358432932" duration="8476000" />
       <workItem from="1622377548282" duration="349000" />
-      <workItem from="1622380924690" duration="828000" />
-    </task>
-    <task id="LOCAL-00036" summary="Demographics ergänzt">
-      <created>1613327187376</created>
-      <option name="number" value="00036" />
-      <option name="presentableId" value="LOCAL-00036" />
-      <option name="project" value="LOCAL" />
-      <updated>1613327187376</updated>
+      <workItem from="1622380924690" duration="1338000" />
+      <workItem from="1622404378373" duration="4702000" />
+      <workItem from="1622560620640" duration="2547000" />
+      <workItem from="1622568025903" duration="1385000" />
+      <workItem from="1622652350395" duration="2162000" />
     </task>
     <task id="LOCAL-00037" summary="Instruktionen 22b I ergänzt">
       <created>1613329688607</created>
@@ -698,7 +691,14 @@
       <option name="project" value="LOCAL" />
       <updated>1622282767224</updated>
     </task>
-    <option name="localTasksCounter" value="85" />
+    <task id="LOCAL-00085" summary="Beispiele: MC-Fragen kommen verzögert&#10;MC-Fragen: kleine bugs korrigiert">
+      <created>1622382059079</created>
+      <option name="number" value="00085" />
+      <option name="presentableId" value="LOCAL-00085" />
+      <option name="project" value="LOCAL" />
+      <updated>1622382059079</updated>
+    </task>
+    <option name="localTasksCounter" value="86" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -733,7 +733,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="Tippfehler in Datenschutzerklärung korrigiert" />
     <MESSAGE value="Demographics angepasst" />
     <MESSAGE value="Milestone korrigiert, richtig:&#10;{milestone: true}," />
     <MESSAGE value="EBLWaitFrame eingebaut&#10;Zeiten in config.js in Testmodus gesetzt" />
@@ -758,7 +757,8 @@
     <MESSAGE value="Färbung der Erkläreingabe bei knapper Zeit" />
     <MESSAGE value="Bugfix Berechnung validCount" />
     <MESSAGE value="group type as text included in data[0]" />
-    <option name="LAST_COMMIT_MESSAGE" value="group type as text included in data[0]" />
+    <MESSAGE value="Beispiele: MC-Fragen kommen verzögert&#10;MC-Fragen: kleine bugs korrigiert" />
+    <option name="LAST_COMMIT_MESSAGE" value="Beispiele: MC-Fragen kommen verzögert&#10;MC-Fragen: kleine bugs korrigiert" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
