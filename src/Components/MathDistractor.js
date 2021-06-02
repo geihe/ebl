@@ -3,15 +3,15 @@ import {Zone} from "../MicroComponents/Zone";
 import {AdvancedInput} from "../MicroComponents/AdvancedInput";
 import styles from "../css/MathDistractor.module.css"
 import {phrase} from "../assets/ressourceLanguage";
-import {LngContext} from "../helper/i18n";
 import {useStateDelayed} from "../Hooks/useStateDelayed";
+import {Context} from "../index";
 
 
 export function MathDistractor(props) {
   const {feedbackTime, testTask} = props;
   console.log(testTask);
   const [state, setState] = useStateDelayed('present');
-  const t = useContext(LngContext);
+  const {t, config} = useContext(Context);
   const correct = t(phrase.correct);
   const wrong = t(phrase.wrong);
   const logData = useRef({testTask});

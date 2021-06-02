@@ -1,11 +1,12 @@
 import React, {useContext, useState} from 'react';
-import {LngContext} from "../helper/i18n";
 import {Button} from "@blueprintjs/core";
 import {phrase} from "../assets/ressourceLanguage";
+import {Context} from "../index";
 
 export function Video(props) {
   const {url, callback} = props;
-  const t = useContext(LngContext);
+  const {t, config} = useContext(Context);
+
   const [ready, setReady] = useState(false);
   return (
     <>

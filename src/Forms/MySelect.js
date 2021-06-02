@@ -1,10 +1,10 @@
 import React, {useContext} from 'react';
 import {FormGroup, HTMLSelect} from "@blueprintjs/core";
-import {LngContext} from "../helper/i18n";
+import {Context} from "../index";
 
 
 export function MySelect(props) {
-  const t = useContext(LngContext);
+  const {t, config} = useContext(Context);
   const {
     name, onChange, label, error,
     options, ...otherProps

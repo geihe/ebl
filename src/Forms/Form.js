@@ -1,11 +1,11 @@
 import React, {useContext, useRef, useState} from 'react';
 import {Button} from "@blueprintjs/core";
-import {LngContext} from "../helper/i18n";
 import styles from "../css/Form.module.css"
+import {Context} from "../index";
 
 export function Form(props) {
   const validationSchema = props.validationSchema;
-  const t = useContext(LngContext);
+  const {t, config} = useContext(Context);
   const [state, setState] = useState({
     data: props.initial,
     errors: {}

@@ -41,11 +41,11 @@ import {InstructionTest} from "../Frames/InstructionTest";
 import {postFrames, preTest} from "../assets/EBL01/EBL01_PrePostTest";
 import {EBL01Video} from "../Frames/EBL/EBL01Video";
 import {JolFrame1, JolFrame2, JolFrame3, JolFrame4} from "../Frames/JolFrames";
-import {config} from "../config";
 
 export class EBL01Builder {
-  constructor(t) {
-    this.t = t;
+  constructor(contextValue) {
+    this.t = contextValue.t;
+    this.config = contextValue.config;
     this.tlManager = new TimelineManager();
     this.session = 1;
     this.group = 0; //group von 1 bis 4 , 0 -> test
@@ -110,14 +110,14 @@ export class EBL01Builder {
         [<InstructionFrame100_simultan_34/>,
           <InstructionFrame101_simultan_34/>,]
       ,
-      exampleFrames(this.group),
+      exampleFrames(this.group, this.config),
       {milestone: true},
       <InstructionFrame103/>,
       {frame: <JolFrame1/>, id:'JoL1'},
       {frame: <JolFrame2/>, id:'JoL2'},
       {frame: <JolFrame3/>, id:'JoL3'},
       {frame: <JolFrame4/>, id:'JoL4'},
-      {timer: config.pauseSeconds, frames: [<EBLPause/>]},
+      {timer: this.config.pauseSeconds, frames: [<EBLPause/>]},
       {milestone: true},
       <InstructionFrame200/>,
       <InstructionFrame201/>, postFrames[0], {milestone: true},

@@ -1,22 +1,27 @@
-export const config = {
+const config = {
   develop: true,
   milestones: false,
 
   language: 'de',
   numberOfSessions: 1,
-  timeBetweenSessionsInSeconds: 5 * 60, //7*60*60*24
-  pauseSeconds: 600, //600
-  timeForExamples: 300, //300
-  likertFrameDelay: 500, //500
+
   vph: 2,
 
+  time: {
+    timeBetweenSessionsInSeconds: 5 * 60, //7*60*60*24
+    pauseSeconds: 600, //600
+    timeForExamples: 300, //300
+    likertFrameDelay: 500, //500
+    instructionsDelay: 3000, //3000
+    mathCourseDelay: 3000, //3000
+    prePostRadioDelay: 500, //500
+  },
+
   instructions: {
-    delay: 3000, //3000
     animation: '0.1s',
   },
 
   mathCourse: {
-    delay: 3000, //3000
     animation: '0.1s',
   },
 
@@ -27,7 +32,6 @@ export const config = {
     textAreaMinLength: 5,
     inputMinLength: 1,
     radioAutoContinue: true,
-    radioDelay: 500, //500
 
     items: [
       'pre1step_1',
@@ -163,7 +167,6 @@ export const config = {
     textAreaMinLength: 5,
     inputMinLength: 1,
     radioAutoContinue: true,
-    radioDelay: 777,
     items: [
       [
         'postMC_1',
@@ -218,6 +221,10 @@ export const config = {
 
     ],
   },
+}
 
-
+export function configObject(timeFactor=1) {
+  let c=config;
+  Object.keys(c.time).forEach(function(key){ c.time[key] = c.time[key]/timeFactor });
+  return c;
 }

@@ -1,9 +1,10 @@
 import React, {useContext, useRef, useState} from "react";
-import {LngContext} from "../helper/i18n";
+import {Context} from "../index";
 
 //props: ignoreKeys[], allowKeys[], endKeys[], placeholder, style
 export function AdvancedInput(props) {
-  const t = useContext(LngContext);
+  const {t, config} = useContext(Context);
+
   const {
     ignoreKeys=[],
     allowKeys=[],

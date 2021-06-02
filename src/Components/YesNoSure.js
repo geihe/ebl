@@ -1,16 +1,16 @@
 import React, {useContext} from 'react';
 import {FlexZone} from "../MicroComponents/FlexZone";
-import {LngContext} from "../helper/i18n";
 import {useStateDelayed} from "../Hooks/useStateDelayed";
 import {Likert} from "./Likert";
 import styles from "../css/shortResponse.module.css";
 import likertStyles from "../css/Likert.module.css";
 import {Radio, RadioGroup} from "@blueprintjs/core";
 import {Zone} from "../MicroComponents/Zone";
+import {Context} from "../index";
 
 export function YesNoSure(props) {
   const {callback, delay = 500} = props;
-  const t = useContext(LngContext);
+  const {t, config} = useContext(Context);
   const [values, setValues] = useStateDelayed({answer: null, rating: null})
   const options = [{value: true, label: 'Richtig'}, {value: false, label: 'Falsch'}];
 

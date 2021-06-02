@@ -1,16 +1,16 @@
 import React, {useContext} from 'react';
-import {LngContext} from "../../helper/i18n";
 import styles from "../../css/DelayedFrame.module.css";
 import {Zone} from "../../MicroComponents/Zone";
 import {Html} from "../../MicroComponents/Html";
 import {useStateDelayed} from "../../Hooks/useStateDelayed";
 import {useKeyListenerOnce} from "../../Hooks/useKeyListenerOnce";
+import {Context} from "../../index";
 
 
 //props:
 // text (html, continue), delay)
 export function ElementsKeyFrame(props) {
-  const t = useContext(LngContext);
+  const {t, config} = useContext(Context);
   const {elements, continueText, delay} = props;
   const [responseActive, setResponseActive] = useStateDelayed(!(delay > 0));
   useKeyListenerOnce(' ', () => props.finish(), responseActive);

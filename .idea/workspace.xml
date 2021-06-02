@@ -7,14 +7,43 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c0a8d840-d2a4-41a1-9e79-f574c09cafbd" name="Default Changelist" comment="Beispiele: MC-Fragen kommen verzögert&#10;MC-Fragen: kleine bugs korrigiert">
+    <list default="true" id="c0a8d840-d2a4-41a1-9e79-f574c09cafbd" name="Default Changelist" comment="Kleine bugfixes.">
       <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/MathDistractor.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/MathDistractor.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/YesNoSure.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/YesNoSure.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Forms/Form.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Forms/Form.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Forms/MyInput.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Forms/MyInput.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Forms/MyNumInput.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Forms/MyNumInput.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Forms/MyRadioGroup.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Forms/MyRadioGroup.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Forms/MySelect.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Forms/MySelect.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Forms/MyTextArea.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Forms/MyTextArea.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Frames/DelayedFrame.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frames/DelayedFrame.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Frames/DelayedRadioFrame.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frames/DelayedRadioFrame.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Frames/EBL/EBL01_ExampleFrames.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frames/EBL/EBL01_ExampleFrames.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Frames/EBL/EblFrame.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frames/EBL/EblFrame_archiv.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Frames/EBL/EblWaitFrame.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frames/EBL/EblWaitFrame.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Frames/EBL/ElementsKeyFrame.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frames/EBL/ElementsKeyFrame.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Frames/InstructionTest.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frames/InstructionTest.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Frames/Instructions/Instruction10.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frames/Instructions/Instruction10.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Frames/Instructions/InstructionFrame.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frames/Instructions/InstructionFrame.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Frames/LikertFrame.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frames/LikertFrame.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Frames/SliderFrame.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frames/SliderFrame.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Manager/EBL01Builder.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Manager/EBL01Builder.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Test/processData.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Test/processData.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Manager/Session.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Manager/Session.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MicroComponents/AdvancedInput.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/MicroComponents/AdvancedInput.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MicroComponents/FeedbackCorrect.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/MicroComponents/FeedbackCorrect.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MicroComponents/FeedbackWrong.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/MicroComponents/FeedbackWrong.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MicroComponents/Html.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/MicroComponents/Html.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MicroComponents/ResponseInput.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/MicroComponents/ResponseInput.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MicroComponents/ResponseRadioButtons.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/MicroComponents/ResponseRadioButtons.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MicroComponents/ResponseTextArea.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/MicroComponents/ResponseTextArea.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MicroComponents/SessionFinished.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/MicroComponents/SessionFinished.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MicroComponents/Video.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/MicroComponents/Video.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/EBL01/EBL01_PrePostTest.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/EBL01/EBL01_PrePostTest.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/EBL01/Ebl01_MathCourse.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/EBL01/Ebl01_MathCourse.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/helper/i18n.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/helper/i18n.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -353,14 +382,7 @@
       <workItem from="1622404378373" duration="4702000" />
       <workItem from="1622560620640" duration="2547000" />
       <workItem from="1622568025903" duration="1385000" />
-      <workItem from="1622652350395" duration="2162000" />
-    </task>
-    <task id="LOCAL-00037" summary="Instruktionen 22b I ergänzt">
-      <created>1613329688607</created>
-      <option name="number" value="00037" />
-      <option name="presentableId" value="LOCAL-00037" />
-      <option name="project" value="LOCAL" />
-      <updated>1613329688607</updated>
+      <workItem from="1622652350395" duration="7119000" />
     </task>
     <task id="LOCAL-00038" summary="Layout für bis zu 8 Radiobuttons&#10;Radiobuttons können sich auf einzelne Aufgaben beziehen (bei simultanous)">
       <created>1614359689431</created>
@@ -698,7 +720,14 @@
       <option name="project" value="LOCAL" />
       <updated>1622382059079</updated>
     </task>
-    <option name="localTasksCounter" value="86" />
+    <task id="LOCAL-00086" summary="Kleine bugfixes.">
+      <created>1622654785457</created>
+      <option name="number" value="00086" />
+      <option name="presentableId" value="LOCAL-00086" />
+      <option name="project" value="LOCAL" />
+      <updated>1622654785457</updated>
+    </task>
+    <option name="localTasksCounter" value="87" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -733,7 +762,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="Demographics angepasst" />
     <MESSAGE value="Milestone korrigiert, richtig:&#10;{milestone: true}," />
     <MESSAGE value="EBLWaitFrame eingebaut&#10;Zeiten in config.js in Testmodus gesetzt" />
     <MESSAGE value="Toast in Waitframe eingebaut" />
@@ -758,7 +786,8 @@
     <MESSAGE value="Bugfix Berechnung validCount" />
     <MESSAGE value="group type as text included in data[0]" />
     <MESSAGE value="Beispiele: MC-Fragen kommen verzögert&#10;MC-Fragen: kleine bugs korrigiert" />
-    <option name="LAST_COMMIT_MESSAGE" value="Beispiele: MC-Fragen kommen verzögert&#10;MC-Fragen: kleine bugs korrigiert" />
+    <MESSAGE value="Kleine bugfixes." />
+    <option name="LAST_COMMIT_MESSAGE" value="Kleine bugfixes." />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">

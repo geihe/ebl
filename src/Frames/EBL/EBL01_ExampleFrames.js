@@ -1,9 +1,5 @@
 import React from "react";
-import {config} from "../../config";
-import {EblFrame} from "./EblFrame";
 import {LikertFrame} from "../LikertFrame";
-import {DelayedFrame} from "../DelayedFrame";
-import {phrase} from "../../assets/ressourceLanguage";
 import {Shuffler} from "../../helper/Shuffle";
 import {FixationCrossFrame} from "../FixationCrossFrame";
 import {fssItems} from "../../assets/EBL01/fssItems";
@@ -11,22 +7,6 @@ import {EBL01_ExampleManager} from "../../Manager/EBL01_ExampleManager";
 import {EblWaitFrame} from "./EblWaitFrame";
 import {InstructionFrame102} from "../Instructions/InstructionFrame";
 
-
-const processMeasuresIntroduction = { //TODO in eigene Datei
-  frame: (<DelayedFrame
-    continueText={phrase.continueText}
-    delay={1000}
-  >
-    <p style={{textAlign: 'center', fontSize: '150%'}}>Wie hast du dich beim Lesen der Beispiele gefühlt?</p>
-    <p style={{textAlign: 'center', fontSize: '150%'}}>Bitte beurteile die folgenden Aussagen auf einer Skala
-      von</p>
-    <p style={{textAlign: 'center', fontSize: '150%', color: 'darkred'}}>1 (trifft nicht zu) bis 7 (trifft
-      zu)...</p>
-  </DelayedFrame>),
-  nolog: true,
-  noProgres: true,
-  id: 'process-instruction'
-};
 export const cognitiveEffortFrame =
   {
     frame: <LikertFrame
@@ -59,7 +39,7 @@ const processMeasureFrames = Shuffler.shuffleArray([1, 2, 3, 4, 5, 6, 7, 8, 9, 1
   ]
 );
 
-export function exampleFrames(group) {
+export function exampleFrames(group, config) {
   const {groups: exampleGroups, ...exampleConfig} = config.examples;
   const {items: exampleItems, id} = exampleGroups[group];
   const rem = new EBL01_ExampleManager();
@@ -83,14 +63,3 @@ export function exampleFrames(group) {
   )
 }
 
-export function exampleFramesTest(group) {
-  const {groups: exampleGroups, ...exampleConfig} = config.examples;
-  const {items: exampleItems, id} = exampleGroups[group];
-  const rem = new EBL01_ExampleManager();
-  return exampleItems.map(itemGroup => {
-      return itemGroup.map(s =>
-        <EblFrame config={exampleConfig} content={rem.string2html(s)}/>)
-        .concat([cognitiveEffortFrame]);
-    }
-  )
-}

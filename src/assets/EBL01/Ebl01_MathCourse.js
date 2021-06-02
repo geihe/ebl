@@ -1,7 +1,7 @@
 import {DelayedFrame} from "../../Frames/DelayedFrame";
 import React from "react";
 import {MathComponent} from "mathjax-react";
-import {config} from "../../config";
+import {configObject} from "../../config";
 
 
 const items=[
@@ -20,7 +20,7 @@ const items=[
 
 export const ebl01_MathCourse = items.map(content =>( {
   id: content.id,
-  frame:    <DelayedFrame space delay={config.mathCourse.delay}> {content.frame} </DelayedFrame>
+  frame:    <DelayedFrame space delay={configObject().mathCourse.delay}> {content.frame} </DelayedFrame>
   })
 );
 

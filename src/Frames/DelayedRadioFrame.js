@@ -1,12 +1,12 @@
 import React, {useContext} from 'react';
-import {LngContext} from "../helper/i18n";
 import styles from "../css/DelayedFrame.module.css";
 import {Zone} from "../MicroComponents/Zone";
 import {useStateDelayed} from "../Hooks/useStateDelayed";
 import {Radio, RadioGroup} from "@blueprintjs/core";
+import {Context} from "../index";
 
 export function DelayedRadioFrame(props) {
-  const t = useContext(LngContext);
+  const {t, config} = useContext(Context);
   const {
     options,
     label,

@@ -1,9 +1,9 @@
-import React, {useRef, useState} from "react";
+import React, {useContext, useRef, useState} from "react";
 import {Zone} from "../MicroComponents/Zone";
 import {TimeView} from "../MicroComponents/TimeView";
 import {useStateDelayed} from "../Hooks/useStateDelayed";
 import {ProgressBar} from "@blueprintjs/core";
-import {config} from "../config";
+import {Context} from "../index";
 
 
 function Frame(props) {
@@ -63,6 +63,8 @@ function Frame(props) {
 
 export function Session(props) {
   const {timeline, initialData} = props;
+  const {t, config} = useContext(Context);
+
   const [index, setIndex] = useState(0);
   const data = useRef(initialData);
   if (index >= timeline.length || data.current[0].finished) {

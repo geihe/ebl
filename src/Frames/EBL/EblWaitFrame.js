@@ -1,5 +1,4 @@
 import React, {useContext, useEffect, useRef, useState} from "react";
-import {LngContext} from "../../helper/i18n";
 import {Html} from "../../MicroComponents/Html";
 import styles from "../../css/EBLFrame.module.css";
 import {phrase} from "../../assets/ressourceLanguage";
@@ -7,10 +6,12 @@ import {Button, Icon, Intent, Position, TextArea, Toaster} from "@blueprintjs/co
 import {ResponseRadioButtons} from "../../MicroComponents/ResponseRadioButtons";
 import {useStateDelayed} from "../../Hooks/useStateDelayed";
 import {TimeView} from "../../MicroComponents/TimeView";
+import {Context} from "../../index";
 
 export function EblWaitFrame(props) {
   const {content, config, seconds = 60, hurry = 15, explanationTime} = props;
-  const t = useContext(LngContext);
+  const {t} = useContext(Context);
+
   const [state, setState] = useState({activeExp: 0, waiting: false}); // active explanation box
   const logData = useRef({string: content.string, explanations: []});
   const header = content.singleHeader && <Html html={t(content.htmlHeader)}/>;
@@ -183,7 +184,7 @@ function Examples(props) {
 }
 
 function SingleExample(props) {
-  const t = useContext(LngContext);
+  const {t} = useContext(Context);
   const {example, nr, singleHeader, showCount, active} = props;
 
   const activeClass = active ? ' ' + styles.highlight : '';
@@ -205,7 +206,7 @@ function SingleExample(props) {
 }
 
 function SingleExplanation(props) {
-  const t = useContext(LngContext);
+  const {t} = useContext(Context);
   const {explanation, callback, active, minLength, icon, lowOnTime} = props;
   const [text, setText] = useState('');
   const activeClass = active ? ' ' + styles.highlight : '';
@@ -233,7 +234,7 @@ function SingleExplanation(props) {
 }
 
 function SingleRadios(props) {
-  const t = useContext(LngContext);
+  const {t} = useContext(Context);
   const {finish, options, html, active, waiting, id, showIcon, onClick, lowOnTime} = props;//TODO id benutzen
   const activeClass = active ? ' ' + styles.highlight : '';
   const waitingClass = waiting ? ' ' + styles.mousePointer : '';
@@ -262,7 +263,7 @@ function SingleRadios(props) {
 }
 
 function ButtonDiv(props) {
-  const t = useContext(LngContext);
+  const {t} = useContext(Context);
   return (
     <div className={styles.buttonDiv}>
       <Button fill intent={'primary'} onClick={props.callback}>

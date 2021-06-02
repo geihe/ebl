@@ -1,11 +1,11 @@
 import React, {useContext, useState} from 'react';
-import {LngContext} from "../helper/i18n";
 import {FlexZone} from "../MicroComponents/FlexZone";
 import {MySlider} from "../Components/MySlider";
+import {Context} from "../index";
 
 
 export function SliderFrame(props) {//TODO Umbenennen in LikertFrame
-  const t = useContext(LngContext);
+  const {t, config} = useContext(Context);
   const {min = 1, max = 7, step = 1, minText = '', maxText = '', title = '', item} = props;
   const [value, setValue] = useState(undefined);
 

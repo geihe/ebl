@@ -1,12 +1,12 @@
 import React, {useContext} from 'react';
 import * as Yup from 'yup';
 import {MyRadioGroup} from "../../Forms/MyRadioGroup";
-import {LngContext} from "../../helper/i18n";
 import {Form} from "../../Forms/Form";
 import {MySelect} from "../../Forms/MySelect";
+import {Context} from "../../index";
 
 export function Instruction10(props) {
-  const t = useContext(LngContext);
+  const {t, config} = useContext(Context);
 
   const initial = {age: '', gender: '', role: ''};
   let data = initial;

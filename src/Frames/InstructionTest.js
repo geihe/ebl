@@ -16,12 +16,10 @@ const items = [
 
 const initial = Shuffler.shuffleArray(
   items.map((v, k) => {
-    const custom = {
+    return {
       id: String(k),
       content: v
     };
-
-    return custom;
   })
 );
 

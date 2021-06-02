@@ -1,18 +1,19 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import {DelayedFrame} from "../DelayedFrame";
 import {Html} from "../../MicroComponents/Html";
 import {UniBielefeld} from "../../MicroComponents/UniBielefeld";
-import {config} from "../../config";
 import {EBL01Video} from "../EBL/EBL01Video";
 import {LikertFrame} from "../LikertFrame";
 import {DelayedRadioFrame} from "../DelayedRadioFrame";
 import {Form} from "../../Forms/Form";
 import {MyTextArea} from "../../Forms/MyTextArea";
 import * as Yup from "yup";
+import {Context} from "../../index";
 
 
 export function InstructionFrame(props) {
   const {html, header=false, ...restProps} = props;
+  const {t, config} = useContext(Context);
   return (<>
       {header ? <UniBielefeld/> : null}
       <DelayedFrame

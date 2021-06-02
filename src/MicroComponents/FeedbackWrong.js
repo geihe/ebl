@@ -1,9 +1,10 @@
 import React, {useContext} from 'react';
-import {LngContext} from "../helper/i18n";
 import {phrase} from "../assets/ressourceLanguage";
 import styles from "../css/shortResponse.module.css"
+import {Context} from "../index";
 
 export function FeedbackWrong(props) {
-  const t = useContext(LngContext);
+  const {t, config} = useContext(Context);
+
   return <div className={styles.wrong}>{t(phrase.wrong)}</div>
 }

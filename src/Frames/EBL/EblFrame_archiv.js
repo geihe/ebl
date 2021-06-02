@@ -6,7 +6,7 @@ import {phrase} from "../../assets/ressourceLanguage";
 import {Button, Intent, TextArea} from "@blueprintjs/core";
 import {ResponseRadioButtons} from "../../MicroComponents/ResponseRadioButtons";
 
-export function EblFrame(props) {
+export function EblFrame_archiv(props) {
   const {content, config} = props;
   const t = useContext(LngContext);
   const [activeExp, setActiveExp] = useState(0); // active explanation box

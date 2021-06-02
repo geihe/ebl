@@ -1,8 +1,9 @@
 import React, {useContext} from 'react';
-import {LngContext} from "../helper/i18n";
+import {Context} from "../index";
 
 export function Html(props) {
-  const t = useContext(LngContext);
+  const {t, config} = useContext(Context);
+
   const {html, children, ...rest} = props;
   return (
     <div {...rest}

@@ -4,18 +4,16 @@ import * as serviceWorker from './serviceWorker';
 import './index.css';
 import {Session} from "./Manager/Session";
 import {EBL01Builder} from "./Manager/EBL01Builder";
-import {LngContext, translate} from "./helper/i18n";
+import {translate} from "./helper/i18n";
 import {FocusStyleManager} from "@blueprintjs/core";
-import {config} from "./config";
+import {configObject} from "./config";
 import {SessionFinished} from "./MicroComponents/SessionFinished";
 import {Server} from "./helper/Server";
 import {ExperimentFullFrame} from "./Frames/Instructions/ExperimentFullFrame";
-import {processData} from "./Test/processData";
 
-export const TimefactorContext = React.createContext(1);
+export const Context = React.createContext(null);
 FocusStyleManager.onlyShowFocusOnTabs();
 const server = new Server();
-console.log(processData()); //TODO löschen
 let t;
 let returnUrl;
 
@@ -29,8 +27,7 @@ function finished(data) {
 }
 
 getElementInfo().then((info) => {
-  t = (ressource, param) =>
-    translate(info.language, ressource, param);
+
   let element;
   switch (info.type) {
     case "full":
@@ -43,15 +40,18 @@ getElementInfo().then((info) => {
       element = <SessionFinished nextSessionStart={info.nextSessionStart}/>;
       break;
     default: //Session
+      t = (ressource, param) => translate(info.language, ressource, param);
+      const contextValue={t, config: configObject(info.timeFactor)}
+      console.log({t, config: configObject(info.timeFactor)});
       const initData = info.initialData[0];
-      const tb = new EBL01Builder(t);
+      const tb = new EBL01Builder(contextValue);
       tb.setSession(initData.session)
         .setGroup(initData.groupId)
         .build();
       element =
-        <TimefactorContext.Provider value={initData.timeFactor}>
+        <Context.Provider value={contextValue}>
           <Session timeline={tb.getTimeline()} initialData={info.initialData} finished={(data) => finished(data)}/>
-        </TimefactorContext.Provider>
+        </Context.Provider>
   }
 
   render(element);
@@ -60,9 +60,7 @@ getElementInfo().then((info) => {
 function render(element) {
   ReactDOM.render(
     (
-      <LngContext.Provider value={t}>
         {element}
-      </LngContext.Provider>
     ),
     document.getElementById('root')
   )
@@ -74,7 +72,7 @@ async function getElementInfo() {
   const initialData = {
     version: packageJson.version,
     finished: false,
-    language: config.language,
+    language: configObject().language,
     session: 1,
     nextSessionStart: null,
     userId: null,
@@ -115,14 +113,20 @@ async function getElementInfo() {
     initialData.language = URLparams.language ? URLparams.language : serverData.language;
     initialData.userId = URLparams.user_id ? +URLparams.user_id : serverData.user_id;
     initialData.groupId = URLparams.group_id ? +URLparams.group_id : serverData.group_id;
-    initialData.group = config.examples.groups[initialData.groupId].id;
+    initialData.group = configObject().examples.groups[initialData.groupId].id;
     initialData.userAgent = navigator.userAgent;
     console.log(initialData);
     if (initialData.groupId < 1) {
       return {type: 'full', language: initialData.language}
     }
 
-    return {type: 'session', language: initialData.language, initialData: [initialData]};
+    return {
+      type: 'session',
+      timeFactor: initialData.timeFactor,
+      language: initialData.language,
+      initialData: [initialData],
+    }
+      ;
   }
 
   const dataItems = JSON.parse(dataItemsJSON);

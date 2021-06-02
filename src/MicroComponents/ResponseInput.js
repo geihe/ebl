@@ -1,12 +1,13 @@
 import React, {useContext} from 'react';
-import {LngContext} from "../helper/i18n";
 import {phrase} from "../assets/ressourceLanguage";
 import styles from "../css/shortResponse.module.css"
 import {AdvancedInput} from "./AdvancedInput";
+import {Context} from "../index";
 
 export function ResponseInput(props) {
   const {callback, minLength} = props;
-  const t = useContext(LngContext);
+  const {t, config} = useContext(Context);
+
   return <AdvancedInput
     placeholder={t(phrase.editablePlaceholder)}
     className={styles.input}

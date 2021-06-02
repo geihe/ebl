@@ -1,8 +1,8 @@
 import React, {useContext, useState} from 'react';
-import {LngContext} from "../helper/i18n";
 import {phrase} from "../assets/ressourceLanguage";
 import styles from "../css/shortResponse.module.css"
 import {Button, TextArea} from "@blueprintjs/core";
+import {Context} from "../index";
 
 export function ResponseTextArea(props) {
   const {
@@ -11,7 +11,8 @@ export function ResponseTextArea(props) {
     active = true
   } = props;
   const [text, setText] = useState('')
-  const t = useContext(LngContext);
+  const {t, config} = useContext(Context);
+
   const buttonActive=text.length >= minLength;
   return [
     <div className={styles.textAreaWrapper}>

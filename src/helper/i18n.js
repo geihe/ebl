@@ -1,7 +1,5 @@
 import React from "react";
 
-export const LngContext = React.createContext(null);
-
 export function translate(language, ressource, param) {
   if (!ressource)  {
     return '';

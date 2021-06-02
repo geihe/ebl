@@ -1,9 +1,9 @@
 import React, {useContext} from 'react';
 import {FormGroup, NumericInput} from "@blueprintjs/core";
-import {LngContext} from "../helper/i18n";
+import {Context} from "../index";
 
 export function MyNumInput(props) {
-  const t = useContext(LngContext);
+  const {t, config} = useContext(Context);
   const {
     name, onChange, value, label, error,
     placeholder, ...otherProps

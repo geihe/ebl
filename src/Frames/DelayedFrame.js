@@ -1,5 +1,4 @@
 import React, {useContext} from 'react';
-import {LngContext} from "../helper/i18n";
 import styles from "../css/DelayedFrame.module.css";
 import {Zone} from "../MicroComponents/Zone";
 import {Html} from "../MicroComponents/Html";
@@ -8,12 +7,10 @@ import {useKeyListenerOnce} from "../Hooks/useKeyListenerOnce";
 import {phrase} from "../assets/ressourceLanguage";
 import {Button} from "@blueprintjs/core";
 import {FlexZone} from "../MicroComponents/FlexZone";
-import {TimefactorContext} from "../index";
+import {Context} from "../index";
 
 export function DelayedFrame(props) {
-  const t = useContext(LngContext);
-  const timeFactor = useContext(TimefactorContext);
-  console.log(timeFactor);
+  const {t, config} = useContext(Context);
   const {
     children,
     continueText = phrase.continueText,
@@ -31,10 +28,10 @@ export function DelayedFrame(props) {
   const [responseActive, setResponseActive] = useStateDelayed(!(delay > 0) && !noResponse);
   useKeyListenerOnce(' ', () => props.finish(), responseActive && space);
   if (auto) {
-    setResponseActive(() => props.finish(), delay/timeFactor);
+    setResponseActive(() => props.finish(), delay);
   }
   if (!responseActive && !noResponse && !auto) {
-    setResponseActive(true, delay/timeFactor);
+    setResponseActive(true, delay);
   }
 
   let continueElement;
