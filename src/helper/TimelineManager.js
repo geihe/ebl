@@ -213,7 +213,6 @@ class TLrepeat extends TimelineElement {
     this.type = 'repeat';
     this.repeat = TimelineElement.convert(repeatSource.repeat);
     this.until = repeatSource.until;
-    console.log(this.until);
     this.effort = this.repeat.effort;
   }
 

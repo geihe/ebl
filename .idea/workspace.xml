@@ -7,14 +7,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c0a8d840-d2a4-41a1-9e79-f574c09cafbd" name="Default Changelist" comment="Beispiele: MC-Fragen kommen verzögert&#10;MC-Fragen: kleine bugs korrigiert">
+    <list default="true" id="c0a8d840-d2a4-41a1-9e79-f574c09cafbd" name="Default Changelist" comment="Versuch mit timefactor, sieht aber nicht gut aus">
       <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Frames/DelayedFrame.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frames/DelayedFrame.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Frames/EBL/EblWaitFrame.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frames/EBL/EblWaitFrame.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Frames/LikertFrame.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frames/LikertFrame.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Manager/EBL01Builder.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Manager/EBL01Builder.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Test/processData.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Test/processData.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MicroComponents/SessionFinished.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/MicroComponents/SessionFinished.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Test/processData.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/helper/TimelineManager.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/helper/TimelineManager.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -158,6 +161,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="HTTP Request.rest-api#1" />
         <item itemvalue="HTTP Request.rest-api#1" />
         <item itemvalue="HTTP Request.rest-api#1" />
       </list>
@@ -354,6 +358,10 @@
       <workItem from="1622560620640" duration="2547000" />
       <workItem from="1622568025903" duration="1385000" />
       <workItem from="1622652350395" duration="2162000" />
+      <workItem from="1622729335150" duration="10536000" />
+      <workItem from="1622797458833" duration="3933000" />
+      <workItem from="1622801469622" duration="53000" />
+      <workItem from="1622801829302" duration="355000" />
     </task>
     <task id="LOCAL-00037" summary="Instruktionen 22b I ergänzt">
       <created>1613329688607</created>
@@ -760,16 +768,5 @@
     <MESSAGE value="Beispiele: MC-Fragen kommen verzögert&#10;MC-Fragen: kleine bugs korrigiert" />
     <option name="LAST_COMMIT_MESSAGE" value="Beispiele: MC-Fragen kommen verzögert&#10;MC-Fragen: kleine bugs korrigiert" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/Test/testData.js</url>
-          <line>3468</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

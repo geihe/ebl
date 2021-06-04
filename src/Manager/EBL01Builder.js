@@ -86,7 +86,7 @@ export class EBL01Builder {
     // -->InstructionFrame02
     this.tlManager.add([
       {milestone: true},
-      {frame: <InstructionFrame01/>, id:99},
+      {frame: <InstructionFrame01/>, id:'firstFrame'},
       <EBL01Video videoID={'introduction'}/>,
       <InstructionFrame03/>,
       {
@@ -133,7 +133,7 @@ export class EBL01Builder {
       {frame: <InstructionFrame210/>, id:'Hilfsmittel'}, <FixationCrossFrame nocross/>,
       {frame: <InstructionFrame211a/>, id:'GabEsSchwierigkeiten'},
       {
-        if: (lastlog) => lastlog === 'Ja',
+        if: (lastlog) => lastlog === 'Schwierigkeiten? Ja',
         then: {frame: <InstructionFrame211b/>, id:'Schwierigkeiten'},
       },
       <FixationCrossFrame nocross/>,
@@ -147,7 +147,11 @@ export class EBL01Builder {
 
   buildTestSession() {
     this.tlManager.add(
-      exampleFrames(this.group)
+      exampleFrames(this.group),
+      <InstructionFrame200/>,
+      <InstructionFrame201/>, postFrames[0], {milestone: true},
+      <InstructionFrame202/>, postFrames[1], {milestone: true},
+      <InstructionFrame203/>, postFrames[2], {milestone: true},
     );
   }
 

@@ -42,7 +42,6 @@ export function EblWaitFrame(props) {
   const startTime = useRef(Date.now());
   const timerTime = seconds - (Date.now() - startTime.current) / 1000;
   timer > 0 ? setTimer(Math.round(timerTime - 1), 1000) : setTimer(() => {
-    console.log(dataWithSummary(logData.current));
     props.finish(dataWithSummary(logData.current));
   }, 1000);
 
@@ -145,7 +144,7 @@ const displayExplanation = timerTime < explanationTime;
   return (<>
       <div className={styles.header}>
         <Toaster position={Position.TOP_RIGHT} maxToasts={1} ref={toast}/>
-        <TimeView seconds={timer}/>
+        <TimeView seconds={Math.max(timer, 0)}/>
       </div>
       <div className={styles.eblFrame}>
         <div className={styles.exampleContainer}>

@@ -10,14 +10,13 @@ import {config} from "./config";
 import {SessionFinished} from "./MicroComponents/SessionFinished";
 import {Server} from "./helper/Server";
 import {ExperimentFullFrame} from "./Frames/Instructions/ExperimentFullFrame";
-import {processData} from "./Test/processData";
 
-export const TimefactorContext = React.createContext(1);
 FocusStyleManager.onlyShowFocusOnTabs();
 const server = new Server();
-console.log(processData()); //TODO löschen
+
 let t;
 let returnUrl;
+let showStudyCode='';
 
 function finished(data) {
   const {userId, session, groupId, mailId} = data[0];
@@ -49,9 +48,7 @@ getElementInfo().then((info) => {
         .setGroup(initData.groupId)
         .build();
       element =
-        <TimefactorContext.Provider value={initData.timeFactor}>
           <Session timeline={tb.getTimeline()} initialData={info.initialData} finished={(data) => finished(data)}/>
-        </TimefactorContext.Provider>
   }
 
   render(element);
@@ -90,7 +87,6 @@ async function getElementInfo() {
     timeFactor: params.get('timefactor'),
     tic: params.get('tic'), //Unipark
     external_id: params.get('external_id'), //Sonas
-
   }
 
   const returnUrlOther = 'https://ww2.unipark.de/uc/M_APLME_Kubik/8055/';
@@ -116,8 +112,18 @@ async function getElementInfo() {
     initialData.userId = URLparams.user_id ? +URLparams.user_id : serverData.user_id;
     initialData.groupId = URLparams.group_id ? +URLparams.group_id : serverData.group_id;
     initialData.group = config.examples.groups[initialData.groupId].id;
+    initialData.returnUrl = returnUrl;
     initialData.userAgent = navigator.userAgent;
-    console.log(initialData);
+
+    config.timeBetweenSessionsInSeconds = config.timeBetweenSessionsInSeconds / initialData.timeFactor;
+    config.pauseSeconds = config.pauseSeconds / initialData.timeFactor;
+    config.timeForExamples = config.timeForExamples / initialData.timeFactor;
+    config.likertFrameDelay = config.likertFrameDelay / initialData.timeFactor;
+    config.instructions.delay = config.instructions.delay / initialData.timeFactor;
+    config.mathCourse.delay = config.mathCourse.delay / initialData.timeFactor;
+    config.preTest.radioDelay = config.preTest.radioDelay / initialData.timeFactor;
+    config.postTest.radioDelay = config.postTest.radioDelay / initialData.timeFactor;
+
     if (initialData.groupId < 1) {
       return {type: 'full', language: initialData.language}
     }

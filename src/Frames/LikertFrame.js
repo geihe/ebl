@@ -8,13 +8,11 @@ import {LngContext} from "../helper/i18n";
 import {FlexZone} from "../MicroComponents/FlexZone";
 import {Html} from "../MicroComponents/Html";
 import {config} from "../config";
-import {TimefactorContext} from "../index";
 
 export function LikertFrame(props) {
   const t = useContext(LngContext);
   const {min = 1, max = 7, step = 1, minText = '', maxText = '', title = '', unit='', item} = props;
   const [rating, setRating] = useStateDelayed(-Infinity);
-  const timeFactor = useContext(TimefactorContext);
 
   function callback(rating) {//TODO get delay from config
     const delay = config.likertFrameDelay;
