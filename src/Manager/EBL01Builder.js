@@ -42,6 +42,7 @@ import {postFrames, preTest} from "../assets/EBL01/EBL01_PrePostTest";
 import {EBL01Video} from "../Frames/EBL/EBL01Video";
 import {JolFrame1, JolFrame2, JolFrame3, JolFrame4} from "../Frames/JolFrames";
 import {config} from "../config";
+import {ScreenCheck} from "../Frames/ScreenCheck";
 
 export class EBL01Builder {
   constructor(t) {
@@ -147,11 +148,9 @@ export class EBL01Builder {
 
   buildTestSession() {
     this.tlManager.add(
+      <ScreenCheck/>,
       exampleFrames(this.group),
-      <InstructionFrame200/>,
-      <InstructionFrame201/>, postFrames[0], {milestone: true},
-      <InstructionFrame202/>, postFrames[1], {milestone: true},
-      <InstructionFrame203/>, postFrames[2], {milestone: true},
+
     );
   }
 

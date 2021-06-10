@@ -7,7 +7,7 @@ export function UniBielefeld(props) {
       Universität Bielefeld<br/>
       Arbeitseinheit Bildungspsychologie<br/>
       (in Kollaboration mir der FernUniversität in Hagen <br/>
-      und Humboldt Universität zu Berlin)<br/>
+      und der Universität Freiburg)<br/>
       Dr. Veit Kubik
     </div>
   );

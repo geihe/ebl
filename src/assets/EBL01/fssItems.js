@@ -91,16 +91,4 @@ export const fssItems = [
       en: 'I am worried about failing.'
     }
   },
-
-]
-export const fssItemsDeutsch = fssItems.map(o => o.text.de);
-
-export const cognitiveLoadItem = [
-  {
-    id: 'cognitive load',
-    text: {
-      de: 'Wie stark haben Sie sich bei den letzten vier Beispielen angestrengt, um sie zu verstehen?',
-      en: 'How much effort did you invest to understand the last four worked examples?'
-    }
-  }
 ]

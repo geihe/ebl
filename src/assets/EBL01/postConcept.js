@@ -23,7 +23,7 @@ export const postConcept = [
     question: `Macht es einen Unterschied, ob du die zwei Teams im Finale vorhersagen sollst oder ob du vorhersagen sollst, welches Team Erster und welches Zweiter wird?`,
     options: [
       {value: '1',
-      label: `1. Ja, die Chance, den Ersten und den Zeiten korrekt vorherzusagen, ist kleiner als die Chance die zwei Teams im Finale korrekt vorherzusagen. `},
+      label: `1. Ja, die Chance, den Ersten und den Zweiten korrekt vorherzusagen, ist kleiner als die Chance die zwei Teams im Finale korrekt vorherzusagen. `},
       {value: '2',
       label: `2. Ja, die Chance, die zwei Teams im Finale korrekt vorherzusagen, ist kleiner als die Chance den Ersten und den Zweiten korrekt vorherzusagen. `},
       {value: '3',

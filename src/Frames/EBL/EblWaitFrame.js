@@ -41,9 +41,17 @@ export function EblWaitFrame(props) {
   const [timer, setTimer] = useStateDelayed(Math.ceil(seconds));
   const startTime = useRef(Date.now());
   const timerTime = seconds - (Date.now() - startTime.current) / 1000;
-  timer > 0 ? setTimer(Math.round(timerTime - 1), 1000) : setTimer(() => {
-    props.finish(dataWithSummary(logData.current));
-  }, 1000);
+  if (timer > 0) {
+    setTimer(Math.round(timerTime - 1), 1000);
+  } else {
+    if (state.waiting) {
+      setTimer(() => {
+        props.finish(dataWithSummary(logData.current));
+      }, 1000);
+    }  else {
+//TODO Hier noch Toast zeigen?
+    }
+  }
 
   useEffect(() => {
     if (timer === Math.ceil(hurry) && !state.waiting) {
@@ -97,19 +105,24 @@ export function EblWaitFrame(props) {
       minLength={config.textAreaMinLength}
     />
   );
-  const radios = content.htmlRadios.map((radio, index) =>
-    <SingleRadios
-      onClick={(event) => onExplClick(index, event)}
-      finish={(data) => nextExplanation(data)}
-      key={index}
-      html={radio.html}
-      active={state.activeExp === index}
-      waiting={state.waiting}
-      showIcon={state.waiting}
-      options={radio.options}
-      lowOnTime={timerTime < Math.ceil(hurry) && !state.waiting && state.activeExp <= index}
-      id={radio.id}
-    />
+
+  const radios = content.htmlRadios.map((radio, index) => {
+    const lowOnTime = timerTime < Math.ceil(hurry) && !state.waiting && state.activeExp <= index;
+    const visible = state.activeExp >= index || state.waiting || lowOnTime;
+    return <SingleRadios
+        onClick={(event) => onExplClick(index, event)}
+        finish={(data) => nextExplanation(data)}
+        key={index}
+        html={radio.html}
+        active={state.activeExp === index}
+        visible={visible}
+        waiting={state.waiting}
+        showIcon={state.waiting}
+        options={radio.options}
+        lowOnTime={lowOnTime}
+        id={radio.id}
+      />;
+    }
   )
 
   const explanations = [...textExplanations, ...radios,];
@@ -233,7 +246,7 @@ function SingleExplanation(props) {
 
 function SingleRadios(props) {
   const t = useContext(LngContext);
-  const {finish, options, html, active, waiting, id, showIcon, onClick, lowOnTime} = props;//TODO id benutzen
+  const {finish, options, html, active, waiting, visible, id, showIcon, onClick, lowOnTime} = props;//TODO id benutzen
   const activeClass = active ? ' ' + styles.highlight : '';
   const waitingClass = waiting ? ' ' + styles.mousePointer : '';
   const lowOnTimeClass = lowOnTime ? ' ' + styles.lowOnTime : '';
@@ -241,7 +254,8 @@ function SingleRadios(props) {
   const icon = active ? <Icon icon="chevron-down"/>
     : <Icon icon="chevron-right"/>;
   return (
-    <div className={styles.singleExplanation + activeClass + waitingClass + lowOnTimeClass}>
+    <div className={styles.singleExplanation + activeClass + waitingClass + lowOnTimeClass}
+         style={{opacity: visible ? 1 : 0, transition: 'opacity 0.5s'}}>
       <div style={{display: 'flex'}}>
         {showIcon ? icon : ''}
         <Html onClick={onClick}

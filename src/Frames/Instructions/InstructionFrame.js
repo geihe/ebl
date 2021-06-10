@@ -119,7 +119,7 @@ Tel.: 0521-106-3100<br/>
 Web.: <a href="https://www.uni-bielefeld.de/psychologie/abteilung/arbeitseinheiten/13/personen//kubik.xml">https://www.uni-bielefeld.de/psychologie/abteilung/arbeitseinheiten/13/personen//kubik.xml</a>
 </p>
 <h3>Einwilligung</h3>
-<p>Ich habe die Teilnehmerinformation zum Forschungsprojekt „Lernerfolg und Metakognition beim Lernen  von Studienmaterialien“ zur Kenntnis genommen. Ich bin ausreichend informiert worden und hatte die Möglichkeit vor Weiterführung der Studie per Mail oder telefonisch Fragen zu stellen. Mir ist bewusst, dass meine Teilnahme an der Studie freiwillig ist und ich bei einer Verweigerung meiner Einwilligung für mich keinerlei Nachteile entstehen. Eine Kopie der Informationsschrift und dieser Einwilligungserklärung habe ich heruntergeladen und somit erhalten.</p><p>Wenn du mit unserem Vorhaben einverstanden bist, so klicke bitte auf <i>Einverstanden</i>. Falls nicht, so klicke bitte auf <i>Nicht einverstanden</i>.</p><p>Wir danken dir für deine Mitwirkung und dein Vertrauen.</p>`;
+<p>Ich habe die Teilnehmerinformation zum Forschungsprojekt „Lernerfolg und Metakognition beim Lernen  von Studienmaterialien“ zur Kenntnis genommen. Ich bin ausreichend informiert worden und hatte die Möglichkeit vor Weiterführung der Studie per Mail oder telefonisch Fragen zu stellen. Mir ist bewusst, dass meine Teilnahme an der Studie freiwillig ist und bei einer Verweigerung meiner Einwilligung für mich keinerlei Nachteile entstehen. Eine Kopie der Informationsschrift und dieser Einwilligungserklärung habe ich heruntergeladen und somit erhalten.</p><p>Wenn du mit unserem Vorhaben einverstanden bist, so klicke bitte auf <i>Einverstanden</i>. Falls nicht, so klicke bitte auf <i>Nicht einverstanden</i>.</p><p>Wir danken dir für deine Mitwirkung und dein Vertrauen.</p>`;
 
   return <InstructionFrame header html={html}  cancelButton continueButtonText="Einverstanden" cancelButtonText="Nicht einverstanden" finish={props.finish}/>;
 }
@@ -233,9 +233,9 @@ export function InstructionFrame100_sequenziell_12(props) {
   const html = `
   <h1>Aufbau des Lernprogramms I</h1>
   <p>Auf jeder Seite des Lernprogramms wird dir eine Beispielaufgabe präsentiert. Du sollst jede Aufgabe aufmerksam lesen und versuchen, die Lösung nachzuvollziehen. </p>
-  <p>Zudem werden nach einiger Zeit rechts auf jeder Seite des Lernprogramms Multiple-Choice-Fragen eingeblendet. Hier sollst du die deiner Meinung nach zutreffendste Antwort auswählen. Du kannst deine Wahl nicht mehr ändern. </p>
-  <p>Du durchläufst vier Durchgänge mit jeweils vier Beispielaufgaben, sodass dir insgesamt 16 Beispielaufgaben präsentiert werden und du 16 Multiple Choice-Fragen beantwortest.</p>
-  <p>Für die Bearbeitung von je vier Beispielaufgaben hast du fünf Minuten Zeit. Die Zeit kannst du frei einteilen, du solltest aber alle Texte sorgfältig gelesen und alle Lösungen genau nachvollzogen haben, bevor du die Multiple-Choice Fragen beantwortest. Nach Ablauf der fünf Minuten wirst du automatisch zur Befragung deines Flow-Erlebens und deiner kognitiven Beanspruchung weitergeleitet und kannst nicht mehr zurückgehen. Ein Timer wird eingeblendet.</p>
+  <p>Zudem werden nach einiger Zeit rechts auf jeder Seite des Lernprogramms für jede Beispielaufgabe zwei Multiple-Choice-Fragen eingeblendet. Hier sollst du die deiner Meinung nach zutreffendste Antwort auswählen. Du kannst deine Wahl nicht mehr ändern. </p>
+  <p>Du durchläufst vier Durchgänge mit jeweils vier Beispielaufgaben, sodass dir <strong>insgesamt 16 Aufgaben präsentiert werden und du 32 Multiple Choice-Fragen beantwortest</strong>.</p>
+  <p>Für die Bearbeitung von je vier Beispielaufgaben hast du insgesamt fünf Minuten Zeit, pro Aufgabe also 1 Minute und 15 Sekunden. Du solltest alle Texte sorgfältig lesen, alle Lösungen genau nachvollziehen und dann du die Multiple-Choice Fragen beantworten. Nach Ablauf der fünf Minuten wirst du automatisch zur Befragung deines Flow-Erlebens und deiner kognitiven Beanspruchung weitergeleitet und kannst nicht mehr zurückgehen. Ein Timer wird eingeblendet.</p>
   `;
 
   return <InstructionFrame html={html} space finish={props.finish}/>;
@@ -246,7 +246,7 @@ export function InstructionFrame100_simultan_34(props) {
   <h1>Aufbau des Lernprogramms I</h1>
   <p>Auf jeder Seite des Lernprogramms werden dir vier Beispielaufgaben präsentiert. Du sollst diese Aufgaben aufmerksam lesen und versuchen, die Lösung nachzuvollziehen. </p>
   <p>Nach einiger Zeit werden pro Aufgabe zwei Multiple Choice-Fragen eingeblendet, die du beantworten sollst. Auf einer Seite also insgesamt acht Multiple-Choice-Fragen.</p>
-  <p>Du durchläufst vier Durchgänge mit jeweils vier Beispielaufgaben und acht Multiple Choice-Fragen, sodass dir insgesamt 16 Beispielaufgaben präsentiert werden und du 32 Multiple Choice-Fragen beantwortest.</p>
+  <p>Du durchläufst vier Durchgänge mit jeweils vier Beispielaufgaben und acht Multiple Choice-Fragen, sodass dir <strong>insgesamt 16 Beispielaufgaben präsentiert werden und du 32 Multiple Choice-Fragen beantwortest</strong>.</p>
   <p>Für die Bearbeitung von je vier Beispielaufgaben hast du insgesamt fünf Minuten Zeit. Die Zeit kannst du frei einteilen, du solltest aber alle Lösungen nachvollzogen und alle Multiple Choice-Fragen beantwortet haben, denn nach Ablauf dieser Zeit wirst du automatisch zur Befragung deines Flow-Erlebens und deiner kognitiven Beanspruchung weitergeleitet und kannst nicht mehr zurückgehen. Ein Timer wird eingeblendet.</p>
   `;
 
@@ -502,7 +502,7 @@ export function InstructionFrame212(props) {
     <MyTextArea style={{width: '100%'}}
       large
       name={'feedbackAllgemein'}
-      label={'Möchtest du uns zu dem Experiment noch etwas miteilen? Dann trage es hier ins Textfeld ein:'}
+      label={'Möchtest du uns zu dem Experiment noch etwas mitteilen? Dann trage es hier ins Textfeld ein:'}
     />
     </Form>
   </>

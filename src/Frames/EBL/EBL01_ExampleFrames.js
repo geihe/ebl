@@ -10,6 +10,7 @@ import {fssItems} from "../../assets/EBL01/fssItems";
 import {EBL01_ExampleManager} from "../../Manager/EBL01_ExampleManager";
 import {EblWaitFrame} from "./EblWaitFrame";
 import {InstructionFrame102} from "../Instructions/InstructionFrame";
+import {cognitiveLoadItems} from "../../assets/EBL01/cognitiveLoadItems";
 
 
 const processMeasuresIntroduction = { //TODO in eigene Datei
@@ -27,7 +28,7 @@ const processMeasuresIntroduction = { //TODO in eigene Datei
   noProgres: true,
   id: 'process-instruction'
 };
-export const cognitiveEffortFrame =
+export const cognitiveEffortFrameOld =
   {
     frame: <LikertFrame
       minText={{de: 'sehr wenig angestrengt', en: 'very little effort'}}
@@ -41,6 +42,25 @@ export const cognitiveEffortFrame =
     />,
     id: 'cognitive effort'
   };
+
+const cognitiveLoadFrames = Shuffler.shuffleArray([1, 2, 3, 4, 5, 6, 7]).map(nr =>
+  [
+    {
+      frame: <FixationCrossFrame nocross duration={200}/>,
+      nolog: true
+    },
+    {
+      frame: <LikertFrame
+        title={'Wie hast du dich beim Lesen der Beispiele gefühlt?<br/><br/>'+cognitiveLoadItems[nr - 1].text.de}
+        minText={{de: 'Trifft nicht zu', en: 'not at all'}}
+        maxText={{de: 'Trifft zu', en: 'very much'}}
+        key={nr}
+      />,
+      id: fssItems[nr - 1].id
+    },
+  ]
+);
+
 const processMeasureFrames = Shuffler.shuffleArray([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]).map(nr =>
   [
     {
@@ -77,7 +97,7 @@ export function exampleFrames(group) {
     },
           <FixationCrossFrame nocross/>]
       )
-        .concat([cognitiveEffortFrame, processMeasureFrames])
+        .concat([cognitiveLoadFrames, processMeasureFrames])
         .concat(index<exampleItems.length-1 ? [<InstructionFrame102/>] : []);
     }
   )
@@ -90,7 +110,7 @@ export function exampleFramesTest(group) {
   return exampleItems.map(itemGroup => {
       return itemGroup.map(s =>
         <EblFrame config={exampleConfig} content={rem.string2html(s)}/>)
-        .concat([cognitiveEffortFrame]);
+        .concat([cognitiveLoadFrames, processMeasureFrames]);
     }
   )
 }
