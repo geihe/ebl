@@ -150,7 +150,10 @@ export class EBL01Builder {
     this.tlManager.add(
       <ScreenCheck/>,
       exampleFrames(this.group),
-
+      <InstructionFrame200/>,
+      <InstructionFrame201/>, postFrames[0], {milestone: true},
+      <InstructionFrame202/>, postFrames[1], {milestone: true},
+      <InstructionFrame203/>, postFrames[2], {milestone: true},
     );
   }
 

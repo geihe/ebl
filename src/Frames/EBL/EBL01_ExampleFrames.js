@@ -4,7 +4,6 @@ import {EblFrame} from "./EblFrame";
 import {LikertFrame} from "../LikertFrame";
 import {DelayedFrame} from "../DelayedFrame";
 import {phrase} from "../../assets/ressourceLanguage";
-import {Shuffler} from "../../helper/Shuffle";
 import {FixationCrossFrame} from "../FixationCrossFrame";
 import {fssItems} from "../../assets/EBL01/fssItems";
 import {EBL01_ExampleManager} from "../../Manager/EBL01_ExampleManager";
@@ -28,7 +27,7 @@ const processMeasuresIntroduction = { //TODO in eigene Datei
   noProgres: true,
   id: 'process-instruction'
 };
-export const cognitiveEffortFrameOld =
+export const paasItem =
   {
     frame: <LikertFrame
       minText={{de: 'sehr wenig angestrengt', en: 'very little effort'}}
@@ -43,7 +42,8 @@ export const cognitiveEffortFrameOld =
     id: 'cognitive effort'
   };
 
-const cognitiveLoadFrames = Shuffler.shuffleArray([1, 2, 3, 4, 5, 6, 7]).map(nr =>
+// Zufällige Reihenfolge: const cognitiveLoadFrames = Shuffler.shuffleArray([1, 2, 3, 4, 5, 6, 7]).map(nr =>
+const cognitiveLoadFrames = [1, 2, 3, 4, 5, 6, 7].map(nr =>
   [
     {
       frame: <FixationCrossFrame nocross duration={200}/>,
@@ -61,7 +61,7 @@ const cognitiveLoadFrames = Shuffler.shuffleArray([1, 2, 3, 4, 5, 6, 7]).map(nr 
   ]
 );
 
-const processMeasureFrames = Shuffler.shuffleArray([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]).map(nr =>
+const processMeasureFrames = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map(nr =>
   [
     {
       frame: <FixationCrossFrame nocross duration={200}/>,
@@ -97,7 +97,7 @@ export function exampleFrames(group) {
     },
           <FixationCrossFrame nocross/>]
       )
-        .concat([cognitiveLoadFrames, processMeasureFrames])
+        .concat([paasItem, cognitiveLoadFrames, processMeasureFrames])
         .concat(index<exampleItems.length-1 ? [<InstructionFrame102/>] : []);
     }
   )

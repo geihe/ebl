@@ -28,13 +28,13 @@ export const cognitiveLoadItems = [
       en: 'My point while dealing with the task was to understand everything correct.'
     }
   },
-  {
+/*  {
     id: 'gcl_3',
     text: {
       de: '"Die Lerneinheit enthielt Elemente, die mich unterstützten, den Lernstoff besser zu verstehen."',
       en: 'The learning task consisted of elements supporting my comprehension of the task.'
     }
-  },
+  },*/
   {
     id: 'ecl_1',
     text: {
@@ -59,7 +59,7 @@ export const cognitiveLoadItems = [
 
 ]
 
-export const cognitiveLoadItem = [
+export const paasItem = [
   {
     id: 'cognitive load',
     text: {
