@@ -16,7 +16,7 @@ const server = new Server();
 
 let t;
 let returnUrl;
-let showStudyCode='';
+let showStudyCode=false;
 
 function finished(data) {
   const {userId, session, groupId, mailId} = data[0];
@@ -43,6 +43,7 @@ getElementInfo().then((info) => {
       break;
     default: //Session
       const initData = info.initialData[0];
+      console.log(initData);
       const tb = new EBL01Builder(t);
       tb.setSession(initData.session)
         .setGroup(initData.groupId)
@@ -99,6 +100,7 @@ async function getElementInfo() {
     returnUrl = returnUrlSonas;
   } else {
     returnUrl = returnUrlOther;
+    showStudyCode=true;
   }
 
   const dataItemsJSON = localStorage.getItem('data');
