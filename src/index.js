@@ -43,10 +43,10 @@ getElementInfo().then((info) => {
       break;
     default: //Session
       const initData = info.initialData[0];
-      console.log(initData);
       const tb = new EBL01Builder(t);
       tb.setSession(initData.session)
         .setGroup(initData.groupId)
+        .setShowStudyCode(initData.showStudyCode)
         .build();
       element =
           <Session timeline={tb.getTimeline()} initialData={info.initialData} finished={(data) => finished(data)}/>
@@ -114,6 +114,7 @@ async function getElementInfo() {
     initialData.userId = URLparams.user_id ? +URLparams.user_id : serverData.user_id;
     initialData.groupId = URLparams.group_id ? +URLparams.group_id : serverData.group_id;
     initialData.group = config.examples.groups[initialData.groupId].id;
+    initialData.showStudyCode = showStudyCode;
     initialData.returnUrl = returnUrl;
     initialData.userAgent = navigator.userAgent;
 

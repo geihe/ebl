@@ -32,7 +32,8 @@ import {
   InstructionFrame210,
   InstructionFrame211a,
   InstructionFrame211b,
-  InstructionFrame212
+  InstructionFrame212,
+  ShowStudyCode
 } from "../Frames/Instructions/InstructionFrame";
 import {CancelFrame} from "../Frames/CancelFrame";
 import {FixationCrossFrame} from "../Frames/FixationCrossFrame";
@@ -42,7 +43,6 @@ import {postFrames, preTest} from "../assets/EBL01/EBL01_PrePostTest";
 import {EBL01Video} from "../Frames/EBL/EBL01Video";
 import {JolFrame1, JolFrame2, JolFrame3, JolFrame4} from "../Frames/JolFrames";
 import {config} from "../config";
-import {ScreenCheck} from "../Frames/ScreenCheck";
 
 export class EBL01Builder {
   constructor(t) {
@@ -50,6 +50,7 @@ export class EBL01Builder {
     this.tlManager = new TimelineManager();
     this.session = 1;
     this.group = 0; //group von 1 bis 4 , 0 -> test
+    this.showStudyCode = false;
   }
 
   setSession(session) {
@@ -59,6 +60,11 @@ export class EBL01Builder {
 
   setGroup(group) {
     this.group = group;
+    return this;
+  }
+
+  setShowStudyCode(ssc) {
+    this.showStudyCode = ssc;
     return this;
   }
 
@@ -140,6 +146,9 @@ export class EBL01Builder {
       <FixationCrossFrame nocross/>,
       {frame: <InstructionFrame212/>, id:'Feedback'},
     ]);
+    if (this.showStudyCode) {
+      this.tlManager.add(<ShowStudyCode random/>);
+    }
   }
 
   buildSession2() {
@@ -148,13 +157,14 @@ export class EBL01Builder {
 
   buildTestSession() {
     this.tlManager.add(
-      <ScreenCheck/>,
-      exampleFrames(this.group),
+      // <ScreenCheck/>,
+      // exampleFrames(this.group),
       <InstructionFrame200/>,
-      <InstructionFrame201/>, postFrames[0], {milestone: true},
-      <InstructionFrame202/>, postFrames[1], {milestone: true},
-      <InstructionFrame203/>, postFrames[2], {milestone: true},
+      // <InstructionFrame201/>, postFrames[0], {milestone: true},
+      // <InstructionFrame202/>, postFrames[1], {milestone: true},
+      // <InstructionFrame203/>, postFrames[2], {milestone: true},
     );
+    this.tlManager.add(<ShowStudyCode random/>);
   }
 
   getTimeline(session = 1) {

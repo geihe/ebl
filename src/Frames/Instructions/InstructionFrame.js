@@ -27,20 +27,6 @@ export function InstructionFrame(props) {
 }
 
 
-export function InstructionFrameTest(props) {
-  const html = `
-<h1>Wichtiger Hinweis</h1>
-  <p>Diese Studie ist Teil eines wissenschaftlichen Projekts, das in Fachzeitschriften der Psychologie veröffentlicht wird. Wir möchten dich bitten, den Test - <strong>ohne Unterbrechung</strong> - bis zum Ende durchzuführen. Bitte stelle sicher, dass du während der Bearbeitung der Aufgaben nicht gestört wirst. Es ist wichtig, dass du die folgenden Vorkehrungen getroffen hast und dein Einverständnis mit einem Klick auf "Einverstanden" bestätigst: </p>
-    <li>Ich befinde mich in einem ruhigen Raum. </li>
-    <li>Ich habe die nötigen Vorkehrungen getroffen, sodass ich im Verlauf der Studie nicht bei der Aufgabenbearbeitung unterbrochen werde. </li>
-    <li>Mein Mobiltelefon liegt außerhalb meiner Reich- und Sichtweite und ist auf stumm gestellt oder ausgeschaltet. </li>
-</ul>
-<p>Mit der konzentrierten Bearbeitung der Aufgaben trägst du dazu bei, die Qualität der Studie und der Ergebnisse zu sichern. Vielen Dank! </p>
-  `;
-
-  return <InstructionFrame html={html} cancelButton continueButtonText="Einverstanden" cancelButtonText="Abbrechen" finish={props.finish}/>;
-}
-
 export function InstructionFrame01(props) {
   const html = `
   <h1>Herzlich willkommen zur Studie </h1><h2>„Mit Beispielen Wahrscheinlichkeitsrechnung lernen: Ein Lernprogramm“</h2>
@@ -192,7 +178,6 @@ export function InstructionFrame14(props) {
   return <InstructionFrame html={html} space finish={props.finish}/>;
 }
 
-
 export function InstructionFrame09_IIalt(props) {
   const html = `
   <p>Durch deine Teilnahme erwirbst du nicht nur neues Wissen, sondern erhältst auch einen Einblick in die aktuelle Forschung. Außerdem erhältst du für deine Teilnahme bei Bedarf ${config.vph} Versuchspersonenstunden für dein Psychologiestudium.</p>
@@ -209,6 +194,8 @@ export function InstructionFrame16a(props) {
   `;
   return <InstructionFrame html={html} space finish={props.finish}/>;
 }
+
+
 export function InstructionFrame16b(props) {
   const html = `
   <h1>Vortest</h1>
@@ -219,7 +206,6 @@ und ein Drittel mal ein Viertel als <strong>1/3 * 1/4</strong></p>
   `;
   return <InstructionFrame html={html} space finish={props.finish}/>;
 }
-
 export function InstructionFrame17(props) {
   const html = `
   <h1>Du hast den Vortest abgeschlossen - vielen Dank! </h1>
@@ -291,8 +277,6 @@ export function InstructionFrame103(props) {
   return <InstructionFrame html={html} space finish={props.finish}/>;
 }
 
-
-
 export function InstructionFrame200(props) {
   const html = `
   <p>Im letzten Abschnitt der Studie werden dir verschiedene Aufgaben präsentiert, die deinen Lernerfolg messen. Es ist deshalb wichtig, dass du bitte keine Hilfsmittel (z.B. Taschenrechner oder Internetseiten) benutzt und konzentriert arbeitest.</p>
@@ -302,6 +286,8 @@ export function InstructionFrame200(props) {
 
   return <InstructionFrame html={html} space finish={props.finish}/>;
 }
+
+
 
 export function InstructionFrame201(props) {
   const html = `
@@ -451,6 +437,7 @@ export function InstructionFrame210(props) {
   />
   </>
 }
+
 export function InstructionFrame211a(props) {
   const options = [
     {
@@ -473,7 +460,6 @@ export function InstructionFrame211a(props) {
   />
   </>
 }
-
 export function InstructionFrame211b(props) {
   const initial = {feedback: ''};
   let data=initial;
@@ -490,7 +476,6 @@ export function InstructionFrame211b(props) {
   </>
 }
 
-
 export function InstructionFrame212(props) {
   const initial = {feedbackAllgemein: ''};
   let data=initial;
@@ -506,4 +491,20 @@ export function InstructionFrame212(props) {
     />
     </Form>
   </>
+}
+
+export function ShowStudyCode(props) {
+  const {code, random}=props;
+  const codePre = "EBL01-";
+  const codeSuffix = "";
+  const codeMain = random ?
+    Math.floor(Math.random()*52940 + 5883)*17
+    : code;
+  const codeString = codePre + codeMain+codeSuffix;
+  const html = `
+<h2>Wenn du eine Versuchspersonenbescheinigung für das Experiment haben möchtest, dann notiere den folgenden Code:</h2>
+<h2 style="text-align:center; font-size: 50px; font-family: monospace"><strong>${codeString}</strong></h2>
+  `;
+
+  return <InstructionFrame html={html} space finish={props.finish}/>;
 }
