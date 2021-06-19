@@ -7,18 +7,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c0a8d840-d2a4-41a1-9e79-f574c09cafbd" name="Default Changelist" comment="processData erweitert">
-      <change afterPath="$PROJECT_DIR$/src/Frames/ScreenCheck.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/EBL01/cognitiveLoadItems.js" afterDir="false" />
+    <list default="true" id="c0a8d840-d2a4-41a1-9e79-f574c09cafbd" name="Default Changelist" comment="Anzeige eines zufälligen Codes am Ende">
       <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Frames/EBL/EBL01_ExampleFrames.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frames/EBL/EBL01_ExampleFrames.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Frames/EBL/EblWaitFrame.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frames/EBL/EblWaitFrame.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Frames/Instructions/InstructionFrame.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frames/Instructions/InstructionFrame.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Manager/EBL01Builder.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Manager/EBL01Builder.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MicroComponents/UniBielefeld.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/MicroComponents/UniBielefeld.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/EBL01/fssItems.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/EBL01/fssItems.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/EBL01/postConcept.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/EBL01/postConcept.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Manager/Session.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Manager/Session.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -370,35 +369,12 @@
       <workItem from="1623223566744" duration="3499000" />
       <workItem from="1623254529331" duration="659000" />
       <workItem from="1623273205106" duration="1000" />
-      <workItem from="1623342161319" duration="4085000" />
-    </task>
-    <task id="LOCAL-00037" summary="Instruktionen 22b I ergänzt">
-      <created>1613329688607</created>
-      <option name="number" value="00037" />
-      <option name="presentableId" value="LOCAL-00037" />
-      <option name="project" value="LOCAL" />
-      <updated>1613329688607</updated>
-    </task>
-    <task id="LOCAL-00038" summary="Layout für bis zu 8 Radiobuttons&#10;Radiobuttons können sich auf einzelne Aufgaben beziehen (bei simultanous)">
-      <created>1614359689431</created>
-      <option name="number" value="00038" />
-      <option name="presentableId" value="LOCAL-00038" />
-      <option name="project" value="LOCAL" />
-      <updated>1614359689431</updated>
-    </task>
-    <task id="LOCAL-00039" summary="Merge">
-      <created>1614447227095</created>
-      <option name="number" value="00039" />
-      <option name="presentableId" value="LOCAL-00039" />
-      <option name="project" value="LOCAL" />
-      <updated>1614447227095</updated>
-    </task>
-    <task id="LOCAL-00040" summary="Highlighte aktive Beispiele und Erklärungen">
-      <created>1614465333301</created>
-      <option name="number" value="00040" />
-      <option name="presentableId" value="LOCAL-00040" />
-      <option name="project" value="LOCAL" />
-      <updated>1614465333301</updated>
+      <workItem from="1623342161319" duration="5570000" />
+      <workItem from="1623418316722" duration="6351000" />
+      <workItem from="1623485929860" duration="3723000" />
+      <workItem from="1623518816182" duration="80000" />
+      <workItem from="1623529785852" duration="3507000" />
+      <workItem from="1624090070813" duration="4943000" />
     </task>
     <task id="LOCAL-00041" summary="Postopen 1, 2&#10;als einzelne StimulusResponse-Elemente">
       <created>1614888639553</created>
@@ -715,7 +691,35 @@
       <option name="project" value="LOCAL" />
       <updated>1622382059079</updated>
     </task>
-    <option name="localTasksCounter" value="86" />
+    <task id="LOCAL-00086" summary="7 statt 1 cognitive load item&#10;Mc-Fragen nacheinander anzeigen&#10;Nachlaufzeit, wenn noch nicht alle Fragen beantwortet sind&#10;Versuch Bildschirmbreite">
+      <created>1623346408222</created>
+      <option name="number" value="00086" />
+      <option name="presentableId" value="LOCAL-00086" />
+      <option name="project" value="LOCAL" />
+      <updated>1623346408222</updated>
+    </task>
+    <task id="LOCAL-00087" summary="flow- und cognitive load items werden in fester Reihenfolge angezeigt">
+      <created>1623435682095</created>
+      <option name="number" value="00087" />
+      <option name="presentableId" value="LOCAL-00087" />
+      <option name="project" value="LOCAL" />
+      <updated>1623435682095</updated>
+    </task>
+    <task id="LOCAL-00088" summary="Warnmeldung in ScreenCheck beseitigt">
+      <created>1623437345491</created>
+      <option name="number" value="00088" />
+      <option name="presentableId" value="LOCAL-00088" />
+      <option name="project" value="LOCAL" />
+      <updated>1623437345491</updated>
+    </task>
+    <task id="LOCAL-00089" summary="Anzeige eines zufälligen Codes am Ende">
+      <created>1623490272122</created>
+      <option name="number" value="00089" />
+      <option name="presentableId" value="LOCAL-00089" />
+      <option name="project" value="LOCAL" />
+      <updated>1623490272123</updated>
+    </task>
+    <option name="localTasksCounter" value="90" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -750,10 +754,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="Demographics angepasst" />
-    <MESSAGE value="Milestone korrigiert, richtig:&#10;{milestone: true}," />
-    <MESSAGE value="EBLWaitFrame eingebaut&#10;Zeiten in config.js in Testmodus gesetzt" />
-    <MESSAGE value="Toast in Waitframe eingebaut" />
     <MESSAGE value="Toast in Waitframe mit Intent.DANGER&#10;InstructionFrames 12, 13, 14 aus Timeline entfernt&#10;InstructionFrames 102 (Gleich wieder 4 Beispiele) eingebaut" />
     <MESSAGE value="diverse kleinere Änderungen an den Instruktionen gemäß Google-Dokument" />
     <MESSAGE value="tic und returnURL speichern" />
@@ -775,7 +775,11 @@
     <MESSAGE value="Bugfix Berechnung validCount" />
     <MESSAGE value="group type as text included in data[0]" />
     <MESSAGE value="Beispiele: MC-Fragen kommen verzögert&#10;MC-Fragen: kleine bugs korrigiert" />
-    <option name="LAST_COMMIT_MESSAGE" value="Beispiele: MC-Fragen kommen verzögert&#10;MC-Fragen: kleine bugs korrigiert" />
+    <MESSAGE value="7 statt 1 cognitive load item&#10;Mc-Fragen nacheinander anzeigen&#10;Nachlaufzeit, wenn noch nicht alle Fragen beantwortet sind&#10;Versuch Bildschirmbreite" />
+    <MESSAGE value="flow- und cognitive load items werden in fester Reihenfolge angezeigt" />
+    <MESSAGE value="Warnmeldung in ScreenCheck beseitigt" />
+    <MESSAGE value="Anzeige eines zufälligen Codes am Ende" />
+    <option name="LAST_COMMIT_MESSAGE" value="Anzeige eines zufälligen Codes am Ende" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
 </project>

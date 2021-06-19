@@ -10,6 +10,7 @@ import {config} from "./config";
 import {SessionFinished} from "./MicroComponents/SessionFinished";
 import {Server} from "./helper/Server";
 import {ExperimentFullFrame} from "./Frames/Instructions/ExperimentFullFrame";
+import fscreen from "fscreen";
 
 FocusStyleManager.onlyShowFocusOnTabs();
 const server = new Server();
@@ -27,6 +28,7 @@ function finished(data) {
     }); //zurück zu Unipark etc.
 }
 
+
 getElementInfo().then((info) => {
   t = (ressource, param) =>
     translate(info.language, ressource, param);
@@ -34,12 +36,15 @@ getElementInfo().then((info) => {
   switch (info.type) {
     case "full":
       element = <ExperimentFullFrame/>;
+      fscreen.exitFullscreen();
       break;
     case "finished":
       element = <SessionFinished/>;
+      fscreen.exitFullscreen();
       break;
     case "pending":
       element = <SessionFinished nextSessionStart={info.nextSessionStart}/>;
+      fscreen.exitFullscreen();
       break;
     default: //Session
       const initData = info.initialData[0];

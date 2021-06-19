@@ -16,7 +16,7 @@ export const config = {
   },
 
   mathCourse: {
-    delay: 300, //300
+    delay: 3000, //3000
     animation: '0.1s',
   },
 

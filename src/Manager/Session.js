@@ -29,6 +29,8 @@ function Frame(props) {
                  stripes={false}
     />;
 
+  //useEffect(() => fscreen.requestFullscreen(document.getElementById('root'))); TODO
+
   if (isTicking.current) {
     if (expired) {
       setRemainigTime(() => {

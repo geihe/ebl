@@ -35,6 +35,7 @@ header {
 }
 
 main {
+    background-color: #b9b9b9;
     display: flex;
     flex-direction: row;
     flex-grow: 1;

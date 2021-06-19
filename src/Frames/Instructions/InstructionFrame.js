@@ -200,9 +200,9 @@ export function InstructionFrame16b(props) {
   const html = `
   <h1>Vortest</h1>
 <p>Dir werden nun 12 Aufgaben präsentiert. Du sollst die Aufgaben berechnen und die Lösungen in das Notizfeld eintippen. </p>
-<p>Bitte nutze [/] um Brüche auszudrücken und [*] um zu multiplizieren.<br/> Beispiel: Schreibe ein Drittel als <strong>1/3</strong>
+<p>Bitte nutze [<strong>/</strong>] um Brüche auszudrücken und [<strong>*</strong>] um zu multiplizieren.<br/> Beispiel: Schreibe ein Drittel als <strong>1/3</strong>
 und ein Drittel mal ein Viertel als <strong>1/3 * 1/4</strong></p>
-<p>Bestätige deine Eingabe mit [Enter]. Du wirst dann automatisch zur nächsten Aufgabe weitergeleitet.</p>
+<p>Bestätige deine Eingabe mit [<strong>Enter</strong>]. Du wirst dann automatisch zur nächsten Aufgabe weitergeleitet.</p>
   `;
   return <InstructionFrame html={html} space finish={props.finish}/>;
 }
@@ -242,7 +242,7 @@ export function InstructionFrame100_simultan_34(props) {
 export function InstructionFrame101_sequenziell_12(props) {
   const html = `
   <h1>Aufbau des Lernprogramms II</h1>
-  <p>Nach vier bearbeiteten Aufgaben erfolgt eine kurze Befragung zu deinem Flow-Erleben und deiner kognitiven Beanspruchung. Dir werden 11 verschiedene Aussagen präsentiert. Du sollst dann auf einer Skala entscheiden, inwiefern jede dieser Aussagen auf dich zutrifft. Es ist wichtig, dass du die Fragen wahrheitsgemäß beantwortest.</p>
+  <p>Nach vier bearbeiteten Aufgaben erfolgt eine kurze Befragung zu deinem Flow-Erleben und deiner kognitiven Beanspruchung. Dir werden 18 verschiedene Aussagen präsentiert. Du sollst dann auf einer Skala entscheiden, inwiefern jede dieser Aussagen auf dich zutrifft. Es ist wichtig, dass du die Fragen wahrheitsgemäß beantwortest.</p>
   <p>Mit Betätigung der Leertaste wirst du zu Verständnisfragen weitergeleitet, bevor die Lernphase beginnt.</p>
   `;
 
@@ -252,7 +252,7 @@ export function InstructionFrame101_sequenziell_12(props) {
 export function InstructionFrame101_simultan_34(props) {
   const html = `
   <h1>Aufbau des Lernprogramms II</h1>
-  <p>Zum Abschluss jeder der vier Durchgänge erfolgt eine Befragung zu deinem Flow-Erleben und deiner kognitiven Beanspruchung. Dir werden 11 verschiedene Aussagen präsentiert. Du sollst dann auf einer Skala entscheiden, inwiefern jede dieser Aussagen auf dich zutrifft. Es ist wichtig, dass du die Fragen wahrheitsgemäß beantwortest. </p>
+  <p>Zum Abschluss jeder der vier Durchgänge erfolgt eine Befragung zu deinem Flow-Erleben und deiner kognitiven Beanspruchung. Dir werden 18 verschiedene Aussagen präsentiert. Du sollst dann auf einer Skala entscheiden, inwiefern jede dieser Aussagen auf dich zutrifft. Es ist wichtig, dass du die Fragen wahrheitsgemäß beantwortest. </p>
   <p>Mit Betätigung der Leertaste wirst du zu Verständnisfragen weitergeleitet, bevor die Lernphase beginnt.</p>
   `;
 
@@ -292,7 +292,7 @@ export function InstructionFrame200(props) {
 export function InstructionFrame201(props) {
   const html = `
   <p>Dir werden nun 16 Aufgaben präsentiert. Du sollst die Aufgaben berechnen und die Lösungen in das Notizfeld eintippen. </p>
-  <p>Bitte nutze [/] um Brüche auszudrücken. Bestätige deine Eingabe mit [Enter]. Du wirst dann automatisch zur nächsten Aufgabe weitergeleitet.</p>
+  <p>Bitte nutze [/] um Brüche auszudrücken. Wenn du eine Multiplikation schreiben möchtest, verwende für das Malzeichen [*]. Bestätige deine Eingabe mit [Enter]. Du wirst dann automatisch zur nächsten Aufgabe weitergeleitet.</p>
   `;
 
   return <InstructionFrame html={html} space finish={props.finish}/>;
