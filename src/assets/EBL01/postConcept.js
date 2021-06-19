@@ -14,7 +14,7 @@ export const postConcept = [
       label: `4. Es gibt eine Beziehung zwischen der Chance dieses Kindes, eine Hauptrolle zu ziehen und der Chance des ersten Kindes, eine Hauptrolle zu ziehen, aber das hängt davon ab, wie viele verschiedene Rollen es gibt.`},
     ],
     validate:
-      (answer) => ['1'].includes(answer),
+      (answer) => [1].includes(+answer.value),
     responseType: 'radio'
   },
   {
@@ -32,7 +32,7 @@ export const postConcept = [
       label: `4. Das hängt von der Anzahl der Teams ab.`},
     ],
     validate:
-      (answer) => ['1'].includes(answer),
+      (answer) => [1].includes(+answer.value),
     responseType: 'radio'
   },
   {
@@ -50,7 +50,7 @@ export const postConcept = [
       label: `4. Das hängt von der Anzahl der Mitspieler ab.`},
     ],
     validate:
-      (answer) => ['2'].includes(''+answer),
+      (answer) => [2].includes(+answer.value),
     responseType: 'radio'
   },
   {
@@ -68,7 +68,7 @@ export const postConcept = [
       label: `4. Das hängt davon ab, ob die Reihenfolge wichtig ist oder nicht.`},
     ],
     validate:
-      (answer) => ['3'].includes(answer),
+      (answer) => [3].includes(+answer.value),
     responseType: 'radio'
   },
 ]
