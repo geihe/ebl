@@ -3,7 +3,7 @@ import {evalValidator} from "../../helper/evalValidate";
 export const postNT = [
   {
     id: 'postNT2step_1',
-    header: `Du und dein Freund nehmen an einem zweitägigen Mountainbike-Kurs teil. An beiden Tagen bringt der Kursleiter jeweils 7 Fahrradhelme mit, die alle unterschiedliche Farben haben (grün, blau, orange, silber, braun, rot und gelb). Die Helme werden zufällig verteilt und am Ende des Tages an den Kursleiter zurückgegeben. An beiden Tagen erhältst Du zuerst und Dein Freund als Zweiter einen Helm.`,
+    header: `Du und dein Freund nehmen an einem zweitägigen Mountainbike-Kurs teil. An beiden Tagen bringt der Kursleiter jeweils 7 Fahrradhelme mit, die alle unterschiedliche Farben haben (grün, blau, orange, silber, braun, rot und gelb). Die Helme werden zufällig verteilt und am Ende des Tages an den Kursleiter zurückgegeben. An beiden Tagen erhältst du zuerst und Dein Freund als Zweiter einen Helm.`,
     question: `Wie hoch ist die Wahrscheinlichkeit, dass du und dein Freund am ersten Kurstag den blauen und den grünen Helm bekommen (es ist egal, wer welche Farbe bekommt)?`,
     validate: evalValidator(2/42),
     responseType: 'input',
@@ -11,7 +11,7 @@ export const postNT = [
   },
   {
     id: 'postNT2step_2',
-    header: `Eine Chemikerin lagert in zwei verschiedenen Sicherheitsschränken Edelgase. In beiden Schränken befinden sich dieselben 4 Edelgase (Argon, Krypton, Xenon und Helium) in einzelnen Behältern. Ihr Kollege hat jedoch vergessen, die Behälter zu beschriften und alle Behälter sehen genau gleich aus. Für ein Experiment begibt sich die Chemikerin auf die Suche nach zwei verschiedenen Edelgasen und nimmt die Behälter einzeln aus den Schränken und prüft danach welches Gas enthalten ist.`,
+    header: `Eine Chemikerin lagert in zwei verschiedenen Sicherheitsschränken Edelgase. In beiden Schränken befinden sich dieselben 4 Edelgase (Argon, Krypton, Xenon und Helium) in einzelnen Behältern. Ihr Kollege hat jedoch vergessen, die Behälter zu beschriften und alle Behälter sehen genau gleich aus. Für ein Experiment begibt sich die Chemikerin auf die Suche nach zwei verschiedenen Edelgasen und nimmt die Behälter einzeln aus den Schränken und prüft danach, welches Gas enthalten ist.`,
     question: `Wie hoch ist die Wahrscheinlichkeit, dass die Chemikerin in einem Schrank zuerst den Behälter mit dem Krypton herausgreift und dann den Behälter mit dem Xenon?`,
     validate: evalValidator(1/12),
     responseType: 'input',

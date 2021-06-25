@@ -5,7 +5,7 @@ export const verification = [
   {
     context: 1,
     header: {
-      de: `Du und dein Freund nehmen an einem zweitägigen Mountainbike-Kurs teil. An beiden Tagen bringt der Kursleiter jeweils 6 Fahrradhelme mit, die alle unterschiedliche Farben haben (grün, orange, silber, braun, rot und gelb). Die Helme werden zufällig verteilt und am Ende des Tages an den Kursleiter zurückgegeben. An beiden Tagen erhältst Du zuerst und Dein Freund als Zweiter einen Helm.`,
+      de: `Du und dein Freund nehmen an einem zweitägigen Mountainbike-Kurs teil. An beiden Tagen bringt der Kursleiter jeweils 6 Fahrradhelme mit, die alle unterschiedliche Farben haben (grün, orange, silber, braun, rot und gelb). Die Helme werden zufällig verteilt und am Ende des Tages an den Kursleiter zurückgegeben. An beiden Tagen erhältst du zuerst und Dein Freund als Zweiter einen Helm.`,
       en: `You and your friend are taking part in a two-day mountain bike course. On both days, the instructor will bring 6 bike helmets, each with different colors (green, orange, silver, brown, red and yellow). The helmets are distributed randomly an returned to the instructor at the end of the day. On both days you will receive a helmet first and your friend second.`,
     },
     questions: [
@@ -58,7 +58,7 @@ export const verification = [
   {
     context: 2,
     header: {
-      de: `Eine Chemikerin lagert in zwei verschiedenen Sicherheitsschränken Edelgase. In beiden Schränken befinden sich dieselben 5 Edelgase (Argon, Krypton, Xenon, Helium und Neon) in einzelnen Behältern. Ihr Kollege hat jedoch vergessen, die Behälter zu beschriften und alle Behälter sehen genau gleich aus. Für ein Experiment begibt sich die Chemikerin auf die Suche nach zwei verschiedenen Edelgasen und nimmt die Behälter einzeln aus den Schränken und prüft danach welches Gas enthalten ist.`,
+      de: `Eine Chemikerin lagert in zwei verschiedenen Sicherheitsschränken Edelgase. In beiden Schränken befinden sich dieselben 5 Edelgase (Argon, Krypton, Xenon, Helium und Neon) in einzelnen Behältern. Ihr Kollege hat jedoch vergessen, die Behälter zu beschriften und alle Behälter sehen genau gleich aus. Für ein Experiment begibt sich die Chemikerin auf die Suche nach zwei verschiedenen Edelgasen und nimmt die Behälter einzeln aus den Schränken und prüft danach, welches Gas enthalten ist.`,
     },
     questions: [
       {

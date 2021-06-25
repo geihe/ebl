@@ -221,7 +221,7 @@ export function InstructionFrame100_sequenziell_12(props) {
   <p>Auf jeder Seite des Lernprogramms wird dir eine Beispielaufgabe präsentiert. Du sollst jede Aufgabe aufmerksam lesen und versuchen, die Lösung nachzuvollziehen. </p>
   <p>Zudem werden nach einiger Zeit rechts auf jeder Seite des Lernprogramms für jede Beispielaufgabe zwei Multiple-Choice-Fragen eingeblendet. Hier sollst du die deiner Meinung nach zutreffendste Antwort auswählen. Du kannst deine Wahl nicht mehr ändern. </p>
   <p>Du durchläufst vier Durchgänge mit jeweils vier Beispielaufgaben, sodass dir <strong>insgesamt 16 Aufgaben präsentiert werden und du 32 Multiple Choice-Fragen beantwortest</strong>.</p>
-  <p>Für die Bearbeitung von je vier Beispielaufgaben hast du insgesamt fünf Minuten Zeit, pro Aufgabe also 1 Minute und 15 Sekunden. Du solltest alle Texte sorgfältig lesen, alle Lösungen genau nachvollziehen und dann du die Multiple-Choice Fragen beantworten. Nach Ablauf der fünf Minuten wirst du automatisch zur Befragung deines Flow-Erlebens und deiner kognitiven Beanspruchung weitergeleitet und kannst nicht mehr zurückgehen. Ein Timer wird eingeblendet.</p>
+  <p>Für die Bearbeitung von je vier Beispielaufgaben hast du insgesamt fünf Minuten Zeit, pro Aufgabe also 1 Minute und 15 Sekunden. Du solltest alle Texte sorgfältig lesen, alle Lösungen genau nachvollziehen und dann die Multiple-Choice Fragen beantworten. Nach Ablauf der fünf Minuten wirst du automatisch zur Befragung deines Flow-Erlebens und deiner kognitiven Beanspruchung weitergeleitet und kannst nicht mehr zurückgehen. Ein Timer wird eingeblendet.</p>
   `;
 
   return <InstructionFrame html={html} space finish={props.finish}/>;

@@ -92,8 +92,8 @@ export class EBL01Builder {
 
     // -->InstructionFrame02
     this.tlManager.add([
-      {milestone: true},
       {frame: <InstructionFrame01/>, id:'firstFrame'},
+      {milestone: true},
       <EBL01Video videoID={'introduction'}/>,
       <InstructionFrame03/>,
       {
@@ -101,6 +101,7 @@ export class EBL01Builder {
           {frame: <InstructionTest/>, id:'InstructionTest'}],
         until: (lastlog) => lastlog.valid
       },
+      {milestone: true},
       <InstructionFrame09/>, cancelTest,
       <InstructionFrame10/>, cancelTest,
       <InstructionFrame11/>, cancelTest,
@@ -108,6 +109,7 @@ export class EBL01Builder {
       <InstructionFrame16a/>,
       <InstructionFrame16b/>,
       preTest,
+      {milestone: true},
       <InstructionFrame17/>,
       ebl01_MathCourse,
       {milestone: true},
@@ -157,7 +159,7 @@ export class EBL01Builder {
 
   buildTestSession() {
     this.tlManager.add(
-      postFrames[1]
+      <InstructionFrame16b/>
     );
     this.tlManager.add(<ShowStudyCode random/>);
   }

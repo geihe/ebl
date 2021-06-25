@@ -1,6 +1,6 @@
 export const config = {
   develop: true,
-  milestones: false,
+  milestones: true,
 
   language: 'de',
   numberOfSessions: 1,
