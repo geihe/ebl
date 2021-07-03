@@ -256,9 +256,9 @@ function SingleRadios(props) {
   return (
     <div className={styles.singleExplanation + activeClass + waitingClass + lowOnTimeClass}
          style={{opacity: visible ? 1 : 0, transition: 'opacity 0.5s'}}>
-      <div style={{display: 'flex'}}>
+      <div style={{display: 'flex'}} onClick={onClick}>
         {showIcon ? icon : ''}
-        <Html onClick={onClick}
+        <Html
               className={styles.explanationHeader}
               style={{marginBottom: '8px'}}
               html={t(html)}/>

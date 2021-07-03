@@ -159,7 +159,7 @@ export class EBL01Builder {
 
   buildTestSession() {
     this.tlManager.add(
-      <InstructionFrame16b/>
+      postFrames[0],
     );
     this.tlManager.add(<ShowStudyCode random/>);
   }

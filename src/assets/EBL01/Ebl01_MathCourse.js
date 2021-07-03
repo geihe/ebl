@@ -111,7 +111,7 @@ export function MathCourse06a(props) {
     <div>
       <h1>4. Wahrscheinlichkeit mehrerer Ereignisfolgen bei mehrstufigen Experimenten</h1>
       <p>Nicht immer geht es bei mehrstufigen Experimenten um eine bestimmte Reihenfolge der Ereignisse.
-        So gibt es auch mehrstufige Experimenten, bei denen man sich für die Wahrscheinlichkeit interessiert,
+        So gibt es auch mehrstufige Experimente, bei denen man sich für die Wahrscheinlichkeit interessiert,
         dass zwei oder mehr Ereignisse überhaupt auftreten,
         <strong> unabhängig von der Reihenfolge der Ereignisse</strong>.</p>
       <p>In diesem Fall sind <strong>mehrere Ereignisfolgen günstig </strong>

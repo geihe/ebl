@@ -7,11 +7,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c0a8d840-d2a4-41a1-9e79-f574c09cafbd" name="Default Changelist" comment="Hintergrund grau und kleine Änderungen.">
+    <list default="true" id="c0a8d840-d2a4-41a1-9e79-f574c09cafbd" name="Default Changelist" comment="kleinere Änderungen nach erneutem Feedback">
       <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Frames/EBL/EblWaitFrame.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frames/EBL/EblWaitFrame.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Frames/Instructions/InstructionFrame.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frames/Instructions/InstructionFrame.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Manager/EBL01Builder.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Manager/EBL01Builder.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/EBL01/postConcept.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/EBL01/postConcept.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MicroComponents/AdvancedInput.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/MicroComponents/AdvancedInput.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MicroComponents/TimeView.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/MicroComponents/TimeView.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MicroComponents/UniBielefeld.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/MicroComponents/UniBielefeld.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/EBL01/Ebl01_MathCourse.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/EBL01/Ebl01_MathCourse.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/EBL01/posFreeForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/EBL01/posFreeForm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/EBL01/verification.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/EBL01/verification.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,7 +72,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="js.last.introduce.type" value="CONST" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/assets/EBL01" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../WebstormProjekts/epk2017" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -368,21 +376,12 @@
       <workItem from="1623485929860" duration="3723000" />
       <workItem from="1623518816182" duration="80000" />
       <workItem from="1623529785852" duration="3507000" />
-      <workItem from="1624090070813" duration="6345000" />
-    </task>
-    <task id="LOCAL-00042" summary="Steuerung über URL eingeführt:&#10;group_id=1,..,4&#10;group_id=0 -&gt; Test&#10;session=99 -&gt; Kurzfassung Beispiele">
-      <created>1614965331096</created>
-      <option name="number" value="00042" />
-      <option name="presentableId" value="LOCAL-00042" />
-      <option name="project" value="LOCAL" />
-      <updated>1614965331096</updated>
-    </task>
-    <task id="LOCAL-00043" summary="Instruktionen Teil 1 Nummerierung der Instruction-Frames vereinfacht">
-      <created>1615142846502</created>
-      <option name="number" value="00043" />
-      <option name="presentableId" value="LOCAL-00043" />
-      <option name="project" value="LOCAL" />
-      <updated>1615142846502</updated>
+      <workItem from="1624090070813" duration="8458000" />
+      <workItem from="1624196799183" duration="614000" />
+      <workItem from="1624625027596" duration="3405000" />
+      <workItem from="1624631693238" duration="3151000" />
+      <workItem from="1625323394440" duration="1403000" />
+      <workItem from="1625324843385" duration="6177000" />
     </task>
     <task id="LOCAL-00044" summary="Frage nach Schwierigkeiten am Ende&#10;&#10;Falls Ja erscheint eigenes Textfeld">
       <created>1615633028941</created>
@@ -713,7 +712,21 @@
       <option name="project" value="LOCAL" />
       <updated>1624099452674</updated>
     </task>
-    <option name="localTasksCounter" value="91" />
+    <task id="LOCAL-00091" summary="Bugfix: validator postConcet">
+      <created>1624101101941</created>
+      <option name="number" value="00091" />
+      <option name="presentableId" value="LOCAL-00091" />
+      <option name="project" value="LOCAL" />
+      <updated>1624101101941</updated>
+    </task>
+    <task id="LOCAL-00092" summary="kleinere Textfehler korrigiert&#10;ein paar milestones ergänzt">
+      <created>1624636513759</created>
+      <option name="number" value="00092" />
+      <option name="presentableId" value="LOCAL-00092" />
+      <option name="project" value="LOCAL" />
+      <updated>1624636513759</updated>
+    </task>
+    <option name="localTasksCounter" value="93" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -748,8 +761,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="diverse kleinere Änderungen an den Instruktionen gemäß Google-Dokument" />
-    <MESSAGE value="tic und returnURL speichern" />
     <MESSAGE value="Zuordnung Radiobutton - Aufgabe korrigiert&#10;Index aud Footer entfernt" />
     <MESSAGE value="bugfixes&#10;minimale Inputlänge in config.js verringert" />
     <MESSAGE value="Schriftfarbe in index.css auf ein dunkles Grau gesetzt." />
@@ -773,7 +784,9 @@
     <MESSAGE value="Warnmeldung in ScreenCheck beseitigt" />
     <MESSAGE value="Anzeige eines zufälligen Codes am Ende" />
     <MESSAGE value="Hintergrund grau und kleine Änderungen." />
-    <option name="LAST_COMMIT_MESSAGE" value="Hintergrund grau und kleine Änderungen." />
+    <MESSAGE value="Bugfix: validator postConcet" />
+    <MESSAGE value="kleinere Textfehler korrigiert&#10;ein paar milestones ergänzt" />
+    <option name="LAST_COMMIT_MESSAGE" value="kleinere Textfehler korrigiert&#10;ein paar milestones ergänzt" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
 </project>

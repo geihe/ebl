@@ -113,7 +113,7 @@ export const verification = [
   {
     context: 3,
     header: {
-      de: `Die drei Engelberger Skispringer Adam, Urs und Beat traten auf der alten Engelberger Schanze häufig gegeneinander an. Dabei kam jeder mit gleicher Häufigkeit auf den ersten, zweiten, dritten oder vierten Platz. Somit sind die drei Springer also gleich gut, wer am weitesten springt hängt von zufälligen Faktoren ab (z. B. den Windverhältnissen). Jetzt wurde in Engelberg eine neue Skischanze errichtet und als Erste dürfen Adam, Urs und Beat sie ausprobieren. Es gibt zwei Durchgänge.`,
+      de: `Die drei Engelberger Skispringer Adam, Urs und Beat traten auf der alten Engelberger Schanze häufig gegeneinander an. Dabei kam jeder mit gleicher Häufigkeit auf den ersten, zweiten oder dritten Platz. Somit sind die drei Springer also gleich gut, wer am weitesten springt hängt von zufälligen Faktoren ab (z. B. den Windverhältnissen). Jetzt wurde in Engelberg eine neue Skischanze errichtet und als Erste dürfen Adam, Urs und Beat sie ausprobieren. Es gibt zwei Durchgänge.`,
     },
     questions: [
       {

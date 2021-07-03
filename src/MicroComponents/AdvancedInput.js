@@ -28,7 +28,7 @@ export function AdvancedInput(props) {
       key: event.key,
       time: performance.now() - startTime.current
     });
-    if (endKeys.includes(event.key) && value.length >= minLength) {
+    if (endKeys.includes(event.key) && value.trim().length >= minLength) {
       event.preventDefault();
       event.currentTarget.removeEventListener(event.type, handle);
       props.finish({value: value.trim(), timeKeys: timeKeys.current});
