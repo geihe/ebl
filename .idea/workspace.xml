@@ -7,19 +7,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c0a8d840-d2a4-41a1-9e79-f574c09cafbd" name="Default Changelist" comment="kleinere Änderungen nach erneutem Feedback">
+    <list default="true" id="c0a8d840-d2a4-41a1-9e79-f574c09cafbd" name="Default Changelist" comment="kleinere Änderungen nach erneutem Feedback&#10;trim() in advancedInput&#10;&gt; 3 min   --&gt;   3 min&#10;MC-Klickbereich vergrößert">
       <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Frames/EBL/EblWaitFrame.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frames/EBL/EblWaitFrame.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Frames/Instructions/InstructionFrame.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frames/Instructions/InstructionFrame.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Manager/EBL01Builder.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Manager/EBL01Builder.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MicroComponents/AdvancedInput.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/MicroComponents/AdvancedInput.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MicroComponents/TimeView.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/MicroComponents/TimeView.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MicroComponents/UniBielefeld.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/MicroComponents/UniBielefeld.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/EBL01/Ebl01_MathCourse.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/EBL01/Ebl01_MathCourse.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/EBL01/posFreeForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/EBL01/posFreeForm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/EBL01/verification.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/EBL01/verification.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Frames/JolFrames.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frames/JolFrames.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -381,14 +373,9 @@
       <workItem from="1624625027596" duration="3405000" />
       <workItem from="1624631693238" duration="3151000" />
       <workItem from="1625323394440" duration="1403000" />
-      <workItem from="1625324843385" duration="6177000" />
-    </task>
-    <task id="LOCAL-00044" summary="Frage nach Schwierigkeiten am Ende&#10;&#10;Falls Ja erscheint eigenes Textfeld">
-      <created>1615633028941</created>
-      <option name="number" value="00044" />
-      <option name="presentableId" value="LOCAL-00044" />
-      <option name="project" value="LOCAL" />
-      <updated>1615633028941</updated>
+      <workItem from="1625324843385" duration="6531000" />
+      <workItem from="1625417989262" duration="2973000" />
+      <workItem from="1625480055371" duration="364000" />
     </task>
     <task id="LOCAL-00045" summary="Layout für Instruktionen verändert&#10;&#10;MySlider angefangen">
       <created>1616276241815</created>
@@ -726,7 +713,14 @@
       <option name="project" value="LOCAL" />
       <updated>1624636513759</updated>
     </task>
-    <option name="localTasksCounter" value="93" />
+    <task id="LOCAL-00093" summary="kleinere Änderungen nach erneutem Feedback&#10;trim() in advancedInput&#10;&gt; 3 min   --&gt;   3 min&#10;MC-Klickbereich vergrößert">
+      <created>1625331740379</created>
+      <option name="number" value="00093" />
+      <option name="presentableId" value="LOCAL-00093" />
+      <option name="project" value="LOCAL" />
+      <updated>1625331740379</updated>
+    </task>
+    <option name="localTasksCounter" value="94" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -761,8 +755,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="Zuordnung Radiobutton - Aufgabe korrigiert&#10;Index aud Footer entfernt" />
-    <MESSAGE value="bugfixes&#10;minimale Inputlänge in config.js verringert" />
     <MESSAGE value="Schriftfarbe in index.css auf ein dunkles Grau gesetzt." />
     <MESSAGE value="Diverse Veränderungen" />
     <MESSAGE value="bugfix Timerframe im Versuch" />
@@ -786,7 +778,9 @@
     <MESSAGE value="Hintergrund grau und kleine Änderungen." />
     <MESSAGE value="Bugfix: validator postConcet" />
     <MESSAGE value="kleinere Textfehler korrigiert&#10;ein paar milestones ergänzt" />
-    <option name="LAST_COMMIT_MESSAGE" value="kleinere Textfehler korrigiert&#10;ein paar milestones ergänzt" />
+    <MESSAGE value="kleinere Änderungen nach erneutem Feedback" />
+    <MESSAGE value="kleinere Änderungen nach erneutem Feedback&#10;trim() in advancedInput&#10;&gt; 3 min   --&gt;   3 min&#10;MC-Klickbereich vergrößert" />
+    <option name="LAST_COMMIT_MESSAGE" value="kleinere Änderungen nach erneutem Feedback&#10;trim() in advancedInput&#10;&gt; 3 min   --&gt;   3 min&#10;MC-Klickbereich vergrößert" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
 </project>
