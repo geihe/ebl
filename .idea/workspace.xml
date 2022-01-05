@@ -7,11 +7,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c0a8d840-d2a4-41a1-9e79-f574c09cafbd" name="Default Changelist" comment="kleinere Änderungen nach erneutem Feedback&#10;trim() in advancedInput&#10;&gt; 3 min   --&gt;   3 min&#10;MC-Klickbereich vergrößert">
+    <list default="true" id="c0a8d840-d2a4-41a1-9e79-f574c09cafbd" name="Default Changelist" comment="Änderung Einverständniserklärung">
+      <change afterPath="$PROJECT_DIR$/src/assets/EBL01/Principle.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/EBL01/examples/explanationsV2.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Frames/Instructions/InstructionFrame.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frames/Instructions/InstructionFrame.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Frames/JolFrames.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frames/JolFrames.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Manager/EBL01_ExampleManager.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Manager/EBL01_ExampleManager.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/EBL01/examples/explanations.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/EBL01/examples/explanationsV1.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,7 +66,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="js.last.introduce.type" value="CONST" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../WebstormProjekts/epk2017" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -80,11 +82,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="G:\OneDrive_Marienschule\Marienschule Krefeld\Programmprojekte - Dokumente\react\bipsy\ebl\src\assets\EBL01\examples" />
       <recent name="G:\OneDrive_Marienschule\Marienschule Krefeld\Programmprojekte - Dokumente\react\bipsy\ebl\src\assets\EBL01" />
       <recent name="G:\OneDrive_Marienschule\Marienschule Krefeld\Programmprojekte - Dokumente\react\bipsy\ebl\src\Frames" />
       <recent name="G:\OneDrive_Marienschule\Marienschule Krefeld\Programmprojekte - Dokumente\react\bipsy\ebl\src\Frames\EBL" />
       <recent name="G:\OneDrive_Marienschule\Marienschule Krefeld\Programmprojekte - Dokumente\react\bipsy\ebl\src\Frames\Instructions" />
-      <recent name="G:\OneDrive_Marienschule\Marienschule Krefeld\Programmprojekte - Dokumente\react\bipsy\ebl\src\Components" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="G:\OneDrive_Marienschule\Marienschule Krefeld\Programmprojekte - Dokumente\react\bipsy\ebl\src\assets" />
@@ -375,14 +377,24 @@
       <workItem from="1625323394440" duration="1403000" />
       <workItem from="1625324843385" duration="6531000" />
       <workItem from="1625417989262" duration="2973000" />
-      <workItem from="1625480055371" duration="364000" />
-    </task>
-    <task id="LOCAL-00045" summary="Layout für Instruktionen verändert&#10;&#10;MySlider angefangen">
-      <created>1616276241815</created>
-      <option name="number" value="00045" />
-      <option name="presentableId" value="LOCAL-00045" />
-      <option name="project" value="LOCAL" />
-      <updated>1616276241815</updated>
+      <workItem from="1625480055371" duration="560000" />
+      <workItem from="1628353374921" duration="376000" />
+      <workItem from="1633872506381" duration="1946000" />
+      <workItem from="1633875389605" duration="597000" />
+      <workItem from="1633970727153" duration="661000" />
+      <workItem from="1634033492596" duration="2139000" />
+      <workItem from="1634046436108" duration="2846000" />
+      <workItem from="1634053078319" duration="3617000" />
+      <workItem from="1634751948250" duration="1532000" />
+      <workItem from="1636737207689" duration="1836000" />
+      <workItem from="1636739651928" duration="12000" />
+      <workItem from="1636902838564" duration="3810000" />
+      <workItem from="1636991292667" duration="438000" />
+      <workItem from="1636992557738" duration="689000" />
+      <workItem from="1640706502235" duration="2265000" />
+      <workItem from="1640721454741" duration="201000" />
+      <workItem from="1641076004779" duration="171000" />
+      <workItem from="1641383201890" duration="393000" />
     </task>
     <task id="LOCAL-00046" summary="Jol eingebaut">
       <created>1616945631827</created>
@@ -720,7 +732,14 @@
       <option name="project" value="LOCAL" />
       <updated>1625331740379</updated>
     </task>
-    <option name="localTasksCounter" value="94" />
+    <task id="LOCAL-00094" summary="Änderung Einverständniserklärung">
+      <created>1625480605297</created>
+      <option name="number" value="00094" />
+      <option name="presentableId" value="LOCAL-00094" />
+      <option name="project" value="LOCAL" />
+      <updated>1625480605297</updated>
+    </task>
+    <option name="localTasksCounter" value="95" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -755,7 +774,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="Schriftfarbe in index.css auf ein dunkles Grau gesetzt." />
     <MESSAGE value="Diverse Veränderungen" />
     <MESSAGE value="bugfix Timerframe im Versuch" />
     <MESSAGE value="diverse Tippfehler beseitigt" />
@@ -780,7 +798,8 @@
     <MESSAGE value="kleinere Textfehler korrigiert&#10;ein paar milestones ergänzt" />
     <MESSAGE value="kleinere Änderungen nach erneutem Feedback" />
     <MESSAGE value="kleinere Änderungen nach erneutem Feedback&#10;trim() in advancedInput&#10;&gt; 3 min   --&gt;   3 min&#10;MC-Klickbereich vergrößert" />
-    <option name="LAST_COMMIT_MESSAGE" value="kleinere Änderungen nach erneutem Feedback&#10;trim() in advancedInput&#10;&gt; 3 min   --&gt;   3 min&#10;MC-Klickbereich vergrößert" />
+    <MESSAGE value="Änderung Einverständniserklärung" />
+    <option name="LAST_COMMIT_MESSAGE" value="Änderung Einverständniserklärung" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
 </project>

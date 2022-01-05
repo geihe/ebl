@@ -2,7 +2,7 @@ import {fahrradhelm} from "../assets/EBL01/examples/fahrradhelm";
 import {edelgase} from "../assets/EBL01/examples/edelgase";
 import {kekse} from "../assets/EBL01/examples/kekse";
 import {skispringen} from "../assets/EBL01/examples/skispringen";
-import {selfExplanations, selfRadioFunction} from "../assets/EBL01/examples/explanations";
+import {selfExplanations, selfRadioFunction} from "../assets/EBL01/examples/explanationsV1";
 
 export class EBL01_ExampleManager {
   constructor() {
