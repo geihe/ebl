@@ -1,0 +1,5 @@
+{
+"subject" : "mailto: <psychologie@geihe.net>",
+"publicKey" : "BOWecQUvHV-fSo1Xm_PKSWxd6NDd_PwXNu4djK8UoklhY34G9UjngIH8KXuHpyeMAwPoxOqKJmVIxCpHp0QCHtg",
+"privateKey" : "Wn_wk3MLtOzTDbMjV2kev-8C9WXfkiWbGyiof0DrbMI"
+}
