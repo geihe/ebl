@@ -7,10 +7,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c0a8d840-d2a4-41a1-9e79-f574c09cafbd" name="Default Changelist" comment="lang=&quot;de&quot; (statt &quot;en&quot;)">
+    <list default="true" id="c0a8d840-d2a4-41a1-9e79-f574c09cafbd" name="Default Changelist" comment="EBL02">
+      <change afterPath="$PROJECT_DIR$/EBL_Server_backup/common.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/EBL_Server_backup/config01.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/EBL_Server_backup/data.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/EBL_Server_backup/db.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/EBL_Server_backup/db_private.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/EBL_Server_backup/get_data.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/EBL_Server_backup/mail.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/EBL_Server_backup/new01.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/EBL_Server_backup/ntuser.dat.LOG1" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/EBL_Server_backup/reminder.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/EBL_Server_backup/save01.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/EBL_Server_backup/test.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Manager/EBL01Builder.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Manager/EBL01Builder.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/helper/GroupManager.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/helper/GroupManager.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,6 +65,11 @@
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
   </component>
+  <component name="JsbtTreeLayoutManager">
+    <layout place="tools.popupnpm">
+      <scroll-view-position x="0" y="0" />
+    </layout>
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -64,7 +82,10 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;js.last.introduce.type&quot;: &quot;CONST&quot;,
+    &quot;last_opened_file_path&quot;: &quot;G:/OneDrive_Marienschule/Marienschule Krefeld/Programmprojekte - Dokumente/react/bipsy/ebl/src/Frames&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -75,9 +96,9 @@
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="G:\OneDrive_Marienschule\Marienschule Krefeld\Programmprojekte - Dokumente\react\bipsy\ebl\src\Frames" />
       <recent name="G:\OneDrive_Marienschule\Marienschule Krefeld\Programmprojekte - Dokumente\react\bipsy\ebl\src\assets\EBL01\examples" />
       <recent name="G:\OneDrive_Marienschule\Marienschule Krefeld\Programmprojekte - Dokumente\react\bipsy\ebl\src\assets\EBL01" />
-      <recent name="G:\OneDrive_Marienschule\Marienschule Krefeld\Programmprojekte - Dokumente\react\bipsy\ebl\src\Frames" />
       <recent name="G:\OneDrive_Marienschule\Marienschule Krefeld\Programmprojekte - Dokumente\react\bipsy\ebl\src\Frames\EBL" />
       <recent name="G:\OneDrive_Marienschule\Marienschule Krefeld\Programmprojekte - Dokumente\react\bipsy\ebl\src\Frames\Instructions" />
     </key>
@@ -143,12 +164,16 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Node.js.testGroups.js">
     <configuration name="rest-api#1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$APPLICATION_CONFIG_DIR$/scratches/rest-api.http" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <configuration name="testGroups.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/src/Test/testGroups.js" working-dir="$PROJECT_DIR$/src/Test">
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Node.js.testGroups.js" />
         <item itemvalue="HTTP Request.rest-api#1" />
         <item itemvalue="HTTP Request.rest-api#1" />
         <item itemvalue="HTTP Request.rest-api#1" />
@@ -390,27 +415,52 @@
       <workItem from="1641383201890" duration="393000" />
       <workItem from="1660980723032" duration="1195000" />
       <workItem from="1661065402536" duration="4085000" />
-    </task>
-    <task id="LOCAL-00046" summary="Jol eingebaut">
-      <created>1616945631827</created>
-      <option name="number" value="00046" />
-      <option name="presentableId" value="LOCAL-00046" />
-      <option name="project" value="LOCAL" />
-      <updated>1616945631827</updated>
-    </task>
-    <task id="LOCAL-00047" summary="bugfix: in EBLFrame logdata enthält Button-Element statt Text&#10;&#10;Overflow aktiviert">
-      <created>1616955597670</created>
-      <option name="number" value="00047" />
-      <option name="presentableId" value="LOCAL-00047" />
-      <option name="project" value="LOCAL" />
-      <updated>1616955597670</updated>
-    </task>
-    <task id="LOCAL-00048" summary="Radiobuttons umstrukturiert&#10;zufällige Reihenfolge&#10;&#10;zusätzliches Attribut valid&#10;&#10;TESTFASSUNG">
-      <created>1617093959832</created>
-      <option name="number" value="00048" />
-      <option name="presentableId" value="LOCAL-00048" />
-      <option name="project" value="LOCAL" />
-      <updated>1617093959832</updated>
+      <workItem from="1662048590842" duration="987000" />
+      <workItem from="1662138422249" duration="738000" />
+      <workItem from="1662186860398" duration="1950000" />
+      <workItem from="1662293395450" duration="3530000" />
+      <workItem from="1662308312348" duration="1207000" />
+      <workItem from="1662567553578" duration="600000" />
+      <workItem from="1662828642336" duration="3645000" />
+      <workItem from="1662879686729" duration="12835000" />
+      <workItem from="1662903330427" duration="6713000" />
+      <workItem from="1662920065205" duration="1959000" />
+      <workItem from="1664951983922" duration="44000" />
+      <workItem from="1664952219628" duration="2210000" />
+      <workItem from="1667923075238" duration="998000" />
+      <workItem from="1670142548615" duration="2870000" />
+      <workItem from="1670333145832" duration="995000" />
+      <workItem from="1670435359645" duration="608000" />
+      <workItem from="1670760018719" duration="772000" />
+      <workItem from="1670781555517" duration="1100000" />
+      <workItem from="1671389937471" duration="599000" />
+      <workItem from="1672652778247" duration="3183000" />
+      <workItem from="1672673380466" duration="12395000" />
+      <workItem from="1672758993784" duration="2569000" />
+      <workItem from="1673632096161" duration="516000" />
+      <workItem from="1674380711642" duration="1201000" />
+      <workItem from="1674638709637" duration="71000" />
+      <workItem from="1674839873422" duration="607000" />
+      <workItem from="1674922036074" duration="1580000" />
+      <workItem from="1674933551056" duration="2769000" />
+      <workItem from="1675108001917" duration="592000" />
+      <workItem from="1675265280304" duration="596000" />
+      <workItem from="1675444465318" duration="92000" />
+      <workItem from="1676798959407" duration="675000" />
+      <workItem from="1676800229704" duration="708000" />
+      <workItem from="1677397551671" duration="151000" />
+      <workItem from="1677397747990" duration="5259000" />
+      <workItem from="1677517013610" duration="3610000" />
+      <workItem from="1677870454792" duration="482000" />
+      <workItem from="1678007973912" duration="3634000" />
+      <workItem from="1678011672353" duration="3684000" />
+      <workItem from="1678024307418" duration="5859000" />
+      <workItem from="1678037952075" duration="607000" />
+      <workItem from="1678049662041" duration="844000" />
+      <workItem from="1678388357866" duration="1190000" />
+      <workItem from="1678520755237" duration="5621000" />
+      <workItem from="1678530877668" duration="2702000" />
+      <workItem from="1678542822165" duration="1465000" />
     </task>
     <task id="LOCAL-00049" summary="MC-Fragen in config.js zugeordnet">
       <created>1617101110128</created>
@@ -734,7 +784,28 @@
       <option name="project" value="LOCAL" />
       <updated>1625480605297</updated>
     </task>
-    <option name="localTasksCounter" value="95" />
+    <task id="LOCAL-00095" summary="lang=&quot;de&quot; (statt &quot;en&quot;)">
+      <created>1662048738825</created>
+      <option name="number" value="00095" />
+      <option name="presentableId" value="LOCAL-00095" />
+      <option name="project" value="LOCAL" />
+      <updated>1662048738826</updated>
+    </task>
+    <task id="LOCAL-00096" summary="Start EBL02">
+      <created>1662048787699</created>
+      <option name="number" value="00096" />
+      <option name="presentableId" value="LOCAL-00096" />
+      <option name="project" value="LOCAL" />
+      <updated>1662048787699</updated>
+    </task>
+    <task id="LOCAL-00097" summary="EBL02">
+      <created>1678523562252</created>
+      <option name="number" value="00097" />
+      <option name="presentableId" value="LOCAL-00097" />
+      <option name="project" value="LOCAL" />
+      <updated>1678523562252</updated>
+    </task>
+    <option name="localTasksCounter" value="98" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -768,9 +839,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="Diverse Veränderungen" />
-    <MESSAGE value="bugfix Timerframe im Versuch" />
-    <MESSAGE value="diverse Tippfehler beseitigt" />
     <MESSAGE value="userAgent speichern,&#10;Kleine Änderungen im Text,&#10;auch external_id abfragen" />
     <MESSAGE value="weitere kleine Textänderungen" />
     <MESSAGE value="id in Pre- und Posttestframes korrigiert" />
@@ -793,7 +861,10 @@
     <MESSAGE value="kleinere Änderungen nach erneutem Feedback" />
     <MESSAGE value="kleinere Änderungen nach erneutem Feedback&#10;trim() in advancedInput&#10;&gt; 3 min   --&gt;   3 min&#10;MC-Klickbereich vergrößert" />
     <MESSAGE value="Änderung Einverständniserklärung" />
-    <option name="LAST_COMMIT_MESSAGE" value="Änderung Einverständniserklärung" />
+    <MESSAGE value="lang=&quot;de&quot; (statt &quot;en&quot;)" />
+    <MESSAGE value="Start EBL02" />
+    <MESSAGE value="EBL02" />
+    <option name="LAST_COMMIT_MESSAGE" value="EBL02" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
 </project>

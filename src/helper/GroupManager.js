@@ -33,6 +33,10 @@ export class GroupManager {
     return this.groupId || 1;
   }
 
+  hasGroupId() {
+    return !!this.groupId;
+  }
+
   getGroupName() {
     if (this.groupId) {
       const info = config.examples.groups[this.groupId];

@@ -2,24 +2,8 @@ import React from 'react';
 import {TimelineManager} from "../helper/TimelineManager";
 import {addToTag, getDataFromTag} from "../helper/tagHelper";
 import {EBL01_Demographics} from "../Frames/Instructions/EBL01_Demographics"
-import {
-  InstructionFrame200,
-  InstructionFrame201,
-  InstructionFrame202,
-  InstructionFrame203,
-  InstructionFrame204,
-  InstructionFrame206,
-  InstructionFrame207,
-  InstructionFrame208,
-  InstructionFrame209,
-  InstructionFrame210,
-  InstructionFrame211a,
-  InstructionFrame211b,
-  InstructionFrame212,
-  ShowStudyCode
-} from "../Frames/Instructions/InstructionFrame";
+import {InstructionFrame212, ShowStudyCode} from "../Frames/Instructions/InstructionFrame";
 import {CancelFrame} from "../Frames/CancelFrame";
-import {FixationCrossFrame} from "../Frames/FixationCrossFrame";
 import {postFrames} from "../assets/EBL01/EBL01_PrePostTest";
 import {JolFrame4} from "../Frames/JolFrames";
 
@@ -73,7 +57,9 @@ export class EBL01Builder {
           const log = data.find(d => d.id === "Demographics").log;
           const male = log.gender !== "female";
           const age = +log.age;
-          this.groupManager.determineGroup(male, age);
+          if (!this.groupManager.hasGroupID()) {
+            this.groupManager.determineGroup(male, age);
+          }
           const groupId = this.groupManager.getGroupId();
           const oldTag = data[0].tag;
           data[0].tag = addToTag(groupId, oldTag);
@@ -142,29 +128,28 @@ export class EBL01Builder {
   buildSession2() {
     this.tlManager.add([
       //TODO ggf. Begrüßung zu Teil 2
-      <InstructionFrame200/>,
-      <InstructionFrame201/>, postFrames[0], {milestone: true},
-      <InstructionFrame202/>, postFrames[1], {milestone: true},
-      <InstructionFrame203/>, postFrames[2], {milestone: true},
-
-      <InstructionFrame204/>,
-      {frame: <InstructionFrame206/>, id: 'Störung'}, <FixationCrossFrame nocross/>,
-      {frame: <InstructionFrame207/>, id: 'Konzentration'}, <FixationCrossFrame nocross/>,
-      {frame: <InstructionFrame208/>, id: 'IstStudieNeu'}, <FixationCrossFrame nocross/>,
-      {frame: <InstructionFrame209/>, id: 'Ernsthaft'}, <FixationCrossFrame nocross/>,
-      {frame: <InstructionFrame210/>, id: 'Hilfsmittel'}, <FixationCrossFrame nocross/>,
-      {frame: <InstructionFrame211a/>, id: 'GabEsSchwierigkeiten'},
-      {
-        if: (lastlog) => lastlog === 'Schwierigkeiten? Ja',
-        then: {frame: <InstructionFrame211b/>, id: 'Schwierigkeiten'},
-      },
-      <FixationCrossFrame nocross/>,
+      // <InstructionFrame200/>,
+      // <InstructionFrame201/>, postFrames[0], {milestone: true},
+      // <InstructionFrame202/>, postFrames[1], {milestone: true},
+      // <InstructionFrame203/>, postFrames[2], {milestone: true},
+      //
+      // <InstructionFrame204/>,
+      // {frame: <InstructionFrame206/>, id: 'Störung'}, <FixationCrossFrame nocross/>,
+      // {frame: <InstructionFrame207/>, id: 'Konzentration'}, <FixationCrossFrame nocross/>,
+      // {frame: <InstructionFrame208/>, id: 'IstStudieNeu'}, <FixationCrossFrame nocross/>,
+      // {frame: <InstructionFrame209/>, id: 'Ernsthaft'}, <FixationCrossFrame nocross/>,
+      // {frame: <InstructionFrame210/>, id: 'Hilfsmittel'}, <FixationCrossFrame nocross/>,
+      // {frame: <InstructionFrame211a/>, id: 'GabEsSchwierigkeiten'},
+      // {
+      //   if: (lastlog) => lastlog === 'Schwierigkeiten? Ja',
+      //   then: {frame: <InstructionFrame211b/>, id: 'Schwierigkeiten'},
+      // },
+      // <FixationCrossFrame nocross/>,
       {frame: <InstructionFrame212/>, id: 'Feedback'},
     ]);
     if (this.showStudyCode) {
       this.tlManager.add(<ShowStudyCode random/>);
     }
-
   }
 
   buildTestSession() {
