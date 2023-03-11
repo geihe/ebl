@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<link>
+    <link rel="icon" href="../favicon.ico" type="image/x-icon" />
+    <title>Vapid key generator online</title>
+    <meta property="og:url" content="https://tools.reactpwa.com/vapid/" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Generate VAPID Keys online" />
+    <meta property="og:description" content="Implement web push notifications with Voluntary Application Server Identification. This tool helps you create public & private keys for VAPID server" />
+
+    <meta property="og:image" content="https://tools.reactpwa.com/vapid/public/digital-keys.png" />
+    <meta property="og:image:secure_url" content="https://tools.reactpwa.com/vapid/public/digital-keys.png" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="512" />
+    <meta property="og:image:height" content="512" />
+    <meta property="og:image:alt" content="Digital Keys" />
+    <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/themes/prism-okaidia.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/components/prism-json.js"></script>
+    <style>
+        .container {
+          margin: 0 auto;
+          max-width: 1000px;
+          font-size: 18px;
+          padding: 10px;
+        }
+        .txt-big {
+          font-size: 21px;
+        }
+        .txt-center {
+          text-align: center;
+        }
+        .txt-download {
+          cursor: pointer;
+          font-size: 20px;
+          text-align: center;
+          display: block;
+          padding: 10px;
+          margin-top: 20px;
+          text-decoration: none;
+          color: white;
+          background: green;
+          border-radius: 5px;
+        }
+        .txt-download:hover, .txt-download:active, .txt-download:focus {
+          background: #009f00;
+        }
+        pre[class*=language-], code[class*=language-] {
+          white-space: pre-wrap
+        }
+        input[type=email], button[type=submit] {
+          padding: 5px;
+        }
+        .card {
+          margin-top: 20px;
+          border: 1px solid #d3d3d3;
+          border-radius: .25rem;
+        }
+        .content {
+          padding: 15px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+<h1>Secure VAPID key generator</h1>
+<p><u><i><strong>Note:</strong> New keys are generated on every request/refresh/reload</u></i></p>
+<p class="txt-big">Please replace &quot;<strong>&lt;someone@example.com&gt;</strong>&quot; with your own email address</p>
+<div>
+<form action="" method="get">
+   <input type="email" required name="email" value="" />
+   <button type="submit">Update subject email & re-generate keys</button>
+</form>
+</div>
+<pre><code class="language-json">{
+  "subject": "mailto:&lt;someone@example.com&gt;",
+  "publicKey": "BIDp26Sq9HGP2z5BoJoYUDvfN_WNafQomVISyZdr8AL1-bqwTGHbEpL-IyVAgD5Xrvk6kwZtEWr5YdryH6hXMI0",
+  "privateKey": "_MieRm08kORVBqsoR35I9sdJfnS6LJmdIQKEZIU3z_8"
+}</code></pre>
+<a class="txt-download" href="data:text/json;charset=utf-8,%7B%0A%20%20%22subject%22%3A%20%22mailto%3A%3Csomeone%40example.com%3E%22%2C%0A%20%20%22publicKey%22%3A%20%22BIDp26Sq9HGP2z5BoJoYUDvfN_WNafQomVISyZdr8AL1-bqwTGHbEpL-IyVAgD5Xrvk6kwZtEWr5YdryH6hXMI0%22%2C%0A%20%20%22privateKey%22%3A%20%22_MieRm08kORVBqsoR35I9sdJfnS6LJmdIQKEZIU3z_8%22%0A%7D" download="vapid.json" title="vapid.json">Click here to download the <strong>vapid.json</strong></a>
+<div class="card">
+  <div class="content">
+    <h3><a href="https://www.reactpwa.com/" target="_blank">Parent Project: ReactPWA</a></h3>
+    <p>This tool helps you create public &amp; private keys for <strong>Voluntary Application Server Identification - VAPID</strong></p>
+    <p>This tool was created for supporting the project <a href="https://github.com/Atyantik/pawjs" target="_blank">PawJS</a> &amp; <a href="https://www.reactpwa.com/" target="_blank">ReactPWA</a> to help implement Web Push notification.</p>
+  </div>
+</div>
+</div>
+<footer class="container">
+  <section class="copyright txt-center"><a href="https://www.atyantik.com" target="_blank" rel="noreferrer noopener nofollow">Copyright &copy; 2018 Atyantik Technologies Private Limited</a></section>
+</footer>
+
+</body>
+</html>

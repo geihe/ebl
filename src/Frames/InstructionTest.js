@@ -9,7 +9,7 @@ const items = [
   'Vortest (12 Aufgaben)',
   'Lehrtext: Erklärung über das Urnenmodell und Wahrscheinlichkeitslehre (Stochastik)',
   '4 mal 4 Lösungsbeispiele mit Befragung zu kognitiver Belastung und zum Flow-Erleben',
-  'Pause (10 Minuten)',
+  'Pause (Eine Woche)',
   'Testaufgaben (26 Aufgaben)',
   'Verifikationsaufgaben (16 Aufgaben)',
 ];

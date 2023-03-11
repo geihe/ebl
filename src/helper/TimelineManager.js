@@ -43,6 +43,9 @@ class TimelineElement {
       if (el.hasOwnProperty('milestone')) {
         return new TLmilestone(el);
       }
+      if (el.hasOwnProperty('function')) {
+        return new TLfunction(el);
+      }
       if (el.hasOwnProperty('nextSession')) {
         return new TLNextSession(el);
       }
@@ -247,6 +250,28 @@ class TLmilestone extends TimelineElement {
 
   flat() {
     return {type: 'milestone'};
+  }
+
+  setCumEffort(start) {
+    this.cumEffort = start + this.effort;
+  }
+
+  normCumEffort(total) {
+    this.cumEffort = this.cumEffort * 100 / total;
+  }
+}
+
+class TLfunction extends TimelineElement {
+  constructor(frameSource) {
+    super(frameSource);
+    this.type = 'function';
+    this.function =frameSource.function;
+    this.id = frameSource.id;
+    this.effort = 0;
+  }
+
+  flat() {
+    return {type: 'function', function: this.function, id: this.id};
   }
 
   setCumEffort(start) {

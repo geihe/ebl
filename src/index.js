@@ -11,23 +11,29 @@ import {SessionFinished} from "./MicroComponents/SessionFinished";
 import {Server} from "./helper/Server";
 import {ExperimentFullFrame} from "./Frames/Instructions/ExperimentFullFrame";
 import fscreen from "fscreen";
+import {GroupManager} from "./helper/GroupManager";
+import {ReturnUrlHelper} from "./helper/returnURLHelper";
+import {getDataFromTag, getTag} from "./helper/tagHelper";
 
 FocusStyleManager.onlyShowFocusOnTabs();
 const server = new Server();
-
 let t;
-let returnUrl;
-let showStudyCode=false;
+const returnUrlHelper=new ReturnUrlHelper();
 
 function finished(data) {
-  const {userId, session, groupId, mailId} = data[0];
-  server.postData(userId, session, groupId, data, mailId)
+  const {tag, age, male, session}=data[0];
+  console.log(tag, age, male, session);
+  const {userId, groupId, returnId, parameter} =getDataFromTag(tag)
+  console.log(userId, groupId, returnId, parameter);
+  const qualtrics = 'https://bielefeldpsych.eu.qualtrics.com/jfe/form/SV_djc7TF2eOFaMhyC?tag=' + tag;
+
+  console.log(returnUrlHelper.getReturnUrl());
+
+  server.postData(userId, groupId, age, male, session, tag, data)
     .then(() => {
-      alert("Daten gespeichert");
-      window.location.href = returnUrl;
+      window.location.href = +session === 1 ? qualtrics : returnUrlHelper.getReturnUrl();
     }); //zurück zu Unipark etc.
 }
-
 
 getElementInfo().then((info) => {
   t = (ressource, param) =>
@@ -49,12 +55,12 @@ getElementInfo().then((info) => {
     default: //Session
       const initData = info.initialData[0];
       const tb = new EBL01Builder(t);
+      console.log(initData);
       tb.setSession(initData.session)
-        .setGroup(initData.groupId)
-        .setShowStudyCode(initData.showStudyCode)
+        .setGroupManager(info.groupManager)
         .build();
       element =
-          <Session timeline={tb.getTimeline()} initialData={info.initialData} finished={(data) => finished(data)}/>
+        <Session timeline={tb.getTimeline()} initialData={info.initialData} finished={(data) => finished(data)}/>
   }
 
   render(element);
@@ -78,50 +84,42 @@ async function getElementInfo() {
     version: packageJson.version,
     finished: false,
     language: config.language,
-    session: 1,
-    nextSessionStart: null,
-    userId: null,
-    groupId: null,
   }
   const url = new URL(window.location);
   const params = new URLSearchParams(url.search);
   const URLparams = {
-    language: params.get('language'),
-    user_id: params.get('user_id'),
-    group_id: params.get('group_id'),
-    session: params.get('session'),
+//    language: params.get('language'),
+//    user_id: params.get('user_id'),
+//    group_id: params.get('group_id'),
+//    session: params.get('session'),
     timeFactor: params.get('timefactor'),
     tic: params.get('tic'), //Unipark
     external_id: params.get('external_id'), //Sonas
+    tag: params.get('tag'),
+    test: params.get('test'),
   }
 
-  const returnUrlOther = 'https://ww2.unipark.de/uc/M_APLME_Kubik/8055/';
-  const returnUrlUnipark = 'https://ww2.unipark.de/uc/M_APLME_Kubik/ea33/ospe.php?return_tic=' + URLparams.tic;
-  const returnUrlSonas = 'https://bielefeld-psy.sona-systems.com//webstudy_credit.aspx?experiment_id=171&credit_token=5c69f412686040df8ee72b2106213d08&survey_code=' + URLparams.external_id;
-
-  if (URLparams.tic) {
-    returnUrl = returnUrlUnipark;
-  } else if (URLparams.external_id) {
-    returnUrl = returnUrlSonas;
-  } else {
-    returnUrl = returnUrlOther;
-    showStudyCode=true;
-  }
+  returnUrlHelper.setFromURLParams(URLparams);
 
   const dataItemsJSON = localStorage.getItem('data');
 
   if (!dataItemsJSON) { //neues Experiment
     const serverData = await server.getNewData();
-
-    initialData.session = URLparams.session ? +URLparams.session : serverData.session;
+    console.log(serverData);
+    initialData.test = URLparams.test;
+    initialData.tag = URLparams.tag;//TODO für 2. Session
+    initialData.session = URLparams.session ? +URLparams.session : 1;//TODO für 2. Session
     initialData.timeFactor = +URLparams.timeFactor || 1;
-    initialData.language = URLparams.language ? URLparams.language : serverData.language;
-    initialData.userId = URLparams.user_id ? +URLparams.user_id : serverData.user_id;
-    initialData.groupId = URLparams.group_id ? +URLparams.group_id : serverData.group_id;
-    initialData.group = config.examples.groups[initialData.groupId].id;
-    initialData.showStudyCode = showStudyCode;
-    initialData.returnUrl = returnUrl;
+    // initialData.language = URLparams.language ? URLparams.language : initialData.language;
+    // initialData.userId = serverData.user_id;
+    const groupManager = new GroupManager(initialData.groupId);
+    groupManager.setServercount(serverData.group_count);
+
+    // initialData.showStudyCode = returnUrlHelper.showStudyCode();
+    // initialData.returnUrl = returnUrlHelper.getReturnURL();
     initialData.userAgent = navigator.userAgent;
+
+    initialData.tag = getTag(serverData.user_id, 0, returnUrlHelper, initialData.session);
 
     config.timeBetweenSessionsInSeconds = config.timeBetweenSessionsInSeconds / initialData.timeFactor;
     config.pauseSeconds = config.pauseSeconds / initialData.timeFactor;
@@ -132,11 +130,10 @@ async function getElementInfo() {
     config.preTest.radioDelay = config.preTest.radioDelay / initialData.timeFactor;
     config.postTest.radioDelay = config.postTest.radioDelay / initialData.timeFactor;
 
-    if (initialData.groupId < 1) {
+    if (groupManager.isFull()) {
       return {type: 'full', language: initialData.language}
     }
-
-    return {type: 'session', language: initialData.language, initialData: [initialData]};
+    return {type: 'session', language: initialData.language, initialData: [initialData], groupManager};
   }
 
   const dataItems = JSON.parse(dataItemsJSON);

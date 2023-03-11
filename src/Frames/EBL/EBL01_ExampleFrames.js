@@ -79,11 +79,11 @@ const processMeasureFrames = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map(nr =>
   ]
 );
 
-export function exampleFrames(group) {
+export function exampleFrames(groupManager) {
   const {groups: exampleGroups, ...exampleConfig} = config.examples;
-  const {items: exampleItems, id} = exampleGroups[group];
+  const {items: exampleItems} = exampleGroups[groupManager.getGroupId()];
   const rem = new EBL01_ExampleManager();
-  console.log(exampleItems);
+  // console.log(exampleItems);
   return exampleItems.map((itemGroup, index) => {
       return itemGroup.map(s =>
         [{id: 'Examples_'+s,
@@ -105,7 +105,7 @@ export function exampleFrames(group) {
 
 export function exampleFramesTest(group) {
   const {groups: exampleGroups, ...exampleConfig} = config.examples;
-  const {items: exampleItems, id} = exampleGroups[group];
+  const {items: exampleItems} = exampleGroups[group];
   const rem = new EBL01_ExampleManager();
   return exampleItems.map(itemGroup => {
       return itemGroup.map(s =>

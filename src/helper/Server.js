@@ -9,13 +9,15 @@ export class Server {
     return fetch(this.newURL).then(response => response.json());
   }
 
-  postData(userId, session, groupId, data, mailId) {
+  postData(userId, groupId, age, male, session, tag, data) {
     const body = {
       user_id: userId,
-      session,
       group_id: groupId,
+      age,
+      male,
+      session,
+      tag,
       data,
-      mail_id: mailId || ''
     };
     console.log(body);
     return fetch(this.saveURL, {

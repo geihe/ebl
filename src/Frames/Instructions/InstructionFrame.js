@@ -87,9 +87,8 @@ Zum Abschluss sollst du die Prinzipien anhand von <strong>26 Testaufgaben</stron
 export function InstructionFrame07(props) {
   const html = `
   <p>Die zweite Studiensitzung erfolgt nach 7 Tagen. </p>
-  <p>Du sollst dann erneut die Prinzipien der Wahrscheinlichkeitsrechnung anhand der Testaufgaben anwenden.</p>
+  <p>Du sollst dann die Prinzipien der Wahrscheinlichkeitsrechnung anhand der Testaufgaben anwenden.</p>
   <p> Abschließend erfolgt eine Aufgabe zum schlussfolgernden Denken. </p>
-
   `;
 
   return <InstructionFrame header html={html} space finish={props.finish}/>;
@@ -269,6 +268,15 @@ export function InstructionFrame102(props) {
 }
 
 export function InstructionFrame103(props) {
+  const html = `
+<p>Auf den folgenden vier Seiten sollst du einschätzen, wie du beim Lösen der Aufgaben vorgegangen bist.</p> 
+<p>Drück auf die Leertaste, wenn du bereit bist</p>
+  `;
+
+  return <InstructionFrame html={html} space finish={props.finish}/>;
+}
+
+export function InstructionFrame104(props) {
   const html = `
 <p>Auf den folgenden vier Seiten sollst du einschätzen, wie gut du nun verschiedene Typen von Aufgaben bearbeiten kannst.</p> 
 <p>Drück auf die Leertaste, wenn du bereit bist</p>

@@ -70,7 +70,6 @@ export function Session(props) {
   if (index >= timeline.length || data.current[0].finished) {
     return finish();
   }
-
   const storageIndex = +localStorage.getItem('index');
   if (storageIndex > index) {
     setIndex(storageIndex);
@@ -98,6 +97,11 @@ export function Session(props) {
           localStorage.setItem('data', JSON.stringify(data.current));
           localStorage.setItem('index', '' + tempIndex);
         }
+        break;
+      case 'function':
+        tempIndex++;
+        const result = el.function(data.current);
+        data.current.push({id: el.id, result});
         break;
       case 'nextSession':
         tempIndex = Number.MAX_VALUE;
@@ -146,6 +150,7 @@ export function Session(props) {
         });
     }
     setIndex(newIndex);
+    console.log(data.current);
   }
 
   function finish() {//Ende der Timeline

@@ -1,6 +1,7 @@
 export const config = {
   develop: true,
-  milestones: true,
+  milestones: false,
+  targetCount: [60, 60, 60, 60],
 
   language: 'de',
   numberOfSessions: 1,
