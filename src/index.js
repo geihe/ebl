@@ -21,14 +21,9 @@ let t;
 const returnUrlHelper = new ReturnUrlHelper();
 
 function finished(data) {
-  console.log(data);
-  const {tag, age=0, male=0, session} = data[0];
-  console.log(tag, age, male, session);
+  const {tag, age = 0, male = 0, session} = data[0];
   const {userId, groupId, returnId, parameter} = getDataFromTag(tag)
-  console.log(userId, groupId, returnId, parameter);
   const qualtrics = 'https://bielefeldpsych.eu.qualtrics.com/jfe/form/SV_djc7TF2eOFaMhyC?tag=' + tag;
-
-  console.log(returnUrlHelper.getReturnUrl());
 
   server.postData(userId, groupId, age, male, session, tag, data)
     .then(() => {
@@ -59,6 +54,7 @@ getElementInfo().then((info) => {
       console.log(initData);
       tb.setSession(initData.session)
         .setGroupManager(info.groupManager)
+        .setShowStudyCode(returnUrlHelper.showStudyCode())
         .build();
       element =
         <Session timeline={tb.getTimeline()} initialData={info.initialData} finished={(data) => finished(data)}/>
@@ -97,14 +93,19 @@ async function getElementInfo() {
   }
 
   returnUrlHelper.setFromURLParams(URLparams);
-
   if (URLparams.tag) { //Folgesession
-    initialData.tag=URLparams.tag;
+    initialData.tag = URLparams.tag;
     const tagData = getDataFromTag(URLparams.tag);
     initialData.userId = tagData.userId;
     initialData.groupId = tagData.groupId;
     initialData.session = tagData.session + 1;
-    returnUrlHelper.setFromID(tagData.returnId, tagData.parameter)
+
+    const serverData = await server.getCheckData(initialData.userId);
+    console.log(serverData);
+    if (serverData.end2) {
+      return {type: 'finished', language: initialData.language, initialData: [initialData]};
+    }
+    returnUrlHelper.setFromID(tagData.returnId, tagData.parameter);
     return {type: 'session', language: initialData.language, initialData: [initialData]};
   } else { //neues Experiment, erste Sesseion
     const serverData = await server.getNewData();

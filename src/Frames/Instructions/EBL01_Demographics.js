@@ -10,16 +10,16 @@ export function EBL01_Demographics(props) {
   let data=initial;
   const validationSchema = Yup.object().shape({
     degree: Yup.string()
-      .required({en: 'Please enter your degree', de: 'Bitte geben Sie Ihren Bildungsabschluss ein'}),
+      .required({en: 'Please enter your degree', de: 'Bitte gib deinen höchsten Bildungsabschluss ein'}),
     age: Yup.number()
       .min(18, {en: 'You have to be at least 18 years old', de: 'Sie müssen mindestens 18 Jahr alt sein'})
       .max(100, {en: 'Are your really that old?', de: 'Sind Sie wirklich so alt?'})
       .typeError({en: 'Please enter your age', de: 'Bitte gib dein Alter ein'})
       .round('floor'),
     nativeLanguage: Yup.string()
-      .required({en: 'Please enter your gender', de: 'Bitte gebe ein Geschlecht an'}),
-    gender: Yup.string()
       .required({en: 'Please enter your native language', de: 'Bitte gib deine Muttersprache ein'}),
+    gender: Yup.string()
+      .required({en: 'Please enter your gender', de: 'Bitte gebe ein Geschlecht an'}),
     subject: Yup.string()
       .required('Bitte klicke die Angabe zum Studium an'),
   });

@@ -75,9 +75,9 @@ export function InstructionFrame06(props) {
 <li>Zum Abschluss der Lernphase sollst du einschätzen, wie gut du Testaufgaben zu diesen Prinzipien lösen kannst.</li>
 </ul>
 </p>
-<p><i><b>Pause: </b></i>Du hast 10 Minuten Zeit dich zu entspannen.</p>
+<p><i><b>Pause: </b></i>Der <strong>erste Teil des Experiments</strong> ist nun abgeschlossen. Nach einer Woche erhältst du eine Mail mit dem Link für den <strong>zweiten Teil</strong>.</p>
 <p><i><b>Anwendungsphase:</b></i>
-Zum Abschluss sollst du die Prinzipien anhand von <strong>26 Testaufgaben</strong> und <strong>16 Verifikationsaufgaben</strong> anwenden. Hierfür ist keinerlei Vorwissen von deiner Seite notwendig – alle Informationen erhältst du ausschließlich in dieser Studie.  
+Zum Abschluss sollst du die Prinzipien anhand von <strong>26 Testaufgaben</strong> und <strong>16 Verifikationsaufgaben</strong> anwenden. Hierfür ist keinerlei Vorwissen von deiner Seite notwendig – alle Informationen erhältst du in dieser Studie.  
 </p>
   `;
 
@@ -189,7 +189,8 @@ export function InstructionFrame09_IIalt(props) {
 
 export function InstructionFrame16a(props) {
   const html = `
-<h1>Bitte drücke auf die Leertaste, dann geht es direkt mit dem Vortest los.</h1>
+<p>Noch ein Hinweis: Diese Studie schließt an frühere Studien an. Wir wollen die Ergebnisse vergleichen, darum haben wir möglichst wenig am Ablauf geändert. Deshalb geben wir u.a. kein unmittelbares Feedback zu den Antworten (richtig oder falsch) und haben eine feste Zeit für die Beispiele vorgesehen.</p>
+<strong>Bitte drücke auf die Leertaste, dann geht es mit dem Vortest los.</strong>
   `;
   return <InstructionFrame html={html} space finish={props.finish}/>;
 }
@@ -287,7 +288,8 @@ export function InstructionFrame104(props) {
 
 export function InstructionFrame200(props) {
   const html = `
-  <p>Im letzten Abschnitt der Studie werden dir verschiedene Aufgaben präsentiert, die deinen Lernerfolg messen. Es ist deshalb wichtig, dass du bitte keine Hilfsmittel (z.B. Taschenrechner oder Internetseiten) benutzt und konzentriert arbeitest.</p>
+<h1>Willkommen zurück!</h1>
+<p>Heute schauen wir, wie erfolgreich das Lernen mit Beispielen in der vorigen Woche war. In diesem letzten Abschnitt der Studie werden dir verschiedene Aufgaben präsentiert, die deinen Lernerfolg messen. Es ist deshalb wichtig, dass du bitte keine Hilfsmittel (z.B. Taschenrechner oder Internetseiten) benutzt und konzentriert arbeitest.</p>
   <p>Es gibt kein Zeitlimit, arbeite die Aufgaben aber bitte kontinuierlich durch.</p>
   <p>Viel Erfolg!</p>
   `;
@@ -512,6 +514,9 @@ export function ShowStudyCode(props) {
   const html = `
 <h2>Wenn du eine Versuchspersonenbescheinigung für das Experiment haben möchtest, dann notiere den folgenden Code:</h2>
 <h2 style="text-align:center; font-size: 50px; font-family: monospace"><strong>${codeString}</strong></h2>
+<p></p>
+<p>Solltest du keine Bescheinigung benötigen, dann ist das Experiment abgeschlossen und du kannst das Browserfenster nun schließen. </p>
+<p>Sonst drücke die Leertaste.</p>
   `;
 
   return <InstructionFrame html={html} space finish={props.finish}/>;

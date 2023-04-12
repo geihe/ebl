@@ -7,22 +7,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c0a8d840-d2a4-41a1-9e79-f574c09cafbd" name="Default Changelist" comment="EBL02">
-      <change afterPath="$PROJECT_DIR$/EBL_Server_backup/common.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EBL_Server_backup/config01.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EBL_Server_backup/data.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EBL_Server_backup/db.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EBL_Server_backup/db_private.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EBL_Server_backup/get_data.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EBL_Server_backup/mail.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EBL_Server_backup/new01.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EBL_Server_backup/ntuser.dat.LOG1" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EBL_Server_backup/reminder.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EBL_Server_backup/save01.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EBL_Server_backup/test.php" afterDir="false" />
+    <list default="true" id="c0a8d840-d2a4-41a1-9e79-f574c09cafbd" name="Default Changelist" comment="EBL02 Zweite Session">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Frames/EBL/EblWaitFrame.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frames/EBL/EblWaitFrame.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Frames/Instructions/EBL01_Demographics.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frames/Instructions/EBL01_Demographics.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Frames/Instructions/InstructionFrame.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frames/Instructions/InstructionFrame.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Frames/ProcessQuestions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frames/ProcessQuestions.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Manager/EBL01Builder.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Manager/EBL01Builder.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/helper/GroupManager.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/helper/GroupManager.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MicroComponents/TimeView.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/MicroComponents/TimeView.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MicroComponents/UniBielefeld.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/MicroComponents/UniBielefeld.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/EBL01/pre1step.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/EBL01/pre1step.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/ressourceLanguage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/ressourceLanguage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/helper/Server.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/helper/Server.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -91,6 +87,7 @@
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.editor&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -460,14 +457,24 @@
       <workItem from="1678388357866" duration="1190000" />
       <workItem from="1678520755237" duration="5621000" />
       <workItem from="1678530877668" duration="2702000" />
-      <workItem from="1678542822165" duration="1465000" />
-    </task>
-    <task id="LOCAL-00049" summary="MC-Fragen in config.js zugeordnet">
-      <created>1617101110128</created>
-      <option name="number" value="00049" />
-      <option name="presentableId" value="LOCAL-00049" />
-      <option name="project" value="LOCAL" />
-      <updated>1617101110128</updated>
+      <workItem from="1678542822165" duration="4516000" />
+      <workItem from="1678605981694" duration="8558000" />
+      <workItem from="1678619206373" duration="697000" />
+      <workItem from="1678629685986" duration="594000" />
+      <workItem from="1678644669411" duration="992000" />
+      <workItem from="1679075785482" duration="425000" />
+      <workItem from="1679239463055" duration="5286000" />
+      <workItem from="1680523114561" duration="3118000" />
+      <workItem from="1680532065137" duration="1975000" />
+      <workItem from="1680540908461" duration="600000" />
+      <workItem from="1680711631054" duration="3312000" />
+      <workItem from="1680765689547" duration="4247000" />
+      <workItem from="1680787067014" duration="2634000" />
+      <workItem from="1680876339790" duration="1110000" />
+      <workItem from="1680886245256" duration="1102000" />
+      <workItem from="1681199392182" duration="1074000" />
+      <workItem from="1681229834334" duration="3656000" />
+      <workItem from="1681286156228" duration="841000" />
     </task>
     <task id="LOCAL-00050" summary="Validierung der MC-Fragen in Daten">
       <created>1617203997402</created>
@@ -805,7 +812,14 @@
       <option name="project" value="LOCAL" />
       <updated>1678523562252</updated>
     </task>
-    <option name="localTasksCounter" value="98" />
+    <task id="LOCAL-00098" summary="EBL02 Zweite Session">
+      <created>1678547545412</created>
+      <option name="number" value="00098" />
+      <option name="presentableId" value="LOCAL-00098" />
+      <option name="project" value="LOCAL" />
+      <updated>1678547545412</updated>
+    </task>
+    <option name="localTasksCounter" value="99" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -839,7 +853,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="userAgent speichern,&#10;Kleine Änderungen im Text,&#10;auch external_id abfragen" />
     <MESSAGE value="weitere kleine Textänderungen" />
     <MESSAGE value="id in Pre- und Posttestframes korrigiert" />
     <MESSAGE value="id in Mathcourse-Elementen" />
@@ -864,7 +877,8 @@
     <MESSAGE value="lang=&quot;de&quot; (statt &quot;en&quot;)" />
     <MESSAGE value="Start EBL02" />
     <MESSAGE value="EBL02" />
-    <option name="LAST_COMMIT_MESSAGE" value="EBL02" />
+    <MESSAGE value="EBL02 Zweite Session" />
+    <option name="LAST_COMMIT_MESSAGE" value="EBL02 Zweite Session" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
 </project>

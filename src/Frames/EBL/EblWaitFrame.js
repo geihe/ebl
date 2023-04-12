@@ -47,7 +47,7 @@ export function EblWaitFrame(props) {
     if (state.waiting) {
       setTimer(() => {
         props.finish(dataWithSummary(logData.current));
-      }, 1000);
+      }, 100);
     }  else {
 //TODO Hier noch Toast zeigen?
     }

@@ -12,10 +12,12 @@ export function TimeView(props) {
     }
   const style = {...defaultStyle, ...props.style}
   let time;
-  if (seconds <= 60) {
+  if (seconds <= 20) {
     time = seconds + ' s';
+  } else if (seconds <= 60) {
+    time = '< 1min';
   } else {
-    time = Math.floor((seconds-0.1) / 60) + ' min';
+    time = Math.floor((seconds - 0.1) / 60) + ' min';
   }
 
   return (
