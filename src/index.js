@@ -107,7 +107,7 @@ async function getElementInfo() {
     }
     returnUrlHelper.setFromID(tagData.returnId, tagData.parameter);
     return {type: 'session', language: initialData.language, initialData: [initialData]};
-  } else { //neues Experiment, erste Sesseion
+  } else { //neues Experiment, erste Session
     const serverData = await server.getNewData();
     console.log(serverData);
     initialData.test = URLparams.test;

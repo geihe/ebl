@@ -150,14 +150,12 @@ export class EBL01Builder {
       {frame: <JolFrame2/>, id: 'JoL2'},
       {frame: <JolFrame3/>, id: 'JoL3'},
       {frame: <JolFrame4/>, id: 'JoL4'},
-      // {timer: config.pauseSeconds, frames: [<EBLPause/>]},
       //TODO Übergabe an Qualtrics
     ]);
   }
 
   buildSession2() {
     this.tlManager.add([
-      //TODO ggf. Begrüßung zu Teil 2
       <InstructionFrame200/>,
       <InstructionFrame201/>, postFrames[0], {milestone: true},
       <InstructionFrame202/>, postFrames[1], {milestone: true},

@@ -1,6 +1,6 @@
 const returnUrlOther = 'https://ww2.unipark.de/uc/M_APLME_Kubik/8055/';
 const returnUrlUnipark = 'https://ww2.unipark.de/uc/M_APLME_Kubik/3a9f/ospe.php?return_tic=';
-const returnUrlSonas = 'https://bielefeld-psy.sona-systems.com//webstudy_credit.aspx?experiment_id=478&credit_token=684d4568614743bdb8d885a64612250f&survey_code=XXXX';
+const returnUrlSonas = 'https://bielefeld-psy.sona-systems.com//webstudy_credit.aspx?experiment_id=478&credit_token=684d4568614743bdb8d885a64612250f&survey_code=';
 
 export class ReturnUrlHelper {
   constructor() {
