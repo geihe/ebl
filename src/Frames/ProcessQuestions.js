@@ -34,7 +34,7 @@ export function Pq3(props) {
 export function Pq4(props) {
   return (<>
       <LikertFrame minText={'gar nicht'} maxText={'sehr stark'}
-        title={'<p><strong>Ich habe mich angestrengt, die Logik hintern den einzelnen Lösungsbeispielen zu erschließen, zu integrieren und zu ordnen. </strong></p>'}
+        title={'<p><strong>Ich habe mich angestrengt, die Logik hinter den einzelnen Lösungsbeispielen zu erschließen, zu integrieren und zu ordnen. </strong></p>'}
         finish={props.finish}
       />
     </>

@@ -116,7 +116,7 @@ export function InstructionFrame10(props) {
 <ul>
     <li>Ich befinde mich in einem ruhigen Raum. </li>
     <li>Ich mache mir während des Experiments keine schriftlichen Notizen.</li>
-    <li>Ich habe die nötigen Vorkehrungen getroffen, sodass ich im Verlauf der Studie in den nächsten zwei Stunden nicht bei der Aufgabenbearbeitung unterbrochen werde. </li>
+    <li>Ich habe die nötigen Vorkehrungen getroffen, sodass ich im Verlauf der Studie in der nächsten Stunde nicht bei der Aufgabenbearbeitung unterbrochen werde. </li>
     <li>Mein Mobiltelefon liegt außerhalb meiner Reich- und Sichtweite und ist auf stumm gestellt oder ausgeschaltet. </li>
 </ul>
 <p>Mit der konzentrierten Bearbeitung der Aufgaben trägst du dazu bei, die Qualität der Studie und der Ergebnisse zu sichern. Vielen Dank! </p>
@@ -189,7 +189,7 @@ export function InstructionFrame09_IIalt(props) {
 
 export function InstructionFrame16a(props) {
   const html = `
-<p>Noch ein Hinweis: Diese Studie schließt an frühere Studien an. Wir wollen die Ergebnisse vergleichen, darum haben wir möglichst wenig am Ablauf geändert. Deshalb geben wir u.a. kein unmittelbares Feedback zu den Antworten (richtig oder falsch) und haben eine feste Zeit für die Beispiele vorgesehen.</p>
+<p>Noch ein Hinweis: Diese Studie schließt an frühere Studien an. Wir wollen die Ergebnisse vergleichen, darum haben wir möglichst wenig am Ablauf geändert. Deshalb geben wir u.a. kein Feedback zu den Antworten (richtig oder falsch) und haben eine feste Zeit für die Beispiele vorgesehen.</p>
 <strong>Bitte drücke auf die Leertaste, dann geht es mit dem Vortest los.</strong>
   `;
   return <InstructionFrame html={html} space finish={props.finish}/>;
@@ -289,7 +289,7 @@ export function InstructionFrame104(props) {
 export function InstructionFrame200(props) {
   const html = `
 <h1>Willkommen zurück!</h1>
-<p>Heute schauen wir, wie erfolgreich das Lernen mit Beispielen in der vorigen Woche war. In diesem letzten Abschnitt der Studie werden dir verschiedene Aufgaben präsentiert, die deinen Lernerfolg messen. Es ist deshalb wichtig, dass du bitte keine Hilfsmittel (z.B. Taschenrechner oder Internetseiten) benutzt und konzentriert arbeitest.</p>
+<p>Heute schauen wir, wie erfolgreich das Lernen mit Beispielen in der vorigen Woche war. In diesem letzten Abschnitt der Studie werden dir verschiedene Aufgaben präsentiert, die deinen Lernerfolg messen. Es ist deshalb wichtig, dass du bitte keine Hilfsmittel (z.B. Internetseiten) benutzt und konzentriert arbeitest.</p>
   <p>Es gibt kein Zeitlimit, arbeite die Aufgaben aber bitte kontinuierlich durch.</p>
   <p>Viel Erfolg!</p>
   `;
@@ -302,7 +302,17 @@ export function InstructionFrame200(props) {
 export function InstructionFrame201(props) {
   const html = `
   <p>Dir werden nun 16 Aufgaben präsentiert. Du sollst die Aufgaben berechnen und die Lösungen in das Notizfeld eintippen. </p>
-  <p>Bitte nutze [/] um Brüche auszudrücken. Wenn du eine Multiplikation schreiben möchtest, verwende für das Malzeichen [*]. Bestätige deine Eingabe mit [Enter]. Du wirst dann automatisch zur nächsten Aufgabe weitergeleitet.</p>
+  <p>Bitte nutze [/] um Brüche auszudrücken. Wenn du eine Multiplikation schreiben möchtest, verwende für das Malzeichen [*]. </p>
+  <p>Mögliche Eingaben sind zum Beispiel
+  <ul>
+  <li>2 * 1/4 * 1/3</li>
+  <li>2/12   (Der Bruch muss nicht gekürzt werden.)</li>
+  <li>1/6  (Er darf aber gekürzt werden!)</li>
+</ul>
+</p>
+  <p>
+  Bestätige deine Eingabe mit [Enter]. Du wirst dann automatisch zur nächsten Aufgabe weitergeleitet.
+</p>
   `;
 
   return <InstructionFrame html={html} space finish={props.finish}/>;
@@ -311,7 +321,7 @@ export function InstructionFrame201(props) {
 export function InstructionFrame202(props) {
   const html = `
   <p>Vielen Dank für die Berechnung der Aufgaben!</p>
-  <p>Dir werden nun zehn weitere Aufgaben präsentiert. Vier Aufgaben erfordern, dass du eine Antwort aus vier Antwortmöglichkeiten auswählst. Treffe deine Entscheidung überlegt, du kannst dich nicht umentscheiden.</p>
+  <p>Dir werden nun zehn weitere Aufgaben präsentiert. Vier Aufgaben erfordern, dass du eine Antwort aus vier Antwortmöglichkeiten auswählst. Triff deine Entscheidung überlegt, du kannst dich nicht umentscheiden.</p>
   <p>Sechs weitere Aufgaben sind offene Fragen. Bitte tippe die Antworten mithilfe der Tastatur in das Notizfeld und bestätige deine Eingabe mit [Enter].</p>
   <p>Lies die Aufgaben aufmerksam durch, überlege genau und entscheide dich dann für eine Antwort. Es ist wichtig, dass du die offenen Fragen <strong>in ganzen Sätzen und so genau wie möglich</strong> beantwortest. Du kannst nicht mehr zurückgehen.</p>
   `;
@@ -441,7 +451,7 @@ export function InstructionFrame210(props) {
     <DelayedRadioFrame
     large
     options={options}
-    label={'Hast du externe Hilfsmittel verwendet (bspw. Taschenrechner oder dir Notizen auf einem Blatt notiert)?'}
+    label={'Hast du externe Hilfsmittel verwendet (z.B. im Internet recherchiert)?'}
     name={'Hilsmittel?'}
     finish={props.finish}
   />

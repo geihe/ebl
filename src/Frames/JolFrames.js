@@ -8,7 +8,7 @@ export function JolFrame1(props) {
         max={100}
         step={10}
         unit={'%'}
-        title={'<p>1. Prozedurelle Aufgaben:<br/> Du erhältst im Folgenden 12 Textaufgaben, in denen du die Wahrscheinlichkeit von bestimmten Ereignissen berechnen sollst - ähnlich wie du dies bisher kennengelernt hast.</p> ' +
+        title={'<p>1. Prozedurelle Aufgaben:<br/> Du erhältst in der nächsten Einheit 12 Textaufgaben, in denen du die Wahrscheinlichkeit von bestimmten Ereignissen berechnen sollst - ähnlich wie du dies bisher kennengelernt hast.</p> ' +
         '<p><strong>Für ungefähr wieviel Prozent dieser Textaufgaben wirst du die Wahrscheinlichkeit von Ereignissen korrekt bestimmen?</strong></p>'}
         finish={props.finish}
       />

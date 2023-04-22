@@ -37,7 +37,7 @@ import {
 } from "../Frames/Instructions/InstructionFrame";
 import {CancelFrame} from "../Frames/CancelFrame";
 import {FixationCrossFrame} from "../Frames/FixationCrossFrame";
-import {ebl01_MathCourse} from "../assets/EBL01/Ebl01_MathCourse";
+import {ebl02_MathCourse} from "../assets/EBL01/Ebl02_MathCourse";
 import {InstructionTest} from "../Frames/InstructionTest";
 import {postFrames, preTest} from "../assets/EBL01/EBL01_PrePostTest";
 import {EBL01Video} from "../Frames/EBL/EBL01Video";
@@ -128,7 +128,7 @@ export class EBL01Builder {
       <InstructionFrame16b/>,
       preTest,
       <InstructionFrame17/>,
-      ebl01_MathCourse,
+      ebl02_MathCourse,
       {
         if: () => this.groupManager.getGroupId() <= 2,
         then: [<InstructionFrame100_sequenziell_12/>, <InstructionFrame101_sequenziell_12/>,],
@@ -186,7 +186,7 @@ export class EBL01Builder {
       <InstructionFrame16b/>,
       preTest,
       <InstructionFrame17/>,
-      ebl01_MathCourse,
+      ebl02_MathCourse,
       this.groupManager <= 2 ?//TODO
         [<InstructionFrame100_sequenziell_12/>,
           <InstructionFrame101_sequenziell_12/>,] :

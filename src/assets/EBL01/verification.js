@@ -5,7 +5,7 @@ export const verification = [
   {
     context: 1,
     header: {
-      de: `Du und dein Freund nehmen an einem zweitägigen Mountainbike-Kurs teil. An beiden Tagen bringt der Kursleiter jeweils 6 Fahrradhelme mit, die alle unterschiedliche Farben haben (grün, orange, silber, braun, rot und gelb). Die Helme werden zufällig verteilt und am Ende des Tages an den Kursleiter zurückgegeben. An beiden Tagen erhältst du zuerst und Dein Freund als Zweiter einen Helm.`,
+      de: `Du und dein Freund nehmen an einem zweitägigen Mountainbike-Kurs teil. An beiden Tagen bringt der Kursleiter jeweils 6 Fahrradhelme mit, die alle unterschiedliche Farben haben (grün, orange, silber, braun, rot und gelb). Die Helme werden zufällig verteilt und am Ende des Tages an den Kursleiter zurückgegeben. An beiden Tagen erhältst du zuerst und dein Freund als Zweiter einen Helm.`,
       en: `You and your friend are taking part in a two-day mountain bike course. On both days, the instructor will bring 6 bike helmets, each with different colors (green, orange, silver, brown, red and yellow). The helmets are distributed randomly an returned to the instructor at the end of the day. On both days you will receive a helmet first and your friend second.`,
     },
     questions: [
