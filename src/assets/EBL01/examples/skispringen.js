@@ -26,7 +26,7 @@ export const skispringen = {
     {
       principle: 2,
       problem: {
-        de: `Wie groß ist die Wahrscheinlichkeit, dass im ersten Durchgang Adam den ersten Platz und Beat den zweiten Platz belegen?`,
+        de: `Wie groß ist die Wahrscheinlichkeit, dass im ersten Durchgang Adam den ersten Platz und Beat den zweiten Platz belegt?`,
       },
       solution:
         <MathComponent tex={String.raw`{1 \over 4} \cdot {1 \over 3}={1 \over 12}`} display={false}/>

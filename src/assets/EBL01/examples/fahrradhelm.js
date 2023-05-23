@@ -37,7 +37,7 @@ export const fahrradhelm = {
     {
       principle: 3,
       problem: {
-        de: `Wie hoch ist die Wahrscheinlichkeit, dass du im Lauf des zweitägigen Kurses sowohl einen roten als auch einen gelben Helm bekommst?`,
+        de: `Wie hoch ist die Wahrscheinlichkeit, dass du im Laufe des zweitägigen Kurses sowohl einen roten als auch einen gelben Helm bekommst?`,
         en: `What is the probability that you will get both a red helmet and a yellow helmet during the two-day course?`,
       },
       solution:

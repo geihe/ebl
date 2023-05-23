@@ -56,7 +56,7 @@ export function JolFrame4(props) {
         max={100}
         step={10}
         unit={'%'}
-        title={'<p>4. Verifikationsaufgabe Typ 2:<br/> Zuletzt erhältst Du noch abschließende 8 Textaufgaben und jeweils eine Beschreibung eines der vier Prinzipien. Deine Aufgabe besteht nun darin, mit “Ja” oder “Nein” zu entscheiden, ob die Beschreibung des Prinzips zur Aufgabe passt. Wenn du rätst, so ist die Zufallswahrscheinlichkeit 50% richtig zu antworten.</p> ' +
+        title={'<p>4. Verifikationsaufgabe Typ 2:<br/> Zuletzt erhältst du noch abschließende 8 Textaufgaben und jeweils eine Beschreibung von einem der vier Prinzipien. Deine Aufgabe besteht nun darin, mit “Ja” oder “Nein” zu entscheiden, ob die Beschreibung des Prinzips zur Aufgabe passt. Wenn du rätst, so ist die Zufallswahrscheinlichkeit 50% richtig zu antworten.</p> ' +
         '<p><strong> Zu ungefähr wieviel Prozent wirst du die 8 Aufgaben korrekt beantworten?</strong></p>'}
         finish={props.finish}
       />

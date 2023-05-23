@@ -106,7 +106,7 @@ export class EBL01Builder {
         id: 'groupFunction',
         function: (data) => {
           const log = data.find(d => d.id === "Demographics").log;
-          const male = log.gender !== "female";
+          const male = log.gender !== "female"; //zählt auch divers mit
           const age = +log.age;
           if (!this.groupManager.hasGroupId()) {
             this.groupManager.determineGroup(male, age);

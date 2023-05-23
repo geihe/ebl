@@ -41,7 +41,7 @@ export function MathCourse03(props) {
     <div>
       <h1>Überblick:  Wahrscheinlichkeitsrechnung</h1>
       <p>Der folgende Überblick zur Wahrscheinlichkeitsrechnung wird mit Hilfe eines klassischen Beispiels erklärt: <strong>Aus
-        einer Urne mit 10 durchnummerierte Kugeln werden eine oder zwei Kugeln gezogen.</strong></p>
+        einer Urne mit 10 durchnummerierten Kugeln werden eine oder zwei Kugeln gezogen.</strong></p>
       <p>
         Bitte lies das Folgende aufmerksam durch:
       </p>

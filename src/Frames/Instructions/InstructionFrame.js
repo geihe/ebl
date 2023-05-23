@@ -97,7 +97,7 @@ export function InstructionFrame07(props) {
 export function InstructionFrame09(props) {
   const html = `<h3>Freiwilligkeit</h3> <p>Die Teilnahme an der Studie ist freiwillig. Du kannst jederzeit und ohne Angabe von Gründen die Teilnahme an dieser Studie beenden, ohne dass dir daraus Nachteile entstehen. Auch wenn du die Studie vorzeitig abbrichst, hast du Anspruch auf entsprechende Versuchspersonenstunden für den bis dahin erbrachten Zeitaufwand.</p> <h3>Datennutzung</h3> <p>Die Erhebung der Forschungsdaten erfolgt aus Sicht der Forschenden anonym. Durch die Größe der Stichprobe sowie die Abfragekategorien/Auswahlmöglichkeiten/Kohortenbildung der oben genannten Daten, lassen sich die Daten zu keinem Zeitpunkt einer konkreten Person zuordnen. Die im Rahmen dieser Studie erhobenen Daten werden vertraulich behandelt. Deine Vp-ID wird getrennt von den Forschungsdaten aufbewahrt. Bitte beachte die Datenschutzhinweise der für die Verwaltung der Vp-Stunden genutzten Software. Die Verwaltung der Vp-ID und der Vp-Stunden erfolgt durch die Prüfungsverwaltung in der Fakultät Psychologie und Sportwissenschaften. Die erhobenen Forschungsdaten in aggregierter Form werden z.B. in wissenschaftlichen Zeitschriften, Vorträgen oder Lehrveranstaltungen veröffentlicht. Nach Abschluss der Studie werden die Daten ggf. in einem gesicherten Datenarchiv, wie z.B. dem „Open Science Framework“ öffentlich zugänglich gemacht. Zweck, Art und Umfang der potentiellen Nachnutzung im Rahmen von Open-Data stehen noch nicht fest, aber die Daten werden nur anonymisiert im Rahmen von Open-Science veröffentlicht. Die Löschung der Daten aus einem anonymisierten Datensatz ist nicht möglich. Mit diesem Vorgehen folgt das Forschungsprojekt den Empfehlungen der Deutschen Forschungsgemeinschaft zur Qualitätssicherung der Forschung.<p>
 <h3>Verantwortliche Stelle für diese Studie</h3>
-<p>Das Forschungsprojekt „Lernerfolg und Metakognition beim Lernen von Studienmaterialien“ wird durchgeführt von der Fakultät für Psychologie und Sportwissenschaft, Abteilung für Psychologie, Arbeitseinheit 13 – Bildungspsychologie, unter der Projektleitung von Dr. Veit Kubik. Kooperationspartner*innen in diesem Projekt sind Prof. Dr. Alexander Renkl von der Albert-Ludwigs-Universität Freiburg, Prof. Dr. Robert Gaschler von der Fernuniversität Hagen und Prof. Dr. Reinhard Beyer von der Humboldt Universität zu Berlin. Die Studie wird eigenverantwortlich im Rahmen der Habilitation von Dr. Veit Kubik durchgeführt. </p><h3>Kontaktdaten</h3><p>Bei Fragen zur Teilnahme, Freiwilligkeit und Datennutzung melden Sie sich gerne bei dem Projektverantwortlichen:  Dr. Veit Kubik</p>
+<p>Das Forschungsprojekt „Lernerfolg und Metakognition beim Lernen von Studienmaterialien“ wird durchgeführt von der Fakultät für Psychologie und Sportwissenschaft, Abteilung für Psychologie, Arbeitseinheit 13 – Bildungspsychologie, unter der Projektleitung von Dr. Veit Kubik. Kooperationspartner*innen in diesem Projekt sind Prof. Dr. Alexander Renkl von der Albert-Ludwigs-Universität Freiburg, Prof. Dr. Robert Gaschler von der Fernuniversität Hagen und Prof. Dr. Reinhard Beyer von der Humboldt Universität zu Berlin. Die Studie wird eigenverantwortlich im Rahmen der Habilitation von Dr. Veit Kubik durchgeführt. </p><h3>Kontaktdaten</h3><p>Bei Fragen zur Teilnahme, Freiwilligkeit und Datennutzung melde dich gerne bei dem Projektverantwortlichen:  Dr. Veit Kubik</p>
 <p>
 E-Mail: <a href= "mailto:veit.kubik@uni-bielefeld.de">veit.kubik@uni-bielefeld.de</a><br/>
 Tel.: 0521-106-3100<br/>
@@ -200,8 +200,13 @@ export function InstructionFrame16b(props) {
   const html = `
   <h1>Vortest</h1>
 <p>Dir werden nun 12 Aufgaben präsentiert. Du sollst die Aufgaben berechnen und die Lösungen in das Notizfeld eintippen. </p>
-<p>Bitte nutze [<strong>/</strong>] um Brüche auszudrücken und [<strong>*</strong>] um zu multiplizieren.<br/> Beispiel: Schreibe ein Drittel als <strong>1/3</strong>
-und ein Drittel mal ein Viertel als <strong>1/3 * 1/4</strong></p>
+  <p>Mögliche Eingaben sind zum Beispiel
+  <ul>
+  <li>2 * 1/4 * 1/3</li>
+  <li>2/12   (Der Bruch muss nicht gekürzt werden.)</li>
+  <li>1/6  (Er darf aber gekürzt werden!)</li>
+</ul>
+</p>
 <p>Bestätige deine Eingabe mit [<strong>Enter</strong>]. Du wirst dann automatisch zur nächsten Aufgabe weitergeleitet.</p>
   `;
   return <InstructionFrame html={html} space finish={props.finish}/>;
@@ -243,7 +248,6 @@ export function InstructionFrame101_sequenziell_12(props) {
   const html = `
   <h1>Aufbau des Lernprogramms II</h1>
   <p>Nach vier bearbeiteten Aufgaben erfolgt eine kurze Befragung zu deinem Flow-Erleben und deiner kognitiven Beanspruchung. Dir werden 18 verschiedene Aussagen präsentiert. Du sollst dann auf einer Skala entscheiden, inwiefern jede dieser Aussagen auf dich zutrifft. Es ist wichtig, dass du die Fragen wahrheitsgemäß beantwortest.</p>
-  <p>Mit Betätigung der Leertaste wirst du zu Verständnisfragen weitergeleitet, bevor die Lernphase beginnt.</p>
   `;
 
   return <InstructionFrame html={html} space finish={props.finish}/>;
@@ -253,7 +257,6 @@ export function InstructionFrame101_simultan_34(props) {
   const html = `
   <h1>Aufbau des Lernprogramms II</h1>
   <p>Zum Abschluss jeder der vier Durchgänge erfolgt eine Befragung zu deinem Flow-Erleben und deiner kognitiven Beanspruchung. Dir werden 18 verschiedene Aussagen präsentiert. Du sollst dann auf einer Skala entscheiden, inwiefern jede dieser Aussagen auf dich zutrifft. Es ist wichtig, dass du die Fragen wahrheitsgemäß beantwortest. </p>
-  <p>Mit Betätigung der Leertaste wirst du zu Verständnisfragen weitergeleitet, bevor die Lernphase beginnt.</p>
   `;
 
   return <InstructionFrame html={html} space finish={props.finish}/>;
@@ -261,8 +264,8 @@ export function InstructionFrame101_simultan_34(props) {
 
 export function InstructionFrame102(props) {
   const html = `
-<p>Nun wirst du erneut 4 Beispielaufgabe erhalten.</p> 
-<p>Drück auf die Leertaste, wenn du bereit bist</p>
+<p>Nun wirst du erneut 4 Beispielaufgaben erhalten.</p> 
+<p>Drücke auf die Leertaste, wenn du bereit bist.</p>
   `;
 
   return <InstructionFrame html={html} space finish={props.finish}/>;
@@ -271,7 +274,7 @@ export function InstructionFrame102(props) {
 export function InstructionFrame103(props) {
   const html = `
 <p>Auf den folgenden vier Seiten sollst du einschätzen, wie du beim Lösen der Aufgaben vorgegangen bist.</p> 
-<p>Drück auf die Leertaste, wenn du bereit bist</p>
+<p>Drücke auf die Leertaste, wenn du bereit bist.</p>
   `;
 
   return <InstructionFrame html={html} space finish={props.finish}/>;
@@ -280,7 +283,7 @@ export function InstructionFrame103(props) {
 export function InstructionFrame104(props) {
   const html = `
 <p>Auf den folgenden vier Seiten sollst du einschätzen, wie gut du nun verschiedene Typen von Aufgaben bearbeiten kannst.</p> 
-<p>Drück auf die Leertaste, wenn du bereit bist</p>
+<p>Drücke auf die Leertaste, wenn du bereit bist.</p>
   `;
 
   return <InstructionFrame html={html} space finish={props.finish}/>;
@@ -436,10 +439,6 @@ export function InstructionFrame210(props) {
     {
       label: 'Nein',
       value: 'Hilsmittel? Nein'
-    },
-    {
-      label: 'Keine Angabe',
-      value: 'Hilsmittel? Keine Angabe'
     },
     {
       label: 'Ja',

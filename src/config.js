@@ -70,8 +70,8 @@ export const config = {
   r:
   radio 0: Anzahl gleich/ändert sich
   radio 1: Anzahl eine/mehrere Ergebnisfolgen
-  radio 2: mal 2, weil eine/mehrere Ereignisfolgen --> zu p3, p4
-  radio 3: nicht mal 2, weil eine/mehrere Ereignisfolgen --> zu p1, p2
+  radio 2: mal 2, weil eine/mehrere Ergebnisfolgen --> zu p3, p4
+  radio 3: nicht mal 2, weil eine/mehrere Ergebnisfolgen --> zu p1, p2
   radio 4: Nenner gleich, weil sich Ergebnisanzahl ändert/nicht ändert --> zu p1, p3
   radio 5: Nenner verschieden, weil sich Ergebnisanzahl ändert/nicht ändert --> zu p2, p4
 

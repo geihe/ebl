@@ -35,7 +35,7 @@ export const edelgase = {
     {
       principle: 3,
       problem: {
-        de: `Wie hoch ist die Wahrscheinlichkeit, dass die Chemikerin aus einem der Schränke Helium und aus dem anderen Argon herausgreift?'`,
+        de: `Wie hoch ist die Wahrscheinlichkeit, dass die Chemikerin aus einem der Schränke Helium und aus dem anderen Argon herausgreift?`,
       },
       solution:
         <MathComponent tex={String.raw` 2 \cdot ( {1 \over 3} \cdot {1 \over 3})={2 \over 9}`} display={false}/>

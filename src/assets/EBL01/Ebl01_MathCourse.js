@@ -91,14 +91,14 @@ export function MathCourse04b(props) {
 export function MathCourse05(props) {
   return (
     <div>
-      <h1>3. Wahrscheinlichkeit einer Ereignisfolge bei mehrstufigen Experimenten</h1>
+      <h1>3. Wahrscheinlichkeit einer Ergebnisfolge bei mehrstufigen Experimenten</h1>
       <p> Bei einem <strong>mehrstufigen</strong> Experiment werden zwei oder mehr „Einzelexperimente“ durchgeführt, und
         man interessiert
-        sich für die Wahrscheinlichkeit einer bestimmten <strong>Ereignisfolge</strong>.
+        sich für die Wahrscheinlichkeit einer bestimmten <strong>Ergebnisfolge</strong>.
         Ein Beispiel ist das Ziehen aus einer Urne mit Kugeln, die alle verschiedene Farben haben.
-        Eine Ereignisfolge ist beispielsweise „erst eine blaue Kugel und dann eine gelbe Kugel“.</p>
+        Eine Ergebnisfolge ist beispielsweise „erst eine blaue Kugel und dann eine gelbe Kugel“.</p>
       <h2>Der Multiplikationssatz</h2>
-      Will man die Wahrscheinlichkeit solcher Ereignisfolgen berechnen, so muss man die Einzelwahrscheinlichkeiten
+      Will man die Wahrscheinlichkeit solcher Ergebnisfolgen berechnen, so muss man die Einzelwahrscheinlichkeiten
       miteinander multiplizieren.
       Allgemein formuliert lautet der <strong>Multiplikationssatz</strong> (Ereignis A, Ereignis B) also:
       <MathComponent inline tex={String.raw` p(A\ und\ danach\ B) = p(A) \cdot p(B)`} display={true}/>
@@ -109,13 +109,13 @@ export function MathCourse05(props) {
 export function MathCourse06a(props) {
   return (
     <div>
-      <h1>4. Wahrscheinlichkeit mehrerer Ereignisfolgen bei mehrstufigen Experimenten</h1>
-      <p>Nicht immer geht es bei mehrstufigen Experimenten um eine bestimmte Reihenfolge der Ereignisse.
+      <h1>4. Wahrscheinlichkeit mehrerer Ergebnisfolgen bei mehrstufigen Experimenten</h1>
+      <p>Nicht immer geht es bei mehrstufigen Experimenten um eine bestimmte Reihenfolge der Ergebnisse.
         So gibt es auch mehrstufige Experimente, bei denen man sich für die Wahrscheinlichkeit interessiert,
-        dass zwei oder mehr Ereignisse überhaupt auftreten,
-        <strong> unabhängig von der Reihenfolge der Ereignisse</strong>.</p>
-      <p>In diesem Fall sind <strong>mehrere Ereignisfolgen günstig </strong>
-        (z.B. „erst Ereignis A, dann Ereignis B“ oder „erst Ereignis B, dann Ereignis A“). </p>
+        dass zwei oder mehr Ergebnisse überhaupt auftreten,
+        <strong> unabhängig von der Reihenfolge der Ergebnisse</strong>.</p>
+      <p>In diesem Fall sind <strong>mehrere Ergebnisfolgen günstig </strong>
+        (z.B. „erst Ergebnis A, dann Ergebnis B“ oder „erst Ergebnis B, dann Ergebnis A“). </p>
     </div>
   );
 }
@@ -123,11 +123,11 @@ export function MathCourse06a(props) {
 export function MathCourse06b(props) {
   return (
     <div>
-      <p>Zur Berechnung der Wahrscheinlichkeit, dass bei einem mehrstufigen Zufallsversuch zwei oder mehr Ereignisse
+      <p>Zur Berechnung der Wahrscheinlichkeit, dass bei einem mehrstufigen Zufallsversuch zwei oder mehr Ergebnisse
         überhaupt auftreten,
-        unabhängig von ihrer Reihenfolge, werden die Wahrscheinlichkeiten der günstigen Ereignisfolgen addiert.
+        unabhängig von ihrer Reihenfolge, werden die Wahrscheinlichkeiten der günstigen Ergebnisfolgen addiert.
       </p>
-      <p>Für den Fall, dass zwei Ereignisfolgen günstig sind, gilt:</p>
+      <p>Für den Fall, dass zwei Ergebnisfolgen günstig sind, gilt:</p>
       <MathComponent tex={String.raw` p(A\ und\ B,\ Reihenfolge\ egal) `} display={true}/>
       <MathComponent tex={String.raw`  = p(erst\ A\ dann\ B) + p(erst\ B\ dann\ A)  `}
                      display={true}/>
@@ -162,11 +162,11 @@ export function MathCourse07b(props) {
         Ergebnisse <strong>wird
           also von Ziehung zu Ziehung geringer</strong>.</p>
       <div>
-        <h2>2. Eine oder mehrere Ereignisfolgen sind günstig:</h2>
+        <h2>2. Eine oder mehrere Ergebnisfolgen sind günstig:</h2>
         <p>Sollen zwei Kugeln in einer bestimmten Reihenfolge aus einer Urne gezogen werden (z.B. erst blau, dann
-          gelb), dann gibt es <strong>nur eine günstige Ereignisfolge</strong>. </p>
+          gelb), dann gibt es <strong>nur eine günstige Ergebnisfolge</strong>. </p>
         <p>Ist die Reihenfolge der Ziehung der Kugeln hingegen irrelevant
-          (egal ob erst blau oder erst gelb) dann gibt es <strong>mehrere günstige Ereignisfolgen</strong>.</p>
+          (egal ob erst blau oder erst gelb) dann gibt es <strong>mehrere günstige Ergebnisfolgen</strong>.</p>
       </div>
     </div>
   );

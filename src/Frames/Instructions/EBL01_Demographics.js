@@ -12,14 +12,14 @@ export function EBL01_Demographics(props) {
     degree: Yup.string()
       .required({en: 'Please enter your degree', de: 'Bitte gib deinen höchsten Bildungsabschluss ein'}),
     age: Yup.number()
-      .min(18, {en: 'You have to be at least 18 years old', de: 'Sie müssen mindestens 18 Jahr alt sein'})
+      .min(18, {en: 'You have to be at least 18 years old', de: 'Du musst mindestens 18 Jahre alt sein'})
       .max(100, {en: 'Are your really that old?', de: 'Sind Sie wirklich so alt?'})
       .typeError({en: 'Please enter your age', de: 'Bitte gib dein Alter ein'})
       .round('floor'),
     nativeLanguage: Yup.string()
       .required({en: 'Please enter your native language', de: 'Bitte gib deine Muttersprache ein'}),
     gender: Yup.string()
-      .required({en: 'Please enter your gender', de: 'Bitte gebe ein Geschlecht an'}),
+      .required({en: 'Please enter your gender', de: 'Bitte gib ein Geschlecht an'}),
     subject: Yup.string()
       .required('Bitte klicke die Angabe zum Studium an'),
   });
@@ -78,6 +78,7 @@ export function EBL01_Demographics(props) {
           options={[
             {label: {en: 'male', de: 'männlich'}, value: 'male'},
             {label: {en: 'female', de: 'weiblich'}, value: 'female'},
+            {label: {en: 'divers', de: 'divers'}, value: 'divers'},
           ]}/>
 
         <MyRadioGroup
