@@ -35,7 +35,7 @@ export const postMC = [
   },
   {
     id: 'postMC_1_draw3',
-    header: `Du und dein Freund nehmen an einem <strong>dreitägigen</strong> Mountainbike-Kurs teil. An allen drei Tagen bringt der Kursleiter jeweils 5 Fahrradhelme mit, die alle unterschiedliche Farben haben (orange, silber, braun, rot und gelb). Die Helme werden zufällig verteilt und am Ende des Tages an den Kursleiter zurückgegeben. An allen Tagen erhältst du zuerst, deine Freundin Alice als Zweite und dein Freund Ben als Dritter einen Helm.`,
+    header: `Du und dein Freunde Alice und Ben nehmen an einem <strong>dreitägigen</strong> Mountainbike-Kurs teil. An allen drei Tagen bringt der Kursleiter jeweils 5 Fahrradhelme mit, die alle unterschiedliche Farben haben (orange, silber, braun, rot und gelb). Die Helme werden zufällig verteilt und am Ende des Tages an den Kursleiter zurückgegeben. An allen Tagen erhältst du zuerst, deine Freundin Alice als Zweite und dein Freund Ben als Dritter einen Helm.`,
     question: `Wie hoch ist die Wahrscheinlichkeit, dass <strong>du am ersten Kurstag den roten Helm bekommst, Alice den gelben und Ben den braunen?</strong>`,
     validate: evalValidator(1/60),
     responseType: 'input',
@@ -71,7 +71,7 @@ export const postMC = [
           <p>Bitte stelle dir folgendes Szenario möglichst anschaulich vor:</p>
  <strong><p>In einer Vase befinden sich alle 26 Buchstaben des Alphabets.
  Du ziehst nacheinander und zufällig fünf Buchstaben aus der Vase. 
- Wenn du einen Buchstaben gezogen hast, legst du ihn vor Dich auf den Tisch. </p>
+ Wenn du einen Buchstaben gezogen hast, legst du ihn vor dich auf den Tisch. </p>
  <p>Am Ende jedes Durchgangs hast du ein „Wort“ aus fünf Buchstaben vor dir liegen (z.B. GFAVB oder FUMEQ), das du notierst. 
  <p>Die Buchstaben werden danach alle wieder in die Vase geschüttet und für den nächsten Durchgang neu gemischt. </p>
    Auf diese Weise ziehst du insgesamt zehn „Wörter“.</p></strong>
@@ -95,7 +95,7 @@ export const postMC = [
    Auf diese Weise ziehst du insgesamt zehn „Wörter“.</p></strong>
         <p>Beantworte dazu nun bitte <strong>die zweite Frage</strong>:</p>
 `,
-    question:'2.	Die Wahrscheinlichkeit, dass du in einem der zehn Durchgänge ein bestimmtes Wort ziehst (z.B. BOHNE), hängt davon ab, ob du die Buchstaben bereits in der richtigen Reihenfolge ziehen musst oder ob Du diese nachträglich noch umsortieren darfst. ' +
+    question:'2.	Die Wahrscheinlichkeit, dass du in einem der zehn Durchgänge ein bestimmtes Wort ziehst (z.B. BOHNE), hängt davon ab, ob du die Buchstaben bereits in der richtigen Reihenfolge ziehen musst oder ob du diese nachträglich noch umsortieren darfst. ' +
       'Bitte erkläre diese Beziehung (eine Rechnung ist nicht notwendig).',
     responseType: 'textArea'
   },

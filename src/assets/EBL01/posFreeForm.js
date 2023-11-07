@@ -21,7 +21,7 @@ export const posFreeForm = [
       <p>Wenn nach dem ersten Durchgang der Gewinner ausscheidet und im zweiten Durchgang nicht mehr teilnimmt, ändert sich die Wahrscheinlichkeit auf <MathComponent tex={String.raw`{1 \over 5} \cdot {1 \over 4}`} display={false}/>.</p>,
     ],
     question: [
-      <><p>In in der ersten Rechnung wird <MathComponent tex={String.raw`{1 \over 5}`} display={false}/> mit <MathComponent tex={String.raw`{1 \over 5}`} display={false}/> multipliziert;  in der zweiten Rechnung wird <MathComponent tex={String.raw`{1 \over 5}`} display={false}/> mit <MathComponent tex={String.raw`{1 \over 4}`} display={false}/> multipliziert.</p> <p>Erkläre, warum dies so ist, und gehe bei deiner Antwort kurz auf die jeweiligen Überlegungen ein, die den beiden unterschiedlichen Lösungswegen zu Grunde liegen. </p></>,
+      <><p>In der ersten Rechnung wird <MathComponent tex={String.raw`{1 \over 5}`} display={false}/> mit <MathComponent tex={String.raw`{1 \over 5}`} display={false}/> multipliziert;  in der zweiten Rechnung wird <MathComponent tex={String.raw`{1 \over 5}`} display={false}/> mit <MathComponent tex={String.raw`{1 \over 4}`} display={false}/> multipliziert.</p> <p>Erkläre, warum dies so ist, und gehe bei deiner Antwort kurz auf die jeweiligen Überlegungen ein, die den beiden unterschiedlichen Lösungswegen zu Grunde liegen. </p></>,
     ],
     responseType: 'textArea',
     effort: 3,
@@ -29,7 +29,7 @@ export const posFreeForm = [
   {
     id: 'postConceptNew_3',
     header: `<p>Bei einem mehrstufigen Zufallsexperiment kann man u. a. folgende zwei Fälle unterscheiden:</p> <ol><li>Es gibt nur eine günstige Ergebnisfolge.</li><li>Es gibt mehrere günstige Ergebnisfolgen.</li></ol> `,
-    question: `Erkläre.`,
+    question: `Erkläre, inwieweit sich die Wahrscheinlichkeitsberechnungen unterscheiden.`,
     responseType: 'textArea',
     effort: 3,
   },

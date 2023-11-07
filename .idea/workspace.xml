@@ -7,19 +7,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c0a8d840-d2a4-41a1-9e79-f574c09cafbd" name="Default Changelist" comment="EBL02 mit neuem Mathekurs und Fehlerbehebung">
+    <list default="true" id="c0a8d840-d2a4-41a1-9e79-f574c09cafbd" name="Default Changelist" comment="EBL 02 hoffenlich Endversion">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Frames/Instructions/EBL01_Demographics.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frames/Instructions/EBL01_Demographics.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/YesNoSure.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/YesNoSure.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Frames/EBL/EBL01_ExampleFrames.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frames/EBL/EBL01_ExampleFrames.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Frames/Instructions/InstructionFrame.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frames/Instructions/InstructionFrame.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Frames/JolFrames.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frames/JolFrames.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Manager/EBL01Builder.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Manager/EBL01Builder.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/EBL01/Ebl01_MathCourse.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/EBL01/Ebl01_MathCourse.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/EBL01/Ebl02_MathCourse.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/EBL01/Ebl02_MathCourse.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Frames/ProcessQuestions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frames/ProcessQuestions.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/assets/EBL01/examples/edelgase.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/EBL01/examples/edelgase.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/EBL01/examples/fahrradhelm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/EBL01/examples/fahrradhelm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/EBL01/examples/explanationsV1.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/EBL01/examples/explanationsV1.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/assets/EBL01/examples/skispringen.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/EBL01/examples/skispringen.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/assets/EBL01/posFreeForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/EBL01/posFreeForm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/EBL01/postConcept.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/EBL01/postConcept.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/EBL01/postMC.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/EBL01/postMC.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,7 +94,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;js.last.introduce.type&quot;: &quot;CONST&quot;,
-    &quot;last_opened_file_path&quot;: &quot;G:/OneDrive_Marienschule/Marienschule Krefeld/Programmprojekte - Dokumente/react/bipsy/ebl/src&quot;,
+    &quot;last_opened_file_path&quot;: &quot;G:/OneDrive_Marienschule/Marienschule Krefeld/Programmprojekte - Dokumente/react/bipsy/EBL03&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -508,14 +508,18 @@
       <workItem from="1684570082739" duration="2584000" />
       <workItem from="1684655310012" duration="4326000" />
       <workItem from="1684822873964" duration="987000" />
-      <workItem from="1684856878178" duration="1196000" />
-    </task>
-    <task id="LOCAL-00053" summary="evalValidator eingeführt und benutzt&#10;--&gt; Eingaben werden als expression ausgewertet und mit der richtigen Lösung verglichen.">
-      <created>1617393741678</created>
-      <option name="number" value="00053" />
-      <option name="presentableId" value="LOCAL-00053" />
-      <option name="project" value="LOCAL" />
-      <updated>1617393741679</updated>
+      <workItem from="1684856878178" duration="4005000" />
+      <workItem from="1684868365735" duration="3518000" />
+      <workItem from="1685450925938" duration="674000" />
+      <workItem from="1685721070613" duration="70000" />
+      <workItem from="1685721156166" duration="154000" />
+      <workItem from="1685722483979" duration="18000" />
+      <workItem from="1689177638122" duration="640000" />
+      <workItem from="1689857708795" duration="1330000" />
+      <workItem from="1689872272929" duration="606000" />
+      <workItem from="1689925552975" duration="227000" />
+      <workItem from="1692299485459" duration="100000" />
+      <workItem from="1692554142201" duration="916000" />
     </task>
     <task id="LOCAL-00054" summary="Meldung, wenn Experiment voll ist.">
       <created>1617556769280</created>
@@ -853,7 +857,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682149493099</updated>
     </task>
-    <option name="localTasksCounter" value="102" />
+    <task id="LOCAL-00102" summary="EBL 02 hoffenlich Endversion">
+      <created>1684858817897</created>
+      <option name="number" value="00102" />
+      <option name="presentableId" value="LOCAL-00102" />
+      <option name="project" value="LOCAL" />
+      <updated>1684858817897</updated>
+    </task>
+    <option name="localTasksCounter" value="103" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -887,7 +898,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="id in Mathcourse-Elementen" />
     <MESSAGE value="Diverse Bugfixes für Daten in EBLWaitframe" />
     <MESSAGE value="In EBLWaitframe Zeitzählung mit Systemzeit korrigert (Bug: häufiges Klicken hat Zeit verlängert)" />
     <MESSAGE value="Zeit wieder hochgesetzt" />
@@ -912,7 +922,8 @@
     <MESSAGE value="EBL02 Zweite Session" />
     <MESSAGE value="EBL02 fertig aber noch mit altem Mathekurs" />
     <MESSAGE value="EBL02 mit neuem Mathekurs und Fehlerbehebung" />
-    <option name="LAST_COMMIT_MESSAGE" value="EBL02 mit neuem Mathekurs und Fehlerbehebung" />
+    <MESSAGE value="EBL 02 hoffenlich Endversion" />
+    <option name="LAST_COMMIT_MESSAGE" value="EBL 02 hoffenlich Endversion" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
 </project>

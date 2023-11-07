@@ -20,7 +20,7 @@ const processMeasuresIntroduction = { //TODO in eigene Datei
     <p style={{textAlign: 'center', fontSize: '150%'}}>Wie hast du dich beim Lesen der Beispiele gefühlt?</p>
     <p style={{textAlign: 'center', fontSize: '150%'}}>Bitte beurteile die folgenden Aussagen auf einer Skala
       von</p>
-    <p style={{textAlign: 'center', fontSize: '150%', color: 'darkred'}}>1 (trifft nicht zu) bis 7 (trifft
+    <p style={{textAlign: 'center', fontSize: '150%', color: 'darkred'}}>1 (Trifft nicht zu) bis 7 (Trifft
       zu)...</p>
   </DelayedFrame>),
   nolog: true,
@@ -30,8 +30,8 @@ const processMeasuresIntroduction = { //TODO in eigene Datei
 export const paasItem =
   {
     frame: <LikertFrame
-      minText={{de: 'sehr wenig angestrengt', en: 'very little effort'}}
-      maxText={{de: 'sehr stark angestrengt', en: 'very high effort'}}
+      minText={{de: 'Sehr wenig angestrengt', en: 'very little effort'}}
+      maxText={{de: 'Sehr stark angestrengt', en: 'very high effort'}}
       max={7}
       title={{
         de: 'Wie stark hast du dich bei den letzten vier Beispielen angestrengt, um sie zu verstehen?',

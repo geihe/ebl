@@ -41,13 +41,13 @@ export const postConcept = [
     question: `Ist es wichtig, ob diese zwei Zahlen in dieser bestimmten Reihenfolge gewürfelt werden sollen?`,
     options: [
       {value: '1',
-      label: `1. Ja, wenn du die Zahlen in einer bestimmten Reihenfolge würfeln sollst, ist deine Chance grösser, als wenn die Reihenfolge keine Rolle spielt.`},
+      label: `1. Ja, wenn du die Zahlen in einer bestimmten Reihenfolge würfeln sollst, ist deine Chance größer, als wenn die Reihenfolge keine Rolle spielt.`},
       {value: '2',
       label: `2. Ja, wenn du die Zahlen in einer bestimmten Reihenfolge würfeln sollst, ist deine Chance kleiner, als wenn die Reihenfolge keine Rolle spielt.`},
       {value: '3',
       label: `3. Nein, beide Ereignisse haben die gleiche Chance einzutreten.`},
       {value: '4',
-      label: `4. Das hängt von der Anzahl der Mitspieler ab.`},
+      label: `4. Das hängt von der Anzahl der Mitspielenden ab.`},
     ],
     validate:
       (answer) => [2].includes(+answer.value),

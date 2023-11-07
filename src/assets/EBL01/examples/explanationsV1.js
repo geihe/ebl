@@ -109,10 +109,10 @@ const radioHtml = [
 const radioOption = [
   {label: `ändert sich.`, value: 'Ergebnisanzahl ändert sich.'},
   {label: `bleibt gleich.`, value: 'Ergebnisanzahl bleibt gleich.'},
-  {label: `ist nur eine Ereignisfolge günstig.`, value: 'eine günstig'},
-  {label: `sind mehrere Ereignisfolgen günstig.`, value: 'mehrere günstig'},
-  {label: `nur eine Ereignisfolge günstig ist.`, value: 'mal 2, da nur eine Ergebnisfolge'},
-  {label: `mehrere Ereignisfolgen günstig sind.`, value: 'mal 2, da mehrere Ergebnisfolgen'},
+  {label: `ist nur eine Ergebnisfolge günstig.`, value: 'eine günstig'},
+  {label: `sind mehrere Ergebnisfolgen günstig.`, value: 'mehrere günstig'},
+  {label: `nur eine Ergebnisfolge günstig ist.`, value: 'mal 2, da nur eine Ergebnisfolge'},
+  {label: `mehrere Ergebnisfolgen günstig sind.`, value: 'mal 2, da mehrere Ergebnisfolgen'},
   {label: `die Ergebnisanzahl gleich bleibt.`, value: 'Nenner gleich, da Ergebnisanzahl gleich bleibt'},
   {label: `sich die Ergebnisanzahl ändert.`, value: 'Nenner gleich, da sich Ergebnisanzahl ändert'},
 ]

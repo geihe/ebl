@@ -199,7 +199,7 @@ export function InstructionFrame16a(props) {
 export function InstructionFrame16b(props) {
   const html = `
   <h1>Vortest</h1>
-<p>Dir werden nun 12 Aufgaben präsentiert. Du sollst die Aufgaben berechnen und die Lösungen in das Notizfeld eintippen. </p>
+<p>Dir werden nun 12 Aufgaben präsentiert. Du sollst die Aufgaben berechnen und die jeweilige Lösung in das Notizfeld eintippen. </p>
   <p>Mögliche Eingaben sind zum Beispiel
   <ul>
   <li>2 * 1/4 * 1/3</li>
@@ -224,7 +224,7 @@ export function InstructionFrame100_sequenziell_12(props) {
   const html = `
   <h1>Aufbau des Lernprogramms I</h1>
   <p>Auf jeder Seite des Lernprogramms wird dir eine Beispielaufgabe präsentiert. Du sollst jede Aufgabe aufmerksam lesen und versuchen, die Lösung nachzuvollziehen. </p>
-  <p>Zudem werden nach einiger Zeit rechts auf jeder Seite des Lernprogramms für jede Beispielaufgabe zwei Multiple-Choice-Fragen eingeblendet. Hier sollst du die deiner Meinung nach zutreffendste Antwort auswählen. Du kannst deine Wahl nicht mehr ändern. </p>
+  <p>Zudem werden nach einiger Zeit rechts auf jeder Seite des Lernprogramms für jede Beispielaufgabe zwei Single-Choice-Fragen eingeblendet. Hier sollst du die deiner Meinung nach zutreffendste Antwort auswählen. Du kannst deine Wahl nicht mehr ändern. </p>
   <p>Du durchläufst vier Durchgänge mit jeweils vier Beispielaufgaben, sodass dir <strong>insgesamt 16 Aufgaben präsentiert werden und du 32 Multiple Choice-Fragen beantwortest</strong>.</p>
   <p>Für die Bearbeitung von je vier Beispielaufgaben hast du insgesamt fünf Minuten Zeit, pro Aufgabe also 1 Minute und 15 Sekunden. Du solltest alle Texte sorgfältig lesen, alle Lösungen genau nachvollziehen und dann die Multiple-Choice Fragen beantworten. Nach Ablauf der fünf Minuten wirst du automatisch zur Befragung deines Flow-Erlebens und deiner kognitiven Beanspruchung weitergeleitet und kannst nicht mehr zurückgehen. Ein Timer wird eingeblendet.</p>
   `;
@@ -304,8 +304,8 @@ export function InstructionFrame200(props) {
 
 export function InstructionFrame201(props) {
   const html = `
-  <p>Dir werden nun 16 Aufgaben präsentiert. Du sollst die Aufgaben berechnen und die Lösungen in das Notizfeld eintippen. </p>
-  <p>Bitte nutze [/] um Brüche auszudrücken. Wenn du eine Multiplikation schreiben möchtest, verwende für das Malzeichen [*]. </p>
+  <p>Dir werden nun 16 Aufgaben präsentiert. Du sollst die Aufgaben berechnen und die jeweilige Lösung in das Notizfeld eintippen. </p>
+  <p>Bitte nutze [/] um Brüche auszudrücken. Wenn du eine Multiplikation schreiben möchtest, verwende dafür das Malzeichen [*]. </p>
   <p>Mögliche Eingaben sind zum Beispiel
   <ul>
   <li>2 * 1/4 * 1/3</li>
@@ -362,7 +362,7 @@ export function InstructionFrame206(props) {
   return (
     <>
       <LikertFrame
-        max={9}
+        max={7}
         minText={'sehr wenig'} maxText={'sehr viel'}
         title={'In welchem Umfang wurdest du während dieser Studie von deiner Umgebung gestört?'}
         finish={props.finish}/>
@@ -373,7 +373,7 @@ export function InstructionFrame207(props) {
   return (
     <>
       <LikertFrame
-        max={9}
+        max={7}
         minText={'sehr schlecht'} maxText={'sehr gut'}
         title={'In welchem Umfang konntest du dich auf die vorgegebenen Lernaufgaben konzentrieren?'}
         finish={props.finish}/>
@@ -514,7 +514,7 @@ export function InstructionFrame212(props) {
 
 export function ShowStudyCode(props) {
   const {code, random}=props;
-  const codePre = "EBL01-";
+  const codePre = "EBL02-";
   const codeSuffix = "";
   const codeMain = random ?
     Math.floor(Math.random()*52940 + 5883)*17
