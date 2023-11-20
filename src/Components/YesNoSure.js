@@ -38,7 +38,7 @@ export function YesNoSure(props) {
           <Likert
             callback={(rating) => setValues({...values, rating: rating})}
 
-            options={[1, 2, 3, 4, 5]}
+            options={[1, 2, 3, 4, 5, 6, 7]}
             rating={values.rating}
           />
           <div className={likertStyles.maxtext}>{t('sehr sicher')}</div>

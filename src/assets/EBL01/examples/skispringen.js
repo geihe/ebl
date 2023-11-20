@@ -42,7 +42,7 @@ export const skispringen = {
     {
       principle: 4,
       problem: {
-        de: `Wie groß ist die Wahrscheinlichkeit, dass Christoph und Daniel im ersten Durchgang die ersten beiden Plätze belegen (es ist egal, wer von Ihnen auf Platz 1 oder 2 kommt)?`,
+        de: `Wie groß ist die Wahrscheinlichkeit, dass Christoph und Daniel im ersten Durchgang die ersten beiden Plätze belegen (es ist egal, wer von ihnen auf Platz 1 oder 2 kommt)?`,
       },
       solution:
         <MathComponent tex={String.raw` 2 \cdot ( {1 \over 4} \cdot {1 \over 3})={2 \over 12}`} display={false}/>

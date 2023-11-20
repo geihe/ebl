@@ -27,7 +27,7 @@ export const edelgase = {
     {
       principle: 2,
       problem: {
-        de: `Wie hoch ist die Wahrscheinlichkeit, dass die Chemikerin in einem Schrank zuerst den Behälter mit dem Helium herausgreift und dann den Behälter mit dem Argon?`,
+        de: `Wie hoch ist die Wahrscheinlichkeit, dass die Chemikerin aus einem Schrank zuerst den Behälter mit dem Helium herausgreift und dann den Behälter mit dem Argon?`,
       },
       solution:
         <MathComponent tex={String.raw`{1 \over 3} \cdot {1 \over 2}={1 \over 6}`} display={false}/>
@@ -43,7 +43,7 @@ export const edelgase = {
     {
       principle: 4,
       problem: {
-        de: `Wie hoch ist die Wahrscheinlichkeit, dass die Chemikerin in einem Schrank zuerst die Behälter mit den Edelgasen Helium und Argon herausgreift (es ist egal, welches Behältnis sie als Erstes entdeckt)?`,
+        de: `Wie hoch ist die Wahrscheinlichkeit, dass die Chemikerin aus einem Schrank zuerst die Behälter mit den Edelgasen Helium und Argon herausgreift (es ist egal, welches Behältnis sie als Erstes entdeckt)?`,
       },
       solution:
         <MathComponent tex={String.raw` 2 \cdot ( {1 \over 3} \cdot {1 \over 2})={2 \over 6}`} display={false}/>
