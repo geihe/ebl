@@ -1,9 +1,9 @@
 export class Server {
   constructor() {
     this.baseURL = 'https://beispielbasiertes-lernen.de/rest/EBL/';
-    this.newURL = this.baseURL + 'new02.php';
-    this.saveURL = this.baseURL + 'save02.php';
-    this.checkURL = this.baseURL + 'check02.php';
+    this.newURL = this.baseURL + 'new04.php';
+    this.saveURL = this.baseURL + 'save04.php';
+    this.checkURL = this.baseURL + 'check04.php';
   }
 
   getNewData() {
