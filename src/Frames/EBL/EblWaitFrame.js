@@ -48,7 +48,7 @@ export function EblWaitFrame(props) {
       setTimer(() => {
         props.finish(dataWithSummary(logData.current));
       }, 100);
-    }  else {
+    } else {
 //TODO Hier noch Toast zeigen?
     }
   }
@@ -99,6 +99,7 @@ export function EblWaitFrame(props) {
     <SingleExplanation
       id={explanation.id}
       key={index}
+      onClick={(event) => onExplClick(index, event)}
       explanation={explanation && explanation.html}
       callback={(data) => nextExplanation(data)}
       active={state.activeExp === index}
@@ -107,9 +108,9 @@ export function EblWaitFrame(props) {
   );
 
   const radios = content.htmlRadios.map((radio, index) => {
-    const lowOnTime = timerTime < Math.ceil(hurry) && !state.waiting && state.activeExp <= index;
-    const visible = state.activeExp >= index || state.waiting || lowOnTime;
-    return <SingleRadios
+      const lowOnTime = timerTime < Math.ceil(hurry) && !state.waiting && state.activeExp <= index;
+      const visible = state.activeExp >= index || state.waiting || lowOnTime;
+      return <SingleRadios
         onClick={(event) => onExplClick(index, event)}
         finish={(data) => nextExplanation(data)}
         key={index}
@@ -142,7 +143,7 @@ export function EblWaitFrame(props) {
     activeNrs.push(...activeExplanationNumbers.exampleNrs);
   } //TODO eleganter
 
-const displayExplanation = timerTime < explanationTime;
+  const displayExplanation = timerTime < explanationTime;
   const examples = content.htmlExamples.map((ex, index) => {
       return <SingleExample
         key={index}
@@ -218,17 +219,18 @@ function SingleExample(props) {
 
 function SingleExplanation(props) {
   const t = useContext(LngContext);
-  const {explanation, callback, active, minLength, icon, lowOnTime} = props;
+  const {explanation, callback, active, minLength, onClick, lowOnTime} = props;
   const [text, setText] = useState('');
   const activeClass = active ? ' ' + styles.highlight : '';
   const waitingClass = true ? ' ' + styles.mousePointer : '';
 
   return (
-    <div className={styles.singleExplanation + activeClass + waitingClass}>
+    <div className={styles.singleExplanation + activeClass + waitingClass} onClick={onClick}>
       <Html className={styles.explanationHeader} html={t(explanation)}/>
       {active ? <TextArea
         className={styles.editable}
         placeholder={t(phrase.editablePlaceholder)}
+        value={text}
         disabled={!active}
         onChange={(ev) => setText(ev.target.value)}
         intent={Intent.PRIMARY}
@@ -237,6 +239,7 @@ function SingleExplanation(props) {
       /> : null}
       {active ? <Button intent={active ? 'primary' : 'none'}
                         disabled={!active || text.length < minLength}
+        // disabled={!active }
                         onClick={() => callback(text)}>
         {t(phrase.continue)}
       </Button> : null}
@@ -259,9 +262,9 @@ function SingleRadios(props) {
       <div style={{display: 'flex'}} onClick={onClick}>
         {showIcon ? icon : ''}
         <Html
-              className={styles.explanationHeader}
-              style={{marginBottom: '8px'}}
-              html={t(html)}/>
+          className={styles.explanationHeader}
+          style={{marginBottom: '8px'}}
+          html={t(html)}/>
       </div>
       {<ResponseRadioButtons
         display={active}

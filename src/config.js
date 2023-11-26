@@ -1,13 +1,141 @@
+const groups_with_radio = [
+  {  // group 0
+    id: 'full',
+    items: [
+    ]
+  },
+  {  // group 1
+    id: 'blocked-sequential',
+    items: [
+      ["c1 p1 r100-1035",
+        "c2 p1 r101-1044",
+        "c3 p1 r100-1036",
+        "c4 p1 r101-1047"],
+      ["c2 p2 r200-2035",
+        "c3 p2 r201-2056",
+        "c4 p2 r200-2037",
+        "c1 p2 r201-2054"],
+      ["c3 p3 r300-3026",
+        "c4 p3 r301-3045",
+        "c1 p3 r300-3024",
+        "c2 p3 r301-3047"],
+      ["c4 p4 r400-4024",
+        "c1 p4 r401-4055",
+        "c2 p4 r400-4027",
+        "c3 p4 r401-4056"],
+    ]
+  },
+  {   // group 2
+    id: 'interleaved-sequential',
+    items: [
+      ["c1 p1 r100-1035",
+        "c1 p2 r201-2054",
+        "c1 p3 r300-3024",
+        "c1 p4 r401-4055"],
+      ["c2 p2 r200-2035",
+        "c2 p3 r301-3047",
+        "c2 p4 r400-4027",
+        "c2 p1 r101-1044"],
+      ["c3 p3 r300-3026",
+        "c3 p4 r401-4056",
+        "c3 p1 r100-1036",
+        "c3 p2 r201-2056"],
+      ["c4 p4 r400-4024",
+        "c4 p1 r101-1047",
+        "c4 p2 r200-2037",
+        "c4 p3 r301-3045"],
+    ]
+  },
+  { // group 3
+    id: 'blocked-simultaneous',
+    items: [
+      ["c1-2-3-4 p1 r110-1135-121-1244-130-1336-141-1447"],
+      ["c2-3-4-1 p2 r210-2135-221-2256-230-2337-241-2454"],
+      ["c3-4-1-2 p3 r310-3126-321-3245-330-3324-341-3447"],
+      ["c4-1-2-3 p4 r410-4124-421-4255-430-4327-441-4456"],
+    ]
+  },
+  { // group 4
+    id: 'interleaved-simultaneous',
+    items: [
+      ["c1 p1-2-3-4 r110-1135-221-2254-330-3324-441-4455"],
+      ["c2 p2-3-4-1 r210-2135-321-3247-430-4327-141-1444"],
+      ["c3 p3-4-1-2 r310-3126-421-4256-130-1336-241-2456"],
+      ["c4 p4-1-2-3 r410-4124-121-1247-230-2337-341-3445"],
+    ]
+  },
+  {
+    id: 'test',
+    items: [
+      ["c1 p1 r100-1035",
+        "c2 p1 r101-1044",
+        "c3 p1 r100-1037",
+        "c4 p1 r101-1045"],
+    ]
+  },
+];
+const groups_with_explanation = [
+  {  // group 0
+    id: 'full',
+    items: [
+    ]
+  },
+  { // group 1
+    id: 'blocked-control',
+    items: [
+      ["c1-2-3-4 p1 e0"],
+      ["c2-3-4-1 p2 e0"],
+      ["c3-4-1-2 p3 e0"],
+      ["c4-1-2-3 p4 e0"],
+    ]
+  },
+  { // group 2
+    id: 'interleaved-controll',
+    items: [
+      ["c1 p1-2-3-4 e0"],
+      ["c2 p2-3-4-1 e0"],
+      ["c3 p3-4-1-2 e0"],
+      ["c4 p4-1-2-3 e0"],
+    ]
+  },
+  { // group 3
+    id: 'blocked-explanatios',
+    items: [
+      ["c1-2-3-4 p1 e1-2-3-4"],
+      ["c2-3-4-1 p2 e1-2-3-4"],
+      ["c3-4-1-2 p3 e1-2-3-4"],
+      ["c4-1-2-3 p4 e1-2-3-4"],
+    ]
+  },
+  { // group 4
+    id: 'interleaved-explanatios',
+    items: [
+      ["c1 p1-2-3-4 e1-2-3-4"],
+      ["c2 p2-3-4-1 e1-2-3-4"],
+      ["c3 p3-4-1-2 e1-2-3-4"],
+      ["c4 p4-1-2-3 e1-2-3-4"],
+    ]
+  },
+  {
+    id: 'test',
+    items: [
+      ["c1 p1 r100-1035",
+        "c2 p1 r101-1044",
+        "c3 p1 r100-1037",
+        "c4 p1 r101-1045"],
+    ]
+  },
+];
 export const config = {
   develop: true,
   milestones: false,
-  targetCount: [60, 60, 60, 60],
+  targetCount: [3, 3, 3, 3],
 
   language: 'de',
   numberOfSessions: 1,
   timeBetweenSessionsInSeconds: 5 * 60, //7*60*60*24
   pauseSeconds: 600, //600
-  timeForExamples: 300, //300
+  timeForExamples: 600, //10 Minuten für 4 Beispiele
   likertFrameDelay: 500, //500
   vph: 2,
 
@@ -78,82 +206,7 @@ export const config = {
   b: nur ein Button ohne weiter Eingabefelder
   */
   examples: {
-    groups: [//TODO 2. Session berücksichtigen
-      {  // group 0
-        id: 'full',
-        items: [
-        ]
-      },
-      {  // group 1
-        id: 'blocked-sequential',
-        items: [
-          ["c1 p1 r100-1035",
-            "c2 p1 r101-1044",
-            "c3 p1 r100-1036",
-            "c4 p1 r101-1047"],
-          ["c2 p2 r200-2035",
-            "c3 p2 r201-2056",
-            "c4 p2 r200-2037",
-            "c1 p2 r201-2054"],
-          ["c3 p3 r300-3026",
-            "c4 p3 r301-3045",
-            "c1 p3 r300-3024",
-            "c2 p3 r301-3047"],
-          ["c4 p4 r400-4024",
-            "c1 p4 r401-4055",
-            "c2 p4 r400-4027",
-            "c3 p4 r401-4056"],
-        ]
-      },
-      {   // group 2
-        id: 'interleaved-sequential',
-        items: [
-          ["c1 p1 r100-1035",
-            "c1 p2 r201-2054",
-            "c1 p3 r300-3024",
-            "c1 p4 r401-4055"],
-          ["c2 p2 r200-2035",
-            "c2 p3 r301-3047",
-            "c2 p4 r400-4027",
-            "c2 p1 r101-1044"],
-          ["c3 p3 r300-3026",
-            "c3 p4 r401-4056",
-            "c3 p1 r100-1036",
-            "c3 p2 r201-2056"],
-          ["c4 p4 r400-4024",
-            "c4 p1 r101-1047",
-            "c4 p2 r200-2037",
-            "c4 p3 r301-3045"],
-        ]
-      },
-      { // group 3
-        id: 'blocked-simultaneous',
-        items: [
-          ["c1-2-3-4 p1 r110-1135-121-1244-130-1336-141-1447"],
-          ["c2-3-4-1 p2 r210-2135-221-2256-230-2337-241-2454"],
-          ["c3-4-1-2 p3 r310-3126-321-3245-330-3324-341-3447"],
-          ["c4-1-2-3 p4 r410-4124-421-4255-430-4327-441-4456"],
-        ]
-      },
-      { // group 4
-        id: 'interleaved-simultaneous',
-        items: [
-          ["c1 p1-2-3-4 r110-1135-221-2254-330-3324-441-4455"],
-          ["c2 p2-3-4-1 r210-2135-321-3247-430-4327-141-1444"],
-          ["c3 p3-4-1-2 r310-3126-421-4256-130-1336-241-2456"],
-          ["c4 p4-1-2-3 r410-4124-121-1247-230-2337-341-3445"],
-        ]
-      },
-      {
-        id: 'test',
-        items: [
-          ["c1 p1 r100-1035",
-            "c2 p1 r101-1044",
-            "c3 p1 r100-1037",
-            "c4 p1 r101-1045"],
-        ]
-      },
-    ],
+    groups: groups_with_explanation,
     textAreaMinLength: 10,
   },
 

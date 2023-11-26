@@ -70,7 +70,7 @@ export function InstructionFrame06(props) {
 <p><i><b>Lernphase:</b></i>
 <ul>
 <li>Du erhältst eine <strong>allgemeine Erklärung über Urnenmodelle und Stochastik</strong>. </li>
-<li>Anschließend lernst du vier Prinzipien der Wahrscheinlichkeitsrechnung anhand von <strong>16 Lösungsbeispielen</strong>. Zu jedem Lösungsbeispiel erhältst du Fragen im Multiple Choice-Format. </li>
+<li>Anschließend lernst du vier Prinzipien der Wahrscheinlichkeitsrechnung anhand von <strong>16 Lösungsbeispielen</strong>. </li>
 <li>Nach jeweils vier Lösungsbeispielen werden dir verschiedene <strong>Fragen zu deiner kognitiven Beanspruchung und deinem Flow-Erleben</strong> gestellt. </li>
 <li>Zum Abschluss der Lernphase sollst du einschätzen, wie gut du Testaufgaben zu diesen Prinzipien lösen kannst.</li>
 </ul>
@@ -220,19 +220,19 @@ export function InstructionFrame17(props) {
   return <InstructionFrame html={html} space finish={props.finish}/>;
 }
 
-export function InstructionFrame100_sequenziell_12(props) {
+export function InstructionFrame100_control_12(props) {
   const html = `
   <h1>Aufbau des Lernprogramms I</h1>
-  <p>Auf jeder Seite des Lernprogramms wird dir eine Beispielaufgabe präsentiert. Du sollst jede Aufgabe aufmerksam lesen und versuchen, die Lösung nachzuvollziehen. </p>
-  <p>Zudem werden nach einiger Zeit rechts auf jeder Seite des Lernprogramms für jede Beispielaufgabe zwei Single-Choice-Fragen eingeblendet. Hier sollst du die deiner Meinung nach zutreffendste Antwort auswählen. Du kannst deine Wahl nicht mehr ändern. </p>
-  <p>Du durchläufst vier Durchgänge mit jeweils vier Beispielaufgaben, sodass dir <strong>insgesamt 16 Aufgaben präsentiert werden und du 32 Multiple Choice-Fragen beantwortest</strong>.</p>
-  <p>Für die Bearbeitung von je vier Beispielaufgaben hast du insgesamt fünf Minuten Zeit, pro Aufgabe also 1 Minute und 15 Sekunden. Du solltest alle Texte sorgfältig lesen, alle Lösungen genau nachvollziehen und dann die Multiple-Choice Fragen beantworten. Nach Ablauf der fünf Minuten wirst du automatisch zur Befragung deines Flow-Erlebens und deiner kognitiven Beanspruchung weitergeleitet und kannst nicht mehr zurückgehen. Ein Timer wird eingeblendet.</p>
+  <p>Auf jeder Seite des Lernprogramms werden dir vier Beispielaufgaben präsentiert. Du sollst diese Aufgaben aufmerksam lesen und versuchen, die Lösung nachzuvollziehen. </p>
+
+  <p>Du durchläufst vier Durchgänge mit jeweils vier Beispielaufgaben, sodass dir <strong>insgesamt 16 Aufgaben präsentiert werden.</strong>.</p>
+  <p>Für die Bearbeitung von je vier Beispielaufgaben hast du insgesamt zehn Minuten Zeit, pro Aufgabe also 2 Minute und 30 Sekunden. Du solltest alle Texte sorgfältig lesen, alle Lösungen genau nachvollziehen. Nach Ablauf der zehn Minuten wirst du automatisch zur Befragung deines Flow-Erlebens und deiner kognitiven Beanspruchung weitergeleitet und kannst nicht mehr zurückgehen. Ein Timer wird eingeblendet.</p>
   `;
 
   return <InstructionFrame html={html} space finish={props.finish}/>;
 }
 
-export function InstructionFrame100_simultan_34(props) {
+export function InstructionFrame100_experiment(props) {
   const html = `
   <h1>Aufbau des Lernprogramms I</h1>
   <p>Auf jeder Seite des Lernprogramms werden dir vier Beispielaufgaben präsentiert. Du sollst diese Aufgaben aufmerksam lesen und versuchen, die Lösung nachzuvollziehen. </p>
@@ -244,7 +244,7 @@ export function InstructionFrame100_simultan_34(props) {
   return <InstructionFrame html={html} space finish={props.finish}/>;
 }
 
-export function InstructionFrame101_sequenziell_12(props) {
+export function InstructionFrame101_control_12(props) {
   const html = `
   <h1>Aufbau des Lernprogramms II</h1>
   <p>Nach vier bearbeiteten Aufgaben erfolgt eine kurze Befragung zu deinem Flow-Erleben und deiner kognitiven Beanspruchung. Dir werden 18 verschiedene Aussagen präsentiert. Du sollst dann auf einer Skala entscheiden, inwiefern jede dieser Aussagen auf dich zutrifft. Es ist wichtig, dass du die Fragen wahrheitsgemäß beantwortest.</p>
@@ -253,7 +253,7 @@ export function InstructionFrame101_sequenziell_12(props) {
   return <InstructionFrame html={html} space finish={props.finish}/>;
 }
 
-export function InstructionFrame101_simultan_34(props) {
+export function InstructionFrame101_experiment(props) {
   const html = `
   <h1>Aufbau des Lernprogramms II</h1>
   <p>Zum Abschluss jeder der vier Durchgänge erfolgt eine Befragung zu deinem Flow-Erleben und deiner kognitiven Beanspruchung. Dir werden 18 verschiedene Aussagen präsentiert. Du sollst dann auf einer Skala entscheiden, inwiefern jede dieser Aussagen auf dich zutrifft. Es ist wichtig, dass du die Fragen wahrheitsgemäß beantwortest. </p>

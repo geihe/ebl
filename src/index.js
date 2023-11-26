@@ -3,7 +3,7 @@ import ReactDOM from "react-dom";
 import * as serviceWorker from './serviceWorker';
 import './index.css';
 import {Session} from "./Manager/Session";
-import {EBL01Builder} from "./Manager/EBL01Builder";
+import {EBL04Builder} from "./Manager/EBL04Builder";
 import {LngContext, translate} from "./helper/i18n";
 import {FocusStyleManager} from "@blueprintjs/core";
 import {config} from "./config";
@@ -50,7 +50,7 @@ getElementInfo().then((info) => {
       break;
     default: //Session
       const initData = info.initialData[0];
-      const tb = new EBL01Builder(t);
+      const tb = new EBL04Builder(t);
       console.log(initData);
       tb.setSession(initData.session)
         .setGroupManager(info.groupManager)

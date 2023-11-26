@@ -91,7 +91,7 @@ export function exampleFrames(groupManager) {
           config={exampleConfig}
           content={rem.string2html(s)}
           seconds={config.timeForExamples / itemGroup.length}
-          explanationTime={config.timeForExamples / itemGroup.length /2}
+          explanationTime={config.timeForExamples} // zeige Erklärungsbox direkt
           hurry={config.timeForExamples / itemGroup.length /5}
         />
     },

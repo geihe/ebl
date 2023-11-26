@@ -49,8 +49,8 @@ export function EBL01_Demographics(props) {
           label={'Studium'}
           options={[
             {label: 'Bitte wähle die passendste Option:', value: ''},
-            {label: 'Ich studiere Mathematik oder Physik oder habe früher eines der Fächer studiert..', value: 'mathe'},
-            {label: 'Ich studiere ein anderes Fach als Mathematik oder Physik oder habe früher ein anderes Fach studiert.', value: 'andere'},
+            {label: 'Ich studiere Mathematik, Informatik oder Physik oder habe früher eines der Fächer studiert..', value: 'mathe'},
+            {label: 'Ich studiere ein anderes Fach als Mathematik, Informatik oder Physik oder habe früher ein anderes Fach studiert.', value: 'andere'},
             {label: 'Ich habe nicht studiert.', value: 'kein'},
           ]}
         />

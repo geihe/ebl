@@ -7,9 +7,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c0a8d840-d2a4-41a1-9e79-f574c09cafbd" name="Default Changelist" comment="EBL 04 Start">
+    <list default="true" id="0600d61b-15d0-445a-8a11-80930511d4a9" name="Changes" comment="Server angepasst">
+      <change afterPath="$PROJECT_DIR$/src/Manager/EBL04Builder.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/helper/Server.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/helper/Server.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Frames/EBL/EBL01_ExampleFrames.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frames/EBL/EBL01_ExampleFrames.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Frames/EBL/EblWaitFrame.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frames/EBL/EblWaitFrame.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Frames/Instructions/EBL01_Demographics.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frames/Instructions/EBL01_Demographics.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Frames/Instructions/InstructionFrame.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frames/Instructions/InstructionFrame.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/EBL01/examples/explanationsV1.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/EBL01/examples/explanationsV1.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/css/EBLFrame.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/css/EBLFrame.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,8 +94,9 @@
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;js.last.introduce.type&quot;: &quot;CONST&quot;,
-    &quot;last_opened_file_path&quot;: &quot;G:/OneDrive_Marienschule/Marienschule Krefeld/Programmprojekte - Dokumente/react/bipsy/EBL03&quot;,
+    &quot;last_opened_file_path&quot;: &quot;G:/OneDrive_Marienschule/Marienschule Krefeld/Programmprojekte - Dokumente/react/bipsy/ebl/src/Manager&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -100,11 +109,11 @@
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="G:\OneDrive_Marienschule\Marienschule Krefeld\Programmprojekte - Dokumente\react\bipsy\ebl\src\Manager" />
       <recent name="G:\OneDrive_Marienschule\Marienschule Krefeld\Programmprojekte - Dokumente\react\bipsy\ebl\src\assets\EBL01" />
       <recent name="G:\OneDrive_Marienschule\Marienschule Krefeld\Programmprojekte - Dokumente\react\bipsy\ebl\src\Frames" />
       <recent name="G:\OneDrive_Marienschule\Marienschule Krefeld\Programmprojekte - Dokumente\react\bipsy\ebl\src\assets\EBL01\examples" />
       <recent name="G:\OneDrive_Marienschule\Marienschule Krefeld\Programmprojekte - Dokumente\react\bipsy\ebl\src\Frames\EBL" />
-      <recent name="G:\OneDrive_Marienschule\Marienschule Krefeld\Programmprojekte - Dokumente\react\bipsy\ebl\src\Frames\Instructions" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="G:\OneDrive_Marienschule\Marienschule Krefeld\Programmprojekte - Dokumente\react\bipsy\ebl\src\assets" />
@@ -188,7 +197,7 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="c0a8d840-d2a4-41a1-9e79-f574c09cafbd" name="Default Changelist" comment="" />
+      <changelist id="0600d61b-15d0-445a-8a11-80930511d4a9" name="Changes" comment="Server angepasst" />
       <created>1607244027633</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -516,7 +525,13 @@
       <workItem from="1699352320345" duration="972000" />
       <workItem from="1699354449821" duration="385000" />
       <workItem from="1699354854957" duration="10000" />
-      <workItem from="1700468991632" duration="2448000" />
+      <workItem from="1700468991632" duration="3606000" />
+      <workItem from="1700475785837" duration="835000" />
+      <workItem from="1700486925731" duration="4220000" />
+      <workItem from="1700504771414" duration="6788000" />
+      <workItem from="1700587083847" duration="2354000" />
+      <workItem from="1700927983047" duration="497000" />
+      <workItem from="1701030468228" duration="2353000" />
     </task>
     <task id="LOCAL-00054" summary="Meldung, wenn Experiment voll ist.">
       <created>1617556769280</created>
@@ -861,7 +876,7 @@
       <option name="project" value="LOCAL" />
       <updated>1684858817897</updated>
     </task>
-    <option name="localTasksCounter" value="106" />
+    <option name="localTasksCounter" value="107" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -895,7 +910,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="Bugfixes" />
     <MESSAGE value="Färbung der Erkläreingabe bei knapper Zeit" />
     <MESSAGE value="Bugfix Berechnung validCount" />
     <MESSAGE value="group type as text included in data[0]" />
@@ -920,7 +934,8 @@
     <MESSAGE value="EBL 03" />
     <MESSAGE value="EBL 02 Endversion" />
     <MESSAGE value="EBL 04 Start" />
-    <option name="LAST_COMMIT_MESSAGE" value="EBL 04 Start" />
+    <MESSAGE value="Server angepasst" />
+    <option name="LAST_COMMIT_MESSAGE" value="Server angepasst" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
 </project>
