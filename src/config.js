@@ -90,7 +90,7 @@ const groups_with_explanation = [
     ]
   },
   { // group 2
-    id: 'interleaved-controll',
+    id: 'interleaved-control',
     items: [
       ["c1 p1-2-3-4 e0"],
       ["c2 p2-3-4-1 e0"],
@@ -99,7 +99,7 @@ const groups_with_explanation = [
     ]
   },
   { // group 3
-    id: 'blocked-explanatios',
+    id: 'blocked-explanations',
     items: [
       ["c1-2-3-4 p1 e1-2-3-4"],
       ["c2-3-4-1 p2 e1-2-3-4"],
@@ -108,7 +108,7 @@ const groups_with_explanation = [
     ]
   },
   { // group 4
-    id: 'interleaved-explanatios',
+    id: 'interleaved-explanations',
     items: [
       ["c1 p1-2-3-4 e1-2-3-4"],
       ["c2 p2-3-4-1 e1-2-3-4"],

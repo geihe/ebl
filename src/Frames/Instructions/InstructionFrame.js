@@ -195,7 +195,6 @@ export function InstructionFrame16a(props) {
   return <InstructionFrame html={html} space finish={props.finish}/>;
 }
 
-
 export function InstructionFrame16b(props) {
   const html = `
   <h1>Vortest</h1>
@@ -224,36 +223,27 @@ export function InstructionFrame100_control_12(props) {
   const html = `
   <h1>Aufbau des Lernprogramms I</h1>
   <p>Auf jeder Seite des Lernprogramms werden dir vier Beispielaufgaben präsentiert. Du sollst diese Aufgaben aufmerksam lesen und versuchen, die Lösung nachzuvollziehen. </p>
-
+  <p>Es erscheint ein Textfeld, in dem du deine Gedanken aufschreiben kannst.</p>
   <p>Du durchläufst vier Durchgänge mit jeweils vier Beispielaufgaben, sodass dir <strong>insgesamt 16 Aufgaben präsentiert werden.</strong>.</p>
-  <p>Für die Bearbeitung von je vier Beispielaufgaben hast du insgesamt zehn Minuten Zeit, pro Aufgabe also 2 Minute und 30 Sekunden. Du solltest alle Texte sorgfältig lesen, alle Lösungen genau nachvollziehen. Nach Ablauf der zehn Minuten wirst du automatisch zur Befragung deines Flow-Erlebens und deiner kognitiven Beanspruchung weitergeleitet und kannst nicht mehr zurückgehen. Ein Timer wird eingeblendet.</p>
+  <p>Für die Bearbeitung von je vier Beispielaufgaben hast du mindestens zehn Minuten Zeit. Du solltest alle Texte sorgfältig lesen, alle Lösungen genau nachvollziehen. Nach Ablauf der zehn Minuten kannst du mit der Befragung deines Flow-Erlebens und deiner kognitiven Beanspruchung weitermachen. Du kannst dann nicht mehr zurückgehen. Ein Timer wird eingeblendet.</p>
   `;
 
   return <InstructionFrame html={html} space finish={props.finish}/>;
 }
 
-export function InstructionFrame100_experiment(props) {
+export function InstructionFrame100_experiment_34(props) {
   const html = `
   <h1>Aufbau des Lernprogramms I</h1>
   <p>Auf jeder Seite des Lernprogramms werden dir vier Beispielaufgaben präsentiert. Du sollst diese Aufgaben aufmerksam lesen und versuchen, die Lösung nachzuvollziehen. </p>
-  <p>Nach einiger Zeit werden pro Aufgabe zwei Multiple Choice-Fragen eingeblendet, die du beantworten sollst. Auf einer Seite also insgesamt acht Multiple-Choice-Fragen.</p>
-  <p>Du durchläufst vier Durchgänge mit jeweils vier Beispielaufgaben und acht Multiple Choice-Fragen, sodass dir <strong>insgesamt 16 Beispielaufgaben präsentiert werden und du 32 Multiple Choice-Fragen beantwortest</strong>.</p>
-  <p>Für die Bearbeitung von je vier Beispielaufgaben hast du insgesamt fünf Minuten Zeit. Die Zeit kannst du frei einteilen, du solltest aber alle Lösungen nachvollzogen und alle Multiple Choice-Fragen beantwortet haben, denn nach Ablauf dieser Zeit wirst du automatisch zur Befragung deines Flow-Erlebens und deiner kognitiven Beanspruchung weitergeleitet und kannst nicht mehr zurückgehen. Ein Timer wird eingeblendet.</p>
+  <p>Es erscheinen vier Textfelder mit Fragen zu den Beispielen. </p>
+  <p>Du durchläufst vier Durchgänge mit jeweils vier Beispielaufgaben, sodass dir <strong>insgesamt 16 Aufgaben präsentiert werden.</strong>.</p>
+  <p>Für die Bearbeitung von je vier Beispielaufgaben hast du mindestens zehn Minuten Zeit. Du solltest alle Texte sorgfältig lesen, alle Lösungen genau nachvollziehen. Nach Ablauf der zehn Minuten kannst du mit der Befragung deines Flow-Erlebens und deiner kognitiven Beanspruchung weitermachen. Du kannst dann nicht mehr zurückgehen. Ein Timer wird eingeblendet.</p>
   `;
 
   return <InstructionFrame html={html} space finish={props.finish}/>;
 }
 
-export function InstructionFrame101_control_12(props) {
-  const html = `
-  <h1>Aufbau des Lernprogramms II</h1>
-  <p>Nach vier bearbeiteten Aufgaben erfolgt eine kurze Befragung zu deinem Flow-Erleben und deiner kognitiven Beanspruchung. Dir werden 18 verschiedene Aussagen präsentiert. Du sollst dann auf einer Skala entscheiden, inwiefern jede dieser Aussagen auf dich zutrifft. Es ist wichtig, dass du die Fragen wahrheitsgemäß beantwortest.</p>
-  `;
-
-  return <InstructionFrame html={html} space finish={props.finish}/>;
-}
-
-export function InstructionFrame101_experiment(props) {
+export function InstructionFrame101(props) {
   const html = `
   <h1>Aufbau des Lernprogramms II</h1>
   <p>Zum Abschluss jeder der vier Durchgänge erfolgt eine Befragung zu deinem Flow-Erleben und deiner kognitiven Beanspruchung. Dir werden 18 verschiedene Aussagen präsentiert. Du sollst dann auf einer Skala entscheiden, inwiefern jede dieser Aussagen auf dich zutrifft. Es ist wichtig, dass du die Fragen wahrheitsgemäß beantwortest. </p>

@@ -4,19 +4,11 @@ import {addToTag, getDataFromTag} from "../helper/tagHelper";
 import {exampleFrames} from "../Frames/EBL/EBL01_ExampleFrames";
 import {EBL01_Demographics} from "../Frames/Instructions/EBL01_Demographics"
 import {
-  InstructionFrame01,
-  InstructionFrame03,
-  InstructionFrame04,
-  InstructionFrame06,
-  InstructionFrame09,
-  InstructionFrame10,
   InstructionFrame100_control_12,
-  InstructionFrame100_experiment,
-  InstructionFrame101_control_12,
-  InstructionFrame101_experiment,
+  InstructionFrame100_experiment_34,
+  InstructionFrame101,
   InstructionFrame103,
   InstructionFrame104,
-  InstructionFrame11,
   InstructionFrame16a,
   InstructionFrame16b,
   InstructionFrame17,
@@ -38,9 +30,7 @@ import {
 import {CancelFrame} from "../Frames/CancelFrame";
 import {FixationCrossFrame} from "../Frames/FixationCrossFrame";
 import {ebl02_MathCourse} from "../assets/EBL01/Ebl02_MathCourse";
-import {InstructionTest} from "../Frames/InstructionTest";
 import {postFrames, preTest} from "../assets/EBL01/EBL01_PrePostTest";
-import {EBL01Video} from "../Frames/EBL/EBL01Video";
 import {JolFrame1, JolFrame2, JolFrame3, JolFrame4} from "../Frames/JolFrames";
 import {Pq1, Pq2, Pq3, Pq4} from "../Frames/ProcessQuestions";
 
@@ -57,6 +47,7 @@ export class EBL04Builder {
     this.showStudyCode = code;
     return this;
   }
+
   setSession(session) {
     this.session = session;
     return this;
@@ -91,8 +82,7 @@ export class EBL04Builder {
     };
 
     this.tlManager.add([
-      exampleFrames(this.groupManager), //TODO
-      {frame: <InstructionFrame01/>, id: 'firstFrame'},
+/*      {frame: <InstructionFrame01/>, id: 'firstFrame'},
       <EBL01Video videoID={'introduction'}/>,
       {
         repeat: [<InstructionFrame04/>, <InstructionFrame06/>,
@@ -102,7 +92,7 @@ export class EBL04Builder {
       <InstructionFrame09/>, cancelTest,
       <InstructionFrame10/>, cancelTest,
       <InstructionFrame11/>, cancelTest,
-      <InstructionFrame03/>,
+      <InstructionFrame03/>,*/
       {frame: <EBL01_Demographics/>, id: 'Demographics'},
       {
         id: 'groupFunction',
@@ -133,14 +123,10 @@ export class EBL04Builder {
       ebl02_MathCourse,
       {
         if: () => this.groupManager.getGroupId() <= 2,
-        then: [<InstructionFrame100_control_12/>, <InstructionFrame101_control_12/>,],
-        else:  [<InstructionFrame100_experiment/>,  <InstructionFrame101_experiment/>,]
+        then: [<InstructionFrame100_control_12/>],
+        else: [<InstructionFrame100_experiment_34/>]
       },
-      // {
-      //   if: (last, data) => data.find(d => d.id === "groupFunction").result <= 2,
-      //   then: [<InstructionFrame100_sequenziell_12/>, <InstructionFrame101_sequenziell_12/>,],
-      //   else:  [<InstructionFrame100_simultan_34/>,  <InstructionFrame101_simultan_34/>,]
-      // },
+      <InstructionFrame101/>,
       exampleFrames(this.groupManager),
       <InstructionFrame103/>,
       {frame: <Pq1/>, id: 'Pq1'},
@@ -189,12 +175,12 @@ export class EBL04Builder {
       preTest,
       <InstructionFrame17/>,
       ebl02_MathCourse,
-      this.groupManager <= 2 ?//TODO
-        [<InstructionFrame100_control_12/>,
-          <InstructionFrame101_control_12/>,] :
-        [<InstructionFrame100_experiment/>,
-          <InstructionFrame101_experiment/>,]
-      ,
+      /*      this.groupManager <= 2 ?//TODO
+              [<InstructionFrame100_control_12/>,
+                <InstructionFrame101_control_12/>,] :
+              [<InstructionFrame100_experiment/>,
+                <InstructionFrame101_experiment/>,]
+            ,*/
       exampleFrames(this.groupManager),
       {milestone: true},
       <InstructionFrame103/>,

@@ -7,17 +7,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0600d61b-15d0-445a-8a11-80930511d4a9" name="Changes" comment="Server angepasst">
-      <change afterPath="$PROJECT_DIR$/src/Manager/EBL04Builder.js" afterDir="false" />
+    <list default="true" id="0600d61b-15d0-445a-8a11-80930511d4a9" name="Changes" comment="Anweisungen angepasst">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Frames/EBL/EBL01_ExampleFrames.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frames/EBL/EBL01_ExampleFrames.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Frames/EBL/EblWaitFrame.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frames/EBL/EblWaitFrame.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Frames/Instructions/EBL01_Demographics.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frames/Instructions/EBL01_Demographics.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Frames/Instructions/InstructionFrame.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frames/Instructions/InstructionFrame.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/EBL01/examples/explanationsV1.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/EBL01/examples/explanationsV1.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Manager/EBL04Builder.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Manager/EBL04Builder.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/css/EBLFrame.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/css/EBLFrame.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -531,7 +525,8 @@
       <workItem from="1700504771414" duration="6788000" />
       <workItem from="1700587083847" duration="2354000" />
       <workItem from="1700927983047" duration="497000" />
-      <workItem from="1701030468228" duration="2353000" />
+      <workItem from="1701030468228" duration="2810000" />
+      <workItem from="1701109554163" duration="2959000" />
     </task>
     <task id="LOCAL-00054" summary="Meldung, wenn Experiment voll ist.">
       <created>1617556769280</created>
@@ -876,7 +871,7 @@
       <option name="project" value="LOCAL" />
       <updated>1684858817897</updated>
     </task>
-    <option name="localTasksCounter" value="107" />
+    <option name="localTasksCounter" value="108" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -910,7 +905,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="Färbung der Erkläreingabe bei knapper Zeit" />
     <MESSAGE value="Bugfix Berechnung validCount" />
     <MESSAGE value="group type as text included in data[0]" />
     <MESSAGE value="Beispiele: MC-Fragen kommen verzögert&#10;MC-Fragen: kleine bugs korrigiert" />
@@ -935,7 +929,8 @@
     <MESSAGE value="EBL 02 Endversion" />
     <MESSAGE value="EBL 04 Start" />
     <MESSAGE value="Server angepasst" />
-    <option name="LAST_COMMIT_MESSAGE" value="Server angepasst" />
+    <MESSAGE value="Anweisungen angepasst" />
+    <option name="LAST_COMMIT_MESSAGE" value="Anweisungen angepasst" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
 </project>
