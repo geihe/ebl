@@ -3,7 +3,7 @@ import ReactDOM from "react-dom";
 import * as serviceWorker from './serviceWorker';
 import './index.css';
 import {Session} from "./Manager/Session";
-import {EBL04Builder} from "./Manager/EBL04Builder";
+import {EBL_Builder} from "./Manager/EBL_Builder";
 import {LngContext, translate} from "./helper/i18n";
 import {FocusStyleManager} from "@blueprintjs/core";
 import {config} from "./config";
@@ -16,7 +16,7 @@ import {ReturnUrlHelper} from "./helper/returnURLHelper";
 import {getDataFromTag, getTag} from "./helper/tagHelper";
 
 FocusStyleManager.onlyShowFocusOnTabs();
-const server = new Server();
+//const server = new Server();
 let t;
 const returnUrlHelper = new ReturnUrlHelper();
 
@@ -24,10 +24,13 @@ function finished(data) {
   const {tag, age = 0, male = 0, session} = data[0];
   const {version, userId, groupId, returnId, parameter} = getDataFromTag(tag)
   const qualtrics = 'https://bielefeldpsych.eu.qualtrics.com/jfe/form/SV_djc7TF2eOFaMhyC?tag=' + tag;
-
+  const server = new Server(version);
   server.postData(userId, groupId, age, male, session, tag, data)
     .then(() => {
-      window.location.href = +session === 1 ? qualtrics : returnUrlHelper.getReturnUrl();
+      const href = +session === 1 ? qualtrics : returnUrlHelper.getReturnUrl();
+      if (href.startsWith('https')) {
+        window.location.href = href;
+      }
     }); //zurück zu Unipark etc.
 }
 
@@ -50,14 +53,15 @@ getElementInfo().then((info) => {
       break;
     default: //Session
       const initData = info.initialData[0];
-      const tb = new EBL04Builder(t);
+      const builder = new EBL_Builder(t);
       // console.log(initData);
-      tb.setSession(initData.session)
+      builder.setSession(initData.test ? 99 : initData.session)
+        .setVersion(initData.version)
         .setGroupManager(info.groupManager)
         .setShowStudyCode(returnUrlHelper.showStudyCode())
         .build();
       element =
-        <Session timeline={tb.getTimeline()} initialData={info.initialData} finished={(data) => finished(data)}/>
+        <Session timeline={builder.getTimeline()} initialData={info.initialData} finished={(data) => finished(data)}/>
   }
 
   render(element);
@@ -94,23 +98,10 @@ async function getElementInfo() {
   }
 
   returnUrlHelper.setFromURLParams(URLparams);
-  if (URLparams.tag) { //Folgesession
-    initialData.tag = URLparams.tag;
-    const tagData = getDataFromTag(URLparams.tag);
-    initialData.userId = tagData.userId;
-    initialData.groupId = tagData.groupId;
-    initialData.session = tagData.session + 1;
-
-    const serverData = await server.getCheckData(initialData.userId);
-    console.log(serverData);
-    if (serverData.end2) {
-      return {type: 'finished', language: initialData.language, initialData: [initialData]};
-    }
-    returnUrlHelper.setFromID(tagData.returnId, tagData.parameter);
-    return {type: 'session', language: initialData.language, initialData: [initialData]};
-  } else { //neues Experiment, erste Session
+  if (!URLparams.tag) { //neues Experiment, erste Session
+    const server = new Server(URLparams.version);
     const serverData = await server.getNewData();
-    console.log(serverData);
+    initialData.version = URLparams.version;
     initialData.test = URLparams.test;
     initialData.session = 1;
     initialData.timeFactor = +URLparams.timeFactor || 1;
@@ -134,6 +125,20 @@ async function getElementInfo() {
       return {type: 'full', language: initialData.language}
     }
     return {type: 'session', language: initialData.language, initialData: [initialData], groupManager};
+  } else { //Folgesession
+    initialData.tag = URLparams.tag;
+    const tagData = getDataFromTag(URLparams.tag);
+    initialData.version = tagData.version;
+    initialData.userId = tagData.userId;
+    initialData.groupId = tagData.groupId;
+    initialData.session = tagData.session + 1;
+    const server = new Server(tagData.version);
+    const serverData = await server.getCheckData(initialData.userId);
+    if (serverData.end2) {
+      return {type: 'finished', language: initialData.language, initialData: [initialData]};
+    }
+    returnUrlHelper.setFromID(tagData.returnId, tagData.parameter);
+    return {type: 'session', language: initialData.language, initialData: [initialData]};
   }
 }
 

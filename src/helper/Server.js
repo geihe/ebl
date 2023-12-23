@@ -10,7 +10,7 @@ export class Server {
     return fetch(this.newURL).then(response => response.json());
   }
   getCheckData(userId) {
-    return fetch(this.checkURL+'?user_id='+userId).then(response => response.json());
+    return fetch(this.checkURL+'&user_id='+userId).then(response => response.json());
   }
 
   postData(userId, groupId, age, male, session, tag, data, valid=1) {
