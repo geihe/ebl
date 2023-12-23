@@ -135,6 +135,18 @@ export function InstructionFrame11(props) {
   return <InstructionFrame header html={html}  cancelButton continueButtonText="Jetzt teilnehmen" cancelButtonText="Später teilnehmen" finish={props.finish}/>;
 }
 
+export function InstructionFrameImLabor(props) {
+  const html = `
+  <h1>Laborstudie</h1>
+  <p>Auch der zweite Teil der Studie wird im Labor durchgeführt. Solltest du zu Hause auf den Link in der Mail geklickt haben, dann mache hier bitte nicht weiter.</p>
+  <p></p>
+  <p>Wenn du im Labor bist, starte die zweite Sitzung mit  <strong>"Ich bin im Labor"</strong>. </p>
+  <p>Falls du den Link zu Hause geöffnet hast, klicke auf <strong>"Später teilnehmen"</strong>. </p>
+  `;
+
+  return <InstructionFrame header html={html}  cancelButton continueButtonText="Ich bin im Labor" cancelButtonText="Später teilnehmen" finish={props.finish}/>;
+}
+
 export function InstructionFrame12(props) {
   const html = `
   <h1>Einverständniserklärung I</h1>

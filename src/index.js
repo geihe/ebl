@@ -22,7 +22,7 @@ const returnUrlHelper = new ReturnUrlHelper();
 
 function finished(data) {
   const {tag, age = 0, male = 0, session} = data[0];
-  const {userId, groupId, returnId, parameter} = getDataFromTag(tag)
+  const {version, userId, groupId, returnId, parameter} = getDataFromTag(tag)
   const qualtrics = 'https://bielefeldpsych.eu.qualtrics.com/jfe/form/SV_djc7TF2eOFaMhyC?tag=' + tag;
 
   server.postData(userId, groupId, age, male, session, tag, data)
@@ -51,7 +51,7 @@ getElementInfo().then((info) => {
     default: //Session
       const initData = info.initialData[0];
       const tb = new EBL04Builder(t);
-      console.log(initData);
+      // console.log(initData);
       tb.setSession(initData.session)
         .setGroupManager(info.groupManager)
         .setShowStudyCode(returnUrlHelper.showStudyCode())
@@ -90,6 +90,7 @@ async function getElementInfo() {
     tag: params.get('tag'),
     test: params.get('test'),
     group_id: params.get('group_id'),
+    version: params.get('ver'),
   }
 
   returnUrlHelper.setFromURLParams(URLparams);

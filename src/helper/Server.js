@@ -1,9 +1,9 @@
 export class Server {
-  constructor() {
+  constructor(version) {
     this.baseURL = 'https://beispielbasiertes-lernen.de/rest/EBL/';
-    this.newURL = this.baseURL + 'new04.php';
-    this.saveURL = this.baseURL + 'save04.php';
-    this.checkURL = this.baseURL + 'check04.php';
+    this.newURL = this.baseURL + '_new.php?ver='+version;
+    this.saveURL = this.baseURL + '_save.php?ver='+version;
+    this.checkURL = this.baseURL + '_check.php?ver='+version;
   }
 
   getNewData() {
@@ -24,8 +24,6 @@ export class Server {
       data,
       valid,
     };
-    console.log(body);
-    console.log(JSON.stringify(body));
     return fetch(this.saveURL, {
       method: 'post',
       headers: {

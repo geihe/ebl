@@ -4,10 +4,10 @@ function getS(data) {
   return Base64.encodeURI(JSON.stringify(data));
 }
 
-export function getTag(userId = '', groupId = '', returnUrlHelper, session=1) {
+export function getTag(version=0, userId = '', groupId = '', returnUrlHelper, session=1) {
   const {id: returnId, parameter} = returnUrlHelper?.getReturnData();
 
-  return e(getS({userId, groupId, session, returnId, parameter}));
+  return e(getS({version, userId, groupId, session, returnId, parameter}));
 }
 
 export function getDataFromTag(tag) {

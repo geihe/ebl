@@ -9,7 +9,7 @@ import {useStateDelayed} from "../../Hooks/useStateDelayed";
 import {TimeView} from "../../MicroComponents/TimeView";
 
 export function EblWaitFrame(props) {
-  const {content, config, seconds = 60, hurry = 15, explanationTime} = props;
+  const {content, config, seconds = 60, hurry, explanationTime} = props;
   const t = useContext(LngContext);
   const [state, setState] = useState({activeExp: 0, waiting: false}); // active explanation box
   const logData = useRef({string: content.string, explanations: []});
@@ -54,7 +54,7 @@ export function EblWaitFrame(props) {
   }
 
   useEffect(() => {
-    if (timer === Math.ceil(hurry) && !state.waiting) {
+    if (hurry && timer === Math.ceil(hurry) && !state.waiting) {
       toastRight.current.show({
         message: "Du hast nicht mehr viel Zeit. Bitte beantworte alle Fragen.",
         intent: Intent.DANGER,

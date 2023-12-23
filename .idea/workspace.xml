@@ -7,11 +7,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0600d61b-15d0-445a-8a11-80930511d4a9" name="Changes" comment="Anweisungen angepasst">
+    <list default="true" id="0600d61b-15d0-445a-8a11-80930511d4a9" name="Changes" comment="Instruktion Experiment/Kontroll angepasst">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Frames/EBL/EBL01_ExampleFrames.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frames/EBL/EBL01_ExampleFrames.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Frames/EBL/EblWaitFrame.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frames/EBL/EblWaitFrame.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Frames/Instructions/InstructionFrame.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frames/Instructions/InstructionFrame.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Manager/EBL04Builder.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Manager/EBL04Builder.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/helper/Server.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/helper/Server.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/helper/returnURLHelper.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/helper/returnURLHelper.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/helper/tagHelper.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/helper/tagHelper.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,7 +96,7 @@
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;js.last.introduce.type&quot;: &quot;CONST&quot;,
-    &quot;last_opened_file_path&quot;: &quot;G:/OneDrive_Marienschule/Marienschule Krefeld/Programmprojekte - Dokumente/react/bipsy/ebl/src/Manager&quot;,
+    &quot;last_opened_file_path&quot;: &quot;G:/OneDrive_Marienschule/OneDrive - Marienschule Krefeld/_28MIF Klasse 9/___Webseiten2023/Leonard Aleksis&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -526,7 +532,15 @@
       <workItem from="1700587083847" duration="2354000" />
       <workItem from="1700927983047" duration="497000" />
       <workItem from="1701030468228" duration="2810000" />
-      <workItem from="1701109554163" duration="2959000" />
+      <workItem from="1701109554163" duration="3288000" />
+      <workItem from="1701113401423" duration="40000" />
+      <workItem from="1701202528464" duration="837000" />
+      <workItem from="1701203392022" duration="1233000" />
+      <workItem from="1701599573864" duration="3620000" />
+      <workItem from="1701949586627" duration="1835000" />
+      <workItem from="1702120534778" duration="58000" />
+      <workItem from="1702492747769" duration="900000" />
+      <workItem from="1703255722520" duration="3579000" />
     </task>
     <task id="LOCAL-00054" summary="Meldung, wenn Experiment voll ist.">
       <created>1617556769280</created>
@@ -871,7 +885,7 @@
       <option name="project" value="LOCAL" />
       <updated>1684858817897</updated>
     </task>
-    <option name="localTasksCounter" value="108" />
+    <option name="localTasksCounter" value="109" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -905,7 +919,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="Bugfix Berechnung validCount" />
     <MESSAGE value="group type as text included in data[0]" />
     <MESSAGE value="Beispiele: MC-Fragen kommen verzögert&#10;MC-Fragen: kleine bugs korrigiert" />
     <MESSAGE value="7 statt 1 cognitive load item&#10;Mc-Fragen nacheinander anzeigen&#10;Nachlaufzeit, wenn noch nicht alle Fragen beantwortet sind&#10;Versuch Bildschirmbreite" />
@@ -930,7 +943,8 @@
     <MESSAGE value="EBL 04 Start" />
     <MESSAGE value="Server angepasst" />
     <MESSAGE value="Anweisungen angepasst" />
-    <option name="LAST_COMMIT_MESSAGE" value="Anweisungen angepasst" />
+    <MESSAGE value="Instruktion Experiment/Kontroll angepasst" />
+    <option name="LAST_COMMIT_MESSAGE" value="Instruktion Experiment/Kontroll angepasst" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
 </project>

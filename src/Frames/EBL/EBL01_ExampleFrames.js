@@ -92,7 +92,7 @@ export function exampleFrames(groupManager) {
           content={rem.string2html(s)}
           seconds={config.timeForExamples / itemGroup.length}
           explanationTime={config.timeForExamples} // zeige Erklärungsbox direkt
-          hurry={config.timeForExamples / itemGroup.length /5}
+          //hurry={config.timeForExamples / itemGroup.length /5}
         />
     },
           <FixationCrossFrame nocross/>]

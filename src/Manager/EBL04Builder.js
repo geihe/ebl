@@ -4,11 +4,18 @@ import {addToTag, getDataFromTag} from "../helper/tagHelper";
 import {exampleFrames} from "../Frames/EBL/EBL01_ExampleFrames";
 import {EBL01_Demographics} from "../Frames/Instructions/EBL01_Demographics"
 import {
+  InstructionFrame01,
+  InstructionFrame03,
+  InstructionFrame04,
+  InstructionFrame06,
+  InstructionFrame09,
+  InstructionFrame10,
   InstructionFrame100_control_12,
   InstructionFrame100_experiment_34,
   InstructionFrame101,
   InstructionFrame103,
   InstructionFrame104,
+  InstructionFrame11,
   InstructionFrame16a,
   InstructionFrame16b,
   InstructionFrame17,
@@ -25,12 +32,15 @@ import {
   InstructionFrame211a,
   InstructionFrame211b,
   InstructionFrame212,
+  InstructionFrameImLabor,
   ShowStudyCode
 } from "../Frames/Instructions/InstructionFrame";
 import {CancelFrame} from "../Frames/CancelFrame";
 import {FixationCrossFrame} from "../Frames/FixationCrossFrame";
 import {ebl02_MathCourse} from "../assets/EBL01/Ebl02_MathCourse";
+import {InstructionTest} from "../Frames/InstructionTest";
 import {postFrames, preTest} from "../assets/EBL01/EBL01_PrePostTest";
+import {EBL01Video} from "../Frames/EBL/EBL01Video";
 import {JolFrame1, JolFrame2, JolFrame3, JolFrame4} from "../Frames/JolFrames";
 import {Pq1, Pq2, Pq3, Pq4} from "../Frames/ProcessQuestions";
 
@@ -82,7 +92,7 @@ export class EBL04Builder {
     };
 
     this.tlManager.add([
-/*      {frame: <InstructionFrame01/>, id: 'firstFrame'},
+      {frame: <InstructionFrame01/>, id: 'firstFrame'},
       <EBL01Video videoID={'introduction'}/>,
       {
         repeat: [<InstructionFrame04/>, <InstructionFrame06/>,
@@ -92,7 +102,7 @@ export class EBL04Builder {
       <InstructionFrame09/>, cancelTest,
       <InstructionFrame10/>, cancelTest,
       <InstructionFrame11/>, cancelTest,
-      <InstructionFrame03/>,*/
+      <InstructionFrame03/>,
       {frame: <EBL01_Demographics/>, id: 'Demographics'},
       {
         id: 'groupFunction',
@@ -143,7 +153,13 @@ export class EBL04Builder {
   }
 
   buildSession2() {
+    const cancelTest = { //TODO canceltest nur einmal definieren, kommt auch in Session 1 vor
+      if: (lastlog) => lastlog === 'break',
+      then: <CancelFrame/>,
+    };
+
     this.tlManager.add([
+      <InstructionFrameImLabor/>, cancelTest,
       <InstructionFrame200/>,
       <InstructionFrame201/>, postFrames[0], {milestone: true},
       <InstructionFrame202/>, postFrames[1], {milestone: true},

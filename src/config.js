@@ -133,9 +133,9 @@ export const config = {
 
   language: 'de',
   numberOfSessions: 1,
-  timeBetweenSessionsInSeconds: 5 * 60, //7*60*60*24
+  timeBetweenSessionsInSeconds: 5 * 60, //wird nicht benutzt, 1 Woche RI
   pauseSeconds: 600, //600
-  timeForExamples: 600, //10 Minuten für 4 Beispiele
+  timeForExamples: 8*60, //8 Minuten für 4 Beispiele
   likertFrameDelay: 500, //500
   vph: 2,
 
