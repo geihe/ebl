@@ -65,6 +65,7 @@ function Frame(props) {
 
 export function Session(props) {
   const {timeline, initialData} = props;
+  console.log(initialData);
   const [index, setIndex] = useState(0);
   const data = useRef(initialData);
   if (index >= timeline.length || data.current[0].finished) {

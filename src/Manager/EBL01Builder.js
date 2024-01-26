@@ -51,7 +51,7 @@ export class EBL01Builder {
     this.session = 1;
     this.groupManager = null; //group von 1 bis 4 , 0 -> test
     this.showStudyCode = false;
-  }
+  }np
 
   setShowStudyCode(code = true) {
     this.showStudyCode = code;

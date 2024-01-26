@@ -7,13 +7,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0600d61b-15d0-445a-8a11-80930511d4a9" name="Changes" comment="Instruktion Experiment/Kontroll angepasst">
-      <change afterPath="$PROJECT_DIR$/src/Manager/EBL04Sessions.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Manager/EBL05Sessions.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Manager/EBLTestSessions.js" afterDir="false" />
+    <list default="true" id="0600d61b-15d0-445a-8a11-80930511d4a9" name="Changes" comment="Version 4 und 5 eingeführt - noch nicht getestet">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Manager/EBL04Builder.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Manager/EBL_Builder.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/helper/Server.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/helper/Server.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Frames/EBL/EBL01_ExampleFrames.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frames/EBL/EBL01_ExampleFrames.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Frames/Instructions/InstructionFrame.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frames/Instructions/InstructionFrame.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Manager/EBL01Builder.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Manager/EBL01Builder.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Manager/EBL04Sessions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Manager/EBL04Sessions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Manager/EBL05Sessions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Manager/EBL05Sessions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Manager/EBLTestSessions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Manager/EBLTestSessions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Manager/EBL_Builder.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Manager/EBL_Builder.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Manager/Session.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Manager/Session.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/config.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -87,23 +91,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "ignore.virus.scanning.warn.message": "true",
-    "js.last.introduce.type": "CONST",
-    "last_opened_file_path": "G:/OneDrive_Marienschule/Marienschule Krefeld/Programmprojekte - Dokumente/react/bipsy/ebl/src/Manager",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "advanced.settings",
-    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\WebStorm 2019.3.1\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;js.last.introduce.type&quot;: &quot;CONST&quot;,
+    &quot;last_opened_file_path&quot;: &quot;G:/OneDrive_Marienschule/Marienschule Krefeld/Programmprojekte - Dokumente/react/bipsy/ebl/src/Manager&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;advanced.settings&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Program Files\\JetBrains\\WebStorm 2019.3.1\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="G:\OneDrive_Marienschule\Marienschule Krefeld\Programmprojekte - Dokumente\react\bipsy\ebl\src\Manager" />
@@ -539,7 +543,15 @@
       <workItem from="1702492747769" duration="900000" />
       <workItem from="1703255722520" duration="3579000" />
       <workItem from="1703323649085" duration="4182000" />
-      <workItem from="1703341312590" duration="1133000" />
+      <workItem from="1703341312590" duration="1543000" />
+      <workItem from="1703524042886" duration="651000" />
+      <workItem from="1703953634931" duration="834000" />
+      <workItem from="1704554661094" duration="15000" />
+      <workItem from="1704555925626" duration="1610000" />
+      <workItem from="1705159169223" duration="3470000" />
+      <workItem from="1706124070665" duration="5655000" />
+      <workItem from="1706205766274" duration="1616000" />
+      <workItem from="1706284063175" duration="6424000" />
     </task>
     <task id="LOCAL-00054" summary="Meldung, wenn Experiment voll ist.">
       <created>1617556769280</created>
@@ -884,7 +896,7 @@
       <option name="project" value="LOCAL" />
       <updated>1684858817897</updated>
     </task>
-    <option name="localTasksCounter" value="109" />
+    <option name="localTasksCounter" value="110" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -918,7 +930,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="group type as text included in data[0]" />
     <MESSAGE value="Beispiele: MC-Fragen kommen verzögert&#10;MC-Fragen: kleine bugs korrigiert" />
     <MESSAGE value="7 statt 1 cognitive load item&#10;Mc-Fragen nacheinander anzeigen&#10;Nachlaufzeit, wenn noch nicht alle Fragen beantwortet sind&#10;Versuch Bildschirmbreite" />
     <MESSAGE value="flow- und cognitive load items werden in fester Reihenfolge angezeigt" />
@@ -943,7 +954,8 @@
     <MESSAGE value="Server angepasst" />
     <MESSAGE value="Anweisungen angepasst" />
     <MESSAGE value="Instruktion Experiment/Kontroll angepasst" />
-    <option name="LAST_COMMIT_MESSAGE" value="Instruktion Experiment/Kontroll angepasst" />
+    <MESSAGE value="Version 4 und 5 eingeführt - noch nicht getestet" />
+    <option name="LAST_COMMIT_MESSAGE" value="Version 4 und 5 eingeführt - noch nicht getestet" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
 </project>

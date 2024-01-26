@@ -80,10 +80,10 @@ const processMeasureFrames = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map(nr =>
 );
 
 export function exampleFrames(groupManager) {
+  console.log("***");
   const {groups: exampleGroups, ...exampleConfig} = config.examples;
   const {items: exampleItems} = exampleGroups[groupManager.getGroupId()];
   const rem = new EBL01_ExampleManager();
-  // console.log(exampleItems);
   return exampleItems.map((itemGroup, index) => {
       return itemGroup.map(s =>
         [{id: 'Examples_'+s,
@@ -101,6 +101,9 @@ export function exampleFrames(groupManager) {
         .concat(index<exampleItems.length-1 ? [<InstructionFrame102/>] : []);
     }
   )
+}
+export function exampleFrames2(groupManager) {
+  return  <FixationCrossFrame />//nur zu Testzwecken
 }
 
 export function exampleFramesTest(group) {

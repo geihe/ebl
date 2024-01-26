@@ -19,7 +19,6 @@ FocusStyleManager.onlyShowFocusOnTabs();
 //const server = new Server();
 let t;
 const returnUrlHelper = new ReturnUrlHelper();
-
 function finished(data) {
   const {tag, age = 0, male = 0, session} = data[0];
   const {version, userId, groupId, returnId, parameter} = getDataFromTag(tag)
@@ -96,7 +95,7 @@ async function getElementInfo() {
     group_id: params.get('group_id'),
     version: params.get('ver'),
   }
-
+  console.log(URLparams);
   returnUrlHelper.setFromURLParams(URLparams);
   if (!URLparams.tag) { //neues Experiment, erste Session
     const server = new Server(URLparams.version);
@@ -108,9 +107,8 @@ async function getElementInfo() {
 
     const groupManager = new GroupManager(+URLparams.group_id);
     groupManager.setServercount(serverData.group_count);
-
     initialData.userAgent = navigator.userAgent;
-    initialData.tag = getTag(serverData.user_id, 0, returnUrlHelper, initialData.session);
+    initialData.tag = getTag(initialData.version, serverData.user_id, 0, returnUrlHelper, initialData.session);
 
     config.timeBetweenSessionsInSeconds = config.timeBetweenSessionsInSeconds / initialData.timeFactor;
     config.pauseSeconds = config.pauseSeconds / initialData.timeFactor;

@@ -207,7 +207,7 @@ export const config = {
   */
   examples: {
     groups: groups_with_explanation,
-    textAreaMinLength: 10,
+    textAreaMinLength: 0,
   },
 
   postTest: {

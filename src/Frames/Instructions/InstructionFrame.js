@@ -237,7 +237,7 @@ export function InstructionFrame100_control_12(props) {
   <p>Auf jeder Seite des Lernprogramms werden dir vier Beispielaufgaben präsentiert. Du sollst diese Aufgaben aufmerksam lesen und versuchen, die Lösung nachzuvollziehen. </p>
   <p>Es erscheint ein Textfeld, in dem du deine Gedanken aufschreiben kannst.</p>
   <p>Du durchläufst vier Durchgänge mit jeweils vier Beispielaufgaben, sodass dir <strong>insgesamt 16 Aufgaben präsentiert werden.</strong>.</p>
-  <p>Für die Bearbeitung von je vier Beispielaufgaben hast du mindestens zehn Minuten Zeit. Du solltest alle Texte sorgfältig lesen, alle Lösungen genau nachvollziehen. Nach Ablauf der zehn Minuten kannst du mit der Befragung deines Flow-Erlebens und deiner kognitiven Beanspruchung weitermachen. Du kannst dann nicht mehr zurückgehen. Ein Timer wird eingeblendet.</p>
+  <p>Für die Bearbeitung von je vier Beispielaufgaben hast du mindestens acht Minuten Zeit. Du solltest alle Texte sorgfältig lesen, alle Lösungen genau nachvollziehen. Nach Ablauf der zehn Minuten kannst du mit der Befragung deines Flow-Erlebens und deiner kognitiven Beanspruchung weitermachen. Du kannst dann nicht mehr zurückgehen. Ein Timer wird eingeblendet.</p>
   `;
 
   return <InstructionFrame html={html} space finish={props.finish}/>;
@@ -249,7 +249,7 @@ export function InstructionFrame100_experiment_34(props) {
   <p>Auf jeder Seite des Lernprogramms werden dir vier Beispielaufgaben präsentiert. Du sollst diese Aufgaben aufmerksam lesen und versuchen, die Lösung nachzuvollziehen. </p>
   <p>Es erscheinen vier Textfelder mit Fragen zu den Beispielen. </p>
   <p>Du durchläufst vier Durchgänge mit jeweils vier Beispielaufgaben, sodass dir <strong>insgesamt 16 Aufgaben präsentiert werden.</strong>.</p>
-  <p>Für die Bearbeitung von je vier Beispielaufgaben hast du mindestens zehn Minuten Zeit. Du solltest alle Texte sorgfältig lesen, alle Lösungen genau nachvollziehen. Nach Ablauf der zehn Minuten kannst du mit der Befragung deines Flow-Erlebens und deiner kognitiven Beanspruchung weitermachen. Du kannst dann nicht mehr zurückgehen. Ein Timer wird eingeblendet.</p>
+  <p>Für die Bearbeitung von je vier Beispielaufgaben hast du mindestens acht Minuten Zeit. Du solltest alle Texte sorgfältig lesen, alle Lösungen genau nachvollziehen. Nach Ablauf der zehn Minuten kannst du mit der Befragung deines Flow-Erlebens und deiner kognitiven Beanspruchung weitermachen. Du kannst dann nicht mehr zurückgehen. Ein Timer wird eingeblendet.</p>
   `;
 
   return <InstructionFrame html={html} space finish={props.finish}/>;
@@ -350,6 +350,18 @@ export function InstructionFrame21alt(props) {
 }
 
 export function InstructionFrame204(props) {
+  const html = `
+  <h1>Feedback</h1>
+<p>Leider können wir dir kein Feedback geben, ob deine Antworten richtig waren. Das hat zwei Gründe: </p>
+<ol>
+<li>In dieser Studie konnten die meisten Fragen als freier Text beantwortet werden. Eine automatische Auswertung ist deswegen nicht möglich.</li>
+<li>Die Anzeige der richtigen Ergebnisse unmittelbar nach der Beantwortung würde die Ergebnisse verfälschen. Die Daten der Studie wären dann nicht mehr mit älteren ähnlichen Studien vergleichbar.</li>
+</ol>
+ `;
+
+  return <InstructionFrame html={html} space finish={props.finish}/>;
+}
+export function InstructionFrame204a(props) {
   const html = `
   <h1>Abschließende Fragen</h1>
 <p>Diese Fragen sind zur Beurteilung der wissenschaftlichen Datenqualität unserer Studie von besonderer Bedeutung. Für die Berücksichtigung deiner anonymen Daten ist es beispielsweise wichtig, dass du dich hinreichend konzentrieren und dass du die Instruktionen lesen und die präsentierten Aufgaben verstehen konntest. </p>
@@ -528,6 +540,16 @@ export function ShowStudyCode(props) {
 <p></p>
 <p>Solltest du keine Bescheinigung benötigen, dann ist das Experiment abgeschlossen und du kannst das Browserfenster nun schließen. </p>
 <p>Sonst drücke die Leertaste.</p>
+  `;
+
+  return <InstructionFrame html={html} space finish={props.finish}/>;
+}
+
+export function EndLab(props) {
+  const html = `
+<h1>Du hast das Ende der Studie erreicht.</h1>
+  <p>Vielen Dank für deine Teilnahme.</p>
+  <p>Bitte wende dich an den/die Versuchsleiter/in.</p>
   `;
 
   return <InstructionFrame html={html} space finish={props.finish}/>;

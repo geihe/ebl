@@ -1,6 +1,6 @@
 import React from 'react';
 import {TimelineManager} from "../helper/TimelineManager";
-import {ShowStudyCode} from "../Frames/Instructions/InstructionFrame";
+import {EndLab, ShowStudyCode} from "../Frames/Instructions/InstructionFrame";
 import {EBL04Session1, EBL04Session2} from "./EBL04Sessions";
 import {TestSession1} from "./EBLTestSessions";
 import {EBL05Session1, EBL05Session2} from "./EBL05Sessions";
@@ -10,7 +10,7 @@ export class EBL_Builder {
     this.t = t;
     this.tlManager = new TimelineManager();
     this.session = 1;
-    this.version=0;
+    this.version = 0;
     this.groupManager = null; //group von 1 bis 4 , 0 -> test
     this.showStudyCode = false;
   }
@@ -19,10 +19,12 @@ export class EBL_Builder {
     this.showStudyCode = code;
     return this;
   }
+
   setSession(session) {
     this.session = session;
     return this;
   }
+
   setVersion(version) {
     this.version = version;
     return this;
@@ -50,22 +52,27 @@ export class EBL_Builder {
   }
 
   buildSession1() {
-    if (this.version==4) this.tlManager.add(EBL04Session1);
-    if (this.version==5) this.tlManager.add(EBL05Session1);
+    if (this.version == 4) this.tlManager.add(EBL04Session1(this.groupManager));
+    if (this.version == 5) this.tlManager.add(EBL05Session1(this.groupManager));
 
   }
 
   buildSession2() {
-    if (this.version==4) this.tlManager.add(EBL04Session2);
-    if (this.version==5) this.tlManager.add(EBL05Session2);
-    if (this.showStudyCode) {
-      this.tlManager.add(<ShowStudyCode random/>);
+    if (this.version == 4) this.tlManager.add(EBL04Session2);
+    if (this.version == 5) this.tlManager.add(EBL05Session2);
+
+    if (this.version == 4) {
+      this.tlManager.add(<EndLab/>);
+    } else {
+      if (this.showStudyCode) {
+        this.tlManager.add(<ShowStudyCode random/>);
+      }
+
     }
   }
 
   buildTestSession() {
     this.tlManager.add(TestSession1)
-    this.tlManager.add(<ShowStudyCode random/>);
   }
 
   getTimeline(session = 1) {
