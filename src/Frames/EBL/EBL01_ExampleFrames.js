@@ -80,7 +80,6 @@ const processMeasureFrames = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map(nr =>
 );
 
 export function exampleFrames(groupManager) {
-  console.log("***");
   const {groups: exampleGroups, ...exampleConfig} = config.examples;
   const {items: exampleItems} = exampleGroups[groupManager.getGroupId()];
   const rem = new EBL01_ExampleManager();

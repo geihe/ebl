@@ -6,6 +6,7 @@ export class GroupManager {
     this.groupId = initialId;
     this.serverCount = null;
     this.targetCount = config.targetCount;
+    this.steps=config.steps;
   }
 
   setServercount(serverCount) {
@@ -25,7 +26,7 @@ export class GroupManager {
   }
 
   determineGroup(male, age) {
-    this.groupId = groupId({male, age}, this.serverCount);
+    this.groupId = groupId({male, age}, this.serverCount, this.targetCount, this.steps);
     console.log(this.groupId);
   }
 

@@ -7,18 +7,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0600d61b-15d0-445a-8a11-80930511d4a9" name="Changes" comment="Version 4 und 5 eingeführt - noch nicht getestet">
+    <list default="true" id="0600d61b-15d0-445a-8a11-80930511d4a9" name="Changes" comment="Version 4 und 5 getestet">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Frames/EBL/EBL01_ExampleFrames.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frames/EBL/EBL01_ExampleFrames.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Frames/Instructions/InstructionFrame.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frames/Instructions/InstructionFrame.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Manager/EBL01Builder.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Manager/EBL01Builder.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Manager/EBL04Sessions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Manager/EBL04Sessions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Manager/EBL05Sessions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Manager/EBL05Sessions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Manager/EBLTestSessions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Manager/EBLTestSessions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Manager/EBL_Builder.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Manager/EBL_Builder.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Manager/Session.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Manager/Session.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/helper/GroupManager.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/helper/GroupManager.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/helper/groupIdHelper.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/helper/groupIdHelper.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -552,6 +547,11 @@
       <workItem from="1706124070665" duration="5655000" />
       <workItem from="1706205766274" duration="1616000" />
       <workItem from="1706284063175" duration="6424000" />
+      <workItem from="1706308675635" duration="117000" />
+      <workItem from="1706432390741" duration="2301000" />
+      <workItem from="1706893969493" duration="676000" />
+      <workItem from="1707035964825" duration="18000" />
+      <workItem from="1707046741062" duration="8210000" />
     </task>
     <task id="LOCAL-00054" summary="Meldung, wenn Experiment voll ist.">
       <created>1617556769280</created>
@@ -896,7 +896,7 @@
       <option name="project" value="LOCAL" />
       <updated>1684858817897</updated>
     </task>
-    <option name="localTasksCounter" value="110" />
+    <option name="localTasksCounter" value="111" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -930,7 +930,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="Beispiele: MC-Fragen kommen verzögert&#10;MC-Fragen: kleine bugs korrigiert" />
     <MESSAGE value="7 statt 1 cognitive load item&#10;Mc-Fragen nacheinander anzeigen&#10;Nachlaufzeit, wenn noch nicht alle Fragen beantwortet sind&#10;Versuch Bildschirmbreite" />
     <MESSAGE value="flow- und cognitive load items werden in fester Reihenfolge angezeigt" />
     <MESSAGE value="Warnmeldung in ScreenCheck beseitigt" />
@@ -955,7 +954,8 @@
     <MESSAGE value="Anweisungen angepasst" />
     <MESSAGE value="Instruktion Experiment/Kontroll angepasst" />
     <MESSAGE value="Version 4 und 5 eingeführt - noch nicht getestet" />
-    <option name="LAST_COMMIT_MESSAGE" value="Version 4 und 5 eingeführt - noch nicht getestet" />
+    <MESSAGE value="Version 4 und 5 getestet" />
+    <option name="LAST_COMMIT_MESSAGE" value="Version 4 und 5 getestet" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
 </project>

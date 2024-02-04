@@ -129,7 +129,8 @@ const groups_with_explanation = [
 export const config = {
   develop: true,
   milestones: false,
-  targetCount: [3, 3, 3, 3],
+  targetCount: [60, 60, 60, 60],
+  steps: 20,
 
   language: 'de',
   numberOfSessions: 1,

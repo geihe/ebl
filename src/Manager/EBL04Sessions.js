@@ -3,7 +3,6 @@ import {addToTag, getDataFromTag} from "../helper/tagHelper";
 import {exampleFrames} from "../Frames/EBL/EBL01_ExampleFrames";
 import {EBL01_Demographics} from "../Frames/Instructions/EBL01_Demographics"
 import {
-  EndLab,
   InstructionFrame01,
   InstructionFrame03,
   InstructionFrame04,
@@ -51,9 +50,6 @@ const cancelTest = {
 };
 export function EBL04Session1(groupManager) {
   return [
-    <InstructionFrame204/>, <EndLab/>,
-
-
     {frame: <InstructionFrame01/>, id: 'firstFrame'},
     <EBL01Video videoID={'introduction'}/>,
     {
