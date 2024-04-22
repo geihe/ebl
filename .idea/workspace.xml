@@ -9,11 +9,15 @@
   <component name="ChangeListManager">
     <list default="true" id="0600d61b-15d0-445a-8a11-80930511d4a9" name="Changes" comment="Version 4 und 5 getestet">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Frames/EBL/EBL01_ExampleFrames.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frames/EBL/EBL01_ExampleFrames.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Manager/EBL04Sessions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Manager/EBL04Sessions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Frames/Instructions/EBL01_Demographics.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frames/Instructions/EBL01_Demographics.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Frames/Instructions/InstructionFrame.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frames/Instructions/InstructionFrame.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/EBL01/examples/explanationsV1.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/EBL01/examples/explanationsV1.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/EBL01/examples/kekse.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/EBL01/examples/kekse.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/EBL01/posFreeForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/EBL01/posFreeForm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/EBL01/postMC.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/EBL01/postMC.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/EBL01/postNT.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/EBL01/postNT.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/EBL01/verification.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/EBL01/verification.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/helper/GroupManager.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/helper/GroupManager.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/helper/groupIdHelper.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/helper/groupIdHelper.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -552,6 +556,13 @@
       <workItem from="1706893969493" duration="676000" />
       <workItem from="1707035964825" duration="18000" />
       <workItem from="1707046741062" duration="8210000" />
+      <workItem from="1707982573841" duration="977000" />
+      <workItem from="1709460429410" duration="845000" />
+      <workItem from="1709474270358" duration="40000" />
+      <workItem from="1709474319900" duration="857000" />
+      <workItem from="1712689153099" duration="103000" />
+      <workItem from="1713646824418" duration="1702000" />
+      <workItem from="1713801806930" duration="2549000" />
     </task>
     <task id="LOCAL-00054" summary="Meldung, wenn Experiment voll ist.">
       <created>1617556769280</created>

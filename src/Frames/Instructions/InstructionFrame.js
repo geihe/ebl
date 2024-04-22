@@ -66,7 +66,7 @@ export function InstructionFrame04(props) {
 export function InstructionFrame06(props) {
   const html = `
 <h1>Ablauf des Lernprogramms</h1>
-<p><i><b>Vortest:</b></i> in <strong>12 Aufgaben</strong> wird herausgefunden, wie gut du Rechenaufgaben lösen und Wahrscheinlichkeiten bereits bestimmen kannst. </p>
+<p><i><b>Vortest:</b></i> In <strong>12 Aufgaben</strong> wird herausgefunden, wie gut du Rechenaufgaben lösen und Wahrscheinlichkeiten bereits bestimmen kannst. </p>
 <p><i><b>Lernphase:</b></i>
 <ul>
 <li>Du erhältst eine <strong>allgemeine Erklärung über Urnenmodelle und Stochastik</strong>. </li>
@@ -236,7 +236,7 @@ export function InstructionFrame100_control_12(props) {
   <h1>Aufbau des Lernprogramms I</h1>
   <p>Auf jeder Seite des Lernprogramms werden dir vier Beispielaufgaben präsentiert. Du sollst diese Aufgaben aufmerksam lesen und versuchen, die Lösung nachzuvollziehen. </p>
   <p>Es erscheint ein Textfeld, in dem du deine Gedanken aufschreiben kannst.</p>
-  <p>Du durchläufst vier Durchgänge mit jeweils vier Beispielaufgaben, sodass dir <strong>insgesamt 16 Aufgaben präsentiert werden.</strong>.</p>
+  <p>Du durchläufst vier Durchgänge mit jeweils vier Beispielaufgaben, sodass dir <strong>insgesamt 16 Aufgaben präsentiert werden.</strong></p>
   <p>Für die Bearbeitung von je vier Beispielaufgaben hast du mindestens acht Minuten Zeit. Du solltest alle Texte sorgfältig lesen, alle Lösungen genau nachvollziehen. Nach Ablauf der zehn Minuten kannst du mit der Befragung deines Flow-Erlebens und deiner kognitiven Beanspruchung weitermachen. Du kannst dann nicht mehr zurückgehen. Ein Timer wird eingeblendet.</p>
   `;
 

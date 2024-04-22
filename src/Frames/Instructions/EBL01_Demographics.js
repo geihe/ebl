@@ -59,15 +59,15 @@ export function EBL01_Demographics(props) {
           label={'Alter'}
           options={[
             {label: 'Bitte Alter auswählen', value: 0},
-            {label: '18-24', value: 18},
-            {label: '25-29', value: 25},
-            {label: '30-34', value: 30},
-            {label: '35-39', value: 35},
-            {label: '40-44', value: 40},
-            {label: '45-49', value: 45},
-            {label: '50-54', value: 50},
-            {label: '55-59', value: 55},
-            {label: 'über 60', value: 60},
+            {label: '18-24', value: 20},
+            {label: '25-29', value: 27},
+            {label: '30-34', value: 32},
+            {label: '35-39', value: 37},
+            {label: '40-44', value: 42},
+            {label: '45-49', value: 47},
+            {label: '50-54', value: 52},
+            {label: '55-59', value: 57},
+            {label: 'über 60', value: 65},
           ]}
         />
 

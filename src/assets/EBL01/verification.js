@@ -167,7 +167,7 @@ export const verification = [
   {
     context: 4,
     header: {
-      de: `Du und eine Freundin kaufen zwei Dosen, die jeweils 4 unterschiedliche Weihnachtskekse enthalten: ein Zimtstern, eine Nussecke, ein Amarettoplätzchen, ein Vanillekipferl. Ihr beide greift ohne hinzuschauen in die Dosen hinein und nehmt den zufällig ausgewählten Keks heraus. Du greifst immer zuerst in die Dose.`,
+      de: `Du und eine Freundin kaufen zwei Dosen, die jeweils 4 unterschiedliche Weihnachtskekse enthalten: einen Zimtstern, eine Nussecke, ein Amarettoplätzchen, ein Vanillekipferl. Ihr beide greift ohne hinzuschauen in die Dosen hinein und nehmt den zufällig ausgewählten Keks heraus. Du greifst immer zuerst in die Dose.`,
     },
     questions: [
       {

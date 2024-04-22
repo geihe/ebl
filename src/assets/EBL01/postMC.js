@@ -27,7 +27,7 @@ export const postMC = [
   },
   {
     id: 'postMC_7',
-    header:`Du und eine Freundin kaufen zwei Dosen, die jeweils 6 unterschiedliche Weihnachtskekse enthalten: ein Zimtstern, eine Nussecke, ein Amarettoplätzchen, ein Vanillekipferl, ein Lebkuchenherz und ein Spekulatius. Ihr beide greift ohne hinzuschauen in die Dosen hinein und nehmt den zufällig ausgewählten Keks heraus. Du greifst immer zuerst in die Dose.`,
+    header:`Du und eine Freundin kaufen zwei Dosen, die jeweils 6 unterschiedliche Weihnachtskekse enthalten: einen Zimtstern, eine Nussecke, ein Amarettoplätzchen, ein Vanillekipferl, ein Lebkuchenherz und ein Spekulatius. Ihr beide greift ohne hinzuschauen in die Dosen hinein und nehmt den zufällig ausgewählten Keks heraus. Du greifst immer zuerst in die Dose.`,
     question:`Wie groß ist die Wahrscheinlichkeit, dass du aus der ersten Dose das Lebkuchenherz und aus der zweiten Dose die Nussecke greifst?`,
     validate: evalValidator(1/36),
     responseType: 'input',
@@ -35,7 +35,7 @@ export const postMC = [
   },
   {
     id: 'postMC_1_draw3',
-    header: `Du und dein Freunde Alice und Ben nehmen an einem <strong>dreitägigen</strong> Mountainbike-Kurs teil. An allen drei Tagen bringt der Kursleiter jeweils 5 Fahrradhelme mit, die alle unterschiedliche Farben haben (orange, silber, braun, rot und gelb). Die Helme werden zufällig verteilt und am Ende des Tages an den Kursleiter zurückgegeben. An allen Tagen erhältst du zuerst, deine Freundin Alice als Zweite und dein Freund Ben als Dritter einen Helm.`,
+    header: `Du und deine Freunde Alice und Ben nehmen an einem <strong>dreitägigen</strong> Mountainbike-Kurs teil. An allen drei Tagen bringt der Kursleiter jeweils 5 Fahrradhelme mit, die alle unterschiedliche Farben haben (orange, silber, braun, rot und gelb). Die Helme werden zufällig verteilt und am Ende des Tages an den Kursleiter zurückgegeben. An allen Tagen erhältst du zuerst, deine Freundin Alice als Zweite und dein Freund Ben als Dritter einen Helm.`,
     question: `Wie hoch ist die Wahrscheinlichkeit, dass <strong>du am ersten Kurstag den roten Helm bekommst, Alice den gelben und Ben den braunen?</strong>`,
     validate: evalValidator(1/60),
     responseType: 'input',
@@ -59,7 +59,7 @@ export const postMC = [
   },
   {
     id: 'postMC_7_draw3',
-    header:`Du und eine Freundin kaufen drei Dosen, die jeweils 5 unterschiedliche Weihnachtskekse enthalten: ein Zimtstern, eine Nussecke, ein Amarettoplätzchen, ein Lebkuchenherz und ein Spekulatius. Ihr beide greift ohne hinzuschauen in die Dosen hinein und nehmt den zufällig ausgewählten Keks heraus. Du greifst immer zuerst in die Dose.`,
+    header:`Du und eine Freundin kaufen drei Dosen, die jeweils 5 unterschiedliche Weihnachtskekse enthalten: einen Zimtstern, eine Nussecke, ein Amarettoplätzchen, ein Lebkuchenherz und ein Spekulatius. Ihr beide greift ohne hinzuschauen in die Dosen hinein und nehmt den zufällig ausgewählten Keks heraus. Du greifst immer zuerst in die Dose.`,
     question:`Wie groß ist die Wahrscheinlichkeit, dass du <strong>aus allen drei Dosen</strong> das Amarettoplätzchen greifst?`,
     validate: evalValidator(1/125),
     responseType: 'input',

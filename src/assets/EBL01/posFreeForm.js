@@ -21,7 +21,9 @@ export const posFreeForm = [
       <p>Wenn nach dem ersten Durchgang der Gewinner ausscheidet und im zweiten Durchgang nicht mehr teilnimmt, ändert sich die Wahrscheinlichkeit auf <MathComponent tex={String.raw`{1 \over 5} \cdot {1 \over 4}`} display={false}/>.</p>,
     ],
     question: [
-      <><p>In der ersten Rechnung wird <MathComponent tex={String.raw`{1 \over 5}`} display={false}/> mit <MathComponent tex={String.raw`{1 \over 5}`} display={false}/> multipliziert;  in der zweiten Rechnung wird <MathComponent tex={String.raw`{1 \over 5}`} display={false}/> mit <MathComponent tex={String.raw`{1 \over 4}`} display={false}/> multipliziert.</p> <p>Erkläre, warum dies so ist, und gehe bei deiner Antwort kurz auf die jeweiligen Überlegungen ein, die den beiden unterschiedlichen Lösungswegen zu Grunde liegen. </p></>,
+      <><p>In der ersten Rechnung wird <MathComponent tex={String.raw`{1 \over 5}`} display={false}/> mit <MathComponent tex={String.raw`{1 \over 5}`} display={false}/> multipliziert;  in der zweiten Rechnung wird <MathComponent tex={String.raw`{1 \over 5}`} display={false}/> mit <MathComponent tex={String.raw`{1 \over 4}`} display={false}/> multipliziert.</p> <p>
+        <strong>Erkläre, warum dies so ist, und gehe bei deiner Antwort kurz auf die jeweiligen Überlegungen ein, die den
+          beiden unterschiedlichen Lösungswegen zu Grunde liegen.</strong> </p></>,
     ],
     responseType: 'textArea',
     effort: 3,

@@ -11,7 +11,7 @@ export const selfExplanations = [
     id: 0,
     exampleNrs: [0],
     html: {
-      de: `Bitte lies die Aufgaben und Lösungen genau durch.<br/>Wenn du möchtest, kannst im Textfeld Notizen machen.`,
+      de: `Bitte lies die Aufgaben und Lösungen genau durch.<br/>Wenn du möchtest, kannst du im Textfeld Notizen machen.`,
       en: `Describe the solution of the worked example. <br/>What do you notice?`
     }
   },

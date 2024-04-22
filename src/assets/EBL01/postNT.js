@@ -27,7 +27,7 @@ export const postNT = [
   },
   {
     id: 'postNT2step_4',
-    header:`Du und eine Freundin kaufen zwei Dosen, die jeweils 3 unterschiedliche Weihnachtskekse enthalten: ein Zimtstern, eine Nussecke und ein Vanillekipferl. Ihr beide greift ohne hinzuschauen in die Dosen hinein und nehmt den zufällig ausgewählten Keks heraus. Du greifst immer zuerst in die Dose.`,
+    header:`Du und eine Freundin kaufen zwei Dosen, die jeweils 3 unterschiedliche Weihnachtskekse enthalten: einen Zimtstern, eine Nussecke und ein Vanillekipferl. Ihr beide greift ohne hinzuschauen in die Dosen hinein und nehmt den zufällig ausgewählten Keks heraus. Du greifst immer zuerst in die Dose.`,
     question:`Wie groß ist die Wahrscheinlichkeit, dass du beim Ziehen zunächst aus der einen Dose dann aus der anderen Dose sowohl einen Zimtstern als auch ein Vanillekipferl bekommst?`,
     validate: evalValidator(2/9),
     responseType: 'input',
