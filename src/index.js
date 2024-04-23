@@ -22,7 +22,7 @@ const returnUrlHelper = new ReturnUrlHelper();
 function finished(data) {
   const {tag, age = 0, male = 0, session} = data[0];
   const {version, userId, groupId, returnId, parameter} = getDataFromTag(tag)
-  const qualtrics = 'https://bielefeldpsych.eu.qualtrics.com/jfe/form/SV_djc7TF2eOFaMhyC?tag=' + tag;
+  const qualtrics = 'https://bielefeldpsych.eu.qualtrics.com/jfe/form/SV_9vuvZ1pjdlCzYZU?tag=' + tag;
   const server = new Server(version);
   server.postData(userId, groupId, age, male, session, tag, data)
     .then(() => {

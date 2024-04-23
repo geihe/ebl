@@ -50,6 +50,7 @@ const cancelTest = {
 };
 export function EBL04Session1(groupManager) {
   return [
+
     {frame: <InstructionFrame01/>, id: 'firstFrame'},
     <EBL01Video videoID={'introduction'}/>,
     {
