@@ -61,7 +61,7 @@ export class EBL_Builder {
     if (this.version == 4) this.tlManager.add(EBL04Session2);
     if (this.version == 5) this.tlManager.add(EBL05Session2);
 
-    if (this.version == 4) {
+    if (this.version == 5) {
       this.tlManager.add(<EndLab/>);
     } else {
       if (this.showStudyCode) {

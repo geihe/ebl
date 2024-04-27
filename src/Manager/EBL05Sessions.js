@@ -31,7 +31,8 @@ import {
   InstructionFrame210,
   InstructionFrame211a,
   InstructionFrame211b,
-  InstructionFrame212
+  InstructionFrame212,
+  InstructionFrameImLabor
 } from "../Frames/Instructions/InstructionFrame";
 import {CancelFrame} from "../Frames/CancelFrame";
 import {FixationCrossFrame} from "../Frames/FixationCrossFrame";
@@ -47,9 +48,9 @@ const cancelTest = {
   if: (lastlog) => lastlog === 'break',
   then: <CancelFrame/>,
 };
-
 export function EBL05Session1(groupManager) {
   return [
+
     {frame: <InstructionFrame01/>, id: 'firstFrame'},
     <EBL01Video videoID={'introduction'}/>,
     {
@@ -109,8 +110,8 @@ export function EBL05Session1(groupManager) {
     //TODO Übergabe an Qualtrics
   ];
 }
-
 export const EBL05Session2 = [
+  <InstructionFrameImLabor/>, cancelTest,
   <InstructionFrame200/>,
   <InstructionFrame201/>, postFrames[0], {milestone: true},
   <InstructionFrame202/>, postFrames[1], {milestone: true},

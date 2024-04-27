@@ -7,12 +7,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0600d61b-15d0-445a-8a11-80930511d4a9" name="Changes" comment="returnURLHelper">
+    <list default="true" id="0600d61b-15d0-445a-8a11-80930511d4a9" name="Changes" comment="returnURLHelper: Sona Würzburg und Hagen eingetragen">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Manager/EBL04Sessions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Manager/EBL04Sessions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/helper/returnURLHelper.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/helper/returnURLHelper.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -558,6 +554,7 @@
       <workItem from="1712689153099" duration="103000" />
       <workItem from="1713646824418" duration="1702000" />
       <workItem from="1713801806930" duration="8982000" />
+      <workItem from="1713897729446" duration="753000" />
     </task>
     <task id="LOCAL-00054" summary="Meldung, wenn Experiment voll ist.">
       <created>1617556769280</created>
@@ -902,7 +899,7 @@
       <option name="project" value="LOCAL" />
       <updated>1684858817897</updated>
     </task>
-    <option name="localTasksCounter" value="112" />
+    <option name="localTasksCounter" value="113" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -936,7 +933,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="flow- und cognitive load items werden in fester Reihenfolge angezeigt" />
     <MESSAGE value="Warnmeldung in ScreenCheck beseitigt" />
     <MESSAGE value="Anzeige eines zufälligen Codes am Ende" />
     <MESSAGE value="Hintergrund grau und kleine Änderungen." />
@@ -961,7 +957,8 @@
     <MESSAGE value="Version 4 und 5 eingeführt - noch nicht getestet" />
     <MESSAGE value="Version 4 und 5 getestet" />
     <MESSAGE value="Tippfehler Pilotierung EBL04 und 05 korrigiert." />
-    <option name="LAST_COMMIT_MESSAGE" value="Tippfehler Pilotierung EBL04 und 05 korrigiert." />
+    <MESSAGE value="returnURLHelper: Sona Würzburg und Hagen eingetragen" />
+    <option name="LAST_COMMIT_MESSAGE" value="returnURLHelper: Sona Würzburg und Hagen eingetragen" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
 </project>
