@@ -94,6 +94,7 @@ async function getElementInfo() {
     test: params.get('test'),
     group_id: params.get('group_id'),
     version: params.get('ver'),
+    from: params.get('from'),
   }
   console.log(URLparams);
   returnUrlHelper.setFromURLParams(URLparams);

@@ -21,7 +21,6 @@ export class ReturnUrlHelper {
     // 4 - Sona Würzburg
     // 5 - Sona Hagen
 
-
     if (UrlParams.tic) {
       this.returnUrl = returnUrlUnipark;
       this.returnId = 1;
@@ -46,6 +45,8 @@ export class ReturnUrlHelper {
       this.returnId = 3;
       this.parameter = '';
     }
+    console.log(this);
+
   }
 
   setFromID(id = 0, parameter = '') {
