@@ -17,6 +17,7 @@ function Frame(props) {
     el.frame,
     {
       finish: props.finish,
+      data: props.data,
       key: el.key
     }
   );
@@ -65,7 +66,6 @@ function Frame(props) {
 
 export function Session(props) {
   const {timeline, initialData} = props;
-  console.log(initialData);
   const [index, setIndex] = useState(0);
   const data = useRef(initialData);
   if (index >= timeline.length || data.current[0].finished) {
@@ -131,6 +131,7 @@ export function Session(props) {
     el={el}
     finish={(logData) => next(tempIndex + 1, logData)}
     tempIndex={tempIndex}
+    data={data}
     key={el.timer ? null : tempIndex}
   />;
 
@@ -151,7 +152,6 @@ export function Session(props) {
         });
     }
     setIndex(newIndex);
-    console.log(data.current);
   }
 
   function finish() {//Ende der Timeline

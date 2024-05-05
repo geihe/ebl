@@ -7,8 +7,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0600d61b-15d0-445a-8a11-80930511d4a9" name="Changes" comment="EBL04 und 04 getauscht (Jetzt ist EBL05 die Laborversion)">
+    <list default="true" id="0600d61b-15d0-445a-8a11-80930511d4a9" name="Changes" comment="EBL04 bugfix&#10;Abfrage from in URLParams">
+      <change afterPath="$PROJECT_DIR$/src/Frames/EBL/EBLFeedbackFrames.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Test/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Test/testFeedbackManager.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/helper/FeedbackManager.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Frames/Instructions/InstructionFrame.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frames/Instructions/InstructionFrame.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Manager/EBL04Sessions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Manager/EBL04Sessions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Manager/EBL05Sessions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Manager/EBL05Sessions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Manager/Session.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Manager/Session.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Test/testData.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Test/testData.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/EBL01/examples/explanationsV1.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/EBL01/examples/explanationsV1.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/config.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/helper/returnURLHelper.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/helper/returnURLHelper.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
     </list>
@@ -89,7 +100,7 @@
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;js.last.introduce.type&quot;: &quot;CONST&quot;,
-    &quot;last_opened_file_path&quot;: &quot;G:/OneDrive_Marienschule/Marienschule Krefeld/Programmprojekte - Dokumente/react/bipsy/ebl/src/Manager&quot;,
+    &quot;last_opened_file_path&quot;: &quot;G:/OneDrive_Marienschule/Marienschule Krefeld/Programmprojekte - Dokumente/react/bipsy/ebl/src/helper/FeedbackManager&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -102,18 +113,18 @@
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="G:\OneDrive_Marienschule\Marienschule Krefeld\Programmprojekte - Dokumente\react\bipsy\ebl\src\Test" />
+      <recent name="G:\OneDrive_Marienschule\Marienschule Krefeld\Programmprojekte - Dokumente\react\bipsy\ebl\src\Frames\EBL" />
       <recent name="G:\OneDrive_Marienschule\Marienschule Krefeld\Programmprojekte - Dokumente\react\bipsy\ebl\src\Manager" />
       <recent name="G:\OneDrive_Marienschule\Marienschule Krefeld\Programmprojekte - Dokumente\react\bipsy\ebl\src\assets\EBL01" />
       <recent name="G:\OneDrive_Marienschule\Marienschule Krefeld\Programmprojekte - Dokumente\react\bipsy\ebl\src\Frames" />
-      <recent name="G:\OneDrive_Marienschule\Marienschule Krefeld\Programmprojekte - Dokumente\react\bipsy\ebl\src\assets\EBL01\examples" />
-      <recent name="G:\OneDrive_Marienschule\Marienschule Krefeld\Programmprojekte - Dokumente\react\bipsy\ebl\src\Frames\EBL" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="G:\OneDrive_Marienschule\Marienschule Krefeld\Programmprojekte - Dokumente\react\bipsy\ebl\src\helper" />
+      <recent name="G:\OneDrive_Marienschule\Marienschule Krefeld\Programmprojekte - Dokumente\react\bipsy\ebl\src\helper\FeedbackManager" />
       <recent name="G:\OneDrive_Marienschule\Marienschule Krefeld\Programmprojekte - Dokumente\react\bipsy\ebl\src\assets" />
       <recent name="G:\OneDrive_Marienschule\Marienschule Krefeld\Programmprojekte - Dokumente\react\bipsy\ebl\src\Frames" />
       <recent name="G:\OneDrive_Marienschule\Marienschule Krefeld\Programmprojekte - Dokumente\react\bipsy\ebl\src" />
-      <recent name="G:\OneDrive_Marienschule\Marienschule Krefeld\Programmprojekte - Dokumente\react\bipsy\ebl\src\Manager" />
-      <recent name="G:\OneDrive_Marienschule\Marienschule Krefeld\Programmprojekte - Dokumente\react\bipsy\ebl\src\Frames\Instructions" />
     </key>
   </component>
   <component name="RestClientSettings">
@@ -170,7 +181,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Node.js.testGroups.js">
+  <component name="RunManager" selected="HTTP Request.rest-api#1">
     <configuration name="rest-api#1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$APPLICATION_CONFIG_DIR$/scratches/rest-api.http" runType="Run single request">
       <method v="2" />
     </configuration>
@@ -179,8 +190,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Node.js.testGroups.js" />
         <item itemvalue="HTTP Request.rest-api#1" />
+        <item itemvalue="Node.js.testGroups.js" />
         <item itemvalue="HTTP Request.rest-api#1" />
         <item itemvalue="HTTP Request.rest-api#1" />
         <item itemvalue="HTTP Request.rest-api#1" />
@@ -559,7 +570,13 @@
       <workItem from="1713897729446" duration="753000" />
       <workItem from="1714210133541" duration="2302000" />
       <workItem from="1714549160807" duration="1478000" />
-      <workItem from="1714670011859" duration="1063000" />
+      <workItem from="1714670011859" duration="2038000" />
+      <workItem from="1714755878470" duration="4299000" />
+      <workItem from="1714805804220" duration="7163000" />
+      <workItem from="1714822791569" duration="3187000" />
+      <workItem from="1714832721266" duration="10941000" />
+      <workItem from="1714892053657" duration="7649000" />
+      <workItem from="1714917128685" duration="2296000" />
     </task>
     <task id="LOCAL-00054" summary="Meldung, wenn Experiment voll ist.">
       <created>1617556769280</created>
@@ -904,7 +921,7 @@
       <option name="project" value="LOCAL" />
       <updated>1684858817897</updated>
     </task>
-    <option name="localTasksCounter" value="114" />
+    <option name="localTasksCounter" value="115" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -942,7 +959,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="Anzeige eines zufälligen Codes am Ende" />
     <MESSAGE value="Hintergrund grau und kleine Änderungen." />
     <MESSAGE value="Bugfix: validator postConcet" />
     <MESSAGE value="kleinere Textfehler korrigiert&#10;ein paar milestones ergänzt" />
@@ -967,7 +983,8 @@
     <MESSAGE value="Tippfehler Pilotierung EBL04 und 05 korrigiert." />
     <MESSAGE value="returnURLHelper: Sona Würzburg und Hagen eingetragen" />
     <MESSAGE value="EBL04 und 04 getauscht (Jetzt ist EBL05 die Laborversion)" />
-    <option name="LAST_COMMIT_MESSAGE" value="EBL04 und 04 getauscht (Jetzt ist EBL05 die Laborversion)" />
+    <MESSAGE value="EBL04 bugfix&#10;Abfrage from in URLParams" />
+    <option name="LAST_COMMIT_MESSAGE" value="EBL04 bugfix&#10;Abfrage from in URLParams" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
 </project>

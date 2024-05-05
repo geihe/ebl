@@ -96,7 +96,6 @@ async function getElementInfo() {
     version: params.get('ver'),
     from: params.get('from'),
   }
-  console.log(URLparams);
   returnUrlHelper.setFromURLParams(URLparams);
   if (!URLparams.tag) { //neues Experiment, erste Session
     const server = new Server(URLparams.version);

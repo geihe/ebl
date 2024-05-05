@@ -136,7 +136,7 @@ export const config = {
   numberOfSessions: 1,
   timeBetweenSessionsInSeconds: 5 * 60, //wird nicht benutzt, 1 Woche RI
   pauseSeconds: 600, //600
-  timeForExamples: 8*60, //8 Minuten für 4 Beispiele
+  timeForExamples: 6*60, //8 Minuten für 4 Beispiele
   likertFrameDelay: 500, //500
   vph: 2,
 
@@ -164,10 +164,10 @@ export const config = {
       'pre1step_2',
       'pre1step_3',
       'pre1step_4',
-      'preMulti_4',
       'preMulti_1',
       'preMulti_2',
       'preMulti_3',
+      'preMulti_4',
       'postMC_1',
       'postMC_3',
       'postMC_6',

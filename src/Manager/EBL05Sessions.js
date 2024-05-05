@@ -22,7 +22,6 @@ import {
   InstructionFrame201,
   InstructionFrame202,
   InstructionFrame203,
-  InstructionFrame204,
   InstructionFrame204a,
   InstructionFrame206,
   InstructionFrame207,
@@ -117,7 +116,6 @@ export const EBL05Session2 = [
   <InstructionFrame202/>, postFrames[1], {milestone: true},
   <InstructionFrame203/>, postFrames[2], {milestone: true},
 
-  <InstructionFrame204/>,
   <InstructionFrame204a/>,
   {frame: <InstructionFrame206/>, id: 'Störung'}, <FixationCrossFrame nocross/>,
   {frame: <InstructionFrame207/>, id: 'Konzentration'}, <FixationCrossFrame nocross/>,

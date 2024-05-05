@@ -9,7 +9,7 @@ principle 4: order irrelevant, without replacement
 export const selfExplanations = [
   {
     id: 0,
-    exampleNrs: [0],
+    exampleNrs: [],
     html: {
       de: `Bitte lies die Aufgaben und Lösungen genau durch.<br/>Wenn du möchtest, kannst du im Textfeld Notizen machen.`,
       en: `Describe the solution of the worked example. <br/>What do you notice?`

@@ -9,6 +9,7 @@ import {DelayedRadioFrame} from "../DelayedRadioFrame";
 import {Form} from "../../Forms/Form";
 import {MyTextArea} from "../../Forms/MyTextArea";
 import * as Yup from "yup";
+import {FeedbackManager} from "../../helper/FeedbackManager";
 
 
 export function InstructionFrame(props) {
@@ -349,7 +350,7 @@ export function InstructionFrame21alt(props) {
   return <EBL01Video videoID={'outro'} finish={props.finish}/>
 }
 
-export function InstructionFrame204(props) {
+export function InstructionFrame204keinFeedback(props) {
   const html = `
   <h1>Feedback</h1>
 <p>Leider können wir dir kein Feedback geben, ob deine Antworten richtig waren. Das hat zwei Gründe: </p>
@@ -358,6 +359,7 @@ export function InstructionFrame204(props) {
 <li>Die Anzeige der richtigen Ergebnisse unmittelbar nach der Beantwortung würde die Ergebnisse verfälschen. Die Daten der Studie wären dann nicht mehr mit älteren ähnlichen Studien vergleichbar.</li>
 </ol>
  `;
+
 
   return <InstructionFrame html={html} space finish={props.finish}/>;
 }
@@ -550,6 +552,100 @@ export function EndLab(props) {
 <h1>Du hast das Ende der Studie erreicht.</h1>
   <p>Vielen Dank für deine Teilnahme.</p>
   <p>Bitte wende dich an den/die Versuchsleiter/in.</p>
+  `;
+
+  return <InstructionFrame html={html} space finish={props.finish}/>;
+}
+
+export function Feedback01Announce(props) {
+  const html = `
+<h1>Du hast nun fast das Ende der Studie erreicht.</h1>
+  <p>Wir möchten geben dir nun - soweit möglich - ein kurzes Feedback zu deinen Antworten geben.</p>
+  <p></p>
+  `;
+
+  return <InstructionFrame html={html} space finish={props.finish}/>;
+}
+export function Feedback02Gebunden(props) {
+  const fbm=new FeedbackManager(props.data);
+  const counts=fbm.countAlleGebunden();
+  const html = `
+<h1>Multiple Choice - Auswahl</h1>
+  <p>Bei einigen Aufgaben im zweiten Teil solltest du die richtige Antwort anklicken.</p>
+   <p>Diese können automatisch ausgewertet werden:</p>
+  <p></p>
+     <ul>
+   <li><strong>Aufgaben insgesamt: ${counts.total}</strong></li>
+   <li><strong>richtige Lösungen: ${counts.trueCount} (${counts.truePercent}%)</strong></li>
+   <li><strong>falsche Lösungen: ${counts.falseCount} (${counts.falsePercent}%)</strong></li>
+   </ul>
+  `;
+
+  return <InstructionFrame html={html} space finish={props.finish}/>;
+}
+
+export function Feedback03Halbautomatisch(props) {
+  const html = `
+    <h1>Halbautomatische Auswertungen</h1>
+    <p>Bei den meisten Aufgaben solltest du ein Ergebnis eingeben. <strong>Beachte, dass bei der Auswertung möglicherweise korrekte Antworten als falsch wertet</strong>, z.B., wenn zusätzlich zur Lösung noch textliche Erläuterungen gegeben wurden. <strong>Dein Ergebnis kann darum besser sein, als auf den folgenden Seiten angegeben. </strong></p>
+    <p>Bei der Auswertung der Studie werden die Ergebnisse noch einmal überprüft.</p>
+  `;
+  return <InstructionFrame html={html} space finish={props.finish}/>;
+}
+
+export function Feedback04Pre(props) {
+  const fbm=new FeedbackManager(props.data);
+  const counts=fbm.countPre();
+  const html = `
+<h1>Vortest</h1>
+  <p>Zu Anfang der ersten Sitzung solltest du als Vortest einige Fragen beantworten. Hier das Ergebnis der automatischen Auswertung:</p>
+  <p></p>
+     <ul>
+   <li><strong>Aufgaben insgesamt: ${counts.total}</strong></li>
+   <li><strong>richtige Lösungen: ${counts.trueCount} (${counts.truePercent}%)</strong></li>
+   <li><strong>falsche Lösungen: ${counts.falseCount} (${counts.falsePercent}%)</strong></li>
+   </ul>
+  `;
+
+  return <InstructionFrame html={html} space finish={props.finish}/>;
+}
+export function Feedback05Post(props) {
+  const fbm=new FeedbackManager(props.data);
+  const counts=fbm.countPost();
+  const html = `
+<h1>Zweite Sitzung</h1>
+  <p>Hier das Ergebnis der automatischen Auswertung zur zweiten Sitzung:</p>
+  <p></p>
+     <ul>
+   <li><strong>Aufgaben insgesamt: ${counts.total}</strong></li>
+   <li><strong>richtige Lösungen: ${counts.trueCount} (${counts.truePercent}%)</strong></li>
+   <li><strong>falsche Lösungen: ${counts.falseCount} (${counts.falsePercent}%)</strong></li>
+   </ul>
+  `;
+
+  return <InstructionFrame html={html} space finish={props.finish}/>;
+}
+export function Feedback06PrePost(props) {
+  const fbm=new FeedbackManager(props.data);
+  const counts1=fbm.countPrePost1();
+  const counts2=fbm.countPrePost2();
+  const html = `
+<h1>Vergleich</h1>
+  <p>Vier Aufgaben wurden dir zweimal gestellt - jeweils zu Beginn der ersten und zweiten Sitzung. Beim zweiten Mal ist ein besseres Ergebnis zu erwarten. Hier ist der Vergleich der automatischen Auswertung:</p>
+  <p></p>
+     <ul>
+   <li><strong>richtige Lösungen zu Beginn: ${counts1.trueCount} (${counts1.truePercent}%)</strong></li>
+   <li><strong>richtige Lösungen beim zweiten Mal: ${counts2.falseCount} (${counts2.falsePercent}%)</strong></li>
+   </ul>
+  `;
+
+  return <InstructionFrame html={html} space finish={props.finish}/>;
+}
+export function Feedback07Offen(props) {
+  const html = `
+<h1>Offene Antworten</h1>
+  <p>Bei einige Aufgaben solltest du im Text etwas erläutern.</p>
+  <p> Diese Aufgaben können nicht automatisch ausgewertet werden.</p>
   `;
 
   return <InstructionFrame html={html} space finish={props.finish}/>;

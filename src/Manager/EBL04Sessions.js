@@ -1,8 +1,13 @@
 import React from 'react';
-import {addToTag, getDataFromTag} from "../helper/tagHelper";
+import {addToTag} from "../helper/tagHelper";
 import {exampleFrames} from "../Frames/EBL/EBL01_ExampleFrames";
 import {EBL01_Demographics} from "../Frames/Instructions/EBL01_Demographics"
 import {
+  Feedback01Announce,
+  Feedback02Gebunden,
+  Feedback03Halbautomatisch,
+  Feedback05Post,
+  Feedback07Offen,
   InstructionFrame01,
   InstructionFrame03,
   InstructionFrame04,
@@ -22,7 +27,6 @@ import {
   InstructionFrame201,
   InstructionFrame202,
   InstructionFrame203,
-  InstructionFrame204,
   InstructionFrame204a,
   InstructionFrame206,
   InstructionFrame207,
@@ -77,9 +81,6 @@ export function EBL04Session1(groupManager) {
         data[0].male = male ? 1 : 0;
         data[0].age = age;
         data[0].groupId = groupId;
-        console.log(groupManager.getGroupName());
-        console.log(data);
-        console.log(getDataFromTag(data[0].tag));
         return groupId;
       }
     },
@@ -116,7 +117,6 @@ export const EBL04Session2 = [
   <InstructionFrame202/>, postFrames[1], {milestone: true},
   <InstructionFrame203/>, postFrames[2], {milestone: true},
 
-  <InstructionFrame204/>,
   <InstructionFrame204a/>,
   {frame: <InstructionFrame206/>, id: 'Störung'}, <FixationCrossFrame nocross/>,
   {frame: <InstructionFrame207/>, id: 'Konzentration'}, <FixationCrossFrame nocross/>,
@@ -129,5 +129,10 @@ export const EBL04Session2 = [
     then: {frame: <InstructionFrame211b/>, id: 'Schwierigkeiten'},
   },
   <FixationCrossFrame nocross/>,
+  <Feedback01Announce />,
+  <Feedback02Gebunden/>,
+  <Feedback03Halbautomatisch/>,
+  <Feedback05Post/>,
+  <Feedback07Offen/>,
   {frame: <InstructionFrame212/>, id: 'Feedback'},
 ];

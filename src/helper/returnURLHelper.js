@@ -45,7 +45,6 @@ export class ReturnUrlHelper {
       this.returnId = 3;
       this.parameter = '';
     }
-    console.log(this);
 
   }
 
