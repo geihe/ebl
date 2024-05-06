@@ -7,21 +7,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0600d61b-15d0-445a-8a11-80930511d4a9" name="Changes" comment="EBL04 bugfix&#10;Abfrage from in URLParams">
-      <change afterPath="$PROJECT_DIR$/src/Frames/EBL/EBLFeedbackFrames.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Test/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Test/testFeedbackManager.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/helper/FeedbackManager.js" afterDir="false" />
+    <list default="true" id="0600d61b-15d0-445a-8a11-80930511d4a9" name="Changes" comment="Feedback hinzugefügt">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Frames/Instructions/InstructionFrame.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frames/Instructions/InstructionFrame.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Manager/EBL04Sessions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Manager/EBL04Sessions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Manager/EBL05Sessions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Manager/EBL05Sessions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Manager/Session.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Manager/Session.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Test/testData.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Test/testData.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/EBL01/examples/explanationsV1.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/EBL01/examples/explanationsV1.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/helper/returnURLHelper.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/helper/returnURLHelper.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -576,7 +563,8 @@
       <workItem from="1714822791569" duration="3187000" />
       <workItem from="1714832721266" duration="10941000" />
       <workItem from="1714892053657" duration="7649000" />
-      <workItem from="1714917128685" duration="2296000" />
+      <workItem from="1714917128685" duration="2919000" />
+      <workItem from="1715023317505" duration="467000" />
     </task>
     <task id="LOCAL-00054" summary="Meldung, wenn Experiment voll ist.">
       <created>1617556769280</created>
@@ -921,7 +909,7 @@
       <option name="project" value="LOCAL" />
       <updated>1684858817897</updated>
     </task>
-    <option name="localTasksCounter" value="115" />
+    <option name="localTasksCounter" value="116" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -959,7 +947,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="Hintergrund grau und kleine Änderungen." />
     <MESSAGE value="Bugfix: validator postConcet" />
     <MESSAGE value="kleinere Textfehler korrigiert&#10;ein paar milestones ergänzt" />
     <MESSAGE value="kleinere Änderungen nach erneutem Feedback" />
@@ -984,7 +971,8 @@
     <MESSAGE value="returnURLHelper: Sona Würzburg und Hagen eingetragen" />
     <MESSAGE value="EBL04 und 04 getauscht (Jetzt ist EBL05 die Laborversion)" />
     <MESSAGE value="EBL04 bugfix&#10;Abfrage from in URLParams" />
-    <option name="LAST_COMMIT_MESSAGE" value="EBL04 bugfix&#10;Abfrage from in URLParams" />
+    <MESSAGE value="Feedback hinzugefügt" />
+    <option name="LAST_COMMIT_MESSAGE" value="Feedback hinzugefügt" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
 </project>

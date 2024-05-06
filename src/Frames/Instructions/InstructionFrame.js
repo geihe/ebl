@@ -202,7 +202,8 @@ export function InstructionFrame09_IIalt(props) {
 
 export function InstructionFrame16a(props) {
   const html = `
-<p>Noch ein Hinweis: Diese Studie schließt an frühere Studien an. Wir wollen die Ergebnisse vergleichen, darum haben wir möglichst wenig am Ablauf geändert. Deshalb geben wir u.a. kein Feedback zu den Antworten (richtig oder falsch) und haben eine feste Zeit für die Beispiele vorgesehen.</p>
+<p>Noch ein Hinweis: Diese Studie schließt an frühere Studien an. Wir wollen die Ergebnisse vergleichen, darum haben wir möglichst wenig am Ablauf geändert. Deshalb haben eine feste Zeit für die Beispiele vorgesehen.</p>
+<p>Am Ende der 2. Sitzung können wir dir aber eine kurze Rückmeldung zur Richtigkeit deiner Anzworten geben.</p>
 <strong>Bitte drücke auf die Leertaste, dann geht es mit dem Vortest los.</strong>
   `;
   return <InstructionFrame html={html} space finish={props.finish}/>;
@@ -238,7 +239,7 @@ export function InstructionFrame100_control_12(props) {
   <p>Auf jeder Seite des Lernprogramms werden dir vier Beispielaufgaben präsentiert. Du sollst diese Aufgaben aufmerksam lesen und versuchen, die Lösung nachzuvollziehen. </p>
   <p>Es erscheint ein Textfeld, in dem du deine Gedanken aufschreiben kannst.</p>
   <p>Du durchläufst vier Durchgänge mit jeweils vier Beispielaufgaben, sodass dir <strong>insgesamt 16 Aufgaben präsentiert werden.</strong></p>
-  <p>Für die Bearbeitung von je vier Beispielaufgaben hast du mindestens acht Minuten Zeit. Du solltest alle Texte sorgfältig lesen, alle Lösungen genau nachvollziehen. Nach Ablauf der zehn Minuten kannst du mit der Befragung deines Flow-Erlebens und deiner kognitiven Beanspruchung weitermachen. Du kannst dann nicht mehr zurückgehen. Ein Timer wird eingeblendet.</p>
+  <p>Für die Bearbeitung von je vier Beispielaufgaben hast du mindestens sechs Minuten Zeit. Du solltest alle Texte sorgfältig lesen, alle Lösungen genau nachvollziehen. Nach Ablauf der sechs Minuten kannst du mit der Befragung deines Flow-Erlebens und deiner kognitiven Beanspruchung weitermachen. Du kannst dann nicht mehr zurückgehen. Ein Timer wird eingeblendet.</p>
   `;
 
   return <InstructionFrame html={html} space finish={props.finish}/>;
@@ -250,7 +251,7 @@ export function InstructionFrame100_experiment_34(props) {
   <p>Auf jeder Seite des Lernprogramms werden dir vier Beispielaufgaben präsentiert. Du sollst diese Aufgaben aufmerksam lesen und versuchen, die Lösung nachzuvollziehen. </p>
   <p>Es erscheinen vier Textfelder mit Fragen zu den Beispielen. </p>
   <p>Du durchläufst vier Durchgänge mit jeweils vier Beispielaufgaben, sodass dir <strong>insgesamt 16 Aufgaben präsentiert werden.</strong>.</p>
-  <p>Für die Bearbeitung von je vier Beispielaufgaben hast du mindestens acht Minuten Zeit. Du solltest alle Texte sorgfältig lesen, alle Lösungen genau nachvollziehen. Nach Ablauf der zehn Minuten kannst du mit der Befragung deines Flow-Erlebens und deiner kognitiven Beanspruchung weitermachen. Du kannst dann nicht mehr zurückgehen. Ein Timer wird eingeblendet.</p>
+  <p>Für die Bearbeitung von je vier Beispielaufgaben hast du mindestens sechs Minuten Zeit. Du solltest alle Texte sorgfältig lesen, alle Lösungen genau nachvollziehen. Nach Ablauf der sechs Minuten kannst du mit der Befragung deines Flow-Erlebens und deiner kognitiven Beanspruchung weitermachen. Du kannst dann nicht mehr zurückgehen. Ein Timer wird eingeblendet.</p>
   `;
 
   return <InstructionFrame html={html} space finish={props.finish}/>;
@@ -560,7 +561,7 @@ export function EndLab(props) {
 export function Feedback01Announce(props) {
   const html = `
 <h1>Du hast nun fast das Ende der Studie erreicht.</h1>
-  <p>Wir möchten geben dir nun - soweit möglich - ein kurzes Feedback zu deinen Antworten geben.</p>
+  <p>Wir möchten dir nun - soweit möglich - ein kurzes Feedback zu deinen Antworten geben.</p>
   <p></p>
   `;
 
@@ -587,7 +588,7 @@ export function Feedback02Gebunden(props) {
 export function Feedback03Halbautomatisch(props) {
   const html = `
     <h1>Halbautomatische Auswertungen</h1>
-    <p>Bei den meisten Aufgaben solltest du ein Ergebnis eingeben. <strong>Beachte, dass bei der Auswertung möglicherweise korrekte Antworten als falsch wertet</strong>, z.B., wenn zusätzlich zur Lösung noch textliche Erläuterungen gegeben wurden. <strong>Dein Ergebnis kann darum besser sein, als auf den folgenden Seiten angegeben. </strong></p>
+    <p>Bei den meisten Aufgaben solltest du ein Ergebnis eingeben. <strong>Beachte, dass bei der Auswertung möglicherweise korrekte Antworten als falsch gewertet</strong>, z.B., wenn zusätzlich zur Lösung noch textliche Erläuterungen gegeben wurden. <strong>Dein Ergebnis kann darum besser sein, als auf den folgenden Seiten angegeben. </strong></p>
     <p>Bei der Auswertung der Studie werden die Ergebnisse noch einmal überprüft.</p>
   `;
   return <InstructionFrame html={html} space finish={props.finish}/>;
