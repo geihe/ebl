@@ -7,9 +7,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0600d61b-15d0-445a-8a11-80930511d4a9" name="Changes" comment="Kleine Fehler in den Instruktionen korrigiert.">
+    <list default="true" id="0600d61b-15d0-445a-8a11-80930511d4a9" name="Changes" comment="Kleine Änderung in den Prompt-Texten">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/EBL01/examples/explanationsV1.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/EBL01/examples/explanationsV1.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Frames/EBL/EBL01_ExampleFrames.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frames/EBL/EBL01_ExampleFrames.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Frames/Instructions/InstructionFrame.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frames/Instructions/InstructionFrame.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Manager/EBL04Sessions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Manager/EBL04Sessions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Manager/Session.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Manager/Session.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/helper/TimelineManager.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/helper/TimelineManager.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -566,7 +570,14 @@
       <workItem from="1714892053657" duration="7649000" />
       <workItem from="1714917128685" duration="2919000" />
       <workItem from="1715023317505" duration="1451000" />
-      <workItem from="1715190673000" duration="907000" />
+      <workItem from="1715190673000" duration="2013000" />
+      <workItem from="1715530204288" duration="2028000" />
+      <workItem from="1715694738783" duration="69000" />
+      <workItem from="1715700464539" duration="2975000" />
+      <workItem from="1715959042352" duration="6327000" />
+      <workItem from="1715965926648" duration="1762000" />
+      <workItem from="1715971028865" duration="241000" />
+      <workItem from="1716015971332" duration="1546000" />
     </task>
     <task id="LOCAL-00054" summary="Meldung, wenn Experiment voll ist.">
       <created>1617556769280</created>
@@ -911,7 +922,7 @@
       <option name="project" value="LOCAL" />
       <updated>1684858817897</updated>
     </task>
-    <option name="localTasksCounter" value="117" />
+    <option name="localTasksCounter" value="118" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -949,7 +960,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="kleinere Textfehler korrigiert&#10;ein paar milestones ergänzt" />
     <MESSAGE value="kleinere Änderungen nach erneutem Feedback" />
     <MESSAGE value="kleinere Änderungen nach erneutem Feedback&#10;trim() in advancedInput&#10;&gt; 3 min   --&gt;   3 min&#10;MC-Klickbereich vergrößert" />
     <MESSAGE value="Änderung Einverständniserklärung" />
@@ -974,7 +984,8 @@
     <MESSAGE value="EBL04 bugfix&#10;Abfrage from in URLParams" />
     <MESSAGE value="Feedback hinzugefügt" />
     <MESSAGE value="Kleine Fehler in den Instruktionen korrigiert." />
-    <option name="LAST_COMMIT_MESSAGE" value="Kleine Fehler in den Instruktionen korrigiert." />
+    <MESSAGE value="Kleine Änderung in den Prompt-Texten" />
+    <option name="LAST_COMMIT_MESSAGE" value="Kleine Änderung in den Prompt-Texten" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
 </project>

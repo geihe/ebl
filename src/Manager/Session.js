@@ -13,8 +13,9 @@ function Frame(props) {
   const hasTimer = typeof el.timer !== 'undefined';
   const isTicking = useRef(hasTimer && remainingTime > 0);
   const expired = hasTimer && remainingTime <= 0;
+  const frame = el.lazy ? el.frame(props.data.current) : el.frame;
   const content = React.cloneElement(
-    el.frame,
+    frame,
     {
       finish: props.finish,
       data: props.data,

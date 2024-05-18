@@ -79,27 +79,28 @@ const processMeasureFrames = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map(nr =>
   ]
 );
 
-export function exampleFrames(groupManager) {
+export function exampleFrames(groupId) {
   const {groups: exampleGroups, ...exampleConfig} = config.examples;
-  const {items: exampleItems} = exampleGroups[groupManager.getGroupId()];
+  const {items: exampleItems} = exampleGroups[groupId];
   const rem = new EBL01_ExampleManager();
   return exampleItems.map((itemGroup, index) => {
       return itemGroup.map(s =>
-        [{id: 'Examples_'+s,
+        [{
+          id: 'Examples_' + s,
           frame: <EblWaitFrame
-          config={exampleConfig}
-          content={rem.string2html(s)}
-          seconds={config.timeForExamples / itemGroup.length}
-          explanationTime={config.timeForExamples} // zeige Erklärungsbox direkt
-          //hurry={config.timeForExamples / itemGroup.length /5}
-        />
-    },
+            config={exampleConfig}
+            content={rem.string2html(s)}
+            seconds={config.timeForExamples / itemGroup.length}
+            explanationTime={config.timeForExamples} // zeige Erklärungsbox direkt
+            //hurry={config.timeForExamples / itemGroup.length /5}
+          />
+        },
           <FixationCrossFrame nocross/>]
       )
         .concat([paasItem, cognitiveLoadFrames, processMeasureFrames])
-        .concat(index<exampleItems.length-1 ? [<InstructionFrame102/>] : []);
+        .concat(index < exampleItems.length - 1 ? [<InstructionFrame102/>] : []);
     }
-  )
+  );
 }
 export function exampleFrames2(groupManager) {
   return  <FixationCrossFrame />//nur zu Testzwecken

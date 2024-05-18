@@ -96,16 +96,37 @@ export function InstructionFrame07(props) {
 }
 
 export function InstructionFrame09(props) {
-  const html = `<h3>Freiwilligkeit</h3> <p>Die Teilnahme an der Studie ist freiwillig. Du kannst jederzeit und ohne Angabe von Gründen die Teilnahme an dieser Studie beenden, ohne dass dir daraus Nachteile entstehen. Auch wenn du die Studie vorzeitig abbrichst, hast du Anspruch auf entsprechende Versuchspersonenstunden für den bis dahin erbrachten Zeitaufwand.</p> <h3>Datennutzung</h3> <p>Die Erhebung der Forschungsdaten erfolgt aus Sicht der Forschenden anonym. Durch die Größe der Stichprobe sowie die Abfragekategorien/Auswahlmöglichkeiten/Kohortenbildung der oben genannten Daten, lassen sich die Daten zu keinem Zeitpunkt einer konkreten Person zuordnen. Die im Rahmen dieser Studie erhobenen Daten werden vertraulich behandelt. Deine Vp-ID wird getrennt von den Forschungsdaten aufbewahrt. Bitte beachte die Datenschutzhinweise der für die Verwaltung der Vp-Stunden genutzten Software. Die Verwaltung der Vp-ID und der Vp-Stunden erfolgt durch die Prüfungsverwaltung in der Fakultät Psychologie und Sportwissenschaften. Die erhobenen Forschungsdaten in aggregierter Form werden z.B. in wissenschaftlichen Zeitschriften, Vorträgen oder Lehrveranstaltungen veröffentlicht. Nach Abschluss der Studie werden die Daten ggf. in einem gesicherten Datenarchiv, wie z.B. dem „Open Science Framework“ öffentlich zugänglich gemacht. Zweck, Art und Umfang der potentiellen Nachnutzung im Rahmen von Open-Data stehen noch nicht fest, aber die Daten werden nur anonymisiert im Rahmen von Open-Science veröffentlicht. Die Löschung der Daten aus einem anonymisierten Datensatz ist nicht möglich. Mit diesem Vorgehen folgt das Forschungsprojekt den Empfehlungen der Deutschen Forschungsgemeinschaft zur Qualitätssicherung der Forschung.<p>
+  const html = `
+<h1>Einverständniserklärung</h1>
+<p>Allgemeine Forschungsrichtlinien sehen vor, dass sich die Teilnehmer/innen an empirischen Studien mit ihrer Unterschrift explizit und nachvollziehbar einverstanden erklären, um damit zu dokumentieren, dass du freiwillig an unserer Forschung teilnimmst.</p>
+
+<p>Aus diesem Grund möchten wir dich bitten, zu bestätigen, dass dud ich mit der Teilnahme an dieser Studie einverstanden erklären, bevor du an unserer Studie teilnehmen. Zu deiner Information sind nachfolgend einige Hinweise zu unserem Forschungsvorhaben aufgeführt.</p>
+
+<h3>Forschungsgegenstand</h3> <p>Unsere Forschungsgruppe interessiert sich für die menschliche Informationsverarbeitung. Die vorliegende Studie beschäftigt sich mit einem wichtigen Teilaspekt dieses Themengebiets.</p>
+
+<h3>Ablauf der Untersuchung</h3> In der vorliegenden Untersuchung wirst du eine oder mehrere der folgenden Tätigkeiten durchführen:
+
+<p>Fragen beantworten, Urteile abgeben, Informationen aus dem Gedächtnis abrufen und / oder lernen, Denkaufgaben bearbeiten und / oder bestimmte Aufgabenstellungen am Computer ausführen. Es ist für unsere Forschung wichtig, dass du die einzelnen Aufgaben und Tätigkeiten in der vorgegebenen Reihenfolge bearbeitest.</p>
+
+<h3>Vertraulichkeit und Datennutzung</h3> <p>Personenbezogene Daten (Alter, Geschlecht, etc.) werden nur so weit wie nötig aufgezeichnet. Deine Daten sind selbstverständlich vertraulich und werden nur in anonymisierter Form genutzt. Die von uns erhobenen demographischen Angaben lassen keinen eindeutigen Schluss auf Ihre Person zu. Zu keinem Zeitpunkt im Rahmen der jeweiligen Untersuchung werden wir dich bitten, deinen Namen oder andere eindeutige Informationen zu nennen.</p>
+
+<p>Die Ergebnisse und Daten dieser Studie werden ggf. als wissenschaftliche Publikation veröffentlicht. Dies geschieht in vollständig anonymisierter Form, d.h. ohne dass die Daten einer spezifischen Person zugeordnet werden können. Nach Abschluss der Studie werden die Daten ggf. in einem gesicherten Datenarchiv, wie z.B. dem „Open Science Framework“ öffentlich zugänglich gemacht. Zweck, Art und Umfang der potentiellen Nachnutzung im Rahmen von Open-Data stehen noch nicht fest, aber die Daten werden nur anonymisiert im Rahmen von Open-Science veröffentlicht. Die Löschung der Daten aus einem anonymisierten Datensatz ist nicht möglich. Mit diesem Vorgehen folgt das Forschungsprojekt den Empfehlungen der Deutschen Forschungsgemeinschaft (DFG) und der Deutschen Gesellschaft für Psychologie (DGPs) zur Qualitätssicherung der Forschung.</p>
+
+<h3>Mit der Teilnahme verbundene Erfahrungen</h3> <p>Durch die Teilnahme an dieser Studie entsteht kein Risiko, das über die Risiken des alltäglichen Lebens hinausgeht. Der genaue Zweck dieser Untersuchung kann Ihnen erst am Ende der Studie ausführlich und vollständig dargestellt werden, da die Gültigkeit der Ergebnisse ansonsten beeinflusst werden könnte. Durch die Bestätigung in der Online-Studie, dass du diese Einverständniserklärung gelesen hast, erklärst du dich damit einverstanden, erst am Ende der Untersuchung vollständig über den genaueren inhaltlichen Zweck der Studie informiert zu werden.</p>
+
+<h3>Freiwilligkeit</h3> <p>Die Teilnahme an der Studie ist freiwillig. Du kannst jederzeit und ohne Angabe von Gründen die Teilnahme an dieser Studie beenden, ohne dass dir daraus Nachteile entstehen. Auch wenn du die Studie vorzeitig abbrichst, hast du Anspruch auf entsprechende Versuchspersonenstunden für den bis dahin erbrachten Zeitaufwand.</p> 
+
 <h3>Verantwortliche Stelle für diese Studie</h3>
-<p>Das Forschungsprojekt „Lernerfolg und Metakognition beim Lernen von Studienmaterialien“ wird durchgeführt von der Fakultät für Psychologie und Sportwissenschaft, Abteilung für Psychologie, Arbeitseinheit 13 – Bildungspsychologie, unter der Projektleitung von Dr. Veit Kubik. Kooperationspartner*innen in diesem Projekt sind Prof. Dr. Alexander Renkl von der Albert-Ludwigs-Universität Freiburg, Prof. Dr. Robert Gaschler von der Fernuniversität Hagen und Prof. Dr. Reinhard Beyer von der Humboldt Universität zu Berlin. Die Studie wird eigenverantwortlich im Rahmen der Habilitation von Dr. Veit Kubik durchgeführt. </p><h3>Kontaktdaten</h3><p>Bei Fragen zur Teilnahme, Freiwilligkeit und Datennutzung melde dich gerne bei dem Projektverantwortlichen:  Dr. Veit Kubik</p>
+<p>Das Forschungsprojekt „Lernerfolg und Metakognition beim Lernen von Studienmaterialien“ wird durchgeführt von der Universität Würzburg, Lehrstuhl Psychologie IV, von Dr. Veit Kubik. Kooperationspartner in diesem Projekt sind Prof. Dr. Alexander Renkl von der Albert-Ludwigs-Universität Freiburg und Prof. Dr. Robert Gaschler von der Fernuniversität Hagen. Die Studie wird eigenverantwortlich im Rahmen der Habilitation von Dr. Veit Kubik durchgeführt.</p>
+
+<h3>Offene Fragen</h3><p>Bei offenen Fragen oder Fragen zur Teilnahme, Freiwilligkeit und Datennutzung melde dich gerne bei dem Projektverantwortlichen:  Dr. Veit Kubik</p>
 <p>
-E-Mail: <a href= "mailto:veit.kubik@uni-bielefeld.de">veit.kubik@uni-bielefeld.de</a><br/>
-Tel.: 0521-106-3100<br/>
-Web.: <a href="https://ekvv.uni-bielefeld.de/pers_publ/publ/PersonDetail.jsp?personId=205989697">https://www.uni-bielefeld.de/psychologie/abteilung/arbeitseinheiten/13/personen//kubik.xml</a>
+E-Mail: <a href= "mailto:veit.kubik@uni-wuerzburg.de">veit.kubik@uni-wuerzburg.de</a><br/>
+Tel.: +49 931 31-81532<br/>
+Web.: <a href="https://www.psychologie.uni-wuerzburg.de/paepsy/mitarbeiterinnen/dr-veit-kubik/">https://www.psychologie.uni-wuerzburg.de/paepsy/mitarbeiterinnen/dr-veit-kubik/</a>
 </p>
 <h3>Einwilligung</h3>
-<p>Ich habe die Teilnahmeinformation zum Forschungsprojekt „Lernerfolg und Metakognition beim Lernen  von Studienmaterialien“ zur Kenntnis genommen. Ich bin ausreichend informiert worden und hatte die Möglichkeit vor Weiterführung der Studie per Mail oder telefonisch Fragen zu stellen. Mir ist bewusst, dass meine Teilnahme an der Studie freiwillig ist und bei einer Verweigerung meiner Einwilligung für mich keinerlei Nachteile entstehen. Eine Kopie der Informationsschrift und dieser Einwilligungserklärung habe ich heruntergeladen und somit erhalten.</p><p>Wenn du mit unserem Vorhaben einverstanden bist, so klicke bitte auf <i>Einverstanden</i>. Falls nicht, so klicke bitte auf <i>Nicht einverstanden</i>.</p><p>Wir danken dir für deine Mitwirkung und dein Vertrauen.</p>`;
+<p>Ich habe die Teilnahmeinformation zum Forschungsprojekt „Lernerfolg und Metakognition beim Lernen  von Studienmaterialien“ zur Kenntnis genommen. Ich bin ausreichend informiert worden. Mir ist bewusst, dass meine Teilnahme an der Studie freiwillig ist und bei einer Verweigerung meiner Einwilligung für mich keinerlei Nachteile entstehen. Eine Kopie der Informationsschrift und dieser Einwilligungserklärung habe ich heruntergeladen und somit erhalten.</p><p>Wenn du mit unserem Vorhaben einverstanden bist, so klicke bitte auf <i>Einverstanden</i>. Falls nicht, so klicke bitte auf <i>Nicht einverstanden</i>.</p><p>Wir danken dir für deine Mitwirkung und dein Vertrauen.</p>`;
 
   return <InstructionFrame header html={html}  cancelButton continueButtonText="Einverstanden" cancelButtonText="Nicht einverstanden" finish={props.finish}/>;
 }
@@ -203,7 +224,7 @@ export function InstructionFrame09_IIalt(props) {
 export function InstructionFrame16a(props) {
   const html = `
 <p>Noch ein Hinweis: Diese Studie schließt an frühere Studien an. Wir wollen die Ergebnisse vergleichen, darum haben wir möglichst wenig am Ablauf geändert. Deshalb haben eine feste Zeit für die Beispiele vorgesehen.</p>
-<p>Am Ende der 2. Sitzung können wir dir aber eine kurze Rückmeldung zur Richtigkeit deiner Anzworten geben.</p>
+<p>Am Ende der 2. Sitzung können wir dir aber eine kurze Rünckmeldung zur Richtigkeit deiner Anzworten geben.</p>
 <strong>Bitte drücke auf die Leertaste, dann geht es mit dem Vortest los.</strong>
   `;
   return <InstructionFrame html={html} space finish={props.finish}/>;
@@ -250,7 +271,7 @@ export function InstructionFrame100_experiment_34(props) {
   <h1>Aufbau des Lernprogramms I</h1>
   <p>Auf jeder Seite des Lernprogramms werden dir vier Beispielaufgaben präsentiert. Du sollst diese Aufgaben aufmerksam lesen und versuchen, die Lösung nachzuvollziehen. </p>
   <p>Es erscheinen vier Textfelder mit Fragen zu den Beispielen. </p>
-  <p>Du durchläufst vier Durchgänge mit jeweils vier Beispielaufgaben, sodass dir <strong>insgesamt 16 Aufgaben präsentiert werden.</strong>.</p>
+  <p>Du durchläufst vier Durchgänge mit jeweils vier Beispielaufgaben, sodass dir <strong>insgesamt 16 Aufgaben präsentiert werden.</strong></p>
   <p>Für die Bearbeitung von je vier Beispielaufgaben hast du mindestens sechs Minuten Zeit. Du solltest alle Texte sorgfältig lesen, alle Lösungen genau nachvollziehen. Nach Ablauf der sechs Minuten kannst du mit der Befragung deines Flow-Erlebens und deiner kognitiven Beanspruchung weitermachen. Du kannst dann nicht mehr zurückgehen. Ein Timer wird eingeblendet.</p>
   `;
 

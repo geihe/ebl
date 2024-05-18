@@ -1,6 +1,6 @@
 import React from 'react';
 import {addToTag, getDataFromTag} from "../helper/tagHelper";
-import {exampleFrames} from "../Frames/EBL/EBL01_ExampleFrames";
+import {exampleFrames} from "../Frames/EBL/EBL_ExampleFrames";
 import {EBL01_Demographics} from "../Frames/Instructions/EBL01_Demographics"
 import {
   InstructionFrame01,

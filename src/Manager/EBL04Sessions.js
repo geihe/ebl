@@ -1,6 +1,6 @@
 import React from 'react';
 import {addToTag} from "../helper/tagHelper";
-import {exampleFrames} from "../Frames/EBL/EBL01_ExampleFrames";
+import {exampleFrames} from "../Frames/EBL/EBL_ExampleFrames";
 import {EBL01_Demographics} from "../Frames/Instructions/EBL01_Demographics"
 import {
   Feedback01Announce,
@@ -8,21 +8,11 @@ import {
   Feedback03Halbautomatisch,
   Feedback05Post,
   Feedback07Offen,
-  InstructionFrame01,
-  InstructionFrame03,
-  InstructionFrame04,
-  InstructionFrame06,
-  InstructionFrame09,
-  InstructionFrame10,
   InstructionFrame100_control_12,
   InstructionFrame100_experiment_34,
   InstructionFrame101,
   InstructionFrame103,
   InstructionFrame104,
-  InstructionFrame11,
-  InstructionFrame16a,
-  InstructionFrame16b,
-  InstructionFrame17,
   InstructionFrame200,
   InstructionFrame201,
   InstructionFrame202,
@@ -39,10 +29,7 @@ import {
 } from "../Frames/Instructions/InstructionFrame";
 import {CancelFrame} from "../Frames/CancelFrame";
 import {FixationCrossFrame} from "../Frames/FixationCrossFrame";
-import {ebl02_MathCourse} from "../assets/EBL01/Ebl02_MathCourse";
-import {InstructionTest} from "../Frames/InstructionTest";
-import {postFrames, preTest} from "../assets/EBL01/EBL01_PrePostTest";
-import {EBL01Video} from "../Frames/EBL/EBL01Video";
+import {postFrames} from "../assets/EBL01/EBL01_PrePostTest";
 import {JolFrame1, JolFrame2, JolFrame3, JolFrame4} from "../Frames/JolFrames";
 import {Pq1, Pq2, Pq3, Pq4} from "../Frames/ProcessQuestions";
 
@@ -54,7 +41,7 @@ const cancelTest = {
 
 export function EBL04Session1(groupManager) {
   return [
-    {frame: <InstructionFrame01/>, id: 'firstFrame'},
+/*    {frame: <InstructionFrame01/>, id: 'firstFrame'},
     <EBL01Video videoID={'introduction'}/>,
     {
       repeat: [<InstructionFrame04/>, <InstructionFrame06/>,
@@ -64,7 +51,7 @@ export function EBL04Session1(groupManager) {
     <InstructionFrame09/>, cancelTest,
     <InstructionFrame10/>, cancelTest,
     <InstructionFrame11/>, cancelTest,
-    <InstructionFrame03/>,
+    <InstructionFrame03/>,*/
     {frame: <EBL01_Demographics/>, id: 'Demographics'},
     {
       id: 'groupFunction',
@@ -72,6 +59,7 @@ export function EBL04Session1(groupManager) {
         const log = data.find(d => d.id === "Demographics").log;
         const male = log.gender !== "female"; //zählt auch divers mit
         const age = +log.age;
+        console.log(groupManager);
         if (!groupManager.hasGroupId()) {
           groupManager.determineGroup(male, age);
         }
@@ -85,18 +73,39 @@ export function EBL04Session1(groupManager) {
       }
     },
 
-    <InstructionFrame16a/>,
+/*    <InstructionFrame16a/>,
     <InstructionFrame16b/>,
     preTest,
     <InstructionFrame17/>,
-    ebl02_MathCourse,
+    ebl02_MathCourse,*/
     {
       if: () => groupManager.getGroupId() <= 2,
       then: [<InstructionFrame100_control_12/>],
       else: [<InstructionFrame100_experiment_34/>]
     },
     <InstructionFrame101/>,
-    exampleFrames(groupManager),
+
+    {
+      if: (lastlog, data) => data[0].groupId === 1,
+      then: exampleFrames(1),
+    },
+
+    {
+      if: (lastlog, data) => data[0].groupId === 2,
+      then: exampleFrames(2),
+    },
+
+    {
+      if: (lastlog, data) => data[0].groupId === 3,
+      then: exampleFrames(3),
+    },
+
+    {
+      if: (lastlog, data) => data[0].groupId === 4,
+      then: exampleFrames(4),
+    },
+
+
     <InstructionFrame103/>,
     {frame: <Pq1/>, id: 'Pq1'},
     {frame: <Pq2/>, id: 'Pq2'},

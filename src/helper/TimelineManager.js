@@ -80,9 +80,12 @@ class TLframe extends TimelineElement {
       this.noProgress = frameSource.noProgress;
       this.id = frameSource.id;
       this.noLog = frameSource.nolog;
+      this.lazy=frameSource.lazy; //lazy: el ist eine Funktion mit Parameter data, die einen Frame zurückgibt
+
     } else {
       this.effort = 1;
       this.frame = frameSource;
+      this.lazy=false;
     }
   }
 
