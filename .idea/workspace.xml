@@ -7,13 +7,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0600d61b-15d0-445a-8a11-80930511d4a9" name="Changes" comment="Kleine Änderung in den Prompt-Texten">
+    <list default="true" id="0600d61b-15d0-445a-8a11-80930511d4a9" name="Changes" comment="Tragischen Fehler gefixt: ExampleFrames wurden vor Gruppenbestimmtung erstellt, sodass alle Nutzer in der selben Gruppe waren.">
+      <change afterPath="$PROJECT_DIR$/src/Manager/EBL04bSessions.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Frames/EBL/EBL01_ExampleFrames.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frames/EBL/EBL01_ExampleFrames.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Frames/Instructions/InstructionFrame.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frames/Instructions/InstructionFrame.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Manager/EBL04Sessions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Manager/EBL04Sessions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Manager/Session.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Manager/Session.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/helper/TimelineManager.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/helper/TimelineManager.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Manager/EBL05Sessions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Manager/EBL05Sessions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Manager/EBL_Builder.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Manager/EBL_Builder.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/helper/tagHelper.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/helper/tagHelper.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,14 +64,12 @@
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
   </component>
-  <component name="GithubPullRequestsUISettings">
-    <option name="selectedUrlAndAccountId">
-      <UrlAndAccount>
-        <option name="accountId" value="4e6b132f-c009-4bd5-a287-5c946b6929f8" />
-        <option name="url" value="https://github.com/geihe/ebl.git" />
-      </UrlAndAccount>
-    </option>
-  </component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/geihe/ebl.git&quot;,
+    &quot;accountId&quot;: &quot;4e6b132f-c009-4bd5-a287-5c946b6929f8&quot;
+  }
+}</component>
   <component name="JsbtTreeLayoutManager">
     <layout place="tools.popupnpm">
       <scroll-view-position x="0" y="0" />
@@ -80,7 +82,6 @@
   &quot;associatedIndex&quot;: 1
 }</component>
   <component name="ProjectId" id="1lHBEw4qTgEqqRyFWtItUiObnSr" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="autoscrollFromSource" value="true" />
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -89,25 +90,32 @@
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;js.last.introduce.type&quot;: &quot;CONST&quot;,
-    &quot;last_opened_file_path&quot;: &quot;G:/OneDrive_Marienschule/Marienschule Krefeld/Programmprojekte - Dokumente/react/bipsy/ebl/src/helper/FeedbackManager&quot;,
+    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;G:/OneDrive_Marienschule/Marienschule Krefeld/Programmprojekte - Dokumente/react/bipsy/ebl/src/Manager&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;advanced.settings&quot;,
+    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
     &quot;ts.external.directory.path&quot;: &quot;C:\\Program Files\\JetBrains\\WebStorm 2019.3.1\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="G:\OneDrive_Marienschule\Marienschule Krefeld\Programmprojekte - Dokumente\react\bipsy\ebl\src\Manager" />
       <recent name="G:\OneDrive_Marienschule\Marienschule Krefeld\Programmprojekte - Dokumente\react\bipsy\ebl\src\Test" />
       <recent name="G:\OneDrive_Marienschule\Marienschule Krefeld\Programmprojekte - Dokumente\react\bipsy\ebl\src\Frames\EBL" />
-      <recent name="G:\OneDrive_Marienschule\Marienschule Krefeld\Programmprojekte - Dokumente\react\bipsy\ebl\src\Manager" />
       <recent name="G:\OneDrive_Marienschule\Marienschule Krefeld\Programmprojekte - Dokumente\react\bipsy\ebl\src\assets\EBL01" />
       <recent name="G:\OneDrive_Marienschule\Marienschule Krefeld\Programmprojekte - Dokumente\react\bipsy\ebl\src\Frames" />
     </key>
@@ -189,6 +197,13 @@
         <item itemvalue="HTTP Request.rest-api#1" />
       </list>
     </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-09060db00ec0-JavaScript-WS-251.28774.2" />
+      </set>
+    </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -577,7 +592,36 @@
       <workItem from="1715959042352" duration="6327000" />
       <workItem from="1715965926648" duration="1762000" />
       <workItem from="1715971028865" duration="241000" />
-      <workItem from="1716015971332" duration="1546000" />
+      <workItem from="1716015971332" duration="1837000" />
+      <workItem from="1716316056378" duration="3038000" />
+      <workItem from="1717229521890" duration="295000" />
+      <workItem from="1717247192896" duration="390000" />
+      <workItem from="1717684638767" duration="3170000" />
+      <workItem from="1717688913613" duration="4060000" />
+      <workItem from="1717860761335" duration="43000" />
+      <workItem from="1719772622941" duration="2129000" />
+      <workItem from="1719864113815" duration="176000" />
+      <workItem from="1723977665244" duration="255000" />
+      <workItem from="1725085356233" duration="104000" />
+      <workItem from="1725110768690" duration="1626000" />
+      <workItem from="1725720505509" duration="60000" />
+      <workItem from="1729583422768" duration="2429000" />
+      <workItem from="1730140023590" duration="345000" />
+      <workItem from="1730538042093" duration="288000" />
+      <workItem from="1731757384329" duration="1031000" />
+      <workItem from="1731839514710" duration="1648000" />
+      <workItem from="1732481467149" duration="1846000" />
+      <workItem from="1732553998861" duration="594000" />
+      <workItem from="1732638346506" duration="570000" />
+      <workItem from="1734374510180" duration="1613000" />
+      <workItem from="1734779032238" duration="251000" />
+      <workItem from="1734779705185" duration="586000" />
+      <workItem from="1746464297574" duration="123000" />
+      <workItem from="1761243444814" duration="2009000" />
+      <workItem from="1761290218885" duration="3113000" />
+      <workItem from="1761314143529" duration="945000" />
+      <workItem from="1761379917072" duration="748000" />
+      <workItem from="1762757129684" duration="8491000" />
     </task>
     <task id="LOCAL-00054" summary="Meldung, wenn Experiment voll ist.">
       <created>1617556769280</created>
@@ -922,7 +966,7 @@
       <option name="project" value="LOCAL" />
       <updated>1684858817897</updated>
     </task>
-    <option name="localTasksCounter" value="118" />
+    <option name="localTasksCounter" value="119" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -960,7 +1004,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="kleinere Änderungen nach erneutem Feedback" />
     <MESSAGE value="kleinere Änderungen nach erneutem Feedback&#10;trim() in advancedInput&#10;&gt; 3 min   --&gt;   3 min&#10;MC-Klickbereich vergrößert" />
     <MESSAGE value="Änderung Einverständniserklärung" />
     <MESSAGE value="lang=&quot;de&quot; (statt &quot;en&quot;)" />
@@ -985,7 +1028,8 @@
     <MESSAGE value="Feedback hinzugefügt" />
     <MESSAGE value="Kleine Fehler in den Instruktionen korrigiert." />
     <MESSAGE value="Kleine Änderung in den Prompt-Texten" />
-    <option name="LAST_COMMIT_MESSAGE" value="Kleine Änderung in den Prompt-Texten" />
+    <MESSAGE value="Tragischen Fehler gefixt: ExampleFrames wurden vor Gruppenbestimmtung erstellt, sodass alle Nutzer in der selben Gruppe waren." />
+    <option name="LAST_COMMIT_MESSAGE" value="Tragischen Fehler gefixt: ExampleFrames wurden vor Gruppenbestimmtung erstellt, sodass alle Nutzer in der selben Gruppe waren." />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
 </project>

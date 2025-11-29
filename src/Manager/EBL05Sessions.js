@@ -1,5 +1,5 @@
 import React from 'react';
-import {addToTag, getDataFromTag} from "../helper/tagHelper";
+import {addGroupidToTag, getDataFromTag} from "../helper/tagHelper";
 import {exampleFrames} from "../Frames/EBL/EBL_ExampleFrames";
 import {EBL01_Demographics} from "../Frames/Instructions/EBL01_Demographics"
 import {
@@ -73,7 +73,7 @@ export function EBL05Session1(groupManager) {
         }
         const groupId = groupManager.getGroupId();
         const oldTag = data[0].tag;
-        data[0].tag = addToTag(groupId, oldTag);
+        data[0].tag = addGroupidToTag(groupId, oldTag);
         data[0].male = male ? 1 : 0;
         data[0].age = age;
         data[0].groupId = groupId;
