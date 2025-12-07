@@ -26,3 +26,8 @@
     margin-top: 6px;
     color: #000099;
 }
+
+input{
+    padding: 8px;
+    font-size: inherit;
+}

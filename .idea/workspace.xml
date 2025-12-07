@@ -7,16 +7,33 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0600d61b-15d0-445a-8a11-80930511d4a9" name="Changes" comment="Tragischen Fehler gefixt: ExampleFrames wurden vor Gruppenbestimmtung erstellt, sodass alle Nutzer in der selben Gruppe waren.">
-      <change afterPath="$PROJECT_DIR$/src/Manager/EBL04bSessions.js" afterDir="false" />
+    <list default="true" id="0600d61b-15d0-445a-8a11-80930511d4a9" name="Changes" comment="Stand VOR EBL04b">
+      <change afterPath="$PROJECT_DIR$/src/Frames/Instructions/SONA_ID.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Frames/Instructions/UserCode.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Frames/Instructions/UserCodeForm.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/Beispielvideo_Unterschiede_V3.mp4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/EBL01/mindWanderingItems.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Frames/DelayedFrame.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frames/DelayedFrame.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Frames/EBL/EBL01Video.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frames/EBL/EBL01Video.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Frames/EBL/EBL_ExampleFrames.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frames/EBL/EBL_ExampleFrames.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Frames/Instructions/InstructionFrame.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frames/Instructions/InstructionFrame.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Manager/EBL04Sessions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Manager/EBL04Sessions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Manager/EBL05Sessions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Manager/EBL05Sessions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Frames/JolFrames.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frames/JolFrames.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Manager/EBL01Builder.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Manager/EBL01Builder.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Manager/EBL04bSessions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Manager/EBL04bSessions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Manager/EBL05Sessions.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Manager/EBL_Builder.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Manager/EBL_Builder.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/helper/tagHelper.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/helper/tagHelper.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Manager/Session.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Manager/Session.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MicroComponents/ResponseInput.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/MicroComponents/ResponseInput.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MicroComponents/UniBielefeld.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/MicroComponents/UniBielefeld.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/EBL01/Ebl02_MathCourse.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/EBL01/Ebl02_MathCourse.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/EBL01/examples/explanationsV1.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/EBL01/examples/explanationsV1.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/EBL01/verification.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/EBL01/verification.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/css/DelayedFrame.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/css/DelayedFrame.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/css/StimulusResponseFrame.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/css/StimulusResponseFrame.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/css/shortResponse.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/css/shortResponse.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/helper/Server.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/helper/Server.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -97,7 +114,7 @@
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;js.last.introduce.type&quot;: &quot;CONST&quot;,
     &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;G:/OneDrive_Marienschule/Marienschule Krefeld/Programmprojekte - Dokumente/react/bipsy/ebl/src/Manager&quot;,
+    &quot;last_opened_file_path&quot;: &quot;G:/OneDrive_Marienschule/Marienschule Krefeld/Programmprojekte - Dokumente/react/bipsy/ebl/src/Frames/Instructions&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -107,24 +124,29 @@
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;advanced.settings&quot;,
     &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;C:\\Program Files\\JetBrains\\WebStorm 2019.3.1\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Program Files\\JetBrains\\WebStorm 2019.3.1\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File&quot;: [
+      &quot;JavaScript&quot;
+    ]
   }
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="G:\OneDrive_Marienschule\Marienschule Krefeld\Programmprojekte - Dokumente\react\bipsy\ebl\src\Frames\Instructions" />
+      <recent name="G:\OneDrive_Marienschule\Marienschule Krefeld\Programmprojekte - Dokumente\react\bipsy\ebl\src\Frames\EBL" />
       <recent name="G:\OneDrive_Marienschule\Marienschule Krefeld\Programmprojekte - Dokumente\react\bipsy\ebl\src\Manager" />
       <recent name="G:\OneDrive_Marienschule\Marienschule Krefeld\Programmprojekte - Dokumente\react\bipsy\ebl\src\Test" />
-      <recent name="G:\OneDrive_Marienschule\Marienschule Krefeld\Programmprojekte - Dokumente\react\bipsy\ebl\src\Frames\EBL" />
       <recent name="G:\OneDrive_Marienschule\Marienschule Krefeld\Programmprojekte - Dokumente\react\bipsy\ebl\src\assets\EBL01" />
-      <recent name="G:\OneDrive_Marienschule\Marienschule Krefeld\Programmprojekte - Dokumente\react\bipsy\ebl\src\Frames" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="G:\OneDrive_Marienschule\Marienschule Krefeld\Programmprojekte - Dokumente\react\bipsy\ebl\src\assets" />
+      <recent name="G:\OneDrive_Marienschule\Marienschule Krefeld\Programmprojekte - Dokumente\react\bipsy\ebl\src\assets\EBL01" />
       <recent name="G:\OneDrive_Marienschule\Marienschule Krefeld\Programmprojekte - Dokumente\react\bipsy\ebl\src\helper" />
       <recent name="G:\OneDrive_Marienschule\Marienschule Krefeld\Programmprojekte - Dokumente\react\bipsy\ebl\src\helper\FeedbackManager" />
-      <recent name="G:\OneDrive_Marienschule\Marienschule Krefeld\Programmprojekte - Dokumente\react\bipsy\ebl\src\assets" />
       <recent name="G:\OneDrive_Marienschule\Marienschule Krefeld\Programmprojekte - Dokumente\react\bipsy\ebl\src\Frames" />
-      <recent name="G:\OneDrive_Marienschule\Marienschule Krefeld\Programmprojekte - Dokumente\react\bipsy\ebl\src" />
     </key>
   </component>
   <component name="RestClientSettings">
@@ -622,6 +644,20 @@
       <workItem from="1761314143529" duration="945000" />
       <workItem from="1761379917072" duration="748000" />
       <workItem from="1762757129684" duration="8491000" />
+      <workItem from="1764407957409" duration="911000" />
+      <workItem from="1764426779664" duration="7519000" />
+      <workItem from="1764490870015" duration="3005000" />
+      <workItem from="1764515245530" duration="1873000" />
+      <workItem from="1764696625123" duration="3636000" />
+      <workItem from="1764703890566" duration="205000" />
+      <workItem from="1764704489639" duration="5367000" />
+      <workItem from="1764778077702" duration="14822000" />
+      <workItem from="1764864397545" duration="11420000" />
+      <workItem from="1764877787431" duration="2000" />
+      <workItem from="1764878809745" duration="3036000" />
+      <workItem from="1764882408439" duration="1295000" />
+      <workItem from="1764950577008" duration="5742000" />
+      <workItem from="1765027245553" duration="19682000" />
     </task>
     <task id="LOCAL-00054" summary="Meldung, wenn Experiment voll ist.">
       <created>1617556769280</created>
@@ -966,7 +1002,7 @@
       <option name="project" value="LOCAL" />
       <updated>1684858817897</updated>
     </task>
-    <option name="localTasksCounter" value="119" />
+    <option name="localTasksCounter" value="120" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1004,7 +1040,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="kleinere Änderungen nach erneutem Feedback&#10;trim() in advancedInput&#10;&gt; 3 min   --&gt;   3 min&#10;MC-Klickbereich vergrößert" />
     <MESSAGE value="Änderung Einverständniserklärung" />
     <MESSAGE value="lang=&quot;de&quot; (statt &quot;en&quot;)" />
     <MESSAGE value="Start EBL02" />
@@ -1029,7 +1064,8 @@
     <MESSAGE value="Kleine Fehler in den Instruktionen korrigiert." />
     <MESSAGE value="Kleine Änderung in den Prompt-Texten" />
     <MESSAGE value="Tragischen Fehler gefixt: ExampleFrames wurden vor Gruppenbestimmtung erstellt, sodass alle Nutzer in der selben Gruppe waren." />
-    <option name="LAST_COMMIT_MESSAGE" value="Tragischen Fehler gefixt: ExampleFrames wurden vor Gruppenbestimmtung erstellt, sodass alle Nutzer in der selben Gruppe waren." />
+    <MESSAGE value="Stand VOR EBL04b" />
+    <option name="LAST_COMMIT_MESSAGE" value="Stand VOR EBL04b" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
 </project>

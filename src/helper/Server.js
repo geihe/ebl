@@ -1,8 +1,8 @@
 export class Server {
-  constructor(version) {
+  constructor(version='4b') {
     this.baseURL = 'https://beispielbasiertes-lernen.de/rest/EBL/';
     this.newURL = this.baseURL + '_new.php?ver='+version;
-    this.saveURL = this.baseURL + '_save.php?ver='+version;
+    this.saveURL = this.baseURL + 'save04b.php';
     this.checkURL = this.baseURL + '_check.php?ver='+version;
   }
 

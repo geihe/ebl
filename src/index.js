@@ -12,33 +12,39 @@ import {Server} from "./helper/Server";
 import {ExperimentFullFrame} from "./Frames/Instructions/ExperimentFullFrame";
 import fscreen from "fscreen";
 import {GroupManager} from "./helper/GroupManager";
-import {ReturnUrlHelper} from "./helper/returnURLHelper";
-import {getDataFromTag, getTag, test} from "./helper/tagHelper";
+import {test} from "./helper/tagHelper";
+import {Feedback00Sess1, Feedback00Sess2} from "./Frames/Instructions/InstructionFrame";
 
 test();
 FocusStyleManager.onlyShowFocusOnTabs();
 //const server = new Server();
 let t;
-const returnUrlHelper = new ReturnUrlHelper();
+
+// const returnUrlHelper = new ReturnUrlHelper();
 function finished(data) {
-  const {tag, age = 0, male = 0, session} = data[0];
-  const {version, userId, groupId, returnId, parameter} = getDataFromTag(tag);
-  const qualtrics = 'https://ucsantacruz.co1.qualtrics.com/jfe/form/SV_3I4pe6rM8YVwUqG?tag=' + tag;
+  const {userCode, tag = '', groupId = 0, age = 0, male = 0, session} = data[0];
+  // const {version, userId,  returnId, parameter} = getDataFromTag(tag);
+  // const qualtrics = 'https://ucsantacruz.co1.qualtrics.com/jfe/form/SV_3I4pe6rM8YVwUqG?tag=' + tag;
+  const version = '4b';
   const server = new Server(version);
-  server.postData(userId, groupId, age, male, session, tag, data)
-    .then(() => {
-      const href = +session === 1 ? qualtrics : returnUrlHelper.getReturnUrl();
-      if (href.startsWith('https')) {
-        // window.location.href = href;
-      }
-    }); //zurück zu Unipark etc.
+  server.postData(userCode, groupId, age, male, session, tag, data)
+  // .then(() => {
+  //     window.location.href = href;
+  //   }
+  // })
+  ; //zurück zu Unipark etc.
+  if (session == 1) {
+    render(<Feedback00Sess1/>);
+  }
+  if (session == 2) {
+    render(<Feedback00Sess2/>);
+  }
 }
 
 getElementInfo().then((info) => {
   t = (ressource, param) =>
     translate(info.language, ressource, param);
   let element;
-  console.log(info);
   switch (info.type) {
     case "full":
       element = <ExperimentFullFrame/>;
@@ -58,12 +64,11 @@ getElementInfo().then((info) => {
       builder.setSession(initData.test ? 99 : initData.session)
         .setVersion(initData.version)
         .setGroupManager(info.groupManager)
-        .setShowStudyCode(returnUrlHelper.showStudyCode())
+        // .setShowStudyCode(returnUrlHelper.showStudyCode())
         .build();
       element =
         <Session timeline={builder.getTimeline()} initialData={info.initialData} finished={(data) => finished(data)}/>
   }
-
   render(element);
 });
 
@@ -98,11 +103,11 @@ async function getElementInfo() {
     from: params.get('from'),
     session: params.get('session'),
   }
-  returnUrlHelper.setFromURLParams(URLparams);
-  if (URLparams.session==1) { //neues Experiment, erste Session
-    const server = new Server(URLparams.version);
-    const serverData = await server.getNewData();
-    console.log(serverData);
+  // returnUrlHelper.setFromURLParams(URLparams);
+  if (URLparams.session == 1) { //neues Experiment, erste Session
+    const server = new Server();
+    // const serverData = await server.getNewData();
+    // console.log(serverData);
     //********************************************
     //initialData.version = URLparams.version;
     initialData.version = '04b';
@@ -113,9 +118,9 @@ async function getElementInfo() {
     initialData.timeFactor = +URLparams.timeFactor || 1;
 
     const groupManager = new GroupManager(+URLparams.group_id);
-    groupManager.setServercount(serverData.group_count);
+    // groupManager.setServercount(serverData.group_count);
     initialData.userAgent = navigator.userAgent;
-    initialData.tag = getTag(initialData.version, serverData.user_id, 0, returnUrlHelper, initialData.session);
+    // initialData.tag = getTag(initialData.version, serverData.user_id, 0, returnUrlHelper, initialData.session);
 
     config.timeBetweenSessionsInSeconds = config.timeBetweenSessionsInSeconds / initialData.timeFactor;
     config.pauseSeconds = config.pauseSeconds / initialData.timeFactor;
@@ -131,24 +136,15 @@ async function getElementInfo() {
     }
     return {type: 'session', language: initialData.language, initialData: [initialData], groupManager};
   } else { //Folgesession
-    initialData.tag = URLparams.tag;
-    // const tagData = getDataFromTag(URLparams.tag);
     initialData.version = '04b';
-    // initialData.version = tagData.version;
-    initialData.userId = '12345';
-    // initialData.userId = tagData.userId;
+    initialData.userId = '0';
     initialData.groupId = 99;
-    // initialData.groupId = tagData.groupId;
-    initialData.session = URLparams.session;
-    const server = new Server(initialData.version);
-/*    const serverData = await server.getCheckData(initialData.userId);
-    if (serverData.end2) {
-      return {type: 'finished', language: initialData.language, initialData: [initialData]};
-    }
-    returnUrlHelper.setFromID(tagData.returnId, tagData.parameter);*/
-    return {type: 'session', language: initialData.language, initialData: [initialData]};
+    initialData.session = +URLparams.session;
   }
+  // returnUrlHelper.setFromID(tagData.returnId, tagData.parameter);
+  return {type: 'session', language: initialData.language, initialData: [initialData]};
 }
+
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.

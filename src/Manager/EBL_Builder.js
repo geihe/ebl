@@ -1,9 +1,9 @@
-import React from 'react';
 import {TimelineManager} from "../helper/TimelineManager";
-import {EndLab, ShowStudyCode} from "../Frames/Instructions/InstructionFrame";
-import {EBL04Session1, EBL04Session2} from "./EBL04bSessions";
+import {EBL04bSession1, EBL04bSession2} from "./EBL04bSessions";
+import {EBL04Session2} from "./EBL04Sessions";
 import {TestSession1} from "./EBLTestSessions";
-import {EBL05Session1, EBL05Session2} from "./EBL05Sessions";
+
+// import {EBL05Session1, EBL05Session2} from "./EBL05Sessions";
 
 export class EBL_Builder {
   constructor(t) {
@@ -52,23 +52,25 @@ export class EBL_Builder {
   }
 
   buildSession1() {
-    if (this.version == '04b') this.tlManager.add(EBL04Session1(this.groupManager));
-    if (this.version == 5) this.tlManager.add(EBL05Session1(this.groupManager));
+    if (this.version == '04b') this.tlManager.add(EBL04bSession1(this.groupManager));
+    // if (this.version == 5) this.tlManager.add(EBL05Session1(this.groupManager));
 
   }
 
   buildSession2() {
     if (this.version == 4) this.tlManager.add(EBL04Session2);
-    if (this.version == 5) this.tlManager.add(EBL05Session2);
+    // if (this.version == 5) this.tlManager.add(EBL05Session2);
+    if (this.version == '04b') this.tlManager.add(EBL04bSession2(this.groupManager));
 
-    if (this.version == 5) {
-      this.tlManager.add(<EndLab/>);
-    } else {
-      if (this.showStudyCode) {
-        this.tlManager.add(<ShowStudyCode random/>);
-      }
 
-    }
+    // if (this.version == 5) {
+    //   this.tlManager.add(<EndLab/>);
+    // } else {
+    //   if (this.showStudyCode) {
+    //     this.tlManager.add(<ShowStudyCode random/>);
+    //   }
+    //
+    // }
   }
 
   buildTestSession() {

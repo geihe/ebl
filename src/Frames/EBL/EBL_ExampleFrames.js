@@ -8,8 +8,14 @@ import {FixationCrossFrame} from "../FixationCrossFrame";
 import {fssItems} from "../../assets/EBL01/fssItems";
 import {EBL01_ExampleManager} from "../../Manager/EBL01_ExampleManager";
 import {EblWaitFrame} from "./EblWaitFrame";
-import {InstructionFrame102} from "../Instructions/InstructionFrame";
+import {
+  InstructionFrame102,
+  InstructionFrame_CognitiveLoad,
+  InstructionFrame_Flow,
+  InstructionFrame_MindWandering
+} from "../Instructions/InstructionFrame";
 import {cognitiveLoadItems} from "../../assets/EBL01/cognitiveLoadItems";
+import {mindWanderingItems} from "../../assets/EBL01/mindWanderingItems";
 
 
 const processMeasuresIntroduction = { //TODO in eigene Datei
@@ -56,11 +62,28 @@ const cognitiveLoadFrames = [1, 2, 3, 4, 5, 6, 7].map(nr =>
         maxText={{de: 'Trifft zu', en: 'very much'}}
         key={nr}
       />,
-      id: fssItems[nr - 1].id
+      id: cognitiveLoadItems[nr - 1].id
     },
   ]
 );
 
+const mindWanderingFrames = [1, 2, 3].map(nr =>
+  [
+    {
+      frame: <FixationCrossFrame nocross duration={200}/>,
+      nolog: true
+    },
+    {
+      frame: <LikertFrame
+        title={mindWanderingItems[nr - 1].text.de}
+        minText={{de: 'Gar nicht', en: 'not at all'}}
+        maxText={{de: 'Sehr häufig', en: 'very much'}}
+        key={nr}
+      />,
+      id: mindWanderingItems[nr - 1].id
+    },
+  ]
+);
 const processMeasureFrames = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map(nr =>
   [
     {
@@ -92,12 +115,17 @@ export function exampleFrames(groupId) {
             content={rem.string2html(s)}
             seconds={config.timeForExamples / itemGroup.length}
             explanationTime={config.timeForExamples} // zeige Erklärungsbox direkt
-            //hurry={config.timeForExamples / itemGroup.length /5}
+            hurry={config.timeForExamples / itemGroup.length /5}
           />
         },
           <FixationCrossFrame nocross/>]
       )
-        .concat([paasItem, cognitiveLoadFrames, processMeasureFrames])
+        .concat([
+          paasItem,
+          <InstructionFrame_MindWandering/>, mindWanderingFrames,
+          <InstructionFrame_CognitiveLoad/>,cognitiveLoadFrames,
+          <InstructionFrame_Flow/>,processMeasureFrames
+        ])
         .concat(index < exampleItems.length - 1 ? [<InstructionFrame102/>] : []);
     }
   );

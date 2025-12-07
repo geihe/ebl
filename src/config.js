@@ -81,7 +81,7 @@ const groups_with_explanation = [
     ]
   },
   { // group 1
-    id: 'blocked-control',
+    id: 'blocking',
     items: [
       ["c1-2-3-4 p1 e0"],
       ["c2-3-4-1 p2 e0"],
@@ -90,7 +90,7 @@ const groups_with_explanation = [
     ]
   },
   { // group 2
-    id: 'interleaved-control',
+    id: 'interleaving',
     items: [
       ["c1 p1-2-3-4 e0"],
       ["c2 p2-3-4-1 e0"],
@@ -99,21 +99,21 @@ const groups_with_explanation = [
     ]
   },
   { // group 3
-    id: 'blocked-explanations',
-    items: [
-      ["c1-2-3-4 p1 e1-2-3-4"],
-      ["c2-3-4-1 p2 e1-2-3-4"],
-      ["c3-4-1-2 p3 e1-2-3-4"],
-      ["c4-1-2-3 p4 e1-2-3-4"],
-    ]
-  },
-  { // group 4
-    id: 'interleaved-explanations',
+    id: 'interleaving-simularity',
     items: [
       ["c1 p1-2-3-4 e1-2-3-4"],
       ["c2 p2-3-4-1 e1-2-3-4"],
       ["c3 p3-4-1-2 e1-2-3-4"],
       ["c4 p4-1-2-3 e1-2-3-4"],
+    ]
+  },
+  { // group 4
+    id: 'interleaving-contrast',
+    items: [
+      ["c1 p1-2-3-4 e5-6-7-8"],
+      ["c2 p2-3-4-1 e5-6-7-8"],
+      ["c3 p3-4-1-2 e5-6-7-8"],
+      ["c4 p4-1-2-3 e5-6-7-8"],
     ]
   },
   {
@@ -136,9 +136,9 @@ export const config = {
   numberOfSessions: 1,
   timeBetweenSessionsInSeconds: 5 * 60, //wird nicht benutzt, 1 Woche RI
   pauseSeconds: 600, //600
-  timeForExamples: 6*60, //8 Minuten für 4 Beispiele
+  timeForExamples: 6*60, //6 Minuten für 4 Beispiele
   likertFrameDelay: 500, //500
-  vph: 2,
+  vph: 2.5,
 
   instructions: {
     delay: 3000, //3000

@@ -8,7 +8,7 @@ export function ResponseInput(props) {
   const {callback, minLength} = props;
   const t = useContext(LngContext);
   return <AdvancedInput
-    placeholder={t(phrase.editablePlaceholder)}
+    placeholder={props.placeholder || (phrase.editablePlaceholder)}
     className={styles.input}
     minLength={minLength}
     finish={(o) => callback(o.value, o)}

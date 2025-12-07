@@ -19,7 +19,7 @@ export const selfExplanations = [
     id: 1,
     exampleNrs: [0, 1],
     html: {
-      de: `Beschreibe die Lösungen der <strong>ersten und zweiten</strong> Aufgabe. Vergleiche beide Lösungen! Welche Unterschiede und Gemeinsamkeiten fallen dir auf? Schreibe diese vollständig auf.`,
+      de: `Vergleiche <strong>Aufgabe 1 und 2</strong> in ihren <u>Fallbeschreibungen</u> und deren (Gleichungs-)<u>Lösungen</u>. Welche <strong>Gemeinsamkeiten</strong> fallen dir auf?<br/> Schreibe diese möglichst klar und vollständig auf.`,
       en: `Describe the solution of the first and the second worked examples. <br/>Compare them!`
     }
   },
@@ -27,7 +27,7 @@ export const selfExplanations = [
     id: 2,
     exampleNrs: [0, 2],
     html: {
-      de: `Beschreibe die Lösungen der <strong>ersten und dritten</strong> Aufgabe. Vergleiche beide Lösungen! Welche Unterschiede und Gemeinsamkeiten fallen dir auf? Schreibe diese vollständig auf.`,
+      de: `Vergleiche <strong>Aufgabe 1 und 3</strong> in ihren <u>Fallbeschreibungen</u> und deren (Gleichungs-)<u>Lösungen</u>. Welche <strong>Gemeinsamkeiten</strong> fallen dir auf?<br/> Schreibe diese möglichst klar und vollständig auf.`,
       en: `Describe the solution of the third worked example and compare it with the solutions for the first and second example.`
     }
   },
@@ -35,7 +35,7 @@ export const selfExplanations = [
     id: 3,
     exampleNrs: [0, 3],
     html: {
-      de: `Beschreibe die Lösungen der <strong>ersten und vierten</strong> Aufgabe. Vergleiche beide Lösungen! Welche Unterschiede und Gemeinsamkeiten fallen dir auf? Schreibe diese vollständig auf.`,
+      de: `Vergleiche <strong>Aufgabe 1 und 4</strong> in ihren <u>Fallbeschreibungen</u> und deren (Gleichungs-)<u>Lösungen</u>. Welche <strong>Gemeinsamkeiten</strong> fallen dir auf?<br/> Schreibe diese möglichst klar und vollständig auf.`,
       en: `Describe the solution of the fourth worked example and compare it to the other three.`
     }
   },
@@ -43,7 +43,40 @@ export const selfExplanations = [
     id: 4,
     exampleNrs: [0, 1, 2, 3],
     html: {
-      de: `Vergleiche <strong>alle vier</strong> Aufgaben! Welche Unterschiede und Gemeinsamkeiten fallen dir auf? Schreibe diese vollständig auf.`,
+      de: `Vergleiche alle vier <u>Fallbeschreibungen</u> und deren (Gleichungs-)<u>Lösungen</u>. Welche <strong>Gemeinsamkeiten</strong>fallen dir auf? <br/>Schreibe diese möglichst klar und vollständig auf.`,
+      en: `Compare all four solutions of these worked examples.`
+    }
+  },
+
+  {
+    id: 5,
+    exampleNrs: [0, 1],
+    html: {
+      de: `Vergleiche <strong>Aufgabe 1 und 2</strong> in ihren <u>Fallbeschreibungen</u> und deren (Gleichungs-)<u>Lösungen</u>. Welche <strong>Unterschiede</strong> fallen dir auf und warum bestehen diese?<br/> Schreibe diese möglichst klar und vollständig auf.`,
+      en: `Describe the solution of the first and the second worked examples. <br/>Compare them!`
+    }
+  },
+  {
+    id: 6,
+    exampleNrs: [0, 2],
+    html: {
+      de: `Vergleiche <strong>Aufgabe 1 und 3</strong> in ihren <u>Fallbeschreibungen</u> und deren (Gleichungs-)<u>Lösungen</u>. Welche <strong>Unterschiede</strong> fallen dir auf und warum bestehen diese?<br/> Schreibe diese möglichst klar und vollständig auf.`,
+      en: `Describe the solution of the third worked example and compare it with the solutions for the first and second example.`
+    }
+  },
+  {
+    id: 7,
+    exampleNrs: [0, 3],
+    html: {
+      de: `Vergleiche <strong>Aufgabe 1 und 4</strong> in ihren <u>Fallbeschreibungen</u> und deren (Gleichungs-)<u>Lösungen</u>. Welche <strong>Unterschiede</strong> fallen dir auf und warum bestehen diese?<br/> Schreibe diese möglichst klar und vollständig auf.`,
+      en: `Describe the solution of the fourth worked example and compare it to the other three.`
+    }
+  },
+  {
+    id: 8,
+    exampleNrs: [0, 1, 2, 3],
+    html: {
+      de: `Vergleiche alle vier <u>Fallbeschreibungen</u> und deren (Gleichungs-)<u>Lösungen</u>. Welche <strong>Unterschiede</strong>fallen dir auf? <br/>Schreibe diese möglichst klar und vollständig auf.`,
       en: `Compare all four solutions of these worked examples.`
     }
   },

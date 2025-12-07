@@ -16,8 +16,9 @@ export const verification = [
             Freund den blauen?</p>,
           <p>Diese Aufgabe entspricht dem Typ „Eine günstige Ereignisfolge/Anzahl möglicher Ergebnisse ändert sich“.</p>
         ],
-        responseType: 'yesNoSure',
-        validate: data => data.answer==='true',
+        responseType: 'radio',
+        options: [{value: true, label: 'Richtig'}, {value: false, label: 'Falsch'}],
+        validate: data => data.answer === 'true',
       },
       {
         id: 'pz-rvt2',
@@ -26,8 +27,9 @@ export const verification = [
             braunen Helm bekommst?</p>,
           <p>Diese Aufgabe entspricht dem Typ „Eine günstige Ereignisfolge/Anzahl möglicher Ergebnisse ändert sich“.</p>
         ],
-        responseType: 'yesNoSure',
-        validate: data => data.answer==='false',
+        responseType: 'radio',
+        options: [{value: true, label: 'Richtig'}, {value: false, label: 'Falsch'}],
+        validate: data => data.answer === 'false',
       },
       {
         id: 'lw-rvt1',
@@ -35,10 +37,11 @@ export const verification = [
           <p>Aufgabe: Wie hoch ist die Wahrscheinlichkeit, dass du und dein Freund am ersten Kurstag den roten und den
             grünen Helm bekommen (es ist egal, wer welche Farbe bekommt)?</p>,
           <p>Zur Lösung dieser Aufgabe muss Folgendes berechnet werden: </p>,
-            <MathComponent tex={String.raw`2 \cdot ({1 \over 6} \cdot {1 \over 5})`} display={true}/>
+          <MathComponent tex={String.raw`2 \cdot ({1 \over 6} \cdot {1 \over 5})`} display={true}/>
         ],
-        responseType: 'yesNoSure',
-        validate: data => data.answer==='true',
+        responseType: 'radio',
+        options: [{value: true, label: 'Richtig'}, {value: false, label: 'Falsch'}],
+        validate: data => data.answer === 'true',
       },
       {
         id: 'lw-rvt2',
@@ -49,8 +52,9 @@ export const verification = [
             <MathComponent tex={String.raw`{1 \over 6} \cdot {1 \over 5}`} display={true}/>
           </p>
         ],
-        responseType: 'yesNoSure',
-        validate: data => data.answer==='false',
+        responseType: 'radio',
+        options: [{value: true, label: 'Richtig'}, {value: false, label: 'Falsch'}],
+        validate: data => data.answer === 'false',
       },
     ]
   },
@@ -69,8 +73,9 @@ export const verification = [
           <p>Diese Aufgabe entspricht dem Typ „Mehrere günstige Ereignisfolgen/Anzahl möglicher Ergebnisse bleibt
             gleich“.</p>
         ],
-        responseType: 'yesNoSure',
-        validate: data => data.answer==='false',
+        responseType: 'radio',
+        options: [{value: true, label: 'Richtig'}, {value: false, label: 'Falsch'}],
+        validate: data => data.answer === 'false',
       },
       {
         id: 'pz-rvt4',
@@ -80,8 +85,9 @@ export const verification = [
           <p>Diese Aufgabe entspricht dem Typ „Eine günstige Ereignisfolge/Anzahl möglicher Ergebnisse bleibt
             gleich“.</p>
         ],
-        responseType: 'yesNoSure',
-        validate: data => data.answer==='true',
+        responseType: 'radio',
+        options: [{value: true, label: 'Richtig'}, {value: false, label: 'Falsch'}],
+        validate: data => data.answer === 'true',
       },
       {
         id: 'lw-rvt3',
@@ -92,8 +98,9 @@ export const verification = [
             <MathComponent tex={String.raw`2 \cdot ({1 \over 5} \cdot {1 \over 5})`} display={true}/>
           </p>
         ],
-        responseType: 'yesNoSure',
-        validate: data => data.answer==='false',
+        responseType: 'radio',
+        options: [{value: true, label: 'Richtig'}, {value: false, label: 'Falsch'}],
+        validate: data => data.answer === 'false',
       },
       {
         id: 'lw-rvt4',
@@ -104,8 +111,9 @@ export const verification = [
             <MathComponent tex={String.raw`2 \cdot ({1 \over 5} \cdot {1 \over 5})`} display={true}/>
           </p>
         ],
-        responseType: 'yesNoSure',
-        validate: data => data.answer==='true',
+        responseType: 'radio',
+        options: [{value: true, label: 'Richtig'}, {value: false, label: 'Falsch'}],
+        validate: data => data.answer === 'true',
       },
     ]
   },
@@ -124,8 +132,9 @@ export const verification = [
           <p>Diese Aufgabe entspricht dem Typ „Mehrere günstige Ereignisfolgen/Anzahl möglicher Ergebnisse ändert
             sich“.</p>
         ],
-        responseType: 'yesNoSure',
-        validate: data => data.answer==='true',
+        responseType: 'radio',
+        options: [{value: true, label: 'Richtig'}, {value: false, label: 'Falsch'}],
+        validate: data => data.answer === 'true',
       },
       {
         id: 'pz-rvt6',
@@ -135,8 +144,9 @@ export const verification = [
           <p>Diese Aufgabe entspricht dem Typ „Mehrere günstige Ereignisfolgen/Anzahl möglicher Ergebnisse ändert
             sich“.</p>
         ],
-        responseType: 'yesNoSure',
-        validate: data => data.answer==='false',
+        responseType: 'radio',
+        options: [{value: true, label: 'Richtig'}, {value: false, label: 'Falsch'}],
+        validate: data => data.answer === 'false',
       },
       {
         id: 'lw-rvt5',
@@ -147,8 +157,9 @@ export const verification = [
             <MathComponent tex={String.raw`{1 \over 3} \cdot {1 \over 2}`} display={true}/>
           </p>
         ],
-        responseType: 'yesNoSure',
-        validate: data => data.answer==='true',
+        responseType: 'radio',
+        options: [{value: true, label: 'Richtig'}, {value: false, label: 'Falsch'}],
+        validate: data => data.answer === 'true',
       },
       {
         id: 'lw-rvt6',
@@ -158,8 +169,9 @@ export const verification = [
             <MathComponent tex={String.raw`2 \cdot ({1 \over 3} \cdot {1 \over 3})`} display={true}/>
           </p>
         ],
-        responseType: 'yesNoSure',
-        validate: data => data.answer==='false',
+        responseType: 'radio',
+        options: [{value: true, label: 'Richtig'}, {value: false, label: 'Falsch'}],
+        validate: data => data.answer === 'false',
       },
     ]
   },
@@ -178,8 +190,9 @@ export const verification = [
           <p>Diese Aufgabe entspricht dem Typ „Eine günstige Ereignisfolge/Anzahl möglicher Ergebnisse bleibt
             gleich“.</p>
         ],
-        responseType: 'yesNoSure',
-        validate: data => data.answer==='false',
+        responseType: 'radio',
+        options: [{value: true, label: 'Richtig'}, {value: false, label: 'Falsch'}],
+        validate: data => data.answer === 'false',
       },
       {
         id: 'pz-rvt8',
@@ -189,8 +202,9 @@ export const verification = [
           <p>Diese Aufgabe entspricht dem Typ „Mehrere günstige Ereignisfolgen/Anzahl möglicher Ergebnisse bleibt
             gleich“.</p>
         ],
-        responseType: 'yesNoSure',
-        validate: data => data.answer==='true',
+        responseType: 'radio',
+        options: [{value: true, label: 'Richtig'}, {value: false, label: 'Falsch'}],
+        validate: data => data.answer === 'true',
       },
       {
         id: 'lw-rvt7',
@@ -201,8 +215,9 @@ export const verification = [
             <MathComponent tex={String.raw`{1 \over 4} \cdot {1 \over 4}`} display={true}/>
           </p>
         ],
-        responseType: 'yesNoSure',
-        validate: data => data.answer==='false',
+        responseType: 'radio',
+        options: [{value: true, label: 'Richtig'}, {value: false, label: 'Falsch'}],
+        validate: data => data.answer === 'false',
       },
       {
         id: 'lw-rvt8',
@@ -213,8 +228,9 @@ export const verification = [
             <MathComponent tex={String.raw`{1 \over 4} \cdot {1 \over 4}`} display={true}/>
           </p>
         ],
-        responseType: 'yesNoSure',
-        validate: data => data.answer==='true',
+        responseType: 'radio',
+        options: [{value: true, label: 'Richtig'}, {value: false, label: 'Falsch'}],
+        validate: data => data.answer === 'true',
       },
     ]
   },
@@ -223,4 +239,4 @@ export const verification = [
     questions.map(q => {
       return {...q, ...rest}
     })
-).reduce((acc, x)=> acc.concat(x), [])
+).reduce((acc, x) => acc.concat(x), [])

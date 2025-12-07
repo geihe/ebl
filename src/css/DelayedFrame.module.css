@@ -10,6 +10,13 @@
     width: 800px;
 }
 
+.title {
+    color: darkblue;
+    top: 10%;
+    font-size: 22px;
+    justify-content: space-around;
+}
+
 .continue {
     color: darkblue;
     bottom: 10%;
@@ -21,7 +28,7 @@
     flex-direction: column;
     justify-content: center;
     position: absolute;
-    top: 10%;
+    top: 20%;
     bottom: 25%;
     font-size: 16px;
     line-height: 150%;

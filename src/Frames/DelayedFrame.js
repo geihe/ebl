@@ -12,6 +12,7 @@ import {FlexZone} from "../MicroComponents/FlexZone";
 export function DelayedFrame(props) {
   const t = useContext(LngContext);
   const {
+    title,
     children,
     continueText = phrase.continueText,
     cancelButton, //Button abbrechen hinzufügen
@@ -24,6 +25,7 @@ export function DelayedFrame(props) {
     style,
     contentClass = styles.zone + ' ' + styles.content,
     continueClass = styles.zone + ' ' + styles.continue,
+    titleClass = styles.zone + ' ' + styles.title,
   } = props;
   const [responseActive, setResponseActive] = useStateDelayed(!(delay > 0) && !noResponse);
   useKeyListenerOnce(' ', () => props.finish(), responseActive && space);
@@ -50,7 +52,14 @@ export function DelayedFrame(props) {
       </>;
   }
   return (
+
     <FlexZone style={style}>
+
+      {title ?
+      <Zone className={titleClass}>
+        {title}
+      </Zone> : null}
+
       <Zone className={contentClass}>
         {children}
       </Zone>

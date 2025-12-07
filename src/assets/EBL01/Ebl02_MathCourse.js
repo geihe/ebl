@@ -2,35 +2,35 @@ import {DelayedFrame} from "../../Frames/DelayedFrame";
 import React from "react";
 import {MathComponent} from "mathjax-react";
 import {config} from "../../config";
+import {Html} from "../../MicroComponents/Html";
 
-
+const title = <Html html={'1. Lehrtext'}/>
 const items=[
   {frame: <MathCourse02/>, id:'MathCourse02'},
-  {frame: <MathCourse03/>, id:'MathCourse03'},
-  {frame: <MathCourse04/>, id:'MathCourse04'},
-  {frame: <MathCourse05/>, id:'MathCourse05'},
-  {frame: <MathCourse06/>, id:'MathCourse06'},
-  {frame: <MathCourse07a/>, id:'MathCourse07a'},
-  {frame: <MathCourse07b/>, id:'MathCourse07b'},
+  {frame: <MathCourse03/>, id:'MathCourse03', title},
+  {frame: <MathCourse04/>, id:'MathCourse04', title},
+  {frame: <MathCourse05/>, id:'MathCourse05', title},
+  {frame: <MathCourse06/>, id:'MathCourse06', title},
+  {frame: <MathCourse07a/>, id:'MathCourse07a', title},
+  {frame: <MathCourse07b/>, id:'MathCourse07b', title},
   {frame: <MathCourse08/>, id:'MathCourse08'},
 ];
 
+
 export const ebl02_MathCourse = items.map(content =>( {
   id: content.id,
-  frame:    <DelayedFrame space delay={config.mathCourse.delay}> {content.frame} </DelayedFrame>
+  frame:    <DelayedFrame space title={content.title} delay={config.mathCourse.delay}> {content.frame} </DelayedFrame>
   })
 );
 
 export function MathCourse02(props) {
   return (
     <div>
-      <h1>Mit Beispielen Wahrscheinlichkeitsrechnung lernen</h1>
-      <h2>Übersicht über das Lernprogramm</h2>
-      Das Lernprogramm besteht aus folgenden Abschnitten:
+      <h1>Überblick über die Studie</h1>
+      <p>Du erhältst du einen kurzen Überblick über die Studie:</p>
       <ol>
-        <li>Lehrtext</li>
-        <li>Ziele des Lernprogramms</li>
-        <li>Sechzehn Beispielaufgaben zur Wahrscheinlichkeitsrechnung</li>
+        <li><strong>Lehrtext:</strong> <br/>Auf den nächsten Folien erhältst du einen Text über die Wahrscheinlichkeitsrechnung, um dein Wissen hierzu aufzufrischen. </li>
+        <li><strong>Lernaufgabe:</strong> <br/>Im Anschluss erhältst du 16 Beispielaufgaben zur Wahrscheinlichkeitsrechnung.</li>
       </ol>
     </div>
   );
@@ -124,7 +124,8 @@ export function MathCourse07b(props) {
 export function MathCourse08(props) {
   return (
     <div>
-      <p>Im folgenden Lernprogramm werden Beispiele zu diesen vier Typen von Zufallsexperimenten (Ereignisfolge relevant / irrelevant, Anzahl möglicher Ergebnisse verändert / gleich) und jeweils die Berechnung der Wahrscheinlichkeit gezeigt.</p>
+      <p>Im folgenden Lernprogramm werden Beispiele zu diesen vier Typen von Zufallsexperimenten <ul><li>Ereignisfolge
+        relevant / irrelevant</li><li>Anzahl möglicher Ergebnisse verändert / gleich</li></ul> und jeweils die Berechnung der Wahrscheinlichkeit gezeigt.</p>
     </div>
   );
 }

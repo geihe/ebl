@@ -226,7 +226,7 @@ export function InstructionFrame09_IIalt(props) {
 export function InstructionFrame16a(props) {
   const html = `
 <p>Noch ein Hinweis: Diese Studie schließt an frühere Studien an. Wir wollen die Ergebnisse vergleichen, darum haben wir möglichst wenig am Ablauf geändert. Deshalb haben eine feste Zeit für die Beispiele vorgesehen.</p>
-<p>Am Ende der 2. Sitzung können wir dir aber eine kurze Rünckmeldung zur Richtigkeit deiner Anzworten geben.</p>
+<p>Am Ende der 2. Sitzung können wir dir aber eine kurze Rünckmeldung zur Richtigkeit deiner Antworten geben.</p>
 <strong>Bitte drücke auf die Leertaste, dann geht es mit dem Vortest los.</strong>
   `;
   return <InstructionFrame html={html} space finish={props.finish}/>;
@@ -235,12 +235,14 @@ export function InstructionFrame16a(props) {
 export function InstructionFrame16b(props) {
   const html = `
   <h1>Vortest</h1>
-<p>Dir werden nun 12 Aufgaben präsentiert. Du sollst die Aufgaben berechnen und die jeweilige Lösung in das Notizfeld eintippen. </p>
+  <p>Wir möchten hier dein Vorwissen testen. Wir gehen davon aus, dass du nicht alle Fragen beantworten kannst. Falls du die Antwort nicht weißt, so schreibe einfach „weiß ich nicht“ und versuche die nächsten Fragen zu beantworten. Sei also nicht frustriert. Wir möchten ja, dass du nach unserem Experiment etwas dazu gelernt hast :)</p>
+
   <p>Mögliche Eingaben sind zum Beispiel
   <ul>
   <li>2 * 1/4 * 1/3</li>
   <li>2/12   (Der Bruch muss nicht gekürzt werden.)</li>
   <li>1/6  (Er darf aber gekürzt werden!)</li>
+  <li>Bitte möglichst nur Zahlen eingeben, keinen Text.</li>
 </ul>
 </p>
 <p>Bestätige deine Eingabe mit [<strong>Enter</strong>]. Du wirst dann automatisch zur nächsten Aufgabe weitergeleitet.</p>
@@ -256,17 +258,48 @@ export function InstructionFrame17(props) {
   return <InstructionFrame html={html} space finish={props.finish}/>;
 }
 
-export function InstructionFrame100_control_12(props) {
+
+export function InstructionFrame_4b_100(props) {
   const html = `
-  <h1>Aufbau des Lernprogramms I</h1>
-  <p>Auf jeder Seite des Lernprogramms werden dir vier Beispielaufgaben präsentiert. Du sollst diese Aufgaben aufmerksam lesen und versuchen, die Lösung nachzuvollziehen. </p>
-  <p>Es erscheint ein Textfeld, in dem du deine Gedanken aufschreiben kannst.</p>
-  <p>Du durchläufst vier Durchgänge mit jeweils vier Beispielaufgaben, sodass dir <strong>insgesamt 16 Aufgaben präsentiert werden.</strong></p>
-  <p>Für die Bearbeitung von je vier Beispielaufgaben hast du mindestens sechs Minuten Zeit. Du solltest alle Texte sorgfältig lesen, alle Lösungen genau nachvollziehen. Nach Ablauf der sechs Minuten kannst du mit der Befragung deines Flow-Erlebens und deiner kognitiven Beanspruchung weitermachen. Du kannst dann nicht mehr zurückgehen. Ein Timer wird eingeblendet.</p>
+  <p>Dir werden nun immer vier Beispielaufgaben auf einer Seite präsentiert. Lies diese Aufgaben aufmerksam und versuche, die Lösungen nachzuvollziehen. Du hast hierfür sechs Minuten Zeit. Es wird nach 5 min ein Timer eingeblendet, dass dir noch eine Minute verbleibt.</p>
   `;
 
-  return <InstructionFrame html={html} space finish={props.finish}/>;
+  return <InstructionFrame html={html} space finish={props.finish} title={'2. Lernaufgabe'}/>;
 }
+export function InstructionFrame_4b_101_similarity(props) {
+  const html = `
+  <p>Deine Aufgabe ist es herauszufinden, auf welche Weisen die <strong>4 Aufgaben Gemeinsamkeiten</strong> haben. Schaue dir im Folgenden aufmerksam das Instruktionsvideo an und schreibe <strong>systematisch alle Gemeinsamkeiten VOLLSTÄNDIG</strong> zwischen den vier Aufgaben im rechten Eingabefeld auf.</p>
+  <p>Das Video startet, wenn du auf "Weiter" klickst.</p>
+  
+  `;
+
+  return <InstructionFrame html={html} space finish={props.finish}  title={'2. Lernaufgabe'}/>;
+}
+export function InstructionFrame_4b_101_contrast(props) {
+  const html = `
+  <p>Deine Aufgabe ist es herausfinden, auf welche Weisen <strong>die 4 Aufgaben sich unterscheiden</strong>. Schaue dir im Folgenden aufmerksam das Instruktionsvideo an und schreibe <strong>systematisch alle Unterschiede VOLLSTÄNDIG</strong> zwischen den vier Aufgaben im rechten Eingabefeld auf.</p>
+  <p>Das Video startet, wenn du auf "Weiter" klickst.</p>
+  `;
+
+  return <InstructionFrame html={html} space finish={props.finish}  title={'2. Lernaufgabe'}/>;
+}
+export function InstructionFrame_4b_101_note(props) {
+  const html = `
+  <p>Deine Aufgabe ist es, den Text durchzulesen und dir ggf. Notizen zu machen..</p>
+  `;
+
+  return <InstructionFrame html={html} space finish={props.finish}  title={'2. Lernaufgabe'}/>;
+}
+
+export function InstructionFrame_4b_102(props) {
+  const html = `
+  <h1>Start der Lernaufgabe</h1>
+  <p>Bitte klicke nun auf die Leertaste. Dann geht es direkt mit der Bearbeitung der ersten 4 Aufgaben los. </p>
+  `;
+
+  return <InstructionFrame html={html} space finish={props.finish}  title={'2. Lernaufgabe'}/>;
+}
+
 
 export function InstructionFrame100_experiment_34(props) {
   const html = `
@@ -282,12 +315,42 @@ export function InstructionFrame100_experiment_34(props) {
 
 export function InstructionFrame101(props) {
   const html = `
-  <h1>Aufbau des Lernprogramms II</h1>
-  <p>Zum Abschluss jeder der vier Durchgänge erfolgt eine Befragung zu deinem Flow-Erleben und deiner kognitiven Beanspruchung. Dir werden 18 verschiedene Aussagen präsentiert. Du sollst dann auf einer Skala entscheiden, inwiefern jede dieser Aussagen auf dich zutrifft. Es ist wichtig, dass du die Fragen wahrheitsgemäß beantwortest. </p>
+   <p>Zum Abschluss jeder der vier Durchgänge erfolgt eine Befragung zu deinem Flow-Erleben und deiner kognitiven Beanspruchung. Dir werden 18 verschiedene Aussagen präsentiert. Du sollst dann auf einer Skala entscheiden, inwiefern jede dieser Aussagen auf dich zutrifft. Es ist wichtig, dass du die Fragen wahrheitsgemäß beantwortest. </p>
+  `;
+
+  return <InstructionFrame html={html} space finish={props.finish} title={'2. Lernaufgabe'}/>;
+}
+
+export function InstructionFrame_MindWandering(props) {
+  const html = `
+  <h1>Gedankenabschweifen</h1>
+  <p>Manchmal schweifen wir beim Lesen mit den Gedanken, beabsichtigt oder auch nicht, ab. Du liest einen Text und deine Augen wandern von links nach rechts und überfliegen jedes Wort, jeden Satz und jeden Absatz. Nach einiger Zeit fällt dir jedoch auf, dass du über etwas anderes nachdenkst, das nichts mit dem Text zu tun hat. Du stellst fest, dass du keinerlei Erinnerung daran hast, was du gerade gelesen hast. Das Abschweifen der Gedanken während des Lesens oder bei der Erledigung bestimmter Aufgaben ist nichts Außergewöhnliches – es kann passieren, wenn wir uns auf die Aufgabenbearbeitung konzentrieren wollen  <i>(unwillkürliches Gedankenabschweifen)</i> oder auch, wenn wir uns nicht (mehr) auf die Aufgaben konzentrieren wollen <i>(beabsichtigtes Gedankenabschweifen)</i>.</p>
+<p>
+In dieser Studie erfassen wir u.a., inwieweit es beim Bearbeiten der Beispielaufgaben zu Gedankenabschweifen kommt. Bitte gib möglichst genau und wahrheitsgemäß an, ob und wie häufig du mit deinen Gedanken abgeschweift bist. 
+ </p>
   `;
 
   return <InstructionFrame html={html} space finish={props.finish}/>;
 }
+export function InstructionFrame_CognitiveLoad(props) {
+  const html = `
+ <h1>Kognitive Beanspruchung</h1>
+  <p>Nun erhältst du 8 Fragen, wie stark du dich bei der Bearbeitung der Beispielaufgaben angestrengt hast bzw. diese dich kognitiven beansprucht haben. Es ist wichtig, dass du die Fragen möglichst wahrheitsmäßig und möglichst genau beantwortest. </p>
+  `;
+
+  return <InstructionFrame html={html} space finish={props.finish}/>;
+}
+
+export function InstructionFrame_Flow(props) {
+  const html = `
+ <h1>Flow-Erleben</h1>
+  <p>Nun erhältst du 10 Fragen zu deinem Flow-Erleben, während der Bearbeitung der Beispielaufgaben. Es ist wichtig, dass du die Fragen wahrheitsmäßig und möglichst genau beantwortest.  </p>
+  `;
+
+  return <InstructionFrame html={html} space finish={props.finish}/>;
+}
+
+
 
 export function InstructionFrame102(props) {
   const html = `
@@ -338,6 +401,7 @@ export function InstructionFrame201(props) {
   <li>2 * 1/4 * 1/3</li>
   <li>2/12   (Der Bruch muss nicht gekürzt werden.)</li>
   <li>1/6  (Er darf aber gekürzt werden!)</li>
+  <li>Bitte möglichst nur Zahlen eingeben, keinen Text.</li>
 </ul>
 </p>
   <p>
@@ -581,6 +645,24 @@ export function EndLab(props) {
   return <InstructionFrame html={html} space finish={props.finish}/>;
 }
 
+export function Feedback00Sess1(props) {
+  const html = `
+<h1>Du hast nun das Ende der ersten Sitzung erreicht.</h1>
+  <h2>Bitte wende dich an die Zoom-Aufsicht.</h2>
+`;
+  return <InstructionFrame html={html} noResponse finish={props.finish}/>;
+}
+
+export function Feedback00Sess2(props) {
+  const html = `
+<h1>Du hast nun das Ende der Studie erreicht.</h1>
+  <h2>Bitte wende dich an die Zoom-Aufsicht.</h2>
+
+  `;
+
+  return <InstructionFrame html={html} noResponse finish={props.finish}/>;
+}
+
 export function Feedback01Announce(props) {
   const html = `
 <h1>Du hast nun fast das Ende der Studie erreicht.</h1>
@@ -590,6 +672,7 @@ export function Feedback01Announce(props) {
 
   return <InstructionFrame html={html} space finish={props.finish}/>;
 }
+
 export function Feedback02Gebunden(props) {
   const fbm=new FeedbackManager(props.data);
   const counts=fbm.countAlleGebunden();

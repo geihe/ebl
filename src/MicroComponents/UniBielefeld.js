@@ -5,8 +5,7 @@ export function UniBielefeld(props) {
   return (
     <div style={style}>
       Universität Würzburg & Universität Bielefeld<br/>
-      (in Kooperation mit der FernUniversität in Hagen <br/>
-      und der Universität Freiburg)<br/>
+      (in Kooperation mit der FernUniversität in Hagen)<br/>
       Dr. Veit Kubik
     </div>
   );
